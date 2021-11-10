@@ -1,0 +1,25 @@
+<?xml version="1.0" encoding="utf-8" standalone="yes"?>
+<rss version="2.0" xmlns:atom="http://www.w3.org/2005/Atom" xmlns:content="http://purl.org/rss/1.0/modules/content/">
+  <channel>
+    <title>pandas on Dev_Medeiros</title>
+    <link>https://devmedeiros.github.io/tags/pandas/</link>
+    <description>Recent content in pandas on Dev_Medeiros</description>
+    <image>
+      <url>https://devmedeiros.github.io/%3Clink%20or%20path%20of%20image%20for%20opengraph,%20twitter-cards%3E</url>
+      <link>https://devmedeiros.github.io/%3Clink%20or%20path%20of%20image%20for%20opengraph,%20twitter-cards%3E</link>
+    </image>
+    <generator>Hugo -- gohugo.io</generator>
+    <lastBuildDate>Sun, 07 Nov 2021 15:14:00 -0300</lastBuildDate><atom:link href="https://devmedeiros.github.io/tags/pandas/index.xml" rel="self" type="application/rss+xml" />
+    <item>
+      <title>Python seaborn Package Guide</title>
+      <link>https://devmedeiros.github.io/post/2020-11-07-seaborn-package-guide/</link>
+      <pubDate>Sun, 07 Nov 2021 15:14:00 -0300</pubDate>
+      
+      <guid>https://devmedeiros.github.io/post/2020-11-07-seaborn-package-guide/</guid>
+      <description>Introduction I&amp;rsquo;m learning data visualization in Python and I see myself as a &amp;lsquo;hands on&amp;rsquo; learner, so I&amp;rsquo;ll be reproducing some basic plots using seaborn package that you can use as a reference everytime you need to fresh up your memory.
+At first is required that the packages are properly imported, after that I load the iris dataset.
+import pandas as pd import seaborn as sns import matplotlib.pyplot as plt url = &amp;#34;https://git.</description>
+    </item>
+    
+  </channel>
+</rss>
