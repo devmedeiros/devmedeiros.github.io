@@ -74,7 +74,7 @@ p1 <- tidy_title %>%
 
 ![sentiment from news titles](https://ik.imagekit.io/devmedeiros/title_sentiment_lkDe-y_p97.png?updatedAt=1634083978487 "Sentiment from news titles")
 
-**Disgust** seems to be the most common sentiment around fake news titles while **Trust** is the lowest, even though it still is more than 50%. Overall fake news titles seems to have more "sentiment" than real news in this particular dataset. Even positive sentiments like **joy** and **surprise**.
+**Disgust** seems to be the most common sentiment around fake news titles while **trust** is the lowest, even though it still is more than 50%. Overall fake news titles seems to have more "sentiment" than real news in this particular dataset. Even positive sentiments like **joy** and **surprise**.
 
 ```r
 p2 <- tidy_corpus %>%
