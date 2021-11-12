@@ -1,0 +1,95 @@
+<?xml version="1.0" encoding="utf-8" standalone="yes"?>
+<rss version="2.0" xmlns:atom="http://www.w3.org/2005/Atom" xmlns:content="http://purl.org/rss/1.0/modules/content/">
+  <channel>
+    <title>Tags on Dev_Medeiros</title>
+    <link>https://devmedeiros.github.io/pt/tags/</link>
+    <description>Recent content in Tags on Dev_Medeiros</description>
+    <image>
+      <url>https://devmedeiros.github.io/%3Clink%20or%20path%20of%20image%20for%20opengraph,%20twitter-cards%3E</url>
+      <link>https://devmedeiros.github.io/%3Clink%20or%20path%20of%20image%20for%20opengraph,%20twitter-cards%3E</link>
+    </image>
+    <generator>Hugo -- gohugo.io</generator>
+    <lastBuildDate>Sun, 07 Nov 2021 15:14:00 -0300</lastBuildDate><atom:link href="https://devmedeiros.github.io/pt/tags/index.xml" rel="self" type="application/rss+xml" />
+    <item>
+      <title>pandas</title>
+      <link>https://devmedeiros.github.io/pt/tags/pandas/</link>
+      <pubDate>Sun, 07 Nov 2021 15:14:00 -0300</pubDate>
+      
+      <guid>https://devmedeiros.github.io/pt/tags/pandas/</guid>
+      <description></description>
+    </item>
+    
+    <item>
+      <title>python</title>
+      <link>https://devmedeiros.github.io/pt/tags/python/</link>
+      <pubDate>Sun, 07 Nov 2021 15:14:00 -0300</pubDate>
+      
+      <guid>https://devmedeiros.github.io/pt/tags/python/</guid>
+      <description></description>
+    </item>
+    
+    <item>
+      <title>seaborn</title>
+      <link>https://devmedeiros.github.io/pt/tags/seaborn/</link>
+      <pubDate>Sun, 07 Nov 2021 15:14:00 -0300</pubDate>
+      
+      <guid>https://devmedeiros.github.io/pt/tags/seaborn/</guid>
+      <description></description>
+    </item>
+    
+    <item>
+      <title>visualização de dados</title>
+      <link>https://devmedeiros.github.io/pt/tags/visualiza%C3%A7%C3%A3o-de-dados/</link>
+      <pubDate>Sun, 07 Nov 2021 15:14:00 -0300</pubDate>
+      
+      <guid>https://devmedeiros.github.io/pt/tags/visualiza%C3%A7%C3%A3o-de-dados/</guid>
+      <description></description>
+    </item>
+    
+    <item>
+      <title>análise de sentimentos</title>
+      <link>https://devmedeiros.github.io/pt/tags/an%C3%A1lise-de-sentimentos/</link>
+      <pubDate>Tue, 12 Oct 2021 19:47:00 -0300</pubDate>
+      
+      <guid>https://devmedeiros.github.io/pt/tags/an%C3%A1lise-de-sentimentos/</guid>
+      <description></description>
+    </item>
+    
+    <item>
+      <title>ciência de dados</title>
+      <link>https://devmedeiros.github.io/pt/tags/ci%C3%AAncia-de-dados/</link>
+      <pubDate>Tue, 12 Oct 2021 19:47:00 -0300</pubDate>
+      
+      <guid>https://devmedeiros.github.io/pt/tags/ci%C3%AAncia-de-dados/</guid>
+      <description></description>
+    </item>
+    
+    <item>
+      <title>ggplot</title>
+      <link>https://devmedeiros.github.io/pt/tags/ggplot/</link>
+      <pubDate>Tue, 12 Oct 2021 19:47:00 -0300</pubDate>
+      
+      <guid>https://devmedeiros.github.io/pt/tags/ggplot/</guid>
+      <description></description>
+    </item>
+    
+    <item>
+      <title>NLP</title>
+      <link>https://devmedeiros.github.io/pt/tags/nlp/</link>
+      <pubDate>Tue, 12 Oct 2021 19:47:00 -0300</pubDate>
+      
+      <guid>https://devmedeiros.github.io/pt/tags/nlp/</guid>
+      <description></description>
+    </item>
+    
+    <item>
+      <title>R</title>
+      <link>https://devmedeiros.github.io/pt/tags/r/</link>
+      <pubDate>Tue, 12 Oct 2021 19:47:00 -0300</pubDate>
+      
+      <guid>https://devmedeiros.github.io/pt/tags/r/</guid>
+      <description></description>
+    </item>
+    
+  </channel>
+</rss>

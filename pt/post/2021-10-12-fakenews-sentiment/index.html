@@ -1,0 +1,190 @@
+<!doctype html><html lang=pt dir=auto>
+<head><meta charset=utf-8>
+<meta http-equiv=x-ua-compatible content="IE=edge">
+<meta name=viewport content="width=device-width,initial-scale=1,shrink-to-fit=no">
+<meta name=robots content="index, follow">
+<title>Análise de Sentimentos de Notícias Falsas vs Notícias Reais | Dev_Medeiros</title>
+<meta name=keywords content="ciência de dados,R,análise de sentimentos,NLP,ggplot">
+<meta name=description content="Eu quero fazer uma análise de sentimentos usando o R como uma forma de aprender. Com isso em mente começamos carregando todos os pacotes que iremos utilizar.
+library(readr) library(dplyr) library(tidytext) library(tokenizers) library(stopwords) library(ggplot2) Então precisamos carregar nosso banco de dados. Esses dados são do Kaggle Fake and real news dataset.
+Fake <- read_csv('~/fakenews/Fake.csv') True <- read.csv('~/fakenews/True.csv') Eu quero unir ambos os dados, mas antes é preciso criar uma nova columa que irá informar de onde os dados vieram.">
+<meta name=author content="Jaqueline Souza Medeiros">
+<link rel=canonical href=https://devmedeiros.github.io/pt/post/2021-10-12-fakenews-sentiment/>
+<meta name=google-site-verification content="FlWzcRu5is8Vlu9fsp78s1CPMcmQLd1DLVKVMFonbxY">
+<link crossorigin=anonymous href=/assets/css/stylesheet.min.6f60056d44d3f7eb69a4bc6c332b59960f3a995802bded244750232f33713c49.css integrity="sha256-b2AFbUTT9+tppLxsMytZlg86mVgCve0kR1AjLzNxPEk=" rel="preload stylesheet" as=style>
+<script defer crossorigin=anonymous src=/assets/js/highlight.min.7680afc38aa6b15ddf158a4f3780b7b1f7dde7e91d26f073e6229bb7a0793c92.js integrity="sha256-doCvw4qmsV3fFYpPN4C3sffd5+kdJvBz5iKbt6B5PJI=" onload=hljs.initHighlightingOnLoad()></script>
+<link rel=icon href=https://devmedeiros.github.io/%3Clink%20/%20abs%20url%3E>
+<link rel=icon type=image/png sizes=16x16 href=https://devmedeiros.github.io/%3Clink%20/%20abs%20url%3E>
+<link rel=icon type=image/png sizes=32x32 href=https://devmedeiros.github.io/%3Clink%20/%20abs%20url%3E>
+<link rel=apple-touch-icon href=https://devmedeiros.github.io/%3Clink%20/%20abs%20url%3E>
+<link rel=mask-icon href=https://devmedeiros.github.io/%3Clink%20/%20abs%20url%3E>
+<meta name=theme-color content="#2e2e33">
+<meta name=msapplication-TileColor content="#2e2e33">
+<meta name=generator content="Hugo 0.89.2">
+<link rel=alternate hreflang=en href=https://devmedeiros.github.io/post/2021-10-12-fakenews-sentiment/>
+<link rel=alternate hreflang=pt href=https://devmedeiros.github.io/pt/post/2021-10-12-fakenews-sentiment/>
+<noscript>
+<style>#theme-toggle,.top-link{display:none}</style>
+</noscript>
+<script async src="https://www.googletagmanager.com/gtag/js?id=G-NLNQKJMT5Q"></script>
+<script>var doNotTrack=!1;if(!doNotTrack){window.dataLayer=window.dataLayer||[];function gtag(){dataLayer.push(arguments)}gtag('js',new Date),gtag('config','G-NLNQKJMT5Q',{anonymize_ip:!1})}</script>
+<meta property="og:title" content="Análise de Sentimentos de Notícias Falsas vs Notícias Reais">
+<meta property="og:description" content="Eu quero fazer uma análise de sentimentos usando o R como uma forma de aprender. Com isso em mente começamos carregando todos os pacotes que iremos utilizar.
+library(readr) library(dplyr) library(tidytext) library(tokenizers) library(stopwords) library(ggplot2) Então precisamos carregar nosso banco de dados. Esses dados são do Kaggle Fake and real news dataset.
+Fake <- read_csv('~/fakenews/Fake.csv') True <- read.csv('~/fakenews/True.csv') Eu quero unir ambos os dados, mas antes é preciso criar uma nova columa que irá informar de onde os dados vieram.">
+<meta property="og:type" content="article">
+<meta property="og:url" content="https://devmedeiros.github.io/pt/post/2021-10-12-fakenews-sentiment/"><meta property="og:image" content="https://devmedeiros.github.io/%3Clink%20or%20path%20of%20image%20for%20opengraph,%20twitter-cards%3E"><meta property="article:section" content="post">
+<meta property="article:published_time" content="2021-10-12T19:47:00-03:00">
+<meta property="article:modified_time" content="2021-10-12T19:47:00-03:00"><meta property="og:site_name" content="Dev_Medeiros">
+<meta name=twitter:card content="summary_large_image">
+<meta name=twitter:image content="https://devmedeiros.github.io/%3Clink%20or%20path%20of%20image%20for%20opengraph,%20twitter-cards%3E">
+<meta name=twitter:title content="Análise de Sentimentos de Notícias Falsas vs Notícias Reais">
+<meta name=twitter:description content="Eu quero fazer uma análise de sentimentos usando o R como uma forma de aprender. Com isso em mente começamos carregando todos os pacotes que iremos utilizar.
+library(readr) library(dplyr) library(tidytext) library(tokenizers) library(stopwords) library(ggplot2) Então precisamos carregar nosso banco de dados. Esses dados são do Kaggle Fake and real news dataset.
+Fake <- read_csv('~/fakenews/Fake.csv') True <- read.csv('~/fakenews/True.csv') Eu quero unir ambos os dados, mas antes é preciso criar uma nova columa que irá informar de onde os dados vieram.">
+<script type=application/ld+json>{"@context":"https://schema.org","@type":"BreadcrumbList","itemListElement":[{"@type":"ListItem","position":1,"name":"Posts","item":"https://devmedeiros.github.io/pt/post/"},{"@type":"ListItem","position":2,"name":"Análise de Sentimentos de Notícias Falsas vs Notícias Reais","item":"https://devmedeiros.github.io/pt/post/2021-10-12-fakenews-sentiment/"}]}</script>
+<script type=application/ld+json>{"@context":"https://schema.org","@type":"BlogPosting","headline":"Análise de Sentimentos de Notícias Falsas vs Notícias Reais","name":"Análise de Sentimentos de Notícias Falsas vs Notícias Reais","description":"Eu quero fazer uma análise de sentimentos usando o R como uma forma de aprender. Com isso em mente começamos carregando todos os pacotes que iremos utilizar.\nlibrary(readr) library(dplyr) library(tidytext) library(tokenizers) library(stopwords) library(ggplot2) Então precisamos carregar nosso banco de dados. Esses dados são do Kaggle Fake and real news dataset.\nFake \u0026lt;- read_csv(\u0026#39;~/fakenews/Fake.csv\u0026#39;) True \u0026lt;- read.csv(\u0026#39;~/fakenews/True.csv\u0026#39;) Eu quero unir ambos os dados, mas antes é preciso criar uma nova columa que irá informar de onde os dados vieram.","keywords":["ciência de dados","R","análise de sentimentos","NLP","ggplot"],"articleBody":"Eu quero fazer uma análise de sentimentos usando o R como uma forma de aprender. Com isso em mente começamos carregando todos os pacotes que iremos utilizar.\nlibrary(readr) library(dplyr) library(tidytext) library(tokenizers) library(stopwords) library(ggplot2) Então precisamos carregar nosso banco de dados. Esses dados são do Kaggle Fake and real news dataset.\nFake  read_csv('~/fakenews/Fake.csv') True  read.csv('~/fakenews/True.csv') Eu quero unir ambos os dados, mas antes é preciso criar uma nova columa que irá informar de onde os dados vieram.\nFake$news  'fake' True$news  'real' data  rbind(Fake,True) Agora podemos iniciar a limpeza dos dados. Neste primeiro momento, fazemos os tokens nas variáveis title e text. Em seguida iremos remover as stopwords (palavras redundantes) de acordo com a fonte snowball do pacote stopwords.\ntitle  tibble(news = data$news, text = data$title) corpus  tibble(news = data$news, corpus = data$text) tidy_title  title %% unnest_tokens(word, text, token = 'words') %% filter(!(word %in% stopwords(source = 'snowball'))) tidy_corpus  corpus %% unnest_tokens(word, corpus, token = 'words') %% filter(!(word %in% stopwords(source = \"snowball\"))) Com os dados limpos podemos selecionar as dez palavras mais frequentes dos títulos das noticias, separado por grupo real ou falso.\np0  tidy_title %% group_by(news, word) %% summarise(n = n()) %% arrange(desc(n)) %% slice(1:10) Títulos de notícias falsas mencionam muito mais video e trump, 8477 e 7874, respectivamente. Já no caso de títulos de notícias reais, trump também é uma das palavras mais mencionadas, aparecendo em primeiro com 4883 aparições, seguido por u.s com 4187 e says com 2981.\nAgora iremos preparar os dados para a análise de sentimento. Eu estou interessada em classificar os dados em sentimentos de alegria, raiva, medo ou surpresa, por exemplo. Então eu iriei utilizar o os dados de nrc Saif Mohammad and Peter Turney.\np1  tidy_title %% inner_join(get_sentiments('nrc')) %% group_by(sentiment, news) %% summarise(n = n()) %% mutate(prop = n/sum(n)) Disgust (nojo) aparenta ser o sentimento mais comum envolvendo títulos de notícias falsas, enquanto que trust (confiança) é o menor, mesmo que ainda seja maior que 50%. Em geral, títulos de notícias falsas aparentam ter mais “sentimento” do que títulos de notícias reais, neste banco de dados. Isso vale até para sentimentos positivos como joy (alegria) e surprise (surpresa).\np2  tidy_corpus %% inner_join(get_sentiments('nrc')) %% group_by(sentiment, news) %% summarise(n = n()) %% mutate(prop = n/sum(n)) Para o corpo das notícias reais pode-se notas que os mesmos sentimentos são prevalentes, mas a proporção é menor comparado ao título. Um artigo de notícias falsas perde confiança (trust) quando o leitor lê o corpo do artigo. Ele também se torna menos negativo (negative) e apresenta menos medo (fear)\nUma melhoria que poderia ser feito aqui é tentar construir nosso próprio dicionário de palavras redundantes (stopwords) e alterar a forma que a toneização foi feita. Pois houveram momentos em que trump e trump’s não corresponderam a mesma coisa e se estes dados tivessem sido usados para treinar um modelo isso poderia se tornar um problema.\n","wordCount":"486","inLanguage":"pt","datePublished":"2021-10-12T19:47:00-03:00","dateModified":"2021-10-12T19:47:00-03:00","author":{"@type":"Person","name":"Jaqueline Souza Medeiros"},"mainEntityOfPage":{"@type":"WebPage","@id":"https://devmedeiros.github.io/pt/post/2021-10-12-fakenews-sentiment/"},"publisher":{"@type":"Organization","name":"Dev_Medeiros","logo":{"@type":"ImageObject","url":"https://devmedeiros.github.io/%3Clink%20/%20abs%20url%3E"}}}</script>
+</head>
+<body class=dark id=top>
+<script>localStorage.getItem("pref-theme")==="light"&&document.body.classList.remove('dark')</script>
+<header class=header>
+<nav class=nav>
+<div class=logo>
+<a href=https://devmedeiros.github.io/pt/ accesskey=h title="Dev_Medeiros (Alt + H)">Dev_Medeiros</a>
+<span class=logo-switches>
+<button id=theme-toggle accesskey=t title="(Alt + T)"><svg id="moon" xmlns="http://www.w3.org/2000/svg" width="24" height="24" viewBox="0 0 24 24" fill="none" stroke="currentcolor" stroke-width="2" stroke-linecap="round" stroke-linejoin="round"><path d="M21 12.79A9 9 0 1111.21 3 7 7 0 0021 12.79z"/></svg><svg id="sun" xmlns="http://www.w3.org/2000/svg" width="24" height="24" viewBox="0 0 24 24" fill="none" stroke="currentcolor" stroke-width="2" stroke-linecap="round" stroke-linejoin="round"><circle cx="12" cy="12" r="5"/><line x1="12" y1="1" x2="12" y2="3"/><line x1="12" y1="21" x2="12" y2="23"/><line x1="4.22" y1="4.22" x2="5.64" y2="5.64"/><line x1="18.36" y1="18.36" x2="19.78" y2="19.78"/><line x1="1" y1="12" x2="3" y2="12"/><line x1="21" y1="12" x2="23" y2="12"/><line x1="4.22" y1="19.78" x2="5.64" y2="18.36"/><line x1="18.36" y1="5.64" x2="19.78" y2="4.22"/></svg>
+</button>
+<ul class=lang-switch><li>|</li>
+<li>
+<a href=https://devmedeiros.github.io/ title=En aria-label=En>En</a>
+</li>
+</ul>
+</span>
+</div>
+<ul id=menu>
+<li>
+<a href=https://devmedeiros.github.io/pt/about/ title=sobre>
+<span>sobre</span>
+</a>
+</li>
+<li>
+<a href=https://devmedeiros.github.io/pt/tags/ title=tags>
+<span>tags</span>
+</a>
+</li>
+<li>
+<a href=https://devmedeiros.github.io/pt/archives/ title=arquivos>
+<span>arquivos</span>
+</a>
+</li>
+<li>
+<a href=https://devmedeiros.github.io/pt/search/ title="pesquisar (Alt + /)" accesskey=/>
+<span>pesquisar</span>
+</a>
+</li>
+</ul>
+</nav>
+</header>
+<main class=main>
+<article class=post-single>
+<header class=post-header>
+<div class=breadcrumbs><a href=https://devmedeiros.github.io/pt/>Home</a>&nbsp;»&nbsp;<a href=https://devmedeiros.github.io/pt/post/>Posts</a></div>
+<h1 class=post-title>
+Análise de Sentimentos de Notícias Falsas vs Notícias Reais
+</h1>
+<div class=post-meta><span title="2021-10-12 19:47:00 -0300 -0300">October 12, 2021</span>&nbsp;·&nbsp;3 minutos&nbsp;·&nbsp;Jaqueline Souza Medeiros&nbsp;|&nbsp;
+<ul class=i18n_list>Traduções:
+<li>
+<a href=https://devmedeiros.github.io/post/2021-10-12-fakenews-sentiment/>En</a>
+</li>
+</ul>&nbsp;|&nbsp;<a href=https://github.com/devmedeiros.github.io/content/post/2021-10-12-fakenews-sentiment.pt.md rel="noopener noreferrer" target=_blank>Suggest Changes</a>
+</div>
+</header>
+<div class=post-content><p>Eu quero fazer uma análise de sentimentos usando o R como uma forma de aprender. Com isso em mente começamos carregando todos os pacotes que iremos utilizar.</p>
+<div class=highlight><pre tabindex=0 style=color:#f8f8f2;background-color:#272822;-moz-tab-size:4;-o-tab-size:4;tab-size:4><code class=language-r data-lang=r><span style=color:#a6e22e>library</span>(readr)
+<span style=color:#a6e22e>library</span>(dplyr)
+<span style=color:#a6e22e>library</span>(tidytext)
+<span style=color:#a6e22e>library</span>(tokenizers)
+<span style=color:#a6e22e>library</span>(stopwords)
+<span style=color:#a6e22e>library</span>(ggplot2)
+</code></pre></div><p>Então precisamos carregar nosso banco de dados. Esses dados são do Kaggle <a href=https://www.kaggle.com/clmentbisaillon/fake-and-real-news-dataset><em>Fake and real news dataset</em></a>.</p>
+<div class=highlight><pre tabindex=0 style=color:#f8f8f2;background-color:#272822;-moz-tab-size:4;-o-tab-size:4;tab-size:4><code class=language-r data-lang=r>Fake <span style=color:#f92672>&lt;-</span> <span style=color:#a6e22e>read_csv</span>(<span style=color:#e6db74>&#39;~/fakenews/Fake.csv&#39;</span>)
+True <span style=color:#f92672>&lt;-</span> <span style=color:#a6e22e>read.csv</span>(<span style=color:#e6db74>&#39;~/fakenews/True.csv&#39;</span>)
+</code></pre></div><p>Eu quero unir ambos os dados, mas antes é preciso criar uma nova columa que irá informar de onde os dados vieram.</p>
+<div class=highlight><pre tabindex=0 style=color:#f8f8f2;background-color:#272822;-moz-tab-size:4;-o-tab-size:4;tab-size:4><code class=language-r data-lang=r>Fake<span style=color:#f92672>$</span>news <span style=color:#f92672>&lt;-</span> <span style=color:#e6db74>&#39;fake&#39;</span>
+True<span style=color:#f92672>$</span>news <span style=color:#f92672>&lt;-</span> <span style=color:#e6db74>&#39;real&#39;</span>
+
+data <span style=color:#f92672>&lt;-</span> <span style=color:#a6e22e>rbind</span>(Fake,True)
+</code></pre></div><p>Agora podemos iniciar a limpeza dos dados. Neste primeiro momento, fazemos os tokens nas variáveis <strong>title</strong> e <strong>text</strong>. Em seguida iremos remover as <em>stopwords</em> (palavras redundantes) de acordo com a fonte <em>snowball</em> do pacote <em>stopwords</em>.</p>
+<div class=highlight><pre tabindex=0 style=color:#f8f8f2;background-color:#272822;-moz-tab-size:4;-o-tab-size:4;tab-size:4><code class=language-r data-lang=r>title <span style=color:#f92672>&lt;-</span> <span style=color:#a6e22e>tibble</span>(news <span style=color:#f92672>=</span> data<span style=color:#f92672>$</span>news, text <span style=color:#f92672>=</span> data<span style=color:#f92672>$</span>title)
+
+corpus <span style=color:#f92672>&lt;-</span> <span style=color:#a6e22e>tibble</span>(news <span style=color:#f92672>=</span> data<span style=color:#f92672>$</span>news, corpus <span style=color:#f92672>=</span> data<span style=color:#f92672>$</span>text)
+
+tidy_title <span style=color:#f92672>&lt;-</span> title <span style=color:#f92672>%&gt;%</span>
+  <span style=color:#a6e22e>unnest_tokens</span>(word, text, token <span style=color:#f92672>=</span> <span style=color:#e6db74>&#39;words&#39;</span>) <span style=color:#f92672>%&gt;%</span>
+  <span style=color:#a6e22e>filter</span>(<span style=color:#f92672>!</span>(word <span style=color:#f92672>%in%</span> <span style=color:#a6e22e>stopwords</span>(source <span style=color:#f92672>=</span> <span style=color:#e6db74>&#39;snowball&#39;</span>)))
+
+tidy_corpus <span style=color:#f92672>&lt;-</span> corpus <span style=color:#f92672>%&gt;%</span>
+  <span style=color:#a6e22e>unnest_tokens</span>(word, corpus, token <span style=color:#f92672>=</span> <span style=color:#e6db74>&#39;words&#39;</span>) <span style=color:#f92672>%&gt;%</span>
+  <span style=color:#a6e22e>filter</span>(<span style=color:#f92672>!</span>(word <span style=color:#f92672>%in%</span> <span style=color:#a6e22e>stopwords</span>(source <span style=color:#f92672>=</span> <span style=color:#e6db74>&#34;snowball&#34;</span>)))
+</code></pre></div><p>Com os dados limpos podemos selecionar as dez palavras mais frequentes dos títulos das noticias, separado por grupo real ou falso.</p>
+<div class=highlight><pre tabindex=0 style=color:#f8f8f2;background-color:#272822;-moz-tab-size:4;-o-tab-size:4;tab-size:4><code class=language-r data-lang=r>p0 <span style=color:#f92672>&lt;-</span> tidy_title <span style=color:#f92672>%&gt;%</span>
+  <span style=color:#a6e22e>group_by</span>(news, word) <span style=color:#f92672>%&gt;%</span>
+  <span style=color:#a6e22e>summarise</span>(n <span style=color:#f92672>=</span> <span style=color:#a6e22e>n</span>()) <span style=color:#f92672>%&gt;%</span>
+  <span style=color:#a6e22e>arrange</span>(<span style=color:#a6e22e>desc</span>(n)) <span style=color:#f92672>%&gt;%</span>
+  <span style=color:#a6e22e>slice</span>(<span style=color:#ae81ff>1</span><span style=color:#f92672>:</span><span style=color:#ae81ff>10</span>)
+</code></pre></div><p>Títulos de notícias falsas mencionam muito mais <em>video</em> e <em>trump</em>, 8477 e 7874, respectivamente. Já no caso de títulos de notícias reais, <em>trump</em> também é uma das palavras mais mencionadas, aparecendo em primeiro com 4883 aparições, seguido por <em>u.s</em> com 4187 e <em>says</em> com 2981.</p>
+<p><img loading=lazy src="https://ik.imagekit.io/devmedeiros/10_popular_titles_H0dG3ljPN.png?updatedAt=1634083210303" alt="10 most frequent words by fake news titles and real news" title="Top 10 words by fake news and real news">
+</p>
+<p>Agora iremos preparar os dados para a análise de sentimento. Eu estou interessada em classificar os dados em sentimentos de alegria, raiva, medo ou surpresa, por exemplo. Então eu iriei utilizar o os dados de <code>nrc</code> <a href=http://saifmohammad.com/WebPages/NRC-Emotion-Lexicon.htm>Saif Mohammad and Peter Turney</a>.</p>
+<div class=highlight><pre tabindex=0 style=color:#f8f8f2;background-color:#272822;-moz-tab-size:4;-o-tab-size:4;tab-size:4><code class=language-r data-lang=r>p1 <span style=color:#f92672>&lt;-</span> tidy_title <span style=color:#f92672>%&gt;%</span>
+  <span style=color:#a6e22e>inner_join</span>(<span style=color:#a6e22e>get_sentiments</span>(<span style=color:#e6db74>&#39;nrc&#39;</span>)) <span style=color:#f92672>%&gt;%</span>
+  <span style=color:#a6e22e>group_by</span>(sentiment, news) <span style=color:#f92672>%&gt;%</span>
+  <span style=color:#a6e22e>summarise</span>(n <span style=color:#f92672>=</span> <span style=color:#a6e22e>n</span>()) <span style=color:#f92672>%&gt;%</span>
+  <span style=color:#a6e22e>mutate</span>(prop <span style=color:#f92672>=</span> n<span style=color:#f92672>/</span><span style=color:#a6e22e>sum</span>(n))
+</code></pre></div><p><img loading=lazy src="https://ik.imagekit.io/devmedeiros/title_sentiment_lkDe-y_p97.png?updatedAt=1634083978487" alt="sentiment from news titles" title="Sentiment from news titles">
+</p>
+<p><strong>Disgust</strong> (nojo) aparenta ser o sentimento mais comum envolvendo títulos de notícias falsas, enquanto que <strong>trust</strong> (confiança) é o menor, mesmo que ainda seja maior que 50%. Em geral, títulos de notícias falsas aparentam ter mais &ldquo;sentimento&rdquo; do que títulos de notícias reais, neste banco de dados. Isso vale até para sentimentos positivos como <strong>joy</strong> (alegria) e <strong>surprise</strong> (surpresa).</p>
+<div class=highlight><pre tabindex=0 style=color:#f8f8f2;background-color:#272822;-moz-tab-size:4;-o-tab-size:4;tab-size:4><code class=language-r data-lang=r>p2 <span style=color:#f92672>&lt;-</span> tidy_corpus <span style=color:#f92672>%&gt;%</span>
+<span style=color:#a6e22e>inner_join</span>(<span style=color:#a6e22e>get_sentiments</span>(<span style=color:#e6db74>&#39;nrc&#39;</span>)) <span style=color:#f92672>%&gt;%</span>
+<span style=color:#a6e22e>group_by</span>(sentiment, news) <span style=color:#f92672>%&gt;%</span>
+<span style=color:#a6e22e>summarise</span>(n <span style=color:#f92672>=</span> <span style=color:#a6e22e>n</span>()) <span style=color:#f92672>%&gt;%</span>
+<span style=color:#a6e22e>mutate</span>(prop <span style=color:#f92672>=</span> n<span style=color:#f92672>/</span><span style=color:#a6e22e>sum</span>(n))
+</code></pre></div><p>Para o corpo das notícias reais pode-se notas que os mesmos sentimentos são prevalentes, mas a proporção é menor comparado ao título. Um artigo de notícias falsas perde confiança (<strong>trust</strong>) quando o leitor lê o corpo do artigo. Ele também se torna menos negativo (<strong>negative</strong>) e apresenta menos medo (<strong>fear</strong>)</p>
+<p><img loading=lazy src="https://ik.imagekit.io/devmedeiros/corpus_sentiment_302EKlTtO.png?updatedAt=1634083978312" alt="sentiment from news text" title="Sentiment from news corpus text">
+</p>
+<p>Uma melhoria que poderia ser feito aqui é tentar construir nosso próprio dicionário de palavras redundantes (<em>stopwords</em>) e alterar a forma que a toneização foi feita. Pois houveram momentos em que <em>trump</em> e <em>trump&rsquo;s</em> não corresponderam a mesma coisa e se estes dados tivessem sido usados para treinar um modelo isso poderia se tornar um problema.</p>
+</div>
+<footer class=post-footer>
+<ul class=post-tags>
+<li><a href=https://devmedeiros.github.io/pt/tags/ci%C3%AAncia-de-dados/>ciência de dados</a></li>
+<li><a href=https://devmedeiros.github.io/pt/tags/r/>R</a></li>
+<li><a href=https://devmedeiros.github.io/pt/tags/an%C3%A1lise-de-sentimentos/>análise de sentimentos</a></li>
+<li><a href=https://devmedeiros.github.io/pt/tags/nlp/>NLP</a></li>
+<li><a href=https://devmedeiros.github.io/pt/tags/ggplot/>ggplot</a></li>
+</ul>
+<nav class=paginav>
+<a class=prev href=https://devmedeiros.github.io/pt/post/2020-11-07-seaborn-package-guide/>
+<span class=title>« Página Anterior</span>
+<br>
+<span>Guia do Pacote de Python seaborn</span>
+</a>
+</nav>
+</footer>
+</article>
+</main>
+<footer class=footer>
+<span>&copy; 2021 <a href=https://devmedeiros.github.io/pt/>Dev_Medeiros</a></span>
+<span>
+Powered by
+<a href=https://gohugo.io/ rel="noopener noreferrer" target=_blank>Hugo</a> &
+        <a href=https://git.io/hugopapermod rel=noopener target=_blank>PaperMod</a>
+</span>
+</footer>
+<a href=#top aria-label="go to top" title="Go to Top (Alt + G)" class=top-link id=top-link accesskey=g><svg xmlns="http://www.w3.org/2000/svg" viewBox="0 0 12 6" fill="currentcolor"><path d="M12 6H0l6-6z"/></svg>
+</a>
+<script>let menu=document.getElementById('menu');menu&&(menu.scrollLeft=localStorage.getItem("menu-scroll-position"),menu.onscroll=function(){localStorage.setItem("menu-scroll-position",menu.scrollLeft)}),document.querySelectorAll('a[href^="#"]').forEach(a=>{a.addEventListener("click",function(b){b.preventDefault();var a=this.getAttribute("href").substr(1);window.matchMedia('(prefers-reduced-motion: reduce)').matches?document.querySelector(`[id='${decodeURIComponent(a)}']`).scrollIntoView():document.querySelector(`[id='${decodeURIComponent(a)}']`).scrollIntoView({behavior:"smooth"}),a==="top"?history.replaceState(null,null," "):history.pushState(null,null,`#${a}`)})})</script>
+<script>var mybutton=document.getElementById("top-link");window.onscroll=function(){document.body.scrollTop>800||document.documentElement.scrollTop>800?(mybutton.style.visibility="visible",mybutton.style.opacity="1"):(mybutton.style.visibility="hidden",mybutton.style.opacity="0")}</script>
+<script>document.getElementById("theme-toggle").addEventListener("click",()=>{document.body.className.includes("dark")?(document.body.classList.remove('dark'),localStorage.setItem("pref-theme",'light')):(document.body.classList.add('dark'),localStorage.setItem("pref-theme",'dark'))})</script>
+</body>
+</html>
