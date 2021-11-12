@@ -1,5 +1,5 @@
 ---
-title: "Aequivos" # in any language you want
+title: "Arquivos" # in any language you want
 layout: "archives" # is necessary
 # url: "/archive"
 # description: "Description for Search"

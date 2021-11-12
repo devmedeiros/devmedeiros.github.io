@@ -24,10 +24,39 @@ languages:
   en:
     title: Dev_Medeiros
     weight: 1
-  pt-br:
-    title: Dev_Medeiros
-    subtitle: "Um blog sobre Data Science"
+  pt:
+    profileMode:
+      enabled: true
+      title: Dev_Medeiros
+      subtitle: "Um blog sobre Ciência de Dados"
+      imageUrl: "https://avatars.githubusercontent.com/u/33239902?v=4"
+      imageWidth: 120
+      imageHeight: 120
+      imageTitle: Jaqueline Medeiros
+      buttons:
+        - name: Blog
+          url: categories/blog/
+        - name: Projetos
+          url: categories/projects/
     weight: 2
+    menu:
+      main:
+        - identifier: about
+          name: sobre
+          url: /about/
+          weight: 10
+        - identifier: tags
+          name: tags
+          url: /tags/
+          weight: 20
+        - identifier: archives
+          name: arquivos
+          url: /archives/
+          weight: 30
+        - identifier: search
+          name: pesquisar
+          url: /search/
+          weight: 30
 
 params:
   env: production # to enable google analytics, opengraph, twitter-cards and schema.
@@ -103,7 +132,7 @@ params:
     hiddenInSingle: true # hide on single page
 
   editPost:
-    URL: "https://github.com/<path_to_repo>/content"
+    URL: "https://github.com/devmedeiros.github.io/content"
     Text: "Suggest Changes" # edit text
     appendFilePath: true # to append file path to Edit link
 
