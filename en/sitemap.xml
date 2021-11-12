@@ -133,6 +133,16 @@
   </url><url>
     <loc>https://devmedeiros.github.io/tags/r/</loc>
     <lastmod>2021-11-02T17:14:00-03:00</lastmod>
+    <xhtml:link
+                rel="alternate"
+                hreflang="pt-br"
+                href="https://devmedeiros.github.io/pt-br/tags/r/"
+                />
+    <xhtml:link
+                rel="alternate"
+                hreflang="en"
+                href="https://devmedeiros.github.io/tags/r/"
+                />
   </url><url>
     <loc>https://devmedeiros.github.io/tags/sql/</loc>
     <lastmod>2021-11-02T17:14:00-03:00</lastmod>
@@ -151,6 +161,16 @@
   </url><url>
     <loc>https://devmedeiros.github.io/tags/ggplot/</loc>
     <lastmod>2021-10-24T20:43:00-03:00</lastmod>
+    <xhtml:link
+                rel="alternate"
+                hreflang="pt-br"
+                href="https://devmedeiros.github.io/pt-br/tags/ggplot/"
+                />
+    <xhtml:link
+                rel="alternate"
+                hreflang="en"
+                href="https://devmedeiros.github.io/tags/ggplot/"
+                />
   </url><url>
     <loc>https://devmedeiros.github.io/tags/shiny/</loc>
     <lastmod>2021-10-24T20:43:00-03:00</lastmod>
@@ -169,12 +189,32 @@
   </url><url>
     <loc>https://devmedeiros.github.io/tags/nlp/</loc>
     <lastmod>2021-10-12T19:47:00-03:00</lastmod>
+    <xhtml:link
+                rel="alternate"
+                hreflang="pt-br"
+                href="https://devmedeiros.github.io/pt-br/tags/nlp/"
+                />
+    <xhtml:link
+                rel="alternate"
+                hreflang="en"
+                href="https://devmedeiros.github.io/tags/nlp/"
+                />
   </url><url>
     <loc>https://devmedeiros.github.io/tags/sentiment-analysis/</loc>
     <lastmod>2021-10-12T19:47:00-03:00</lastmod>
   </url><url>
     <loc>https://devmedeiros.github.io/post/2021-10-12-fakenews-sentiment/</loc>
     <lastmod>2021-10-12T19:47:00-03:00</lastmod>
+    <xhtml:link
+                rel="alternate"
+                hreflang="pt-br"
+                href="https://devmedeiros.github.io/pt-br/post/2021-10-12-fakenews-sentiment/"
+                />
+    <xhtml:link
+                rel="alternate"
+                hreflang="en"
+                href="https://devmedeiros.github.io/post/2021-10-12-fakenews-sentiment/"
+                />
   </url><url>
     <loc>https://devmedeiros.github.io/about/</loc>
     <xhtml:link
