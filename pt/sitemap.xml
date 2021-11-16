@@ -122,6 +122,64 @@
     <loc>https://devmedeiros.github.io/pt/tags/visualiza%C3%A7%C3%A3o-de-dados/</loc>
     <lastmod>2021-11-07T15:14:00-03:00</lastmod>
   </url><url>
+    <loc>https://devmedeiros.github.io/pt/tags/ggplot/</loc>
+    <lastmod>2021-10-24T20:43:00-03:00</lastmod>
+    <xhtml:link
+                rel="alternate"
+                hreflang="en"
+                href="https://devmedeiros.github.io/tags/ggplot/"
+                />
+    <xhtml:link
+                rel="alternate"
+                hreflang="pt"
+                href="https://devmedeiros.github.io/pt/tags/ggplot/"
+                />
+  </url><url>
+    <loc>https://devmedeiros.github.io/pt/categories/projetos/</loc>
+    <lastmod>2021-10-24T20:43:00-03:00</lastmod>
+  </url><url>
+    <loc>https://devmedeiros.github.io/pt/tags/r/</loc>
+    <lastmod>2021-10-24T20:43:00-03:00</lastmod>
+    <xhtml:link
+                rel="alternate"
+                hreflang="en"
+                href="https://devmedeiros.github.io/tags/r/"
+                />
+    <xhtml:link
+                rel="alternate"
+                hreflang="pt"
+                href="https://devmedeiros.github.io/pt/tags/r/"
+                />
+  </url><url>
+    <loc>https://devmedeiros.github.io/pt/tags/shiny/</loc>
+    <lastmod>2021-10-24T20:43:00-03:00</lastmod>
+    <xhtml:link
+                rel="alternate"
+                hreflang="en"
+                href="https://devmedeiros.github.io/tags/shiny/"
+                />
+    <xhtml:link
+                rel="alternate"
+                hreflang="pt"
+                href="https://devmedeiros.github.io/pt/tags/shiny/"
+                />
+  </url><url>
+    <loc>https://devmedeiros.github.io/pt/tags/simula%C3%A7%C3%A3o/</loc>
+    <lastmod>2021-10-24T20:43:00-03:00</lastmod>
+  </url><url>
+    <loc>https://devmedeiros.github.io/pt/post/2021-10-24-blackjack-simulation/</loc>
+    <lastmod>2021-10-24T20:43:00-03:00</lastmod>
+    <xhtml:link
+                rel="alternate"
+                hreflang="en"
+                href="https://devmedeiros.github.io/post/2021-10-24-blackjack-simulation/"
+                />
+    <xhtml:link
+                rel="alternate"
+                hreflang="pt"
+                href="https://devmedeiros.github.io/pt/post/2021-10-24-blackjack-simulation/"
+                />
+  </url><url>
     <loc>https://devmedeiros.github.io/pt/tags/an%C3%A1lise-de-sentimentos/</loc>
     <lastmod>2021-10-12T19:47:00-03:00</lastmod>
   </url><url>
@@ -141,19 +199,6 @@
     <loc>https://devmedeiros.github.io/pt/tags/ci%C3%AAncia-de-dados/</loc>
     <lastmod>2021-10-12T19:47:00-03:00</lastmod>
   </url><url>
-    <loc>https://devmedeiros.github.io/pt/tags/ggplot/</loc>
-    <lastmod>2021-10-12T19:47:00-03:00</lastmod>
-    <xhtml:link
-                rel="alternate"
-                hreflang="en"
-                href="https://devmedeiros.github.io/tags/ggplot/"
-                />
-    <xhtml:link
-                rel="alternate"
-                hreflang="pt"
-                href="https://devmedeiros.github.io/pt/tags/ggplot/"
-                />
-  </url><url>
     <loc>https://devmedeiros.github.io/pt/tags/nlp/</loc>
     <lastmod>2021-10-12T19:47:00-03:00</lastmod>
     <xhtml:link
@@ -165,19 +210,6 @@
                 rel="alternate"
                 hreflang="pt"
                 href="https://devmedeiros.github.io/pt/tags/nlp/"
-                />
-  </url><url>
-    <loc>https://devmedeiros.github.io/pt/tags/r/</loc>
-    <lastmod>2021-10-12T19:47:00-03:00</lastmod>
-    <xhtml:link
-                rel="alternate"
-                hreflang="en"
-                href="https://devmedeiros.github.io/tags/r/"
-                />
-    <xhtml:link
-                rel="alternate"
-                hreflang="pt"
-                href="https://devmedeiros.github.io/pt/tags/r/"
                 />
   </url><url>
     <loc>https://devmedeiros.github.io/pt/archives/</loc>

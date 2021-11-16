@@ -9,7 +9,18 @@
       <link>https://devmedeiros.github.io/%3Clink%20or%20path%20of%20image%20for%20opengraph,%20twitter-cards%3E</link>
     </image>
     <generator>Hugo -- gohugo.io</generator>
-    <lastBuildDate>Tue, 12 Oct 2021 19:47:00 -0300</lastBuildDate><atom:link href="https://devmedeiros.github.io/pt/tags/ggplot/index.xml" rel="self" type="application/rss+xml" />
+    <lastBuildDate>Sun, 24 Oct 2021 20:43:00 -0300</lastBuildDate><atom:link href="https://devmedeiros.github.io/pt/tags/ggplot/index.xml" rel="self" type="application/rss+xml" />
+    <item>
+      <title>Simulação de 21</title>
+      <link>https://devmedeiros.github.io/pt/post/2021-10-24-blackjack-simulation/</link>
+      <pubDate>Sun, 24 Oct 2021 20:43:00 -0300</pubDate>
+      
+      <guid>https://devmedeiros.github.io/pt/post/2021-10-24-blackjack-simulation/</guid>
+      <description>&lt;p&gt;&lt;strong&gt;Ferramentas utilizadas:&lt;/strong&gt; R, ggplot, Shiny&lt;/p&gt;
+&lt;p&gt;&lt;strong&gt;Categoria:&lt;/strong&gt; Simulação&lt;/p&gt;
+&lt;hr&gt;</description>
+    </item>
+    
     <item>
       <title>Análise de Sentimentos de Notícias Falsas vs Notícias Reais</title>
       <link>https://devmedeiros.github.io/pt/post/2021-10-12-fakenews-sentiment/</link>

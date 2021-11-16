@@ -1,0 +1,25 @@
+<?xml version="1.0" encoding="utf-8" standalone="yes"?>
+<rss version="2.0" xmlns:atom="http://www.w3.org/2005/Atom" xmlns:content="http://purl.org/rss/1.0/modules/content/">
+  <channel>
+    <title>Projetos on Dev_Medeiros</title>
+    <link>https://devmedeiros.github.io/pt/categories/projetos/</link>
+    <description>Recent content in Projetos on Dev_Medeiros</description>
+    <image>
+      <url>https://devmedeiros.github.io/%3Clink%20or%20path%20of%20image%20for%20opengraph,%20twitter-cards%3E</url>
+      <link>https://devmedeiros.github.io/%3Clink%20or%20path%20of%20image%20for%20opengraph,%20twitter-cards%3E</link>
+    </image>
+    <generator>Hugo -- gohugo.io</generator>
+    <lastBuildDate>Sun, 24 Oct 2021 20:43:00 -0300</lastBuildDate><atom:link href="https://devmedeiros.github.io/pt/categories/projetos/index.xml" rel="self" type="application/rss+xml" />
+    <item>
+      <title>Simulação de 21</title>
+      <link>https://devmedeiros.github.io/pt/post/2021-10-24-blackjack-simulation/</link>
+      <pubDate>Sun, 24 Oct 2021 20:43:00 -0300</pubDate>
+      
+      <guid>https://devmedeiros.github.io/pt/post/2021-10-24-blackjack-simulation/</guid>
+      <description>&lt;p&gt;&lt;strong&gt;Ferramentas utilizadas:&lt;/strong&gt; R, ggplot, Shiny&lt;/p&gt;
+&lt;p&gt;&lt;strong&gt;Categoria:&lt;/strong&gt; Simulação&lt;/p&gt;
+&lt;hr&gt;</description>
+    </item>
+    
+  </channel>
+</rss>
