@@ -15,7 +15,7 @@ You can read it _out loud_  as[^2]:
 
 >Take `dt`, subset/reorder rows using `i`, then calculate `j`, grouped by `by`.
 
-A `data.table` is also a `data.frame` and all of the basic data manipulations you can use in `data.frame`s applies to `data.table`. So `ncol(), nrow(), names(), summary()`. But it has more possibilities, for instance in `data.table` there is a special variable `.N` which is an integer that contains the row number in the group. If you use `dt[.N]` you'll get the last row of your `data.table`.
+A `data.table` is also a `data.frame` and all of the basic data manipulations you can use in `data.frame`s applies to `data.table`. Like `ncol()`, `nrow()`, `names()`, `summary()`. But it has more possibilities, for instance in `data.table` there is a special variable `.N` which is an integer that contains the row number in the group. If you use `dt[.N]` you'll get the last row of your `data.table`.
 
 Another cool feature of `data.table` is that if you want filter/subset a column you don't need to use `df$x[df$x == 1]` you can simple use `dt[x == 1]` which make your code much more readable and clean.
 
