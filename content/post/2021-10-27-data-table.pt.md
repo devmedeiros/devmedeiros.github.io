@@ -1,5 +1,5 @@
 ---
-title: An Overview on data.table R Package
+title: Uma Visão Geral Sobre o Pacote data.table do R
 date: 2021-10-27 09:41:00 -0300
 categories: [Blog]
 tags: [R, data.table, manipulação de dados]
