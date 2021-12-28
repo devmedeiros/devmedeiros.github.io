@@ -2,7 +2,7 @@
 title: Making Beautiful Power BI Dashboards
 date: 2021-10-15 12:08:00 -0300
 categories: [Blog]
-tags: [data visualization , PowerBI]
+tags: [data visualization, PowerBI]
 ---
 
 Here are 5 Tips to improve your Power BI Dashboards.
