@@ -3,7 +3,7 @@
   xmlns:xhtml="http://www.w3.org/1999/xhtml">
   <url>
     <loc>https://devmedeiros.github.io/categories/blog/</loc>
-    <lastmod>2021-11-07T15:14:00-03:00</lastmod>
+    <lastmod>2021-12-28T14:55:00-03:00</lastmod>
     <xhtml:link
                 rel="alternate"
                 hreflang="pt"
@@ -16,7 +16,7 @@
                 />
   </url><url>
     <loc>https://devmedeiros.github.io/categories/</loc>
-    <lastmod>2021-11-07T15:14:00-03:00</lastmod>
+    <lastmod>2021-12-28T14:55:00-03:00</lastmod>
     <xhtml:link
                 rel="alternate"
                 hreflang="pt"
@@ -28,11 +28,27 @@
                 href="https://devmedeiros.github.io/categories/"
                 />
   </url><url>
+    <loc>https://devmedeiros.github.io/tags/data-analysis/</loc>
+    <lastmod>2021-12-28T14:55:00-03:00</lastmod>
+  </url><url>
     <loc>https://devmedeiros.github.io/tags/data-visualization/</loc>
-    <lastmod>2021-11-07T15:14:00-03:00</lastmod>
+    <lastmod>2021-12-28T14:55:00-03:00</lastmod>
+  </url><url>
+    <loc>https://devmedeiros.github.io/post/2021-12-28-amazon-top-50-books/</loc>
+    <lastmod>2021-12-28T14:55:00-03:00</lastmod>
+    <xhtml:link
+                rel="alternate"
+                hreflang="pt"
+                href="https://devmedeiros.github.io/pt/post/2021-12-28-amazon-top-50-books/"
+                />
+    <xhtml:link
+                rel="alternate"
+                hreflang="en"
+                href="https://devmedeiros.github.io/post/2021-12-28-amazon-top-50-books/"
+                />
   </url><url>
     <loc>https://devmedeiros.github.io/</loc>
-    <lastmod>2021-11-07T15:14:00-03:00</lastmod>
+    <lastmod>2021-12-28T14:55:00-03:00</lastmod>
     <xhtml:link
                 rel="alternate"
                 hreflang="pt"
@@ -42,6 +58,45 @@
                 rel="alternate"
                 hreflang="en"
                 href="https://devmedeiros.github.io/"
+                />
+  </url><url>
+    <loc>https://devmedeiros.github.io/post/</loc>
+    <lastmod>2021-12-28T14:55:00-03:00</lastmod>
+    <xhtml:link
+                rel="alternate"
+                hreflang="pt"
+                href="https://devmedeiros.github.io/pt/post/"
+                />
+    <xhtml:link
+                rel="alternate"
+                hreflang="en"
+                href="https://devmedeiros.github.io/post/"
+                />
+  </url><url>
+    <loc>https://devmedeiros.github.io/tags/python/</loc>
+    <lastmod>2021-12-28T14:55:00-03:00</lastmod>
+    <xhtml:link
+                rel="alternate"
+                hreflang="pt"
+                href="https://devmedeiros.github.io/pt/tags/python/"
+                />
+    <xhtml:link
+                rel="alternate"
+                hreflang="en"
+                href="https://devmedeiros.github.io/tags/python/"
+                />
+  </url><url>
+    <loc>https://devmedeiros.github.io/tags/</loc>
+    <lastmod>2021-12-28T14:55:00-03:00</lastmod>
+    <xhtml:link
+                rel="alternate"
+                hreflang="pt"
+                href="https://devmedeiros.github.io/pt/tags/"
+                />
+    <xhtml:link
+                rel="alternate"
+                hreflang="en"
+                href="https://devmedeiros.github.io/tags/"
                 />
   </url><url>
     <loc>https://devmedeiros.github.io/tags/pandas/</loc>
@@ -55,32 +110,6 @@
                 rel="alternate"
                 hreflang="en"
                 href="https://devmedeiros.github.io/tags/pandas/"
-                />
-  </url><url>
-    <loc>https://devmedeiros.github.io/post/</loc>
-    <lastmod>2021-11-07T15:14:00-03:00</lastmod>
-    <xhtml:link
-                rel="alternate"
-                hreflang="pt"
-                href="https://devmedeiros.github.io/pt/post/"
-                />
-    <xhtml:link
-                rel="alternate"
-                hreflang="en"
-                href="https://devmedeiros.github.io/post/"
-                />
-  </url><url>
-    <loc>https://devmedeiros.github.io/tags/python/</loc>
-    <lastmod>2021-11-07T15:14:00-03:00</lastmod>
-    <xhtml:link
-                rel="alternate"
-                hreflang="pt"
-                href="https://devmedeiros.github.io/pt/tags/python/"
-                />
-    <xhtml:link
-                rel="alternate"
-                hreflang="en"
-                href="https://devmedeiros.github.io/tags/python/"
                 />
   </url><url>
     <loc>https://devmedeiros.github.io/post/2020-11-07-seaborn-package-guide/</loc>
@@ -108,22 +137,6 @@
                 hreflang="en"
                 href="https://devmedeiros.github.io/tags/seaborn/"
                 />
-  </url><url>
-    <loc>https://devmedeiros.github.io/tags/</loc>
-    <lastmod>2021-11-07T15:14:00-03:00</lastmod>
-    <xhtml:link
-                rel="alternate"
-                hreflang="pt"
-                href="https://devmedeiros.github.io/pt/tags/"
-                />
-    <xhtml:link
-                rel="alternate"
-                hreflang="en"
-                href="https://devmedeiros.github.io/tags/"
-                />
-  </url><url>
-    <loc>https://devmedeiros.github.io/tags/data-analysis/</loc>
-    <lastmod>2021-11-02T17:14:00-03:00</lastmod>
   </url><url>
     <loc>https://devmedeiros.github.io/post/2021-11-02-sql-california-traffic/</loc>
     <lastmod>2021-11-02T17:14:00-03:00</lastmod>

@@ -9,7 +9,17 @@
       <link>https://devmedeiros.github.io/%3Clink%20or%20path%20of%20image%20for%20opengraph,%20twitter-cards%3E</link>
     </image>
     <generator>Hugo -- gohugo.io</generator>
-    <lastBuildDate>Sun, 07 Nov 2021 15:14:00 -0300</lastBuildDate><atom:link href="https://devmedeiros.github.io/pt/categories/blog/index.xml" rel="self" type="application/rss+xml" />
+    <lastBuildDate>Tue, 28 Dec 2021 14:55:00 -0300</lastBuildDate><atom:link href="https://devmedeiros.github.io/pt/categories/blog/index.xml" rel="self" type="application/rss+xml" />
+    <item>
+      <title>Análise Descritiva do Top 50 Livros Bestsellers da Amazon 2009 - 2019</title>
+      <link>https://devmedeiros.github.io/pt/post/2021-12-28-amazon-top-50-books/</link>
+      <pubDate>Tue, 28 Dec 2021 14:55:00 -0300</pubDate>
+      
+      <guid>https://devmedeiros.github.io/pt/post/2021-12-28-amazon-top-50-books/</guid>
+      <description>Recentemente eu terminei um curso na Alura chamado Python para Data Science e eu quero colocar o que eu aprendi em prática, para isso eu vou fazer uma análise descritiva nesse banco de dados Amazon Top 50 Bestselling Books 2009 - 2019. Nele há 550 livros e eles foram categorizados como fiction (ficção) e non-fiction (não ficção) pelo Goodreads. Todo o código pode ser visto aqui.
+Eu comecei olhando as cinco primeiras observações do banco de dados.</description>
+    </item>
+    
     <item>
       <title>Guia do Pacote de Python seaborn</title>
       <link>https://devmedeiros.github.io/pt/post/2020-11-07-seaborn-package-guide/</link>
