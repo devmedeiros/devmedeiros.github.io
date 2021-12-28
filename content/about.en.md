@@ -14,5 +14,6 @@ In my free time, I like to practice yoga, play D&D, and play with my cats.
 
 You can find me at:
 
-- Linkedin: [medeiros-jaqueline](https://www.linkedin.com/in/medeiros-jaqueline/)
+- Linkedin: [medeiros-jaqueline](https://www.linkedin.com/in/medeiros-jaqueline/?locale=en_US)
 - Github: [devmedeiros](https://github.com/devmedeiros)
+- Instagram: [mejaque](https://www.instagram.com/mejaque/)

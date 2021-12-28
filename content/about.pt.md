@@ -16,3 +16,4 @@ Você pode me encontrar em:
 
 - Linkedin: [medeiros-jaqueline](https://www.linkedin.com/in/medeiros-jaqueline/)
 - Github: [devmedeiros](https://github.com/devmedeiros)
+- Instagram: [mejaque](https://www.instagram.com/mejaque/)
