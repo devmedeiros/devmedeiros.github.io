@@ -9,7 +9,17 @@
       <link>https://devmedeiros.github.io/%3Clink%20or%20path%20of%20image%20for%20opengraph,%20twitter-cards%3E</link>
     </image>
     <generator>Hugo -- gohugo.io</generator>
-    <lastBuildDate>Tue, 28 Dec 2021 14:55:00 -0300</lastBuildDate><atom:link href="https://devmedeiros.github.io/pt/index.xml" rel="self" type="application/rss+xml" />
+    <lastBuildDate>Mon, 24 Jan 2022 18:15:00 -0300</lastBuildDate><atom:link href="https://devmedeiros.github.io/pt/index.xml" rel="self" type="application/rss+xml" />
+    <item>
+      <title>Review do Podcast - Machine Learning Guide</title>
+      <link>https://devmedeiros.github.io/pt/post/2022-01-24-podcast-review-mlg/</link>
+      <pubDate>Mon, 24 Jan 2022 18:15:00 -0300</pubDate>
+      
+      <guid>https://devmedeiros.github.io/pt/post/2022-01-24-podcast-review-mlg/</guid>
+      <description>O show, apresentado por Tyler Renelle da Depth, oferece uma lista com recursos na qual você pode encontrar todos os livros, cursos, e sites mencionados durante o podcast. É um ótimo podcast para quem está aprendendo sobre aprendizado de máquina, podendo ser útil para iniciantes, entusiastas, ou para alguém que está procurando se aprofundar ainda mais no tópico. Desde 2021 o show está sendo renovado para atualizar o conteúdo.
+O show começa falando sobre o que é ciência de dados e como ela se relaciona com aprendizado de máquina e inteligência artificial.</description>
+    </item>
+    
     <item>
       <title>Análise Descritiva do Top 50 Livros Bestsellers da Amazon 2009 - 2019</title>
       <link>https://devmedeiros.github.io/pt/post/2021-12-28-amazon-top-50-books/</link>
