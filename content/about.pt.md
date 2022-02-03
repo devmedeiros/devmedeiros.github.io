@@ -6,11 +6,11 @@ layout: "single" # is necessary
 summary: "about"
 ---
 
-Oi! Meu nome é Jaqueline Souza Medeiros, tenho 25 anos e sou formada em Estatística pela Universidade Federal de Goiás. O principal propósito do _blog_ é escrever sobre o que eu aprendi e estou aprendendo sobre Ciência de Dados.
+Oi! Meu nome é Jaqueline Souza Medeiros, sou uma Ciêntista de Dados de 25 anos formada pela Universidade Federal de Goiás. O principal propósito desse _blog_ é escrever sobre o que eu aprendi e estou aprendendo sobre Ciência de Dados.
 
-Eu amo aprender sobre outras culturas e linguagens, e por isso, eu desenvolvi um grande interesse em Processamento Natural de Linguagem. Também estou interessada em simulação e aprendizado de máquina, então espero poder explorar estas áreas em breve.
+Eu amo aprender sobre outras culturas e idiomas, e por isso, eu desenvolvi um grande interesse em Processamento Natural de Linguagem. Também estou interessada em simulação e aprendizado de máquina, então espero explorar estas áreas em breve.
 
-No meu tempo livre eu gosto de praticar yoga, jogar D&D e brincar com meus gatos.
+No meu tempo livre eu gosto de praticar yoga, jogar D&D e fazer jogos.
 
 Você pode me encontrar em:
 
