@@ -9,7 +9,21 @@
       <link>https://devmedeiros.github.io/%3Clink%20or%20path%20of%20image%20for%20opengraph,%20twitter-cards%3E</link>
     </image>
     <generator>Hugo -- gohugo.io</generator>
-    <lastBuildDate>Tue, 02 Nov 2021 17:14:00 -0300</lastBuildDate><atom:link href="https://devmedeiros.github.io/categories/projects/index.xml" rel="self" type="application/rss+xml" />
+    <lastBuildDate>Thu, 17 Feb 2022 18:42:00 -0300</lastBuildDate><atom:link href="https://devmedeiros.github.io/categories/projects/index.xml" rel="self" type="application/rss+xml" />
+    <item>
+      <title>Alura Films - Power BI Dashboard</title>
+      <link>https://devmedeiros.github.io/post/2022-02-17-alura-films-powerbi/</link>
+      <pubDate>Thu, 17 Feb 2022 18:42:00 -0300</pubDate>
+      
+      <guid>https://devmedeiros.github.io/post/2022-02-17-alura-films-powerbi/</guid>
+      <description>&lt;!DOCTYPE html&gt;
+
+&lt;p&gt;&lt;strong&gt;Tools used:&lt;/strong&gt; Power BI, Google Sheets, Figma&lt;/p&gt;
+&lt;p&gt;&lt;strong&gt;Category:&lt;/strong&gt; Dashboard&lt;/p&gt;
+&lt;hr&gt;
+</description>
+    </item>
+    
     <item>
       <title>Have COVID Impacted California Traffic Collisions?</title>
       <link>https://devmedeiros.github.io/post/2021-11-02-sql-california-traffic/</link>

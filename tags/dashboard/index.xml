@@ -1,0 +1,28 @@
+<?xml version="1.0" encoding="utf-8" standalone="yes"?>
+<rss version="2.0" xmlns:atom="http://www.w3.org/2005/Atom" xmlns:content="http://purl.org/rss/1.0/modules/content/">
+  <channel>
+    <title>dashboard on Dev_Medeiros</title>
+    <link>https://devmedeiros.github.io/tags/dashboard/</link>
+    <description>Recent content in dashboard on Dev_Medeiros</description>
+    <image>
+      <url>https://devmedeiros.github.io/%3Clink%20or%20path%20of%20image%20for%20opengraph,%20twitter-cards%3E</url>
+      <link>https://devmedeiros.github.io/%3Clink%20or%20path%20of%20image%20for%20opengraph,%20twitter-cards%3E</link>
+    </image>
+    <generator>Hugo -- gohugo.io</generator>
+    <lastBuildDate>Thu, 17 Feb 2022 18:42:00 -0300</lastBuildDate><atom:link href="https://devmedeiros.github.io/tags/dashboard/index.xml" rel="self" type="application/rss+xml" />
+    <item>
+      <title>Alura Films - Power BI Dashboard</title>
+      <link>https://devmedeiros.github.io/post/2022-02-17-alura-films-powerbi/</link>
+      <pubDate>Thu, 17 Feb 2022 18:42:00 -0300</pubDate>
+      
+      <guid>https://devmedeiros.github.io/post/2022-02-17-alura-films-powerbi/</guid>
+      <description>&lt;!DOCTYPE html&gt;
+
+&lt;p&gt;&lt;strong&gt;Tools used:&lt;/strong&gt; Power BI, Google Sheets, Figma&lt;/p&gt;
+&lt;p&gt;&lt;strong&gt;Category:&lt;/strong&gt; Dashboard&lt;/p&gt;
+&lt;hr&gt;
+</description>
+    </item>
+    
+  </channel>
+</rss>

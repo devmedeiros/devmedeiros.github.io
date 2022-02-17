@@ -2,21 +2,21 @@
 <urlset xmlns="http://www.sitemaps.org/schemas/sitemap/0.9"
   xmlns:xhtml="http://www.w3.org/1999/xhtml">
   <url>
-    <loc>https://devmedeiros.github.io/categories/blog/</loc>
-    <lastmod>2022-01-24T18:15:00-03:00</lastmod>
+    <loc>https://devmedeiros.github.io/post/2022-02-17-alura-films-powerbi/</loc>
+    <lastmod>2022-02-17T18:42:00-03:00</lastmod>
     <xhtml:link
                 rel="alternate"
                 hreflang="pt"
-                href="https://devmedeiros.github.io/pt/categories/blog/"
+                href="https://devmedeiros.github.io/pt/post/2022-02-17-alura-films-powerbi/"
                 />
     <xhtml:link
                 rel="alternate"
                 hreflang="en"
-                href="https://devmedeiros.github.io/categories/blog/"
+                href="https://devmedeiros.github.io/post/2022-02-17-alura-films-powerbi/"
                 />
   </url><url>
     <loc>https://devmedeiros.github.io/categories/</loc>
-    <lastmod>2022-01-24T18:15:00-03:00</lastmod>
+    <lastmod>2022-02-17T18:42:00-03:00</lastmod>
     <xhtml:link
                 rel="alternate"
                 hreflang="pt"
@@ -28,8 +28,24 @@
                 href="https://devmedeiros.github.io/categories/"
                 />
   </url><url>
+    <loc>https://devmedeiros.github.io/tags/dashboard/</loc>
+    <lastmod>2022-02-17T18:42:00-03:00</lastmod>
+    <xhtml:link
+                rel="alternate"
+                hreflang="pt"
+                href="https://devmedeiros.github.io/pt/tags/dashboard/"
+                />
+    <xhtml:link
+                rel="alternate"
+                hreflang="en"
+                href="https://devmedeiros.github.io/tags/dashboard/"
+                />
+  </url><url>
+    <loc>https://devmedeiros.github.io/tags/data-visualization/</loc>
+    <lastmod>2022-02-17T18:42:00-03:00</lastmod>
+  </url><url>
     <loc>https://devmedeiros.github.io/</loc>
-    <lastmod>2022-01-24T18:15:00-03:00</lastmod>
+    <lastmod>2022-02-17T18:42:00-03:00</lastmod>
     <xhtml:link
                 rel="alternate"
                 hreflang="pt"
@@ -39,6 +55,71 @@
                 rel="alternate"
                 hreflang="en"
                 href="https://devmedeiros.github.io/"
+                />
+  </url><url>
+    <loc>https://devmedeiros.github.io/post/</loc>
+    <lastmod>2022-02-17T18:42:00-03:00</lastmod>
+    <xhtml:link
+                rel="alternate"
+                hreflang="pt"
+                href="https://devmedeiros.github.io/pt/post/"
+                />
+    <xhtml:link
+                rel="alternate"
+                hreflang="en"
+                href="https://devmedeiros.github.io/post/"
+                />
+  </url><url>
+    <loc>https://devmedeiros.github.io/tags/powerbi/</loc>
+    <lastmod>2022-02-17T18:42:00-03:00</lastmod>
+    <xhtml:link
+                rel="alternate"
+                hreflang="pt"
+                href="https://devmedeiros.github.io/pt/tags/powerbi/"
+                />
+    <xhtml:link
+                rel="alternate"
+                hreflang="en"
+                href="https://devmedeiros.github.io/tags/powerbi/"
+                />
+  </url><url>
+    <loc>https://devmedeiros.github.io/categories/projects/</loc>
+    <lastmod>2022-02-17T18:42:00-03:00</lastmod>
+    <xhtml:link
+                rel="alternate"
+                hreflang="pt"
+                href="https://devmedeiros.github.io/pt/categories/projects/"
+                />
+    <xhtml:link
+                rel="alternate"
+                hreflang="en"
+                href="https://devmedeiros.github.io/categories/projects/"
+                />
+  </url><url>
+    <loc>https://devmedeiros.github.io/tags/</loc>
+    <lastmod>2022-02-17T18:42:00-03:00</lastmod>
+    <xhtml:link
+                rel="alternate"
+                hreflang="pt"
+                href="https://devmedeiros.github.io/pt/tags/"
+                />
+    <xhtml:link
+                rel="alternate"
+                hreflang="en"
+                href="https://devmedeiros.github.io/tags/"
+                />
+  </url><url>
+    <loc>https://devmedeiros.github.io/categories/blog/</loc>
+    <lastmod>2022-01-24T18:15:00-03:00</lastmod>
+    <xhtml:link
+                rel="alternate"
+                hreflang="pt"
+                href="https://devmedeiros.github.io/pt/categories/blog/"
+                />
+    <xhtml:link
+                rel="alternate"
+                hreflang="en"
+                href="https://devmedeiros.github.io/categories/blog/"
                 />
   </url><url>
     <loc>https://devmedeiros.github.io/tags/podcast/</loc>
@@ -67,19 +148,6 @@
                 href="https://devmedeiros.github.io/post/2022-01-24-podcast-review-mlg/"
                 />
   </url><url>
-    <loc>https://devmedeiros.github.io/post/</loc>
-    <lastmod>2022-01-24T18:15:00-03:00</lastmod>
-    <xhtml:link
-                rel="alternate"
-                hreflang="pt"
-                href="https://devmedeiros.github.io/pt/post/"
-                />
-    <xhtml:link
-                rel="alternate"
-                hreflang="en"
-                href="https://devmedeiros.github.io/post/"
-                />
-  </url><url>
     <loc>https://devmedeiros.github.io/tags/review/</loc>
     <lastmod>2022-01-24T18:15:00-03:00</lastmod>
     <xhtml:link
@@ -93,23 +161,7 @@
                 href="https://devmedeiros.github.io/tags/review/"
                 />
   </url><url>
-    <loc>https://devmedeiros.github.io/tags/</loc>
-    <lastmod>2022-01-24T18:15:00-03:00</lastmod>
-    <xhtml:link
-                rel="alternate"
-                hreflang="pt"
-                href="https://devmedeiros.github.io/pt/tags/"
-                />
-    <xhtml:link
-                rel="alternate"
-                hreflang="en"
-                href="https://devmedeiros.github.io/tags/"
-                />
-  </url><url>
     <loc>https://devmedeiros.github.io/tags/data-analysis/</loc>
-    <lastmod>2021-12-28T14:55:00-03:00</lastmod>
-  </url><url>
-    <loc>https://devmedeiros.github.io/tags/data-visualization/</loc>
     <lastmod>2021-12-28T14:55:00-03:00</lastmod>
   </url><url>
     <loc>https://devmedeiros.github.io/post/2021-12-28-amazon-top-50-books/</loc>
@@ -179,19 +231,6 @@
   </url><url>
     <loc>https://devmedeiros.github.io/post/2021-11-02-sql-california-traffic/</loc>
     <lastmod>2021-11-02T17:14:00-03:00</lastmod>
-  </url><url>
-    <loc>https://devmedeiros.github.io/categories/projects/</loc>
-    <lastmod>2021-11-02T17:14:00-03:00</lastmod>
-    <xhtml:link
-                rel="alternate"
-                hreflang="pt"
-                href="https://devmedeiros.github.io/pt/categories/projects/"
-                />
-    <xhtml:link
-                rel="alternate"
-                hreflang="en"
-                href="https://devmedeiros.github.io/categories/projects/"
-                />
   </url><url>
     <loc>https://devmedeiros.github.io/tags/r/</loc>
     <lastmod>2021-11-02T17:14:00-03:00</lastmod>
@@ -281,9 +320,6 @@
     <lastmod>2021-10-24T20:43:00-03:00</lastmod>
   </url><url>
     <loc>https://devmedeiros.github.io/post/2021-10-15-beautiful-power-bi/</loc>
-    <lastmod>2021-10-15T12:08:00-03:00</lastmod>
-  </url><url>
-    <loc>https://devmedeiros.github.io/tags/powerbi/</loc>
     <lastmod>2021-10-15T12:08:00-03:00</lastmod>
   </url><url>
     <loc>https://devmedeiros.github.io/tags/data-science/</loc>
