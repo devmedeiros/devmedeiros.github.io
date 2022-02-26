@@ -23,6 +23,7 @@ outputs:
 languages:
   en:
     title: Dev_Medeiros
+    contentDir: content/post/english
     weight: 1
   pt:
     profileMode:
@@ -38,6 +39,7 @@ languages:
           url: categories/blog/
         - name: Projetos
           url: categories/projects/
+    contentDir: content/post/portuguese
     weight: 2
     menu:
       main:
@@ -67,7 +69,7 @@ params:
   # author: ["Me", "You"] # multiple authors
   images: ["<link or path of image for opengraph, twitter-cards>"]
   DateFormat: "January 2, 2006"
-  defaultTheme: dark # dark, light
+  defaultTheme: light # dark, light
   disableThemeToggle: false
 
   ShowReadingTime: true
