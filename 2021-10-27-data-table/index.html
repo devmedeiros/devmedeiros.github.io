@@ -1,0 +1,154 @@
+<!doctype html><html lang=en dir=auto>
+<head><meta charset=utf-8>
+<meta http-equiv=x-ua-compatible content="IE=edge">
+<meta name=viewport content="width=device-width,initial-scale=1,shrink-to-fit=no">
+<meta name=robots content="index, follow">
+<title>An Overview on data.table R Package | Dev_Medeiros</title>
+<meta name=keywords content="R,data.table,data manipulation">
+<meta name=description content="The data.table package is one of the fastest packages for data manipulation, currently, it is even faster than pandas and dplyr 1. data.table syntax is dt[i, j, by], where:
+ i is used to subset rows j is used to subset columns by is used to subset groups, like GROUP BY from SQL  You can read it out loud as2:
+ Take dt, subset/reorder rows using i, then calculate j, grouped by by.">
+<meta name=author content="Jaqueline Souza Medeiros">
+<link rel=canonical href=https://devmedeiros.github.io/2021-10-27-data-table/>
+<meta name=google-site-verification content="FlWzcRu5is8Vlu9fsp78s1CPMcmQLd1DLVKVMFonbxY">
+<link crossorigin=anonymous href=/assets/css/stylesheet.min.6f60056d44d3f7eb69a4bc6c332b59960f3a995802bded244750232f33713c49.css integrity="sha256-b2AFbUTT9+tppLxsMytZlg86mVgCve0kR1AjLzNxPEk=" rel="preload stylesheet" as=style>
+<script defer crossorigin=anonymous src=/assets/js/highlight.min.7680afc38aa6b15ddf158a4f3780b7b1f7dde7e91d26f073e6229bb7a0793c92.js integrity="sha256-doCvw4qmsV3fFYpPN4C3sffd5+kdJvBz5iKbt6B5PJI=" onload=hljs.initHighlightingOnLoad()></script>
+<link rel=icon href=https://devmedeiros.github.io/%3Clink%20/%20abs%20url%3E>
+<link rel=icon type=image/png sizes=16x16 href=https://devmedeiros.github.io/%3Clink%20/%20abs%20url%3E>
+<link rel=icon type=image/png sizes=32x32 href=https://devmedeiros.github.io/%3Clink%20/%20abs%20url%3E>
+<link rel=apple-touch-icon href=https://devmedeiros.github.io/%3Clink%20/%20abs%20url%3E>
+<link rel=mask-icon href=https://devmedeiros.github.io/%3Clink%20/%20abs%20url%3E>
+<meta name=theme-color content="#2e2e33">
+<meta name=msapplication-TileColor content="#2e2e33">
+<meta name=generator content="Hugo 0.92.2">
+<link rel=alternate hreflang=en href=https://devmedeiros.github.io/2021-10-27-data-table/>
+<link rel=alternate hreflang=pt href=https://devmedeiros.github.io/pt/2021-10-27-data-table/>
+<noscript>
+<style>#theme-toggle,.top-link{display:none}</style>
+</noscript>
+<script async src="https://www.googletagmanager.com/gtag/js?id=G-NLNQKJMT5Q"></script>
+<script>var doNotTrack=!1;if(!doNotTrack){window.dataLayer=window.dataLayer||[];function gtag(){dataLayer.push(arguments)}gtag('js',new Date),gtag('config','G-NLNQKJMT5Q',{anonymize_ip:!1})}</script>
+<meta property="og:title" content="An Overview on data.table R Package">
+<meta property="og:description" content="The data.table package is one of the fastest packages for data manipulation, currently, it is even faster than pandas and dplyr 1. data.table syntax is dt[i, j, by], where:
+ i is used to subset rows j is used to subset columns by is used to subset groups, like GROUP BY from SQL  You can read it out loud as2:
+ Take dt, subset/reorder rows using i, then calculate j, grouped by by.">
+<meta property="og:type" content="article">
+<meta property="og:url" content="https://devmedeiros.github.io/2021-10-27-data-table/"><meta property="og:image" content="https://devmedeiros.github.io/%3Clink%20or%20path%20of%20image%20for%20opengraph,%20twitter-cards%3E"><meta property="article:section" content>
+<meta property="article:published_time" content="2021-10-27T09:41:00-03:00">
+<meta property="article:modified_time" content="2021-10-27T09:41:00-03:00"><meta property="og:site_name" content="Dev_Medeiros">
+<meta name=twitter:card content="summary_large_image">
+<meta name=twitter:image content="https://devmedeiros.github.io/%3Clink%20or%20path%20of%20image%20for%20opengraph,%20twitter-cards%3E">
+<meta name=twitter:title content="An Overview on data.table R Package">
+<meta name=twitter:description content="The data.table package is one of the fastest packages for data manipulation, currently, it is even faster than pandas and dplyr 1. data.table syntax is dt[i, j, by], where:
+ i is used to subset rows j is used to subset columns by is used to subset groups, like GROUP BY from SQL  You can read it out loud as2:
+ Take dt, subset/reorder rows using i, then calculate j, grouped by by.">
+<script type=application/ld+json>{"@context":"https://schema.org","@type":"BreadcrumbList","itemListElement":[{"@type":"ListItem","position":1,"name":"An Overview on data.table R Package","item":"https://devmedeiros.github.io/2021-10-27-data-table/"}]}</script>
+<script type=application/ld+json>{"@context":"https://schema.org","@type":"BlogPosting","headline":"An Overview on data.table R Package","name":"An Overview on data.table R Package","description":"The data.table package is one of the fastest packages for data manipulation, currently, it is even faster than pandas and dplyr 1. data.table syntax is dt[i, j, by], where:\n i is used to subset rows j is used to subset columns by is used to subset groups, like GROUP BY from SQL  You can read it out loud as2:\n Take dt, subset/reorder rows using i, then calculate j, grouped by by.","keywords":["R","data.table","data manipulation"],"articleBody":"The data.table package is one of the fastest packages for data manipulation, currently, it is even faster than pandas and dplyr 1. data.table syntax is dt[i, j, by], where:\n i is used to subset rows j is used to subset columns by is used to subset groups, like GROUP BY from SQL  You can read it out loud as2:\n Take dt, subset/reorder rows using i, then calculate j, grouped by by.\n A data.table is also a data.frame and all of the basic data manipulations you can use in data.frames applies to data.table. Like ncol(), nrow(), names(), summary(). But it has more possibilities, for instance in data.table there is a special variable .N which is an integer that contains the row number in the group. If you use dt[.N] you’ll get the last row of your data.table.\nAnother cool feature of data.table is that if you want filter/subset a column you don’t need to use df$x[df$x == 1] you can simple use dt[x == 1] which make your code much more readable and clean.\nYou also get to use special operators: %like%, %in% and %between%. These operators work like SQL operators, LIKE, IN, and BETWEEN, respectively.\nIf you are familiar with SQL there is this one thing the package offers that will catch your eye. It’s called chaining, which allows you to perform a sequence of operations in a data.table, you just need to use dt[][] and chain multiple operations “[]”.\nBut that’s not all with the operator := you can alter data without making a new copy in the memory.\nIf you want to start using the package I suggest you use the cheatsheet. It’s really useful if you already have a basic knowledge about data.frames.\n  https://h2oai.github.io/db-benchmark/ ↩︎\n https://cran.r-project.org/web/packages/data.table/vignettes/datatable-intro.html ↩︎\n   ","wordCount":"288","inLanguage":"en","datePublished":"2021-10-27T09:41:00-03:00","dateModified":"2021-10-27T09:41:00-03:00","author":{"@type":"Person","name":"Jaqueline Souza Medeiros"},"mainEntityOfPage":{"@type":"WebPage","@id":"https://devmedeiros.github.io/2021-10-27-data-table/"},"publisher":{"@type":"Organization","name":"Dev_Medeiros","logo":{"@type":"ImageObject","url":"https://devmedeiros.github.io/%3Clink%20/%20abs%20url%3E"}}}</script>
+</head>
+<body id=top>
+<script>localStorage.getItem("pref-theme")==="dark"&&document.body.classList.add('dark')</script>
+<header class=header>
+<nav class=nav>
+<div class=logo>
+<a href=https://devmedeiros.github.io/ accesskey=h title="Dev_Medeiros (Alt + H)">Dev_Medeiros</a>
+<span class=logo-switches>
+<button id=theme-toggle accesskey=t title="(Alt + T)"><svg id="moon" xmlns="http://www.w3.org/2000/svg" width="24" height="24" viewBox="0 0 24 24" fill="none" stroke="currentcolor" stroke-width="2" stroke-linecap="round" stroke-linejoin="round"><path d="M21 12.79A9 9 0 1111.21 3 7 7 0 0021 12.79z"/></svg><svg id="sun" xmlns="http://www.w3.org/2000/svg" width="24" height="24" viewBox="0 0 24 24" fill="none" stroke="currentcolor" stroke-width="2" stroke-linecap="round" stroke-linejoin="round"><circle cx="12" cy="12" r="5"/><line x1="12" y1="1" x2="12" y2="3"/><line x1="12" y1="21" x2="12" y2="23"/><line x1="4.22" y1="4.22" x2="5.64" y2="5.64"/><line x1="18.36" y1="18.36" x2="19.78" y2="19.78"/><line x1="1" y1="12" x2="3" y2="12"/><line x1="21" y1="12" x2="23" y2="12"/><line x1="4.22" y1="19.78" x2="5.64" y2="18.36"/><line x1="18.36" y1="5.64" x2="19.78" y2="4.22"/></svg>
+</button>
+<ul class=lang-switch><li>|</li>
+<li>
+<a href=https://devmedeiros.github.io/pt/ title=Pt aria-label=Pt>Pt</a>
+</li>
+</ul>
+</span>
+</div>
+<ul id=menu>
+<li>
+<a href=https://devmedeiros.github.io/about/ title=about>
+<span>about</span>
+</a>
+</li>
+<li>
+<a href=https://devmedeiros.github.io/tags/ title=tags>
+<span>tags</span>
+</a>
+</li>
+<li>
+<a href=https://devmedeiros.github.io/archives/ title=archives>
+<span>archives</span>
+</a>
+</li>
+<li>
+<a href=https://devmedeiros.github.io/search/ title=search>
+<span>search</span>
+</a>
+</li>
+</ul>
+</nav>
+</header>
+<main class=main>
+<article class=post-single>
+<header class=post-header>
+<div class=breadcrumbs><a href=https://devmedeiros.github.io/>Home</a></div>
+<h1 class=post-title>
+An Overview on data.table R Package
+</h1>
+<div class=post-meta><span title="2021-10-27 09:41:00 -0300 -0300">October 27, 2021</span>&nbsp;·&nbsp;2 min&nbsp;·&nbsp;Jaqueline Souza Medeiros&nbsp;|&nbsp;
+<ul class=i18n_list>Translations:
+<li>
+<a href=https://devmedeiros.github.io/pt/2021-10-27-data-table/>Pt</a>
+</li>
+</ul>&nbsp;|&nbsp;<a href=https://github.com/devmedeiros.github.io/content/2021-10-27-data-table.md rel="noopener noreferrer" target=_blank>Suggest Changes</a>
+</div>
+</header>
+<div class=post-content><p>The <code>data.table</code> package is one of the fastest packages for data manipulation, currently, it is even faster than <code>pandas</code> and <code>dplyr</code> <sup id=fnref:1><a href=#fn:1 class=footnote-ref role=doc-noteref>1</a></sup>. <code>data.table</code> syntax is <code>dt[i, j, by]</code>, where:</p>
+<ul>
+<li>i is used to subset rows</li>
+<li>j is used to subset columns</li>
+<li>by is used to subset groups, like <strong>GROUP BY</strong> from SQL</li>
+</ul>
+<p>You can read it <em>out loud</em> as<sup id=fnref:2><a href=#fn:2 class=footnote-ref role=doc-noteref>2</a></sup>:</p>
+<blockquote>
+<p>Take <code>dt</code>, subset/reorder rows using <code>i</code>, then calculate <code>j</code>, grouped by <code>by</code>.</p>
+</blockquote>
+<p>A <code>data.table</code> is also a <code>data.frame</code> and all of the basic data manipulations you can use in <code>data.frame</code>s applies to <code>data.table</code>. Like <code>ncol()</code>, <code>nrow()</code>, <code>names()</code>, <code>summary()</code>. But it has more possibilities, for instance in <code>data.table</code> there is a special variable <code>.N</code> which is an integer that contains the row number in the group. If you use <code>dt[.N]</code> you&rsquo;ll get the last row of your <code>data.table</code>.</p>
+<p>Another cool feature of <code>data.table</code> is that if you want filter/subset a column you don&rsquo;t need to use <code>df$x[df$x == 1]</code> you can simple use <code>dt[x == 1]</code> which make your code much more readable and clean.</p>
+<p>You also get to use special operators: <code>%like%</code>, <code>%in%</code> and <code>%between%</code>. These operators work like SQL operators, <strong>LIKE</strong>, <strong>IN</strong>, and <strong>BETWEEN</strong>, respectively.</p>
+<p>If you are familiar with SQL there is this one thing the package offers that will catch your eye. It&rsquo;s called <em>chaining</em>, which allows you to perform a sequence of operations in a <code>data.table</code>, you just need to use <code>dt[][]</code> and chain multiple operations &ldquo;[]&rdquo;.</p>
+<p>But that&rsquo;s not all with the operator <code>:=</code> you can alter data without making a new copy in the memory.</p>
+<p>If you want to start using the package I suggest you use the <a href=https://raw.githubusercontent.com/rstudio/cheatsheets/master/datatable.pdf>cheatsheet</a>. It&rsquo;s really useful if you already have a basic knowledge about <code>data.frame</code>s.</p>
+<section class=footnotes role=doc-endnotes>
+<hr>
+<ol>
+<li id=fn:1 role=doc-endnote>
+<p><a href=https://h2oai.github.io/db-benchmark/>https://h2oai.github.io/db-benchmark/</a>&#160;<a href=#fnref:1 class=footnote-backref role=doc-backlink>&#8617;&#xfe0e;</a></p>
+</li>
+<li id=fn:2 role=doc-endnote>
+<p><a href=https://cran.r-project.org/web/packages/data.table/vignettes/datatable-intro.html>https://cran.r-project.org/web/packages/data.table/vignettes/datatable-intro.html</a>&#160;<a href=#fnref:2 class=footnote-backref role=doc-backlink>&#8617;&#xfe0e;</a></p>
+</li>
+</ol>
+</section>
+</div>
+<footer class=post-footer>
+<ul class=post-tags>
+<li><a href=https://devmedeiros.github.io/tags/r/>R</a></li>
+<li><a href=https://devmedeiros.github.io/tags/data.table/>data.table</a></li>
+<li><a href=https://devmedeiros.github.io/tags/data-manipulation/>data manipulation</a></li>
+</ul>
+</footer>
+</article>
+</main>
+<footer class=footer>
+<span>&copy; 2022 <a href=https://devmedeiros.github.io/>Dev_Medeiros</a></span>
+<span>
+Powered by
+<a href=https://gohugo.io/ rel="noopener noreferrer" target=_blank>Hugo</a> &
+        <a href=https://git.io/hugopapermod rel=noopener target=_blank>PaperMod</a>
+</span>
+</footer>
+<a href=#top aria-label="go to top" title="Go to Top (Alt + G)" class=top-link id=top-link accesskey=g><svg xmlns="http://www.w3.org/2000/svg" viewBox="0 0 12 6" fill="currentcolor"><path d="M12 6H0l6-6z"/></svg>
+</a>
+<script>let menu=document.getElementById('menu');menu&&(menu.scrollLeft=localStorage.getItem("menu-scroll-position"),menu.onscroll=function(){localStorage.setItem("menu-scroll-position",menu.scrollLeft)}),document.querySelectorAll('a[href^="#"]').forEach(a=>{a.addEventListener("click",function(b){b.preventDefault();var a=this.getAttribute("href").substr(1);window.matchMedia('(prefers-reduced-motion: reduce)').matches?document.querySelector(`[id='${decodeURIComponent(a)}']`).scrollIntoView():document.querySelector(`[id='${decodeURIComponent(a)}']`).scrollIntoView({behavior:"smooth"}),a==="top"?history.replaceState(null,null," "):history.pushState(null,null,`#${a}`)})})</script>
+<script>var mybutton=document.getElementById("top-link");window.onscroll=function(){document.body.scrollTop>800||document.documentElement.scrollTop>800?(mybutton.style.visibility="visible",mybutton.style.opacity="1"):(mybutton.style.visibility="hidden",mybutton.style.opacity="0")}</script>
+<script>document.getElementById("theme-toggle").addEventListener("click",()=>{document.body.className.includes("dark")?(document.body.classList.remove('dark'),localStorage.setItem("pref-theme",'light')):(document.body.classList.add('dark'),localStorage.setItem("pref-theme",'dark'))})</script>
+</body>
+</html>

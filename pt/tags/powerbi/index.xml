@@ -9,13 +9,27 @@
       <link>https://devmedeiros.github.io/%3Clink%20or%20path%20of%20image%20for%20opengraph,%20twitter-cards%3E</link>
     </image>
     <generator>Hugo -- gohugo.io</generator>
-    <lastBuildDate>Thu, 17 Feb 2022 18:42:00 -0300</lastBuildDate><atom:link href="https://devmedeiros.github.io/pt/tags/powerbi/index.xml" rel="self" type="application/rss+xml" />
+    <lastBuildDate>Sat, 26 Feb 2022 12:16:00 -0300</lastBuildDate><atom:link href="https://devmedeiros.github.io/pt/tags/powerbi/index.xml" rel="self" type="application/rss+xml" />
+    <item>
+      <title>Alura Food - Power BI Dashboard</title>
+      <link>https://devmedeiros.github.io/pt/2022-02-26-alura-food-powerbi/</link>
+      <pubDate>Sat, 26 Feb 2022 12:16:00 -0300</pubDate>
+      
+      <guid>https://devmedeiros.github.io/pt/2022-02-26-alura-food-powerbi/</guid>
+      <description>&lt;!DOCTYPE html&gt;
+
+&lt;p&gt;&lt;strong&gt;Tools used:&lt;/strong&gt; Power BI, Google Sheets, Figma&lt;/p&gt;
+&lt;p&gt;&lt;strong&gt;Category:&lt;/strong&gt; Dashboard&lt;/p&gt;
+&lt;hr&gt;
+</description>
+    </item>
+    
     <item>
       <title>Alura Films - Power BI Dashboard</title>
-      <link>https://devmedeiros.github.io/pt/post/2022-02-17-alura-films-powerbi/</link>
+      <link>https://devmedeiros.github.io/pt/2022-02-17-alura-films-powerbi/</link>
       <pubDate>Thu, 17 Feb 2022 18:42:00 -0300</pubDate>
       
-      <guid>https://devmedeiros.github.io/pt/post/2022-02-17-alura-films-powerbi/</guid>
+      <guid>https://devmedeiros.github.io/pt/2022-02-17-alura-films-powerbi/</guid>
       <description>&lt;!DOCTYPE html&gt;
 
 &lt;p&gt;&lt;strong&gt;Ferramentas utilizadas:&lt;/strong&gt; Power BI, Planilhas Google, Figma&lt;/p&gt;

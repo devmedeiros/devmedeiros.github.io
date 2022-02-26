@@ -12,10 +12,10 @@
     <lastBuildDate>Sun, 24 Oct 2021 20:43:00 -0300</lastBuildDate><atom:link href="https://devmedeiros.github.io/pt/tags/ggplot/index.xml" rel="self" type="application/rss+xml" />
     <item>
       <title>Simulação de 21</title>
-      <link>https://devmedeiros.github.io/pt/post/2021-10-24-blackjack-simulation/</link>
+      <link>https://devmedeiros.github.io/pt/2021-10-24-blackjack-simulation/</link>
       <pubDate>Sun, 24 Oct 2021 20:43:00 -0300</pubDate>
       
-      <guid>https://devmedeiros.github.io/pt/post/2021-10-24-blackjack-simulation/</guid>
+      <guid>https://devmedeiros.github.io/pt/2021-10-24-blackjack-simulation/</guid>
       <description>&lt;p&gt;&lt;strong&gt;Ferramentas utilizadas:&lt;/strong&gt; R, ggplot, Shiny&lt;/p&gt;
 &lt;p&gt;&lt;strong&gt;Categoria:&lt;/strong&gt; Simulação&lt;/p&gt;
 &lt;hr&gt;</description>
@@ -23,10 +23,10 @@
     
     <item>
       <title>Análise de Sentimentos de Notícias Falsas vs Notícias Reais</title>
-      <link>https://devmedeiros.github.io/pt/post/2021-10-12-fakenews-sentiment/</link>
+      <link>https://devmedeiros.github.io/pt/2021-10-12-fakenews-sentiment/</link>
       <pubDate>Tue, 12 Oct 2021 19:47:00 -0300</pubDate>
       
-      <guid>https://devmedeiros.github.io/pt/post/2021-10-12-fakenews-sentiment/</guid>
+      <guid>https://devmedeiros.github.io/pt/2021-10-12-fakenews-sentiment/</guid>
       <description>Eu quero fazer uma análise de sentimentos usando o R como uma forma de aprender. Com isso em mente começamos carregando todos os pacotes que iremos utilizar.
 library(readr) library(dplyr) library(tidytext) library(tokenizers) library(stopwords) library(ggplot2) Então precisamos carregar nosso banco de dados. Esses dados são do Kaggle Fake and real news dataset.
 Fake &amp;lt;- read_csv(&amp;#39;~/fakenews/Fake.csv&amp;#39;) True &amp;lt;- read.csv(&amp;#39;~/fakenews/True.csv&amp;#39;) Eu quero unir ambos os dados, mas antes é preciso criar uma nova columa que irá informar de onde os dados vieram.</description>

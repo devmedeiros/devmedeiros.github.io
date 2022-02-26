@@ -12,10 +12,10 @@
     <lastBuildDate>Tue, 12 Oct 2021 19:47:00 -0300</lastBuildDate><atom:link href="https://devmedeiros.github.io/tags/data-science/index.xml" rel="self" type="application/rss+xml" />
     <item>
       <title>Sentiment Analysis of Fake News vs Real News</title>
-      <link>https://devmedeiros.github.io/post/2021-10-12-fakenews-sentiment/</link>
+      <link>https://devmedeiros.github.io/2021-10-12-fakenews-sentiment/</link>
       <pubDate>Tue, 12 Oct 2021 19:47:00 -0300</pubDate>
       
-      <guid>https://devmedeiros.github.io/post/2021-10-12-fakenews-sentiment/</guid>
+      <guid>https://devmedeiros.github.io/2021-10-12-fakenews-sentiment/</guid>
       <description>I want to tackle sentiment analysis using R in a simple way, just to get me started. With this in mind we begin loading all the packages we&amp;rsquo;ll be using.
 library(readr) library(dplyr) library(tidytext) library(tokenizers) library(stopwords) library(ggplot2) Then we need to load our dataset. This data comes from Kaggle Fake and real news dataset.
 Fake &amp;lt;- read_csv(&amp;#39;~/fakenews/Fake.csv&amp;#39;) True &amp;lt;- read.csv(&amp;#39;~/fakenews/True.csv&amp;#39;) I want to merge the two datasets, but first we need to create a new column that will tell me where the data came from.</description>

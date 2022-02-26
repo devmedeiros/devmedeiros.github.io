@@ -12,10 +12,10 @@
     <lastBuildDate>Sun, 07 Nov 2021 15:14:00 -0300</lastBuildDate><atom:link href="https://devmedeiros.github.io/tags/seaborn/index.xml" rel="self" type="application/rss+xml" />
     <item>
       <title>Python seaborn Package Guide</title>
-      <link>https://devmedeiros.github.io/post/2020-11-07-seaborn-package-guide/</link>
+      <link>https://devmedeiros.github.io/2020-11-07-seaborn-package-guide/</link>
       <pubDate>Sun, 07 Nov 2021 15:14:00 -0300</pubDate>
       
-      <guid>https://devmedeiros.github.io/post/2020-11-07-seaborn-package-guide/</guid>
+      <guid>https://devmedeiros.github.io/2020-11-07-seaborn-package-guide/</guid>
       <description>Introduction I&amp;rsquo;m learning data visualization in Python and I see myself as a &amp;lsquo;hands on&amp;rsquo; learner, so I&amp;rsquo;ll be reproducing some basic plots using seaborn package that you can use as a reference everytime you need to fresh up your memory.
 At first is required that the packages are properly imported, after that I load the iris dataset.
 import pandas as pd import seaborn as sns import matplotlib.pyplot as plt url = &amp;#34;https://git.</description>

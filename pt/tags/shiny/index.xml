@@ -12,10 +12,10 @@
     <lastBuildDate>Sun, 24 Oct 2021 20:43:00 -0300</lastBuildDate><atom:link href="https://devmedeiros.github.io/pt/tags/shiny/index.xml" rel="self" type="application/rss+xml" />
     <item>
       <title>Simulação de 21</title>
-      <link>https://devmedeiros.github.io/pt/post/2021-10-24-blackjack-simulation/</link>
+      <link>https://devmedeiros.github.io/pt/2021-10-24-blackjack-simulation/</link>
       <pubDate>Sun, 24 Oct 2021 20:43:00 -0300</pubDate>
       
-      <guid>https://devmedeiros.github.io/pt/post/2021-10-24-blackjack-simulation/</guid>
+      <guid>https://devmedeiros.github.io/pt/2021-10-24-blackjack-simulation/</guid>
       <description>&lt;p&gt;&lt;strong&gt;Ferramentas utilizadas:&lt;/strong&gt; R, ggplot, Shiny&lt;/p&gt;
 &lt;p&gt;&lt;strong&gt;Categoria:&lt;/strong&gt; Simulação&lt;/p&gt;
 &lt;hr&gt;</description>
