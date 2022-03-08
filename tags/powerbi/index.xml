@@ -9,19 +9,30 @@
       <link>https://devmedeiros.github.io/%3Clink%20or%20path%20of%20image%20for%20opengraph,%20twitter-cards%3E</link>
     </image>
     <generator>Hugo -- gohugo.io</generator>
-    <lastBuildDate>Sat, 26 Feb 2022 12:16:00 -0300</lastBuildDate><atom:link href="https://devmedeiros.github.io/tags/powerbi/index.xml" rel="self" type="application/rss+xml" />
+    <lastBuildDate>Tue, 08 Mar 2022 13:34:00 -0300</lastBuildDate><atom:link href="https://devmedeiros.github.io/tags/powerbi/index.xml" rel="self" type="application/rss+xml" />
+    <item>
+      <title>Alura Skimo - Power BI Dashboard</title>
+      <link>https://devmedeiros.github.io/2022-03-08-alura-skimo-powerbi/</link>
+      <pubDate>Tue, 08 Mar 2022 13:34:00 -0300</pubDate>
+      
+      <guid>https://devmedeiros.github.io/2022-03-08-alura-skimo-powerbi/</guid>
+      <description>Tools used: Power BI, Figma, SQL
+Category: Dashboard
+ This dashboard is the last out of three from the second Alura Challenge BI.
+ Alura Skimo is interested in analyzing their sales data, to help with this I made this dashboard. It’s composed of three pages. The first one presents a summary of all the main measures you’ll find in the dashboard, filtered for the most recent month. On this first page, you can also rest your mouse cursor over a measure and it’ll show a small plot with the historical series with a tendency line.</description>
+    </item>
+    
     <item>
       <title>Alura Food - Power BI Dashboard</title>
       <link>https://devmedeiros.github.io/2022-02-26-alura-food-powerbi/</link>
       <pubDate>Sat, 26 Feb 2022 12:16:00 -0300</pubDate>
       
       <guid>https://devmedeiros.github.io/2022-02-26-alura-food-powerbi/</guid>
-      <description>&lt;!DOCTYPE html&gt;
-
-&lt;p&gt;&lt;strong&gt;Tools used:&lt;/strong&gt; Power BI, Google Sheets, Figma&lt;/p&gt;
-&lt;p&gt;&lt;strong&gt;Category:&lt;/strong&gt; Dashboard&lt;/p&gt;
-&lt;hr&gt;
-</description>
+      <description>Tools used: Power BI, Google Sheets, Figma
+Category: Dashboard
+ This dashboard is the second of three that I&#39;m making in the following weeks as part of the second Alura Challenge BI.
+ Alura Food is interested in expanding its business by entering the Indian market. To do so, the company asked to calculate measures to help them make a better decision.
+First of all, I merged the datasets and cleaned the data through Power BI, translated a few texts from English to Portuguese through Google Sheets, and converted the meals price from their respective currency value to BRL (Brazillian Currency).</description>
     </item>
     
     <item>
@@ -30,12 +41,11 @@
       <pubDate>Thu, 17 Feb 2022 18:42:00 -0300</pubDate>
       
       <guid>https://devmedeiros.github.io/2022-02-17-alura-films-powerbi/</guid>
-      <description>&lt;!DOCTYPE html&gt;
-
-&lt;p&gt;&lt;strong&gt;Tools used:&lt;/strong&gt; Power BI, Google Sheets, Figma&lt;/p&gt;
-&lt;p&gt;&lt;strong&gt;Category:&lt;/strong&gt; Dashboard&lt;/p&gt;
-&lt;hr&gt;
-</description>
+      <description>Tools used: Power BI, Google Sheets, Figma
+Category: Dashboard
+ This dashboard is the first of three that I&#39;ll be making in the following weeks as part of the second Alura Challenge BI.
+ The objective of this dashboard is to help find the best selection for an upcoming movie.
+With this in mind, I explored in the first tab a little summary about the movies in the database, with this you can get a general view of our data.</description>
     </item>
     
     <item>

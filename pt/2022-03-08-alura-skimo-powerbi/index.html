@@ -1,0 +1,103 @@
+<!doctype html><html lang=pt dir=auto>
+<head><meta charset=utf-8>
+<meta http-equiv=x-ua-compatible content="IE=edge">
+<meta name=viewport content="width=device-width,initial-scale=1,shrink-to-fit=no">
+<meta name=robots content="index, follow">
+<title>Alura Skimo - Power BI Dashboard | Dev_Medeiros</title><meta name=keywords content="visualização de dados,dashboard,powerbi,SQL">
+<meta name=description content="Tools used: Power BI, Figma, SQL
+Category: Dashboard
+ Este dashboard é o último de três do segundo desafio Alura Challenge BI.
+ A Alura Skimo está interessada em analisar seus dados de vendas, para ajudar com isso eu fiz este dashboard. Ele é composto de três páginas. A primeira apresenta um resumo com todas as principais medidas que encontramos no painel, filtrado para mostrar o mês mais recente. Nesta primeira página, você pode parar o cursor do mouse sobre uma medida e isso fará com que apareça um pequeno gráfico com a série histórica com uma linha de tendência.">
+<meta name=author content="Jaqueline Souza Medeiros">
+<link rel=canonical href=https://devmedeiros.github.io/pt/2022-03-08-alura-skimo-powerbi/>
+<meta name=google-site-verification content="FlWzcRu5is8Vlu9fsp78s1CPMcmQLd1DLVKVMFonbxY">
+<link crossorigin=anonymous href=/assets/css/stylesheet.min.6f60056d44d3f7eb69a4bc6c332b59960f3a995802bded244750232f33713c49.css integrity="sha256-b2AFbUTT9+tppLxsMytZlg86mVgCve0kR1AjLzNxPEk=" rel="preload stylesheet" as=style>
+<script defer crossorigin=anonymous src=/assets/js/highlight.min.4dcb3c4f38462f66c6b6137227726f5543cb934cca9788f041c087e374491df2.js integrity="sha256-Tcs8TzhGL2bGthNyJ3JvVUPLk0zKl4jwQcCH43RJHfI=" onload=hljs.initHighlightingOnLoad()></script>
+<link rel=icon href=https://devmedeiros.github.io/%3Clink%20/%20abs%20url%3E>
+<link rel=icon type=image/png sizes=16x16 href=https://devmedeiros.github.io/%3Clink%20/%20abs%20url%3E>
+<link rel=icon type=image/png sizes=32x32 href=https://devmedeiros.github.io/%3Clink%20/%20abs%20url%3E>
+<link rel=apple-touch-icon href=https://devmedeiros.github.io/%3Clink%20/%20abs%20url%3E>
+<link rel=mask-icon href=https://devmedeiros.github.io/%3Clink%20/%20abs%20url%3E>
+<meta name=theme-color content="#2e2e33">
+<meta name=msapplication-TileColor content="#2e2e33">
+<meta name=generator content="Hugo 0.93.3">
+<link rel=alternate hreflang=en href=https://devmedeiros.github.io/2022-03-08-alura-skimo-powerbi/>
+<link rel=alternate hreflang=pt href=https://devmedeiros.github.io/pt/2022-03-08-alura-skimo-powerbi/>
+<noscript>
+<style>#theme-toggle,.top-link{display:none}</style></noscript><script async src="https://www.googletagmanager.com/gtag/js?id=G-NLNQKJMT5Q"></script>
+<script>var doNotTrack=!1;if(!doNotTrack){window.dataLayer=window.dataLayer||[];function gtag(){dataLayer.push(arguments)}gtag("js",new Date),gtag("config","G-NLNQKJMT5Q",{anonymize_ip:!1})}</script>
+<meta property="og:title" content="Alura Skimo - Power BI Dashboard">
+<meta property="og:description" content="Tools used: Power BI, Figma, SQL
+Category: Dashboard
+ Este dashboard é o último de três do segundo desafio Alura Challenge BI.
+ A Alura Skimo está interessada em analisar seus dados de vendas, para ajudar com isso eu fiz este dashboard. Ele é composto de três páginas. A primeira apresenta um resumo com todas as principais medidas que encontramos no painel, filtrado para mostrar o mês mais recente. Nesta primeira página, você pode parar o cursor do mouse sobre uma medida e isso fará com que apareça um pequeno gráfico com a série histórica com uma linha de tendência.">
+<meta property="og:type" content="article">
+<meta property="og:url" content="https://devmedeiros.github.io/pt/2022-03-08-alura-skimo-powerbi/"><meta property="og:image" content="https://devmedeiros.github.io/%3Clink%20or%20path%20of%20image%20for%20opengraph,%20twitter-cards%3E"><meta property="article:section" content>
+<meta property="article:published_time" content="2022-03-08T13:34:00-03:00">
+<meta property="article:modified_time" content="2022-03-08T13:34:00-03:00"><meta property="og:site_name" content="Dev_Medeiros">
+<meta name=twitter:card content="summary_large_image">
+<meta name=twitter:image content="https://devmedeiros.github.io/%3Clink%20or%20path%20of%20image%20for%20opengraph,%20twitter-cards%3E">
+<meta name=twitter:title content="Alura Skimo - Power BI Dashboard">
+<meta name=twitter:description content="Tools used: Power BI, Figma, SQL
+Category: Dashboard
+ Este dashboard é o último de três do segundo desafio Alura Challenge BI.
+ A Alura Skimo está interessada em analisar seus dados de vendas, para ajudar com isso eu fiz este dashboard. Ele é composto de três páginas. A primeira apresenta um resumo com todas as principais medidas que encontramos no painel, filtrado para mostrar o mês mais recente. Nesta primeira página, você pode parar o cursor do mouse sobre uma medida e isso fará com que apareça um pequeno gráfico com a série histórica com uma linha de tendência.">
+<script type=application/ld+json>{"@context":"https://schema.org","@type":"BreadcrumbList","itemListElement":[{"@type":"ListItem","position":1,"name":"Alura Skimo - Power BI Dashboard","item":"https://devmedeiros.github.io/pt/2022-03-08-alura-skimo-powerbi/"}]}</script>
+<script type=application/ld+json>{"@context":"https://schema.org","@type":"BlogPosting","headline":"Alura Skimo - Power BI Dashboard","name":"Alura Skimo - Power BI Dashboard","description":"Tools used: Power BI, Figma, SQL\nCategory: Dashboard\n Este dashboard é o último de três do segundo desafio Alura Challenge BI.\n A Alura Skimo está interessada em analisar seus dados de vendas, para ajudar com isso eu fiz este dashboard. Ele é composto de três páginas. A primeira apresenta um resumo com todas as principais medidas que encontramos no painel, filtrado para mostrar o mês mais recente. Nesta primeira página, você pode parar o cursor do mouse sobre uma medida e isso fará com que apareça um pequeno gráfico com a série histórica com uma linha de tendência.","keywords":["visualização de dados","dashboard","powerbi","SQL"],"articleBody":"Tools used: Power BI, Figma, SQL\nCategory: Dashboard\n Este dashboard é o último de três do segundo desafio Alura Challenge BI.\n A Alura Skimo está interessada em analisar seus dados de vendas, para ajudar com isso eu fiz este dashboard. Ele é composto de três páginas. A primeira apresenta um resumo com todas as principais medidas que encontramos no painel, filtrado para mostrar o mês mais recente. Nesta primeira página, você pode parar o cursor do mouse sobre uma medida e isso fará com que apareça um pequeno gráfico com a série histórica com uma linha de tendência.\nSeguindo para a próxima página, nela você pode ver toda a informação sobre os produtos vendidos pela Alura Skimo. Você pode filtrar os dados por sabor de sorvete, tipo de embalagem, categoria, e custo do produto. Ela mostra a informação básica sobre os produtos, junto de um ranque dos produtos que são os mais bem vendidos e dois gráficos que mostram as vendas por sabor e vendas por categoria.\nNa última página, você pode encontrar informações sobre os vendedores da nossa empresa. Ele mostra quando o funcionário entrou para a empresa, a comissão deles, o faturamento e quantas vendas cada um fez, tudo isso no último ano (2018).\nEsse painel foi complexo comparado aos outros dois, pois nosso banco de dados veio de arquivos SQL. Primeiro eu tive que criar o banco de dados e carregar cada arquivo SQL para ele, então eu só tive que carregar o banco para o Power BI. Por fim, toda a limpeza, tratamento e processamento de dados foi feito no próprio Power BI.\nCaso você queira olhar os códigos e arquivos utilizados neste projeto, você pode acessar meu repositório do github.\n","wordCount":"285","inLanguage":"pt","datePublished":"2022-03-08T13:34:00-03:00","dateModified":"2022-03-08T13:34:00-03:00","author":{"@type":"Person","name":"Jaqueline Souza Medeiros"},"mainEntityOfPage":{"@type":"WebPage","@id":"https://devmedeiros.github.io/pt/2022-03-08-alura-skimo-powerbi/"},"publisher":{"@type":"Organization","name":"Dev_Medeiros","logo":{"@type":"ImageObject","url":"https://devmedeiros.github.io/%3Clink%20/%20abs%20url%3E"}}}</script>
+</head><body id=top>
+<script>localStorage.getItem("pref-theme")==="dark"&&document.body.classList.add("dark")</script>
+<header class=header>
+<nav class=nav>
+<div class=logo>
+<a href=https://devmedeiros.github.io/pt/ accesskey=h title="Dev_Medeiros (Alt + H)">Dev_Medeiros</a>
+<span class=logo-switches>
+<button id=theme-toggle accesskey=t title="(Alt + T)"><svg id="moon" xmlns="http://www.w3.org/2000/svg" width="24" height="24" viewBox="0 0 24 24" fill="none" stroke="currentcolor" stroke-width="2" stroke-linecap="round" stroke-linejoin="round"><path d="M21 12.79A9 9 0 1111.21 3 7 7 0 0021 12.79z"/></svg><svg id="sun" xmlns="http://www.w3.org/2000/svg" width="24" height="24" viewBox="0 0 24 24" fill="none" stroke="currentcolor" stroke-width="2" stroke-linecap="round" stroke-linejoin="round"><circle cx="12" cy="12" r="5"/><line x1="12" y1="1" x2="12" y2="3"/><line x1="12" y1="21" x2="12" y2="23"/><line x1="4.22" y1="4.22" x2="5.64" y2="5.64"/><line x1="18.36" y1="18.36" x2="19.78" y2="19.78"/><line x1="1" y1="12" x2="3" y2="12"/><line x1="21" y1="12" x2="23" y2="12"/><line x1="4.22" y1="19.78" x2="5.64" y2="18.36"/><line x1="18.36" y1="5.64" x2="19.78" y2="4.22"/></svg>
+</button>
+<ul class=lang-switch><li>|</li><li>
+<a href=https://devmedeiros.github.io/ title=En aria-label=En>En</a>
+</li></ul></span>
+</div><ul id=menu>
+<li>
+<a href=https://devmedeiros.github.io/pt/about/ title=sobre>
+<span>sobre</span>
+</a>
+</li><li>
+<a href=https://devmedeiros.github.io/pt/tags/ title=tags>
+<span>tags</span>
+</a>
+</li><li>
+<a href=https://devmedeiros.github.io/pt/archives/ title=arquivos>
+<span>arquivos</span>
+</a>
+</li><li>
+<a href=https://devmedeiros.github.io/pt/search/ title=pesquisar>
+<span>pesquisar</span>
+</a>
+</li></ul></nav></header><main class=main>
+<article class=post-single>
+<header class=post-header>
+<div class=breadcrumbs><a href=https://devmedeiros.github.io/pt/>Home</a></div><h1 class=post-title>
+Alura Skimo - Power BI Dashboard
+</h1><div class=post-meta><span title="2022-03-08 13:34:00 -0300 -0300">March 8, 2022</span>&nbsp;·&nbsp;2 minutos&nbsp;·&nbsp;Jaqueline Souza Medeiros&nbsp;|&nbsp;
+<ul class=i18n_list>Traduções:
+<li>
+<a href=https://devmedeiros.github.io/2022-03-08-alura-skimo-powerbi/>En</a>
+</li></ul>&nbsp;|&nbsp;<a href=https://github.com/devmedeiros.github.io/content/2022-03-08-alura-skimo-powerbi.html rel="noopener noreferrer" target=_blank>Suggest Changes</a>
+</div></header><div class=post-content><!doctype html>
+<p><strong>Tools used:</strong> Power BI, Figma, SQL</p><p><strong>Category:</strong> Dashboard</p><hr>
+<p>Este dashboard é o <strong>último de três</strong> do segundo desafio Alura Challenge BI.</p><iframe title="Relatório Alura Food" width=100% height=450 src="https://app.powerbi.com/view?r=eyJrIjoiNGEzMTQzMGYtNzFhNC00YjcyLThiMDMtMGE2YTMzMDRhODFiIiwidCI6IjI2ZjA4NzIyLTFjOWUtNGVkZS1iN2VkLThhMmI3N2ZmM2Q5YyJ9&pageName=ReportSection" frameborder=0 allowfullscreen></iframe>
+<p>A <strong>Alura Skimo</strong> está interessada em analisar seus dados de vendas, para ajudar com isso eu fiz este <i>dashboard</i>. Ele é composto de três páginas. A primeira apresenta um resumo com todas as principais medidas que encontramos no painel, filtrado para mostrar o mês mais recente. Nesta primeira página, você pode parar o cursor do mouse sobre uma medida e isso fará com que apareça um pequeno gráfico com a série histórica com uma linha de tendência.</p><p>Seguindo para a próxima página, nela você pode ver toda a informação sobre os produtos vendidos pela <strong>Alura Skimo</strong>. Você pode filtrar os dados por sabor de sorvete, tipo de embalagem, categoria, e custo do produto. Ela mostra a informação básica sobre os produtos, junto de um ranque dos produtos que são os mais bem vendidos e dois gráficos que mostram as vendas por sabor e vendas por categoria.</p><p>Na última página, você pode encontrar informações sobre os vendedores da nossa empresa. Ele mostra quando o funcionário entrou para a empresa, a comissão deles, o faturamento e quantas vendas cada um fez, tudo isso no último ano (2018).</p><p>Esse painel foi complexo comparado aos outros dois, pois nosso banco de dados veio de arquivos SQL. Primeiro eu tive que criar o banco de dados e carregar cada arquivo SQL para ele, então eu só tive que carregar o banco para o Power BI. Por fim, toda a limpeza, tratamento e processamento de dados foi feito no próprio Power BI.</p><p>Caso você queira olhar os códigos e arquivos utilizados neste projeto, você pode acessar meu <a href=https://github.com/devmedeiros/Alura-Challenge-BI-2/tree/main/Alura%20Skimo>repositório do github</a>.</p></div><footer class=post-footer>
+<ul class=post-tags>
+<li><a href=https://devmedeiros.github.io/pt/tags/visualiza%C3%A7%C3%A3o-de-dados/>visualização de dados</a></li><li><a href=https://devmedeiros.github.io/pt/tags/dashboard/>dashboard</a></li><li><a href=https://devmedeiros.github.io/pt/tags/powerbi/>powerbi</a></li><li><a href=https://devmedeiros.github.io/pt/tags/sql/>SQL</a></li></ul></footer></article></main><footer class=footer>
+<span>&copy; 2022 <a href=https://devmedeiros.github.io/pt/>Dev_Medeiros</a></span>
+<span>
+Powered by
+<a href=https://gohugo.io/ rel="noopener noreferrer" target=_blank>Hugo</a> &
+        <a href=https://git.io/hugopapermod rel=noopener target=_blank>PaperMod</a>
+</span>
+</footer><a href=#top aria-label="go to top" title="Go to Top (Alt + G)" class=top-link id=top-link accesskey=g><svg xmlns="http://www.w3.org/2000/svg" viewBox="0 0 12 6" fill="currentcolor"><path d="M12 6H0l6-6z"/></svg>
+</a>
+<script>let menu=document.getElementById("menu");menu&&(menu.scrollLeft=localStorage.getItem("menu-scroll-position"),menu.onscroll=function(){localStorage.setItem("menu-scroll-position",menu.scrollLeft)}),document.querySelectorAll('a[href^="#"]').forEach(e=>{e.addEventListener("click",function(t){t.preventDefault();var e=this.getAttribute("href").substr(1);window.matchMedia("(prefers-reduced-motion: reduce)").matches?document.querySelector(`[id='${decodeURIComponent(e)}']`).scrollIntoView():document.querySelector(`[id='${decodeURIComponent(e)}']`).scrollIntoView({behavior:"smooth"}),e==="top"?history.replaceState(null,null," "):history.pushState(null,null,`#${e}`)})})</script>
+<script>var mybutton=document.getElementById("top-link");window.onscroll=function(){document.body.scrollTop>800||document.documentElement.scrollTop>800?(mybutton.style.visibility="visible",mybutton.style.opacity="1"):(mybutton.style.visibility="hidden",mybutton.style.opacity="0")}</script>
+<script>document.getElementById("theme-toggle").addEventListener("click",()=>{document.body.className.includes("dark")?(document.body.classList.remove("dark"),localStorage.setItem("pref-theme","light")):(document.body.classList.add("dark"),localStorage.setItem("pref-theme","dark"))})</script>
+</body></html>

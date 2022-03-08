@@ -2,21 +2,21 @@
 <urlset xmlns="http://www.sitemaps.org/schemas/sitemap/0.9"
   xmlns:xhtml="http://www.w3.org/1999/xhtml">
   <url>
-    <loc>https://devmedeiros.github.io/pt/2022-02-26-alura-food-powerbi/</loc>
-    <lastmod>2022-02-26T12:16:00-03:00</lastmod>
+    <loc>https://devmedeiros.github.io/pt/2022-03-08-alura-skimo-powerbi/</loc>
+    <lastmod>2022-03-08T13:34:00-03:00</lastmod>
     <xhtml:link
                 rel="alternate"
                 hreflang="en"
-                href="https://devmedeiros.github.io/2022-02-26-alura-food-powerbi/"
+                href="https://devmedeiros.github.io/2022-03-08-alura-skimo-powerbi/"
                 />
     <xhtml:link
                 rel="alternate"
                 hreflang="pt"
-                href="https://devmedeiros.github.io/pt/2022-02-26-alura-food-powerbi/"
+                href="https://devmedeiros.github.io/pt/2022-03-08-alura-skimo-powerbi/"
                 />
   </url><url>
     <loc>https://devmedeiros.github.io/pt/categories/</loc>
-    <lastmod>2022-02-26T12:16:00-03:00</lastmod>
+    <lastmod>2022-03-08T13:34:00-03:00</lastmod>
     <xhtml:link
                 rel="alternate"
                 hreflang="en"
@@ -29,7 +29,7 @@
                 />
   </url><url>
     <loc>https://devmedeiros.github.io/pt/tags/dashboard/</loc>
-    <lastmod>2022-02-26T12:16:00-03:00</lastmod>
+    <lastmod>2022-03-08T13:34:00-03:00</lastmod>
     <xhtml:link
                 rel="alternate"
                 hreflang="en"
@@ -41,21 +41,8 @@
                 href="https://devmedeiros.github.io/pt/tags/dashboard/"
                 />
   </url><url>
-    <loc>https://devmedeiros.github.io/pt/tags/data-visualization/</loc>
-    <lastmod>2022-02-26T12:16:00-03:00</lastmod>
-    <xhtml:link
-                rel="alternate"
-                hreflang="en"
-                href="https://devmedeiros.github.io/tags/data-visualization/"
-                />
-    <xhtml:link
-                rel="alternate"
-                hreflang="pt"
-                href="https://devmedeiros.github.io/pt/tags/data-visualization/"
-                />
-  </url><url>
     <loc>https://devmedeiros.github.io/pt/</loc>
-    <lastmod>2022-02-26T12:16:00-03:00</lastmod>
+    <lastmod>2022-03-08T13:34:00-03:00</lastmod>
     <xhtml:link
                 rel="alternate"
                 hreflang="en"
@@ -68,7 +55,7 @@
                 />
   </url><url>
     <loc>https://devmedeiros.github.io/pt/tags/powerbi/</loc>
-    <lastmod>2022-02-26T12:16:00-03:00</lastmod>
+    <lastmod>2022-03-08T13:34:00-03:00</lastmod>
     <xhtml:link
                 rel="alternate"
                 hreflang="en"
@@ -81,7 +68,7 @@
                 />
   </url><url>
     <loc>https://devmedeiros.github.io/pt/categories/projects/</loc>
-    <lastmod>2022-02-26T12:16:00-03:00</lastmod>
+    <lastmod>2022-03-08T13:34:00-03:00</lastmod>
     <xhtml:link
                 rel="alternate"
                 hreflang="en"
@@ -93,8 +80,21 @@
                 href="https://devmedeiros.github.io/pt/categories/projects/"
                 />
   </url><url>
+    <loc>https://devmedeiros.github.io/pt/tags/sql/</loc>
+    <lastmod>2022-03-08T13:34:00-03:00</lastmod>
+    <xhtml:link
+                rel="alternate"
+                hreflang="en"
+                href="https://devmedeiros.github.io/tags/sql/"
+                />
+    <xhtml:link
+                rel="alternate"
+                hreflang="pt"
+                href="https://devmedeiros.github.io/pt/tags/sql/"
+                />
+  </url><url>
     <loc>https://devmedeiros.github.io/pt/tags/</loc>
-    <lastmod>2022-02-26T12:16:00-03:00</lastmod>
+    <lastmod>2022-03-08T13:34:00-03:00</lastmod>
     <xhtml:link
                 rel="alternate"
                 hreflang="en"
@@ -104,6 +104,22 @@
                 rel="alternate"
                 hreflang="pt"
                 href="https://devmedeiros.github.io/pt/tags/"
+                />
+  </url><url>
+    <loc>https://devmedeiros.github.io/pt/tags/visualiza%C3%A7%C3%A3o-de-dados/</loc>
+    <lastmod>2022-03-08T13:34:00-03:00</lastmod>
+  </url><url>
+    <loc>https://devmedeiros.github.io/pt/2022-02-26-alura-food-powerbi/</loc>
+    <lastmod>2022-02-26T12:16:00-03:00</lastmod>
+    <xhtml:link
+                rel="alternate"
+                hreflang="en"
+                href="https://devmedeiros.github.io/2022-02-26-alura-food-powerbi/"
+                />
+    <xhtml:link
+                rel="alternate"
+                hreflang="pt"
+                href="https://devmedeiros.github.io/pt/2022-02-26-alura-food-powerbi/"
                 />
   </url><url>
     <loc>https://devmedeiros.github.io/pt/2022-02-17-alura-films-powerbi/</loc>
@@ -118,9 +134,6 @@
                 hreflang="pt"
                 href="https://devmedeiros.github.io/pt/2022-02-17-alura-films-powerbi/"
                 />
-  </url><url>
-    <loc>https://devmedeiros.github.io/pt/tags/visualiza%C3%A7%C3%A3o-de-dados/</loc>
-    <lastmod>2022-02-17T18:42:00-03:00</lastmod>
   </url><url>
     <loc>https://devmedeiros.github.io/pt/categories/blog/</loc>
     <lastmod>2022-01-24T18:15:00-03:00</lastmod>

@@ -38,7 +38,7 @@ Eu comecei olhando as cinco primeiras observações do banco de dados.</descript
       <guid>https://devmedeiros.github.io/pt/2020-11-07-seaborn-package-guide/</guid>
       <description>Introdução Eu estou aprendendo visualização de dados no Python e eu me vejo como alguém que aprende fazendo, por isso eu vou fazer alguns gráficos simples usando o pacote seaborn que poderão ser utilizados como referência sempre que precisar refrescar a memória.
 Primeiramente é necessários que os pacotes estejam propriamente importados, após isso eu carrego o banco de dados iris.
-import pandas as pd import seaborn as sns import matplotlib.pyplot as plt url = &amp;#34;https://git.</description>
+import pandas as pd import seaborn as sns import matplotlib.pyplot as plt  url = &amp;#34;https://git.</description>
     </item>
     
     <item>
