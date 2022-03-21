@@ -2,20 +2,20 @@
 <rss version="2.0" xmlns:atom="http://www.w3.org/2005/Atom" xmlns:content="http://purl.org/rss/1.0/modules/content/">
   <channel>
     <title>review on Dev_Medeiros</title>
-    <link>https://devmedeiros.github.io/tags/review/</link>
+    <link>https://devmedeiros.com/tags/review/</link>
     <description>Recent content in review on Dev_Medeiros</description>
     <image>
-      <url>https://devmedeiros.github.io/%3Clink%20or%20path%20of%20image%20for%20opengraph,%20twitter-cards%3E</url>
-      <link>https://devmedeiros.github.io/%3Clink%20or%20path%20of%20image%20for%20opengraph,%20twitter-cards%3E</link>
+      <url>https://devmedeiros.com/%3Clink%20or%20path%20of%20image%20for%20opengraph,%20twitter-cards%3E</url>
+      <link>https://devmedeiros.com/%3Clink%20or%20path%20of%20image%20for%20opengraph,%20twitter-cards%3E</link>
     </image>
     <generator>Hugo -- gohugo.io</generator>
-    <lastBuildDate>Mon, 24 Jan 2022 18:15:00 -0300</lastBuildDate><atom:link href="https://devmedeiros.github.io/tags/review/index.xml" rel="self" type="application/rss+xml" />
+    <lastBuildDate>Mon, 24 Jan 2022 18:15:00 -0300</lastBuildDate><atom:link href="https://devmedeiros.com/tags/review/index.xml" rel="self" type="application/rss+xml" />
     <item>
       <title>Podcast Review - Machine Learning Guide</title>
-      <link>https://devmedeiros.github.io/2022-01-24-podcast-review-mlg/</link>
+      <link>https://devmedeiros.com/2022-01-24-podcast-review-mlg/</link>
       <pubDate>Mon, 24 Jan 2022 18:15:00 -0300</pubDate>
       
-      <guid>https://devmedeiros.github.io/2022-01-24-podcast-review-mlg/</guid>
+      <guid>https://devmedeiros.com/2022-01-24-podcast-review-mlg/</guid>
       <description>The show is presented by Tyler Renelle from Depth, since 2021 it has been redone to update the content. The podcast offers a resource list where you can find all of the books, courses, and sites mentioned during the podcast. It&amp;rsquo;s a great podcast for anyone who is learning about machine learning, it can be useful for a complete beginner, an enthusiast, or someone who is looking to further even more on this topic.</description>
     </item>
     

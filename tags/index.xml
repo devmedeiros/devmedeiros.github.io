@@ -2,182 +2,182 @@
 <rss version="2.0" xmlns:atom="http://www.w3.org/2005/Atom" xmlns:content="http://purl.org/rss/1.0/modules/content/">
   <channel>
     <title>Tags on Dev_Medeiros</title>
-    <link>https://devmedeiros.github.io/tags/</link>
+    <link>https://devmedeiros.com/tags/</link>
     <description>Recent content in Tags on Dev_Medeiros</description>
     <image>
-      <url>https://devmedeiros.github.io/%3Clink%20or%20path%20of%20image%20for%20opengraph,%20twitter-cards%3E</url>
-      <link>https://devmedeiros.github.io/%3Clink%20or%20path%20of%20image%20for%20opengraph,%20twitter-cards%3E</link>
+      <url>https://devmedeiros.com/%3Clink%20or%20path%20of%20image%20for%20opengraph,%20twitter-cards%3E</url>
+      <link>https://devmedeiros.com/%3Clink%20or%20path%20of%20image%20for%20opengraph,%20twitter-cards%3E</link>
     </image>
     <generator>Hugo -- gohugo.io</generator>
-    <lastBuildDate>Tue, 08 Mar 2022 13:34:00 -0300</lastBuildDate><atom:link href="https://devmedeiros.github.io/tags/index.xml" rel="self" type="application/rss+xml" />
+    <lastBuildDate>Tue, 08 Mar 2022 13:34:00 -0300</lastBuildDate><atom:link href="https://devmedeiros.com/tags/index.xml" rel="self" type="application/rss+xml" />
     <item>
       <title>dashboard</title>
-      <link>https://devmedeiros.github.io/tags/dashboard/</link>
+      <link>https://devmedeiros.com/tags/dashboard/</link>
       <pubDate>Tue, 08 Mar 2022 13:34:00 -0300</pubDate>
       
-      <guid>https://devmedeiros.github.io/tags/dashboard/</guid>
+      <guid>https://devmedeiros.com/tags/dashboard/</guid>
       <description></description>
     </item>
     
     <item>
       <title>data visualization</title>
-      <link>https://devmedeiros.github.io/tags/data-visualization/</link>
+      <link>https://devmedeiros.com/tags/data-visualization/</link>
       <pubDate>Tue, 08 Mar 2022 13:34:00 -0300</pubDate>
       
-      <guid>https://devmedeiros.github.io/tags/data-visualization/</guid>
+      <guid>https://devmedeiros.com/tags/data-visualization/</guid>
       <description></description>
     </item>
     
     <item>
       <title>PowerBI</title>
-      <link>https://devmedeiros.github.io/tags/powerbi/</link>
+      <link>https://devmedeiros.com/tags/powerbi/</link>
       <pubDate>Tue, 08 Mar 2022 13:34:00 -0300</pubDate>
       
-      <guid>https://devmedeiros.github.io/tags/powerbi/</guid>
+      <guid>https://devmedeiros.com/tags/powerbi/</guid>
       <description></description>
     </item>
     
     <item>
       <title>SQL</title>
-      <link>https://devmedeiros.github.io/tags/sql/</link>
+      <link>https://devmedeiros.com/tags/sql/</link>
       <pubDate>Tue, 08 Mar 2022 13:34:00 -0300</pubDate>
       
-      <guid>https://devmedeiros.github.io/tags/sql/</guid>
+      <guid>https://devmedeiros.com/tags/sql/</guid>
       <description></description>
     </item>
     
     <item>
       <title>podcast</title>
-      <link>https://devmedeiros.github.io/tags/podcast/</link>
+      <link>https://devmedeiros.com/tags/podcast/</link>
       <pubDate>Mon, 24 Jan 2022 18:15:00 -0300</pubDate>
       
-      <guid>https://devmedeiros.github.io/tags/podcast/</guid>
+      <guid>https://devmedeiros.com/tags/podcast/</guid>
       <description></description>
     </item>
     
     <item>
       <title>review</title>
-      <link>https://devmedeiros.github.io/tags/review/</link>
+      <link>https://devmedeiros.com/tags/review/</link>
       <pubDate>Mon, 24 Jan 2022 18:15:00 -0300</pubDate>
       
-      <guid>https://devmedeiros.github.io/tags/review/</guid>
+      <guid>https://devmedeiros.com/tags/review/</guid>
       <description></description>
     </item>
     
     <item>
       <title>data analysis</title>
-      <link>https://devmedeiros.github.io/tags/data-analysis/</link>
+      <link>https://devmedeiros.com/tags/data-analysis/</link>
       <pubDate>Tue, 28 Dec 2021 14:55:00 -0300</pubDate>
       
-      <guid>https://devmedeiros.github.io/tags/data-analysis/</guid>
+      <guid>https://devmedeiros.com/tags/data-analysis/</guid>
       <description></description>
     </item>
     
     <item>
       <title>python</title>
-      <link>https://devmedeiros.github.io/tags/python/</link>
+      <link>https://devmedeiros.com/tags/python/</link>
       <pubDate>Tue, 28 Dec 2021 14:55:00 -0300</pubDate>
       
-      <guid>https://devmedeiros.github.io/tags/python/</guid>
+      <guid>https://devmedeiros.com/tags/python/</guid>
       <description></description>
     </item>
     
     <item>
       <title>pandas</title>
-      <link>https://devmedeiros.github.io/tags/pandas/</link>
+      <link>https://devmedeiros.com/tags/pandas/</link>
       <pubDate>Sun, 07 Nov 2021 15:14:00 -0300</pubDate>
       
-      <guid>https://devmedeiros.github.io/tags/pandas/</guid>
+      <guid>https://devmedeiros.com/tags/pandas/</guid>
       <description></description>
     </item>
     
     <item>
       <title>seaborn</title>
-      <link>https://devmedeiros.github.io/tags/seaborn/</link>
+      <link>https://devmedeiros.com/tags/seaborn/</link>
       <pubDate>Sun, 07 Nov 2021 15:14:00 -0300</pubDate>
       
-      <guid>https://devmedeiros.github.io/tags/seaborn/</guid>
+      <guid>https://devmedeiros.com/tags/seaborn/</guid>
       <description></description>
     </item>
     
     <item>
       <title>R</title>
-      <link>https://devmedeiros.github.io/tags/r/</link>
+      <link>https://devmedeiros.com/tags/r/</link>
       <pubDate>Tue, 02 Nov 2021 17:14:00 -0300</pubDate>
       
-      <guid>https://devmedeiros.github.io/tags/r/</guid>
+      <guid>https://devmedeiros.com/tags/r/</guid>
       <description></description>
     </item>
     
     <item>
       <title>data manipulation</title>
-      <link>https://devmedeiros.github.io/tags/data-manipulation/</link>
+      <link>https://devmedeiros.com/tags/data-manipulation/</link>
       <pubDate>Wed, 27 Oct 2021 09:41:00 -0300</pubDate>
       
-      <guid>https://devmedeiros.github.io/tags/data-manipulation/</guid>
+      <guid>https://devmedeiros.com/tags/data-manipulation/</guid>
       <description></description>
     </item>
     
     <item>
       <title>data.table</title>
-      <link>https://devmedeiros.github.io/tags/data.table/</link>
+      <link>https://devmedeiros.com/tags/data.table/</link>
       <pubDate>Wed, 27 Oct 2021 09:41:00 -0300</pubDate>
       
-      <guid>https://devmedeiros.github.io/tags/data.table/</guid>
+      <guid>https://devmedeiros.com/tags/data.table/</guid>
       <description></description>
     </item>
     
     <item>
       <title>ggplot</title>
-      <link>https://devmedeiros.github.io/tags/ggplot/</link>
+      <link>https://devmedeiros.com/tags/ggplot/</link>
       <pubDate>Sun, 24 Oct 2021 20:43:00 -0300</pubDate>
       
-      <guid>https://devmedeiros.github.io/tags/ggplot/</guid>
+      <guid>https://devmedeiros.com/tags/ggplot/</guid>
       <description></description>
     </item>
     
     <item>
       <title>shiny</title>
-      <link>https://devmedeiros.github.io/tags/shiny/</link>
+      <link>https://devmedeiros.com/tags/shiny/</link>
       <pubDate>Sun, 24 Oct 2021 20:43:00 -0300</pubDate>
       
-      <guid>https://devmedeiros.github.io/tags/shiny/</guid>
+      <guid>https://devmedeiros.com/tags/shiny/</guid>
       <description></description>
     </item>
     
     <item>
       <title>simulation</title>
-      <link>https://devmedeiros.github.io/tags/simulation/</link>
+      <link>https://devmedeiros.com/tags/simulation/</link>
       <pubDate>Sun, 24 Oct 2021 20:43:00 -0300</pubDate>
       
-      <guid>https://devmedeiros.github.io/tags/simulation/</guid>
+      <guid>https://devmedeiros.com/tags/simulation/</guid>
       <description></description>
     </item>
     
     <item>
       <title>data science</title>
-      <link>https://devmedeiros.github.io/tags/data-science/</link>
+      <link>https://devmedeiros.com/tags/data-science/</link>
       <pubDate>Tue, 12 Oct 2021 19:47:00 -0300</pubDate>
       
-      <guid>https://devmedeiros.github.io/tags/data-science/</guid>
+      <guid>https://devmedeiros.com/tags/data-science/</guid>
       <description></description>
     </item>
     
     <item>
       <title>NLP</title>
-      <link>https://devmedeiros.github.io/tags/nlp/</link>
+      <link>https://devmedeiros.com/tags/nlp/</link>
       <pubDate>Tue, 12 Oct 2021 19:47:00 -0300</pubDate>
       
-      <guid>https://devmedeiros.github.io/tags/nlp/</guid>
+      <guid>https://devmedeiros.com/tags/nlp/</guid>
       <description></description>
     </item>
     
     <item>
       <title>sentiment analysis</title>
-      <link>https://devmedeiros.github.io/tags/sentiment-analysis/</link>
+      <link>https://devmedeiros.com/tags/sentiment-analysis/</link>
       <pubDate>Tue, 12 Oct 2021 19:47:00 -0300</pubDate>
       
-      <guid>https://devmedeiros.github.io/tags/sentiment-analysis/</guid>
+      <guid>https://devmedeiros.com/tags/sentiment-analysis/</guid>
       <description></description>
     </item>
     
