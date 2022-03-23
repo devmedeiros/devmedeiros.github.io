@@ -23,7 +23,6 @@ outputs:
 languages:
   en:
     title: Dev_Medeiros
-    contentDir: content/post/english
     weight: 1
   pt:
     profileMode:
@@ -39,7 +38,6 @@ languages:
           url: categories/blog/
         - name: Projetos
           url: categories/projects/
-    contentDir: content/post/portuguese
     weight: 2
     menu:
       main:
