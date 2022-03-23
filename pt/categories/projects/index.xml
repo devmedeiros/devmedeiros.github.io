@@ -12,10 +12,10 @@
     <lastBuildDate>Tue, 08 Mar 2022 13:34:00 -0300</lastBuildDate><atom:link href="https://devmedeiros.com/pt/categories/projects/index.xml" rel="self" type="application/rss+xml" />
     <item>
       <title>Alura Skimo - Power BI Dashboard</title>
-      <link>https://devmedeiros.com/pt/2022-03-08-alura-skimo-powerbi/</link>
+      <link>https://devmedeiros.com/pt/post/2022-03-08-alura-skimo-powerbi/</link>
       <pubDate>Tue, 08 Mar 2022 13:34:00 -0300</pubDate>
       
-      <guid>https://devmedeiros.com/pt/2022-03-08-alura-skimo-powerbi/</guid>
+      <guid>https://devmedeiros.com/pt/post/2022-03-08-alura-skimo-powerbi/</guid>
       <description>Tools used: Power BI, Figma, SQL
 Category: Dashboard
  Este dashboard é o último de três do segundo desafio Alura Challenge BI.
@@ -24,10 +24,10 @@ Category: Dashboard
     
     <item>
       <title>Alura Food - Power BI Dashboard</title>
-      <link>https://devmedeiros.com/pt/2022-02-26-alura-food-powerbi/</link>
+      <link>https://devmedeiros.com/pt/post/2022-02-26-alura-food-powerbi/</link>
       <pubDate>Sat, 26 Feb 2022 12:16:00 -0300</pubDate>
       
-      <guid>https://devmedeiros.com/pt/2022-02-26-alura-food-powerbi/</guid>
+      <guid>https://devmedeiros.com/pt/post/2022-02-26-alura-food-powerbi/</guid>
       <description>Tools used: Power BI, Google Sheets, Figma
 Category: Dashboard
  Esse painel é o segundo de três que estou fazendo para o segundo desafio Alura Challenge BI.
@@ -37,10 +37,10 @@ Primeiramente, eu fiz uma junção dos bancos de dados e limpei eles através do
     
     <item>
       <title>Alura Films - Power BI Dashboard</title>
-      <link>https://devmedeiros.com/pt/2022-02-17-alura-films-powerbi/</link>
+      <link>https://devmedeiros.com/pt/post/2022-02-17-alura-films-powerbi/</link>
       <pubDate>Thu, 17 Feb 2022 18:42:00 -0300</pubDate>
       
-      <guid>https://devmedeiros.com/pt/2022-02-17-alura-films-powerbi/</guid>
+      <guid>https://devmedeiros.com/pt/post/2022-02-17-alura-films-powerbi/</guid>
       <description>Ferramentas utilizadas: Power BI, Planilhas Google, Figma
 Categoria: Dashboard
  Este painel é o primeiro de três que eu estarei fazendo nas próximas semanas como parte do segundo desafio Alura Challenge BI.
@@ -50,10 +50,10 @@ Com isso em mente, eu explorei na primeira aba um pequeno resumo sobre os filmes
     
     <item>
       <title>Simulação de 21</title>
-      <link>https://devmedeiros.com/pt/2021-10-24-blackjack-simulation/</link>
+      <link>https://devmedeiros.com/pt/post/2021-10-24-blackjack-simulation/</link>
       <pubDate>Sun, 24 Oct 2021 20:43:00 -0300</pubDate>
       
-      <guid>https://devmedeiros.com/pt/2021-10-24-blackjack-simulation/</guid>
+      <guid>https://devmedeiros.com/pt/post/2021-10-24-blackjack-simulation/</guid>
       <description>&lt;p&gt;&lt;strong&gt;Ferramentas utilizadas:&lt;/strong&gt; R, ggplot, Shiny&lt;/p&gt;
 &lt;p&gt;&lt;strong&gt;Categoria:&lt;/strong&gt; Simulação&lt;/p&gt;
 &lt;hr&gt;</description>

@@ -12,10 +12,10 @@
     <lastBuildDate>Tue, 08 Mar 2022 13:34:00 -0300</lastBuildDate><atom:link href="https://devmedeiros.com/pt/index.xml" rel="self" type="application/rss+xml" />
     <item>
       <title>Alura Skimo - Power BI Dashboard</title>
-      <link>https://devmedeiros.com/pt/2022-03-08-alura-skimo-powerbi/</link>
+      <link>https://devmedeiros.com/pt/post/2022-03-08-alura-skimo-powerbi/</link>
       <pubDate>Tue, 08 Mar 2022 13:34:00 -0300</pubDate>
       
-      <guid>https://devmedeiros.com/pt/2022-03-08-alura-skimo-powerbi/</guid>
+      <guid>https://devmedeiros.com/pt/post/2022-03-08-alura-skimo-powerbi/</guid>
       <description>Tools used: Power BI, Figma, SQL
 Category: Dashboard
  Este dashboard é o último de três do segundo desafio Alura Challenge BI.
@@ -24,10 +24,10 @@ Category: Dashboard
     
     <item>
       <title>Alura Food - Power BI Dashboard</title>
-      <link>https://devmedeiros.com/pt/2022-02-26-alura-food-powerbi/</link>
+      <link>https://devmedeiros.com/pt/post/2022-02-26-alura-food-powerbi/</link>
       <pubDate>Sat, 26 Feb 2022 12:16:00 -0300</pubDate>
       
-      <guid>https://devmedeiros.com/pt/2022-02-26-alura-food-powerbi/</guid>
+      <guid>https://devmedeiros.com/pt/post/2022-02-26-alura-food-powerbi/</guid>
       <description>Tools used: Power BI, Google Sheets, Figma
 Category: Dashboard
  Esse painel é o segundo de três que estou fazendo para o segundo desafio Alura Challenge BI.
@@ -37,10 +37,10 @@ Primeiramente, eu fiz uma junção dos bancos de dados e limpei eles através do
     
     <item>
       <title>Alura Films - Power BI Dashboard</title>
-      <link>https://devmedeiros.com/pt/2022-02-17-alura-films-powerbi/</link>
+      <link>https://devmedeiros.com/pt/post/2022-02-17-alura-films-powerbi/</link>
       <pubDate>Thu, 17 Feb 2022 18:42:00 -0300</pubDate>
       
-      <guid>https://devmedeiros.com/pt/2022-02-17-alura-films-powerbi/</guid>
+      <guid>https://devmedeiros.com/pt/post/2022-02-17-alura-films-powerbi/</guid>
       <description>Ferramentas utilizadas: Power BI, Planilhas Google, Figma
 Categoria: Dashboard
  Este painel é o primeiro de três que eu estarei fazendo nas próximas semanas como parte do segundo desafio Alura Challenge BI.
@@ -50,30 +50,30 @@ Com isso em mente, eu explorei na primeira aba um pequeno resumo sobre os filmes
     
     <item>
       <title>Review do Podcast - Machine Learning Guide</title>
-      <link>https://devmedeiros.com/pt/2022-01-24-podcast-review-mlg/</link>
+      <link>https://devmedeiros.com/pt/post/2022-01-24-podcast-review-mlg/</link>
       <pubDate>Mon, 24 Jan 2022 18:15:00 -0300</pubDate>
       
-      <guid>https://devmedeiros.com/pt/2022-01-24-podcast-review-mlg/</guid>
+      <guid>https://devmedeiros.com/pt/post/2022-01-24-podcast-review-mlg/</guid>
       <description>O show, apresentado por Tyler Renelle da Depth, oferece uma lista com recursos na qual você pode encontrar todos os livros, cursos, e sites mencionados durante o podcast. É um ótimo podcast para quem está aprendendo sobre aprendizado de máquina, podendo ser útil para iniciantes, entusiastas, ou para alguém que está procurando se aprofundar ainda mais no tópico. Desde 2021 o show está sendo renovado para atualizar o conteúdo.
 O show começa falando sobre o que é ciência de dados e como ela se relaciona com aprendizado de máquina e inteligência artificial.</description>
     </item>
     
     <item>
       <title>Análise Descritiva do Top 50 Livros Bestsellers da Amazon 2009 - 2019</title>
-      <link>https://devmedeiros.com/pt/2021-12-28-amazon-top-50-books/</link>
+      <link>https://devmedeiros.com/pt/post/2021-12-28-amazon-top-50-books/</link>
       <pubDate>Tue, 28 Dec 2021 14:55:00 -0300</pubDate>
       
-      <guid>https://devmedeiros.com/pt/2021-12-28-amazon-top-50-books/</guid>
+      <guid>https://devmedeiros.com/pt/post/2021-12-28-amazon-top-50-books/</guid>
       <description>Recentemente eu terminei um curso na Alura chamado Python para Data Science e eu quero colocar o que eu aprendi em prática, para isso eu vou fazer uma análise descritiva nesse banco de dados Amazon Top 50 Bestselling Books 2009 - 2019. Nele há 550 livros e eles foram categorizados como fiction (ficção) e non-fiction (não ficção) pelo Goodreads. Todo o código pode ser visto aqui.
 Eu comecei olhando as cinco primeiras observações do banco de dados.</description>
     </item>
     
     <item>
       <title>Guia do Pacote de Python seaborn</title>
-      <link>https://devmedeiros.com/pt/2020-11-07-seaborn-package-guide/</link>
+      <link>https://devmedeiros.com/pt/post/2020-11-07-seaborn-package-guide/</link>
       <pubDate>Sun, 07 Nov 2021 15:14:00 -0300</pubDate>
       
-      <guid>https://devmedeiros.com/pt/2020-11-07-seaborn-package-guide/</guid>
+      <guid>https://devmedeiros.com/pt/post/2020-11-07-seaborn-package-guide/</guid>
       <description>Introdução Eu estou aprendendo visualização de dados no Python e eu me vejo como alguém que aprende fazendo, por isso eu vou fazer alguns gráficos simples usando o pacote seaborn que poderão ser utilizados como referência sempre que precisar refrescar a memória.
 Primeiramente é necessários que os pacotes estejam propriamente importados, após isso eu carrego o banco de dados iris.
 import pandas as pd import seaborn as sns import matplotlib.pyplot as plt  url = &amp;#34;https://git.</description>
@@ -81,10 +81,10 @@ import pandas as pd import seaborn as sns import matplotlib.pyplot as plt  url =
     
     <item>
       <title>Uma Visão Geral Sobre o Pacote data.table do R</title>
-      <link>https://devmedeiros.com/pt/2021-10-27-data-table/</link>
+      <link>https://devmedeiros.com/pt/post/2021-10-27-data-table/</link>
       <pubDate>Wed, 27 Oct 2021 09:41:00 -0300</pubDate>
       
-      <guid>https://devmedeiros.com/pt/2021-10-27-data-table/</guid>
+      <guid>https://devmedeiros.com/pt/post/2021-10-27-data-table/</guid>
       <description>O pacote data.table é um dos pacotes de manipulação de dados mais rápido, atualmente ele é mais rápido até que o pandas e dplyr 1. A sintaxe de um data.table é dt[i, j, by], em que:
  i é utilizado para amostrar linhas j é utilizado para amostrar colunas by é utilizado para amostrar grupos, igual ao GROUP BY do SQL  Você pode ler em voz alta como2:
  Pegue dt, amostra/reordene as linhas usando i, então calcule j, agrupando por by.</description>
@@ -92,10 +92,10 @@ import pandas as pd import seaborn as sns import matplotlib.pyplot as plt  url =
     
     <item>
       <title>Simulação de 21</title>
-      <link>https://devmedeiros.com/pt/2021-10-24-blackjack-simulation/</link>
+      <link>https://devmedeiros.com/pt/post/2021-10-24-blackjack-simulation/</link>
       <pubDate>Sun, 24 Oct 2021 20:43:00 -0300</pubDate>
       
-      <guid>https://devmedeiros.com/pt/2021-10-24-blackjack-simulation/</guid>
+      <guid>https://devmedeiros.com/pt/post/2021-10-24-blackjack-simulation/</guid>
       <description>&lt;p&gt;&lt;strong&gt;Ferramentas utilizadas:&lt;/strong&gt; R, ggplot, Shiny&lt;/p&gt;
 &lt;p&gt;&lt;strong&gt;Categoria:&lt;/strong&gt; Simulação&lt;/p&gt;
 &lt;hr&gt;</description>
@@ -103,13 +103,24 @@ import pandas as pd import seaborn as sns import matplotlib.pyplot as plt  url =
     
     <item>
       <title>Análise de Sentimentos de Notícias Falsas vs Notícias Reais</title>
-      <link>https://devmedeiros.com/pt/2021-10-12-fakenews-sentiment/</link>
+      <link>https://devmedeiros.com/pt/post/2021-10-12-fakenews-sentiment/</link>
       <pubDate>Tue, 12 Oct 2021 19:47:00 -0300</pubDate>
       
-      <guid>https://devmedeiros.com/pt/2021-10-12-fakenews-sentiment/</guid>
+      <guid>https://devmedeiros.com/pt/post/2021-10-12-fakenews-sentiment/</guid>
       <description>Eu quero fazer uma análise de sentimentos usando o R como uma forma de aprender. Com isso em mente começamos carregando todos os pacotes que iremos utilizar.
 library(readr) library(dplyr) library(tidytext) library(tokenizers) library(stopwords) library(ggplot2) Então precisamos carregar nosso banco de dados. Esses dados são do Kaggle Fake and real news dataset.
 Fake &amp;lt;- read_csv(&amp;#39;~/fakenews/Fake.csv&amp;#39;) True &amp;lt;- read.csv(&amp;#39;~/fakenews/True.csv&amp;#39;) Eu quero unir ambos os dados, mas antes é preciso criar uma nova columa que irá informar de onde os dados vieram.</description>
+    </item>
+    
+    
+    
+    <item>
+      <title>Sobre</title>
+      <link>https://devmedeiros.com/pt/about/</link>
+      <pubDate>Mon, 01 Jan 0001 00:00:00 +0000</pubDate>
+      
+      <guid>https://devmedeiros.com/pt/about/</guid>
+      <description>about</description>
     </item>
     
   </channel>

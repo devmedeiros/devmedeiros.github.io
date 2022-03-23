@@ -12,10 +12,10 @@
     <lastBuildDate>Tue, 08 Mar 2022 13:34:00 -0300</lastBuildDate><atom:link href="https://devmedeiros.com/tags/powerbi/index.xml" rel="self" type="application/rss+xml" />
     <item>
       <title>Alura Skimo - Power BI Dashboard</title>
-      <link>https://devmedeiros.com/2022-03-08-alura-skimo-powerbi/</link>
+      <link>https://devmedeiros.com/post/2022-03-08-alura-skimo-powerbi/</link>
       <pubDate>Tue, 08 Mar 2022 13:34:00 -0300</pubDate>
       
-      <guid>https://devmedeiros.com/2022-03-08-alura-skimo-powerbi/</guid>
+      <guid>https://devmedeiros.com/post/2022-03-08-alura-skimo-powerbi/</guid>
       <description>Tools used: Power BI, Figma, SQL
 Category: Dashboard
  This dashboard is the last out of three from the second Alura Challenge BI.
@@ -24,10 +24,10 @@ Category: Dashboard
     
     <item>
       <title>Alura Food - Power BI Dashboard</title>
-      <link>https://devmedeiros.com/2022-02-26-alura-food-powerbi/</link>
+      <link>https://devmedeiros.com/post/2022-02-26-alura-food-powerbi/</link>
       <pubDate>Sat, 26 Feb 2022 12:16:00 -0300</pubDate>
       
-      <guid>https://devmedeiros.com/2022-02-26-alura-food-powerbi/</guid>
+      <guid>https://devmedeiros.com/post/2022-02-26-alura-food-powerbi/</guid>
       <description>Tools used: Power BI, Google Sheets, Figma
 Category: Dashboard
  This dashboard is the second of three that I&#39;m making in the following weeks as part of the second Alura Challenge BI.
@@ -37,10 +37,10 @@ First of all, I merged the datasets and cleaned the data through Power BI, trans
     
     <item>
       <title>Alura Films - Power BI Dashboard</title>
-      <link>https://devmedeiros.com/2022-02-17-alura-films-powerbi/</link>
+      <link>https://devmedeiros.com/post/2022-02-17-alura-films-powerbi/</link>
       <pubDate>Thu, 17 Feb 2022 18:42:00 -0300</pubDate>
       
-      <guid>https://devmedeiros.com/2022-02-17-alura-films-powerbi/</guid>
+      <guid>https://devmedeiros.com/post/2022-02-17-alura-films-powerbi/</guid>
       <description>Tools used: Power BI, Google Sheets, Figma
 Category: Dashboard
  This dashboard is the first of three that I&#39;ll be making in the following weeks as part of the second Alura Challenge BI.
@@ -50,10 +50,10 @@ With this in mind, I explored in the first tab a little summary about the movies
     
     <item>
       <title>Making Beautiful Power BI Dashboards</title>
-      <link>https://devmedeiros.com/2021-10-15-beautiful-power-bi/</link>
+      <link>https://devmedeiros.com/post/2021-10-15-beautiful-power-bi/</link>
       <pubDate>Fri, 15 Oct 2021 12:08:00 -0300</pubDate>
       
-      <guid>https://devmedeiros.com/2021-10-15-beautiful-power-bi/</guid>
+      <guid>https://devmedeiros.com/post/2021-10-15-beautiful-power-bi/</guid>
       <description>Here are 5 Tips to improve your Power BI Dashboards.
 1- Color scheme Unless you are working with a particular company that has defined rules on branding and how their logos and pamphlets should be displayed, deciding which colors to use will be a big part of your dashboard designing.
 When starting, it may not be easy to choose a color scheme with confidence. You may find yourself always going for monochromatic with black and white.</description>
