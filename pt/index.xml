@@ -9,7 +9,17 @@
       <link>https://devmedeiros.com/%3Clink%20or%20path%20of%20image%20for%20opengraph,%20twitter-cards%3E</link>
     </image>
     <generator>Hugo -- gohugo.io</generator>
-    <lastBuildDate>Tue, 08 Mar 2022 13:34:00 -0300</lastBuildDate><atom:link href="https://devmedeiros.com/pt/index.xml" rel="self" type="application/rss+xml" />
+    <lastBuildDate>Tue, 12 Apr 2022 17:58:00 -0300</lastBuildDate><atom:link href="https://devmedeiros.com/pt/index.xml" rel="self" type="application/rss+xml" />
+    <item>
+      <title>Compreendendo o P-Valor</title>
+      <link>https://devmedeiros.com/pt/post/2022-04-12-comprehending-the-p-value/</link>
+      <pubDate>Tue, 12 Apr 2022 17:58:00 -0300</pubDate>
+      
+      <guid>https://devmedeiros.com/pt/post/2022-04-12-comprehending-the-p-value/</guid>
+      <description>O que é o p-valor? Em estatística temos os testes de hipóteses, que são feitos para tomar uma decisão, de rejeitar ou não rejeitar a hipótese nula. Alguns exemplos de teste de hipótese são: Neyman-Pearson, Shapiro-Wilk, T de Student, entre outros.
+Todos testes de hipóteses possuem uma estatística de teste específico dele. E essa estatística é utilizada para avaliar o teste, mas essa tarefa pode ser cansativa até com o uso de computadores, pois a maioria dos softwares não devolvem como resposta a estatística de comparação, apenas a estatística amostral.</description>
+    </item>
+    
     <item>
       <title>Alura Skimo - Power BI Dashboard</title>
       <link>https://devmedeiros.com/pt/post/2022-03-08-alura-skimo-powerbi/</link>
@@ -70,10 +80,10 @@ Eu comecei olhando as cinco primeiras observações do banco de dados.</descript
     
     <item>
       <title>Guia do Pacote de Python seaborn</title>
-      <link>https://devmedeiros.com/pt/post/2020-11-07-seaborn-package-guide/</link>
+      <link>https://devmedeiros.com/pt/post/2021-11-07-seaborn-package-guide/</link>
       <pubDate>Sun, 07 Nov 2021 15:14:00 -0300</pubDate>
       
-      <guid>https://devmedeiros.com/pt/post/2020-11-07-seaborn-package-guide/</guid>
+      <guid>https://devmedeiros.com/pt/post/2021-11-07-seaborn-package-guide/</guid>
       <description>Introdução Eu estou aprendendo visualização de dados no Python e eu me vejo como alguém que aprende fazendo, por isso eu vou fazer alguns gráficos simples usando o pacote seaborn que poderão ser utilizados como referência sempre que precisar refrescar a memória.
 Primeiramente é necessários que os pacotes estejam propriamente importados, após isso eu carrego o banco de dados iris.
 import pandas as pd import seaborn as sns import matplotlib.pyplot as plt  url = &amp;#34;https://git.</description>

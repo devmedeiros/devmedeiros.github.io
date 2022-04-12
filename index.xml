@@ -9,7 +9,17 @@
       <link>https://devmedeiros.com/%3Clink%20or%20path%20of%20image%20for%20opengraph,%20twitter-cards%3E</link>
     </image>
     <generator>Hugo -- gohugo.io</generator>
-    <lastBuildDate>Tue, 08 Mar 2022 13:34:00 -0300</lastBuildDate><atom:link href="https://devmedeiros.com/index.xml" rel="self" type="application/rss+xml" />
+    <lastBuildDate>Tue, 12 Apr 2022 17:58:00 -0300</lastBuildDate><atom:link href="https://devmedeiros.com/index.xml" rel="self" type="application/rss+xml" />
+    <item>
+      <title>Comprehending the P Value</title>
+      <link>https://devmedeiros.com/post/2022-04-12-comprehending-the-p-value/</link>
+      <pubDate>Tue, 12 Apr 2022 17:58:00 -0300</pubDate>
+      
+      <guid>https://devmedeiros.com/post/2022-04-12-comprehending-the-p-value/</guid>
+      <description>What is the p-value? In statistics, we have hypothesis tests, which are made to decide whether to reject or not reject the null hypothesis. Some examples of hypothesis testing are Neyman-Pearson, Shapiro-Wilk, Student&amp;rsquo;s T-test, and others.
+All hypothesis tests have a test statistic specific to them. And this statistic is used to evaluate the test, but this task can be tiring even with the use of computers because most software does not return the comparison statistic as an output, only the sample statistic.</description>
+    </item>
+    
     <item>
       <title>Alura Skimo - Power BI Dashboard</title>
       <link>https://devmedeiros.com/post/2022-03-08-alura-skimo-powerbi/</link>
@@ -69,10 +79,10 @@ I started checking the first five observations from the dataset.</description>
     
     <item>
       <title>Python seaborn Package Guide</title>
-      <link>https://devmedeiros.com/post/2020-11-07-seaborn-package-guide/</link>
+      <link>https://devmedeiros.com/post/2021-11-07-seaborn-package-guide/</link>
       <pubDate>Sun, 07 Nov 2021 15:14:00 -0300</pubDate>
       
-      <guid>https://devmedeiros.com/post/2020-11-07-seaborn-package-guide/</guid>
+      <guid>https://devmedeiros.com/post/2021-11-07-seaborn-package-guide/</guid>
       <description>Introduction I&amp;rsquo;m learning data visualization in Python and I see myself as a &amp;lsquo;hands on&amp;rsquo; learner, so I&amp;rsquo;ll be reproducing some basic plots using seaborn package that you can use as a reference everytime you need to fresh up your memory.
 At first is required that the packages are properly imported, after that I load the iris dataset.
 import pandas as pd import seaborn as sns import matplotlib.pyplot as plt  url = &amp;#34;https://git.</description>

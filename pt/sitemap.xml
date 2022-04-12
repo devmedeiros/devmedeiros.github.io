@@ -2,6 +2,90 @@
 <urlset xmlns="http://www.sitemaps.org/schemas/sitemap/0.9"
   xmlns:xhtml="http://www.w3.org/1999/xhtml">
   <url>
+    <loc>https://devmedeiros.com/pt/categories/blog/</loc>
+    <lastmod>2022-04-12T17:58:00-03:00</lastmod>
+    <xhtml:link
+                rel="alternate"
+                hreflang="en"
+                href="https://devmedeiros.com/categories/blog/"
+                />
+    <xhtml:link
+                rel="alternate"
+                hreflang="pt"
+                href="https://devmedeiros.com/pt/categories/blog/"
+                />
+  </url><url>
+    <loc>https://devmedeiros.com/pt/categories/</loc>
+    <lastmod>2022-04-12T17:58:00-03:00</lastmod>
+    <xhtml:link
+                rel="alternate"
+                hreflang="en"
+                href="https://devmedeiros.com/categories/"
+                />
+    <xhtml:link
+                rel="alternate"
+                hreflang="pt"
+                href="https://devmedeiros.com/pt/categories/"
+                />
+  </url><url>
+    <loc>https://devmedeiros.com/pt/post/2022-04-12-comprehending-the-p-value/</loc>
+    <lastmod>2022-04-12T17:58:00-03:00</lastmod>
+    <xhtml:link
+                rel="alternate"
+                hreflang="en"
+                href="https://devmedeiros.com/post/2022-04-12-comprehending-the-p-value/"
+                />
+    <xhtml:link
+                rel="alternate"
+                hreflang="pt"
+                href="https://devmedeiros.com/pt/post/2022-04-12-comprehending-the-p-value/"
+                />
+  </url><url>
+    <loc>https://devmedeiros.com/pt/</loc>
+    <lastmod>2022-04-12T17:58:00-03:00</lastmod>
+    <xhtml:link
+                rel="alternate"
+                hreflang="en"
+                href="https://devmedeiros.com/"
+                />
+    <xhtml:link
+                rel="alternate"
+                hreflang="pt"
+                href="https://devmedeiros.com/pt/"
+                />
+  </url><url>
+    <loc>https://devmedeiros.com/pt/tags/estat%C3%ADstica/</loc>
+    <lastmod>2022-04-12T17:58:00-03:00</lastmod>
+  </url><url>
+    <loc>https://devmedeiros.com/pt/tags/p-valor/</loc>
+    <lastmod>2022-04-12T17:58:00-03:00</lastmod>
+  </url><url>
+    <loc>https://devmedeiros.com/pt/post/</loc>
+    <lastmod>2022-04-12T17:58:00-03:00</lastmod>
+    <xhtml:link
+                rel="alternate"
+                hreflang="en"
+                href="https://devmedeiros.com/post/"
+                />
+    <xhtml:link
+                rel="alternate"
+                hreflang="pt"
+                href="https://devmedeiros.com/pt/post/"
+                />
+  </url><url>
+    <loc>https://devmedeiros.com/pt/tags/</loc>
+    <lastmod>2022-04-12T17:58:00-03:00</lastmod>
+    <xhtml:link
+                rel="alternate"
+                hreflang="en"
+                href="https://devmedeiros.com/tags/"
+                />
+    <xhtml:link
+                rel="alternate"
+                hreflang="pt"
+                href="https://devmedeiros.com/pt/tags/"
+                />
+  </url><url>
     <loc>https://devmedeiros.com/pt/post/2022-03-08-alura-skimo-powerbi/</loc>
     <lastmod>2022-03-08T13:34:00-03:00</lastmod>
     <xhtml:link
@@ -15,19 +99,6 @@
                 href="https://devmedeiros.com/pt/post/2022-03-08-alura-skimo-powerbi/"
                 />
   </url><url>
-    <loc>https://devmedeiros.com/pt/categories/</loc>
-    <lastmod>2022-03-08T13:34:00-03:00</lastmod>
-    <xhtml:link
-                rel="alternate"
-                hreflang="en"
-                href="https://devmedeiros.com/categories/"
-                />
-    <xhtml:link
-                rel="alternate"
-                hreflang="pt"
-                href="https://devmedeiros.com/pt/categories/"
-                />
-  </url><url>
     <loc>https://devmedeiros.com/pt/tags/dashboard/</loc>
     <lastmod>2022-03-08T13:34:00-03:00</lastmod>
     <xhtml:link
@@ -39,32 +110,6 @@
                 rel="alternate"
                 hreflang="pt"
                 href="https://devmedeiros.com/pt/tags/dashboard/"
-                />
-  </url><url>
-    <loc>https://devmedeiros.com/pt/</loc>
-    <lastmod>2022-03-08T13:34:00-03:00</lastmod>
-    <xhtml:link
-                rel="alternate"
-                hreflang="en"
-                href="https://devmedeiros.com/"
-                />
-    <xhtml:link
-                rel="alternate"
-                hreflang="pt"
-                href="https://devmedeiros.com/pt/"
-                />
-  </url><url>
-    <loc>https://devmedeiros.com/pt/post/</loc>
-    <lastmod>2022-03-08T13:34:00-03:00</lastmod>
-    <xhtml:link
-                rel="alternate"
-                hreflang="en"
-                href="https://devmedeiros.com/post/"
-                />
-    <xhtml:link
-                rel="alternate"
-                hreflang="pt"
-                href="https://devmedeiros.com/pt/post/"
                 />
   </url><url>
     <loc>https://devmedeiros.com/pt/tags/powerbi/</loc>
@@ -106,19 +151,6 @@
                 href="https://devmedeiros.com/pt/tags/sql/"
                 />
   </url><url>
-    <loc>https://devmedeiros.com/pt/tags/</loc>
-    <lastmod>2022-03-08T13:34:00-03:00</lastmod>
-    <xhtml:link
-                rel="alternate"
-                hreflang="en"
-                href="https://devmedeiros.com/tags/"
-                />
-    <xhtml:link
-                rel="alternate"
-                hreflang="pt"
-                href="https://devmedeiros.com/pt/tags/"
-                />
-  </url><url>
     <loc>https://devmedeiros.com/pt/tags/visualiza%C3%A7%C3%A3o-de-dados/</loc>
     <lastmod>2022-03-08T13:34:00-03:00</lastmod>
   </url><url>
@@ -146,19 +178,6 @@
                 rel="alternate"
                 hreflang="pt"
                 href="https://devmedeiros.com/pt/post/2022-02-17-alura-films-powerbi/"
-                />
-  </url><url>
-    <loc>https://devmedeiros.com/pt/categories/blog/</loc>
-    <lastmod>2022-01-24T18:15:00-03:00</lastmod>
-    <xhtml:link
-                rel="alternate"
-                hreflang="en"
-                href="https://devmedeiros.com/categories/blog/"
-                />
-    <xhtml:link
-                rel="alternate"
-                hreflang="pt"
-                href="https://devmedeiros.com/pt/categories/blog/"
                 />
   </url><url>
     <loc>https://devmedeiros.com/pt/tags/podcast/</loc>
@@ -229,17 +248,17 @@
                 href="https://devmedeiros.com/pt/tags/python/"
                 />
   </url><url>
-    <loc>https://devmedeiros.com/pt/post/2020-11-07-seaborn-package-guide/</loc>
+    <loc>https://devmedeiros.com/pt/post/2021-11-07-seaborn-package-guide/</loc>
     <lastmod>2021-11-07T15:14:00-03:00</lastmod>
     <xhtml:link
                 rel="alternate"
                 hreflang="en"
-                href="https://devmedeiros.com/post/2020-11-07-seaborn-package-guide/"
+                href="https://devmedeiros.com/post/2021-11-07-seaborn-package-guide/"
                 />
     <xhtml:link
                 rel="alternate"
                 hreflang="pt"
-                href="https://devmedeiros.com/pt/post/2020-11-07-seaborn-package-guide/"
+                href="https://devmedeiros.com/pt/post/2021-11-07-seaborn-package-guide/"
                 />
   </url><url>
     <loc>https://devmedeiros.com/pt/tags/pandas/</loc>

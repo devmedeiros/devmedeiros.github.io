@@ -1,0 +1,24 @@
+<?xml version="1.0" encoding="utf-8" standalone="yes"?>
+<rss version="2.0" xmlns:atom="http://www.w3.org/2005/Atom" xmlns:content="http://purl.org/rss/1.0/modules/content/">
+  <channel>
+    <title>estatística on Dev_Medeiros</title>
+    <link>https://devmedeiros.com/pt/tags/estat%C3%ADstica/</link>
+    <description>Recent content in estatística on Dev_Medeiros</description>
+    <image>
+      <url>https://devmedeiros.com/%3Clink%20or%20path%20of%20image%20for%20opengraph,%20twitter-cards%3E</url>
+      <link>https://devmedeiros.com/%3Clink%20or%20path%20of%20image%20for%20opengraph,%20twitter-cards%3E</link>
+    </image>
+    <generator>Hugo -- gohugo.io</generator>
+    <lastBuildDate>Tue, 12 Apr 2022 17:58:00 -0300</lastBuildDate><atom:link href="https://devmedeiros.com/pt/tags/estat%C3%ADstica/index.xml" rel="self" type="application/rss+xml" />
+    <item>
+      <title>Compreendendo o P-Valor</title>
+      <link>https://devmedeiros.com/pt/post/2022-04-12-comprehending-the-p-value/</link>
+      <pubDate>Tue, 12 Apr 2022 17:58:00 -0300</pubDate>
+      
+      <guid>https://devmedeiros.com/pt/post/2022-04-12-comprehending-the-p-value/</guid>
+      <description>O que é o p-valor? Em estatística temos os testes de hipóteses, que são feitos para tomar uma decisão, de rejeitar ou não rejeitar a hipótese nula. Alguns exemplos de teste de hipótese são: Neyman-Pearson, Shapiro-Wilk, T de Student, entre outros.
+Todos testes de hipóteses possuem uma estatística de teste específico dele. E essa estatística é utilizada para avaliar o teste, mas essa tarefa pode ser cansativa até com o uso de computadores, pois a maioria dos softwares não devolvem como resposta a estatística de comparação, apenas a estatística amostral.</description>
+    </item>
+    
+  </channel>
+</rss>
