@@ -9,7 +9,17 @@
       <link>https://devmedeiros.com/%3Clink%20or%20path%20of%20image%20for%20opengraph,%20twitter-cards%3E</link>
     </image>
     <generator>Hugo -- gohugo.io</generator>
-    <lastBuildDate>Tue, 28 Dec 2021 14:55:00 -0300</lastBuildDate><atom:link href="https://devmedeiros.com/tags/data-analysis/index.xml" rel="self" type="application/rss+xml" />
+    <lastBuildDate>Sun, 17 Apr 2022 10:08:00 -0300</lastBuildDate><atom:link href="https://devmedeiros.com/tags/data-analysis/index.xml" rel="self" type="application/rss+xml" />
+    <item>
+      <title>Storytelling with CEAP</title>
+      <link>https://devmedeiros.com/post/2022-04-17-storytelling-with-ceap/</link>
+      <pubDate>Sun, 17 Apr 2022 10:08:00 -0300</pubDate>
+      
+      <guid>https://devmedeiros.com/post/2022-04-17-storytelling-with-ceap/</guid>
+      <description>The Dataset CEAP stands for Cota para o Exercício da Atividade Parlamentar, in English, Exercise of Parliamentary Activity from Brazil. The quota is a monthly amount that can be used by the deputy/senator to defray typical expenses of the exercise of the parliamentary mandate.
+The monthly amounts don&amp;rsquo;t accumulate over the months. Another important thing is Senators in Brazil have an 8-year mandate, and there are elections every 4 years.</description>
+    </item>
+    
     <item>
       <title>Descriptive Analysis of Amazon Top 50 Bestselling Books 2009 - 2019</title>
       <link>https://devmedeiros.com/post/2021-12-28-amazon-top-50-books/</link>

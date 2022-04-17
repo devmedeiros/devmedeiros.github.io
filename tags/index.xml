@@ -9,7 +9,43 @@
       <link>https://devmedeiros.com/%3Clink%20or%20path%20of%20image%20for%20opengraph,%20twitter-cards%3E</link>
     </image>
     <generator>Hugo -- gohugo.io</generator>
-    <lastBuildDate>Tue, 12 Apr 2022 17:58:00 -0300</lastBuildDate><atom:link href="https://devmedeiros.com/tags/index.xml" rel="self" type="application/rss+xml" />
+    <lastBuildDate>Sun, 17 Apr 2022 10:08:00 -0300</lastBuildDate><atom:link href="https://devmedeiros.com/tags/index.xml" rel="self" type="application/rss+xml" />
+    <item>
+      <title>data analysis</title>
+      <link>https://devmedeiros.com/tags/data-analysis/</link>
+      <pubDate>Sun, 17 Apr 2022 10:08:00 -0300</pubDate>
+      
+      <guid>https://devmedeiros.com/tags/data-analysis/</guid>
+      <description></description>
+    </item>
+    
+    <item>
+      <title>data science</title>
+      <link>https://devmedeiros.com/tags/data-science/</link>
+      <pubDate>Sun, 17 Apr 2022 10:08:00 -0300</pubDate>
+      
+      <guid>https://devmedeiros.com/tags/data-science/</guid>
+      <description></description>
+    </item>
+    
+    <item>
+      <title>data visualization</title>
+      <link>https://devmedeiros.com/tags/data-visualization/</link>
+      <pubDate>Sun, 17 Apr 2022 10:08:00 -0300</pubDate>
+      
+      <guid>https://devmedeiros.com/tags/data-visualization/</guid>
+      <description></description>
+    </item>
+    
+    <item>
+      <title>storytelling</title>
+      <link>https://devmedeiros.com/tags/storytelling/</link>
+      <pubDate>Sun, 17 Apr 2022 10:08:00 -0300</pubDate>
+      
+      <guid>https://devmedeiros.com/tags/storytelling/</guid>
+      <description></description>
+    </item>
+    
     <item>
       <title>p value</title>
       <link>https://devmedeiros.com/tags/p-value/</link>
@@ -34,15 +70,6 @@
       <pubDate>Tue, 08 Mar 2022 13:34:00 -0300</pubDate>
       
       <guid>https://devmedeiros.com/tags/dashboard/</guid>
-      <description></description>
-    </item>
-    
-    <item>
-      <title>data visualization</title>
-      <link>https://devmedeiros.com/tags/data-visualization/</link>
-      <pubDate>Tue, 08 Mar 2022 13:34:00 -0300</pubDate>
-      
-      <guid>https://devmedeiros.com/tags/data-visualization/</guid>
       <description></description>
     </item>
     
@@ -79,15 +106,6 @@
       <pubDate>Mon, 24 Jan 2022 18:15:00 -0300</pubDate>
       
       <guid>https://devmedeiros.com/tags/review/</guid>
-      <description></description>
-    </item>
-    
-    <item>
-      <title>data analysis</title>
-      <link>https://devmedeiros.com/tags/data-analysis/</link>
-      <pubDate>Tue, 28 Dec 2021 14:55:00 -0300</pubDate>
-      
-      <guid>https://devmedeiros.com/tags/data-analysis/</guid>
       <description></description>
     </item>
     
@@ -169,15 +187,6 @@
       <pubDate>Sun, 24 Oct 2021 20:43:00 -0300</pubDate>
       
       <guid>https://devmedeiros.com/tags/simulation/</guid>
-      <description></description>
-    </item>
-    
-    <item>
-      <title>data science</title>
-      <link>https://devmedeiros.com/tags/data-science/</link>
-      <pubDate>Tue, 12 Oct 2021 19:47:00 -0300</pubDate>
-      
-      <guid>https://devmedeiros.com/tags/data-science/</guid>
       <description></description>
     </item>
     
