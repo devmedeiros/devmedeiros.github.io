@@ -87,7 +87,10 @@
 
 .post-content dl,
 .post-content ol,
-.post-content p,
+.post-content p {
+    text-align: justify;
+    text-indent: 5%;
+},
 .post-content figure,
 .post-content ul {
     margin-bottom: var(--content-gap);
