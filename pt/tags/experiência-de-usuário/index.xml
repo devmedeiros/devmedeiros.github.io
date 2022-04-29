@@ -1,0 +1,24 @@
+<?xml version="1.0" encoding="utf-8" standalone="yes"?>
+<rss version="2.0" xmlns:atom="http://www.w3.org/2005/Atom" xmlns:content="http://purl.org/rss/1.0/modules/content/">
+  <channel>
+    <title>experiência de usuário on Dev_Medeiros</title>
+    <link>https://devmedeiros.com/pt/tags/experi%C3%AAncia-de-usu%C3%A1rio/</link>
+    <description>Recent content in experiência de usuário on Dev_Medeiros</description>
+    <image>
+      <url>https://devmedeiros.com/%3Clink%20or%20path%20of%20image%20for%20opengraph,%20twitter-cards%3E</url>
+      <link>https://devmedeiros.com/%3Clink%20or%20path%20of%20image%20for%20opengraph,%20twitter-cards%3E</link>
+    </image>
+    <generator>Hugo -- gohugo.io</generator>
+    <lastBuildDate>Fri, 29 Apr 2022 11:14:00 -0300</lastBuildDate><atom:link href="https://devmedeiros.com/pt/tags/experi%C3%AAncia-de-usu%C3%A1rio/index.xml" rel="self" type="application/rss+xml" />
+    <item>
+      <title>UX/UI em Dashboards de Business Intelligence</title>
+      <link>https://devmedeiros.com/pt/post/2022-04-29-ux-power-bi-dashboards/</link>
+      <pubDate>Fri, 29 Apr 2022 11:14:00 -0300</pubDate>
+      
+      <guid>https://devmedeiros.com/pt/post/2022-04-29-ux-power-bi-dashboards/</guid>
+      <description>O que é UX/UI? UX é a sigla em inglês para Experiência de Usuário, é um conceito recente que fala sobre tomar decisões de design pensando na experiência do usuário final. O designer de UX precisa se preocupar se seu produto é fácil de usar e intuitivo, fazendo mudanças nele sempre que necessário para se adequar as necessidades do usuário.
+UI, do inglês, significa Interface do Usuário. É tudo aquilo que está envolvido na interação do usuário e o produto.</description>
+    </item>
+    
+  </channel>
+</rss>

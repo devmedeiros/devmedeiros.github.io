@@ -3,7 +3,7 @@
   xmlns:xhtml="http://www.w3.org/1999/xhtml">
   <url>
     <loc>https://devmedeiros.com/categories/blog/</loc>
-    <lastmod>2022-04-17T10:08:00-03:00</lastmod>
+    <lastmod>2022-04-29T11:14:00-03:00</lastmod>
     <xhtml:link
                 rel="alternate"
                 hreflang="pt"
@@ -15,8 +15,21 @@
                 href="https://devmedeiros.com/categories/blog/"
                 />
   </url><url>
+    <loc>https://devmedeiros.com/tags/business-intelligence/</loc>
+    <lastmod>2022-04-29T11:14:00-03:00</lastmod>
+    <xhtml:link
+                rel="alternate"
+                hreflang="pt"
+                href="https://devmedeiros.com/pt/tags/business-intelligence/"
+                />
+    <xhtml:link
+                rel="alternate"
+                hreflang="en"
+                href="https://devmedeiros.com/tags/business-intelligence/"
+                />
+  </url><url>
     <loc>https://devmedeiros.com/categories/</loc>
-    <lastmod>2022-04-17T10:08:00-03:00</lastmod>
+    <lastmod>2022-04-29T11:14:00-03:00</lastmod>
     <xhtml:link
                 rel="alternate"
                 hreflang="pt"
@@ -28,17 +41,24 @@
                 href="https://devmedeiros.com/categories/"
                 />
   </url><url>
-    <loc>https://devmedeiros.com/tags/data-analysis/</loc>
-    <lastmod>2022-04-17T10:08:00-03:00</lastmod>
-  </url><url>
-    <loc>https://devmedeiros.com/tags/data-science/</loc>
-    <lastmod>2022-04-17T10:08:00-03:00</lastmod>
+    <loc>https://devmedeiros.com/tags/dashboard/</loc>
+    <lastmod>2022-04-29T11:14:00-03:00</lastmod>
+    <xhtml:link
+                rel="alternate"
+                hreflang="pt"
+                href="https://devmedeiros.com/pt/tags/dashboard/"
+                />
+    <xhtml:link
+                rel="alternate"
+                hreflang="en"
+                href="https://devmedeiros.com/tags/dashboard/"
+                />
   </url><url>
     <loc>https://devmedeiros.com/tags/data-visualization/</loc>
-    <lastmod>2022-04-17T10:08:00-03:00</lastmod>
+    <lastmod>2022-04-29T11:14:00-03:00</lastmod>
   </url><url>
     <loc>https://devmedeiros.com/</loc>
-    <lastmod>2022-04-17T10:08:00-03:00</lastmod>
+    <lastmod>2022-04-29T11:14:00-03:00</lastmod>
     <xhtml:link
                 rel="alternate"
                 hreflang="pt"
@@ -50,8 +70,21 @@
                 href="https://devmedeiros.com/"
                 />
   </url><url>
+    <loc>https://devmedeiros.com/tags/figma/</loc>
+    <lastmod>2022-04-29T11:14:00-03:00</lastmod>
+    <xhtml:link
+                rel="alternate"
+                hreflang="pt"
+                href="https://devmedeiros.com/pt/tags/figma/"
+                />
+    <xhtml:link
+                rel="alternate"
+                hreflang="en"
+                href="https://devmedeiros.com/tags/figma/"
+                />
+  </url><url>
     <loc>https://devmedeiros.com/post/</loc>
-    <lastmod>2022-04-17T10:08:00-03:00</lastmod>
+    <lastmod>2022-04-29T11:14:00-03:00</lastmod>
     <xhtml:link
                 rel="alternate"
                 hreflang="pt"
@@ -63,14 +96,34 @@
                 href="https://devmedeiros.com/post/"
                 />
   </url><url>
-    <loc>https://devmedeiros.com/tags/storytelling/</loc>
-    <lastmod>2022-04-17T10:08:00-03:00</lastmod>
+    <loc>https://devmedeiros.com/tags/powerbi/</loc>
+    <lastmod>2022-04-29T11:14:00-03:00</lastmod>
+    <xhtml:link
+                rel="alternate"
+                hreflang="pt"
+                href="https://devmedeiros.com/pt/tags/powerbi/"
+                />
+    <xhtml:link
+                rel="alternate"
+                hreflang="en"
+                href="https://devmedeiros.com/tags/powerbi/"
+                />
   </url><url>
-    <loc>https://devmedeiros.com/post/2022-04-17-storytelling-with-ceap/</loc>
-    <lastmod>2022-04-17T10:08:00-03:00</lastmod>
+    <loc>https://devmedeiros.com/tags/storytelling/</loc>
+    <lastmod>2022-04-29T11:14:00-03:00</lastmod>
+    <xhtml:link
+                rel="alternate"
+                hreflang="pt"
+                href="https://devmedeiros.com/pt/tags/storytelling/"
+                />
+    <xhtml:link
+                rel="alternate"
+                hreflang="en"
+                href="https://devmedeiros.com/tags/storytelling/"
+                />
   </url><url>
     <loc>https://devmedeiros.com/tags/</loc>
-    <lastmod>2022-04-17T10:08:00-03:00</lastmod>
+    <lastmod>2022-04-29T11:14:00-03:00</lastmod>
     <xhtml:link
                 rel="alternate"
                 hreflang="pt"
@@ -81,6 +134,41 @@
                 hreflang="en"
                 href="https://devmedeiros.com/tags/"
                 />
+  </url><url>
+    <loc>https://devmedeiros.com/tags/ux/</loc>
+    <lastmod>2022-04-29T11:14:00-03:00</lastmod>
+    <xhtml:link
+                rel="alternate"
+                hreflang="pt"
+                href="https://devmedeiros.com/pt/tags/ux/"
+                />
+    <xhtml:link
+                rel="alternate"
+                hreflang="en"
+                href="https://devmedeiros.com/tags/ux/"
+                />
+  </url><url>
+    <loc>https://devmedeiros.com/post/2022-04-29-ux-power-bi-dashboards/</loc>
+    <lastmod>2022-04-29T11:14:00-03:00</lastmod>
+    <xhtml:link
+                rel="alternate"
+                hreflang="pt"
+                href="https://devmedeiros.com/pt/post/2022-04-29-ux-power-bi-dashboards/"
+                />
+    <xhtml:link
+                rel="alternate"
+                hreflang="en"
+                href="https://devmedeiros.com/post/2022-04-29-ux-power-bi-dashboards/"
+                />
+  </url><url>
+    <loc>https://devmedeiros.com/tags/data-analysis/</loc>
+    <lastmod>2022-04-17T10:08:00-03:00</lastmod>
+  </url><url>
+    <loc>https://devmedeiros.com/tags/data-science/</loc>
+    <lastmod>2022-04-17T10:08:00-03:00</lastmod>
+  </url><url>
+    <loc>https://devmedeiros.com/post/2022-04-17-storytelling-with-ceap/</loc>
+    <lastmod>2022-04-17T10:08:00-03:00</lastmod>
   </url><url>
     <loc>https://devmedeiros.com/post/2022-04-12-comprehending-the-p-value/</loc>
     <lastmod>2022-04-12T17:58:00-03:00</lastmod>
@@ -112,32 +200,6 @@
                 rel="alternate"
                 hreflang="en"
                 href="https://devmedeiros.com/post/2022-03-08-alura-skimo-powerbi/"
-                />
-  </url><url>
-    <loc>https://devmedeiros.com/tags/dashboard/</loc>
-    <lastmod>2022-03-08T13:34:00-03:00</lastmod>
-    <xhtml:link
-                rel="alternate"
-                hreflang="pt"
-                href="https://devmedeiros.com/pt/tags/dashboard/"
-                />
-    <xhtml:link
-                rel="alternate"
-                hreflang="en"
-                href="https://devmedeiros.com/tags/dashboard/"
-                />
-  </url><url>
-    <loc>https://devmedeiros.com/tags/powerbi/</loc>
-    <lastmod>2022-03-08T13:34:00-03:00</lastmod>
-    <xhtml:link
-                rel="alternate"
-                hreflang="pt"
-                href="https://devmedeiros.com/pt/tags/powerbi/"
-                />
-    <xhtml:link
-                rel="alternate"
-                hreflang="en"
-                href="https://devmedeiros.com/tags/powerbi/"
                 />
   </url><url>
     <loc>https://devmedeiros.com/categories/projects/</loc>

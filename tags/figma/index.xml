@@ -1,0 +1,24 @@
+<?xml version="1.0" encoding="utf-8" standalone="yes"?>
+<rss version="2.0" xmlns:atom="http://www.w3.org/2005/Atom" xmlns:content="http://purl.org/rss/1.0/modules/content/">
+  <channel>
+    <title>figma on Dev_Medeiros</title>
+    <link>https://devmedeiros.com/tags/figma/</link>
+    <description>Recent content in figma on Dev_Medeiros</description>
+    <image>
+      <url>https://devmedeiros.com/%3Clink%20or%20path%20of%20image%20for%20opengraph,%20twitter-cards%3E</url>
+      <link>https://devmedeiros.com/%3Clink%20or%20path%20of%20image%20for%20opengraph,%20twitter-cards%3E</link>
+    </image>
+    <generator>Hugo -- gohugo.io</generator>
+    <lastBuildDate>Fri, 29 Apr 2022 11:14:00 -0300</lastBuildDate><atom:link href="https://devmedeiros.com/tags/figma/index.xml" rel="self" type="application/rss+xml" />
+    <item>
+      <title>UX/UI for Business Intelligence Dashboards</title>
+      <link>https://devmedeiros.com/post/2022-04-29-ux-power-bi-dashboards/</link>
+      <pubDate>Fri, 29 Apr 2022 11:14:00 -0300</pubDate>
+      
+      <guid>https://devmedeiros.com/post/2022-04-29-ux-power-bi-dashboards/</guid>
+      <description>What is UX/UI? UX is the acronym for User Experience, it is a recent concept about making design decisions while thinking about the user experience. The UX designer needs to be concerned about whether their product is easy to use and intuitive, making changes to it whenever necessary to suit the user&amp;rsquo;s needs.
+UI stands for User Interface. It is everything involved in the interaction of the user and the product.</description>
+    </item>
+    
+  </channel>
+</rss>
