@@ -1,9 +1,9 @@
 <?xml version="1.0" encoding="utf-8" standalone="yes"?>
 <rss version="2.0" xmlns:atom="http://www.w3.org/2005/Atom" xmlns:content="http://purl.org/rss/1.0/modules/content/">
   <channel>
-    <title>PowerBI on Dev_Medeiros</title>
+    <title>powerbi on Dev_Medeiros</title>
     <link>https://devmedeiros.com/tags/powerbi/</link>
-    <description>Recent content in PowerBI on Dev_Medeiros</description>
+    <description>Recent content in powerbi on Dev_Medeiros</description>
     <image>
       <url>https://devmedeiros.com/%3Clink%20or%20path%20of%20image%20for%20opengraph,%20twitter-cards%3E</url>
       <link>https://devmedeiros.com/%3Clink%20or%20path%20of%20image%20for%20opengraph,%20twitter-cards%3E</link>
@@ -56,17 +56,6 @@ Category: Dashboard
  This dashboard is the first of three that I&#39;ll be making in the following weeks as part of the second Alura Challenge BI.
  The objective of this dashboard is to help find the best selection for an upcoming movie.
 With this in mind, I explored in the first tab a little summary about the movies in the database, with this you can get a general view of our data.</description>
-    </item>
-    
-    <item>
-      <title>Making Beautiful Power BI Dashboards</title>
-      <link>https://devmedeiros.com/post/2021-10-15-beautiful-power-bi/</link>
-      <pubDate>Fri, 15 Oct 2021 12:08:00 -0300</pubDate>
-      
-      <guid>https://devmedeiros.com/post/2021-10-15-beautiful-power-bi/</guid>
-      <description>Here are 5 Tips to improve your Power BI Dashboards.
-1- Color scheme Unless you are working with a particular company that has defined rules on branding and how their logos and pamphlets should be displayed, deciding which colors to use will be a big part of your dashboard designing.
-When starting, it may not be easy to choose a color scheme with confidence. You may find yourself always going for monochromatic with black and white.</description>
     </item>
     
   </channel>

@@ -89,16 +89,5 @@ At first is required that the packages are properly imported, after that I load 
 import pandas as pd import seaborn as sns import matplotlib.pyplot as plt  url = &amp;#34;https://git.</description>
     </item>
     
-    <item>
-      <title>Making Beautiful Power BI Dashboards</title>
-      <link>https://devmedeiros.com/post/2021-10-15-beautiful-power-bi/</link>
-      <pubDate>Fri, 15 Oct 2021 12:08:00 -0300</pubDate>
-      
-      <guid>https://devmedeiros.com/post/2021-10-15-beautiful-power-bi/</guid>
-      <description>Here are 5 Tips to improve your Power BI Dashboards.
-1- Color scheme Unless you are working with a particular company that has defined rules on branding and how their logos and pamphlets should be displayed, deciding which colors to use will be a big part of your dashboard designing.
-When starting, it may not be easy to choose a color scheme with confidence. You may find yourself always going for monochromatic with black and white.</description>
-    </item>
-    
   </channel>
 </rss>
