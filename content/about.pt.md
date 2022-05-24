@@ -6,9 +6,9 @@ layout: "single" # is necessary
 summary: "about"
 ---
 
-Oi! Meu nome é Jaqueline Souza Medeiros, sou uma Cientista de Dados formada pela Universidade Federal de Goiás. O principal propósito desse _blog_ é escrever sobre o que eu aprendi e estou aprendendo sobre Ciência de Dados.
+Oi! Meu nome é Jaqueline Medeiros e eu sou uma Cientista de Dados. Eu sou formada em Estatística e a maioria da minha experiência é em análise e visualização de dados. Mesmo assim, eu tenho me interessado em engenharia de dados, tenho participado em projetos envolvendo esse ramo da ciência de dados. Atualmente estou trabalhando em implementar PySpark e Apache Hop para tornar o tratamento dos dados mais rápido e eficiente.
 
-Eu amo aprender sobre outras culturas e idiomas, e por isso, eu desenvolvi um grande interesse em Processamento Natural de Linguagem. Também estou interessada em simulação e aprendizado de máquina, então espero explorar estas áreas em breve.
+Apesar de querer focar em engenharia de dados, eu ainda estou interessada em aprendizado de máquina, análise de dados, e outras coisas sob o domínio de ciência de dados. Então eu continuarei postando sobre diversos assuntos de ciência de dados.
 
 Você pode me encontrar em:
 
@@ -28,6 +28,7 @@ _Especialização em Banco de Dados com Big Data (Abr 2020 - presente)_
 **Universidade Federal de Goiás - UFG - Goiânia, GO**
 
 _Bacharel em Estatística (Concluído em Dezembro de 2020)_
+> - Disciplinas: Regressão Linear, Regressão Logística, Séries Temporais, Estatística Não Paramétrica, Inferência Estatística, Análise Multivariada, e Probabilidade.
 
 ## Experiência Profissional
 

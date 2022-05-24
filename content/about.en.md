@@ -6,9 +6,9 @@ layout: "single" # is necessary
 summary: "about"
 ---
 
-Hi! My name is Jaqueline Souza Medeiros and I’m a Data Scientist who graduated from the Federal University of Goiás in Brazil. The primary purpose of this blog is to write about what I have learned and continue to learn about Data Science.
+Hi! My name is Jaqueline Medeiros and I am a Data Scientist from Brazil. I have a degree in Statistics and most of my experience has been with data analysis and visualization. Even so, I've been showing interest in data engineering, I've been participating in projects involving this branch of data science. I'm currently working on implementing PySpark and Apache Hop to make data cleaning faster and more efficient.
 
-I love learning about other cultures and languages, and because of this, I’ve come to have a great interest in Natural Language Processing. Also, I am interested in simulation and machine learning, so I hope to explore these areas soon.
+Even though I want to focus on data engineering, I'm still interested in machine learning, data analysis, and other things under the data science umbrella. So I'll still be posting about data science in general.
 
 You can find me at:
 
@@ -17,7 +17,7 @@ You can find me at:
 
 # Resume
 
-Data Scientist who makes up the Innovation Laboratory of the Regional Electoral Court of Goiás. On my day-to-day, I work with data processing and cleaning, data ingestion from several sources, making views, and Business Intelligence applications.
+Data Scientist who is a member of the Innovation Laboratory of the Regional Electoral Court of Goiás. On my day-to-day, I work with data processing and cleaning, data ingestion from several sources, making views, and Business Intelligence applications.
 
 ## Education
 
@@ -28,12 +28,13 @@ _Specialization - Postgraduate Degree in Database with Big Data (Apr 2020 - pres
 **Federal University of Goiás - UFG - Goiânia, GO**
 
 _Bachelor in Statistics (Completed in December 2020)_
+> - Courses: Linear Regression, Logistic Regression, Time Series, Nonparametric Statistics, Statistical Inference, Multivariate Analysis, and Probability.
 
 ## Experience
 
 **Regional Electoral Court of Goiás - Goiânia, GO**
 
-_Statistician - Data Scientis (Jun 2020 – present)_
+_Statistician - Data Scientist (Jun 2020 – present)_
 > - I use analytical and technical expertise to generate insights that help improve the court's governance, productivity, and transparency, leveraging its CNJ Quality Award score from 70.28% in 2020 to 80.72% in 2021.
 > - Identify bottlenecks in the electoral process.
 > - Data ingestion from multiple sources using a combination of SQL, R, and Python. Generating views to be used in Power BI dashboards.
@@ -56,7 +57,7 @@ _Computational Statistics I (1st Semester 2018)_
 **Volunteer Undergraduate Research Project**
 
 _Guided Study on Control Charts (2nd Semester 2016 - 1st Semester 2017)_
-> - Exploratory analysis through control charts of inflation rates in Brazil during the period 2002 - 2016.
+> - Exploratory analysis through control charts of inflation rates in Brazil during the period of 2002 - 2016.
 
 **University Monitoring 2nd**
 
@@ -73,9 +74,9 @@ _Probability and Statistics (1st Semester 2015)_
 ## Skills
 > - Statistical Analysis and Data Preparation
 > - Statistical Modeling and Machine Learning
-> - Programming languages in Python and R
+> - Programming languages: Python and R
 > - Agile Methodologies
-> - Query languages in SQL and Power Query
+> - Query languages: SQL and Power Query
 > - Development of interactive BI dashboards (using Power BI)
 
 ## Courses and Certificates
