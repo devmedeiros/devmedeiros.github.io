@@ -9,7 +9,43 @@
       <link>https://devmedeiros.com/%3Clink%20or%20path%20of%20image%20for%20opengraph,%20twitter-cards%3E</link>
     </image>
     <generator>Hugo -- gohugo.io</generator>
-    <lastBuildDate>Fri, 29 Apr 2022 11:14:00 -0300</lastBuildDate><atom:link href="https://devmedeiros.com/tags/index.xml" rel="self" type="application/rss+xml" />
+    <lastBuildDate>Mon, 30 May 2022 16:49:00 -0300</lastBuildDate><atom:link href="https://devmedeiros.com/tags/index.xml" rel="self" type="application/rss+xml" />
+    <item>
+      <title>data analysis</title>
+      <link>https://devmedeiros.com/tags/data-analysis/</link>
+      <pubDate>Mon, 30 May 2022 16:49:00 -0300</pubDate>
+      
+      <guid>https://devmedeiros.com/tags/data-analysis/</guid>
+      <description></description>
+    </item>
+    
+    <item>
+      <title>machine learning</title>
+      <link>https://devmedeiros.com/tags/machine-learning/</link>
+      <pubDate>Mon, 30 May 2022 16:49:00 -0300</pubDate>
+      
+      <guid>https://devmedeiros.com/tags/machine-learning/</guid>
+      <description></description>
+    </item>
+    
+    <item>
+      <title>python</title>
+      <link>https://devmedeiros.com/tags/python/</link>
+      <pubDate>Mon, 30 May 2022 16:49:00 -0300</pubDate>
+      
+      <guid>https://devmedeiros.com/tags/python/</guid>
+      <description></description>
+    </item>
+    
+    <item>
+      <title>storytelling</title>
+      <link>https://devmedeiros.com/tags/storytelling/</link>
+      <pubDate>Mon, 30 May 2022 16:49:00 -0300</pubDate>
+      
+      <guid>https://devmedeiros.com/tags/storytelling/</guid>
+      <description></description>
+    </item>
+    
     <item>
       <title>business intelligence</title>
       <link>https://devmedeiros.com/tags/business-intelligence/</link>
@@ -56,29 +92,11 @@
     </item>
     
     <item>
-      <title>storytelling</title>
-      <link>https://devmedeiros.com/tags/storytelling/</link>
-      <pubDate>Fri, 29 Apr 2022 11:14:00 -0300</pubDate>
-      
-      <guid>https://devmedeiros.com/tags/storytelling/</guid>
-      <description></description>
-    </item>
-    
-    <item>
       <title>UX</title>
       <link>https://devmedeiros.com/tags/ux/</link>
       <pubDate>Fri, 29 Apr 2022 11:14:00 -0300</pubDate>
       
       <guid>https://devmedeiros.com/tags/ux/</guid>
-      <description></description>
-    </item>
-    
-    <item>
-      <title>data analysis</title>
-      <link>https://devmedeiros.com/tags/data-analysis/</link>
-      <pubDate>Sun, 17 Apr 2022 10:08:00 -0300</pubDate>
-      
-      <guid>https://devmedeiros.com/tags/data-analysis/</guid>
       <description></description>
     </item>
     
@@ -133,15 +151,6 @@
       <pubDate>Mon, 24 Jan 2022 18:15:00 -0300</pubDate>
       
       <guid>https://devmedeiros.com/tags/review/</guid>
-      <description></description>
-    </item>
-    
-    <item>
-      <title>python</title>
-      <link>https://devmedeiros.com/tags/python/</link>
-      <pubDate>Tue, 28 Dec 2021 14:55:00 -0300</pubDate>
-      
-      <guid>https://devmedeiros.com/tags/python/</guid>
       <description></description>
     </item>
     
