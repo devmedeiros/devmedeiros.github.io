@@ -20,6 +20,16 @@
   </url><url>
     <loc>https://devmedeiros.com/post/2022-05-30-churn-rate-challenge/</loc>
     <lastmod>2022-05-30T16:49:00-03:00</lastmod>
+    <xhtml:link
+                rel="alternate"
+                hreflang="pt"
+                href="https://devmedeiros.com/pt/post/2022-05-30-churn-rate-challenge/"
+                />
+    <xhtml:link
+                rel="alternate"
+                hreflang="en"
+                href="https://devmedeiros.com/post/2022-05-30-churn-rate-challenge/"
+                />
   </url><url>
     <loc>https://devmedeiros.com/</loc>
     <lastmod>2022-05-30T16:49:00-03:00</lastmod>
@@ -35,6 +45,9 @@
                 />
   </url><url>
     <loc>https://devmedeiros.com/tags/machine-learning/</loc>
+    <lastmod>2022-05-30T16:49:00-03:00</lastmod>
+  </url><url>
+    <loc>https://devmedeiros.com/tags/neural-network/</loc>
     <lastmod>2022-05-30T16:49:00-03:00</lastmod>
   </url><url>
     <loc>https://devmedeiros.com/post/</loc>

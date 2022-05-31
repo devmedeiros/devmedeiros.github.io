@@ -26,10 +26,10 @@ UI, do inglês, significa Interface do Usuário. É tudo aquilo que está envolv
       <pubDate>Tue, 08 Mar 2022 13:34:00 -0300</pubDate>
       
       <guid>https://devmedeiros.com/pt/post/2022-03-08-alura-skimo-powerbi/</guid>
-      <description>Tools used: Power BI, Figma, SQL
+      <description>&lt;!DOCTYPE html&gt; Tools used: Power BI, Figma, SQL
 Category: Dashboard
- Este dashboard é o último de três do segundo desafio Alura Challenge BI.
- A Alura Skimo está interessada em analisar seus dados de vendas, para ajudar com isso eu fiz este dashboard. Ele é composto de três páginas. A primeira apresenta um resumo com todas as principais medidas que encontramos no painel, filtrado para mostrar o mês mais recente. Nesta primeira página, você pode parar o cursor do mouse sobre uma medida e isso fará com que apareça um pequeno gráfico com a série histórica com uma linha de tendência.</description>
+Este dashboard é o último de três do segundo desafio Alura Challenge BI.
+A Alura Skimo está interessada em analisar seus dados de vendas, para ajudar com isso eu fiz este dashboard. Ele é composto de três páginas. A primeira apresenta um resumo com todas as principais medidas que encontramos no painel, filtrado para mostrar o mês mais recente. Nesta primeira página, você pode parar o cursor do mouse sobre uma medida e isso fará com que apareça um pequeno gráfico com a série histórica com uma linha de tendência.</description>
     </item>
     
     <item>
@@ -38,10 +38,10 @@ Category: Dashboard
       <pubDate>Sat, 26 Feb 2022 12:16:00 -0300</pubDate>
       
       <guid>https://devmedeiros.com/pt/post/2022-02-26-alura-food-powerbi/</guid>
-      <description>Tools used: Power BI, Google Sheets, Figma
+      <description>&lt;!DOCTYPE html&gt; Tools used: Power BI, Google Sheets, Figma
 Category: Dashboard
- Esse painel é o segundo de três que estou fazendo para o segundo desafio Alura Challenge BI.
- A Alura Food está interessada em expandir seus negócios para o mercado indiano. Para isso, a empresa pediu para calcular medidas que os ajudem a tomarem uma melhor decisão.
+Esse painel é o segundo de três que estou fazendo para o segundo desafio Alura Challenge BI.
+A Alura Food está interessada em expandir seus negócios para o mercado indiano. Para isso, a empresa pediu para calcular medidas que os ajudem a tomarem uma melhor decisão.
 Primeiramente, eu fiz uma junção dos bancos de dados e limpei eles através do Power BI, traduzi alguns dos textos de inglês para português através da Planilhas Google, e converti o preço das refeições da sua moeda original para o real (moeda brasileira).</description>
     </item>
     
@@ -51,10 +51,10 @@ Primeiramente, eu fiz uma junção dos bancos de dados e limpei eles através do
       <pubDate>Thu, 17 Feb 2022 18:42:00 -0300</pubDate>
       
       <guid>https://devmedeiros.com/pt/post/2022-02-17-alura-films-powerbi/</guid>
-      <description>Ferramentas utilizadas: Power BI, Planilhas Google, Figma
+      <description>&lt;!DOCTYPE html&gt; Ferramentas utilizadas: Power BI, Planilhas Google, Figma
 Categoria: Dashboard
- Este painel é o primeiro de três que eu estarei fazendo nas próximas semanas como parte do segundo desafio Alura Challenge BI.
- O objetivo deste painel é ajudar a encontrar a melhor seleção para um filme que será produzido.
+Este painel é o primeiro de três que eu estarei fazendo nas próximas semanas como parte do segundo desafio Alura Challenge BI.
+O objetivo deste painel é ajudar a encontrar a melhor seleção para um filme que será produzido.
 Com isso em mente, eu explorei na primeira aba um pequeno resumo sobre os filmes no banco de dados, com ela você pode ter uma ideia geral dos nossos dados.</description>
     </item>
     

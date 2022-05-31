@@ -36,8 +36,7 @@ Todos testes de hipóteses possuem uma estatística de teste específico dele. E
       <pubDate>Mon, 24 Jan 2022 18:15:00 -0300</pubDate>
       
       <guid>https://devmedeiros.com/pt/post/2022-01-24-podcast-review-mlg/</guid>
-      <description>O show, apresentado por Tyler Renelle da Depth, oferece uma lista com recursos na qual você pode encontrar todos os livros, cursos, e sites mencionados durante o podcast. É um ótimo podcast para quem está aprendendo sobre aprendizado de máquina, podendo ser útil para iniciantes, entusiastas, ou para alguém que está procurando se aprofundar ainda mais no tópico. Desde 2021 o show está sendo renovado para atualizar o conteúdo.
-O show começa falando sobre o que é ciência de dados e como ela se relaciona com aprendizado de máquina e inteligência artificial.</description>
+      <description>O show, apresentado por Tyler Renelle da Depth, oferece uma lista com recursos na qual você pode encontrar todos os livros, cursos, e sites mencionados durante o podcast. É um ótimo podcast para quem está aprendendo sobre aprendizado de máquina, podendo ser útil para iniciantes, entusiastas, ou para alguém que está procurando se aprofundar ainda mais no tópico. Desde 2021 o show está sendo renovado para atualizar o conteúdo.</description>
     </item>
     
     <item>
@@ -58,7 +57,7 @@ Eu comecei olhando as cinco primeiras observações do banco de dados.</descript
       <guid>https://devmedeiros.com/pt/post/2021-11-07-seaborn-package-guide/</guid>
       <description>Introdução Eu estou aprendendo visualização de dados no Python e eu me vejo como alguém que aprende fazendo, por isso eu vou fazer alguns gráficos simples usando o pacote seaborn que poderão ser utilizados como referência sempre que precisar refrescar a memória.
 Primeiramente é necessários que os pacotes estejam propriamente importados, após isso eu carrego o banco de dados iris.
-import pandas as pd import seaborn as sns import matplotlib.pyplot as plt  url = &amp;#34;https://git.</description>
+import pandas as pd import seaborn as sns import matplotlib.pyplot as plt url = &amp;#34;https://git.</description>
     </item>
     
     <item>
@@ -68,8 +67,8 @@ import pandas as pd import seaborn as sns import matplotlib.pyplot as plt  url =
       
       <guid>https://devmedeiros.com/pt/post/2021-10-27-data-table/</guid>
       <description>O pacote data.table é um dos pacotes de manipulação de dados mais rápido, atualmente ele é mais rápido até que o pandas e dplyr 1. A sintaxe de um data.table é dt[i, j, by], em que:
- i é utilizado para amostrar linhas j é utilizado para amostrar colunas by é utilizado para amostrar grupos, igual ao GROUP BY do SQL  Você pode ler em voz alta como2:
- Pegue dt, amostra/reordene as linhas usando i, então calcule j, agrupando por by.</description>
+i é utilizado para amostrar linhas j é utilizado para amostrar colunas by é utilizado para amostrar grupos, igual ao GROUP BY do SQL Você pode ler em voz alta como2:
+Pegue dt, amostra/reordene as linhas usando i, então calcule j, agrupando por by.</description>
     </item>
     
     <item>

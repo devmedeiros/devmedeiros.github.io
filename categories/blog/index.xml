@@ -67,7 +67,7 @@ I started checking the first five observations from the dataset.</description>
       <guid>https://devmedeiros.com/post/2021-11-07-seaborn-package-guide/</guid>
       <description>Introduction I&amp;rsquo;m learning data visualization in Python and I see myself as a &amp;lsquo;hands on&amp;rsquo; learner, so I&amp;rsquo;ll be reproducing some basic plots using seaborn package that you can use as a reference everytime you need to fresh up your memory.
 At first is required that the packages are properly imported, after that I load the iris dataset.
-import pandas as pd import seaborn as sns import matplotlib.pyplot as plt  url = &amp;#34;https://git.</description>
+import pandas as pd import seaborn as sns import matplotlib.pyplot as plt url = &amp;#34;https://git.</description>
     </item>
     
     <item>
@@ -77,8 +77,8 @@ import pandas as pd import seaborn as sns import matplotlib.pyplot as plt  url =
       
       <guid>https://devmedeiros.com/post/2021-10-27-data-table/</guid>
       <description>The data.table package is one of the fastest packages for data manipulation, currently, it is even faster than pandas and dplyr 1. data.table syntax is dt[i, j, by], where:
- i is used to subset rows j is used to subset columns by is used to subset groups, like GROUP BY from SQL  You can read it out loud as2:
- Take dt, subset/reorder rows using i, then calculate j, grouped by by.</description>
+i is used to subset rows j is used to subset columns by is used to subset groups, like GROUP BY from SQL You can read it out loud as2:
+Take dt, subset/reorder rows using i, then calculate j, grouped by by.</description>
     </item>
     
     <item>

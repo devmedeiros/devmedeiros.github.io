@@ -1,0 +1,24 @@
+<?xml version="1.0" encoding="utf-8" standalone="yes"?>
+<rss version="2.0" xmlns:atom="http://www.w3.org/2005/Atom" xmlns:content="http://purl.org/rss/1.0/modules/content/">
+  <channel>
+    <title>neural network on Dev_Medeiros</title>
+    <link>https://devmedeiros.com/tags/neural-network/</link>
+    <description>Recent content in neural network on Dev_Medeiros</description>
+    <image>
+      <url>https://devmedeiros.com/%3Clink%20or%20path%20of%20image%20for%20opengraph,%20twitter-cards%3E</url>
+      <link>https://devmedeiros.com/%3Clink%20or%20path%20of%20image%20for%20opengraph,%20twitter-cards%3E</link>
+    </image>
+    <generator>Hugo -- gohugo.io</generator>
+    <lastBuildDate>Mon, 30 May 2022 16:49:00 -0300</lastBuildDate><atom:link href="https://devmedeiros.com/tags/neural-network/index.xml" rel="self" type="application/rss+xml" />
+    <item>
+      <title>Data Science Challenge - Churn Rate</title>
+      <link>https://devmedeiros.com/post/2022-05-30-churn-rate-challenge/</link>
+      <pubDate>Mon, 30 May 2022 16:49:00 -0300</pubDate>
+      
+      <guid>https://devmedeiros.com/post/2022-05-30-churn-rate-challenge/</guid>
+      <description>I was challenged to take the role of a new data scientist hired at Alura Voz. This made-up company is a telecommunication company and it needs to reduce the Churn Rate.
+The challenge is divided into four weeks. For the first week, the goal was to clean the dataset provided by an API. Next, we need to identify clients who are more likely to leave the company, using data exploration and analysis.</description>
+    </item>
+    
+  </channel>
+</rss>

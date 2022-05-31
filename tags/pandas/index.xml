@@ -18,7 +18,7 @@
       <guid>https://devmedeiros.com/post/2021-11-07-seaborn-package-guide/</guid>
       <description>Introduction I&amp;rsquo;m learning data visualization in Python and I see myself as a &amp;lsquo;hands on&amp;rsquo; learner, so I&amp;rsquo;ll be reproducing some basic plots using seaborn package that you can use as a reference everytime you need to fresh up your memory.
 At first is required that the packages are properly imported, after that I load the iris dataset.
-import pandas as pd import seaborn as sns import matplotlib.pyplot as plt  url = &amp;#34;https://git.</description>
+import pandas as pd import seaborn as sns import matplotlib.pyplot as plt url = &amp;#34;https://git.</description>
     </item>
     
   </channel>

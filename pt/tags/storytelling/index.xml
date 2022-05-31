@@ -9,7 +9,17 @@
       <link>https://devmedeiros.com/%3Clink%20or%20path%20of%20image%20for%20opengraph,%20twitter-cards%3E</link>
     </image>
     <generator>Hugo -- gohugo.io</generator>
-    <lastBuildDate>Fri, 29 Apr 2022 11:14:00 -0300</lastBuildDate><atom:link href="https://devmedeiros.com/pt/tags/storytelling/index.xml" rel="self" type="application/rss+xml" />
+    <lastBuildDate>Mon, 30 May 2022 16:49:00 -0300</lastBuildDate><atom:link href="https://devmedeiros.com/pt/tags/storytelling/index.xml" rel="self" type="application/rss+xml" />
+    <item>
+      <title>Data Science Challenge - Churn Rate</title>
+      <link>https://devmedeiros.com/pt/post/2022-05-30-churn-rate-challenge/</link>
+      <pubDate>Mon, 30 May 2022 16:49:00 -0300</pubDate>
+      
+      <guid>https://devmedeiros.com/pt/post/2022-05-30-churn-rate-challenge/</guid>
+      <description>Eu fui desafiada a tomar o papel da nova cientista de dados na Alura Voz. Essa empresa fictícia é do ramo de telecomunicação e precisa reduzir sua taxa de evasão de clientes.
+Esse desafio é dividido em quatro semanas. Para a primeira semana o objetivo é tratar o banco de dados proveniente de uma API. Em seguida, precisamos identificar clientes que são mais propensos a deixar a empresa, usando exploração e análise de dados.</description>
+    </item>
+    
     <item>
       <title>UX/UI em Dashboards de Business Intelligence</title>
       <link>https://devmedeiros.com/pt/post/2022-04-29-ux-power-bi-dashboards/</link>

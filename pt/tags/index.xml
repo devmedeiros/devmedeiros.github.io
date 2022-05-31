@@ -9,7 +9,52 @@
       <link>https://devmedeiros.com/%3Clink%20or%20path%20of%20image%20for%20opengraph,%20twitter-cards%3E</link>
     </image>
     <generator>Hugo -- gohugo.io</generator>
-    <lastBuildDate>Fri, 29 Apr 2022 11:14:00 -0300</lastBuildDate><atom:link href="https://devmedeiros.com/pt/tags/index.xml" rel="self" type="application/rss+xml" />
+    <lastBuildDate>Mon, 30 May 2022 16:49:00 -0300</lastBuildDate><atom:link href="https://devmedeiros.com/pt/tags/index.xml" rel="self" type="application/rss+xml" />
+    <item>
+      <title>análise de dados</title>
+      <link>https://devmedeiros.com/pt/tags/an%C3%A1lise-de-dados/</link>
+      <pubDate>Mon, 30 May 2022 16:49:00 -0300</pubDate>
+      
+      <guid>https://devmedeiros.com/pt/tags/an%C3%A1lise-de-dados/</guid>
+      <description></description>
+    </item>
+    
+    <item>
+      <title>aprendizado de máquina</title>
+      <link>https://devmedeiros.com/pt/tags/aprendizado-de-m%C3%A1quina/</link>
+      <pubDate>Mon, 30 May 2022 16:49:00 -0300</pubDate>
+      
+      <guid>https://devmedeiros.com/pt/tags/aprendizado-de-m%C3%A1quina/</guid>
+      <description></description>
+    </item>
+    
+    <item>
+      <title>python</title>
+      <link>https://devmedeiros.com/pt/tags/python/</link>
+      <pubDate>Mon, 30 May 2022 16:49:00 -0300</pubDate>
+      
+      <guid>https://devmedeiros.com/pt/tags/python/</guid>
+      <description></description>
+    </item>
+    
+    <item>
+      <title>rede neural</title>
+      <link>https://devmedeiros.com/pt/tags/rede-neural/</link>
+      <pubDate>Mon, 30 May 2022 16:49:00 -0300</pubDate>
+      
+      <guid>https://devmedeiros.com/pt/tags/rede-neural/</guid>
+      <description></description>
+    </item>
+    
+    <item>
+      <title>storytelling</title>
+      <link>https://devmedeiros.com/pt/tags/storytelling/</link>
+      <pubDate>Mon, 30 May 2022 16:49:00 -0300</pubDate>
+      
+      <guid>https://devmedeiros.com/pt/tags/storytelling/</guid>
+      <description></description>
+    </item>
+    
     <item>
       <title>business intelligence</title>
       <link>https://devmedeiros.com/pt/tags/business-intelligence/</link>
@@ -52,15 +97,6 @@
       <pubDate>Fri, 29 Apr 2022 11:14:00 -0300</pubDate>
       
       <guid>https://devmedeiros.com/pt/tags/powerbi/</guid>
-      <description></description>
-    </item>
-    
-    <item>
-      <title>storytelling</title>
-      <link>https://devmedeiros.com/pt/tags/storytelling/</link>
-      <pubDate>Fri, 29 Apr 2022 11:14:00 -0300</pubDate>
-      
-      <guid>https://devmedeiros.com/pt/tags/storytelling/</guid>
       <description></description>
     </item>
     
@@ -124,24 +160,6 @@
       <pubDate>Mon, 24 Jan 2022 18:15:00 -0300</pubDate>
       
       <guid>https://devmedeiros.com/pt/tags/review/</guid>
-      <description></description>
-    </item>
-    
-    <item>
-      <title>análise de dados</title>
-      <link>https://devmedeiros.com/pt/tags/an%C3%A1lise-de-dados/</link>
-      <pubDate>Tue, 28 Dec 2021 14:55:00 -0300</pubDate>
-      
-      <guid>https://devmedeiros.com/pt/tags/an%C3%A1lise-de-dados/</guid>
-      <description></description>
-    </item>
-    
-    <item>
-      <title>python</title>
-      <link>https://devmedeiros.com/pt/tags/python/</link>
-      <pubDate>Tue, 28 Dec 2021 14:55:00 -0300</pubDate>
-      
-      <guid>https://devmedeiros.com/pt/tags/python/</guid>
       <description></description>
     </item>
     

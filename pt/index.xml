@@ -9,7 +9,17 @@
       <link>https://devmedeiros.com/%3Clink%20or%20path%20of%20image%20for%20opengraph,%20twitter-cards%3E</link>
     </image>
     <generator>Hugo -- gohugo.io</generator>
-    <lastBuildDate>Fri, 29 Apr 2022 11:14:00 -0300</lastBuildDate><atom:link href="https://devmedeiros.com/pt/index.xml" rel="self" type="application/rss+xml" />
+    <lastBuildDate>Mon, 30 May 2022 16:49:00 -0300</lastBuildDate><atom:link href="https://devmedeiros.com/pt/index.xml" rel="self" type="application/rss+xml" />
+    <item>
+      <title>Data Science Challenge - Churn Rate</title>
+      <link>https://devmedeiros.com/pt/post/2022-05-30-churn-rate-challenge/</link>
+      <pubDate>Mon, 30 May 2022 16:49:00 -0300</pubDate>
+      
+      <guid>https://devmedeiros.com/pt/post/2022-05-30-churn-rate-challenge/</guid>
+      <description>Eu fui desafiada a tomar o papel da nova cientista de dados na Alura Voz. Essa empresa fictícia é do ramo de telecomunicação e precisa reduzir sua taxa de evasão de clientes.
+Esse desafio é dividido em quatro semanas. Para a primeira semana o objetivo é tratar o banco de dados proveniente de uma API. Em seguida, precisamos identificar clientes que são mais propensos a deixar a empresa, usando exploração e análise de dados.</description>
+    </item>
+    
     <item>
       <title>UX/UI em Dashboards de Business Intelligence</title>
       <link>https://devmedeiros.com/pt/post/2022-04-29-ux-power-bi-dashboards/</link>
@@ -36,10 +46,10 @@ Todos testes de hipóteses possuem uma estatística de teste específico dele. E
       <pubDate>Tue, 08 Mar 2022 13:34:00 -0300</pubDate>
       
       <guid>https://devmedeiros.com/pt/post/2022-03-08-alura-skimo-powerbi/</guid>
-      <description>Tools used: Power BI, Figma, SQL
+      <description>&lt;!DOCTYPE html&gt; Tools used: Power BI, Figma, SQL
 Category: Dashboard
- Este dashboard é o último de três do segundo desafio Alura Challenge BI.
- A Alura Skimo está interessada em analisar seus dados de vendas, para ajudar com isso eu fiz este dashboard. Ele é composto de três páginas. A primeira apresenta um resumo com todas as principais medidas que encontramos no painel, filtrado para mostrar o mês mais recente. Nesta primeira página, você pode parar o cursor do mouse sobre uma medida e isso fará com que apareça um pequeno gráfico com a série histórica com uma linha de tendência.</description>
+Este dashboard é o último de três do segundo desafio Alura Challenge BI.
+A Alura Skimo está interessada em analisar seus dados de vendas, para ajudar com isso eu fiz este dashboard. Ele é composto de três páginas. A primeira apresenta um resumo com todas as principais medidas que encontramos no painel, filtrado para mostrar o mês mais recente. Nesta primeira página, você pode parar o cursor do mouse sobre uma medida e isso fará com que apareça um pequeno gráfico com a série histórica com uma linha de tendência.</description>
     </item>
     
     <item>
@@ -48,10 +58,10 @@ Category: Dashboard
       <pubDate>Sat, 26 Feb 2022 12:16:00 -0300</pubDate>
       
       <guid>https://devmedeiros.com/pt/post/2022-02-26-alura-food-powerbi/</guid>
-      <description>Tools used: Power BI, Google Sheets, Figma
+      <description>&lt;!DOCTYPE html&gt; Tools used: Power BI, Google Sheets, Figma
 Category: Dashboard
- Esse painel é o segundo de três que estou fazendo para o segundo desafio Alura Challenge BI.
- A Alura Food está interessada em expandir seus negócios para o mercado indiano. Para isso, a empresa pediu para calcular medidas que os ajudem a tomarem uma melhor decisão.
+Esse painel é o segundo de três que estou fazendo para o segundo desafio Alura Challenge BI.
+A Alura Food está interessada em expandir seus negócios para o mercado indiano. Para isso, a empresa pediu para calcular medidas que os ajudem a tomarem uma melhor decisão.
 Primeiramente, eu fiz uma junção dos bancos de dados e limpei eles através do Power BI, traduzi alguns dos textos de inglês para português através da Planilhas Google, e converti o preço das refeições da sua moeda original para o real (moeda brasileira).</description>
     </item>
     
@@ -61,10 +71,10 @@ Primeiramente, eu fiz uma junção dos bancos de dados e limpei eles através do
       <pubDate>Thu, 17 Feb 2022 18:42:00 -0300</pubDate>
       
       <guid>https://devmedeiros.com/pt/post/2022-02-17-alura-films-powerbi/</guid>
-      <description>Ferramentas utilizadas: Power BI, Planilhas Google, Figma
+      <description>&lt;!DOCTYPE html&gt; Ferramentas utilizadas: Power BI, Planilhas Google, Figma
 Categoria: Dashboard
- Este painel é o primeiro de três que eu estarei fazendo nas próximas semanas como parte do segundo desafio Alura Challenge BI.
- O objetivo deste painel é ajudar a encontrar a melhor seleção para um filme que será produzido.
+Este painel é o primeiro de três que eu estarei fazendo nas próximas semanas como parte do segundo desafio Alura Challenge BI.
+O objetivo deste painel é ajudar a encontrar a melhor seleção para um filme que será produzido.
 Com isso em mente, eu explorei na primeira aba um pequeno resumo sobre os filmes no banco de dados, com ela você pode ter uma ideia geral dos nossos dados.</description>
     </item>
     
@@ -74,8 +84,7 @@ Com isso em mente, eu explorei na primeira aba um pequeno resumo sobre os filmes
       <pubDate>Mon, 24 Jan 2022 18:15:00 -0300</pubDate>
       
       <guid>https://devmedeiros.com/pt/post/2022-01-24-podcast-review-mlg/</guid>
-      <description>O show, apresentado por Tyler Renelle da Depth, oferece uma lista com recursos na qual você pode encontrar todos os livros, cursos, e sites mencionados durante o podcast. É um ótimo podcast para quem está aprendendo sobre aprendizado de máquina, podendo ser útil para iniciantes, entusiastas, ou para alguém que está procurando se aprofundar ainda mais no tópico. Desde 2021 o show está sendo renovado para atualizar o conteúdo.
-O show começa falando sobre o que é ciência de dados e como ela se relaciona com aprendizado de máquina e inteligência artificial.</description>
+      <description>O show, apresentado por Tyler Renelle da Depth, oferece uma lista com recursos na qual você pode encontrar todos os livros, cursos, e sites mencionados durante o podcast. É um ótimo podcast para quem está aprendendo sobre aprendizado de máquina, podendo ser útil para iniciantes, entusiastas, ou para alguém que está procurando se aprofundar ainda mais no tópico. Desde 2021 o show está sendo renovado para atualizar o conteúdo.</description>
     </item>
     
     <item>
@@ -96,7 +105,7 @@ Eu comecei olhando as cinco primeiras observações do banco de dados.</descript
       <guid>https://devmedeiros.com/pt/post/2021-11-07-seaborn-package-guide/</guid>
       <description>Introdução Eu estou aprendendo visualização de dados no Python e eu me vejo como alguém que aprende fazendo, por isso eu vou fazer alguns gráficos simples usando o pacote seaborn que poderão ser utilizados como referência sempre que precisar refrescar a memória.
 Primeiramente é necessários que os pacotes estejam propriamente importados, após isso eu carrego o banco de dados iris.
-import pandas as pd import seaborn as sns import matplotlib.pyplot as plt  url = &amp;#34;https://git.</description>
+import pandas as pd import seaborn as sns import matplotlib.pyplot as plt url = &amp;#34;https://git.</description>
     </item>
     
     <item>
@@ -106,8 +115,8 @@ import pandas as pd import seaborn as sns import matplotlib.pyplot as plt  url =
       
       <guid>https://devmedeiros.com/pt/post/2021-10-27-data-table/</guid>
       <description>O pacote data.table é um dos pacotes de manipulação de dados mais rápido, atualmente ele é mais rápido até que o pandas e dplyr 1. A sintaxe de um data.table é dt[i, j, by], em que:
- i é utilizado para amostrar linhas j é utilizado para amostrar colunas by é utilizado para amostrar grupos, igual ao GROUP BY do SQL  Você pode ler em voz alta como2:
- Pegue dt, amostra/reordene as linhas usando i, então calcule j, agrupando por by.</description>
+i é utilizado para amostrar linhas j é utilizado para amostrar colunas by é utilizado para amostrar grupos, igual ao GROUP BY do SQL Você pode ler em voz alta como2:
+Pegue dt, amostra/reordene as linhas usando i, então calcule j, agrupando por by.</description>
     </item>
     
     <item>
