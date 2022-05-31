@@ -2,7 +2,7 @@
 title: Data Science Challenge - Churn Rate
 date: 2022-05-30 16:49:00 -0300
 categories: [Projects]
-tags: [storytelling, python, data analysis, machine learning]
+tags: [storytelling, python, data analysis, machine learning, neural network]
 showtoc: true
 ---
 
