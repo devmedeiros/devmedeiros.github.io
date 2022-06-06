@@ -105,6 +105,7 @@ params:
     imageWidth: 120
     imageHeight: 120
     imageTitle: Jaqueline Medeiros
+    images: ["cover.png"]
     buttons:
       - name: Blog
         url: categories/blog/
