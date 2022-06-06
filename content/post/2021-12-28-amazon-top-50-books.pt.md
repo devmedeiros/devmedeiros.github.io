@@ -5,7 +5,7 @@ categories: [Blog]
 tags: [python, visualização de dados, análise de dados]
 ---
 
-Recentemente eu terminei um curso na Alura chamado _Python para Data Science_ e eu quero colocar o que eu aprendi em prática, para isso eu vou fazer uma análise descritiva nesse banco de dados [**Amazon Top 50 Bestselling Books 2009 - 2019**](https://www.kaggle.com/sootersaalu/amazon-top-50-bestselling-books-2009-2019). Nele há 550 livros e eles foram categorizados como **fiction** (ficção) e **non-fiction** (não ficção) pelo Goodreads. Todo o código pode ser visto [aqui](https://github.com/devmedeiros/Notebooks/blob/main/descriptive-analysis-of-amazon-top-50-bestsellers.ipynb).
+Recentemente eu terminei um curso na Alura chamado _Python para Data Science_ e eu quero colocar o que eu aprendi em prática, para isso eu vou fazer uma análise descritiva nesse banco de dados [**Amazon Top 50 Bestselling Books 2009 - 2019**](https://www.kaggle.com/sootersaalu/amazon-top-50-bestselling-books-2009-2019). Nele há 550 livros e eles foram categorizados como **fiction** (ficção) e **non-fiction** (não ficção) pelo Goodreads. Todo o código pode ser visto [aqui](https://gist.github.com/devmedeiros/12813bebd78f7662966096e963ed0aa9).
 
 Eu comecei olhando as cinco primeiras observações do banco de dados.
 

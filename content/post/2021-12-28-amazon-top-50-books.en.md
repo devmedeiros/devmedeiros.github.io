@@ -5,7 +5,7 @@ categories: [Blog]
 tags: [python, data visualization, data analysis]
 ---
 
-Recently I finished an Alura course named _Python for Data Science_ and I want to put what I learned into practice, to do so I'll make a descriptive analysis on this dataset [**Amazon Top 50 Bestselling Books 2009 - 2019**](https://www.kaggle.com/sootersaalu/amazon-top-50-bestselling-books-2009-2019). It contains 550 books and the data has been categorized as fiction and non-fiction by Goodreads. All of the code can be found [here](https://github.com/devmedeiros/Notebooks/blob/main/descriptive-analysis-of-amazon-top-50-bestsellers.ipynb).
+Recently I finished an Alura course named _Python for Data Science_ and I want to put what I learned into practice, to do so I'll make a descriptive analysis on this dataset [**Amazon Top 50 Bestselling Books 2009 - 2019**](https://www.kaggle.com/sootersaalu/amazon-top-50-bestselling-books-2009-2019). It contains 550 books and the data has been categorized as fiction and non-fiction by Goodreads. All of the code can be found [here](https://gist.github.com/devmedeiros/12813bebd78f7662966096e963ed0aa9).
 
 I started checking the first five observations from the dataset.
 
