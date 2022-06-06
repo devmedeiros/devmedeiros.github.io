@@ -65,7 +65,7 @@ params:
   keywords: [Blog, Portfolio, Data Science]
   author: Jaqueline Souza Medeiros
   # author: ["Me", "You"] # multiple authors
-  images: ["papermod-cover.png"]
+  images: ["cover.png"]
   DateFormat: "January 2, 2006"
   defaultTheme: light # dark, light
   disableThemeToggle: false
