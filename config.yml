@@ -127,10 +127,10 @@ params:
     google:
       SiteVerificationTag: "FlWzcRu5is8Vlu9fsp78s1CPMcmQLd1DLVKVMFonbxY"
 
-  cover:
-    hidden: true # hide everywhere but not in structured data
-    hiddenInList: true # hide on list pages and home
-    hiddenInSingle: true # hide on single page
+#  cover:
+#    hidden: true # hide everywhere but not in structured data
+#    hiddenInList: true # hide on list pages and home
+#    hiddenInSingle: true # hide on single page
 
   editPost:
     URL: "https://github.com/devmedeiros.github.io/content"
