@@ -16,8 +16,9 @@
       <pubDate>Mon, 30 May 2022 16:49:00 -0300</pubDate>
       
       <guid>https://devmedeiros.com/post/2022-05-30-churn-rate-challenge/</guid>
-      <description>I was challenged to take the role of a new data scientist hired at Alura Voz. This made-up company is a telecommunication company and it needs to reduce the Churn Rate.
-The challenge is divided into four weeks. For the first week, the goal was to clean the dataset provided by an API. Next, we need to identify clients who are more likely to leave the company, using data exploration and analysis.</description>
+      <description>&lt;p&gt;&lt;strong&gt;Tools used:&lt;/strong&gt; Python, seaborn, scikit-learn, imbalanced-learn&lt;/p&gt;
+&lt;p&gt;&lt;strong&gt;Category:&lt;/strong&gt; Data Analysis, Machine Learning&lt;/p&gt;
+&lt;hr&gt;</description>
     </item>
     
     <item>

@@ -16,8 +16,9 @@
       <pubDate>Mon, 30 May 2022 16:49:00 -0300</pubDate>
       
       <guid>https://devmedeiros.com/pt/post/2022-05-30-churn-rate-challenge/</guid>
-      <description>Eu fui desafiada a tomar o papel da nova cientista de dados na Alura Voz. Essa empresa fictícia é do ramo de telecomunicação e precisa reduzir sua taxa de evasão de clientes.
-Esse desafio é dividido em quatro semanas. Para a primeira semana o objetivo é tratar o banco de dados proveniente de uma API. Em seguida, precisamos identificar clientes que são mais propensos a deixar a empresa, usando exploração e análise de dados.</description>
+      <description>&lt;p&gt;&lt;strong&gt;Ferramentas utilizadas:&lt;/strong&gt; Python, seaborn, scikit-learn, imbalanced-learn&lt;/p&gt;
+&lt;p&gt;&lt;strong&gt;Categoria:&lt;/strong&gt; Análise de Dados, Aprendizado de Máquina&lt;/p&gt;
+&lt;hr&gt;</description>
     </item>
     
     <item>
@@ -26,7 +27,7 @@ Esse desafio é dividido em quatro semanas. Para a primeira semana o objetivo é
       <pubDate>Tue, 08 Mar 2022 13:34:00 -0300</pubDate>
       
       <guid>https://devmedeiros.com/pt/post/2022-03-08-alura-skimo-powerbi/</guid>
-      <description>&lt;!DOCTYPE html&gt; Tools used: Power BI, Figma, SQL
+      <description>Tools used: Power BI, Figma, SQL
 Category: Dashboard
 Este dashboard é o último de três do segundo desafio Alura Challenge BI.
 A Alura Skimo está interessada em analisar seus dados de vendas, para ajudar com isso eu fiz este dashboard. Ele é composto de três páginas. A primeira apresenta um resumo com todas as principais medidas que encontramos no painel, filtrado para mostrar o mês mais recente. Nesta primeira página, você pode parar o cursor do mouse sobre uma medida e isso fará com que apareça um pequeno gráfico com a série histórica com uma linha de tendência.</description>
@@ -38,7 +39,7 @@ A Alura Skimo está interessada em analisar seus dados de vendas, para ajudar co
       <pubDate>Sat, 26 Feb 2022 12:16:00 -0300</pubDate>
       
       <guid>https://devmedeiros.com/pt/post/2022-02-26-alura-food-powerbi/</guid>
-      <description>&lt;!DOCTYPE html&gt; Tools used: Power BI, Google Sheets, Figma
+      <description>Tools used: Power BI, Google Sheets, Figma
 Category: Dashboard
 Esse painel é o segundo de três que estou fazendo para o segundo desafio Alura Challenge BI.
 A Alura Food está interessada em expandir seus negócios para o mercado indiano. Para isso, a empresa pediu para calcular medidas que os ajudem a tomarem uma melhor decisão.
@@ -51,7 +52,7 @@ Primeiramente, eu fiz uma junção dos bancos de dados e limpei eles através do
       <pubDate>Thu, 17 Feb 2022 18:42:00 -0300</pubDate>
       
       <guid>https://devmedeiros.com/pt/post/2022-02-17-alura-films-powerbi/</guid>
-      <description>&lt;!DOCTYPE html&gt; Ferramentas utilizadas: Power BI, Planilhas Google, Figma
+      <description>Ferramentas utilizadas: Power BI, Planilhas Google, Figma
 Categoria: Dashboard
 Este painel é o primeiro de três que eu estarei fazendo nas próximas semanas como parte do segundo desafio Alura Challenge BI.
 O objetivo deste painel é ajudar a encontrar a melhor seleção para um filme que será produzido.

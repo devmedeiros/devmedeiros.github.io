@@ -16,7 +16,7 @@
       <pubDate>Tue, 08 Mar 2022 13:34:00 -0300</pubDate>
       
       <guid>https://devmedeiros.com/pt/post/2022-03-08-alura-skimo-powerbi/</guid>
-      <description>&lt;!DOCTYPE html&gt; Tools used: Power BI, Figma, SQL
+      <description>Tools used: Power BI, Figma, SQL
 Category: Dashboard
 Este dashboard é o último de três do segundo desafio Alura Challenge BI.
 A Alura Skimo está interessada em analisar seus dados de vendas, para ajudar com isso eu fiz este dashboard. Ele é composto de três páginas. A primeira apresenta um resumo com todas as principais medidas que encontramos no painel, filtrado para mostrar o mês mais recente. Nesta primeira página, você pode parar o cursor do mouse sobre uma medida e isso fará com que apareça um pequeno gráfico com a série histórica com uma linha de tendência.</description>
