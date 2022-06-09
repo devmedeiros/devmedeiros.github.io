@@ -21,3 +21,12 @@ Hence, any individual or group of individuals can reuse and modify the material 
 - Credit is given to the author by mentioning their name (Jaqueline Medeiros) and linking to the original content.
 
 - The new material must be distributed under the same license.
+
+## Favicon
+
+This site favicon was generated using the following graphics from Twitter Twemoji:
+
+- Graphics Title: 1f4ca.svg
+- Graphics Author: Copyright 2020 Twitter, Inc and other contributors (https://github.com/twitter/twemoji)
+- Graphics Source: https://github.com/twitter/twemoji/blob/master/assets/svg/1f4ca.svg
+- Graphics License: CC-BY 4.0 (https://creativecommons.org/licenses/by/4.0/)
