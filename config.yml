@@ -8,7 +8,7 @@ buildDrafts: false
 buildFuture: false
 buildExpired: false
 
-googleAnalytics: G-D4W6Y2T4WX
+googleAnalytics: #G-D4W6Y2T4WX
 
 minify:
   disableXML: true
@@ -66,7 +66,7 @@ params:
   author: Jaqueline Souza Medeiros
   # author: ["Me", "You"] # multiple authors
   images: ["cover.png"]
-  DateFormat: "January 2, 2006"
+  DateFormat: 
   defaultTheme: light # dark, light
   disableThemeToggle: false
 
@@ -74,7 +74,7 @@ params:
   ShowShareButtons: true
   ShowPostNavLinks: true
   ShowBreadCrumbs: true
-  ShowCodeCopyButtons: false
+  ShowCodeCopyButtons: true
   disableSpecial1stPost: false
   disableScrollToTop: false
   comments: false
@@ -125,7 +125,7 @@ params:
 
   analytics:
     google:
-      SiteVerificationTag: "FlWzcRu5is8Vlu9fsp78s1CPMcmQLd1DLVKVMFonbxY"
+      SiteVerificationTag: #"FlWzcRu5is8Vlu9fsp78s1CPMcmQLd1DLVKVMFonbxY"
 
 #  cover:
 #    hidden: true # hide everywhere but not in structured data
