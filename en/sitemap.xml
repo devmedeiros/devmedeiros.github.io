@@ -537,5 +537,7 @@
                 hreflang="en"
                 href="https://devmedeiros.com/search/"
                 />
+  </url><url>
+    <loc>https://devmedeiros.com/terms/</loc>
   </url>
 </urlset>

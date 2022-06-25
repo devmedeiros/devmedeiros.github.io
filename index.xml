@@ -183,5 +183,14 @@ Fake &amp;lt;- read_csv(&amp;#39;~/fakenews/Fake.csv&amp;#39;) True &amp;lt;- re
     
     
     
+    <item>
+      <title>Terms and policies</title>
+      <link>https://devmedeiros.com/terms/</link>
+      <pubDate>Mon, 01 Jan 0001 00:00:00 +0000</pubDate>
+      
+      <guid>https://devmedeiros.com/terms/</guid>
+      <description>terms</description>
+    </item>
+    
   </channel>
 </rss>
