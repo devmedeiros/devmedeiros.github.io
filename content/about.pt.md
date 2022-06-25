@@ -6,9 +6,9 @@ layout: "single" # is necessary
 summary: "about"
 ---
 
-Oi! Meu nome é Jaqueline Medeiros e eu sou uma Analista de Dados. Eu tenho me interessado em engenharia de dados, participado em projetos envolvendo esse ramo da ciência de dados. Atualmente estou trabalhando com Apache Hop para tornar o tratamento dos dados automático.
+Oi! :wave: Meu nome é Jaqueline Medeiros e eu sou uma Analista de Dados. Eu sempre gostei de aprender coisas novas e explorar novas possibilidades e este blog é um canal no qual eu crio e descubro coisas novas relacionadas a Ciência de Dados.
 
-Apesar de querer focar em engenharia de dados, eu ainda estou interessada em aprendizado de máquina, análise de dados, e outras coisas sob o domínio de ciência de dados. Então eu postarei sobre diversos assuntos de ciência de dados.
+Eu quero escrever posts que possam ser lidos por pessoas que não possuem um background técnico, mas também quero mostrar e falar sobre os aspectos de programação do que estou aprendendo, então você irá encontrar um pouco de tudo aqui.
 
 Você pode me encontrar em:
 

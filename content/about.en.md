@@ -6,9 +6,9 @@ layout: "single" # is necessary
 summary: "about"
 ---
 
-Hi! My name is Jaqueline Medeiros and I am a Data Analyst from Brazil. I've been interested in data engineering, participating in projects involving this branch of data science. I'm currently working with Apache Hop to make data wrangling automatic.
+Hi! :wave: My name is Jaqueline Medeiros and I'm a Data Analyst from Brazil. I've always liked learning new things and exploring new possibilities and this blog is an outlet for me to create and discover new things related to Data Science.
 
-Even though I want to focus on data engineering, I'm still interested in machine learning, data analysis, and other things under the data science umbrella. So I'll be posting about data science in general.
+I want to write posts that people can read without a technical background, but I also want to showcase and talk about the coding aspects of what I'm currently learning, so you'll be able to find a little bit of everything here.
 
 You can find me at:
 

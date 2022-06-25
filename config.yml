@@ -7,6 +7,7 @@ enableRobotsTXT: true
 buildDrafts: false
 buildFuture: false
 buildExpired: false
+enableEmoji: true
 
 googleAnalytics: #G-D4W6Y2T4WX
 
@@ -165,6 +166,8 @@ menu:
       name: search
       url: /search/
       weight: 30
+
+#copyright: &copy; 2021 - 2022 [Dev_Medeiros]({{< ref "/terms" >}})
 
 # Read: https://github.com/adityatelange/hugo-PaperMod/wiki/FAQs#using-hugos-syntax-highlighter-chroma
 # pygmentsUseClasses: true
