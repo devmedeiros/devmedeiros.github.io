@@ -54,5 +54,15 @@ library(readr) library(dplyr) library(tidytext) library(tokenizers) library(stop
 Fake &amp;lt;- read_csv(&amp;#39;~/fakenews/Fake.csv&amp;#39;) True &amp;lt;- read.csv(&amp;#39;~/fakenews/True.csv&amp;#39;) I want to merge the two datasets, but first we need to create a new column that will tell me where the data came from.</description>
     </item>
     
+    <item>
+      <title>Python Guide for R Users</title>
+      <link>https://devmedeiros.com/post/python-guide-r-users/</link>
+      <pubDate>Mon, 01 Jan 0001 00:00:00 +0000</pubDate>
+      
+      <guid>https://devmedeiros.com/post/python-guide-r-users/</guid>
+      <description>Python Guide for R Users is an upcoming project where I&amp;rsquo;m writing a guide to Python to help people who already know how to program in R or are just familiar with it and are learning/transitioning to Python.
+The project is going to be available here. Feel free to contribute to the project if you notice anything missing or incorrect.</description>
+    </item>
+    
   </channel>
 </rss>

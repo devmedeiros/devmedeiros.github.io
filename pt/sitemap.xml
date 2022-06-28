@@ -8,6 +8,19 @@
     <loc>https://devmedeiros.com/pt/tags/aprendizado-de-m%C3%A1quina/</loc>
     <lastmod>2022-06-09T18:08:00-03:00</lastmod>
   </url><url>
+    <loc>https://devmedeiros.com/pt/categories/blog/</loc>
+    <lastmod>2022-06-09T18:08:00-03:00</lastmod>
+    <xhtml:link
+                rel="alternate"
+                hreflang="en"
+                href="https://devmedeiros.com/categories/blog/"
+                />
+    <xhtml:link
+                rel="alternate"
+                hreflang="pt"
+                href="https://devmedeiros.com/pt/categories/blog/"
+                />
+  </url><url>
     <loc>https://devmedeiros.com/pt/categories/</loc>
     <lastmod>2022-06-09T18:08:00-03:00</lastmod>
     <xhtml:link
@@ -60,19 +73,6 @@
                 href="https://devmedeiros.com/pt/post/"
                 />
   </url><url>
-    <loc>https://devmedeiros.com/pt/categories/projects/</loc>
-    <lastmod>2022-06-09T18:08:00-03:00</lastmod>
-    <xhtml:link
-                rel="alternate"
-                hreflang="en"
-                href="https://devmedeiros.com/categories/projects/"
-                />
-    <xhtml:link
-                rel="alternate"
-                hreflang="pt"
-                href="https://devmedeiros.com/pt/categories/projects/"
-                />
-  </url><url>
     <loc>https://devmedeiros.com/pt/tags/python/</loc>
     <lastmod>2022-06-09T18:08:00-03:00</lastmod>
     <xhtml:link
@@ -113,19 +113,6 @@
                 rel="alternate"
                 hreflang="pt"
                 href="https://devmedeiros.com/pt/tags/"
-                />
-  </url><url>
-    <loc>https://devmedeiros.com/pt/categories/blog/</loc>
-    <lastmod>2022-04-29T11:14:00-03:00</lastmod>
-    <xhtml:link
-                rel="alternate"
-                hreflang="en"
-                href="https://devmedeiros.com/categories/blog/"
-                />
-    <xhtml:link
-                rel="alternate"
-                hreflang="pt"
-                href="https://devmedeiros.com/pt/categories/blog/"
                 />
   </url><url>
     <loc>https://devmedeiros.com/pt/tags/business-intelligence/</loc>

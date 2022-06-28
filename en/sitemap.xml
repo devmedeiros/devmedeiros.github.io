@@ -98,19 +98,6 @@
     <loc>https://devmedeiros.com/tags/neural-network/</loc>
     <lastmod>2022-06-09T18:08:00-03:00</lastmod>
   </url><url>
-    <loc>https://devmedeiros.com/categories/projects/</loc>
-    <lastmod>2022-06-09T18:08:00-03:00</lastmod>
-    <xhtml:link
-                rel="alternate"
-                hreflang="pt"
-                href="https://devmedeiros.com/pt/categories/projects/"
-                />
-    <xhtml:link
-                rel="alternate"
-                hreflang="en"
-                href="https://devmedeiros.com/categories/projects/"
-                />
-  </url><url>
     <loc>https://devmedeiros.com/tags/python/</loc>
     <lastmod>2022-06-09T18:08:00-03:00</lastmod>
     <xhtml:link
@@ -525,6 +512,10 @@
                 hreflang="en"
                 href="https://devmedeiros.com/archives/"
                 />
+  </url><url>
+    <loc>https://devmedeiros.com/categories/projects/</loc>
+  </url><url>
+    <loc>https://devmedeiros.com/post/python-guide-r-users/</loc>
   </url><url>
     <loc>https://devmedeiros.com/search/</loc>
     <xhtml:link

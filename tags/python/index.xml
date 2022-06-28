@@ -42,5 +42,15 @@ At first is required that the packages are properly imported, after that I load 
 import pandas as pd import seaborn as sns import matplotlib.pyplot as plt url = &amp;#34;https://git.</description>
     </item>
     
+    <item>
+      <title>Python Guide for R Users</title>
+      <link>https://devmedeiros.com/post/python-guide-r-users/</link>
+      <pubDate>Mon, 01 Jan 0001 00:00:00 +0000</pubDate>
+      
+      <guid>https://devmedeiros.com/post/python-guide-r-users/</guid>
+      <description>Python Guide for R Users is an upcoming project where I&amp;rsquo;m writing a guide to Python to help people who already know how to program in R or are just familiar with it and are learning/transitioning to Python.
+The project is going to be available here. Feel free to contribute to the project if you notice anything missing or incorrect.</description>
+    </item>
+    
   </channel>
 </rss>
