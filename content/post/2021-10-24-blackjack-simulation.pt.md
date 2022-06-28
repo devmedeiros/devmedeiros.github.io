@@ -1,7 +1,7 @@
 ---
 title: Simulação de 21
 date: 2021-10-24 20:43:00 -0300
-categories: [Projects]
+categories: [Blog]
 tags: [R, simulação, shiny, ggplot]
 ---
 

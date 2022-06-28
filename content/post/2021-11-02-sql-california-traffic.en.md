@@ -1,7 +1,7 @@
 ---
 title: Have COVID Impacted California Traffic Collisions?
 date: 2021-11-02 17:14:00 -0300
-categories: [Projects]
+categories: [Blog]
 tags: [SQL, R, data analysis]
 ---
 

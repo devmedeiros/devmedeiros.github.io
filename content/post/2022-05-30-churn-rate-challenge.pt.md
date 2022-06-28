@@ -2,7 +2,7 @@
 title: Data Science Challenge - Churn Rate
 date: 2022-05-30 16:49:00 -0300
 lastmod: 2022-06-09 18:08:00 -0300
-categories: [Projects]
+categories: [Blog]
 tags: [storytelling, python, análise de dados, aprendizado de máquina, rede neural]
 showtoc: true
 ---
