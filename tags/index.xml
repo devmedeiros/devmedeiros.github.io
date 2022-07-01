@@ -9,7 +9,52 @@
       <link>https://devmedeiros.com/cover.png</link>
     </image>
     <generator>Hugo -- gohugo.io</generator>
-    <lastBuildDate>Tue, 14 Jun 2022 19:23:00 -0300</lastBuildDate><atom:link href="https://devmedeiros.com/tags/index.xml" rel="self" type="application/rss+xml" />
+    <lastBuildDate>Thu, 30 Jun 2022 19:23:00 -0300</lastBuildDate><atom:link href="https://devmedeiros.com/tags/index.xml" rel="self" type="application/rss+xml" />
+    <item>
+      <title>business intelligence</title>
+      <link>https://devmedeiros.com/tags/business-intelligence/</link>
+      <pubDate>Thu, 30 Jun 2022 19:23:00 -0300</pubDate>
+      
+      <guid>https://devmedeiros.com/tags/business-intelligence/</guid>
+      <description></description>
+    </item>
+    
+    <item>
+      <title>dashboard</title>
+      <link>https://devmedeiros.com/tags/dashboard/</link>
+      <pubDate>Thu, 30 Jun 2022 19:23:00 -0300</pubDate>
+      
+      <guid>https://devmedeiros.com/tags/dashboard/</guid>
+      <description></description>
+    </item>
+    
+    <item>
+      <title>data visualization</title>
+      <link>https://devmedeiros.com/tags/data-visualization/</link>
+      <pubDate>Thu, 30 Jun 2022 19:23:00 -0300</pubDate>
+      
+      <guid>https://devmedeiros.com/tags/data-visualization/</guid>
+      <description></description>
+    </item>
+    
+    <item>
+      <title>powerbi</title>
+      <link>https://devmedeiros.com/tags/powerbi/</link>
+      <pubDate>Thu, 30 Jun 2022 19:23:00 -0300</pubDate>
+      
+      <guid>https://devmedeiros.com/tags/powerbi/</guid>
+      <description></description>
+    </item>
+    
+    <item>
+      <title>SQL</title>
+      <link>https://devmedeiros.com/tags/sql/</link>
+      <pubDate>Thu, 30 Jun 2022 19:23:00 -0300</pubDate>
+      
+      <guid>https://devmedeiros.com/tags/sql/</guid>
+      <description></description>
+    </item>
+    
     <item>
       <title>feature selection</title>
       <link>https://devmedeiros.com/tags/feature-selection/</link>
@@ -74,47 +119,11 @@
     </item>
     
     <item>
-      <title>business intelligence</title>
-      <link>https://devmedeiros.com/tags/business-intelligence/</link>
-      <pubDate>Fri, 29 Apr 2022 11:14:00 -0300</pubDate>
-      
-      <guid>https://devmedeiros.com/tags/business-intelligence/</guid>
-      <description></description>
-    </item>
-    
-    <item>
-      <title>dashboard</title>
-      <link>https://devmedeiros.com/tags/dashboard/</link>
-      <pubDate>Fri, 29 Apr 2022 11:14:00 -0300</pubDate>
-      
-      <guid>https://devmedeiros.com/tags/dashboard/</guid>
-      <description></description>
-    </item>
-    
-    <item>
-      <title>data visualization</title>
-      <link>https://devmedeiros.com/tags/data-visualization/</link>
-      <pubDate>Fri, 29 Apr 2022 11:14:00 -0300</pubDate>
-      
-      <guid>https://devmedeiros.com/tags/data-visualization/</guid>
-      <description></description>
-    </item>
-    
-    <item>
       <title>figma</title>
       <link>https://devmedeiros.com/tags/figma/</link>
       <pubDate>Fri, 29 Apr 2022 11:14:00 -0300</pubDate>
       
       <guid>https://devmedeiros.com/tags/figma/</guid>
-      <description></description>
-    </item>
-    
-    <item>
-      <title>powerbi</title>
-      <link>https://devmedeiros.com/tags/powerbi/</link>
-      <pubDate>Fri, 29 Apr 2022 11:14:00 -0300</pubDate>
-      
-      <guid>https://devmedeiros.com/tags/powerbi/</guid>
       <description></description>
     </item>
     
@@ -151,15 +160,6 @@
       <pubDate>Tue, 12 Apr 2022 17:58:00 -0300</pubDate>
       
       <guid>https://devmedeiros.com/tags/statistic/</guid>
-      <description></description>
-    </item>
-    
-    <item>
-      <title>SQL</title>
-      <link>https://devmedeiros.com/tags/sql/</link>
-      <pubDate>Tue, 08 Mar 2022 13:34:00 -0300</pubDate>
-      
-      <guid>https://devmedeiros.com/tags/sql/</guid>
       <description></description>
     </item>
     

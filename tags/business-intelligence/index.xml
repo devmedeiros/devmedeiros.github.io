@@ -9,7 +9,17 @@
       <link>https://devmedeiros.com/cover.png</link>
     </image>
     <generator>Hugo -- gohugo.io</generator>
-    <lastBuildDate>Fri, 29 Apr 2022 11:14:00 -0300</lastBuildDate><atom:link href="https://devmedeiros.com/tags/business-intelligence/index.xml" rel="self" type="application/rss+xml" />
+    <lastBuildDate>Thu, 30 Jun 2022 19:23:00 -0300</lastBuildDate><atom:link href="https://devmedeiros.com/tags/business-intelligence/index.xml" rel="self" type="application/rss+xml" />
+    <item>
+      <title>Alura Challenge BI 2</title>
+      <link>https://devmedeiros.com/post/alura-challenge-bi-2/</link>
+      <pubDate>Thu, 30 Jun 2022 19:23:00 -0300</pubDate>
+      
+      <guid>https://devmedeiros.com/post/alura-challenge-bi-2/</guid>
+      <description>The Alura Challenge BI 2 was a four-week event where we&amp;rsquo;re challenged to make Business Intelligence dashboards according to the request of three made-up companies. During the event I made this three dashboard using Power BI, you can look at the source file of all dashboards at my repo.
+Alura Films Alura Food Alura Skimó The objective of this dashboard is to help find the best selection for an upcoming movie.</description>
+    </item>
+    
     <item>
       <title>UX/UI for Business Intelligence Dashboards</title>
       <link>https://devmedeiros.com/post/2022-04-29-ux-power-bi-dashboards/</link>

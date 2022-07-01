@@ -9,7 +9,17 @@
       <link>https://devmedeiros.com/cover.png</link>
     </image>
     <generator>Hugo -- gohugo.io</generator>
-    <lastBuildDate>Mon, 30 May 2022 16:49:00 -0300</lastBuildDate><atom:link href="https://devmedeiros.com/pt/index.xml" rel="self" type="application/rss+xml" />
+    <lastBuildDate>Thu, 30 Jun 2022 19:23:00 -0300</lastBuildDate><atom:link href="https://devmedeiros.com/pt/index.xml" rel="self" type="application/rss+xml" />
+    <item>
+      <title>Alura Challenge BI 2</title>
+      <link>https://devmedeiros.com/pt/post/alura-challenge-bi-2/</link>
+      <pubDate>Thu, 30 Jun 2022 19:23:00 -0300</pubDate>
+      
+      <guid>https://devmedeiros.com/pt/post/alura-challenge-bi-2/</guid>
+      <description>O Alura Challenge BI 2 foi um evento que durou quatro semanas, no qual nós fomos desafiados a fazer um painél de Business Intelligence com base nos requisitos de três empresas fictícias. Durante o evento eu fiz esses três painés usando o Power BI, você pode ver também os arquivos fontes dos painéis no meu repositório.
+Alura Films Alura Food Alura Skimó O objetivo deste painel é ajudar a encontrar a melhor seleção para um filme que será produzido.</description>
+    </item>
+    
     <item>
       <title>Data Science Challenge - Churn Rate</title>
       <link>https://devmedeiros.com/pt/post/2022-05-30-churn-rate-challenge/</link>
@@ -39,44 +49,6 @@ UI, do inglês, significa Interface do Usuário. É tudo aquilo que está envolv
       <guid>https://devmedeiros.com/pt/post/2022-04-12-comprehending-the-p-value/</guid>
       <description>O que é o p-valor? Em estatística temos os testes de hipóteses, que são feitos para tomar uma decisão, de rejeitar ou não rejeitar a hipótese nula. Alguns exemplos de teste de hipótese são: Neyman-Pearson, Shapiro-Wilk, T de Student, entre outros.
 Todos testes de hipóteses possuem uma estatística de teste específico dele. E essa estatística é utilizada para avaliar o teste, mas essa tarefa pode ser cansativa até com o uso de computadores, pois a maioria dos softwares não devolvem como resposta a estatística de comparação, apenas a estatística amostral.</description>
-    </item>
-    
-    <item>
-      <title>Alura Skimo - Power BI Dashboard</title>
-      <link>https://devmedeiros.com/pt/post/2022-03-08-alura-skimo-powerbi/</link>
-      <pubDate>Tue, 08 Mar 2022 13:34:00 -0300</pubDate>
-      
-      <guid>https://devmedeiros.com/pt/post/2022-03-08-alura-skimo-powerbi/</guid>
-      <description>Tools used: Power BI, Figma, SQL
-Category: Dashboard
-Este dashboard é o último de três do segundo desafio Alura Challenge BI.
-A Alura Skimo está interessada em analisar seus dados de vendas, para ajudar com isso eu fiz este dashboard. Ele é composto de três páginas. A primeira apresenta um resumo com todas as principais medidas que encontramos no painel, filtrado para mostrar o mês mais recente. Nesta primeira página, você pode parar o cursor do mouse sobre uma medida e isso fará com que apareça um pequeno gráfico com a série histórica com uma linha de tendência.</description>
-    </item>
-    
-    <item>
-      <title>Alura Food - Power BI Dashboard</title>
-      <link>https://devmedeiros.com/pt/post/2022-02-26-alura-food-powerbi/</link>
-      <pubDate>Sat, 26 Feb 2022 12:16:00 -0300</pubDate>
-      
-      <guid>https://devmedeiros.com/pt/post/2022-02-26-alura-food-powerbi/</guid>
-      <description>Tools used: Power BI, Google Sheets, Figma
-Category: Dashboard
-Esse painel é o segundo de três que estou fazendo para o segundo desafio Alura Challenge BI.
-A Alura Food está interessada em expandir seus negócios para o mercado indiano. Para isso, a empresa pediu para calcular medidas que os ajudem a tomarem uma melhor decisão.
-Primeiramente, eu fiz uma junção dos bancos de dados e limpei eles através do Power BI, traduzi alguns dos textos de inglês para português através da Planilhas Google, e converti o preço das refeições da sua moeda original para o real (moeda brasileira).</description>
-    </item>
-    
-    <item>
-      <title>Alura Films - Power BI Dashboard</title>
-      <link>https://devmedeiros.com/pt/post/2022-02-17-alura-films-powerbi/</link>
-      <pubDate>Thu, 17 Feb 2022 18:42:00 -0300</pubDate>
-      
-      <guid>https://devmedeiros.com/pt/post/2022-02-17-alura-films-powerbi/</guid>
-      <description>Ferramentas utilizadas: Power BI, Planilhas Google, Figma
-Categoria: Dashboard
-Este painel é o primeiro de três que eu estarei fazendo nas próximas semanas como parte do segundo desafio Alura Challenge BI.
-O objetivo deste painel é ajudar a encontrar a melhor seleção para um filme que será produzido.
-Com isso em mente, eu explorei na primeira aba um pequeno resumo sobre os filmes no banco de dados, com ela você pode ter uma ideia geral dos nossos dados.</description>
     </item>
     
     <item>

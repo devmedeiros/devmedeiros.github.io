@@ -9,7 +9,17 @@
       <link>https://devmedeiros.com/cover.png</link>
     </image>
     <generator>Hugo -- gohugo.io</generator>
-    <lastBuildDate>Fri, 29 Apr 2022 11:14:00 -0300</lastBuildDate><atom:link href="https://devmedeiros.com/pt/tags/business-intelligence/index.xml" rel="self" type="application/rss+xml" />
+    <lastBuildDate>Thu, 30 Jun 2022 19:23:00 -0300</lastBuildDate><atom:link href="https://devmedeiros.com/pt/tags/business-intelligence/index.xml" rel="self" type="application/rss+xml" />
+    <item>
+      <title>Alura Challenge BI 2</title>
+      <link>https://devmedeiros.com/pt/post/alura-challenge-bi-2/</link>
+      <pubDate>Thu, 30 Jun 2022 19:23:00 -0300</pubDate>
+      
+      <guid>https://devmedeiros.com/pt/post/alura-challenge-bi-2/</guid>
+      <description>O Alura Challenge BI 2 foi um evento que durou quatro semanas, no qual nós fomos desafiados a fazer um painél de Business Intelligence com base nos requisitos de três empresas fictícias. Durante o evento eu fiz esses três painés usando o Power BI, você pode ver também os arquivos fontes dos painéis no meu repositório.
+Alura Films Alura Food Alura Skimó O objetivo deste painel é ajudar a encontrar a melhor seleção para um filme que será produzido.</description>
+    </item>
+    
     <item>
       <title>UX/UI em Dashboards de Business Intelligence</title>
       <link>https://devmedeiros.com/pt/post/2022-04-29-ux-power-bi-dashboards/</link>

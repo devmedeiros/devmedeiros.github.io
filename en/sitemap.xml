@@ -2,8 +2,21 @@
 <urlset xmlns="http://www.sitemaps.org/schemas/sitemap/0.9"
   xmlns:xhtml="http://www.w3.org/1999/xhtml">
   <url>
+    <loc>https://devmedeiros.com/post/alura-challenge-bi-2/</loc>
+    <lastmod>2022-06-30T19:23:00-03:00</lastmod>
+    <xhtml:link
+                rel="alternate"
+                hreflang="pt"
+                href="https://devmedeiros.com/pt/post/alura-challenge-bi-2/"
+                />
+    <xhtml:link
+                rel="alternate"
+                hreflang="en"
+                href="https://devmedeiros.com/post/alura-challenge-bi-2/"
+                />
+  </url><url>
     <loc>https://devmedeiros.com/categories/blog/</loc>
-    <lastmod>2022-06-14T19:23:00-03:00</lastmod>
+    <lastmod>2022-06-30T19:23:00-03:00</lastmod>
     <xhtml:link
                 rel="alternate"
                 hreflang="pt"
@@ -15,8 +28,21 @@
                 href="https://devmedeiros.com/categories/blog/"
                 />
   </url><url>
+    <loc>https://devmedeiros.com/tags/business-intelligence/</loc>
+    <lastmod>2022-06-30T19:23:00-03:00</lastmod>
+    <xhtml:link
+                rel="alternate"
+                hreflang="pt"
+                href="https://devmedeiros.com/pt/tags/business-intelligence/"
+                />
+    <xhtml:link
+                rel="alternate"
+                hreflang="en"
+                href="https://devmedeiros.com/tags/business-intelligence/"
+                />
+  </url><url>
     <loc>https://devmedeiros.com/categories/</loc>
-    <lastmod>2022-06-14T19:23:00-03:00</lastmod>
+    <lastmod>2022-06-30T19:23:00-03:00</lastmod>
     <xhtml:link
                 rel="alternate"
                 hreflang="pt"
@@ -28,8 +54,24 @@
                 href="https://devmedeiros.com/categories/"
                 />
   </url><url>
+    <loc>https://devmedeiros.com/tags/dashboard/</loc>
+    <lastmod>2022-06-30T19:23:00-03:00</lastmod>
+    <xhtml:link
+                rel="alternate"
+                hreflang="pt"
+                href="https://devmedeiros.com/pt/tags/dashboard/"
+                />
+    <xhtml:link
+                rel="alternate"
+                hreflang="en"
+                href="https://devmedeiros.com/tags/dashboard/"
+                />
+  </url><url>
+    <loc>https://devmedeiros.com/tags/data-visualization/</loc>
+    <lastmod>2022-06-30T19:23:00-03:00</lastmod>
+  </url><url>
     <loc>https://devmedeiros.com/</loc>
-    <lastmod>2022-06-14T19:23:00-03:00</lastmod>
+    <lastmod>2022-06-30T19:23:00-03:00</lastmod>
     <xhtml:link
                 rel="alternate"
                 hreflang="pt"
@@ -41,14 +83,8 @@
                 href="https://devmedeiros.com/"
                 />
   </url><url>
-    <loc>https://devmedeiros.com/tags/feature-selection/</loc>
-    <lastmod>2022-06-14T19:23:00-03:00</lastmod>
-  </url><url>
-    <loc>https://devmedeiros.com/post/2022-06-14-feature-selection/</loc>
-    <lastmod>2022-06-14T19:23:00-03:00</lastmod>
-  </url><url>
     <loc>https://devmedeiros.com/post/</loc>
-    <lastmod>2022-06-14T19:23:00-03:00</lastmod>
+    <lastmod>2022-06-30T19:23:00-03:00</lastmod>
     <xhtml:link
                 rel="alternate"
                 hreflang="pt"
@@ -60,11 +96,34 @@
                 href="https://devmedeiros.com/post/"
                 />
   </url><url>
-    <loc>https://devmedeiros.com/tags/scikit-learn/</loc>
-    <lastmod>2022-06-14T19:23:00-03:00</lastmod>
+    <loc>https://devmedeiros.com/tags/powerbi/</loc>
+    <lastmod>2022-06-30T19:23:00-03:00</lastmod>
+    <xhtml:link
+                rel="alternate"
+                hreflang="pt"
+                href="https://devmedeiros.com/pt/tags/powerbi/"
+                />
+    <xhtml:link
+                rel="alternate"
+                hreflang="en"
+                href="https://devmedeiros.com/tags/powerbi/"
+                />
+  </url><url>
+    <loc>https://devmedeiros.com/tags/sql/</loc>
+    <lastmod>2022-06-30T19:23:00-03:00</lastmod>
+    <xhtml:link
+                rel="alternate"
+                hreflang="pt"
+                href="https://devmedeiros.com/pt/tags/sql/"
+                />
+    <xhtml:link
+                rel="alternate"
+                hreflang="en"
+                href="https://devmedeiros.com/tags/sql/"
+                />
   </url><url>
     <loc>https://devmedeiros.com/tags/</loc>
-    <lastmod>2022-06-14T19:23:00-03:00</lastmod>
+    <lastmod>2022-06-30T19:23:00-03:00</lastmod>
     <xhtml:link
                 rel="alternate"
                 hreflang="pt"
@@ -75,6 +134,15 @@
                 hreflang="en"
                 href="https://devmedeiros.com/tags/"
                 />
+  </url><url>
+    <loc>https://devmedeiros.com/tags/feature-selection/</loc>
+    <lastmod>2022-06-14T19:23:00-03:00</lastmod>
+  </url><url>
+    <loc>https://devmedeiros.com/post/2022-06-14-feature-selection/</loc>
+    <lastmod>2022-06-14T19:23:00-03:00</lastmod>
+  </url><url>
+    <loc>https://devmedeiros.com/tags/scikit-learn/</loc>
+    <lastmod>2022-06-14T19:23:00-03:00</lastmod>
   </url><url>
     <loc>https://devmedeiros.com/tags/data-analysis/</loc>
     <lastmod>2022-06-09T18:08:00-03:00</lastmod>
@@ -124,35 +192,6 @@
                 href="https://devmedeiros.com/tags/storytelling/"
                 />
   </url><url>
-    <loc>https://devmedeiros.com/tags/business-intelligence/</loc>
-    <lastmod>2022-04-29T11:14:00-03:00</lastmod>
-    <xhtml:link
-                rel="alternate"
-                hreflang="pt"
-                href="https://devmedeiros.com/pt/tags/business-intelligence/"
-                />
-    <xhtml:link
-                rel="alternate"
-                hreflang="en"
-                href="https://devmedeiros.com/tags/business-intelligence/"
-                />
-  </url><url>
-    <loc>https://devmedeiros.com/tags/dashboard/</loc>
-    <lastmod>2022-04-29T11:14:00-03:00</lastmod>
-    <xhtml:link
-                rel="alternate"
-                hreflang="pt"
-                href="https://devmedeiros.com/pt/tags/dashboard/"
-                />
-    <xhtml:link
-                rel="alternate"
-                hreflang="en"
-                href="https://devmedeiros.com/tags/dashboard/"
-                />
-  </url><url>
-    <loc>https://devmedeiros.com/tags/data-visualization/</loc>
-    <lastmod>2022-04-29T11:14:00-03:00</lastmod>
-  </url><url>
     <loc>https://devmedeiros.com/tags/figma/</loc>
     <lastmod>2022-04-29T11:14:00-03:00</lastmod>
     <xhtml:link
@@ -164,19 +203,6 @@
                 rel="alternate"
                 hreflang="en"
                 href="https://devmedeiros.com/tags/figma/"
-                />
-  </url><url>
-    <loc>https://devmedeiros.com/tags/powerbi/</loc>
-    <lastmod>2022-04-29T11:14:00-03:00</lastmod>
-    <xhtml:link
-                rel="alternate"
-                hreflang="pt"
-                href="https://devmedeiros.com/pt/tags/powerbi/"
-                />
-    <xhtml:link
-                rel="alternate"
-                hreflang="en"
-                href="https://devmedeiros.com/tags/powerbi/"
                 />
   </url><url>
     <loc>https://devmedeiros.com/tags/ux/</loc>
@@ -229,58 +255,6 @@
   </url><url>
     <loc>https://devmedeiros.com/tags/statistic/</loc>
     <lastmod>2022-04-12T17:58:00-03:00</lastmod>
-  </url><url>
-    <loc>https://devmedeiros.com/post/2022-03-08-alura-skimo-powerbi/</loc>
-    <lastmod>2022-03-08T13:34:00-03:00</lastmod>
-    <xhtml:link
-                rel="alternate"
-                hreflang="pt"
-                href="https://devmedeiros.com/pt/post/2022-03-08-alura-skimo-powerbi/"
-                />
-    <xhtml:link
-                rel="alternate"
-                hreflang="en"
-                href="https://devmedeiros.com/post/2022-03-08-alura-skimo-powerbi/"
-                />
-  </url><url>
-    <loc>https://devmedeiros.com/tags/sql/</loc>
-    <lastmod>2022-03-08T13:34:00-03:00</lastmod>
-    <xhtml:link
-                rel="alternate"
-                hreflang="pt"
-                href="https://devmedeiros.com/pt/tags/sql/"
-                />
-    <xhtml:link
-                rel="alternate"
-                hreflang="en"
-                href="https://devmedeiros.com/tags/sql/"
-                />
-  </url><url>
-    <loc>https://devmedeiros.com/post/2022-02-26-alura-food-powerbi/</loc>
-    <lastmod>2022-02-26T12:16:00-03:00</lastmod>
-    <xhtml:link
-                rel="alternate"
-                hreflang="pt"
-                href="https://devmedeiros.com/pt/post/2022-02-26-alura-food-powerbi/"
-                />
-    <xhtml:link
-                rel="alternate"
-                hreflang="en"
-                href="https://devmedeiros.com/post/2022-02-26-alura-food-powerbi/"
-                />
-  </url><url>
-    <loc>https://devmedeiros.com/post/2022-02-17-alura-films-powerbi/</loc>
-    <lastmod>2022-02-17T18:42:00-03:00</lastmod>
-    <xhtml:link
-                rel="alternate"
-                hreflang="pt"
-                href="https://devmedeiros.com/pt/post/2022-02-17-alura-films-powerbi/"
-                />
-    <xhtml:link
-                rel="alternate"
-                hreflang="en"
-                href="https://devmedeiros.com/post/2022-02-17-alura-films-powerbi/"
-                />
   </url><url>
     <loc>https://devmedeiros.com/tags/podcast/</loc>
     <lastmod>2022-01-24T18:15:00-03:00</lastmod>
