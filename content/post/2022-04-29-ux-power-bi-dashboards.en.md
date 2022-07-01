@@ -1,6 +1,7 @@
 ---
 title: UX/UI for Business Intelligence Dashboards
 date: 2022-04-29 11:14:00 -0300
+lastmod: 2022-07-01 16:14:00 -0300
 categories: [Blog]
 tags: [UX, dashboard, powerbi, data visualization, business intelligence, storytelling, figma]
 showtoc: true
@@ -56,7 +57,7 @@ The background of this panel was done completely in Figma, even some of the titl
 
 {{< figure src="https://raw.githubusercontent.com/devmedeiros/Alura-Challenge-BI-2/main/Alura%20Food/Alura%20Food.png" title="Background made in Figma" alt=" In the image you can read the text: Overview of Indian Restaurants Market Dev_Medeiros City Restaurant Accepts Reservations? % of Restaurants with Online Delivery Average Rating Average Price per Person Total Restaurants 5 Cities with the most Restaurants 5 Most Popular Cuisine">}}
 
-You can check out more Power BI Dashboards I made for Alura Challenge: [Alura Films](/post/2022-02-17-alura-films-powerbi), [Alura Skimo](/post/2022-03-08-alura-skimo-powerbi), and [Alura Food](/post/2022-02-26-alura-food-powerbi).
+You can check out more [Power BI Dashboards](/post/alura-challenge-bi-2) I made for Alura Challenge BI.
 
 ## Figures and Icons
 
