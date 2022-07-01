@@ -14,7 +14,9 @@ The content provided is for informational purposes. The posts and projects are m
 
 ## Privacy policy
 
-No personal data is collected at [devmedeiros.com](https://devmedeiros.com/).
+### 🍪 Cookies and Tracking
+
+This website doesn't use cookies to track or identify users, but it does use Google Analytics to track user engagement and use of the website. The report provided by Google Analytics doesn't have any identifying information on visitors. Please read more about [Google's Privacy Policy](https://policies.google.com/privacy).
 
 ## License
 

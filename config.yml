@@ -9,7 +9,7 @@ buildFuture: false
 buildExpired: false
 enableEmoji: true
 
-googleAnalytics: #G-D4W6Y2T4WX
+googleAnalytics: UA-210993640
 
 minify:
   disableXML: true
