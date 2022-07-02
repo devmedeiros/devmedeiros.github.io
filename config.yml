@@ -73,6 +73,7 @@ params:
 
   ShowReadingTime: true
   ShowShareButtons: true
+  ShareButtons: ["twitter", "linkedin", "facebook", "whatsapp", "telegram"]
   ShowPostNavLinks: true
   ShowBreadCrumbs: true
   ShowCodeCopyButtons: true
