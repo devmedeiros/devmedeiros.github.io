@@ -9,7 +9,19 @@
       <link>https://devmedeiros.com/cover.png</link>
     </image>
     <generator>Hugo -- gohugo.io</generator>
-    <lastBuildDate>Thu, 30 Jun 2022 19:23:00 -0300</lastBuildDate><atom:link href="https://devmedeiros.com/post/index.xml" rel="self" type="application/rss+xml" />
+    <lastBuildDate>Sun, 24 Jul 2022 13:06:00 -0300</lastBuildDate><atom:link href="https://devmedeiros.com/post/index.xml" rel="self" type="application/rss+xml" />
+    <item>
+      <title>Cleaning Credit Score Classification Dataset</title>
+      <link>https://devmedeiros.com/post/data-cleaning-credit-score/</link>
+      <pubDate>Sun, 24 Jul 2022 13:06:00 -0300</pubDate>
+      
+      <guid>https://devmedeiros.com/post/data-cleaning-credit-score/</guid>
+      <description>Profession photo created by freepik - freepik.com
+Disclaimer: I&amp;rsquo;ll be talking about how to come up with the python code, if you want to read the actual code please go to this repo.
+Meet the Credit Score Classification Dataset The dataset that we&amp;rsquo;ll clean comes from kaggle, which is the train.csv dataset, but this could be used for the test.csv as well.
+There are 28 columns and 100k rows in this dataset.</description>
+    </item>
+    
     <item>
       <title>Alura Challenge BI 2</title>
       <link>https://devmedeiros.com/post/alura-challenge-bi-2/</link>

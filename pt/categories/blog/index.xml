@@ -9,7 +9,19 @@
       <link>https://devmedeiros.com/cover.png</link>
     </image>
     <generator>Hugo -- gohugo.io</generator>
-    <lastBuildDate>Thu, 30 Jun 2022 19:23:00 -0300</lastBuildDate><atom:link href="https://devmedeiros.com/pt/categories/blog/index.xml" rel="self" type="application/rss+xml" />
+    <lastBuildDate>Sun, 24 Jul 2022 13:06:00 -0300</lastBuildDate><atom:link href="https://devmedeiros.com/pt/categories/blog/index.xml" rel="self" type="application/rss+xml" />
+    <item>
+      <title>Limpando Base de Dados para Classificação de Score de Crédito</title>
+      <link>https://devmedeiros.com/pt/post/data-cleaning-credit-score/</link>
+      <pubDate>Sun, 24 Jul 2022 13:06:00 -0300</pubDate>
+      
+      <guid>https://devmedeiros.com/pt/post/data-cleaning-credit-score/</guid>
+      <description>Profissão foto criada por freepik - freepik.com
+Aviso: Eu estarei falando sobre como chegar no código python, caso queira ler o código em si, dirija-se a este repositório.
+Conheça a Base para Classificação de Score de Crédito A base de dados que vamos limpar vem do kaggle, a qual está no arquivo train.csv, mas os passos que iremos falar também podem ser usados para test.csv.
+Há 28 colunas e 100 mil linhas neste banco de dados.</description>
+    </item>
+    
     <item>
       <title>Alura Challenge BI 2</title>
       <link>https://devmedeiros.com/pt/post/alura-challenge-bi-2/</link>

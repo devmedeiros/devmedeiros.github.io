@@ -9,7 +9,79 @@
       <link>https://devmedeiros.com/cover.png</link>
     </image>
     <generator>Hugo -- gohugo.io</generator>
-    <lastBuildDate>Thu, 30 Jun 2022 19:23:00 -0300</lastBuildDate><atom:link href="https://devmedeiros.com/tags/index.xml" rel="self" type="application/rss+xml" />
+    <lastBuildDate>Sun, 24 Jul 2022 13:06:00 -0300</lastBuildDate><atom:link href="https://devmedeiros.com/tags/index.xml" rel="self" type="application/rss+xml" />
+    <item>
+      <title>classification</title>
+      <link>https://devmedeiros.com/tags/classification/</link>
+      <pubDate>Sun, 24 Jul 2022 13:06:00 -0300</pubDate>
+      
+      <guid>https://devmedeiros.com/tags/classification/</guid>
+      <description></description>
+    </item>
+    
+    <item>
+      <title>credit score</title>
+      <link>https://devmedeiros.com/tags/credit-score/</link>
+      <pubDate>Sun, 24 Jul 2022 13:06:00 -0300</pubDate>
+      
+      <guid>https://devmedeiros.com/tags/credit-score/</guid>
+      <description></description>
+    </item>
+    
+    <item>
+      <title>data cleaning</title>
+      <link>https://devmedeiros.com/tags/data-cleaning/</link>
+      <pubDate>Sun, 24 Jul 2022 13:06:00 -0300</pubDate>
+      
+      <guid>https://devmedeiros.com/tags/data-cleaning/</guid>
+      <description></description>
+    </item>
+    
+    <item>
+      <title>kaggle</title>
+      <link>https://devmedeiros.com/tags/kaggle/</link>
+      <pubDate>Sun, 24 Jul 2022 13:06:00 -0300</pubDate>
+      
+      <guid>https://devmedeiros.com/tags/kaggle/</guid>
+      <description></description>
+    </item>
+    
+    <item>
+      <title>numpy</title>
+      <link>https://devmedeiros.com/tags/numpy/</link>
+      <pubDate>Sun, 24 Jul 2022 13:06:00 -0300</pubDate>
+      
+      <guid>https://devmedeiros.com/tags/numpy/</guid>
+      <description></description>
+    </item>
+    
+    <item>
+      <title>pandas</title>
+      <link>https://devmedeiros.com/tags/pandas/</link>
+      <pubDate>Sun, 24 Jul 2022 13:06:00 -0300</pubDate>
+      
+      <guid>https://devmedeiros.com/tags/pandas/</guid>
+      <description></description>
+    </item>
+    
+    <item>
+      <title>python</title>
+      <link>https://devmedeiros.com/tags/python/</link>
+      <pubDate>Sun, 24 Jul 2022 13:06:00 -0300</pubDate>
+      
+      <guid>https://devmedeiros.com/tags/python/</guid>
+      <description></description>
+    </item>
+    
+    <item>
+      <title>tutorial</title>
+      <link>https://devmedeiros.com/tags/tutorial/</link>
+      <pubDate>Sun, 24 Jul 2022 13:06:00 -0300</pubDate>
+      
+      <guid>https://devmedeiros.com/tags/tutorial/</guid>
+      <description></description>
+    </item>
+    
     <item>
       <title>business intelligence</title>
       <link>https://devmedeiros.com/tags/business-intelligence/</link>
@@ -101,15 +173,6 @@
     </item>
     
     <item>
-      <title>python</title>
-      <link>https://devmedeiros.com/tags/python/</link>
-      <pubDate>Mon, 30 May 2022 16:49:00 -0300</pubDate>
-      
-      <guid>https://devmedeiros.com/tags/python/</guid>
-      <description></description>
-    </item>
-    
-    <item>
       <title>storytelling</title>
       <link>https://devmedeiros.com/tags/storytelling/</link>
       <pubDate>Mon, 30 May 2022 16:49:00 -0300</pubDate>
@@ -178,15 +241,6 @@
       <pubDate>Mon, 24 Jan 2022 18:15:00 -0300</pubDate>
       
       <guid>https://devmedeiros.com/tags/review/</guid>
-      <description></description>
-    </item>
-    
-    <item>
-      <title>pandas</title>
-      <link>https://devmedeiros.com/tags/pandas/</link>
-      <pubDate>Sun, 07 Nov 2021 15:14:00 -0300</pubDate>
-      
-      <guid>https://devmedeiros.com/tags/pandas/</guid>
       <description></description>
     </item>
     

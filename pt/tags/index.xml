@@ -9,7 +9,79 @@
       <link>https://devmedeiros.com/cover.png</link>
     </image>
     <generator>Hugo -- gohugo.io</generator>
-    <lastBuildDate>Thu, 30 Jun 2022 19:23:00 -0300</lastBuildDate><atom:link href="https://devmedeiros.com/pt/tags/index.xml" rel="self" type="application/rss+xml" />
+    <lastBuildDate>Sun, 24 Jul 2022 13:06:00 -0300</lastBuildDate><atom:link href="https://devmedeiros.com/pt/tags/index.xml" rel="self" type="application/rss+xml" />
+    <item>
+      <title>classificação</title>
+      <link>https://devmedeiros.com/pt/tags/classifica%C3%A7%C3%A3o/</link>
+      <pubDate>Sun, 24 Jul 2022 13:06:00 -0300</pubDate>
+      
+      <guid>https://devmedeiros.com/pt/tags/classifica%C3%A7%C3%A3o/</guid>
+      <description></description>
+    </item>
+    
+    <item>
+      <title>kaggle</title>
+      <link>https://devmedeiros.com/pt/tags/kaggle/</link>
+      <pubDate>Sun, 24 Jul 2022 13:06:00 -0300</pubDate>
+      
+      <guid>https://devmedeiros.com/pt/tags/kaggle/</guid>
+      <description></description>
+    </item>
+    
+    <item>
+      <title>limpeza de dados</title>
+      <link>https://devmedeiros.com/pt/tags/limpeza-de-dados/</link>
+      <pubDate>Sun, 24 Jul 2022 13:06:00 -0300</pubDate>
+      
+      <guid>https://devmedeiros.com/pt/tags/limpeza-de-dados/</guid>
+      <description></description>
+    </item>
+    
+    <item>
+      <title>numpy</title>
+      <link>https://devmedeiros.com/pt/tags/numpy/</link>
+      <pubDate>Sun, 24 Jul 2022 13:06:00 -0300</pubDate>
+      
+      <guid>https://devmedeiros.com/pt/tags/numpy/</guid>
+      <description></description>
+    </item>
+    
+    <item>
+      <title>pandas</title>
+      <link>https://devmedeiros.com/pt/tags/pandas/</link>
+      <pubDate>Sun, 24 Jul 2022 13:06:00 -0300</pubDate>
+      
+      <guid>https://devmedeiros.com/pt/tags/pandas/</guid>
+      <description></description>
+    </item>
+    
+    <item>
+      <title>python</title>
+      <link>https://devmedeiros.com/pt/tags/python/</link>
+      <pubDate>Sun, 24 Jul 2022 13:06:00 -0300</pubDate>
+      
+      <guid>https://devmedeiros.com/pt/tags/python/</guid>
+      <description></description>
+    </item>
+    
+    <item>
+      <title>score</title>
+      <link>https://devmedeiros.com/pt/tags/score/</link>
+      <pubDate>Sun, 24 Jul 2022 13:06:00 -0300</pubDate>
+      
+      <guid>https://devmedeiros.com/pt/tags/score/</guid>
+      <description></description>
+    </item>
+    
+    <item>
+      <title>tutorial</title>
+      <link>https://devmedeiros.com/pt/tags/tutorial/</link>
+      <pubDate>Sun, 24 Jul 2022 13:06:00 -0300</pubDate>
+      
+      <guid>https://devmedeiros.com/pt/tags/tutorial/</guid>
+      <description></description>
+    </item>
+    
     <item>
       <title>business intelligence</title>
       <link>https://devmedeiros.com/pt/tags/business-intelligence/</link>
@@ -70,15 +142,6 @@
       <pubDate>Mon, 30 May 2022 16:49:00 -0300</pubDate>
       
       <guid>https://devmedeiros.com/pt/tags/aprendizado-de-m%C3%A1quina/</guid>
-      <description></description>
-    </item>
-    
-    <item>
-      <title>python</title>
-      <link>https://devmedeiros.com/pt/tags/python/</link>
-      <pubDate>Mon, 30 May 2022 16:49:00 -0300</pubDate>
-      
-      <guid>https://devmedeiros.com/pt/tags/python/</guid>
       <description></description>
     </item>
     
@@ -160,15 +223,6 @@
       <pubDate>Mon, 24 Jan 2022 18:15:00 -0300</pubDate>
       
       <guid>https://devmedeiros.com/pt/tags/review/</guid>
-      <description></description>
-    </item>
-    
-    <item>
-      <title>pandas</title>
-      <link>https://devmedeiros.com/pt/tags/pandas/</link>
-      <pubDate>Sun, 07 Nov 2021 15:14:00 -0300</pubDate>
-      
-      <guid>https://devmedeiros.com/pt/tags/pandas/</guid>
       <description></description>
     </item>
     
