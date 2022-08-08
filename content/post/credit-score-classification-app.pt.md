@@ -1,6 +1,6 @@
 ---
 title: Aplicativo de Classificação de Score de Crédito
-#date: 2022-08-06 17:17:00 -0300
+date: 2022-08-08 17:17:00 -0300
 categories: [Projects]
 tags: [python, streamlit, pickle, aprendizado de máquina, score, aplicativo, visualização de dados, ciência de dados, random forest]
 toc: true

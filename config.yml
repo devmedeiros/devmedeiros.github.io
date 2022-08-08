@@ -124,6 +124,8 @@ params:
       url: "https://github.com/devmedeiros"
     - name: linkedin
       url: "https://www.linkedin.com/in/medeiros-jaqueline/?locale=en_US"
+    - name: twitter
+      url: "https://twitter.com/dev_medeiros"
 
   analytics:
     google:

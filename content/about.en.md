@@ -14,3 +14,4 @@ You can find me at:
 
 - Linkedin: [medeiros-jaqueline](https://www.linkedin.com/in/medeiros-jaqueline/)
 - Github: [devmedeiros](https://github.com/devmedeiros)
+- Twitter: [dev_medeiros](https://twitter.com/dev_medeiros)

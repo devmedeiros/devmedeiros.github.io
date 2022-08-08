@@ -1,6 +1,6 @@
 ---
 title: Credit Score Classification App
-#date: 2022-08-06 17:17:00 -0300
+date: 2022-08-08 17:17:00 -0300
 categories: [Projects]
 tags: [python, streamlit, pickle, machine learning, credit score, app, data visualization, data science, random forest]
 toc: true
