@@ -16,10 +16,7 @@
       <pubDate>Sun, 24 Jul 2022 13:06:00 -0300</pubDate>
       
       <guid>https://devmedeiros.com/pt/post/data-cleaning-credit-score/</guid>
-      <description>Profissão foto criada por freepik - freepik.com
-Aviso: Eu estarei falando sobre como chegar no código python, caso queira ler o código em si, dirija-se a este repositório.
-Conheça a Base para Classificação de Score de Crédito A base de dados que vamos limpar vem do kaggle, a qual está no arquivo train.csv, mas os passos que iremos falar também podem ser usados para test.csv.
-Há 28 colunas e 100 mil linhas neste banco de dados.</description>
+      <description>Como surgir com formas de limpar um banco de dados usando Python</description>
     </item>
     
     <item>
@@ -28,9 +25,7 @@ Há 28 colunas e 100 mil linhas neste banco de dados.</description>
       <pubDate>Sun, 07 Nov 2021 15:14:00 -0300</pubDate>
       
       <guid>https://devmedeiros.com/pt/post/2021-11-07-seaborn-package-guide/</guid>
-      <description>Introdução Eu estou aprendendo visualização de dados no Python e eu me vejo como alguém que aprende fazendo, por isso eu vou fazer alguns gráficos simples usando o pacote seaborn que poderão ser utilizados como referência sempre que precisar refrescar a memória.
-Primeiramente é necessários que os pacotes estejam propriamente importados, após isso eu carrego o banco de dados iris.
-import pandas as pd import seaborn as sns import matplotlib.pyplot as plt url = &amp;#34;https://git.</description>
+      <description>Um guia simples de como fazer gráficos básicos usando o pacote seaborn do Python</description>
     </item>
     
   </channel>

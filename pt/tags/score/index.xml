@@ -16,10 +16,16 @@
       <pubDate>Sun, 24 Jul 2022 13:06:00 -0300</pubDate>
       
       <guid>https://devmedeiros.com/pt/post/data-cleaning-credit-score/</guid>
-      <description>Profissão foto criada por freepik - freepik.com
-Aviso: Eu estarei falando sobre como chegar no código python, caso queira ler o código em si, dirija-se a este repositório.
-Conheça a Base para Classificação de Score de Crédito A base de dados que vamos limpar vem do kaggle, a qual está no arquivo train.csv, mas os passos que iremos falar também podem ser usados para test.csv.
-Há 28 colunas e 100 mil linhas neste banco de dados.</description>
+      <description>Como surgir com formas de limpar um banco de dados usando Python</description>
+    </item>
+    
+    <item>
+      <title>Aplicativo de Classificação de Score de Crédito</title>
+      <link>https://devmedeiros.com/pt/post/credit-score-classification-app/</link>
+      <pubDate>Mon, 01 Jan 0001 00:00:00 +0000</pubDate>
+      
+      <guid>https://devmedeiros.com/pt/post/credit-score-classification-app/</guid>
+      <description>Usando o Streamlit para fazer um aplicativo da web que classifica sua pontuação de crédito usando Python</description>
     </item>
     
   </channel>

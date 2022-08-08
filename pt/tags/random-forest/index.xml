@@ -1,0 +1,22 @@
+<?xml version="1.0" encoding="utf-8" standalone="yes"?>
+<rss version="2.0" xmlns:atom="http://www.w3.org/2005/Atom" xmlns:content="http://purl.org/rss/1.0/modules/content/">
+  <channel>
+    <title>random forest on Dev_Medeiros</title>
+    <link>https://devmedeiros.com/pt/tags/random-forest/</link>
+    <description>Recent content in random forest on Dev_Medeiros</description>
+    <image>
+      <url>https://devmedeiros.com/cover.png</url>
+      <link>https://devmedeiros.com/cover.png</link>
+    </image>
+    <generator>Hugo -- gohugo.io</generator><atom:link href="https://devmedeiros.com/pt/tags/random-forest/index.xml" rel="self" type="application/rss+xml" />
+    <item>
+      <title>Aplicativo de Classificação de Score de Crédito</title>
+      <link>https://devmedeiros.com/pt/post/credit-score-classification-app/</link>
+      <pubDate>Mon, 01 Jan 0001 00:00:00 +0000</pubDate>
+      
+      <guid>https://devmedeiros.com/pt/post/credit-score-classification-app/</guid>
+      <description>Usando o Streamlit para fazer um aplicativo da web que classifica sua pontuação de crédito usando Python</description>
+    </item>
+    
+  </channel>
+</rss>

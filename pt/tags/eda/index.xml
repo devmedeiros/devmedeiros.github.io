@@ -1,0 +1,23 @@
+<?xml version="1.0" encoding="utf-8" standalone="yes"?>
+<rss version="2.0" xmlns:atom="http://www.w3.org/2005/Atom" xmlns:content="http://purl.org/rss/1.0/modules/content/">
+  <channel>
+    <title>EDA on Dev_Medeiros</title>
+    <link>https://devmedeiros.com/pt/tags/eda/</link>
+    <description>Recent content in EDA on Dev_Medeiros</description>
+    <image>
+      <url>https://devmedeiros.com/cover.png</url>
+      <link>https://devmedeiros.com/cover.png</link>
+    </image>
+    <generator>Hugo -- gohugo.io</generator>
+    <lastBuildDate>Tue, 28 Dec 2021 14:55:00 -0300</lastBuildDate><atom:link href="https://devmedeiros.com/pt/tags/eda/index.xml" rel="self" type="application/rss+xml" />
+    <item>
+      <title>Análise Descritiva do Top 50 Livros Bestsellers da Amazon 2009 - 2019</title>
+      <link>https://devmedeiros.com/pt/post/2021-12-28-amazon-top-50-books/</link>
+      <pubDate>Tue, 28 Dec 2021 14:55:00 -0300</pubDate>
+      
+      <guid>https://devmedeiros.com/pt/post/2021-12-28-amazon-top-50-books/</guid>
+      <description>Análise Exploratória de Dados dos 50 livros mais bem vendidos da Amazon de 2009 - 2019</description>
+    </item>
+    
+  </channel>
+</rss>

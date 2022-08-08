@@ -16,9 +16,16 @@
       <pubDate>Tue, 12 Oct 2021 19:47:00 -0300</pubDate>
       
       <guid>https://devmedeiros.com/pt/post/2021-10-12-fakenews-sentiment/</guid>
-      <description>Eu quero fazer uma análise de sentimentos usando o R como uma forma de aprender. Com isso em mente começamos carregando todos os pacotes que iremos utilizar.
-library(readr) library(dplyr) library(tidytext) library(tokenizers) library(stopwords) library(ggplot2) Então precisamos carregar nosso banco de dados. Esses dados são do Kaggle Fake and real news dataset.
-Fake &amp;lt;- read_csv(&amp;#39;~/fakenews/Fake.csv&amp;#39;) True &amp;lt;- read.csv(&amp;#39;~/fakenews/True.csv&amp;#39;) Eu quero unir ambos os dados, mas antes é preciso criar uma nova columa que irá informar de onde os dados vieram.</description>
+      <description>Análise de Sentimento comparando notícias falsas e notícias reais</description>
+    </item>
+    
+    <item>
+      <title>Aplicativo de Classificação de Score de Crédito</title>
+      <link>https://devmedeiros.com/pt/post/credit-score-classification-app/</link>
+      <pubDate>Mon, 01 Jan 0001 00:00:00 +0000</pubDate>
+      
+      <guid>https://devmedeiros.com/pt/post/credit-score-classification-app/</guid>
+      <description>Usando o Streamlit para fazer um aplicativo da web que classifica sua pontuação de crédito usando Python</description>
     </item>
     
   </channel>

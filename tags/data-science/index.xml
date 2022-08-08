@@ -16,8 +16,7 @@
       <pubDate>Sun, 17 Apr 2022 10:08:00 -0300</pubDate>
       
       <guid>https://devmedeiros.com/post/2022-04-17-storytelling-with-ceap/</guid>
-      <description>The Dataset CEAP stands for Cota para o Exercício da Atividade Parlamentar, in English, Exercise of Parliamentary Activity from Brazil. The quota is a monthly amount that can be used by the deputy/senator to defray typical expenses of the exercise of the parliamentary mandate.
-The monthly amounts don&amp;rsquo;t accumulate over the months. Another important thing is Senators in Brazil have an 8-year mandate, and there are elections every 4 years.</description>
+      <description>The storytelling of how much each deputy/senator spends in Brazil</description>
     </item>
     
     <item>
@@ -26,9 +25,16 @@ The monthly amounts don&amp;rsquo;t accumulate over the months. Another importan
       <pubDate>Tue, 12 Oct 2021 19:47:00 -0300</pubDate>
       
       <guid>https://devmedeiros.com/post/2021-10-12-fakenews-sentiment/</guid>
-      <description>I want to tackle sentiment analysis using R in a simple way, just to get me started. With this in mind we begin loading all the packages we&amp;rsquo;ll be using.
-library(readr) library(dplyr) library(tidytext) library(tokenizers) library(stopwords) library(ggplot2) Then we need to load our dataset. This data comes from Kaggle Fake and real news dataset.
-Fake &amp;lt;- read_csv(&amp;#39;~/fakenews/Fake.csv&amp;#39;) True &amp;lt;- read.csv(&amp;#39;~/fakenews/True.csv&amp;#39;) I want to merge the two datasets, but first we need to create a new column that will tell me where the data came from.</description>
+      <description>Sentiment Analysis comparing Fake News and Real News using R</description>
+    </item>
+    
+    <item>
+      <title>Credit Score Classification App</title>
+      <link>https://devmedeiros.com/post/credit-score-classification-app/</link>
+      <pubDate>Mon, 01 Jan 0001 00:00:00 +0000</pubDate>
+      
+      <guid>https://devmedeiros.com/post/credit-score-classification-app/</guid>
+      <description>Using Streamlit to make a web app that classifies your credit score using Python</description>
     </item>
     
   </channel>

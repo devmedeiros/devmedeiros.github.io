@@ -370,6 +370,19 @@
                 href="https://devmedeiros.com/pt/post/2021-12-28-amazon-top-50-books/"
                 />
   </url><url>
+    <loc>https://devmedeiros.com/pt/tags/eda/</loc>
+    <lastmod>2021-12-28T14:55:00-03:00</lastmod>
+    <xhtml:link
+                rel="alternate"
+                hreflang="en"
+                href="https://devmedeiros.com/tags/eda/"
+                />
+    <xhtml:link
+                rel="alternate"
+                hreflang="pt"
+                href="https://devmedeiros.com/pt/tags/eda/"
+                />
+  </url><url>
     <loc>https://devmedeiros.com/pt/post/2021-11-07-seaborn-package-guide/</loc>
     <lastmod>2021-11-07T15:14:00-03:00</lastmod>
     <xhtml:link
@@ -512,6 +525,20 @@
                 href="https://devmedeiros.com/pt/tags/nlp/"
                 />
   </url><url>
+    <loc>https://devmedeiros.com/pt/tags/aplicativo/</loc>
+  </url><url>
+    <loc>https://devmedeiros.com/pt/post/credit-score-classification-app/</loc>
+    <xhtml:link
+                rel="alternate"
+                hreflang="en"
+                href="https://devmedeiros.com/post/credit-score-classification-app/"
+                />
+    <xhtml:link
+                rel="alternate"
+                hreflang="pt"
+                href="https://devmedeiros.com/pt/post/credit-score-classification-app/"
+                />
+  </url><url>
     <loc>https://devmedeiros.com/pt/archives/</loc>
     <xhtml:link
                 rel="alternate"
@@ -536,6 +563,42 @@
                 href="https://devmedeiros.com/pt/search/"
                 />
   </url><url>
+    <loc>https://devmedeiros.com/pt/tags/pickle/</loc>
+    <xhtml:link
+                rel="alternate"
+                hreflang="en"
+                href="https://devmedeiros.com/tags/pickle/"
+                />
+    <xhtml:link
+                rel="alternate"
+                hreflang="pt"
+                href="https://devmedeiros.com/pt/tags/pickle/"
+                />
+  </url><url>
+    <loc>https://devmedeiros.com/pt/categories/projects/</loc>
+    <xhtml:link
+                rel="alternate"
+                hreflang="en"
+                href="https://devmedeiros.com/categories/projects/"
+                />
+    <xhtml:link
+                rel="alternate"
+                hreflang="pt"
+                href="https://devmedeiros.com/pt/categories/projects/"
+                />
+  </url><url>
+    <loc>https://devmedeiros.com/pt/tags/random-forest/</loc>
+    <xhtml:link
+                rel="alternate"
+                hreflang="en"
+                href="https://devmedeiros.com/tags/random-forest/"
+                />
+    <xhtml:link
+                rel="alternate"
+                hreflang="pt"
+                href="https://devmedeiros.com/pt/tags/random-forest/"
+                />
+  </url><url>
     <loc>https://devmedeiros.com/pt/about/</loc>
     <xhtml:link
                 rel="alternate"
@@ -546,6 +609,18 @@
                 rel="alternate"
                 hreflang="pt"
                 href="https://devmedeiros.com/pt/about/"
+                />
+  </url><url>
+    <loc>https://devmedeiros.com/pt/tags/streamlit/</loc>
+    <xhtml:link
+                rel="alternate"
+                hreflang="en"
+                href="https://devmedeiros.com/tags/streamlit/"
+                />
+    <xhtml:link
+                rel="alternate"
+                hreflang="pt"
+                href="https://devmedeiros.com/pt/tags/streamlit/"
                 />
   </url>
 </urlset>

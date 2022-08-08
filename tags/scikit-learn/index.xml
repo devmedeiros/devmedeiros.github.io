@@ -16,7 +16,7 @@
       <pubDate>Tue, 14 Jun 2022 19:23:00 -0300</pubDate>
       
       <guid>https://devmedeiros.com/post/2022-06-14-feature-selection/</guid>
-      <description>What is feature selection? Feature selection is the process of finding pertinent features and eliminating unnecessary, redundant, or noisy data. It can be useful to help the training process be faster and it can also avoid overfitting. According to Munson and Caruana, the goal of feature selection is to identify the feature set that best balances the risks of having too few features with the risks of having too many features.</description>
+      <description>Defining feature selection and showing how you can select features in Machine Learning</description>
     </item>
     
   </channel>

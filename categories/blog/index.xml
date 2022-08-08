@@ -16,10 +16,7 @@
       <pubDate>Sun, 24 Jul 2022 13:06:00 -0300</pubDate>
       
       <guid>https://devmedeiros.com/post/data-cleaning-credit-score/</guid>
-      <description>Profession photo created by freepik - freepik.com
-Disclaimer: I&amp;rsquo;ll be talking about how to come up with the python code, if you want to read the actual code please go to this repo.
-Meet the Credit Score Classification Dataset The dataset that we&amp;rsquo;ll clean comes from kaggle, which is the train.csv dataset, but this could be used for the test.csv as well.
-There are 28 columns and 100k rows in this dataset.</description>
+      <description>How to come up with ways to clean a dataset using Python</description>
     </item>
     
     <item>
@@ -28,8 +25,7 @@ There are 28 columns and 100k rows in this dataset.</description>
       <pubDate>Thu, 30 Jun 2022 19:23:00 -0300</pubDate>
       
       <guid>https://devmedeiros.com/post/alura-challenge-bi-2/</guid>
-      <description>The Alura Challenge BI 2 was a four-week event where we&amp;rsquo;re challenged to make Business Intelligence dashboards according to the request of three made-up companies. During the event I made this three dashboard using Power BI, you can look at the source file of all dashboards at my repo.
-Alura Films Alura Food Alura Skimó The objective of this dashboard is to help find the best selection for an upcoming movie.</description>
+      <description>Alura hosted a four-week Challenge BI, where participants needed to make 3 dashboards</description>
     </item>
     
     <item>
@@ -38,7 +34,7 @@ Alura Films Alura Food Alura Skimó The objective of this dashboard is to help f
       <pubDate>Tue, 14 Jun 2022 19:23:00 -0300</pubDate>
       
       <guid>https://devmedeiros.com/post/2022-06-14-feature-selection/</guid>
-      <description>What is feature selection? Feature selection is the process of finding pertinent features and eliminating unnecessary, redundant, or noisy data. It can be useful to help the training process be faster and it can also avoid overfitting. According to Munson and Caruana, the goal of feature selection is to identify the feature set that best balances the risks of having too few features with the risks of having too many features.</description>
+      <description>Defining feature selection and showing how you can select features in Machine Learning</description>
     </item>
     
     <item>
@@ -58,8 +54,7 @@ Alura Films Alura Food Alura Skimó The objective of this dashboard is to help f
       <pubDate>Fri, 29 Apr 2022 11:14:00 -0300</pubDate>
       
       <guid>https://devmedeiros.com/post/2022-04-29-ux-power-bi-dashboards/</guid>
-      <description>What is UX/UI? UX is the acronym for User Experience, it is a recent concept about making design decisions while thinking about the user experience. The UX designer needs to be concerned about whether their product is easy to use and intuitive, making changes to it whenever necessary to suit the user&amp;rsquo;s needs.
-UI stands for User Interface. It is everything involved in the interaction of the user and the product.</description>
+      <description>Defining UX/UI in the context of Bussiness Intelligence for Dashboards with examples</description>
     </item>
     
     <item>
@@ -68,8 +63,7 @@ UI stands for User Interface. It is everything involved in the interaction of th
       <pubDate>Sun, 17 Apr 2022 10:08:00 -0300</pubDate>
       
       <guid>https://devmedeiros.com/post/2022-04-17-storytelling-with-ceap/</guid>
-      <description>The Dataset CEAP stands for Cota para o Exercício da Atividade Parlamentar, in English, Exercise of Parliamentary Activity from Brazil. The quota is a monthly amount that can be used by the deputy/senator to defray typical expenses of the exercise of the parliamentary mandate.
-The monthly amounts don&amp;rsquo;t accumulate over the months. Another important thing is Senators in Brazil have an 8-year mandate, and there are elections every 4 years.</description>
+      <description>The storytelling of how much each deputy/senator spends in Brazil</description>
     </item>
     
     <item>
@@ -78,8 +72,7 @@ The monthly amounts don&amp;rsquo;t accumulate over the months. Another importan
       <pubDate>Tue, 12 Apr 2022 17:58:00 -0300</pubDate>
       
       <guid>https://devmedeiros.com/post/2022-04-12-comprehending-the-p-value/</guid>
-      <description>What is the p-value? In statistics, we have hypothesis tests, which are made to decide whether to reject or not reject the null hypothesis. Some examples of hypothesis testing are Neyman-Pearson, Shapiro-Wilk, Student&amp;rsquo;s T-test, and others.
-All hypothesis tests have a test statistic specific to them. And this statistic is used to evaluate the test, but this task can be tiring even with the use of computers because most software does not return the comparison statistic as an output, only the sample statistic.</description>
+      <description>P-value definition, how to use it, and interpreting the measurement</description>
     </item>
     
     <item>
@@ -88,7 +81,7 @@ All hypothesis tests have a test statistic specific to them. And this statistic 
       <pubDate>Mon, 24 Jan 2022 18:15:00 -0300</pubDate>
       
       <guid>https://devmedeiros.com/post/2022-01-24-podcast-review-mlg/</guid>
-      <description>The show is presented by Tyler Renelle from Depth, since 2021 it has been redone to update the content. The podcast offers a resource list where you can find all of the books, courses, and sites mentioned during the podcast. It&amp;rsquo;s a great podcast for anyone who is learning about machine learning, it can be useful for a complete beginner, an enthusiast, or someone who is looking to further even more on this topic.</description>
+      <description>A review about the podcast Machine Learning Guide</description>
     </item>
     
     <item>
@@ -97,8 +90,7 @@ All hypothesis tests have a test statistic specific to them. And this statistic 
       <pubDate>Tue, 28 Dec 2021 14:55:00 -0300</pubDate>
       
       <guid>https://devmedeiros.com/post/2021-12-28-amazon-top-50-books/</guid>
-      <description>Recently I finished an Alura course named Python for Data Science and I want to put what I learned into practice, to do so I&amp;rsquo;ll make a descriptive analysis on this dataset Amazon Top 50 Bestselling Books 2009 - 2019. It contains 550 books and the data has been categorized as fiction and non-fiction by Goodreads. All of the code can be found here.
-I started checking the first five observations from the dataset.</description>
+      <description>Exploratory Data Analysis of Amazon&amp;rsquo;s top 50 bestselling books 2009 - 2019</description>
     </item>
     
     <item>
@@ -107,9 +99,7 @@ I started checking the first five observations from the dataset.</description>
       <pubDate>Sun, 07 Nov 2021 15:14:00 -0300</pubDate>
       
       <guid>https://devmedeiros.com/post/2021-11-07-seaborn-package-guide/</guid>
-      <description>Introduction I&amp;rsquo;m learning data visualization in Python and I see myself as a &amp;lsquo;hands on&amp;rsquo; learner, so I&amp;rsquo;ll be reproducing some basic plots using seaborn package that you can use as a reference everytime you need to fresh up your memory.
-At first is required that the packages are properly imported, after that I load the iris dataset.
-import pandas as pd import seaborn as sns import matplotlib.pyplot as plt url = &amp;#34;https://git.</description>
+      <description>A simple guide on how to make basic plots using the seaborn package from Python</description>
     </item>
     
     <item>
@@ -129,9 +119,7 @@ import pandas as pd import seaborn as sns import matplotlib.pyplot as plt url = 
       <pubDate>Wed, 27 Oct 2021 09:41:00 -0300</pubDate>
       
       <guid>https://devmedeiros.com/post/2021-10-27-data-table/</guid>
-      <description>The data.table package is one of the fastest packages for data manipulation, currently, it is even faster than pandas and dplyr 1. data.table syntax is dt[i, j, by], where:
-i is used to subset rows j is used to subset columns by is used to subset groups, like GROUP BY from SQL You can read it out loud as2:
-Take dt, subset/reorder rows using i, then calculate j, grouped by by.</description>
+      <description>One of the fastest packages for data manipulation on R</description>
     </item>
     
     <item>
@@ -151,9 +139,7 @@ Take dt, subset/reorder rows using i, then calculate j, grouped by by.</descript
       <pubDate>Tue, 12 Oct 2021 19:47:00 -0300</pubDate>
       
       <guid>https://devmedeiros.com/post/2021-10-12-fakenews-sentiment/</guid>
-      <description>I want to tackle sentiment analysis using R in a simple way, just to get me started. With this in mind we begin loading all the packages we&amp;rsquo;ll be using.
-library(readr) library(dplyr) library(tidytext) library(tokenizers) library(stopwords) library(ggplot2) Then we need to load our dataset. This data comes from Kaggle Fake and real news dataset.
-Fake &amp;lt;- read_csv(&amp;#39;~/fakenews/Fake.csv&amp;#39;) True &amp;lt;- read.csv(&amp;#39;~/fakenews/True.csv&amp;#39;) I want to merge the two datasets, but first we need to create a new column that will tell me where the data came from.</description>
+      <description>Sentiment Analysis comparing Fake News and Real News using R</description>
     </item>
     
   </channel>

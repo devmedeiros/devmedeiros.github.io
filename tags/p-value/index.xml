@@ -16,8 +16,7 @@
       <pubDate>Tue, 12 Apr 2022 17:58:00 -0300</pubDate>
       
       <guid>https://devmedeiros.com/post/2022-04-12-comprehending-the-p-value/</guid>
-      <description>What is the p-value? In statistics, we have hypothesis tests, which are made to decide whether to reject or not reject the null hypothesis. Some examples of hypothesis testing are Neyman-Pearson, Shapiro-Wilk, Student&amp;rsquo;s T-test, and others.
-All hypothesis tests have a test statistic specific to them. And this statistic is used to evaluate the test, but this task can be tiring even with the use of computers because most software does not return the comparison statistic as an output, only the sample statistic.</description>
+      <description>P-value definition, how to use it, and interpreting the measurement</description>
     </item>
     
   </channel>

@@ -16,8 +16,7 @@
       <pubDate>Thu, 30 Jun 2022 19:23:00 -0300</pubDate>
       
       <guid>https://devmedeiros.com/pt/post/alura-challenge-bi-2/</guid>
-      <description>O Alura Challenge BI 2 foi um evento que durou quatro semanas, no qual nós fomos desafiados a fazer um painél de Business Intelligence com base nos requisitos de três empresas fictícias. Durante o evento eu fiz esses três painés usando o Power BI, você pode ver também os arquivos fontes dos painéis no meu repositório.
-Alura Films Alura Food Alura Skimó O objetivo deste painel é ajudar a encontrar a melhor seleção para um filme que será produzido.</description>
+      <description>Alura ofereceu um desafio de quatro semanas Challenge BI, onde os participantes precisavam fazer 3 dashboards</description>
     </item>
     
     <item>
@@ -26,8 +25,7 @@ Alura Films Alura Food Alura Skimó O objetivo deste painel é ajudar a encontra
       <pubDate>Fri, 29 Apr 2022 11:14:00 -0300</pubDate>
       
       <guid>https://devmedeiros.com/pt/post/2022-04-29-ux-power-bi-dashboards/</guid>
-      <description>O que é UX/UI? UX é a sigla em inglês para Experiência de Usuário, é um conceito recente que fala sobre tomar decisões de design pensando na experiência do usuário final. O designer de UX precisa se preocupar se seu produto é fácil de usar e intuitivo, fazendo mudanças nele sempre que necessário para se adequar as necessidades do usuário.
-UI, do inglês, significa Interface do Usuário. É tudo aquilo que está envolvido na interação do usuário e o produto.</description>
+      <description>Definindo UX/UI no contexto de Bussiness Intelligence para Dashboards com exemplos</description>
     </item>
     
     <item>
@@ -36,8 +34,7 @@ UI, do inglês, significa Interface do Usuário. É tudo aquilo que está envolv
       <pubDate>Tue, 28 Dec 2021 14:55:00 -0300</pubDate>
       
       <guid>https://devmedeiros.com/pt/post/2021-12-28-amazon-top-50-books/</guid>
-      <description>Recentemente eu terminei um curso na Alura chamado Python para Data Science e eu quero colocar o que eu aprendi em prática, para isso eu vou fazer uma análise descritiva nesse banco de dados Amazon Top 50 Bestselling Books 2009 - 2019. Nele há 550 livros e eles foram categorizados como fiction (ficção) e non-fiction (não ficção) pelo Goodreads. Todo o código pode ser visto aqui.
-Eu comecei olhando as cinco primeiras observações do banco de dados.</description>
+      <description>Análise Exploratória de Dados dos 50 livros mais bem vendidos da Amazon de 2009 - 2019</description>
     </item>
     
     <item>
@@ -46,9 +43,16 @@ Eu comecei olhando as cinco primeiras observações do banco de dados.</descript
       <pubDate>Sun, 07 Nov 2021 15:14:00 -0300</pubDate>
       
       <guid>https://devmedeiros.com/pt/post/2021-11-07-seaborn-package-guide/</guid>
-      <description>Introdução Eu estou aprendendo visualização de dados no Python e eu me vejo como alguém que aprende fazendo, por isso eu vou fazer alguns gráficos simples usando o pacote seaborn que poderão ser utilizados como referência sempre que precisar refrescar a memória.
-Primeiramente é necessários que os pacotes estejam propriamente importados, após isso eu carrego o banco de dados iris.
-import pandas as pd import seaborn as sns import matplotlib.pyplot as plt url = &amp;#34;https://git.</description>
+      <description>Um guia simples de como fazer gráficos básicos usando o pacote seaborn do Python</description>
+    </item>
+    
+    <item>
+      <title>Aplicativo de Classificação de Score de Crédito</title>
+      <link>https://devmedeiros.com/pt/post/credit-score-classification-app/</link>
+      <pubDate>Mon, 01 Jan 0001 00:00:00 +0000</pubDate>
+      
+      <guid>https://devmedeiros.com/pt/post/credit-score-classification-app/</guid>
+      <description>Usando o Streamlit para fazer um aplicativo da web que classifica sua pontuação de crédito usando Python</description>
     </item>
     
   </channel>

@@ -16,8 +16,7 @@
       <pubDate>Tue, 12 Apr 2022 17:58:00 -0300</pubDate>
       
       <guid>https://devmedeiros.com/pt/post/2022-04-12-comprehending-the-p-value/</guid>
-      <description>O que é o p-valor? Em estatística temos os testes de hipóteses, que são feitos para tomar uma decisão, de rejeitar ou não rejeitar a hipótese nula. Alguns exemplos de teste de hipótese são: Neyman-Pearson, Shapiro-Wilk, T de Student, entre outros.
-Todos testes de hipóteses possuem uma estatística de teste específico dele. E essa estatística é utilizada para avaliar o teste, mas essa tarefa pode ser cansativa até com o uso de computadores, pois a maioria dos softwares não devolvem como resposta a estatística de comparação, apenas a estatística amostral.</description>
+      <description>A definição do p-valor, como usar ele, e como interpretar a medida</description>
     </item>
     
   </channel>

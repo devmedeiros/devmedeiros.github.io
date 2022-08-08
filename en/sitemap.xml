@@ -382,6 +382,19 @@
                 href="https://devmedeiros.com/post/2021-12-28-amazon-top-50-books/"
                 />
   </url><url>
+    <loc>https://devmedeiros.com/tags/eda/</loc>
+    <lastmod>2021-12-28T14:55:00-03:00</lastmod>
+    <xhtml:link
+                rel="alternate"
+                hreflang="pt"
+                href="https://devmedeiros.com/pt/tags/eda/"
+                />
+    <xhtml:link
+                rel="alternate"
+                hreflang="en"
+                href="https://devmedeiros.com/tags/eda/"
+                />
+  </url><url>
     <loc>https://devmedeiros.com/post/2021-11-07-seaborn-package-guide/</loc>
     <lastmod>2021-11-07T15:14:00-03:00</lastmod>
     <xhtml:link
@@ -536,6 +549,8 @@
                 href="https://devmedeiros.com/about/"
                 />
   </url><url>
+    <loc>https://devmedeiros.com/tags/app/</loc>
+  </url><url>
     <loc>https://devmedeiros.com/archives/</loc>
     <xhtml:link
                 rel="alternate"
@@ -548,9 +563,53 @@
                 href="https://devmedeiros.com/archives/"
                 />
   </url><url>
-    <loc>https://devmedeiros.com/categories/projects/</loc>
+    <loc>https://devmedeiros.com/post/credit-score-classification-app/</loc>
+    <xhtml:link
+                rel="alternate"
+                hreflang="pt"
+                href="https://devmedeiros.com/pt/post/credit-score-classification-app/"
+                />
+    <xhtml:link
+                rel="alternate"
+                hreflang="en"
+                href="https://devmedeiros.com/post/credit-score-classification-app/"
+                />
   </url><url>
-    <loc>https://devmedeiros.com/post/python-guide-r-users/</loc>
+    <loc>https://devmedeiros.com/tags/pickle/</loc>
+    <xhtml:link
+                rel="alternate"
+                hreflang="pt"
+                href="https://devmedeiros.com/pt/tags/pickle/"
+                />
+    <xhtml:link
+                rel="alternate"
+                hreflang="en"
+                href="https://devmedeiros.com/tags/pickle/"
+                />
+  </url><url>
+    <loc>https://devmedeiros.com/categories/projects/</loc>
+    <xhtml:link
+                rel="alternate"
+                hreflang="pt"
+                href="https://devmedeiros.com/pt/categories/projects/"
+                />
+    <xhtml:link
+                rel="alternate"
+                hreflang="en"
+                href="https://devmedeiros.com/categories/projects/"
+                />
+  </url><url>
+    <loc>https://devmedeiros.com/tags/random-forest/</loc>
+    <xhtml:link
+                rel="alternate"
+                hreflang="pt"
+                href="https://devmedeiros.com/pt/tags/random-forest/"
+                />
+    <xhtml:link
+                rel="alternate"
+                hreflang="en"
+                href="https://devmedeiros.com/tags/random-forest/"
+                />
   </url><url>
     <loc>https://devmedeiros.com/search/</loc>
     <xhtml:link
@@ -562,6 +621,18 @@
                 rel="alternate"
                 hreflang="en"
                 href="https://devmedeiros.com/search/"
+                />
+  </url><url>
+    <loc>https://devmedeiros.com/tags/streamlit/</loc>
+    <xhtml:link
+                rel="alternate"
+                hreflang="pt"
+                href="https://devmedeiros.com/pt/tags/streamlit/"
+                />
+    <xhtml:link
+                rel="alternate"
+                hreflang="en"
+                href="https://devmedeiros.com/tags/streamlit/"
                 />
   </url><url>
     <loc>https://devmedeiros.com/terms/</loc>

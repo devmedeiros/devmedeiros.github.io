@@ -16,9 +16,7 @@
       <pubDate>Wed, 27 Oct 2021 09:41:00 -0300</pubDate>
       
       <guid>https://devmedeiros.com/pt/post/2021-10-27-data-table/</guid>
-      <description>O pacote data.table é um dos pacotes de manipulação de dados mais rápido, atualmente ele é mais rápido até que o pandas e dplyr 1. A sintaxe de um data.table é dt[i, j, by], em que:
-i é utilizado para amostrar linhas j é utilizado para amostrar colunas by é utilizado para amostrar grupos, igual ao GROUP BY do SQL Você pode ler em voz alta como2:
-Pegue dt, amostra/reordene as linhas usando i, então calcule j, agrupando por by.</description>
+      <description>Um dos pacotes de manipulação de dados mais rápidos do R</description>
     </item>
     
     <item>
@@ -38,9 +36,7 @@ Pegue dt, amostra/reordene as linhas usando i, então calcule j, agrupando por b
       <pubDate>Tue, 12 Oct 2021 19:47:00 -0300</pubDate>
       
       <guid>https://devmedeiros.com/pt/post/2021-10-12-fakenews-sentiment/</guid>
-      <description>Eu quero fazer uma análise de sentimentos usando o R como uma forma de aprender. Com isso em mente começamos carregando todos os pacotes que iremos utilizar.
-library(readr) library(dplyr) library(tidytext) library(tokenizers) library(stopwords) library(ggplot2) Então precisamos carregar nosso banco de dados. Esses dados são do Kaggle Fake and real news dataset.
-Fake &amp;lt;- read_csv(&amp;#39;~/fakenews/Fake.csv&amp;#39;) True &amp;lt;- read.csv(&amp;#39;~/fakenews/True.csv&amp;#39;) Eu quero unir ambos os dados, mas antes é preciso criar uma nova columa que irá informar de onde os dados vieram.</description>
+      <description>Análise de Sentimento comparando notícias falsas e notícias reais</description>
     </item>
     
   </channel>
