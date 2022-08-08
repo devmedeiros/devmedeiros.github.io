@@ -9,7 +9,16 @@
       <link>https://devmedeiros.com/cover.png</link>
     </image>
     <generator>Hugo -- gohugo.io</generator>
-    <lastBuildDate>Thu, 30 Jun 2022 19:23:00 -0300</lastBuildDate><atom:link href="https://devmedeiros.com/pt/tags/visualiza%C3%A7%C3%A3o-de-dados/index.xml" rel="self" type="application/rss+xml" />
+    <lastBuildDate>Mon, 08 Aug 2022 17:17:00 -0300</lastBuildDate><atom:link href="https://devmedeiros.com/pt/tags/visualiza%C3%A7%C3%A3o-de-dados/index.xml" rel="self" type="application/rss+xml" />
+    <item>
+      <title>Aplicativo de Classificação de Score de Crédito</title>
+      <link>https://devmedeiros.com/pt/post/credit-score-classification-app/</link>
+      <pubDate>Mon, 08 Aug 2022 17:17:00 -0300</pubDate>
+      
+      <guid>https://devmedeiros.com/pt/post/credit-score-classification-app/</guid>
+      <description>Usando o Streamlit para fazer um aplicativo da web que classifica sua pontuação de crédito usando Python</description>
+    </item>
+    
     <item>
       <title>Alura Challenge BI 2</title>
       <link>https://devmedeiros.com/pt/post/alura-challenge-bi-2/</link>
@@ -44,15 +53,6 @@
       
       <guid>https://devmedeiros.com/pt/post/2021-11-07-seaborn-package-guide/</guid>
       <description>Um guia simples de como fazer gráficos básicos usando o pacote seaborn do Python</description>
-    </item>
-    
-    <item>
-      <title>Aplicativo de Classificação de Score de Crédito</title>
-      <link>https://devmedeiros.com/pt/post/credit-score-classification-app/</link>
-      <pubDate>Mon, 01 Jan 0001 00:00:00 +0000</pubDate>
-      
-      <guid>https://devmedeiros.com/pt/post/credit-score-classification-app/</guid>
-      <description>Usando o Streamlit para fazer um aplicativo da web que classifica sua pontuação de crédito usando Python</description>
     </item>
     
   </channel>

@@ -9,7 +9,88 @@
       <link>https://devmedeiros.com/cover.png</link>
     </image>
     <generator>Hugo -- gohugo.io</generator>
-    <lastBuildDate>Sun, 24 Jul 2022 13:06:00 -0300</lastBuildDate><atom:link href="https://devmedeiros.com/pt/tags/index.xml" rel="self" type="application/rss+xml" />
+    <lastBuildDate>Mon, 08 Aug 2022 17:17:00 -0300</lastBuildDate><atom:link href="https://devmedeiros.com/pt/tags/index.xml" rel="self" type="application/rss+xml" />
+    <item>
+      <title>aplicativo</title>
+      <link>https://devmedeiros.com/pt/tags/aplicativo/</link>
+      <pubDate>Mon, 08 Aug 2022 17:17:00 -0300</pubDate>
+      
+      <guid>https://devmedeiros.com/pt/tags/aplicativo/</guid>
+      <description></description>
+    </item>
+    
+    <item>
+      <title>aprendizado de máquina</title>
+      <link>https://devmedeiros.com/pt/tags/aprendizado-de-m%C3%A1quina/</link>
+      <pubDate>Mon, 08 Aug 2022 17:17:00 -0300</pubDate>
+      
+      <guid>https://devmedeiros.com/pt/tags/aprendizado-de-m%C3%A1quina/</guid>
+      <description></description>
+    </item>
+    
+    <item>
+      <title>ciência de dados</title>
+      <link>https://devmedeiros.com/pt/tags/ci%C3%AAncia-de-dados/</link>
+      <pubDate>Mon, 08 Aug 2022 17:17:00 -0300</pubDate>
+      
+      <guid>https://devmedeiros.com/pt/tags/ci%C3%AAncia-de-dados/</guid>
+      <description></description>
+    </item>
+    
+    <item>
+      <title>pickle</title>
+      <link>https://devmedeiros.com/pt/tags/pickle/</link>
+      <pubDate>Mon, 08 Aug 2022 17:17:00 -0300</pubDate>
+      
+      <guid>https://devmedeiros.com/pt/tags/pickle/</guid>
+      <description></description>
+    </item>
+    
+    <item>
+      <title>python</title>
+      <link>https://devmedeiros.com/pt/tags/python/</link>
+      <pubDate>Mon, 08 Aug 2022 17:17:00 -0300</pubDate>
+      
+      <guid>https://devmedeiros.com/pt/tags/python/</guid>
+      <description></description>
+    </item>
+    
+    <item>
+      <title>random forest</title>
+      <link>https://devmedeiros.com/pt/tags/random-forest/</link>
+      <pubDate>Mon, 08 Aug 2022 17:17:00 -0300</pubDate>
+      
+      <guid>https://devmedeiros.com/pt/tags/random-forest/</guid>
+      <description></description>
+    </item>
+    
+    <item>
+      <title>score</title>
+      <link>https://devmedeiros.com/pt/tags/score/</link>
+      <pubDate>Mon, 08 Aug 2022 17:17:00 -0300</pubDate>
+      
+      <guid>https://devmedeiros.com/pt/tags/score/</guid>
+      <description></description>
+    </item>
+    
+    <item>
+      <title>streamlit</title>
+      <link>https://devmedeiros.com/pt/tags/streamlit/</link>
+      <pubDate>Mon, 08 Aug 2022 17:17:00 -0300</pubDate>
+      
+      <guid>https://devmedeiros.com/pt/tags/streamlit/</guid>
+      <description></description>
+    </item>
+    
+    <item>
+      <title>visualização de dados</title>
+      <link>https://devmedeiros.com/pt/tags/visualiza%C3%A7%C3%A3o-de-dados/</link>
+      <pubDate>Mon, 08 Aug 2022 17:17:00 -0300</pubDate>
+      
+      <guid>https://devmedeiros.com/pt/tags/visualiza%C3%A7%C3%A3o-de-dados/</guid>
+      <description></description>
+    </item>
+    
     <item>
       <title>classificação</title>
       <link>https://devmedeiros.com/pt/tags/classifica%C3%A7%C3%A3o/</link>
@@ -52,24 +133,6 @@
       <pubDate>Sun, 24 Jul 2022 13:06:00 -0300</pubDate>
       
       <guid>https://devmedeiros.com/pt/tags/pandas/</guid>
-      <description></description>
-    </item>
-    
-    <item>
-      <title>python</title>
-      <link>https://devmedeiros.com/pt/tags/python/</link>
-      <pubDate>Sun, 24 Jul 2022 13:06:00 -0300</pubDate>
-      
-      <guid>https://devmedeiros.com/pt/tags/python/</guid>
-      <description></description>
-    </item>
-    
-    <item>
-      <title>score</title>
-      <link>https://devmedeiros.com/pt/tags/score/</link>
-      <pubDate>Sun, 24 Jul 2022 13:06:00 -0300</pubDate>
-      
-      <guid>https://devmedeiros.com/pt/tags/score/</guid>
       <description></description>
     </item>
     
@@ -119,29 +182,11 @@
     </item>
     
     <item>
-      <title>visualização de dados</title>
-      <link>https://devmedeiros.com/pt/tags/visualiza%C3%A7%C3%A3o-de-dados/</link>
-      <pubDate>Thu, 30 Jun 2022 19:23:00 -0300</pubDate>
-      
-      <guid>https://devmedeiros.com/pt/tags/visualiza%C3%A7%C3%A3o-de-dados/</guid>
-      <description></description>
-    </item>
-    
-    <item>
       <title>análise de dados</title>
       <link>https://devmedeiros.com/pt/tags/an%C3%A1lise-de-dados/</link>
       <pubDate>Mon, 30 May 2022 16:49:00 -0300</pubDate>
       
       <guid>https://devmedeiros.com/pt/tags/an%C3%A1lise-de-dados/</guid>
-      <description></description>
-    </item>
-    
-    <item>
-      <title>aprendizado de máquina</title>
-      <link>https://devmedeiros.com/pt/tags/aprendizado-de-m%C3%A1quina/</link>
-      <pubDate>Mon, 30 May 2022 16:49:00 -0300</pubDate>
-      
-      <guid>https://devmedeiros.com/pt/tags/aprendizado-de-m%C3%A1quina/</guid>
       <description></description>
     </item>
     
@@ -308,56 +353,11 @@
     </item>
     
     <item>
-      <title>ciência de dados</title>
-      <link>https://devmedeiros.com/pt/tags/ci%C3%AAncia-de-dados/</link>
-      <pubDate>Tue, 12 Oct 2021 19:47:00 -0300</pubDate>
-      
-      <guid>https://devmedeiros.com/pt/tags/ci%C3%AAncia-de-dados/</guid>
-      <description></description>
-    </item>
-    
-    <item>
       <title>NLP</title>
       <link>https://devmedeiros.com/pt/tags/nlp/</link>
       <pubDate>Tue, 12 Oct 2021 19:47:00 -0300</pubDate>
       
       <guid>https://devmedeiros.com/pt/tags/nlp/</guid>
-      <description></description>
-    </item>
-    
-    <item>
-      <title>aplicativo</title>
-      <link>https://devmedeiros.com/pt/tags/aplicativo/</link>
-      <pubDate>Mon, 01 Jan 0001 00:00:00 +0000</pubDate>
-      
-      <guid>https://devmedeiros.com/pt/tags/aplicativo/</guid>
-      <description></description>
-    </item>
-    
-    <item>
-      <title>pickle</title>
-      <link>https://devmedeiros.com/pt/tags/pickle/</link>
-      <pubDate>Mon, 01 Jan 0001 00:00:00 +0000</pubDate>
-      
-      <guid>https://devmedeiros.com/pt/tags/pickle/</guid>
-      <description></description>
-    </item>
-    
-    <item>
-      <title>random forest</title>
-      <link>https://devmedeiros.com/pt/tags/random-forest/</link>
-      <pubDate>Mon, 01 Jan 0001 00:00:00 +0000</pubDate>
-      
-      <guid>https://devmedeiros.com/pt/tags/random-forest/</guid>
-      <description></description>
-    </item>
-    
-    <item>
-      <title>streamlit</title>
-      <link>https://devmedeiros.com/pt/tags/streamlit/</link>
-      <pubDate>Mon, 01 Jan 0001 00:00:00 +0000</pubDate>
-      
-      <guid>https://devmedeiros.com/pt/tags/streamlit/</guid>
       <description></description>
     </item>
     

@@ -8,11 +8,12 @@
       <url>https://devmedeiros.com/cover.png</url>
       <link>https://devmedeiros.com/cover.png</link>
     </image>
-    <generator>Hugo -- gohugo.io</generator><atom:link href="https://devmedeiros.com/pt/tags/random-forest/index.xml" rel="self" type="application/rss+xml" />
+    <generator>Hugo -- gohugo.io</generator>
+    <lastBuildDate>Mon, 08 Aug 2022 17:17:00 -0300</lastBuildDate><atom:link href="https://devmedeiros.com/pt/tags/random-forest/index.xml" rel="self" type="application/rss+xml" />
     <item>
       <title>Aplicativo de Classificação de Score de Crédito</title>
       <link>https://devmedeiros.com/pt/post/credit-score-classification-app/</link>
-      <pubDate>Mon, 01 Jan 0001 00:00:00 +0000</pubDate>
+      <pubDate>Mon, 08 Aug 2022 17:17:00 -0300</pubDate>
       
       <guid>https://devmedeiros.com/pt/post/credit-score-classification-app/</guid>
       <description>Usando o Streamlit para fazer um aplicativo da web que classifica sua pontuação de crédito usando Python</description>

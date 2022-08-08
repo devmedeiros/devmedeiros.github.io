@@ -9,22 +9,94 @@
       <link>https://devmedeiros.com/cover.png</link>
     </image>
     <generator>Hugo -- gohugo.io</generator>
-    <lastBuildDate>Sun, 24 Jul 2022 13:06:00 -0300</lastBuildDate><atom:link href="https://devmedeiros.com/tags/index.xml" rel="self" type="application/rss+xml" />
+    <lastBuildDate>Mon, 08 Aug 2022 17:17:00 -0300</lastBuildDate><atom:link href="https://devmedeiros.com/tags/index.xml" rel="self" type="application/rss+xml" />
     <item>
-      <title>classification</title>
-      <link>https://devmedeiros.com/tags/classification/</link>
-      <pubDate>Sun, 24 Jul 2022 13:06:00 -0300</pubDate>
+      <title>app</title>
+      <link>https://devmedeiros.com/tags/app/</link>
+      <pubDate>Mon, 08 Aug 2022 17:17:00 -0300</pubDate>
       
-      <guid>https://devmedeiros.com/tags/classification/</guid>
+      <guid>https://devmedeiros.com/tags/app/</guid>
       <description></description>
     </item>
     
     <item>
       <title>credit score</title>
       <link>https://devmedeiros.com/tags/credit-score/</link>
-      <pubDate>Sun, 24 Jul 2022 13:06:00 -0300</pubDate>
+      <pubDate>Mon, 08 Aug 2022 17:17:00 -0300</pubDate>
       
       <guid>https://devmedeiros.com/tags/credit-score/</guid>
+      <description></description>
+    </item>
+    
+    <item>
+      <title>data science</title>
+      <link>https://devmedeiros.com/tags/data-science/</link>
+      <pubDate>Mon, 08 Aug 2022 17:17:00 -0300</pubDate>
+      
+      <guid>https://devmedeiros.com/tags/data-science/</guid>
+      <description></description>
+    </item>
+    
+    <item>
+      <title>data visualization</title>
+      <link>https://devmedeiros.com/tags/data-visualization/</link>
+      <pubDate>Mon, 08 Aug 2022 17:17:00 -0300</pubDate>
+      
+      <guid>https://devmedeiros.com/tags/data-visualization/</guid>
+      <description></description>
+    </item>
+    
+    <item>
+      <title>machine learning</title>
+      <link>https://devmedeiros.com/tags/machine-learning/</link>
+      <pubDate>Mon, 08 Aug 2022 17:17:00 -0300</pubDate>
+      
+      <guid>https://devmedeiros.com/tags/machine-learning/</guid>
+      <description></description>
+    </item>
+    
+    <item>
+      <title>pickle</title>
+      <link>https://devmedeiros.com/tags/pickle/</link>
+      <pubDate>Mon, 08 Aug 2022 17:17:00 -0300</pubDate>
+      
+      <guid>https://devmedeiros.com/tags/pickle/</guid>
+      <description></description>
+    </item>
+    
+    <item>
+      <title>python</title>
+      <link>https://devmedeiros.com/tags/python/</link>
+      <pubDate>Mon, 08 Aug 2022 17:17:00 -0300</pubDate>
+      
+      <guid>https://devmedeiros.com/tags/python/</guid>
+      <description></description>
+    </item>
+    
+    <item>
+      <title>random forest</title>
+      <link>https://devmedeiros.com/tags/random-forest/</link>
+      <pubDate>Mon, 08 Aug 2022 17:17:00 -0300</pubDate>
+      
+      <guid>https://devmedeiros.com/tags/random-forest/</guid>
+      <description></description>
+    </item>
+    
+    <item>
+      <title>streamlit</title>
+      <link>https://devmedeiros.com/tags/streamlit/</link>
+      <pubDate>Mon, 08 Aug 2022 17:17:00 -0300</pubDate>
+      
+      <guid>https://devmedeiros.com/tags/streamlit/</guid>
+      <description></description>
+    </item>
+    
+    <item>
+      <title>classification</title>
+      <link>https://devmedeiros.com/tags/classification/</link>
+      <pubDate>Sun, 24 Jul 2022 13:06:00 -0300</pubDate>
+      
+      <guid>https://devmedeiros.com/tags/classification/</guid>
       <description></description>
     </item>
     
@@ -65,15 +137,6 @@
     </item>
     
     <item>
-      <title>python</title>
-      <link>https://devmedeiros.com/tags/python/</link>
-      <pubDate>Sun, 24 Jul 2022 13:06:00 -0300</pubDate>
-      
-      <guid>https://devmedeiros.com/tags/python/</guid>
-      <description></description>
-    </item>
-    
-    <item>
       <title>tutorial</title>
       <link>https://devmedeiros.com/tags/tutorial/</link>
       <pubDate>Sun, 24 Jul 2022 13:06:00 -0300</pubDate>
@@ -97,15 +160,6 @@
       <pubDate>Thu, 30 Jun 2022 19:23:00 -0300</pubDate>
       
       <guid>https://devmedeiros.com/tags/dashboard/</guid>
-      <description></description>
-    </item>
-    
-    <item>
-      <title>data visualization</title>
-      <link>https://devmedeiros.com/tags/data-visualization/</link>
-      <pubDate>Thu, 30 Jun 2022 19:23:00 -0300</pubDate>
-      
-      <guid>https://devmedeiros.com/tags/data-visualization/</guid>
       <description></description>
     </item>
     
@@ -155,15 +209,6 @@
     </item>
     
     <item>
-      <title>machine learning</title>
-      <link>https://devmedeiros.com/tags/machine-learning/</link>
-      <pubDate>Mon, 30 May 2022 16:49:00 -0300</pubDate>
-      
-      <guid>https://devmedeiros.com/tags/machine-learning/</guid>
-      <description></description>
-    </item>
-    
-    <item>
       <title>neural network</title>
       <link>https://devmedeiros.com/tags/neural-network/</link>
       <pubDate>Mon, 30 May 2022 16:49:00 -0300</pubDate>
@@ -196,15 +241,6 @@
       <pubDate>Fri, 29 Apr 2022 11:14:00 -0300</pubDate>
       
       <guid>https://devmedeiros.com/tags/ux/</guid>
-      <description></description>
-    </item>
-    
-    <item>
-      <title>data science</title>
-      <link>https://devmedeiros.com/tags/data-science/</link>
-      <pubDate>Sun, 17 Apr 2022 10:08:00 -0300</pubDate>
-      
-      <guid>https://devmedeiros.com/tags/data-science/</guid>
       <description></description>
     </item>
     
@@ -331,42 +367,6 @@
       <pubDate>Tue, 12 Oct 2021 19:47:00 -0300</pubDate>
       
       <guid>https://devmedeiros.com/tags/sentiment-analysis/</guid>
-      <description></description>
-    </item>
-    
-    <item>
-      <title>app</title>
-      <link>https://devmedeiros.com/tags/app/</link>
-      <pubDate>Mon, 01 Jan 0001 00:00:00 +0000</pubDate>
-      
-      <guid>https://devmedeiros.com/tags/app/</guid>
-      <description></description>
-    </item>
-    
-    <item>
-      <title>pickle</title>
-      <link>https://devmedeiros.com/tags/pickle/</link>
-      <pubDate>Mon, 01 Jan 0001 00:00:00 +0000</pubDate>
-      
-      <guid>https://devmedeiros.com/tags/pickle/</guid>
-      <description></description>
-    </item>
-    
-    <item>
-      <title>random forest</title>
-      <link>https://devmedeiros.com/tags/random-forest/</link>
-      <pubDate>Mon, 01 Jan 0001 00:00:00 +0000</pubDate>
-      
-      <guid>https://devmedeiros.com/tags/random-forest/</guid>
-      <description></description>
-    </item>
-    
-    <item>
-      <title>streamlit</title>
-      <link>https://devmedeiros.com/tags/streamlit/</link>
-      <pubDate>Mon, 01 Jan 0001 00:00:00 +0000</pubDate>
-      
-      <guid>https://devmedeiros.com/tags/streamlit/</guid>
       <description></description>
     </item>
     
