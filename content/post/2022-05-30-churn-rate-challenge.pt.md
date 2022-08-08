@@ -5,6 +5,7 @@ lastmod: 2022-06-09 18:08:00 -0300
 categories: [Blog]
 tags: [storytelling, python, análise de dados, aprendizado de máquina, rede neural]
 showtoc: true
+summary: Alura fez um desafio de quatro semanas "Data Science Challenge" utilizando um banco desbalanceado da taxa de evasão da empresa Alura Voz
 ---
 
 **Ferramentas utilizadas:** Python, seaborn, scikit-learn, imbalanced-learn

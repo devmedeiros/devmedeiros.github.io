@@ -3,6 +3,7 @@ title: Podcast Review - Machine Learning Guide
 date: 2022-01-24 18:15:00 -0300
 categories: [Blog]
 tags: [podcast, review]
+summary: A review about the podcast Machine Learning Guide
 ---
 
 ![Machine Learning Guide Podcast Cover](https://ocdevel.com/static/media/MLG-Option-1.24e2cc63.jpg#center)

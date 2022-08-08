@@ -4,6 +4,7 @@ date: 2022-07-24 13:06:00 -0300
 categories: [Blog]
 tags: [limpeza de dados, python, pandas, tutorial, kaggle, numpy, score, classificação]
 showtoc: true
+summary: Como surgir com formas de limpar um banco de dados usando Python
 ---
 
 ![um homem usando luvas limpando uma mesa com um pano](https://ik.imagekit.io/devmedeiros/cleaning-table_NhcXa2k4f.jpg)
@@ -168,4 +169,4 @@ A variável `Credit_History_Age` tem os valores como strings "22 Years and 5 Mon
 
 Os nomes dos meses serão substituidos pelo seu representante numérico, logo janeiro será 1, fevereiro será 2, e assim por diante. `credit_mix` e `credit_score` possuem 3 categorias sequenciais, eu escolhi usar -1, 0, e 1, mas você também pode usar 1, 2, 3 e irá produzir o mesmo resultado.
 
-Não se esqueça de chegar o [repositório](https://github.com/devmedeiros/credit-score-classification-app/tree/main/) no GitHub caso queira ver o código completo mencionado aqui e para baixar a base tratada.
+Não se esqueça de checar o [repositório](https://github.com/devmedeiros/credit-score-classification-app/tree/main/) no GitHub caso queira ver o código completo mencionado aqui e para baixar a base tratada.

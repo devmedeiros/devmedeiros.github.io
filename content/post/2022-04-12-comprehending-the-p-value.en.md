@@ -4,6 +4,7 @@ date: 2022-04-12 17:58:00 -0300
 categories: [Blog]
 tags: [statistic, p value]
 showtoc: true
+summary: P-value definition, how to use it, and interpreting the measurement
 ---
 
 ## What is the p-value?

@@ -4,6 +4,7 @@ date: 2022-04-12 17:58:00 -0300
 categories: [Blog]
 tags: [estatística, p-valor]
 showtoc: true
+summary: A definição do p-valor, como usar ele, e como interpretar a medida
 ---
 
 ## O que é o p-valor?

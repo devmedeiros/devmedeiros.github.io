@@ -3,6 +3,7 @@ title: Alura Challenge BI 2
 date: 2022-06-30 19:23:00 -0300
 categories: [Blog]
 tags: [data visualization, dashboard, powerbi, SQL, business intelligence]
+summary: Alura hosted a four-week Challenge BI, where participants needed to make 3 dashboards
 ---
 
 The Alura Challenge BI 2 was a four-week event where we're challenged to make _Business Intelligence_ dashboards according to the request of three made-up companies. During the event I made this three dashboard using Power BI, you can look at the source file of all dashboards at my [repo](https://github.com/devmedeiros/Alura-Challenge-BI-2).

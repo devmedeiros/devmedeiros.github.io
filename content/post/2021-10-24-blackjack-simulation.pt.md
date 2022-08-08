@@ -3,6 +3,7 @@ title: Simulação de 21
 date: 2021-10-24 20:43:00 -0300
 categories: [Blog]
 tags: [R, simulação, shiny, ggplot]
+summary: Uma simulação de 21 usando R e Shiny, você pode rodar um jogo com p jogadores, d baralhos, n vezes
 ---
 
 **Ferramentas utilizadas:** R, ggplot, Shiny

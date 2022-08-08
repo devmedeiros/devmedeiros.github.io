@@ -3,6 +3,7 @@ title: Python seaborn Package Guide
 date: 2021-11-07 15:14:00 -0300
 categories: [Blog]
 tags: [python, seaborn, data visualization, pandas]
+summary: A simple guide on how to make basic plots using the seaborn package from Python
 ---
 
 ## Introduction

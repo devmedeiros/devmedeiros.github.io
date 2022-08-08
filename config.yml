@@ -4,7 +4,7 @@ paginate: 5
 theme: PaperMod
 
 enableRobotsTXT: true
-buildDrafts: true
+buildDrafts: false
 buildFuture: false
 buildExpired: false
 enableEmoji: true
@@ -63,7 +63,7 @@ params:
   env: production # to enable google analytics, opengraph, twitter-cards and schema.
   title: Dev_Medeiros
   description: "A blog about Data Science"
-  keywords: [Blog, Portfolio, Data Science]
+  keywords: [Blog, Portfolio, Data Science, Python, R, Data Analytics, Data Engineering]
   author: Jaqueline Souza Medeiros
   # author: ["Me", "You"] # multiple authors
   images: ["cover.png"]

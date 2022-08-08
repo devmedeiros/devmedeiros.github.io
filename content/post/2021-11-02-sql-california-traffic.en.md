@@ -3,6 +3,7 @@ title: Have COVID Impacted California Traffic Collisions?
 date: 2021-11-02 17:14:00 -0300
 categories: [Blog]
 tags: [SQL, R, data analysis]
+summary: Using SQL to analyze if COVID impacted California Traffic Collisions
 ---
 
 **Tools used:** SQL, R

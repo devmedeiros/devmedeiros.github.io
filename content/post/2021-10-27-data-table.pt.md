@@ -3,6 +3,7 @@ title: Uma Visão Geral Sobre o Pacote data.table do R
 date: 2021-10-27 09:41:00 -0300
 categories: [Blog]
 tags: [R, data.table, manipulação de dados]
+summary: Um dos pacotes de manipulação de dados mais rápidos do R
 ---
 
 O pacote `data.table` é um dos pacotes de manipulação de dados mais rápido, atualmente ele é mais rápido até que o `pandas` e `dplyr` [^1]. A sintaxe de um `data.table` é `dt[i, j, by]`, em que:

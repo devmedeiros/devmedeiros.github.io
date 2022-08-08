@@ -4,6 +4,7 @@ date: 2022-07-24 13:06:00 -0300
 categories: [Blog]
 tags: [data cleaning, python, pandas, tutorial, kaggle, numpy, credit score, classification]
 showtoc: true
+summary: How to come up with ways to clean a dataset using Python
 ---
 
 ![a man wearing gloves cleaning a table with a cloth](https://ik.imagekit.io/devmedeiros/cleaning-table_NhcXa2k4f.jpg)

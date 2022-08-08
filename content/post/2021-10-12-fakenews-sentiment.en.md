@@ -3,6 +3,7 @@ title: Sentiment Analysis of Fake News vs Real News
 date: 2021-10-12 19:47:00 -0300
 categories: [Blog]
 tags: [data science, R, sentiment analysis, NLP, ggplot]
+summary: Sentiment Analysis comparing Fake News and Real News using R
 ---
 
 I want to tackle sentiment analysis using R in a simple way, just to get me started. With this in mind we begin loading all the packages we'll be using.

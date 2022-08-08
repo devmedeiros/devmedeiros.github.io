@@ -3,6 +3,7 @@ title: Análise de Sentimentos de Notícias Falsas vs Notícias Reais
 date: 2021-10-12 19:47:00 -0300
 categories: [Blog]
 tags: [ciência de dados, R, análise de sentimentos, NLP, ggplot]
+summary: Análise de Sentimento comparando notícias falsas e notícias reais
 ---
 
 Eu quero fazer uma análise de sentimentos usando o R como uma forma de aprender. Com isso em mente começamos carregando todos os pacotes que iremos utilizar.

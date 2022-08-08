@@ -3,6 +3,7 @@ title: Alura Challenge BI 2
 date: 2022-06-30 19:23:00 -0300
 categories: [Blog]
 tags: [visualização de dados, dashboard, powerbi, SQL, business intelligence]
+summary: Alura ofereceu um desafio de quatro semanas Challenge BI, onde os participantes precisavam fazer 3 dashboards
 ---
 
 O Alura Challenge BI 2 foi um evento que durou quatro semanas, no qual nós fomos desafiados a fazer um painél de _Business Intelligence_ com base nos requisitos de três empresas fictícias. Durante o evento eu fiz esses três painés usando o Power BI, você pode ver também os arquivos fontes dos painéis no meu [repositório](https://github.com/devmedeiros/Alura-Challenge-BI-2).

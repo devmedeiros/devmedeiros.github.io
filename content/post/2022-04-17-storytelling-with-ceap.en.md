@@ -4,6 +4,7 @@ date: 2022-04-17 10:08:00 -0300
 categories: [Blog]
 tags: [storytelling, data science, data visualization, data analysis]
 showtoc: true
+summary: The storytelling of how much each deputy/senator spends in Brazil
 ---
 
 # The Dataset
