@@ -9,7 +9,16 @@
       <link>https://devmedeiros.com/cover.png</link>
     </image>
     <generator>Hugo -- gohugo.io</generator>
-    <lastBuildDate>Mon, 30 May 2022 16:49:00 -0300</lastBuildDate><atom:link href="https://devmedeiros.com/tags/data-analysis/index.xml" rel="self" type="application/rss+xml" />
+    <lastBuildDate>Tue, 23 Aug 2022 22:57:00 -0300</lastBuildDate><atom:link href="https://devmedeiros.com/tags/data-analysis/index.xml" rel="self" type="application/rss+xml" />
+    <item>
+      <title>Case Study Analytics Engineer</title>
+      <link>https://devmedeiros.com/post/case-study-analytics-engineer/</link>
+      <pubDate>Tue, 23 Aug 2022 22:57:00 -0300</pubDate>
+      
+      <guid>https://devmedeiros.com/post/case-study-analytics-engineer/</guid>
+      <description>Project exploring common tasks an Analytics Engineer needs to perform on a daily day.</description>
+    </item>
+    
     <item>
       <title>Data Science Challenge - Churn Rate</title>
       <link>https://devmedeiros.com/post/2022-05-30-churn-rate-challenge/</link>

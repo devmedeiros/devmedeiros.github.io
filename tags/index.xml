@@ -9,7 +9,79 @@
       <link>https://devmedeiros.com/cover.png</link>
     </image>
     <generator>Hugo -- gohugo.io</generator>
-    <lastBuildDate>Mon, 08 Aug 2022 17:17:00 -0300</lastBuildDate><atom:link href="https://devmedeiros.com/tags/index.xml" rel="self" type="application/rss+xml" />
+    <lastBuildDate>Tue, 23 Aug 2022 22:57:00 -0300</lastBuildDate><atom:link href="https://devmedeiros.com/tags/index.xml" rel="self" type="application/rss+xml" />
+    <item>
+      <title>analytics engineer</title>
+      <link>https://devmedeiros.com/tags/analytics-engineer/</link>
+      <pubDate>Tue, 23 Aug 2022 22:57:00 -0300</pubDate>
+      
+      <guid>https://devmedeiros.com/tags/analytics-engineer/</guid>
+      <description></description>
+    </item>
+    
+    <item>
+      <title>case</title>
+      <link>https://devmedeiros.com/tags/case/</link>
+      <pubDate>Tue, 23 Aug 2022 22:57:00 -0300</pubDate>
+      
+      <guid>https://devmedeiros.com/tags/case/</guid>
+      <description></description>
+    </item>
+    
+    <item>
+      <title>data analysis</title>
+      <link>https://devmedeiros.com/tags/data-analysis/</link>
+      <pubDate>Tue, 23 Aug 2022 22:57:00 -0300</pubDate>
+      
+      <guid>https://devmedeiros.com/tags/data-analysis/</guid>
+      <description></description>
+    </item>
+    
+    <item>
+      <title>data engineer</title>
+      <link>https://devmedeiros.com/tags/data-engineer/</link>
+      <pubDate>Tue, 23 Aug 2022 22:57:00 -0300</pubDate>
+      
+      <guid>https://devmedeiros.com/tags/data-engineer/</guid>
+      <description></description>
+    </item>
+    
+    <item>
+      <title>data manipulation</title>
+      <link>https://devmedeiros.com/tags/data-manipulation/</link>
+      <pubDate>Tue, 23 Aug 2022 22:57:00 -0300</pubDate>
+      
+      <guid>https://devmedeiros.com/tags/data-manipulation/</guid>
+      <description></description>
+    </item>
+    
+    <item>
+      <title>kpi</title>
+      <link>https://devmedeiros.com/tags/kpi/</link>
+      <pubDate>Tue, 23 Aug 2022 22:57:00 -0300</pubDate>
+      
+      <guid>https://devmedeiros.com/tags/kpi/</guid>
+      <description></description>
+    </item>
+    
+    <item>
+      <title>python</title>
+      <link>https://devmedeiros.com/tags/python/</link>
+      <pubDate>Tue, 23 Aug 2022 22:57:00 -0300</pubDate>
+      
+      <guid>https://devmedeiros.com/tags/python/</guid>
+      <description></description>
+    </item>
+    
+    <item>
+      <title>SQL</title>
+      <link>https://devmedeiros.com/tags/sql/</link>
+      <pubDate>Tue, 23 Aug 2022 22:57:00 -0300</pubDate>
+      
+      <guid>https://devmedeiros.com/tags/sql/</guid>
+      <description></description>
+    </item>
+    
     <item>
       <title>app</title>
       <link>https://devmedeiros.com/tags/app/</link>
@@ -61,15 +133,6 @@
       <pubDate>Mon, 08 Aug 2022 17:17:00 -0300</pubDate>
       
       <guid>https://devmedeiros.com/tags/pickle/</guid>
-      <description></description>
-    </item>
-    
-    <item>
-      <title>python</title>
-      <link>https://devmedeiros.com/tags/python/</link>
-      <pubDate>Mon, 08 Aug 2022 17:17:00 -0300</pubDate>
-      
-      <guid>https://devmedeiros.com/tags/python/</guid>
       <description></description>
     </item>
     
@@ -173,15 +236,6 @@
     </item>
     
     <item>
-      <title>SQL</title>
-      <link>https://devmedeiros.com/tags/sql/</link>
-      <pubDate>Thu, 30 Jun 2022 19:23:00 -0300</pubDate>
-      
-      <guid>https://devmedeiros.com/tags/sql/</guid>
-      <description></description>
-    </item>
-    
-    <item>
       <title>feature selection</title>
       <link>https://devmedeiros.com/tags/feature-selection/</link>
       <pubDate>Tue, 14 Jun 2022 19:23:00 -0300</pubDate>
@@ -196,15 +250,6 @@
       <pubDate>Tue, 14 Jun 2022 19:23:00 -0300</pubDate>
       
       <guid>https://devmedeiros.com/tags/scikit-learn/</guid>
-      <description></description>
-    </item>
-    
-    <item>
-      <title>data analysis</title>
-      <link>https://devmedeiros.com/tags/data-analysis/</link>
-      <pubDate>Mon, 30 May 2022 16:49:00 -0300</pubDate>
-      
-      <guid>https://devmedeiros.com/tags/data-analysis/</guid>
       <description></description>
     </item>
     
@@ -304,15 +349,6 @@
       <pubDate>Tue, 02 Nov 2021 17:14:00 -0300</pubDate>
       
       <guid>https://devmedeiros.com/tags/r/</guid>
-      <description></description>
-    </item>
-    
-    <item>
-      <title>data manipulation</title>
-      <link>https://devmedeiros.com/tags/data-manipulation/</link>
-      <pubDate>Wed, 27 Oct 2021 09:41:00 -0300</pubDate>
-      
-      <guid>https://devmedeiros.com/tags/data-manipulation/</guid>
       <description></description>
     </item>
     

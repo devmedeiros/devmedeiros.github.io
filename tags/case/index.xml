@@ -1,15 +1,15 @@
 <?xml version="1.0" encoding="utf-8" standalone="yes"?>
 <rss version="2.0" xmlns:atom="http://www.w3.org/2005/Atom" xmlns:content="http://purl.org/rss/1.0/modules/content/">
   <channel>
-    <title>data manipulation on Dev_Medeiros</title>
-    <link>https://devmedeiros.com/tags/data-manipulation/</link>
-    <description>Recent content in data manipulation on Dev_Medeiros</description>
+    <title>case on Dev_Medeiros</title>
+    <link>https://devmedeiros.com/tags/case/</link>
+    <description>Recent content in case on Dev_Medeiros</description>
     <image>
       <url>https://devmedeiros.com/cover.png</url>
       <link>https://devmedeiros.com/cover.png</link>
     </image>
     <generator>Hugo -- gohugo.io</generator>
-    <lastBuildDate>Tue, 23 Aug 2022 22:57:00 -0300</lastBuildDate><atom:link href="https://devmedeiros.com/tags/data-manipulation/index.xml" rel="self" type="application/rss+xml" />
+    <lastBuildDate>Tue, 23 Aug 2022 22:57:00 -0300</lastBuildDate><atom:link href="https://devmedeiros.com/tags/case/index.xml" rel="self" type="application/rss+xml" />
     <item>
       <title>Case Study Analytics Engineer</title>
       <link>https://devmedeiros.com/post/case-study-analytics-engineer/</link>
@@ -17,15 +17,6 @@
       
       <guid>https://devmedeiros.com/post/case-study-analytics-engineer/</guid>
       <description>Project exploring common tasks an Analytics Engineer needs to perform on a daily day.</description>
-    </item>
-    
-    <item>
-      <title>An Overview on data.table R Package</title>
-      <link>https://devmedeiros.com/post/2021-10-27-data-table/</link>
-      <pubDate>Wed, 27 Oct 2021 09:41:00 -0300</pubDate>
-      
-      <guid>https://devmedeiros.com/post/2021-10-27-data-table/</guid>
-      <description>One of the fastest packages for data manipulation on R</description>
     </item>
     
   </channel>
