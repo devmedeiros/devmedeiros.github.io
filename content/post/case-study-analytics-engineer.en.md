@@ -1,6 +1,7 @@
 ---
 title: Case Study Analytics Engineer
 date: 2022-08-23 22:57:00 -0300
+lastmod: 2022-08-27 10:54:00 -0300
 categories: [Blog, Projects]
 tags: [analytics engineer, case, kpi, data analysis, data engineer, data manipulation, python, SQL]
 showtoc: true
@@ -175,9 +176,9 @@ Alternatively instead of just counting the transactions we can evaluate how much
 {{< /collapse>}}
 
 
-{{< collapse summary="The proportion of in/out of PI _(click to expand)_" >}}
+{{< collapse summary="The proportion of in/out of PIX _(click to expand)_" >}}
 
-This measure is good to analyze if customers are using their PIX to receive more money or to send money. I think it would be better if more customers are receiving more money than they are sending. Because Bankio already had free transactions for any bank, before PIX came around, others still had to pay fees to send money to your Bankio account. For this reason, I think it is better to count how many transactions are coming in through PIX and divide it by all PIX transactions. The higher the better.
+This measure is good to analyze if customers are using their PIX to receive more money or to send money. It would be better if more customers are receiving more money than they are sending. Because Bankio already had free transactions for any bank, before PIX came around, others still had to pay fees to send money to your Bankio account. For this reason, it is better to count how many transactions are coming in through PIX and divide it by all PIX transactions. The higher the better.
 
 In this case we could also sum the balance of deposit and withdrawals from the Bankio account using PIX and compare it with regular transactions.
 
@@ -204,7 +205,7 @@ _End of Day Income = Movements * Income Rate_
 
 _Account Daily Balance = Movements + End of Day Income_
 
-{{< gist devmedeiros 2a52cf2c4431a1993a98bf7f36d0f412 >}}
+{{< gist devmedeiros 2a52cf2c4431a1993a98bf7f36d0f412 "bankio-task-3.ipynb">}}
 
 ---
 
