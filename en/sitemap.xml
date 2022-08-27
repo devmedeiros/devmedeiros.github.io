@@ -3,10 +3,20 @@
   xmlns:xhtml="http://www.w3.org/1999/xhtml">
   <url>
     <loc>https://devmedeiros.com/tags/analytics-engineer/</loc>
-    <lastmod>2022-08-23T22:57:00-03:00</lastmod>
+    <lastmod>2022-08-27T10:54:00-03:00</lastmod>
+    <xhtml:link
+                rel="alternate"
+                hreflang="pt"
+                href="https://devmedeiros.com/pt/tags/analytics-engineer/"
+                />
+    <xhtml:link
+                rel="alternate"
+                hreflang="en"
+                href="https://devmedeiros.com/tags/analytics-engineer/"
+                />
   </url><url>
     <loc>https://devmedeiros.com/categories/blog/</loc>
-    <lastmod>2022-08-23T22:57:00-03:00</lastmod>
+    <lastmod>2022-08-27T10:54:00-03:00</lastmod>
     <xhtml:link
                 rel="alternate"
                 hreflang="pt"
@@ -19,13 +29,23 @@
                 />
   </url><url>
     <loc>https://devmedeiros.com/tags/case/</loc>
-    <lastmod>2022-08-23T22:57:00-03:00</lastmod>
+    <lastmod>2022-08-27T10:54:00-03:00</lastmod>
   </url><url>
     <loc>https://devmedeiros.com/post/case-study-analytics-engineer/</loc>
-    <lastmod>2022-08-23T22:57:00-03:00</lastmod>
+    <lastmod>2022-08-27T10:54:00-03:00</lastmod>
+    <xhtml:link
+                rel="alternate"
+                hreflang="pt"
+                href="https://devmedeiros.com/pt/post/case-study-analytics-engineer/"
+                />
+    <xhtml:link
+                rel="alternate"
+                hreflang="en"
+                href="https://devmedeiros.com/post/case-study-analytics-engineer/"
+                />
   </url><url>
     <loc>https://devmedeiros.com/categories/</loc>
-    <lastmod>2022-08-23T22:57:00-03:00</lastmod>
+    <lastmod>2022-08-27T10:54:00-03:00</lastmod>
     <xhtml:link
                 rel="alternate"
                 hreflang="pt"
@@ -38,16 +58,26 @@
                 />
   </url><url>
     <loc>https://devmedeiros.com/tags/data-analysis/</loc>
-    <lastmod>2022-08-23T22:57:00-03:00</lastmod>
+    <lastmod>2022-08-27T10:54:00-03:00</lastmod>
   </url><url>
     <loc>https://devmedeiros.com/tags/data-engineer/</loc>
-    <lastmod>2022-08-23T22:57:00-03:00</lastmod>
+    <lastmod>2022-08-27T10:54:00-03:00</lastmod>
+    <xhtml:link
+                rel="alternate"
+                hreflang="pt"
+                href="https://devmedeiros.com/pt/tags/data-engineer/"
+                />
+    <xhtml:link
+                rel="alternate"
+                hreflang="en"
+                href="https://devmedeiros.com/tags/data-engineer/"
+                />
   </url><url>
     <loc>https://devmedeiros.com/tags/data-manipulation/</loc>
-    <lastmod>2022-08-23T22:57:00-03:00</lastmod>
+    <lastmod>2022-08-27T10:54:00-03:00</lastmod>
   </url><url>
     <loc>https://devmedeiros.com/</loc>
-    <lastmod>2022-08-23T22:57:00-03:00</lastmod>
+    <lastmod>2022-08-27T10:54:00-03:00</lastmod>
     <xhtml:link
                 rel="alternate"
                 hreflang="pt"
@@ -60,10 +90,20 @@
                 />
   </url><url>
     <loc>https://devmedeiros.com/tags/kpi/</loc>
-    <lastmod>2022-08-23T22:57:00-03:00</lastmod>
+    <lastmod>2022-08-27T10:54:00-03:00</lastmod>
+    <xhtml:link
+                rel="alternate"
+                hreflang="pt"
+                href="https://devmedeiros.com/pt/tags/kpi/"
+                />
+    <xhtml:link
+                rel="alternate"
+                hreflang="en"
+                href="https://devmedeiros.com/tags/kpi/"
+                />
   </url><url>
     <loc>https://devmedeiros.com/post/</loc>
-    <lastmod>2022-08-23T22:57:00-03:00</lastmod>
+    <lastmod>2022-08-27T10:54:00-03:00</lastmod>
     <xhtml:link
                 rel="alternate"
                 hreflang="pt"
@@ -76,7 +116,7 @@
                 />
   </url><url>
     <loc>https://devmedeiros.com/categories/projects/</loc>
-    <lastmod>2022-08-23T22:57:00-03:00</lastmod>
+    <lastmod>2022-08-27T10:54:00-03:00</lastmod>
     <xhtml:link
                 rel="alternate"
                 hreflang="pt"
@@ -89,7 +129,7 @@
                 />
   </url><url>
     <loc>https://devmedeiros.com/tags/python/</loc>
-    <lastmod>2022-08-23T22:57:00-03:00</lastmod>
+    <lastmod>2022-08-27T10:54:00-03:00</lastmod>
     <xhtml:link
                 rel="alternate"
                 hreflang="pt"
@@ -102,7 +142,7 @@
                 />
   </url><url>
     <loc>https://devmedeiros.com/tags/sql/</loc>
-    <lastmod>2022-08-23T22:57:00-03:00</lastmod>
+    <lastmod>2022-08-27T10:54:00-03:00</lastmod>
     <xhtml:link
                 rel="alternate"
                 hreflang="pt"
@@ -115,7 +155,7 @@
                 />
   </url><url>
     <loc>https://devmedeiros.com/tags/</loc>
-    <lastmod>2022-08-23T22:57:00-03:00</lastmod>
+    <lastmod>2022-08-27T10:54:00-03:00</lastmod>
     <xhtml:link
                 rel="alternate"
                 hreflang="pt"

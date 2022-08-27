@@ -9,7 +9,16 @@
       <link>https://devmedeiros.com/cover.png</link>
     </image>
     <generator>Hugo -- gohugo.io</generator>
-    <lastBuildDate>Sun, 24 Jul 2022 13:06:00 -0300</lastBuildDate><atom:link href="https://devmedeiros.com/pt/categories/blog/index.xml" rel="self" type="application/rss+xml" />
+    <lastBuildDate>Tue, 23 Aug 2022 22:57:00 -0300</lastBuildDate><atom:link href="https://devmedeiros.com/pt/categories/blog/index.xml" rel="self" type="application/rss+xml" />
+    <item>
+      <title>Estudo de Caso Analytics Engineer</title>
+      <link>https://devmedeiros.com/pt/post/case-study-analytics-engineer/</link>
+      <pubDate>Tue, 23 Aug 2022 22:57:00 -0300</pubDate>
+      
+      <guid>https://devmedeiros.com/pt/post/case-study-analytics-engineer/</guid>
+      <description>Projeto explorando tarefas comuns que um Analytics Engineer faz diariamente.</description>
+    </item>
+    
     <item>
       <title>Limpando Base de Dados para Classificação de Score de Crédito</title>
       <link>https://devmedeiros.com/pt/post/data-cleaning-credit-score/</link>
