@@ -1,0 +1,24 @@
+<?xml version="1.0" encoding="utf-8" standalone="yes"?>
+<rss version="2.0" xmlns:atom="http://www.w3.org/2005/Atom" xmlns:content="http://purl.org/rss/1.0/modules/content/">
+  <channel>
+    <title>privacy on Dev_Medeiros</title>
+    <link>https://devmedeiros.com/tags/privacy/</link>
+    <description>Recent content in privacy on Dev_Medeiros</description>
+    <image>
+      <url>https://devmedeiros.com/cover.png</url>
+      <link>https://devmedeiros.com/cover.png</link>
+    </image>
+    <generator>Hugo -- gohugo.io</generator>
+    <lastBuildDate>Sat, 01 Oct 2022 16:14:00 -0300</lastBuildDate><atom:link href="https://devmedeiros.com/tags/privacy/index.xml" rel="self" type="application/rss+xml" />
+    <item>
+      <title>Ethics in Data Science</title>
+      <link>https://devmedeiros.com/post/ethics-data-science/</link>
+      <pubDate>Sat, 01 Oct 2022 16:14:00 -0300</pubDate>
+      
+      <guid>https://devmedeiros.com/post/ethics-data-science/</guid>
+      <description>Introduction Data science is an exciting field, but it’s also full of ethical pitfalls. If you want to avoid getting drawn into a situation that could damage your company or client, it’s important to understand the basics of data ethics and how they can affect your work.
+Learning from the past Learning from the past is important because it can help us avoid making ethical mistakes that others already committed.</description>
+    </item>
+    
+  </channel>
+</rss>
