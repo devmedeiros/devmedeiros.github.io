@@ -2,7 +2,7 @@
 title: Ethics in Data Science
 date: 2022-10-01 16:14:00 -0300
 categories: [Blog]
-tags: [ethic, data science, privacy, scraping, biais]
+tags: [ethic, data science, privacy, scraping, bias]
 ---
 
 ![table with multiple notebooks and two people writing on sheets calculating something](https://ik.imagekit.io/devmedeiros/scott-graham-5fNmWej4tAA-unsplash_npKji7Euw.jpg?ik-sdk-version=javascript-1.4.3&updatedAt=1664645960833#center)
@@ -42,10 +42,10 @@ This polluted data makes the software produce equally contaminated results, lead
 
 # Conclusion
 
-These examples shows that there are many ways to make mistakes when it comes to handling user data, but they also serve as excellent educational resources for anyone interested in learning more about _how_ these kinds of problems can be avoided in future projects.
+These examples show that there are many ways to make mistakes when it comes to handling user data, but they also serve as excellent educational resources for anyone interested in learning more about _how_ these kinds of problems can be avoided in future projects.
 
-There are lots of resources to learn more about this theme and how to combat this issue when working with machine learning models and user data. I'll list some, but remember this is a broad and deep topic, and my research may not found everything there is to it.
+There are lots of resources to learn more about this theme and how to combat this issue when working with machine learning models and user data. I'll list some, but remember this is a broad and deep topic, and my research may not find everything there is to it.
 
-- [A free course on Fairness, Accountability and Transparency sponsored by GIAN.](https://geomblog.github.io/fairness/)
+- [A free course on Fairness, Accountability, and Transparency sponsored by GIAN.](https://geomblog.github.io/fairness/)
 - [Why Mathematicians Won't Help Cops - VSauce2](https://www.youtube.com/watch?v=bXitS_PMyFQ)
 - [Data Ethics Framework - UK Government](https://www.gov.uk/government/publications/data-ethics-framework/data-ethics-framework-2020)
