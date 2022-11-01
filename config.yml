@@ -25,20 +25,8 @@ languages:
   en:
     title: Dev_Medeiros
     weight: 1
+    contentDir: content/en
   pt:
-    profileMode:
-      enabled: true
-      title: Dev_Medeiros
-      subtitle: "Um blog sobre Ciência de Dados"
-      imageUrl: "https://avatars.githubusercontent.com/u/33239902?v=4"
-      imageWidth: 120
-      imageHeight: 120
-      imageTitle: Jaqueline Medeiros
-      buttons:
-        - name: Blog
-          url: categories/blog/
-        - name: Projetos
-          url: categories/projects/
     weight: 2
     menu:
       main:
@@ -46,18 +34,27 @@ languages:
           name: sobre
           url: /about/
           weight: 10
-        - identifier: tags
-          name: tags
-          url: /tags/
+        - identifier: blog
+          name: blog
+          url: /posts/
           weight: 20
         - identifier: archives
           name: arquivos
           url: /archives/
           weight: 30
+        - identifier: projects
+          name: projetos
+          url: /projects/
+          weight: 40
         - identifier: search
           name: pesquisar
           url: /search/
-          weight: 30
+          weight: 50
+    contentDir: content/pt
+    homeInfoParams:
+      Title: "Jaqueline Medeiros"
+      Content: >
+        Analista de Dados interessada em engenharia, transparência e governança de dados. Especializando em Analytics Engineer.
 
 params:
   env: production # to enable google analytics, opengraph, twitter-cards and schema.
@@ -98,26 +95,10 @@ params:
     text: "Dev_Medeiros"
     iconHeight: 35
 
-  # profile-mode
-  profileMode:
-    enabled: true # needs to be explicitly set
-    title: Dev_Medeiros
-    subtitle: "A blog about Data Science"
-    imageUrl: "https://avatars.githubusercontent.com/u/33239902?v=4"
-    imageWidth: 120
-    imageHeight: 120
-    imageTitle: Jaqueline Medeiros
-    images: ["cover.png"]
-    buttons:
-      - name: Blog
-        url: categories/blog/
-      - name: Projects
-        url: categories/projects/
-
-  # home-info mode
   homeInfoParams:
-    Title: "Hi there \U0001F44B"
-    Content: Welcome to my blog
+      Title: "Jaqueline Medeiros"
+      Content: >
+        Data Analyst interested in engineering, transparency, and governance regarding data. Specializing in Analytics Engineer.
 
   socialIcons:
     - name: github
@@ -136,10 +117,10 @@ params:
 #    hiddenInList: true # hide on list pages and home
 #    hiddenInSingle: true # hide on single page
 
-  editPost:
-    URL: "https://github.com/devmedeiros.github.io/content"
-    Text: "Suggest Changes" # edit text
-    appendFilePath: true # to append file path to Edit link
+#  editPost:
+#    URL: "https://github.com/devmedeiros.github.io/content"
+#    Text: "Suggest Changes" # edit text
+#    appendFilePath: true # to append file path to Edit link
 
   # for search
   # https://fusejs.io/api/options.html
@@ -157,18 +138,22 @@ menu:
       name: about
       url: /about/
       weight: 10
-    - identifier: tags
-      name: tags
-      url: /tags/
+    - identifier: blog
+      name: blog
+      url: /posts/
       weight: 20
     - identifier: archives
       name: archives
       url: /archives/
       weight: 30
+    - identifier: projects
+      name: projects
+      url: /projects/
+      weight: 40
     - identifier: search
       name: search
       url: /search/
-      weight: 30
+      weight: 50
 
 #copyright: &copy; 2021 - 2022 [Dev_Medeiros]({{< ref "/terms" >}})
 
