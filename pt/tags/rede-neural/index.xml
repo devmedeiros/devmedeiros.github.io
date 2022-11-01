@@ -12,10 +12,10 @@
     <lastBuildDate>Mon, 30 May 2022 16:49:00 -0300</lastBuildDate><atom:link href="https://devmedeiros.com/pt/tags/rede-neural/index.xml" rel="self" type="application/rss+xml" />
     <item>
       <title>Data Science Challenge - Churn Rate</title>
-      <link>https://devmedeiros.com/pt/post/2022-05-30-churn-rate-challenge/</link>
+      <link>https://devmedeiros.com/pt/posts/2022-05-30-churn-rate-challenge/</link>
       <pubDate>Mon, 30 May 2022 16:49:00 -0300</pubDate>
       
-      <guid>https://devmedeiros.com/pt/post/2022-05-30-churn-rate-challenge/</guid>
+      <guid>https://devmedeiros.com/pt/posts/2022-05-30-churn-rate-challenge/</guid>
       <description>&lt;p&gt;&lt;strong&gt;Ferramentas utilizadas:&lt;/strong&gt; Python, seaborn, scikit-learn, imbalanced-learn&lt;/p&gt;
 &lt;p&gt;&lt;strong&gt;Categoria:&lt;/strong&gt; Análise de Dados, Aprendizado de Máquina&lt;/p&gt;
 &lt;hr&gt;</description>

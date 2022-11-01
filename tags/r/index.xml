@@ -12,10 +12,10 @@
     <lastBuildDate>Tue, 02 Nov 2021 17:14:00 -0300</lastBuildDate><atom:link href="https://devmedeiros.com/tags/r/index.xml" rel="self" type="application/rss+xml" />
     <item>
       <title>Have COVID Impacted California Traffic Collisions?</title>
-      <link>https://devmedeiros.com/post/2021-11-02-sql-california-traffic/</link>
+      <link>https://devmedeiros.com/posts/2021-11-02-sql-california-traffic/</link>
       <pubDate>Tue, 02 Nov 2021 17:14:00 -0300</pubDate>
       
-      <guid>https://devmedeiros.com/post/2021-11-02-sql-california-traffic/</guid>
+      <guid>https://devmedeiros.com/posts/2021-11-02-sql-california-traffic/</guid>
       <description>&lt;p&gt;&lt;strong&gt;Tools used:&lt;/strong&gt; SQL, R&lt;/p&gt;
 &lt;p&gt;&lt;strong&gt;Category:&lt;/strong&gt; Data Analysis&lt;/p&gt;
 &lt;hr&gt;</description>
@@ -23,19 +23,19 @@
     
     <item>
       <title>An Overview on data.table R Package</title>
-      <link>https://devmedeiros.com/post/2021-10-27-data-table/</link>
+      <link>https://devmedeiros.com/posts/2021-10-27-data-table/</link>
       <pubDate>Wed, 27 Oct 2021 09:41:00 -0300</pubDate>
       
-      <guid>https://devmedeiros.com/post/2021-10-27-data-table/</guid>
+      <guid>https://devmedeiros.com/posts/2021-10-27-data-table/</guid>
       <description>One of the fastest packages for data manipulation on R</description>
     </item>
     
     <item>
       <title>Blackjack Simulation</title>
-      <link>https://devmedeiros.com/post/2021-10-24-blackjack-simulation/</link>
+      <link>https://devmedeiros.com/posts/2021-10-24-blackjack-simulation/</link>
       <pubDate>Sun, 24 Oct 2021 20:43:00 -0300</pubDate>
       
-      <guid>https://devmedeiros.com/post/2021-10-24-blackjack-simulation/</guid>
+      <guid>https://devmedeiros.com/posts/2021-10-24-blackjack-simulation/</guid>
       <description>&lt;p&gt;&lt;strong&gt;Tools used:&lt;/strong&gt; R, ggplot, Shiny&lt;/p&gt;
 &lt;p&gt;&lt;strong&gt;Category:&lt;/strong&gt; Simulation&lt;/p&gt;
 &lt;hr&gt;</description>
@@ -43,10 +43,10 @@
     
     <item>
       <title>Sentiment Analysis of Fake News vs Real News</title>
-      <link>https://devmedeiros.com/post/2021-10-12-fakenews-sentiment/</link>
+      <link>https://devmedeiros.com/posts/2021-10-12-fakenews-sentiment/</link>
       <pubDate>Tue, 12 Oct 2021 19:47:00 -0300</pubDate>
       
-      <guid>https://devmedeiros.com/post/2021-10-12-fakenews-sentiment/</guid>
+      <guid>https://devmedeiros.com/posts/2021-10-12-fakenews-sentiment/</guid>
       <description>Sentiment Analysis comparing Fake News and Real News using R</description>
     </item>
     

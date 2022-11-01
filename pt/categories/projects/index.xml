@@ -12,19 +12,19 @@
     <lastBuildDate>Tue, 23 Aug 2022 22:57:00 -0300</lastBuildDate><atom:link href="https://devmedeiros.com/pt/categories/projects/index.xml" rel="self" type="application/rss+xml" />
     <item>
       <title>Estudo de Caso Analytics Engineer</title>
-      <link>https://devmedeiros.com/pt/post/case-study-analytics-engineer/</link>
+      <link>https://devmedeiros.com/pt/posts/case-study-analytics-engineer/</link>
       <pubDate>Tue, 23 Aug 2022 22:57:00 -0300</pubDate>
       
-      <guid>https://devmedeiros.com/pt/post/case-study-analytics-engineer/</guid>
+      <guid>https://devmedeiros.com/pt/posts/case-study-analytics-engineer/</guid>
       <description>Projeto explorando tarefas comuns que um Analytics Engineer faz diariamente.</description>
     </item>
     
     <item>
       <title>Aplicativo de Classificação de Score de Crédito</title>
-      <link>https://devmedeiros.com/pt/post/credit-score-classification-app/</link>
+      <link>https://devmedeiros.com/pt/posts/credit-score-classification-app/</link>
       <pubDate>Mon, 08 Aug 2022 17:17:00 -0300</pubDate>
       
-      <guid>https://devmedeiros.com/pt/post/credit-score-classification-app/</guid>
+      <guid>https://devmedeiros.com/pt/posts/credit-score-classification-app/</guid>
       <description>Usando o Streamlit para fazer um aplicativo da web que classifica sua pontuação de crédito usando Python</description>
     </item>
     

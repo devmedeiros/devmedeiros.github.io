@@ -12,10 +12,10 @@
     <lastBuildDate>Sun, 24 Jul 2022 13:06:00 -0300</lastBuildDate><atom:link href="https://devmedeiros.com/tags/tutorial/index.xml" rel="self" type="application/rss+xml" />
     <item>
       <title>Cleaning Credit Score Classification Dataset</title>
-      <link>https://devmedeiros.com/post/data-cleaning-credit-score/</link>
+      <link>https://devmedeiros.com/posts/data-cleaning-credit-score/</link>
       <pubDate>Sun, 24 Jul 2022 13:06:00 -0300</pubDate>
       
-      <guid>https://devmedeiros.com/post/data-cleaning-credit-score/</guid>
+      <guid>https://devmedeiros.com/posts/data-cleaning-credit-score/</guid>
       <description>How to come up with ways to clean a dataset using Python</description>
     </item>
     

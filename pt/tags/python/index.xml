@@ -12,37 +12,37 @@
     <lastBuildDate>Tue, 23 Aug 2022 22:57:00 -0300</lastBuildDate><atom:link href="https://devmedeiros.com/pt/tags/python/index.xml" rel="self" type="application/rss+xml" />
     <item>
       <title>Estudo de Caso Analytics Engineer</title>
-      <link>https://devmedeiros.com/pt/post/case-study-analytics-engineer/</link>
+      <link>https://devmedeiros.com/pt/posts/case-study-analytics-engineer/</link>
       <pubDate>Tue, 23 Aug 2022 22:57:00 -0300</pubDate>
       
-      <guid>https://devmedeiros.com/pt/post/case-study-analytics-engineer/</guid>
+      <guid>https://devmedeiros.com/pt/posts/case-study-analytics-engineer/</guid>
       <description>Projeto explorando tarefas comuns que um Analytics Engineer faz diariamente.</description>
     </item>
     
     <item>
       <title>Aplicativo de Classificação de Score de Crédito</title>
-      <link>https://devmedeiros.com/pt/post/credit-score-classification-app/</link>
+      <link>https://devmedeiros.com/pt/posts/credit-score-classification-app/</link>
       <pubDate>Mon, 08 Aug 2022 17:17:00 -0300</pubDate>
       
-      <guid>https://devmedeiros.com/pt/post/credit-score-classification-app/</guid>
+      <guid>https://devmedeiros.com/pt/posts/credit-score-classification-app/</guid>
       <description>Usando o Streamlit para fazer um aplicativo da web que classifica sua pontuação de crédito usando Python</description>
     </item>
     
     <item>
       <title>Limpando Base de Dados para Classificação de Score de Crédito</title>
-      <link>https://devmedeiros.com/pt/post/data-cleaning-credit-score/</link>
+      <link>https://devmedeiros.com/pt/posts/data-cleaning-credit-score/</link>
       <pubDate>Sun, 24 Jul 2022 13:06:00 -0300</pubDate>
       
-      <guid>https://devmedeiros.com/pt/post/data-cleaning-credit-score/</guid>
+      <guid>https://devmedeiros.com/pt/posts/data-cleaning-credit-score/</guid>
       <description>Como surgir com formas de limpar um banco de dados usando Python</description>
     </item>
     
     <item>
       <title>Data Science Challenge - Churn Rate</title>
-      <link>https://devmedeiros.com/pt/post/2022-05-30-churn-rate-challenge/</link>
+      <link>https://devmedeiros.com/pt/posts/2022-05-30-churn-rate-challenge/</link>
       <pubDate>Mon, 30 May 2022 16:49:00 -0300</pubDate>
       
-      <guid>https://devmedeiros.com/pt/post/2022-05-30-churn-rate-challenge/</guid>
+      <guid>https://devmedeiros.com/pt/posts/2022-05-30-churn-rate-challenge/</guid>
       <description>&lt;p&gt;&lt;strong&gt;Ferramentas utilizadas:&lt;/strong&gt; Python, seaborn, scikit-learn, imbalanced-learn&lt;/p&gt;
 &lt;p&gt;&lt;strong&gt;Categoria:&lt;/strong&gt; Análise de Dados, Aprendizado de Máquina&lt;/p&gt;
 &lt;hr&gt;</description>
@@ -50,19 +50,19 @@
     
     <item>
       <title>Análise Descritiva do Top 50 Livros Bestsellers da Amazon 2009 - 2019</title>
-      <link>https://devmedeiros.com/pt/post/2021-12-28-amazon-top-50-books/</link>
+      <link>https://devmedeiros.com/pt/posts/2021-12-28-amazon-top-50-books/</link>
       <pubDate>Tue, 28 Dec 2021 14:55:00 -0300</pubDate>
       
-      <guid>https://devmedeiros.com/pt/post/2021-12-28-amazon-top-50-books/</guid>
+      <guid>https://devmedeiros.com/pt/posts/2021-12-28-amazon-top-50-books/</guid>
       <description>Análise Exploratória de Dados dos 50 livros mais bem vendidos da Amazon de 2009 - 2019</description>
     </item>
     
     <item>
       <title>Guia do Pacote de Python seaborn</title>
-      <link>https://devmedeiros.com/pt/post/2021-11-07-seaborn-package-guide/</link>
+      <link>https://devmedeiros.com/pt/posts/2021-11-07-seaborn-package-guide/</link>
       <pubDate>Sun, 07 Nov 2021 15:14:00 -0300</pubDate>
       
-      <guid>https://devmedeiros.com/pt/post/2021-11-07-seaborn-package-guide/</guid>
+      <guid>https://devmedeiros.com/pt/posts/2021-11-07-seaborn-package-guide/</guid>
       <description>Um guia simples de como fazer gráficos básicos usando o pacote seaborn do Python</description>
     </item>
     

@@ -12,19 +12,19 @@
     <lastBuildDate>Tue, 23 Aug 2022 22:57:00 -0300</lastBuildDate><atom:link href="https://devmedeiros.com/pt/tags/manipula%C3%A7%C3%A3o-de-dados/index.xml" rel="self" type="application/rss+xml" />
     <item>
       <title>Estudo de Caso Analytics Engineer</title>
-      <link>https://devmedeiros.com/pt/post/case-study-analytics-engineer/</link>
+      <link>https://devmedeiros.com/pt/posts/case-study-analytics-engineer/</link>
       <pubDate>Tue, 23 Aug 2022 22:57:00 -0300</pubDate>
       
-      <guid>https://devmedeiros.com/pt/post/case-study-analytics-engineer/</guid>
+      <guid>https://devmedeiros.com/pt/posts/case-study-analytics-engineer/</guid>
       <description>Projeto explorando tarefas comuns que um Analytics Engineer faz diariamente.</description>
     </item>
     
     <item>
       <title>Uma Visão Geral Sobre o Pacote data.table do R</title>
-      <link>https://devmedeiros.com/pt/post/2021-10-27-data-table/</link>
+      <link>https://devmedeiros.com/pt/posts/2021-10-27-data-table/</link>
       <pubDate>Wed, 27 Oct 2021 09:41:00 -0300</pubDate>
       
-      <guid>https://devmedeiros.com/pt/post/2021-10-27-data-table/</guid>
+      <guid>https://devmedeiros.com/pt/posts/2021-10-27-data-table/</guid>
       <description>Um dos pacotes de manipulação de dados mais rápidos do R</description>
     </item>
     
