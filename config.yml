@@ -10,6 +10,12 @@ buildExpired: false
 enableEmoji: true
 
 googleAnalytics: G-D4W6Y2T4WX
+privacy:
+  googleAnalytics:
+    anonymizeIP: true
+    disable: false
+    respectDoNotTrack: true
+    useSessionStorage: false
 
 minify:
   disableXML: true
