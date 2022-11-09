@@ -12,10 +12,10 @@
     <lastBuildDate>Sun, 24 Jul 2022 13:06:00 -0300</lastBuildDate><atom:link href="https://devmedeiros.com/pt/tags/tutorial/index.xml" rel="self" type="application/rss+xml" />
     <item>
       <title>Limpando Base de Dados para Classificação de Score de Crédito</title>
-      <link>https://devmedeiros.com/pt/posts/data-cleaning-credit-score/</link>
+      <link>https://devmedeiros.com/pt/post/data-cleaning-credit-score/</link>
       <pubDate>Sun, 24 Jul 2022 13:06:00 -0300</pubDate>
       
-      <guid>https://devmedeiros.com/pt/posts/data-cleaning-credit-score/</guid>
+      <guid>https://devmedeiros.com/pt/post/data-cleaning-credit-score/</guid>
       <description>Como surgir com formas de limpar um banco de dados usando Python</description>
     </item>
     

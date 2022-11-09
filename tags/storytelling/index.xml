@@ -12,10 +12,10 @@
     <lastBuildDate>Mon, 30 May 2022 16:49:00 -0300</lastBuildDate><atom:link href="https://devmedeiros.com/tags/storytelling/index.xml" rel="self" type="application/rss+xml" />
     <item>
       <title>Data Science Challenge - Churn Rate</title>
-      <link>https://devmedeiros.com/posts/2022-05-30-churn-rate-challenge/</link>
+      <link>https://devmedeiros.com/post/2022-05-30-churn-rate-challenge/</link>
       <pubDate>Mon, 30 May 2022 16:49:00 -0300</pubDate>
       
-      <guid>https://devmedeiros.com/posts/2022-05-30-churn-rate-challenge/</guid>
+      <guid>https://devmedeiros.com/post/2022-05-30-churn-rate-challenge/</guid>
       <description>&lt;p&gt;&lt;strong&gt;Tools used:&lt;/strong&gt; Python, seaborn, scikit-learn, imbalanced-learn&lt;/p&gt;
 &lt;p&gt;&lt;strong&gt;Category:&lt;/strong&gt; Data Analysis, Machine Learning&lt;/p&gt;
 &lt;hr&gt;</description>
@@ -23,19 +23,19 @@
     
     <item>
       <title>UX/UI for Business Intelligence Dashboards</title>
-      <link>https://devmedeiros.com/posts/2022-04-29-ux-power-bi-dashboards/</link>
+      <link>https://devmedeiros.com/post/2022-04-29-ux-power-bi-dashboards/</link>
       <pubDate>Fri, 29 Apr 2022 11:14:00 -0300</pubDate>
       
-      <guid>https://devmedeiros.com/posts/2022-04-29-ux-power-bi-dashboards/</guid>
+      <guid>https://devmedeiros.com/post/2022-04-29-ux-power-bi-dashboards/</guid>
       <description>Defining UX/UI in the context of Bussiness Intelligence for Dashboards with examples</description>
     </item>
     
     <item>
       <title>Storytelling with CEAP</title>
-      <link>https://devmedeiros.com/posts/2022-04-17-storytelling-with-ceap/</link>
+      <link>https://devmedeiros.com/post/2022-04-17-storytelling-with-ceap/</link>
       <pubDate>Sun, 17 Apr 2022 10:08:00 -0300</pubDate>
       
-      <guid>https://devmedeiros.com/posts/2022-04-17-storytelling-with-ceap/</guid>
+      <guid>https://devmedeiros.com/post/2022-04-17-storytelling-with-ceap/</guid>
       <description>The storytelling of how much each deputy/senator spends in Brazil</description>
     </item>
     

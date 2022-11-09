@@ -12,38 +12,38 @@
     <lastBuildDate>Sat, 01 Oct 2022 16:14:00 -0300</lastBuildDate><atom:link href="https://devmedeiros.com/tags/data-science/index.xml" rel="self" type="application/rss+xml" />
     <item>
       <title>Ethics in Data Science</title>
-      <link>https://devmedeiros.com/posts/ethics-data-science/</link>
+      <link>https://devmedeiros.com/post/ethics-data-science/</link>
       <pubDate>Sat, 01 Oct 2022 16:14:00 -0300</pubDate>
       
-      <guid>https://devmedeiros.com/posts/ethics-data-science/</guid>
+      <guid>https://devmedeiros.com/post/ethics-data-science/</guid>
       <description>Introduction Data science is an exciting field, but it’s also full of ethical pitfalls. If you want to avoid getting drawn into a situation that could damage your company or client, it’s important to understand the basics of data ethics and how they can affect your work.
 Learning from the past Learning from the past is important because it can help us avoid making ethical mistakes that others already committed.</description>
     </item>
     
     <item>
       <title>Credit Score Classification App</title>
-      <link>https://devmedeiros.com/posts/credit-score-classification-app/</link>
+      <link>https://devmedeiros.com/post/credit-score-classification-app/</link>
       <pubDate>Mon, 08 Aug 2022 17:17:00 -0300</pubDate>
       
-      <guid>https://devmedeiros.com/posts/credit-score-classification-app/</guid>
+      <guid>https://devmedeiros.com/post/credit-score-classification-app/</guid>
       <description>Using Streamlit to make a web app that classifies your credit score using Python</description>
     </item>
     
     <item>
       <title>Storytelling with CEAP</title>
-      <link>https://devmedeiros.com/posts/2022-04-17-storytelling-with-ceap/</link>
+      <link>https://devmedeiros.com/post/2022-04-17-storytelling-with-ceap/</link>
       <pubDate>Sun, 17 Apr 2022 10:08:00 -0300</pubDate>
       
-      <guid>https://devmedeiros.com/posts/2022-04-17-storytelling-with-ceap/</guid>
+      <guid>https://devmedeiros.com/post/2022-04-17-storytelling-with-ceap/</guid>
       <description>The storytelling of how much each deputy/senator spends in Brazil</description>
     </item>
     
     <item>
       <title>Sentiment Analysis of Fake News vs Real News</title>
-      <link>https://devmedeiros.com/posts/2021-10-12-fakenews-sentiment/</link>
+      <link>https://devmedeiros.com/post/2021-10-12-fakenews-sentiment/</link>
       <pubDate>Tue, 12 Oct 2021 19:47:00 -0300</pubDate>
       
-      <guid>https://devmedeiros.com/posts/2021-10-12-fakenews-sentiment/</guid>
+      <guid>https://devmedeiros.com/post/2021-10-12-fakenews-sentiment/</guid>
       <description>Sentiment Analysis comparing Fake News and Real News using R</description>
     </item>
     

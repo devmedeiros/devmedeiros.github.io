@@ -12,10 +12,10 @@
     <lastBuildDate>Sun, 24 Oct 2021 20:43:00 -0300</lastBuildDate><atom:link href="https://devmedeiros.com/tags/simulation/index.xml" rel="self" type="application/rss+xml" />
     <item>
       <title>Blackjack Simulation</title>
-      <link>https://devmedeiros.com/posts/2021-10-24-blackjack-simulation/</link>
+      <link>https://devmedeiros.com/post/2021-10-24-blackjack-simulation/</link>
       <pubDate>Sun, 24 Oct 2021 20:43:00 -0300</pubDate>
       
-      <guid>https://devmedeiros.com/posts/2021-10-24-blackjack-simulation/</guid>
+      <guid>https://devmedeiros.com/post/2021-10-24-blackjack-simulation/</guid>
       <description>&lt;p&gt;&lt;strong&gt;Tools used:&lt;/strong&gt; R, ggplot, Shiny&lt;/p&gt;
 &lt;p&gt;&lt;strong&gt;Category:&lt;/strong&gt; Simulation&lt;/p&gt;
 &lt;hr&gt;</description>

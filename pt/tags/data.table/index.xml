@@ -12,10 +12,10 @@
     <lastBuildDate>Wed, 27 Oct 2021 09:41:00 -0300</lastBuildDate><atom:link href="https://devmedeiros.com/pt/tags/data.table/index.xml" rel="self" type="application/rss+xml" />
     <item>
       <title>Uma Visão Geral Sobre o Pacote data.table do R</title>
-      <link>https://devmedeiros.com/pt/posts/2021-10-27-data-table/</link>
+      <link>https://devmedeiros.com/pt/post/2021-10-27-data-table/</link>
       <pubDate>Wed, 27 Oct 2021 09:41:00 -0300</pubDate>
       
-      <guid>https://devmedeiros.com/pt/posts/2021-10-27-data-table/</guid>
+      <guid>https://devmedeiros.com/pt/post/2021-10-27-data-table/</guid>
       <description>Um dos pacotes de manipulação de dados mais rápidos do R</description>
     </item>
     

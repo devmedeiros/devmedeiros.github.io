@@ -12,19 +12,19 @@
     <lastBuildDate>Mon, 08 Aug 2022 17:17:00 -0300</lastBuildDate><atom:link href="https://devmedeiros.com/pt/tags/ci%C3%AAncia-de-dados/index.xml" rel="self" type="application/rss+xml" />
     <item>
       <title>Aplicativo de Classificação de Score de Crédito</title>
-      <link>https://devmedeiros.com/pt/posts/credit-score-classification-app/</link>
+      <link>https://devmedeiros.com/pt/post/credit-score-classification-app/</link>
       <pubDate>Mon, 08 Aug 2022 17:17:00 -0300</pubDate>
       
-      <guid>https://devmedeiros.com/pt/posts/credit-score-classification-app/</guid>
+      <guid>https://devmedeiros.com/pt/post/credit-score-classification-app/</guid>
       <description>Usando o Streamlit para fazer um aplicativo da web que classifica sua pontuação de crédito usando Python</description>
     </item>
     
     <item>
       <title>Análise de Sentimentos de Notícias Falsas vs Notícias Reais</title>
-      <link>https://devmedeiros.com/pt/posts/2021-10-12-fakenews-sentiment/</link>
+      <link>https://devmedeiros.com/pt/post/2021-10-12-fakenews-sentiment/</link>
       <pubDate>Tue, 12 Oct 2021 19:47:00 -0300</pubDate>
       
-      <guid>https://devmedeiros.com/pt/posts/2021-10-12-fakenews-sentiment/</guid>
+      <guid>https://devmedeiros.com/pt/post/2021-10-12-fakenews-sentiment/</guid>
       <description>Análise de Sentimento comparando notícias falsas e notícias reais</description>
     </item>
     

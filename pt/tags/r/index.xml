@@ -12,19 +12,19 @@
     <lastBuildDate>Wed, 27 Oct 2021 09:41:00 -0300</lastBuildDate><atom:link href="https://devmedeiros.com/pt/tags/r/index.xml" rel="self" type="application/rss+xml" />
     <item>
       <title>Uma Visão Geral Sobre o Pacote data.table do R</title>
-      <link>https://devmedeiros.com/pt/posts/2021-10-27-data-table/</link>
+      <link>https://devmedeiros.com/pt/post/2021-10-27-data-table/</link>
       <pubDate>Wed, 27 Oct 2021 09:41:00 -0300</pubDate>
       
-      <guid>https://devmedeiros.com/pt/posts/2021-10-27-data-table/</guid>
+      <guid>https://devmedeiros.com/pt/post/2021-10-27-data-table/</guid>
       <description>Um dos pacotes de manipulação de dados mais rápidos do R</description>
     </item>
     
     <item>
       <title>Simulação de 21</title>
-      <link>https://devmedeiros.com/pt/posts/2021-10-24-blackjack-simulation/</link>
+      <link>https://devmedeiros.com/pt/post/2021-10-24-blackjack-simulation/</link>
       <pubDate>Sun, 24 Oct 2021 20:43:00 -0300</pubDate>
       
-      <guid>https://devmedeiros.com/pt/posts/2021-10-24-blackjack-simulation/</guid>
+      <guid>https://devmedeiros.com/pt/post/2021-10-24-blackjack-simulation/</guid>
       <description>&lt;p&gt;&lt;strong&gt;Ferramentas utilizadas:&lt;/strong&gt; R, ggplot, Shiny&lt;/p&gt;
 &lt;p&gt;&lt;strong&gt;Categoria:&lt;/strong&gt; Simulação&lt;/p&gt;
 &lt;hr&gt;</description>
@@ -32,10 +32,10 @@
     
     <item>
       <title>Análise de Sentimentos de Notícias Falsas vs Notícias Reais</title>
-      <link>https://devmedeiros.com/pt/posts/2021-10-12-fakenews-sentiment/</link>
+      <link>https://devmedeiros.com/pt/post/2021-10-12-fakenews-sentiment/</link>
       <pubDate>Tue, 12 Oct 2021 19:47:00 -0300</pubDate>
       
-      <guid>https://devmedeiros.com/pt/posts/2021-10-12-fakenews-sentiment/</guid>
+      <guid>https://devmedeiros.com/pt/post/2021-10-12-fakenews-sentiment/</guid>
       <description>Análise de Sentimento comparando notícias falsas e notícias reais</description>
     </item>
     

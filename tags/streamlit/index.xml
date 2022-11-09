@@ -12,10 +12,10 @@
     <lastBuildDate>Mon, 08 Aug 2022 17:17:00 -0300</lastBuildDate><atom:link href="https://devmedeiros.com/tags/streamlit/index.xml" rel="self" type="application/rss+xml" />
     <item>
       <title>Credit Score Classification App</title>
-      <link>https://devmedeiros.com/posts/credit-score-classification-app/</link>
+      <link>https://devmedeiros.com/post/credit-score-classification-app/</link>
       <pubDate>Mon, 08 Aug 2022 17:17:00 -0300</pubDate>
       
-      <guid>https://devmedeiros.com/posts/credit-score-classification-app/</guid>
+      <guid>https://devmedeiros.com/post/credit-score-classification-app/</guid>
       <description>Using Streamlit to make a web app that classifies your credit score using Python</description>
     </item>
     
