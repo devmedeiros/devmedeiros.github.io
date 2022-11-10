@@ -76,7 +76,7 @@ params:
   DateFormat: 
   defaultTheme: light # dark, light
   disableThemeToggle: false
-
+  displayFullLangName: true
   ShowReadingTime: true
   ShowShareButtons: true
   ShareButtons: ["twitter", "linkedin", "facebook", "whatsapp", "telegram"]
