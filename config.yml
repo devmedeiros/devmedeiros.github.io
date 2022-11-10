@@ -175,3 +175,9 @@ menu:
 #         guessSyntax: true
 #         lineNos: true
 #         style: monokai
+
+
+
+module:
+  imports:
+  - path: github.com/jakejarvis/hugo-mod-twemoji
