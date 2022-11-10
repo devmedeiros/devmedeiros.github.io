@@ -722,5 +722,17 @@
                 hreflang="en"
                 href="https://devmedeiros.com/search/"
                 />
+  </url><url>
+    <loc>https://devmedeiros.com/terms/</loc>
+    <xhtml:link
+                rel="alternate"
+                hreflang="pt"
+                href="https://devmedeiros.com/pt/terms/"
+                />
+    <xhtml:link
+                rel="alternate"
+                hreflang="en"
+                href="https://devmedeiros.com/terms/"
+                />
   </url>
 </urlset>

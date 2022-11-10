@@ -698,5 +698,17 @@
                 hreflang="pt"
                 href="https://devmedeiros.com/pt/about/"
                 />
+  </url><url>
+    <loc>https://devmedeiros.com/pt/terms/</loc>
+    <xhtml:link
+                rel="alternate"
+                hreflang="en"
+                href="https://devmedeiros.com/terms/"
+                />
+    <xhtml:link
+                rel="alternate"
+                hreflang="pt"
+                href="https://devmedeiros.com/pt/terms/"
+                />
   </url>
 </urlset>
