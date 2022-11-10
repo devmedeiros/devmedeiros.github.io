@@ -29,10 +29,13 @@ outputs:
 
 languages:
   en:
-    title: Dev_Medeiros
+    languageAltTitle: "English"
+    LanguageName: "🇺🇸"
     weight: 1
     contentDir: content/en
   pt:
+    languageAltTitle: "Português"
+    LanguageName: "🇧🇷"
     weight: 2
     menu:
       main:
@@ -42,7 +45,7 @@ languages:
           weight: 10
         - identifier: blog
           name: blog
-          url: /posts/
+          url: /post/
           weight: 20
         - identifier: archives
           name: arquivos
@@ -146,7 +149,7 @@ menu:
       weight: 10
     - identifier: blog
       name: blog
-      url: /posts/
+      url: /post/
       weight: 20
     - identifier: archives
       name: archives
