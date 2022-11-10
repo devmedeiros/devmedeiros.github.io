@@ -1,14 +1,15 @@
 ---
-title: "Terms and policies" # in any language you want
+title: "Terms and Policies" # in any language you want
 layout: "single" # is necessary
 # url: "/archive"
 # description: "Description for Search"
 summary: "terms"
 searchHidden: true
-hidemeta: true
+author: ' '
+showReadingTime: false
 ---
 
-This is my personal blog, the content here is written and edited by me (Jaqueline Souza Medeiros). By continue to use this website, in any and all forms, constitutes and acceptance of these terms and policies.
+This is my personal blog, the content here is written and edited by me (Jaqueline Souza Medeiros). By continue to use this website, in any and all forms, constitutes acceptance of these terms and policies.
 
 The content provided is for informational purposes. The posts and projects are my own and may not represent the position, strategy, or opinion of my current or past employers. I will not be liable for any errors or omissions in this information nor for the availability of this information. I will not be liable for any losses, injuries, or damages from the display or use of this information.
 
@@ -45,7 +46,7 @@ OR OTHERWISE, ARISING FROM, OUT OF OR IN CONNECTION WITH THE SOFTWARE OR THE USE
 OTHER DEALINGS IN THE SOFTWARE.
 ```
 
-The [CC-BY-SA-4.0](https://creativecommons.org/licenses/by-nc-sa/4.0/) applies for all content otherwise noticed under /blog/ and /projects/.
+The [CC-BY-SA-4.0](https://creativecommons.org/licenses/by-nc-sa/4.0/) applies for all content otherwise noticed under /post/ and /projects/.
 
 ## Favicon
 
