@@ -9,7 +9,52 @@
       <link>https://devmedeiros.com/cover.png</link>
     </image>
     <generator>Hugo -- gohugo.io</generator>
-    <lastBuildDate>Sat, 01 Oct 2022 16:14:00 -0300</lastBuildDate><atom:link href="https://devmedeiros.com/tags/index.xml" rel="self" type="application/rss+xml" />
+    <lastBuildDate>Tue, 15 Nov 2022 08:01:00 -0300</lastBuildDate><atom:link href="https://devmedeiros.com/tags/index.xml" rel="self" type="application/rss+xml" />
+    <item>
+      <title>business intelligence</title>
+      <link>https://devmedeiros.com/tags/business-intelligence/</link>
+      <pubDate>Tue, 15 Nov 2022 08:01:00 -0300</pubDate>
+      
+      <guid>https://devmedeiros.com/tags/business-intelligence/</guid>
+      <description></description>
+    </item>
+    
+    <item>
+      <title>data visualization</title>
+      <link>https://devmedeiros.com/tags/data-visualization/</link>
+      <pubDate>Tue, 15 Nov 2022 08:01:00 -0300</pubDate>
+      
+      <guid>https://devmedeiros.com/tags/data-visualization/</guid>
+      <description></description>
+    </item>
+    
+    <item>
+      <title>ethic</title>
+      <link>https://devmedeiros.com/tags/ethic/</link>
+      <pubDate>Tue, 15 Nov 2022 08:01:00 -0300</pubDate>
+      
+      <guid>https://devmedeiros.com/tags/ethic/</guid>
+      <description></description>
+    </item>
+    
+    <item>
+      <title>review</title>
+      <link>https://devmedeiros.com/tags/review/</link>
+      <pubDate>Tue, 15 Nov 2022 08:01:00 -0300</pubDate>
+      
+      <guid>https://devmedeiros.com/tags/review/</guid>
+      <description></description>
+    </item>
+    
+    <item>
+      <title>storytelling</title>
+      <link>https://devmedeiros.com/tags/storytelling/</link>
+      <pubDate>Tue, 15 Nov 2022 08:01:00 -0300</pubDate>
+      
+      <guid>https://devmedeiros.com/tags/storytelling/</guid>
+      <description></description>
+    </item>
+    
     <item>
       <title>bias</title>
       <link>https://devmedeiros.com/tags/bias/</link>
@@ -25,15 +70,6 @@
       <pubDate>Sat, 01 Oct 2022 16:14:00 -0300</pubDate>
       
       <guid>https://devmedeiros.com/tags/data-science/</guid>
-      <description></description>
-    </item>
-    
-    <item>
-      <title>ethic</title>
-      <link>https://devmedeiros.com/tags/ethic/</link>
-      <pubDate>Sat, 01 Oct 2022 16:14:00 -0300</pubDate>
-      
-      <guid>https://devmedeiros.com/tags/ethic/</guid>
       <description></description>
     </item>
     
@@ -146,15 +182,6 @@
     </item>
     
     <item>
-      <title>data visualization</title>
-      <link>https://devmedeiros.com/tags/data-visualization/</link>
-      <pubDate>Mon, 08 Aug 2022 17:17:00 -0300</pubDate>
-      
-      <guid>https://devmedeiros.com/tags/data-visualization/</guid>
-      <description></description>
-    </item>
-    
-    <item>
       <title>machine learning</title>
       <link>https://devmedeiros.com/tags/machine-learning/</link>
       <pubDate>Mon, 08 Aug 2022 17:17:00 -0300</pubDate>
@@ -245,15 +272,6 @@
     </item>
     
     <item>
-      <title>business intelligence</title>
-      <link>https://devmedeiros.com/tags/business-intelligence/</link>
-      <pubDate>Thu, 30 Jun 2022 19:23:00 -0300</pubDate>
-      
-      <guid>https://devmedeiros.com/tags/business-intelligence/</guid>
-      <description></description>
-    </item>
-    
-    <item>
       <title>dashboard</title>
       <link>https://devmedeiros.com/tags/dashboard/</link>
       <pubDate>Thu, 30 Jun 2022 19:23:00 -0300</pubDate>
@@ -299,15 +317,6 @@
     </item>
     
     <item>
-      <title>storytelling</title>
-      <link>https://devmedeiros.com/tags/storytelling/</link>
-      <pubDate>Mon, 30 May 2022 16:49:00 -0300</pubDate>
-      
-      <guid>https://devmedeiros.com/tags/storytelling/</guid>
-      <description></description>
-    </item>
-    
-    <item>
       <title>figma</title>
       <link>https://devmedeiros.com/tags/figma/</link>
       <pubDate>Fri, 29 Apr 2022 11:14:00 -0300</pubDate>
@@ -349,15 +358,6 @@
       <pubDate>Mon, 24 Jan 2022 18:15:00 -0300</pubDate>
       
       <guid>https://devmedeiros.com/tags/podcast/</guid>
-      <description></description>
-    </item>
-    
-    <item>
-      <title>review</title>
-      <link>https://devmedeiros.com/tags/review/</link>
-      <pubDate>Mon, 24 Jan 2022 18:15:00 -0300</pubDate>
-      
-      <guid>https://devmedeiros.com/tags/review/</guid>
       <description></description>
     </item>
     

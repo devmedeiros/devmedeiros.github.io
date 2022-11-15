@@ -2,11 +2,8 @@
 <urlset xmlns="http://www.sitemaps.org/schemas/sitemap/0.9"
   xmlns:xhtml="http://www.w3.org/1999/xhtml">
   <url>
-    <loc>https://devmedeiros.com/tags/bias/</loc>
-    <lastmod>2022-10-01T16:14:00-03:00</lastmod>
-  </url><url>
     <loc>https://devmedeiros.com/categories/blog/</loc>
-    <lastmod>2022-10-01T16:14:00-03:00</lastmod>
+    <lastmod>2022-11-15T08:01:00-03:00</lastmod>
     <xhtml:link
                 rel="alternate"
                 hreflang="pt"
@@ -18,8 +15,21 @@
                 href="https://devmedeiros.com/categories/blog/"
                 />
   </url><url>
+    <loc>https://devmedeiros.com/tags/business-intelligence/</loc>
+    <lastmod>2022-11-15T08:01:00-03:00</lastmod>
+    <xhtml:link
+                rel="alternate"
+                hreflang="pt"
+                href="https://devmedeiros.com/pt/tags/business-intelligence/"
+                />
+    <xhtml:link
+                rel="alternate"
+                hreflang="en"
+                href="https://devmedeiros.com/tags/business-intelligence/"
+                />
+  </url><url>
     <loc>https://devmedeiros.com/categories/</loc>
-    <lastmod>2022-10-01T16:14:00-03:00</lastmod>
+    <lastmod>2022-11-15T08:01:00-03:00</lastmod>
     <xhtml:link
                 rel="alternate"
                 hreflang="pt"
@@ -31,11 +41,21 @@
                 href="https://devmedeiros.com/categories/"
                 />
   </url><url>
-    <loc>https://devmedeiros.com/tags/data-science/</loc>
-    <lastmod>2022-10-01T16:14:00-03:00</lastmod>
+    <loc>https://devmedeiros.com/tags/data-visualization/</loc>
+    <lastmod>2022-11-15T08:01:00-03:00</lastmod>
+    <xhtml:link
+                rel="alternate"
+                hreflang="pt"
+                href="https://devmedeiros.com/pt/tags/data-visualization/"
+                />
+    <xhtml:link
+                rel="alternate"
+                hreflang="en"
+                href="https://devmedeiros.com/tags/data-visualization/"
+                />
   </url><url>
     <loc>https://devmedeiros.com/</loc>
-    <lastmod>2022-10-01T16:14:00-03:00</lastmod>
+    <lastmod>2022-11-15T08:01:00-03:00</lastmod>
     <xhtml:link
                 rel="alternate"
                 hreflang="pt"
@@ -48,13 +68,33 @@
                 />
   </url><url>
     <loc>https://devmedeiros.com/tags/ethic/</loc>
-    <lastmod>2022-10-01T16:14:00-03:00</lastmod>
+    <lastmod>2022-11-15T08:01:00-03:00</lastmod>
+    <xhtml:link
+                rel="alternate"
+                hreflang="pt"
+                href="https://devmedeiros.com/pt/tags/ethic/"
+                />
+    <xhtml:link
+                rel="alternate"
+                hreflang="en"
+                href="https://devmedeiros.com/tags/ethic/"
+                />
   </url><url>
-    <loc>https://devmedeiros.com/post/ethics-data-science/</loc>
-    <lastmod>2022-10-01T16:14:00-03:00</lastmod>
+    <loc>https://devmedeiros.com/post/choose-the-best-graph/</loc>
+    <lastmod>2022-11-15T08:01:00-03:00</lastmod>
+    <xhtml:link
+                rel="alternate"
+                hreflang="pt"
+                href="https://devmedeiros.com/pt/post/choose-the-best-graph/"
+                />
+    <xhtml:link
+                rel="alternate"
+                hreflang="en"
+                href="https://devmedeiros.com/post/choose-the-best-graph/"
+                />
   </url><url>
     <loc>https://devmedeiros.com/post/</loc>
-    <lastmod>2022-10-01T16:14:00-03:00</lastmod>
+    <lastmod>2022-11-15T08:01:00-03:00</lastmod>
     <xhtml:link
                 rel="alternate"
                 hreflang="pt"
@@ -66,14 +106,34 @@
                 href="https://devmedeiros.com/post/"
                 />
   </url><url>
-    <loc>https://devmedeiros.com/tags/privacy/</loc>
-    <lastmod>2022-10-01T16:14:00-03:00</lastmod>
+    <loc>https://devmedeiros.com/tags/review/</loc>
+    <lastmod>2022-11-15T08:01:00-03:00</lastmod>
+    <xhtml:link
+                rel="alternate"
+                hreflang="pt"
+                href="https://devmedeiros.com/pt/tags/review/"
+                />
+    <xhtml:link
+                rel="alternate"
+                hreflang="en"
+                href="https://devmedeiros.com/tags/review/"
+                />
   </url><url>
-    <loc>https://devmedeiros.com/tags/scraping/</loc>
-    <lastmod>2022-10-01T16:14:00-03:00</lastmod>
+    <loc>https://devmedeiros.com/tags/storytelling/</loc>
+    <lastmod>2022-11-15T08:01:00-03:00</lastmod>
+    <xhtml:link
+                rel="alternate"
+                hreflang="pt"
+                href="https://devmedeiros.com/pt/tags/storytelling/"
+                />
+    <xhtml:link
+                rel="alternate"
+                hreflang="en"
+                href="https://devmedeiros.com/tags/storytelling/"
+                />
   </url><url>
     <loc>https://devmedeiros.com/tags/</loc>
-    <lastmod>2022-10-01T16:14:00-03:00</lastmod>
+    <lastmod>2022-11-15T08:01:00-03:00</lastmod>
     <xhtml:link
                 rel="alternate"
                 hreflang="pt"
@@ -84,6 +144,21 @@
                 hreflang="en"
                 href="https://devmedeiros.com/tags/"
                 />
+  </url><url>
+    <loc>https://devmedeiros.com/tags/bias/</loc>
+    <lastmod>2022-10-01T16:14:00-03:00</lastmod>
+  </url><url>
+    <loc>https://devmedeiros.com/tags/data-science/</loc>
+    <lastmod>2022-10-01T16:14:00-03:00</lastmod>
+  </url><url>
+    <loc>https://devmedeiros.com/post/ethics-data-science/</loc>
+    <lastmod>2022-10-01T16:14:00-03:00</lastmod>
+  </url><url>
+    <loc>https://devmedeiros.com/tags/privacy/</loc>
+    <lastmod>2022-10-01T16:14:00-03:00</lastmod>
+  </url><url>
+    <loc>https://devmedeiros.com/tags/scraping/</loc>
+    <lastmod>2022-10-01T16:14:00-03:00</lastmod>
   </url><url>
     <loc>https://devmedeiros.com/tags/analytics-engineer/</loc>
     <lastmod>2022-08-27T10:54:00-03:00</lastmod>
@@ -203,9 +278,6 @@
                 hreflang="en"
                 href="https://devmedeiros.com/post/credit-score-classification-app/"
                 />
-  </url><url>
-    <loc>https://devmedeiros.com/tags/data-visualization/</loc>
-    <lastmod>2022-08-08T17:17:00-03:00</lastmod>
   </url><url>
     <loc>https://devmedeiros.com/tags/machine-learning/</loc>
     <lastmod>2022-08-08T17:17:00-03:00</lastmod>
@@ -333,19 +405,6 @@
                 href="https://devmedeiros.com/post/alura-challenge-bi-2/"
                 />
   </url><url>
-    <loc>https://devmedeiros.com/tags/business-intelligence/</loc>
-    <lastmod>2022-07-01T16:14:00-03:00</lastmod>
-    <xhtml:link
-                rel="alternate"
-                hreflang="pt"
-                href="https://devmedeiros.com/pt/tags/business-intelligence/"
-                />
-    <xhtml:link
-                rel="alternate"
-                hreflang="en"
-                href="https://devmedeiros.com/tags/business-intelligence/"
-                />
-  </url><url>
     <loc>https://devmedeiros.com/tags/dashboard/</loc>
     <lastmod>2022-07-01T16:14:00-03:00</lastmod>
     <xhtml:link
@@ -396,19 +455,6 @@
   </url><url>
     <loc>https://devmedeiros.com/tags/neural-network/</loc>
     <lastmod>2022-06-09T18:08:00-03:00</lastmod>
-  </url><url>
-    <loc>https://devmedeiros.com/tags/storytelling/</loc>
-    <lastmod>2022-07-01T16:14:00-03:00</lastmod>
-    <xhtml:link
-                rel="alternate"
-                hreflang="pt"
-                href="https://devmedeiros.com/pt/tags/storytelling/"
-                />
-    <xhtml:link
-                rel="alternate"
-                hreflang="en"
-                href="https://devmedeiros.com/tags/storytelling/"
-                />
   </url><url>
     <loc>https://devmedeiros.com/tags/figma/</loc>
     <lastmod>2022-07-01T16:14:00-03:00</lastmod>
@@ -495,19 +541,6 @@
                 rel="alternate"
                 hreflang="en"
                 href="https://devmedeiros.com/post/2022-01-24-podcast-review-mlg/"
-                />
-  </url><url>
-    <loc>https://devmedeiros.com/tags/review/</loc>
-    <lastmod>2022-01-24T18:15:00-03:00</lastmod>
-    <xhtml:link
-                rel="alternate"
-                hreflang="pt"
-                href="https://devmedeiros.com/pt/tags/review/"
-                />
-    <xhtml:link
-                rel="alternate"
-                hreflang="en"
-                href="https://devmedeiros.com/tags/review/"
                 />
   </url><url>
     <loc>https://devmedeiros.com/post/2021-12-28-amazon-top-50-books/</loc>

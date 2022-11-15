@@ -1,0 +1,23 @@
+<?xml version="1.0" encoding="utf-8" standalone="yes"?>
+<rss version="2.0" xmlns:atom="http://www.w3.org/2005/Atom" xmlns:content="http://purl.org/rss/1.0/modules/content/">
+  <channel>
+    <title>ethic on Dev_Medeiros</title>
+    <link>https://devmedeiros.com/pt/tags/ethic/</link>
+    <description>Recent content in ethic on Dev_Medeiros</description>
+    <image>
+      <url>https://devmedeiros.com/cover.png</url>
+      <link>https://devmedeiros.com/cover.png</link>
+    </image>
+    <generator>Hugo -- gohugo.io</generator>
+    <lastBuildDate>Tue, 15 Nov 2022 08:01:00 -0300</lastBuildDate><atom:link href="https://devmedeiros.com/pt/tags/ethic/index.xml" rel="self" type="application/rss+xml" />
+    <item>
+      <title>Fazendo Gráficos Melhores</title>
+      <link>https://devmedeiros.com/pt/post/choose-the-best-graph/</link>
+      <pubDate>Tue, 15 Nov 2022 08:01:00 -0300</pubDate>
+      
+      <guid>https://devmedeiros.com/pt/post/choose-the-best-graph/</guid>
+      <description>Choosing the best graph or plot can be a hard task, but it doesn&amp;rsquo;t need to be.</description>
+    </item>
+    
+  </channel>
+</rss>

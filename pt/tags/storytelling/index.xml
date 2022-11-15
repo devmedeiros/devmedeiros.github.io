@@ -9,7 +9,16 @@
       <link>https://devmedeiros.com/cover.png</link>
     </image>
     <generator>Hugo -- gohugo.io</generator>
-    <lastBuildDate>Mon, 30 May 2022 16:49:00 -0300</lastBuildDate><atom:link href="https://devmedeiros.com/pt/tags/storytelling/index.xml" rel="self" type="application/rss+xml" />
+    <lastBuildDate>Tue, 15 Nov 2022 08:01:00 -0300</lastBuildDate><atom:link href="https://devmedeiros.com/pt/tags/storytelling/index.xml" rel="self" type="application/rss+xml" />
+    <item>
+      <title>Fazendo Gráficos Melhores</title>
+      <link>https://devmedeiros.com/pt/post/choose-the-best-graph/</link>
+      <pubDate>Tue, 15 Nov 2022 08:01:00 -0300</pubDate>
+      
+      <guid>https://devmedeiros.com/pt/post/choose-the-best-graph/</guid>
+      <description>Choosing the best graph or plot can be a hard task, but it doesn&amp;rsquo;t need to be.</description>
+    </item>
+    
     <item>
       <title>Data Science Challenge - Churn Rate</title>
       <link>https://devmedeiros.com/pt/post/2022-05-30-churn-rate-challenge/</link>

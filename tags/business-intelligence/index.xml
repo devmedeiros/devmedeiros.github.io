@@ -9,7 +9,16 @@
       <link>https://devmedeiros.com/cover.png</link>
     </image>
     <generator>Hugo -- gohugo.io</generator>
-    <lastBuildDate>Thu, 30 Jun 2022 19:23:00 -0300</lastBuildDate><atom:link href="https://devmedeiros.com/tags/business-intelligence/index.xml" rel="self" type="application/rss+xml" />
+    <lastBuildDate>Tue, 15 Nov 2022 08:01:00 -0300</lastBuildDate><atom:link href="https://devmedeiros.com/tags/business-intelligence/index.xml" rel="self" type="application/rss+xml" />
+    <item>
+      <title>Making Better Graphs</title>
+      <link>https://devmedeiros.com/post/choose-the-best-graph/</link>
+      <pubDate>Tue, 15 Nov 2022 08:01:00 -0300</pubDate>
+      
+      <guid>https://devmedeiros.com/post/choose-the-best-graph/</guid>
+      <description>Choosing the best graph or plot can be a hard task, but it doesn&amp;rsquo;t need to be.</description>
+    </item>
+    
     <item>
       <title>Alura Challenge BI 2</title>
       <link>https://devmedeiros.com/post/alura-challenge-bi-2/</link>
