@@ -7,9 +7,10 @@ summary: "about"
 author: ' '
 showtoc: true
 showReadingTime: false
+noComment: true
 ---
 
-Oi! :wave: Meu nome é Jaqueline Medeiros e eu sou uma Analista de Dados. {{< round-image "https://avatars.githubusercontent.com/u/33239902?v=4">}} Eu sempre gostei de aprender coisas novas e explorar novas possibilidades e este blog é um canal no qual eu crio e descubro coisas novas relacionadas a Ciência de Dados.
+Oi! Meu nome é Jaqueline Medeiros e eu sou uma Analista de Dados. {{< round-image "https://avatars.githubusercontent.com/u/33239902?v=4">}} Eu sempre gostei de aprender coisas novas e explorar novas possibilidades e este blog é um canal no qual eu crio e descubro coisas novas relacionadas a Ciência de Dados.
 
 Eu quero escrever posts que possam ser lidos por pessoas que não possuem um background técnico, mas também quero mostrar e falar sobre os aspectos de programação do que estou aprendendo, então você irá encontrar um pouco de tudo aqui.
 

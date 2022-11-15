@@ -5,6 +5,7 @@ summary: "projects"
 author: ' '
 showtoc: true
 showReadingTime: false
+noComment: true
 ---
 
 A seguir são alguns projetos que eu fiz no meu tempo livre. Eles não estão em nenhuma ordem em particular.

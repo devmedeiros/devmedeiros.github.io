@@ -5,6 +5,7 @@ summary: "projects"
 author: ' '
 showtoc: true
 showReadingTime: false
+noComment: true
 ---
 
 The following are a few projects that I have worked on in my free time. They are in no particular order.

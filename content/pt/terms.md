@@ -7,6 +7,7 @@ summary: "terms"
 searchHidden: true
 author: ' '
 showReadingTime: false
+noComment: true
 ---
 
 Este é meu blog pessoal, o conteúdo aqui é escrito e editado por mim (Jaqueline Souza Medeiros). Ao continuar a usar este site, em todas e quaisquer formas, constitui aceite s estes termos e políticas.
