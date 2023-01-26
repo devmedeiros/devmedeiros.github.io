@@ -1,0 +1,23 @@
+<?xml version="1.0" encoding="utf-8" standalone="yes"?>
+<rss version="2.0" xmlns:atom="http://www.w3.org/2005/Atom" xmlns:content="http://purl.org/rss/1.0/modules/content/">
+  <channel>
+    <title>engenharia de dados on Dev_Medeiros</title>
+    <link>https://devmedeiros.com/pt/tags/engenharia-de-dados/</link>
+    <description>Recent content in engenharia de dados on Dev_Medeiros</description>
+    <image>
+      <url>https://devmedeiros.com/cover.png</url>
+      <link>https://devmedeiros.com/cover.png</link>
+    </image>
+    <generator>Hugo -- gohugo.io</generator>
+    <lastBuildDate>Tue, 23 Aug 2022 22:57:00 -0300</lastBuildDate><atom:link href="https://devmedeiros.com/pt/tags/engenharia-de-dados/index.xml" rel="self" type="application/rss+xml" />
+    <item>
+      <title>Estudo de Caso Analytics Engineer</title>
+      <link>https://devmedeiros.com/pt/post/case-study-analytics-engineer/</link>
+      <pubDate>Tue, 23 Aug 2022 22:57:00 -0300</pubDate>
+      
+      <guid>https://devmedeiros.com/pt/post/case-study-analytics-engineer/</guid>
+      <description>Projeto explorando tarefas comuns que um Analytics Engineer faz diariamente.</description>
+    </item>
+    
+  </channel>
+</rss>

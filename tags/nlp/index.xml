@@ -9,7 +9,16 @@
       <link>https://devmedeiros.com/cover.png</link>
     </image>
     <generator>Hugo -- gohugo.io</generator>
-    <lastBuildDate>Tue, 12 Oct 2021 19:47:00 -0300</lastBuildDate><atom:link href="https://devmedeiros.com/tags/nlp/index.xml" rel="self" type="application/rss+xml" />
+    <lastBuildDate>Thu, 26 Jan 2023 20:33:00 -0300</lastBuildDate><atom:link href="https://devmedeiros.com/tags/nlp/index.xml" rel="self" type="application/rss+xml" />
+    <item>
+      <title>How to use AI in your favor?</title>
+      <link>https://devmedeiros.com/post/using-ai-in-your-favor/</link>
+      <pubDate>Thu, 26 Jan 2023 20:33:00 -0300</pubDate>
+      
+      <guid>https://devmedeiros.com/post/using-ai-in-your-favor/</guid>
+      <description>Uma nova forma de usar ferramentas de inteligência artificial, como ChatGPT, ao seu favor.</description>
+    </item>
+    
     <item>
       <title>Sentiment Analysis of Fake News vs Real News</title>
       <link>https://devmedeiros.com/post/2021-10-12-fakenews-sentiment/</link>

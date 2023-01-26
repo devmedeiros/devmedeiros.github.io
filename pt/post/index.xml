@@ -9,7 +9,16 @@
       <link>https://devmedeiros.com/cover.png</link>
     </image>
     <generator>Hugo -- gohugo.io</generator>
-    <lastBuildDate>Tue, 15 Nov 2022 08:01:00 -0300</lastBuildDate><atom:link href="https://devmedeiros.com/pt/post/index.xml" rel="self" type="application/rss+xml" />
+    <lastBuildDate>Thu, 26 Jan 2023 20:33:00 -0300</lastBuildDate><atom:link href="https://devmedeiros.com/pt/post/index.xml" rel="self" type="application/rss+xml" />
+    <item>
+      <title>Como usar IA ao seu favor?</title>
+      <link>https://devmedeiros.com/pt/post/using-ai-in-your-favor/</link>
+      <pubDate>Thu, 26 Jan 2023 20:33:00 -0300</pubDate>
+      
+      <guid>https://devmedeiros.com/pt/post/using-ai-in-your-favor/</guid>
+      <description>Uma nova forma de usar ferramentas de inteligência artificial, como ChatGPT, ao seu favor.</description>
+    </item>
+    
     <item>
       <title>Fazendo Gráficos Melhores</title>
       <link>https://devmedeiros.com/pt/post/choose-the-best-graph/</link>

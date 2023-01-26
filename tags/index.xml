@@ -9,7 +9,52 @@
       <link>https://devmedeiros.com/cover.png</link>
     </image>
     <generator>Hugo -- gohugo.io</generator>
-    <lastBuildDate>Tue, 15 Nov 2022 08:01:00 -0300</lastBuildDate><atom:link href="https://devmedeiros.com/tags/index.xml" rel="self" type="application/rss+xml" />
+    <lastBuildDate>Thu, 26 Jan 2023 20:33:00 -0300</lastBuildDate><atom:link href="https://devmedeiros.com/tags/index.xml" rel="self" type="application/rss+xml" />
+    <item>
+      <title>AI</title>
+      <link>https://devmedeiros.com/tags/ai/</link>
+      <pubDate>Thu, 26 Jan 2023 20:33:00 -0300</pubDate>
+      
+      <guid>https://devmedeiros.com/tags/ai/</guid>
+      <description></description>
+    </item>
+    
+    <item>
+      <title>artificial intelligence</title>
+      <link>https://devmedeiros.com/tags/artificial-intelligence/</link>
+      <pubDate>Thu, 26 Jan 2023 20:33:00 -0300</pubDate>
+      
+      <guid>https://devmedeiros.com/tags/artificial-intelligence/</guid>
+      <description></description>
+    </item>
+    
+    <item>
+      <title>chatgpt</title>
+      <link>https://devmedeiros.com/tags/chatgpt/</link>
+      <pubDate>Thu, 26 Jan 2023 20:33:00 -0300</pubDate>
+      
+      <guid>https://devmedeiros.com/tags/chatgpt/</guid>
+      <description></description>
+    </item>
+    
+    <item>
+      <title>NLP</title>
+      <link>https://devmedeiros.com/tags/nlp/</link>
+      <pubDate>Thu, 26 Jan 2023 20:33:00 -0300</pubDate>
+      
+      <guid>https://devmedeiros.com/tags/nlp/</guid>
+      <description></description>
+    </item>
+    
+    <item>
+      <title>opencv</title>
+      <link>https://devmedeiros.com/tags/opencv/</link>
+      <pubDate>Thu, 26 Jan 2023 20:33:00 -0300</pubDate>
+      
+      <guid>https://devmedeiros.com/tags/opencv/</guid>
+      <description></description>
+    </item>
+    
     <item>
       <title>business intelligence</title>
       <link>https://devmedeiros.com/tags/business-intelligence/</link>
@@ -119,11 +164,11 @@
     </item>
     
     <item>
-      <title>data engineer</title>
-      <link>https://devmedeiros.com/tags/data-engineer/</link>
+      <title>data engineering&#43;</title>
+      <link>https://devmedeiros.com/tags/data-engineering&#43;/</link>
       <pubDate>Tue, 23 Aug 2022 22:57:00 -0300</pubDate>
       
-      <guid>https://devmedeiros.com/tags/data-engineer/</guid>
+      <guid>https://devmedeiros.com/tags/data-engineering&#43;/</guid>
       <description></description>
     </item>
     
@@ -421,15 +466,6 @@
       <pubDate>Sun, 24 Oct 2021 20:43:00 -0300</pubDate>
       
       <guid>https://devmedeiros.com/tags/simulation/</guid>
-      <description></description>
-    </item>
-    
-    <item>
-      <title>NLP</title>
-      <link>https://devmedeiros.com/tags/nlp/</link>
-      <pubDate>Tue, 12 Oct 2021 19:47:00 -0300</pubDate>
-      
-      <guid>https://devmedeiros.com/tags/nlp/</guid>
       <description></description>
     </item>
     
