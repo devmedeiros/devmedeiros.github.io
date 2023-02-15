@@ -22,6 +22,18 @@ The following are a few projects that I have worked on in my free time. They are
 
 ---
 
+## Credit Score Classification App
+
+**Description:** This project cleans a credit score dataset, and builds and serializes a machine learning model. This ML model is used on a Streamlit app where you can enter fictional data and get a credit score classification.
+
+**Stacks:** Python _(pandas, seaborn, matplotlib, numpy, sklearn, and pickle)_ and Streamlit
+
+**Skils:** Machine Learning, Data Cleaning, and Data Visualization
+
+{{< github-repo user="devmedeiros" repo="credit-score-classification-app" >}}
+
+---
+
 ## Personal blog
 
 **Description:** A blog (where you are right now!) in that I write about what I'm learning, basically a portfolio.
@@ -53,15 +65,3 @@ The following are a few projects that I have worked on in my free time. They are
 **Skils:** Data Visualization
 
 {{< github-repo user="devmedeiros" repo="Alura-Challenge-BI-2" >}}
-
----
-
-## Credit Score Classification App
-
-**Description:** This project cleans a credit score dataset, and builds and serializes a machine learning model. This ML model is used on a Streamlit app where you can enter fictional data and get a credit score classification.
-
-**Stacks:** Python _(pandas, seaborn, matplotlib, numpy, sklearn, and pickle)_ and Streamlit
-
-**Skils:** Machine Learning, Data Cleaning, and Data Visualization
-
-{{< github-repo user="devmedeiros" repo="credit-score-classification-app" >}}

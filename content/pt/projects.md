@@ -22,6 +22,18 @@ A seguir são alguns projetos que eu fiz no meu tempo livre. Eles não estão em
 
 ---
 
+## Aplicativo de Classificação de Score de Crédito
+
+**Descrição:** Este projeto limpa um banco de dados de score de crédito, e contrói e serializa um modelo de aprendizado de máquina. Esse modelo de ML é usado num aplicativo Streamlit onde você pode entrar com dados fícticios e recebe uma classificação de score de crédito.
+
+**Stacks:** Python _(pandas, seaborn, matplotlib, numpy, sklearn, e pickle)_ e Streamlit
+
+**Habilidades:** Aprendizado de Máquina (Machine Learning), Limpeza de Dados, e Visualização de Dados
+
+{{< github-repo user="devmedeiros" repo="credit-score-classification-app" >}}
+
+---
+
 ## Blog pessoal
 
 **Descrição:** Um blog (onde você está agora!) no qual eu escrevo sobre o que estou aprendendo, basicamente um portfólio.
@@ -53,15 +65,3 @@ A seguir são alguns projetos que eu fiz no meu tempo livre. Eles não estão em
 **Habilidades:** Visualização de Dados
 
 {{< github-repo user="devmedeiros" repo="Alura-Challenge-BI-2" >}}
-
----
-
-## Aplicativo de Classificação de Score de Crédito
-
-**Descrição:** Este projeto limpa um banco de dados de score de crédito, e contrói e serializa um modelo de aprendizado de máquina. Esse modelo de ML é usado num aplicativo Streamlit onde você pode entrar com dados fícticios e recebe uma classificação de score de crédito.
-
-**Stacks:** Python _(pandas, seaborn, matplotlib, numpy, sklearn, e pickle)_ e Streamlit
-
-**Habilidades:** Aprendizado de Máquina (Machine Learning), Limpeza de Dados, e Visualização de Dados
-
-{{< github-repo user="devmedeiros" repo="credit-score-classification-app" >}}

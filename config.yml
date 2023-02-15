@@ -63,7 +63,7 @@ languages:
     homeInfoParams:
       Title: "Jaqueline Medeiros"
       Content: >
-        Analista de Dados interessada em engenharia, transparência e governança de dados. Especializando em Analytics Engineer.
+        Analytics Engineer interessada em transparência, transformação e governança de dados.
 
 params:
   env: production # to enable google analytics, opengraph, twitter-cards and schema.
@@ -105,7 +105,7 @@ params:
   homeInfoParams:
       Title: "Jaqueline Medeiros"
       Content: >
-        Data Analyst interested in engineering, transparency, and governance regarding data. Specializing in Analytics Engineer.
+        Analytics Engineer interested in transparency, data transformation and governance.
 
   socialIcons:
     - name: github

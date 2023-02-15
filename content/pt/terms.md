@@ -16,7 +16,7 @@ O conteúdo fornecido é para fins informativos. As postagens e projetos são de
 
 ## Política de Privacidade
 
-### 🍪 Cookies e Rastreamento
+### Cookies e Rastreamento
 
 Este site não usa cookies para rastrear ou identificar usuários, mas usa o Google Analytics para rastrear o envolvimento do usuário e o uso do site. O relatório fornecido pelo Google Analytics não possui informações de identificação dos visitantes. Leia mais sobre a [Política de Privacidade do Google](https://policies.google.com/privacy).
 
