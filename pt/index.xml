@@ -10,7 +10,16 @@
       <link>https://devmedeiros.com/cover.png</link>
     </image>
     <generator>Hugo -- gohugo.io</generator>
-    <lastBuildDate>Thu, 26 Jan 2023 20:33:00 -0300</lastBuildDate><atom:link href="https://devmedeiros.com/pt/index.xml" rel="self" type="application/rss+xml" />
+    <lastBuildDate>Tue, 07 Mar 2023 20:02:00 -0300</lastBuildDate><atom:link href="https://devmedeiros.com/pt/index.xml" rel="self" type="application/rss+xml" />
+    <item>
+      <title>O que é SQL?</title>
+      <link>https://devmedeiros.com/pt/post/what-is-sql/</link>
+      <pubDate>Tue, 07 Mar 2023 20:02:00 -0300</pubDate>
+      
+      <guid>https://devmedeiros.com/pt/post/what-is-sql/</guid>
+      <description>SQL é sigla para Linguagem de Query Estruturada. Uma linguagem de query é uma linguagem de programação especializada que permite pesquisar e alterar os conteúdos de um banco de dados.</description>
+    </item>
+    
     <item>
       <title>Como usar IA ao seu favor?</title>
       <link>https://devmedeiros.com/pt/post/using-ai-in-your-favor/</link>

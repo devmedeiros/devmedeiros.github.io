@@ -10,7 +10,61 @@
       <link>https://devmedeiros.com/cover.png</link>
     </image>
     <generator>Hugo -- gohugo.io</generator>
-    <lastBuildDate>Thu, 26 Jan 2023 20:33:00 -0300</lastBuildDate><atom:link href="https://devmedeiros.com/tags/index.xml" rel="self" type="application/rss+xml" />
+    <lastBuildDate>Tue, 07 Mar 2023 20:02:00 -0300</lastBuildDate><atom:link href="https://devmedeiros.com/tags/index.xml" rel="self" type="application/rss+xml" />
+    <item>
+      <title>database</title>
+      <link>https://devmedeiros.com/tags/database/</link>
+      <pubDate>Tue, 07 Mar 2023 20:02:00 -0300</pubDate>
+      
+      <guid>https://devmedeiros.com/tags/database/</guid>
+      <description></description>
+    </item>
+    
+    <item>
+      <title>oracle</title>
+      <link>https://devmedeiros.com/tags/oracle/</link>
+      <pubDate>Tue, 07 Mar 2023 20:02:00 -0300</pubDate>
+      
+      <guid>https://devmedeiros.com/tags/oracle/</guid>
+      <description></description>
+    </item>
+    
+    <item>
+      <title>postgre</title>
+      <link>https://devmedeiros.com/tags/postgre/</link>
+      <pubDate>Tue, 07 Mar 2023 20:02:00 -0300</pubDate>
+      
+      <guid>https://devmedeiros.com/tags/postgre/</guid>
+      <description></description>
+    </item>
+    
+    <item>
+      <title>postgresql</title>
+      <link>https://devmedeiros.com/tags/postgresql/</link>
+      <pubDate>Tue, 07 Mar 2023 20:02:00 -0300</pubDate>
+      
+      <guid>https://devmedeiros.com/tags/postgresql/</guid>
+      <description></description>
+    </item>
+    
+    <item>
+      <title>SQL</title>
+      <link>https://devmedeiros.com/tags/sql/</link>
+      <pubDate>Tue, 07 Mar 2023 20:02:00 -0300</pubDate>
+      
+      <guid>https://devmedeiros.com/tags/sql/</guid>
+      <description></description>
+    </item>
+    
+    <item>
+      <title>tutorial</title>
+      <link>https://devmedeiros.com/tags/tutorial/</link>
+      <pubDate>Tue, 07 Mar 2023 20:02:00 -0300</pubDate>
+      
+      <guid>https://devmedeiros.com/tags/tutorial/</guid>
+      <description></description>
+    </item>
+    
     <item>
       <title>AI</title>
       <link>https://devmedeiros.com/tags/ai/</link>
@@ -201,15 +255,6 @@
     </item>
     
     <item>
-      <title>SQL</title>
-      <link>https://devmedeiros.com/tags/sql/</link>
-      <pubDate>Tue, 23 Aug 2022 22:57:00 -0300</pubDate>
-      
-      <guid>https://devmedeiros.com/tags/sql/</guid>
-      <description></description>
-    </item>
-    
-    <item>
       <title>app</title>
       <link>https://devmedeiros.com/tags/app/</link>
       <pubDate>Mon, 08 Aug 2022 17:17:00 -0300</pubDate>
@@ -305,15 +350,6 @@
       <pubDate>Sun, 24 Jul 2022 13:06:00 -0300</pubDate>
       
       <guid>https://devmedeiros.com/tags/pandas/</guid>
-      <description></description>
-    </item>
-    
-    <item>
-      <title>tutorial</title>
-      <link>https://devmedeiros.com/tags/tutorial/</link>
-      <pubDate>Sun, 24 Jul 2022 13:06:00 -0300</pubDate>
-      
-      <guid>https://devmedeiros.com/tags/tutorial/</guid>
       <description></description>
     </item>
     
