@@ -44,8 +44,7 @@
       <pubDate>Sat, 01 Oct 2022 16:14:00 -0300</pubDate>
       
       <guid>https://devmedeiros.com/post/ethics-data-science/</guid>
-      <description>Introduction Data science is an exciting field, but it’s also full of ethical pitfalls. If you want to avoid getting drawn into a situation that could damage your company or client, it’s important to understand the basics of data ethics and how they can affect your work.
-Learning from the past Learning from the past is important because it can help us avoid making ethical mistakes that others already committed.</description>
+      <description>Data Science is an exciting field, but it&amp;rsquo;s also full of ethical dilemmas.</description>
     </item>
     
     <item>
@@ -99,9 +98,7 @@ Learning from the past Learning from the past is important because it can help u
       <pubDate>Mon, 30 May 2022 16:49:00 -0300</pubDate>
       
       <guid>https://devmedeiros.com/post/2022-05-30-churn-rate-challenge/</guid>
-      <description>&lt;p&gt;&lt;strong&gt;Tools used:&lt;/strong&gt; Python, seaborn, scikit-learn, imbalanced-learn&lt;/p&gt;
-&lt;p&gt;&lt;strong&gt;Category:&lt;/strong&gt; Data Analysis, Machine Learning&lt;/p&gt;
-&lt;hr&gt;</description>
+      <description>Alura hosted a four-week Data Science Challenge using an imbalanced dataset of Churn Rate of a company Alura Voz</description>
     </item>
     
     <item>
@@ -141,7 +138,7 @@ Learning from the past Learning from the past is important because it can help u
     </item>
     
     <item>
-      <title>Descriptive Analysis of Amazon Top 50 Bestselling Books 2009 - 2019</title>
+      <title>EDA Amazon Top 50 Bestselling Books</title>
       <link>https://devmedeiros.com/post/2021-12-28-amazon-top-50-books/</link>
       <pubDate>Tue, 28 Dec 2021 14:55:00 -0300</pubDate>
       
@@ -164,9 +161,7 @@ Learning from the past Learning from the past is important because it can help u
       <pubDate>Tue, 02 Nov 2021 17:14:00 -0300</pubDate>
       
       <guid>https://devmedeiros.com/post/2021-11-02-sql-california-traffic/</guid>
-      <description>&lt;p&gt;&lt;strong&gt;Tools used:&lt;/strong&gt; SQL, R&lt;/p&gt;
-&lt;p&gt;&lt;strong&gt;Category:&lt;/strong&gt; Data Analysis&lt;/p&gt;
-&lt;hr&gt;</description>
+      <description>Using SQL to analyze if COVID impacted California Traffic Collisions</description>
     </item>
     
     <item>
@@ -184,9 +179,7 @@ Learning from the past Learning from the past is important because it can help u
       <pubDate>Sun, 24 Oct 2021 20:43:00 -0300</pubDate>
       
       <guid>https://devmedeiros.com/post/2021-10-24-blackjack-simulation/</guid>
-      <description>&lt;p&gt;&lt;strong&gt;Tools used:&lt;/strong&gt; R, ggplot, Shiny&lt;/p&gt;
-&lt;p&gt;&lt;strong&gt;Category:&lt;/strong&gt; Simulation&lt;/p&gt;
-&lt;hr&gt;</description>
+      <description>A blackjack simulation using R and Shiny, you can run a single game with p players, d decks, n times</description>
     </item>
     
     <item>
@@ -204,7 +197,7 @@ Learning from the past Learning from the past is important because it can help u
       <pubDate>Mon, 01 Jan 0001 00:00:00 +0000</pubDate>
       
       <guid>https://devmedeiros.com/about/</guid>
-      <description>about</description>
+      <description>who is the author of the blog devmedeiros</description>
     </item>
     
     

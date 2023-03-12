@@ -26,13 +26,11 @@
       <pubDate>Mon, 30 May 2022 16:49:00 -0300</pubDate>
       
       <guid>https://devmedeiros.com/pt/post/2022-05-30-churn-rate-challenge/</guid>
-      <description>&lt;p&gt;&lt;strong&gt;Ferramentas utilizadas:&lt;/strong&gt; Python, seaborn, scikit-learn, imbalanced-learn&lt;/p&gt;
-&lt;p&gt;&lt;strong&gt;Categoria:&lt;/strong&gt; Análise de Dados, Aprendizado de Máquina&lt;/p&gt;
-&lt;hr&gt;</description>
+      <description>Alura fez um desafio de quatro semanas &amp;ldquo;Data Science Challenge&amp;rdquo; utilizando um banco desbalanceado da taxa de evasão da empresa Alura Voz</description>
     </item>
     
     <item>
-      <title>Análise Descritiva do Top 50 Livros Bestsellers da Amazon 2009 - 2019</title>
+      <title>EDA Top 50 Livros Bestsellers da Amazon</title>
       <link>https://devmedeiros.com/pt/post/2021-12-28-amazon-top-50-books/</link>
       <pubDate>Tue, 28 Dec 2021 14:55:00 -0300</pubDate>
       

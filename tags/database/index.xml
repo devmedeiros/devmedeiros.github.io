@@ -20,5 +20,14 @@
       <description>SQL stands for Structured Query Language. A query language is a specialized programming language that you can use to search and change the contents of a database.</description>
     </item>
     
+    <item>
+      <title>Have COVID Impacted California Traffic Collisions?</title>
+      <link>https://devmedeiros.com/post/2021-11-02-sql-california-traffic/</link>
+      <pubDate>Tue, 02 Nov 2021 17:14:00 -0300</pubDate>
+      
+      <guid>https://devmedeiros.com/post/2021-11-02-sql-california-traffic/</guid>
+      <description>Using SQL to analyze if COVID impacted California Traffic Collisions</description>
+    </item>
+    
   </channel>
 </rss>

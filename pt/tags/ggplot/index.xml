@@ -17,9 +17,7 @@
       <pubDate>Sun, 24 Oct 2021 20:43:00 -0300</pubDate>
       
       <guid>https://devmedeiros.com/pt/post/2021-10-24-blackjack-simulation/</guid>
-      <description>&lt;p&gt;&lt;strong&gt;Ferramentas utilizadas:&lt;/strong&gt; R, ggplot, Shiny&lt;/p&gt;
-&lt;p&gt;&lt;strong&gt;Categoria:&lt;/strong&gt; Simulação&lt;/p&gt;
-&lt;hr&gt;</description>
+      <description>Uma simulação de 21 usando R e Shiny, você pode rodar um jogo com p jogadores, d baralhos, n vezes</description>
     </item>
     
     <item>

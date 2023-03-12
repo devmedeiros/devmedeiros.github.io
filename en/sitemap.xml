@@ -656,19 +656,6 @@
                 href="https://devmedeiros.com/post/2022-01-24-podcast-review-mlg/"
                 />
   </url><url>
-    <loc>https://devmedeiros.com/post/2021-12-28-amazon-top-50-books/</loc>
-    <lastmod>2021-12-28T14:55:00-03:00</lastmod>
-    <xhtml:link
-                rel="alternate"
-                hreflang="pt"
-                href="https://devmedeiros.com/pt/post/2021-12-28-amazon-top-50-books/"
-                />
-    <xhtml:link
-                rel="alternate"
-                hreflang="en"
-                href="https://devmedeiros.com/post/2021-12-28-amazon-top-50-books/"
-                />
-  </url><url>
     <loc>https://devmedeiros.com/tags/eda/</loc>
     <lastmod>2021-12-28T14:55:00-03:00</lastmod>
     <xhtml:link
@@ -680,6 +667,19 @@
                 rel="alternate"
                 hreflang="en"
                 href="https://devmedeiros.com/tags/eda/"
+                />
+  </url><url>
+    <loc>https://devmedeiros.com/post/2021-12-28-amazon-top-50-books/</loc>
+    <lastmod>2021-12-28T14:55:00-03:00</lastmod>
+    <xhtml:link
+                rel="alternate"
+                hreflang="pt"
+                href="https://devmedeiros.com/pt/post/2021-12-28-amazon-top-50-books/"
+                />
+    <xhtml:link
+                rel="alternate"
+                hreflang="en"
+                href="https://devmedeiros.com/post/2021-12-28-amazon-top-50-books/"
                 />
   </url><url>
     <loc>https://devmedeiros.com/post/2021-11-07-seaborn-package-guide/</loc>
@@ -708,6 +708,15 @@
                 href="https://devmedeiros.com/tags/seaborn/"
                 />
   </url><url>
+    <loc>https://devmedeiros.com/tags/california/</loc>
+    <lastmod>2021-11-02T17:14:00-03:00</lastmod>
+  </url><url>
+    <loc>https://devmedeiros.com/tags/collision/</loc>
+    <lastmod>2021-11-02T17:14:00-03:00</lastmod>
+  </url><url>
+    <loc>https://devmedeiros.com/tags/covid/</loc>
+    <lastmod>2021-11-02T17:14:00-03:00</lastmod>
+  </url><url>
     <loc>https://devmedeiros.com/post/2021-11-02-sql-california-traffic/</loc>
     <lastmod>2021-11-02T17:14:00-03:00</lastmod>
   </url><url>
@@ -723,6 +732,9 @@
                 hreflang="en"
                 href="https://devmedeiros.com/tags/r/"
                 />
+  </url><url>
+    <loc>https://devmedeiros.com/tags/traffic/</loc>
+    <lastmod>2021-11-02T17:14:00-03:00</lastmod>
   </url><url>
     <loc>https://devmedeiros.com/post/2021-10-27-data-table/</loc>
     <lastmod>2021-10-27T09:41:00-03:00</lastmod>

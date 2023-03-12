@@ -44,13 +44,11 @@
       <pubDate>Mon, 30 May 2022 16:49:00 -0300</pubDate>
       
       <guid>https://devmedeiros.com/post/2022-05-30-churn-rate-challenge/</guid>
-      <description>&lt;p&gt;&lt;strong&gt;Tools used:&lt;/strong&gt; Python, seaborn, scikit-learn, imbalanced-learn&lt;/p&gt;
-&lt;p&gt;&lt;strong&gt;Category:&lt;/strong&gt; Data Analysis, Machine Learning&lt;/p&gt;
-&lt;hr&gt;</description>
+      <description>Alura hosted a four-week Data Science Challenge using an imbalanced dataset of Churn Rate of a company Alura Voz</description>
     </item>
     
     <item>
-      <title>Descriptive Analysis of Amazon Top 50 Bestselling Books 2009 - 2019</title>
+      <title>EDA Amazon Top 50 Bestselling Books</title>
       <link>https://devmedeiros.com/post/2021-12-28-amazon-top-50-books/</link>
       <pubDate>Tue, 28 Dec 2021 14:55:00 -0300</pubDate>
       

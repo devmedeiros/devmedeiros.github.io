@@ -35,7 +35,7 @@
       <pubDate>Tue, 15 Nov 2022 08:01:00 -0300</pubDate>
       
       <guid>https://devmedeiros.com/pt/post/choose-the-best-graph/</guid>
-      <description>Choosing the best graph or plot can be a hard task, but it doesn&amp;rsquo;t need to be.</description>
+      <description>Escolher o melhor gráfico pode ser uma tarefa difícil, mas não precisa ser.</description>
     </item>
     
     <item>
@@ -80,9 +80,7 @@
       <pubDate>Mon, 30 May 2022 16:49:00 -0300</pubDate>
       
       <guid>https://devmedeiros.com/pt/post/2022-05-30-churn-rate-challenge/</guid>
-      <description>&lt;p&gt;&lt;strong&gt;Ferramentas utilizadas:&lt;/strong&gt; Python, seaborn, scikit-learn, imbalanced-learn&lt;/p&gt;
-&lt;p&gt;&lt;strong&gt;Categoria:&lt;/strong&gt; Análise de Dados, Aprendizado de Máquina&lt;/p&gt;
-&lt;hr&gt;</description>
+      <description>Alura fez um desafio de quatro semanas &amp;ldquo;Data Science Challenge&amp;rdquo; utilizando um banco desbalanceado da taxa de evasão da empresa Alura Voz</description>
     </item>
     
     <item>
@@ -113,7 +111,7 @@
     </item>
     
     <item>
-      <title>Análise Descritiva do Top 50 Livros Bestsellers da Amazon 2009 - 2019</title>
+      <title>EDA Top 50 Livros Bestsellers da Amazon</title>
       <link>https://devmedeiros.com/pt/post/2021-12-28-amazon-top-50-books/</link>
       <pubDate>Tue, 28 Dec 2021 14:55:00 -0300</pubDate>
       
@@ -145,9 +143,7 @@
       <pubDate>Sun, 24 Oct 2021 20:43:00 -0300</pubDate>
       
       <guid>https://devmedeiros.com/pt/post/2021-10-24-blackjack-simulation/</guid>
-      <description>&lt;p&gt;&lt;strong&gt;Ferramentas utilizadas:&lt;/strong&gt; R, ggplot, Shiny&lt;/p&gt;
-&lt;p&gt;&lt;strong&gt;Categoria:&lt;/strong&gt; Simulação&lt;/p&gt;
-&lt;hr&gt;</description>
+      <description>Uma simulação de 21 usando R e Shiny, você pode rodar um jogo com p jogadores, d baralhos, n vezes</description>
     </item>
     
     <item>
