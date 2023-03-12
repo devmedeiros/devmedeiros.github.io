@@ -5,14 +5,15 @@ categories: [Blog]
 tags: [limpeza de dados, python, pandas, tutorial, kaggle, numpy, score, classificação]
 showtoc: true
 summary: Como surgir com formas de limpar um banco de dados usando Python
+cover:
+    image: https://i.imgur.com/RqLcJYv.jpg
+    alt: "um homem usando luvas limpando uma mesa com um pano"
+    caption: "Profession photo criada por freepik - freepik.com"
 ---
-
-![um homem usando luvas limpando uma mesa com um pano](https://ik.imagekit.io/devmedeiros/cleaning-table_NhcXa2k4f.jpg)
-[_Profissão foto criada por freepik - freepik.com_](https://www.freepik.com/photos/profession)
 
 > **Aviso:** Eu estarei falando sobre como chegar no código python, caso queira ler o código em si, dirija-se a este [repositório](https://github.com/devmedeiros/credit-score-classification-app/tree/main/notebooks).
 
-# Conheça a Base para Classificação de Score de Crédito
+## Conheça a Base para Classificação de Score de Crédito
 
 A base de dados que vamos limpar vem do [kaggle](https://www.kaggle.com/datasets/parisrohan/credit-score-classification?select=train.csv), a qual está no arquivo `train.csv`, mas os passos que iremos falar também podem ser usados para `test.csv`.
 
@@ -51,7 +52,7 @@ Há 28 colunas e 100 mil linhas neste banco de dados. Eu compilei uma descriçã
 
 Mesmo tendo 100 mil linhas, dentro dessas linhas existem apenas 12.500 clientes diferentes, cada cliente aparece 8 vezes (de Janeiro a Agosto). Então basicamente nós podemos selecionar um cliente específico e olhar as informações dele e facilmente identificar dados incorretos e somos capazes de ajustá-los.
 
-# Lidando com Erros de Digitação e Outliers
+## Lidando com Erros de Digitação e Outliers
 
 Neste banco de dados há diversos erros de digitação ou simplesmente coisas que não fazem sentido. Você irá encontrar valores que são: `_`, `!@9#%8`, `__10000__`, `NM` ou `_______`. Eu acredito que esses erros estão na base para representar o caos que você pode encontrar quando estiver lidando com dados reais e a maioria deles significam que esse valor é nulo.
 
@@ -80,7 +81,7 @@ Olhando para este cliente em específico é fácil ver que ele não ganhou todo 
 
 Ao terminar essa busca por erros de digitação e outliers, não esqueça de passar o novo tipo de dados para suas variáveis. Algumas variáveis como `age` começaram com caracteres string entre as idades e por isso ao ser feito a leitura dos dados o pandas os reconheceu como objeto e não como tipo int ou float.
 
-# Preenchendo Valores em Branco
+## Preenchendo Valores em Branco
 
 Depois de lidar com todos os outliers e erros de digitação, nós terminamos com diversos valores nulos, como pode ser visto a baixo:
 
@@ -128,7 +129,7 @@ last_columns = ['Age', 'Occupation', 'Type_of_Loan', 'Credit_Mix']
 
 O motivo de não usar a média para todos os meus valores é porque eu não queria ter que lidar com uma pessoa tendo 20,5 anos de idade e `Occupation`, `Type_of_Loan`, e `Credit_Mix` são dados discretos.
 
-# Engenharia das Features
+## Engenharia das Features
 
 Com os dados limpos, nós podemos seguir com a engenharia das features. Vamos começar com a variável `Type_of_Loan`, que possui algumas ocorrências em que em uma única célula possui diversos tipos de empréstimos, como você pode ver:
 

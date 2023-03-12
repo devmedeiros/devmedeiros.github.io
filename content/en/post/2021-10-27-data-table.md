@@ -4,6 +4,9 @@ date: 2021-10-27 09:41:00 -0300
 categories: [Blog]
 tags: [R, data.table, data manipulation]
 summary: One of the fastest packages for data manipulation on R
+cover:
+    image: "https://i.imgur.com/04QSNjH.png"
+    alt: "window with data.table code"
 ---
 
 The `data.table` package is one of the fastest packages for data manipulation, currently, it is even faster than `pandas` and `dplyr` [^1]. `data.table` syntax is `dt[i, j, by]`, where:

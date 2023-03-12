@@ -5,9 +5,11 @@ categories: [Blog]
 tags: [IA, inteligência artificial, chatgpt, pln, nlp, pdi, opencv, AI]
 showtoc: false
 summary: Uma nova forma de usar ferramentas de inteligência artificial, como ChatGPT, ao seu favor.
+cover:
+    image: https://i.imgur.com/HtkNfTq.jpg
+    alt: "close up de uma mulher usando notebook"
+    caption: "Imagem de Kaitlyn Baker na Unsplash"
 ---
-
-![Foto de Kaitlyn Baker na Unsplash, close up de uma mulher digitando em um notebook](https://images.unsplash.com/photo-1508780709619-79562169bc64?ixlib=rb-4.0.3&ixid=MnwxMjA3fDB8MHxwaG90by1wYWdlfHx8fGVufDB8fHx8&auto=format&fit=crop&w=1170&q=80)
 
 Nos últimos meses mais uma vez IA se tornou o assunto do momento. Depois de diversas pesquisas na área de arte usando inteligência artificial agora é a vez da popularização de textos escritos por IA. 
 

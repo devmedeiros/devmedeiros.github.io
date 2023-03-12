@@ -5,14 +5,15 @@ categories: [Blog]
 tags: [data cleaning, python, pandas, tutorial, kaggle, numpy, credit score, classification]
 showtoc: true
 summary: How to come up with ways to clean a dataset using Python
+cover:
+    image: https://i.imgur.com/RqLcJYv.jpg
+    alt: "a man wearing gloves cleaning a table with a cloth"
+    caption: "Profession photo created by freepik - freepik.com"
 ---
-
-![a man wearing gloves cleaning a table with a cloth](https://ik.imagekit.io/devmedeiros/cleaning-table_NhcXa2k4f.jpg)
-[_Profession photo created by freepik - freepik.com_](https://www.freepik.com/photos/profession)
 
 > **Disclaimer:** I'll be talking about how to come up with the python code, if you want to read the actual code please go to this [repo](https://github.com/devmedeiros/credit-score-classification-app/tree/main/notebooks).
 
-# Meet the Credit Score Classification Dataset
+## Meet the Credit Score Classification Dataset
 
 The dataset that we'll clean comes from [kaggle](https://www.kaggle.com/datasets/parisrohan/credit-score-classification?select=train.csv), which is the `train.csv` dataset, but this could be used for the `test.csv` as well.
 
@@ -51,7 +52,7 @@ There are 28 columns and 100k rows in this dataset. I compiled a feature descrip
 
 Even though we have 100k rows, within these rows that are only 12,500 different customers, each customer appears 8 times (from January to August). So basically we can select a particular customer and look at their information and easily find incorrect data and be able to adjust it.
 
-# Cleaning Typos and Outliers
+## Cleaning Typos and Outliers
 
 In this dataset that is a lot of typos or just straight-up nonsense. You'll find some values to be: `_`, `!@9#%8`, `__10000__`, `NM` or `_______`. I believe these typos are in the dataset to represent the improbability that you may find when dealing with real-world data and most of them mean that this is a null value.
 
@@ -80,7 +81,7 @@ By looking at this customer is clear that he didn't make this much money annuall
 
 When you finish this search for typos and outliers don't forget to assign the correct data type to your features. Some features like `age` started with string characters among the age values and because of this, it's uploaded as an object instead of int or float.
 
-# Filling Null Values
+## Filling Null Values
 
 After dealing with all the outliers and typos, we ended up with a lot of null values, as you can see:
 
@@ -128,7 +129,7 @@ last_columns = ['Age', 'Occupation', 'Type_of_Loan', 'Credit_Mix']
 
 The reason for not using the mean for all my values is that I didn't want to have someone be 20.5 years old and `Occupation`, `Type_of_Loan`, and `Credit_Mix` are discrete data.
 
-# Feature Engineering
+## Feature Engineering
 
 With the clean data, we can proceed to feature engineering. In this case, we first want to change the `Type_of_Loan`, because that are some occurrences that it has all the loans in one value, as you can see:
 

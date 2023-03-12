@@ -6,15 +6,19 @@ categories: [Blog]
 tags: [UX, dashboard, powerbi, data visualization, business intelligence, storytelling, figma]
 showtoc: true
 summary: Defining UX/UI in the context of Bussiness Intelligence for Dashboards with examples
+cover:
+    image: "https://ik.imagekit.io/devmedeiros/site_layout_C0BWt0-Rh.png?ik-sdk-version=javascript-1.4.3&updatedAt=1651180441785"
+    alt: "image with three website layouts"
+    hidden: true
 ---
 
-# What is UX/UI?
+## What is UX/UI?
 
 UX is the acronym for User Experience, it is a recent concept about making design decisions while thinking about the user experience. The UX designer needs to be concerned about whether their product is easy to use and intuitive, making changes to it whenever necessary to suit the user's needs.
 
 UI stands for User Interface. It is everything involved in the interaction of the user and the product. The UI designer is responsible for developing interfaces, not only limited to the visual aspects but also ensuring that the interfaces are functional and usable and generally contribute to a good user experience.
 
-# How to Improve the Experience of BI Dashboards?
+## How to Improve the Experience of BI Dashboards?
 
 Many people see BI dashboards as web pages. This comes with some expectations. For example, most sites that have some navigation system use a top menu with buttons, a side menu (most common in Brazil being on the left, but in some countries, it is on the right), or a hamburger menu (the one we click on it and the options appear).
 
@@ -22,7 +26,7 @@ Many people see BI dashboards as web pages. This comes with some expectations. F
 
 With this, a majority of people who use the dashboards expect to find navigation buttons and data segmentation (filter) in these places, in addition to other information such as logo and title.
 
-## Data Segmentation
+### Data Segmentation
 
 Also commonly called a data filter, it is a fundamental part of several dashboards, its positioning needs to be defined carefully, because if it is in a place that the user does not expect, it can prevent your dashboard from being used efficiently, in addition to maintaining a visual standard for everyone its filters help people more easily recognize what is and isn't a filter.
 
@@ -36,7 +40,7 @@ It's common for people when they are reading something on the computer to positi
 
 This feature needs may be unnoticed at first. Regularly dashboard users don't realize which filters they have used or they use so many that they just want to be able to clear the selection faster and more efficiently, so this button makes the process easier.
 
-## Page Navigation
+### Page Navigation
 
 Power BI's native page navigation is not intuitive for most people and you may want to direct the navigation in a specific flow that facilitates understanding and contributes to the intended storytelling. In this case, we have the option to hide all the report tabs, except for the opening/home page. But what's the best way to direct the user to the other pages? Suppose your report is simple, you have an overview tab and another tab with a breakdown, a simple button would solve your problem, but if your report is extensive it may be unfeasible to put a button for each tab on all pages.
 
@@ -44,9 +48,9 @@ Power BI's native page navigation is not intuitive for most people and you may w
 
 In this case, it might be interesting to consider having a home page that leads to all the other pages and placing a `home` or `back` button on them.
 
-# How to Improve Dashboards Interface?
+## How to Improve Dashboards Interface?
 
-## Prototyping Programs
+### Prototyping Programs
 
 Using a specific program to prototype your dashboard allows for greater artistic freedom compared to what Business Intelligence applications typically provide. Figma is a great tool for this, you can create advanced backgrounds and prototypes with amazing quality to use in your BI dashboards.
 
@@ -60,7 +64,7 @@ The background of this panel was done completely in Figma, even some of the titl
 
 You can check out more [Power BI Dashboards](/post/alura-challenge-bi-2) I made for Alura Challenge BI.
 
-## Figures and Icons
+### Figures and Icons
 
 {{< figure src="https://img.freepik.com/vetores-gratis/employees-dando-as-maos-e-ajudando-os-colegas-a-cliir-as-escadas_74855-5236.jpg?w =1380&t=st=1651239796~exp=1651240396~hmac=1b2ab902322bbf8ce26e3bc83f602e69075fcc2e18f0afdc91a328c7942ba746" caption="Vector created by pch.vector - br.freepik.com" align="center">}}
 

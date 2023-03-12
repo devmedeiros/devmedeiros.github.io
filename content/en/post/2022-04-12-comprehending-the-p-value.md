@@ -5,6 +5,10 @@ categories: [Blog]
 tags: [statistic, p value]
 showtoc: true
 summary: P-value definition, how to use it, and interpreting the measurement
+cover:
+    image: https://i.imgur.com/JPCwahv.jpg
+    alt: men writing on a notebook next to a laptop
+    caption: Image of StockSnap by Pixabay
 ---
 
 ## What is the p-value?

@@ -4,6 +4,10 @@ date: 2022-06-30 19:23:00 -0300
 categories: [Blog]
 tags: [visualização de dados, dashboard, powerbi, SQL, business intelligence]
 summary: Alura ofereceu um desafio de quatro semanas Challenge BI, onde os participantes precisavam fazer 3 dashboards
+cover:
+    image: "https://user-images.githubusercontent.com/33239902/176906617-80e0a1c3-3b3a-4f26-9ee1-2747ba1e00e1.gif#vitrinedev"
+    alt: "a gif showing how alura food report works"
+    hidden: true
 ---
 
 O Alura Challenge BI 2 foi um evento que durou quatro semanas, no qual nós fomos desafiados a fazer um painél de _Business Intelligence_ com base nos requisitos de três empresas fictícias. Durante o evento eu fiz esses três painés usando o Power BI, você pode ver também os arquivos fontes dos painéis no meu [repositório](https://github.com/devmedeiros/Alura-Challenge-BI-2).

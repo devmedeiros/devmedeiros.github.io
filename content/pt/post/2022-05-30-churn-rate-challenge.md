@@ -6,25 +6,18 @@ categories: [Blog]
 tags: [storytelling, python, análise de dados, aprendizado de máquina, rede neural]
 showtoc: true
 summary: Alura fez um desafio de quatro semanas "Data Science Challenge" utilizando um banco desbalanceado da taxa de evasão da empresa Alura Voz
+cover:
+    image: "https://raw.githubusercontent.com/devmedeiros/Challenge-Data-Science/main/aluravoz.png"
+    alt: "heart with an A inside and you can read 'Alura Voz telecommunication company'"
 ---
-
-**Ferramentas utilizadas:** Python, seaborn, scikit-learn, imbalanced-learn
-
-**Categoria:** Análise de Dados, Aprendizado de Máquina
-
----
-
-<!--more-->
-
-![heart with an A inside and you can read 'Alura Voz telecommunication company'](https://raw.githubusercontent.com/devmedeiros/Challenge-Data-Science/main/aluravoz.png#center)
 
 Eu fui desafiada a tomar o papel da nova cientista de dados na Alura Voz. Essa empresa fictícia é do ramo de telecomunicação e precisa reduzir sua taxa de evasão de clientes.
 
 Esse desafio é dividido em quatro semanas. Para a primeira semana o objetivo é tratar o banco de dados proveniente de uma API. Em seguida, precisamos identificar clientes que são mais propensos a deixar a empresa, usando exploração e análise de dados. E então, na terceira semana, nós usamos modelos de _machine learning_ para prever a taxa de evasão da Alura Voz. A última semana é para expor o que fizemos durante o desafio e construir nosso portfolio. Caso esteja interessado em ver o código, ele está disponível no meu [repositório](https://github.com/devmedeiros/Challenge-Data-Science) do GitHub.
 
-# Primeira Semana
+## Primeira Semana
 
-## Lendo o Banco de Dados
+### Lendo o Banco de Dados
 
 O banco de dados foi disponibilizado no formato JSON e num primeiro momento aparenta ser um _data frame_ normal.
 
@@ -32,21 +25,21 @@ O banco de dados foi disponibilizado no formato JSON e num primeiro momento apar
 
 Entretanto, como pode ser observado, `customer`, `phone`, `internet`, e `account` são suas próprias tabelas. Então eu normalizei elas separadamente e depois simplesmente concatenei todas essas tabelas em uma.
 
-## Dados Faltantes
+### Dados Faltantes
 
 A primeira vez que eu procurei por dados faltantes nessa base nenhum foi encontrado, mas a medida que eu explorei os dados eu percebi que havia espaços em branco e vazios não sendo contados como `NaN`. Então eu corrigi isso e descobri que havia 224 dados faltantes para a variável `Churn` e 11 para `Charges.Total`.
 
 Eu decidi desconsiderar os dados faltantes da variável `Churn`, pois este será nosso objeto de estudo e não há sentido em estudar algo que não existe. No caso dos dados faltantes de `Charges.Total`, eu imagino que representa um cliente que não pagou nada ainda, pois todos eles possuem 0 meses de contrato, ou seja, eles acabaram de se tornar clientes, então eu simplesmente substitui o valor faltante por 0.
 
-## Codificação de Variáveis
+### Codificação de Variáveis
 
 A variável `SeniorCitizen` foi a única que veio com `0` e `1` ao invés de `Yes` e `No`. Por hora eu irei trocar esses valores por "yes" e "no", pois isto torna a análise mais simples de ser lida.
 
 `Charges.Monthly` e `Charges.Total` foram renomeadas para perderem o ponto, pois isto atrapalha na hora de lidar com elas no _python_.
 
-# Segunda Semana
+## Segunda Semana
 
-## Análise de Dados
+### Análise de Dados
 
 No primeiro gráfico podemos ver o quão desbalanceado nosso banco de dados é. Há mais de 5000 clientes que não deixaram a empresa e um pouco menos de 2000 que deixaram.
 
@@ -62,7 +55,7 @@ No gráfico de `tenure`, eu decidi fazer gráficos de distribuição dos meses d
 
 A cobrança mensal média para os cliente que não evadiram é de 61,27 unidades monetária, enquanto que clientes que evadiram pagam 74,44. Isso provavelmente é por conta do tipo de contrato que esses tipo de clintes preferem, mas de qualquer forma é senso comum que preços altos afastam clientes.
 
-## O Perfil de Evasão
+### O Perfil de Evasão
 
 ![person jumping through the window](https://64.media.tumblr.com/tumblr_lojvnhHFH91qlh1s6o1_400.gifv#center)
 
@@ -74,9 +67,9 @@ Considerando tudo que eu pude observar através de gráficos e medidas, eu fiz u
 
 - Sobre os meios de pagamentos, cliente que evadem possuem uma preferência **forte** por cheques eletrônicos e usualmente gastam 13,17 unidades monetárias a mais que a média de clientes que não deixaram a empresa.
 
-# Terceira Semana
+## Terceira Semana
 
-## Preparando o Banco de Dados
+### Preparando o Banco de Dados
 
 Damos início fazendo variáveis _dummies_, de forma que teremos n-1 _dummies_ para n variáveis. Então fazemos uma matriz de correlação para avaliar a correlação das nossas variáveis.
 
@@ -88,21 +81,21 @@ Podemos ver que a variável `InternetService_No` possui correlações altas com 
 
 Após retirar essas variáveis eu termino de preparar o banco de dados com uma normalização das variáveis numéricas, `ChargesTotal` e `tenure`.
 
-## Banco de Dados de Teste e Treino
+### Banco de Dados de Teste e Treino
 
 Eu dividi o banco de dados em treino e teste, 20% para teste e o resto para treino. Eu estratifiquei os dados de acordo com a variável `Churn` e embaralhei os dados antes de separar. A mesma divisão de dados é usada em todos os modelos. Após separar os dados eu decidi fazer uma sobreamostragem (_oversampling_) dos dados de **teste** usando SMOTE[^1], pois os dados são muito desbalanceados. O motivo de eu usar essa técnica apenas nos dados de teste é que eu não quero ter um resultado viesado, se eu sobreamostrar todo o banco de dados isso quer dizer que eu vou testar meu modelo no mesmo dado que eu o treinei, e este não é meu objetivo.
 
-## Avaliação dos Modelos
+### Avaliação dos Modelos
 
 Eu vou utilizar um classificador _dummy_ para ter uma base para a medida de acurácia, e eu também vou utilizar as métricas: `precision` (precisão), `recall` (recordação) and `f1 score` (medida f1)[^2]. Apesar de que o modelo _dummy_ não ter valor para essas métricas eu vou manter ele para comparar a melhora dos modelos.
 
-## Modelo Base
+### Modelo Base
 
 O modelo base foi feito através de um classificador _dummy_, basicamente ele diz que todos os clientes se comportam da mesma forma. Neste caso o modelo chutou que nenhum cliente iria deixar a empresa. Usando essa abordagem o modelo base obteve uma acurácia de `0,73456`.
 
 A seguir todos os modelos terão a mesma semente aleatória (_random state_).
 
-## Modelo 1 - Florestas Aleatórias
+### Modelo 1 - Florestas Aleatórias
 
 Eu inicio usando uma busca no grid com validação cruzada (_grid search with cross-validation_) para encontrar os melhores parâmetros dentro de uma seleção de opções utilizando o `recall` como estratégia para avaliar a performance. O melhor modelo encontrado pela busca foi:
 
@@ -116,7 +109,7 @@ Após ajustar o modelo, as medidas de avaliação foram:
 - Medida Recall: 0,78877 
 - Medida F1: 0,60389
 
-## Modelo 2 - Classificação de Vetores de Suporte Linear
+### Modelo 2 - Classificação de Vetores de Suporte Linear
 
 Neste modelo eu usei os parâmetros padrões e aumentei o teto para o máximo de iterações para `900000`.
 
@@ -130,7 +123,7 @@ Após ajustar o modelo, as medidas de avaliação foram:
 - Medida Recall: 0,75936 
 - Medida F1: 0,58982
 
-## Modelo 3 - Rede Neural Multicamada Perceptron
+### Modelo 3 - Rede Neural Multicamada Perceptron
 
 Aqui eu fixei o solucionador LBFGS, pois de acordo com a documentação do `scikit-learn` ele tem uma performance melhor em banco de dados pequenos [^3], e também fiz uma busca no grid com validação cruzada para encontrar o melhor tamanho da camada oculta. O melhor modelo foi:
 
@@ -144,7 +137,7 @@ Após ajustar o modelo, as medidas de avaliação foram:
 - Medida Recall: 0,68182 
 - Medida F1: 0,57111
 
-## Conclusão
+### Conclusão
 
 Após rodar os três modelos, todos usando o mesmo `random_state`. Eu encontrei as seguintes medidas de acurácia e melhorias no desempenho (comparado com o modelo base):
 

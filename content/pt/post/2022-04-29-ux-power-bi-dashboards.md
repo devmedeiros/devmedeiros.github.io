@@ -6,15 +6,19 @@ categories: [Blog]
 tags: [UX, experiência de usuário, dashboard, powerbi, visualização de dados, business intelligence, storytelling, figma]
 showtoc: true
 summary: Definindo UX/UI no contexto de Bussiness Intelligence para Dashboards com exemplos
+cover:
+    image: "https://ik.imagekit.io/devmedeiros/site_layout_C0BWt0-Rh.png?ik-sdk-version=javascript-1.4.3&updatedAt=1651180441785"
+    alt: "image with three website layouts"
+    hidden: true
 ---
 
-# O que é UX/UI?
+## O que é UX/UI?
 
 UX é a sigla em inglês para Experiência de Usuário, é um conceito recente que fala sobre tomar decisões de design pensando na experiência do usuário final. O designer de UX precisa se preocupar se seu produto é fácil de usar e intuitivo, fazendo mudanças nele sempre que necessário para se adequar as necessidades do usuário.
 
 UI, do inglês, significa Interface do Usuário. É tudo aquilo que está envolvido na interação do usuário e o produto. O designer de UI é responsável por desenvolver interfaces, não limitado apenas aos aspectos visuais, também é importante garantir que sejam funcionais, usáveis, e que em geral, contribuem para uma boa experiência do usuário.
 
-# Como Melhorar a Experiência dos Painéis de BI?
+## Como Melhorar a Experiência dos Painéis de BI?
 
 Muitos pessoas veem os painéis de BI como páginas de web e isso traz algumas expectativas de uso. Por exemplo, a maioria dos sites que possuem algum sistema de navegação usam um menu superior com botões, um menu lateral (mais comum no Brasil sendo na esquerda, mas em alguns países é na direita) ou um menu sanduíche (aquele que clicamos no botão e aparece as opções).
 
@@ -22,7 +26,7 @@ Muitos pessoas veem os painéis de BI como páginas de web e isso traz algumas e
 
 Com isso uma grande parcela das pessoas que utilizam os painéis esperam encontrar botões de navegação e segmentação (filtro) de dados nestes locais, além de outras informações como logo e título.
 
-## Segmentação de Dados
+### Segmentação de Dados
 
 Também comummente chamado de filtro de dados é uma peça fundamental de diversos _dashboards_, seu posicionamento precisa ser definido com cuidado, pois se estiver num lugar que o usuário não espera pode impedir que seu painel seja usado eficientemente, além disso manter um padrão visual para todos os seus filtros ajudam as pessoas a reconhecerem mais facilmente o que é ou não é um filtro.
 
@@ -36,7 +40,7 @@ Você pode e deve usar e experimentar com diversos temas nos seus trabalhos. O q
 
 Essa é uma característica que pode ter sua importância despercebida num primeiro momento, mas algo que ocorre muito é os usuários do painel não perceberem quais filtros eles usaram ou usarem tantos que só querem poder limpar a seleção de forma mais rápida e eficiente, então esse botão torna o processo muito mais _user friendly_.
 
-## Navegação de Página
+### Navegação de Página
 
 A navegação de páginas nativa do Power BI não é intuitiva para a maioria das pessoas e em muitas vezes você pode querer direcionar a navegação num fluxo específico que facilita o entendimento e contribui para o _storytelling_ planejado. Neste caso temos a opção de ocultar todas as abas do relatório, exceto uma que é a página de abertura/inicial. Mas qual a melhor forma de direcionar o usuário para as demais páginas? Bem, isso depende do que você está fazendo. Suponha que seu relatório seja bem simples, você tem uma aba de visão geral e outra aba com um detalhamento, um simples botão resolveria o seu problema, mas caso seu relatório seja muito extenso pode ser inviável colocar um botão para cada aba em todas as páginas.
 
@@ -44,9 +48,9 @@ A navegação de páginas nativa do Power BI não é intuitiva para a maioria da
 
 Neste caso pode ser interessante considerar ter uma página inicial que leva a todas as páginas do relatório e colocar um botão de `home` ou `voltar` nas outras páginas.
 
-# Como Melhorar a Interface dos Dashboards?
+## Como Melhorar a Interface dos Dashboards?
 
-## Programas de Prototipagem
+### Programas de Prototipagem
 
 Usar um programa específico para fazer o protótipo do seu painel permite uma liberdade artística maior comparado ao que os aplicativos de _Business Intelligence_ normalmente fornecem. O Figma é ótimo para isso, você pode criar backgrounds e protótipos avançados com ótima qualidade para usar em seus painéis de BI.
 
@@ -60,7 +64,7 @@ O plano de fundo desse painel foi feito completamente no Figma, até mesmo algun
 
 Você pode encontrar mais [painéis de Power BI](/pt/post/alura-challenge-bi-2) que eu fiz para o Alura Challenge.
 
-## Figuras e Ícones
+### Figuras e Ícones
 
 {{< figure src="https://img.freepik.com/vetores-gratis/funcionarios-dando-as-maos-e-ajudando-os-colegas-a-subir-as-escadas_74855-5236.jpg?w=1380&t=st=1651239796~exp=1651240396~hmac=1b2ab902322bbf8ce26e3bc83f602e69075fcc2e18f0afdc91a328c7942ba746" caption="Vetor criado por pch.vector - br.freepik.com" align="center">}}
 

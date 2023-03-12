@@ -6,9 +6,14 @@ categories: [Blog, Projects]
 tags: [analytics engineer, caso, kpi, análise de dados, data engineering, manipulação de dados, python, SQL, engenharia de dados]
 showtoc: true
 summary: Projeto explorando tarefas comuns que um Analytics Engineer faz diariamente.
+cover:
+  image: https://i.imgur.com/M8tPe5Q.jpg
+  alt: "computer screen with 8 rectangles filled with key indicators"
+  caption: "Imagem de Stephen Dawson na Unsplash"
+  hidden: true
 ---
 
-# Como é trabalhar como um Analytics Engineer?
+## Como é trabalhar como um Analytics Engineer?
 
 Analytics Engineer refere-se a um profissional de ciência de dados focado em transformar dados em informações de fácil acesso ao usuário final. Eles fornecem relatórios estatísticos e dinâmicos que capacitam a equipe de negócios sem que eles precisem pensar na complexidade por trás da análise de dados.
 
@@ -16,7 +21,7 @@ Neste estudo de caso, quero falar sobre quais seriam as tarefas comuns que um An
 
 Nesse cenário, o Analytics Engineer trabalha para o Bankio, um banco digital do Brasil. Como a maioria dos bancos digitais no Brasil, o Bankio oferece transferências gratuitas para todas as contas bancárias do país. Também possui muitos produtos como conta de investimento, conta poupança, conta bancária individual, cartão de crédito sem anuidade e muito mais.
 
-## Tarefa 1: Consulta SQL
+### Tarefa 1: Consulta SQL
 
 > Um Analista de Negócios (_Bussiness Analyst_) do Bankio pede sua ajuda para escrever uma consulta SQL para obter todo o saldo mensal da conta entre janeiro de 2020 e dezembro de 2020.
 
@@ -149,7 +154,7 @@ FROM
 ```
 {{< /collapse >}}
 
-## Tarefa 2: Indicadores Chaves de Performance (KPI)
+### Tarefa 2: Indicadores Chaves de Performance (KPI)
 
 {{< figure src="https://images.unsplash.com/photo-1526628953301-3e589a6a8b74" caption="Foto de Stephen Dawson de Unsplash" alt="tela do computador com 8 retângulos preenchidos com indicadores-chave">}}
 
@@ -183,7 +188,7 @@ Nesse caso, também podemos somar o saldo de depósitos e saques da conta do Ban
 
 {{< /collapse>}}
 
-## Tarefa 3: Retorno Diário do Investimento
+### Tarefa 3: Retorno Diário do Investimento
 
 > O Bankio tem uma conta bancária em que o cliente pode investir num produto de rendimento fixo. Considere que este produto oferece aos clientes um retorno diário de 0,01% de acordo com o valor do saldo diário investido. Calcule quanto cada cliente tem em sua conta bankio durante o ano de 2020.
 
@@ -208,24 +213,24 @@ _Saldo Diário da Conta = Movimentos + Renda no Fim do Dia_
 
 ---
 
-# Glossário
+## Glossário
 
-### Saldo Mensal da Conta
+#### Saldo Mensal da Conta
 
 É a quantidade de dinheiro que um cliente tinha em sua conta no final de um determinado mês.
 
-### Informações da conta (agência, número da conta e dígito de verificação)
+#### Informações da conta (agência, número da conta e dígito de verificação)
 
 No Brasil, uma conta bancária pode ser identificada exclusivamente por três números. O código **agência**, que indica em qual agência bancária as contas foram abertas, vem primeiro. O segundo é o **número da conta** que uma agência usa para identificar contas. O **dígito de verificação**, que é usado apenas para detecção de erros, é o último.
 
-### CPF
+#### CPF
 
 É a identificação cadastral do contribuinte individual brasileiro.
 
-### PIX
+#### PIX
 
 No Brasil, este é o método mais recente de transferência de dinheiro. Não é pago. É imediato, e tudo o que é necessário para concluir uma transação é a chave PIX associada à conta. 
 
-### Transferências não PIX
+#### Transferências não PIX
 
 Estes são os métodos convencionais para transferir dinheiro entre contas bancárias. Esse tipo de transação exige que sejam fornecidos o CPF, o código da agência, o número da conta e o dígito verificador da conta que receberá os recursos. A maioria dos bancos cobra uma taxa nessas transações, e a confirmação da transação normalmente leva várias horas a dias. 

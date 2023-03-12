@@ -3,14 +3,17 @@ title: Ethics in Data Science
 date: 2022-10-01 16:14:00 -0300
 categories: [Blog]
 tags: [ethic, data science, privacy, scraping, bias]
+showtoc: true
+summary: Data Science is an exciting field, but it's also full of ethical dilemmas.
+cover:
+    image: "https://i.imgur.com/0GDIYVp.jpg"
+    alt: "table with multiple notebooks and two people writing on sheets calculating something"
 ---
 
-![table with multiple notebooks and two people writing on sheets calculating something](https://ik.imagekit.io/devmedeiros/scott-graham-5fNmWej4tAA-unsplash_npKji7Euw.jpg?ik-sdk-version=javascript-1.4.3&updatedAt=1664645960833#center)
-
-# Introduction
+## Introduction
 Data science is an exciting field, but it’s also full of ethical pitfalls. If you want to avoid getting drawn into a situation that could damage your company or client, it’s important to understand the basics of data ethics and how they can affect your work.
 
-# Learning from the past
+## Learning from the past
 
 Learning from the past is important because it can help us avoid making ethical mistakes that others already committed. The following examples are a sampling of some of the most popular data science ethics issues over the years:
 
@@ -40,7 +43,7 @@ It would be nice to be able to predict crime or be able to estimate where law en
 
 This polluted data makes the software produce equally contaminated results, leading the software to be better at predicting policing instead of predicting crime, becoming a self-fulfilling prophecy.
 
-# Conclusion
+## Conclusion
 
 These examples show that there are many ways to make mistakes when it comes to handling user data, but they also serve as excellent educational resources for anyone interested in learning more about _how_ these kinds of problems can be avoided in future projects.
 

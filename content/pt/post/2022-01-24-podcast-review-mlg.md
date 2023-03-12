@@ -4,6 +4,11 @@ date: 2022-01-24 18:15:00 -0300
 categories: [Blog]
 tags: [podcast, review]
 summary: Uma resenha sobre o podcast Machine Learning Guide
+cover:
+    image: "https://i.imgur.com/cQMS7jr.jpg"
+    alt: "headphone next to a microphone and a laptop in the background"
+    caption: "Imagem de Will Francis na Unsplash"
+    hidden: true
 ---
 
 ![Machine Learning Guide Podcast Capa](https://ocdevel.com/static/media/MLG-Option-1.24e2cc63.jpg#center)

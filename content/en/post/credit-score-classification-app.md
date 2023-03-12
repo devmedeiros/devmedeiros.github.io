@@ -5,9 +5,13 @@ categories: [Projects]
 tags: [python, streamlit, pickle, machine learning, credit score, app, data visualization, data science, random forest]
 showtoc: true
 summary: Using Streamlit to make a web app that classifies your credit score using Python
+cover:
+    image: "https://user-images.githubusercontent.com/33239902/183321842-be97fb04-f00b-4b62-8e6e-2b53d25335a0.gif"
+    alt: "a gif showing how the streamlit credit score app works"
+    hidden: true
 ---
 
-# Project Overview
+## Project Overview
 
 This project showcase a data science life cycle, where I clean and prepare the dataset, use feature engineering, machine learning, deploy, and data visualization.
 

@@ -1,9 +1,13 @@
 ---
-title: Descriptive Analysis of Amazon Top 50 Bestselling Books 2009 - 2019
+title: EDA Amazon Top 50 Bestselling Books
 date: 2021-12-28 14:55:00 -0300
 categories: [Blog]
 tags: [python, data visualization, data analysis, EDA]
 summary: Exploratory Data Analysis of Amazon's top 50 bestselling books 2009 - 2019
+cover:
+    image: https://i.imgur.com/DceyZAH.jpg
+    alt: image of an multiple books, most closed and some open
+    caption: Photo by [Abhi Sharma](https://www.flickr.com/photos/abee5/8314929977), [CC BY 2.0](https://creativecommons.org/licenses/by/2.0/)
 ---
 
 Recently I finished an Alura course named _Python for Data Science_ and I want to put what I learned into practice, to do so I'll make a descriptive analysis on this dataset [**Amazon Top 50 Bestselling Books 2009 - 2019**](https://www.kaggle.com/sootersaalu/amazon-top-50-bestselling-books-2009-2019). It contains 550 books and the data has been categorized as fiction and non-fiction by Goodreads. All of the code can be found [here](https://gist.github.com/devmedeiros/12813bebd78f7662966096e963ed0aa9).

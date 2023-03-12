@@ -4,15 +4,11 @@ date: 2021-10-24 20:43:00 -0300
 categories: [Blog]
 tags: [R, simulação, shiny, ggplot]
 summary: Uma simulação de 21 usando R e Shiny, você pode rodar um jogo com p jogadores, d baralhos, n vezes
+cover:
+    image: "https://i.imgur.com/w62pRrL.jpg"
+    alt: "um ás e um valete sobre uma mesa verde com peças de poquêr"
+    caption: "Imagem de Michael Brasuela por Pixabay"
 ---
-
-**Ferramentas utilizadas:** R, ggplot, Shiny
-
-**Categoria:** Simulação
-
----
-
-<!--more-->
 
 O meu objetivo com este projeto é de simular o ambiente de um jogo de 21, também conhecido como _blackjack_. Assim, eu decidi fazer diversas funções para emular o comportamento do _dealer_, de um jogador iniciante, um jogador cauteloso e um estrategista. Com esse conjunto de funções você pode rodar um jogo com **p** jogadores, **d** baralhos e quaisquer combinações de arquétipos de jogadores. Além disso, também pode rodar o jogo **n** vezes.
 

@@ -5,6 +5,10 @@ categories: [Blog]
 tags: [estatística, p-valor]
 showtoc: true
 summary: A definição do p-valor, como usar ele, e como interpretar a medida
+cover:
+    image: https://i.imgur.com/JPCwahv.jpg
+    alt: men writing on a notebook next to a laptop
+    caption: Imagem de StockSnap por Pixabay
 ---
 
 ## O que é o p-valor?

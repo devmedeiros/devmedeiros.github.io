@@ -3,7 +3,12 @@ title: Fazendo Gráficos Melhores
 date: 2022-11-15 08:01:00 -0300
 categories: [Blog]
 tags: [data visualization, business intelligence, storytelling, review, ethic]
-summary: Choosing the best graph or plot can be a hard task, but it doesn't need to be.
+summary: Escolher o melhor gráfico pode ser uma tarefa difícil, mas não precisa ser.
+cover:
+    image: https://i.imgur.com/eggG31k.jpg
+    alt: "um gráfico de rosca mostrando sim como a maioria enquanto ele representa 10%, e não como a minoria quando ele representa 90%"
+    caption: "piechart de WTF Visualizations"
+    hidden: true
 ---
 
 Aprendendo a fazer melhores visualizações vem com estudo e prática, hoje quero falar sobre fontes que você pode usar para orientá-lo a fazer gráficos melhores e outras visualizações de dados em geral.

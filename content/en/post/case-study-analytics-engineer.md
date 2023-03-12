@@ -6,9 +6,14 @@ categories: [Blog, Projects]
 tags: [analytics engineer, case, kpi, data analysis, data engineering+, data manipulation, python, SQL]
 showtoc: true
 summary: Project exploring common tasks an Analytics Engineer needs to perform on a daily day.
+cover:
+  image: https://i.imgur.com/M8tPe5Q.jpg
+  alt: "computer screen with 8 rectangles filled with key indicators"
+  caption: "Photo by Stephen Dawson on Unsplash"
+  hidden: true
 ---
 
-# What is it like working as an Analytics Engineer?
+## What is it like working as an Analytics Engineer?
 
 Analytics Engineer refers to a Data Science professional focused on transforming data into information that is easy to access to the end-user. They provide static and dynamic reports that empower the business team without them needing to think about the complexity behind data analysis.
 
@@ -16,7 +21,7 @@ In this case study, I want to talk about what would be common tasks that an Anal
 
 In this scenario, the Analytics Engineer works for Bankio a digital bank from Brazil. Like most digital banks in Brazil, Bankio offers free transfers for every bank account in the country. It also has many products like an investment account, a savings account, an individual bank account, a credit card without an annual fee, and many more.
 
-## Task 1: SQL Query
+### Task 1: SQL Query
 
 > A Bussiness Analyst from Bankio asks for your assistance writing a SQL query to get all the account's monthly balance between January 2020 to December 2020.
 
@@ -149,7 +154,7 @@ FROM
 ```
 {{< /collapse >}}
 
-## Task 2: Key Performance Indicators
+### Task 2: Key Performance Indicators
 
 {{< figure src="https://images.unsplash.com/photo-1526628953301-3e589a6a8b74" caption="Photo by Stephen Dawson on Unsplash" alt="computer screen with 8 rectangles filled with key indicators">}}
 
@@ -184,7 +189,7 @@ In this case we could also sum the balance of deposit and withdrawals from the B
 
 {{< /collapse>}}
 
-## Task 3: Daily Investment Return
+### Task 3: Daily Investment Return
 
 > Bankio has a customer banking account that allows you to invest on a fixed rate income product. Consider that this product provides customers with a daily return of 0.01% according to their daily invested balance amount. Calculate how much each customer has on their bankio account during the year 2020. 
 
@@ -209,24 +214,24 @@ _Account Daily Balance = Movements + End of Day Income_
 
 ---
 
-# Glossary
+## Glossary
 
-### Account Monthly Balance
+#### Account Monthly Balance
 
 It is the amount of money a customer had in their account at the end of a given month.
 
-### Account info (branch, number and check-digit)
+#### Account info (branch, number and check-digit)
 
 In Brazil, a bank account can be uniquely identifiable by three numbers. The **branch** code, which indicates which bank branch the accounts were opened in, comes first. The second is the **account number** that a branch uses to identify accounts. The **check-digit**, which is only used for error detection, is the last. 
 
-### CPF
+#### CPF
 
 It is the Brazilian individual taxpayer registry identification.
 
-### PIX
+#### PIX
 
 In Brazil, this is the most recent method of money transmission. It's unpaid. It is immediate, and all that is required to complete a transaction is the Pix-Key associated with the account. 
 
-### Non PIX transfers
+#### Non PIX transfers
 
 These are the conventional methods for transferring money between bank accounts. This type of transaction requires the CPF, the branch code, the account number, and the check digit of the account that will receive the funds to be provided. Most banks charge a fee in these transactions, and the confirmation of the transaction typically takes several hours to days. 

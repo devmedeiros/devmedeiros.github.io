@@ -5,9 +5,10 @@ categories: [Blog]
 tags: [SQL, tutorial, banco de dados, oracle, postgre, postgresql]
 showtoc: false
 summary: SQL é sigla para Linguagem de Query Estruturada. Uma linguagem de query é uma linguagem de programação especializada que permite pesquisar e alterar os conteúdos de um banco de dados.
+cover:
+    image: "https://i.imgur.com/E5fWW20.jpg"
+    alt: "uma estrutura asiática representando sql e seus diferentes dialetos"
 ---
-
-![estrutura asiática representando sql e seus diferentes dialetos](https://i.imgur.com/E5fWW20.jpg)
 
 SQL é sigla para Linguagem de Query Estruturada (_Structured Query Language_). Uma linguagem de query é uma linguagem de programação especializada que permite pesquisar e alterar os conteúdos de um banco de dados. 
 

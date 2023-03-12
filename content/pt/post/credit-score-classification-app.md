@@ -5,9 +5,13 @@ categories: [Projects]
 tags: [python, streamlit, pickle, aprendizado de máquina, score, aplicativo, visualização de dados, ciência de dados, random forest]
 showtoc: true
 summary: Usando o Streamlit para fazer um aplicativo da web que classifica sua pontuação de crédito usando Python
+cover:
+    image: "https://user-images.githubusercontent.com/33239902/183321842-be97fb04-f00b-4b62-8e6e-2b53d25335a0.gif"
+    alt: "um gif mostrando como o app streamlit de classificação de crédito"
+    hidden: true
 ---
 
-# Visão Geral do Projeto
+## Visão Geral do Projeto
 
 Este projeto mostra um ciclo de vida de ciência de dados, onde eu limpo e preparo o banco de dados, _feature engineering_, aprendizado de máquina, _deploy_ e visualização de dados.
 

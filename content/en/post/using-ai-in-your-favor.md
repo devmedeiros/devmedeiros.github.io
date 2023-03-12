@@ -5,9 +5,11 @@ categories: [Blog]
 tags: [AI, artificial intelligence, chatgpt, NLP, opencv]
 showtoc: false
 summary: Uma nova forma de usar ferramentas de inteligência artificial, como ChatGPT, ao seu favor.
+cover:
+    image: https://i.imgur.com/HtkNfTq.jpg
+    alt: "close up of a woman tipying on a laptop"
+    caption: "Photo by Kaitlyn Baker on Unsplash"
 ---
-
-![Photo by Kaitlyn Baker na Unsplash, close up de uma mulher digitando em um notebook](https://images.unsplash.com/photo-1508780709619-79562169bc64?ixlib=rb-4.0.3&ixid=MnwxMjA3fDB8MHxwaG90by1wYWdlfHx8fGVufDB8fHx8&auto=format&fit=crop&w=1170&q=80)
 
 In the last months, once again AI became a hot topic, after several papers regarding art made by artificial intelligence, now is the time for text written by AI to shine.
 
