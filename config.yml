@@ -66,13 +66,13 @@ languages:
         Analytics Engineer interessada em transparência, transformação e governança de dados.
 
 params:
-  env: production # to enable google analytics, opengraph, twitter-cards and schema.
+  env: devolpment #production # to enable google analytics, opengraph, twitter-cards and schema.
   title: Dev_Medeiros
   description: "A blog about Data Science"
   keywords: [Blog, Portfolio, Data Science, Python, R, Data Analytics, Data Engineering]
   author: Jaqueline Souza Medeiros
   images: ["cover.png"]
-  DateFormat: 
+  DateFormat: "2006-01-02"
   defaultTheme: light # dark, light
   disableThemeToggle: false
   displayFullLangName: true
