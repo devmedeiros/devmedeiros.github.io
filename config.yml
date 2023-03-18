@@ -66,7 +66,7 @@ languages:
         Analytics Engineer interessada em transparência, transformação e governança de dados.
 
 params:
-  env: devolpment #production # to enable google analytics, opengraph, twitter-cards and schema.
+  env: production # to enable google analytics, opengraph, twitter-cards and schema.
   title: Dev_Medeiros
   description: "A blog about Data Science"
   keywords: [Blog, Portfolio, Data Science, Python, R, Data Analytics, Data Engineering]
