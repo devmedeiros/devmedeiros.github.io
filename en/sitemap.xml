@@ -3,7 +3,7 @@
   xmlns:xhtml="http://www.w3.org/1999/xhtml">
   <url>
     <loc>https://devmedeiros.com/categories/blog/</loc>
-    <lastmod>2023-03-07T20:02:00-03:00</lastmod>
+    <lastmod>2023-04-04T22:30:00-03:00</lastmod>
     <xhtml:link
                 rel="alternate"
                 hreflang="pt"
@@ -16,7 +16,7 @@
                 />
   </url><url>
     <loc>https://devmedeiros.com/categories/</loc>
-    <lastmod>2023-03-07T20:02:00-03:00</lastmod>
+    <lastmod>2023-04-04T22:30:00-03:00</lastmod>
     <xhtml:link
                 rel="alternate"
                 hreflang="pt"
@@ -28,11 +28,21 @@
                 href="https://devmedeiros.com/categories/"
                 />
   </url><url>
-    <loc>https://devmedeiros.com/tags/database/</loc>
-    <lastmod>2023-03-07T20:02:00-03:00</lastmod>
+    <loc>https://devmedeiros.com/tags/data-visualization/</loc>
+    <lastmod>2023-04-04T22:30:00-03:00</lastmod>
+    <xhtml:link
+                rel="alternate"
+                hreflang="pt"
+                href="https://devmedeiros.com/pt/tags/data-visualization/"
+                />
+    <xhtml:link
+                rel="alternate"
+                hreflang="en"
+                href="https://devmedeiros.com/tags/data-visualization/"
+                />
   </url><url>
     <loc>https://devmedeiros.com/</loc>
-    <lastmod>2023-03-07T20:02:00-03:00</lastmod>
+    <lastmod>2023-04-04T22:30:00-03:00</lastmod>
     <xhtml:link
                 rel="alternate"
                 hreflang="pt"
@@ -43,6 +53,100 @@
                 hreflang="en"
                 href="https://devmedeiros.com/"
                 />
+  </url><url>
+    <loc>https://devmedeiros.com/post/how-to-use-word-clouds/</loc>
+    <lastmod>2023-04-04T22:30:00-03:00</lastmod>
+    <xhtml:link
+                rel="alternate"
+                hreflang="pt"
+                href="https://devmedeiros.com/pt/post/how-to-use-word-clouds/"
+                />
+    <xhtml:link
+                rel="alternate"
+                hreflang="en"
+                href="https://devmedeiros.com/post/how-to-use-word-clouds/"
+                />
+  </url><url>
+    <loc>https://devmedeiros.com/tags/nps/</loc>
+    <lastmod>2023-04-04T22:30:00-03:00</lastmod>
+    <xhtml:link
+                rel="alternate"
+                hreflang="pt"
+                href="https://devmedeiros.com/pt/tags/nps/"
+                />
+    <xhtml:link
+                rel="alternate"
+                hreflang="en"
+                href="https://devmedeiros.com/tags/nps/"
+                />
+  </url><url>
+    <loc>https://devmedeiros.com/post/</loc>
+    <lastmod>2023-04-04T22:30:00-03:00</lastmod>
+    <xhtml:link
+                rel="alternate"
+                hreflang="pt"
+                href="https://devmedeiros.com/pt/post/"
+                />
+    <xhtml:link
+                rel="alternate"
+                hreflang="en"
+                href="https://devmedeiros.com/post/"
+                />
+  </url><url>
+    <loc>https://devmedeiros.com/tags/stopwords/</loc>
+    <lastmod>2023-04-04T22:30:00-03:00</lastmod>
+    <xhtml:link
+                rel="alternate"
+                hreflang="pt"
+                href="https://devmedeiros.com/pt/tags/stopwords/"
+                />
+    <xhtml:link
+                rel="alternate"
+                hreflang="en"
+                href="https://devmedeiros.com/tags/stopwords/"
+                />
+  </url><url>
+    <loc>https://devmedeiros.com/tags/storytelling/</loc>
+    <lastmod>2023-04-04T22:30:00-03:00</lastmod>
+    <xhtml:link
+                rel="alternate"
+                hreflang="pt"
+                href="https://devmedeiros.com/pt/tags/storytelling/"
+                />
+    <xhtml:link
+                rel="alternate"
+                hreflang="en"
+                href="https://devmedeiros.com/tags/storytelling/"
+                />
+  </url><url>
+    <loc>https://devmedeiros.com/tags/</loc>
+    <lastmod>2023-04-04T22:30:00-03:00</lastmod>
+    <xhtml:link
+                rel="alternate"
+                hreflang="pt"
+                href="https://devmedeiros.com/pt/tags/"
+                />
+    <xhtml:link
+                rel="alternate"
+                hreflang="en"
+                href="https://devmedeiros.com/tags/"
+                />
+  </url><url>
+    <loc>https://devmedeiros.com/tags/word-cloud/</loc>
+    <lastmod>2023-04-04T22:30:00-03:00</lastmod>
+    <xhtml:link
+                rel="alternate"
+                hreflang="pt"
+                href="https://devmedeiros.com/pt/tags/word-cloud/"
+                />
+    <xhtml:link
+                rel="alternate"
+                hreflang="en"
+                href="https://devmedeiros.com/tags/word-cloud/"
+                />
+  </url><url>
+    <loc>https://devmedeiros.com/tags/database/</loc>
+    <lastmod>2023-03-07T20:02:00-03:00</lastmod>
   </url><url>
     <loc>https://devmedeiros.com/tags/oracle/</loc>
     <lastmod>2023-03-07T20:02:00-03:00</lastmod>
@@ -83,19 +187,6 @@
                 href="https://devmedeiros.com/tags/postgresql/"
                 />
   </url><url>
-    <loc>https://devmedeiros.com/post/</loc>
-    <lastmod>2023-03-07T20:02:00-03:00</lastmod>
-    <xhtml:link
-                rel="alternate"
-                hreflang="pt"
-                href="https://devmedeiros.com/pt/post/"
-                />
-    <xhtml:link
-                rel="alternate"
-                hreflang="en"
-                href="https://devmedeiros.com/post/"
-                />
-  </url><url>
     <loc>https://devmedeiros.com/tags/sql/</loc>
     <lastmod>2023-03-07T20:02:00-03:00</lastmod>
     <xhtml:link
@@ -107,19 +198,6 @@
                 rel="alternate"
                 hreflang="en"
                 href="https://devmedeiros.com/tags/sql/"
-                />
-  </url><url>
-    <loc>https://devmedeiros.com/tags/</loc>
-    <lastmod>2023-03-07T20:02:00-03:00</lastmod>
-    <xhtml:link
-                rel="alternate"
-                hreflang="pt"
-                href="https://devmedeiros.com/pt/tags/"
-                />
-    <xhtml:link
-                rel="alternate"
-                hreflang="en"
-                href="https://devmedeiros.com/tags/"
                 />
   </url><url>
     <loc>https://devmedeiros.com/tags/tutorial/</loc>
@@ -229,19 +307,6 @@
                 href="https://devmedeiros.com/tags/business-intelligence/"
                 />
   </url><url>
-    <loc>https://devmedeiros.com/tags/data-visualization/</loc>
-    <lastmod>2022-11-15T08:01:00-03:00</lastmod>
-    <xhtml:link
-                rel="alternate"
-                hreflang="pt"
-                href="https://devmedeiros.com/pt/tags/data-visualization/"
-                />
-    <xhtml:link
-                rel="alternate"
-                hreflang="en"
-                href="https://devmedeiros.com/tags/data-visualization/"
-                />
-  </url><url>
     <loc>https://devmedeiros.com/tags/ethic/</loc>
     <lastmod>2022-11-15T08:01:00-03:00</lastmod>
     <xhtml:link
@@ -279,19 +344,6 @@
                 rel="alternate"
                 hreflang="en"
                 href="https://devmedeiros.com/tags/review/"
-                />
-  </url><url>
-    <loc>https://devmedeiros.com/tags/storytelling/</loc>
-    <lastmod>2022-11-15T08:01:00-03:00</lastmod>
-    <xhtml:link
-                rel="alternate"
-                hreflang="pt"
-                href="https://devmedeiros.com/pt/tags/storytelling/"
-                />
-    <xhtml:link
-                rel="alternate"
-                hreflang="en"
-                href="https://devmedeiros.com/tags/storytelling/"
                 />
   </url><url>
     <loc>https://devmedeiros.com/tags/bias/</loc>

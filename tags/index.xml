@@ -10,7 +10,52 @@
       <link>https://devmedeiros.com/cover.png</link>
     </image>
     <generator>Hugo -- gohugo.io</generator>
-    <lastBuildDate>Tue, 07 Mar 2023 20:02:00 -0300</lastBuildDate><atom:link href="https://devmedeiros.com/tags/index.xml" rel="self" type="application/rss+xml" />
+    <lastBuildDate>Tue, 04 Apr 2023 22:30:00 -0300</lastBuildDate><atom:link href="https://devmedeiros.com/tags/index.xml" rel="self" type="application/rss+xml" />
+    <item>
+      <title>data visualization</title>
+      <link>https://devmedeiros.com/tags/data-visualization/</link>
+      <pubDate>Tue, 04 Apr 2023 22:30:00 -0300</pubDate>
+      
+      <guid>https://devmedeiros.com/tags/data-visualization/</guid>
+      <description></description>
+    </item>
+    
+    <item>
+      <title>NPS</title>
+      <link>https://devmedeiros.com/tags/nps/</link>
+      <pubDate>Tue, 04 Apr 2023 22:30:00 -0300</pubDate>
+      
+      <guid>https://devmedeiros.com/tags/nps/</guid>
+      <description></description>
+    </item>
+    
+    <item>
+      <title>stopwords</title>
+      <link>https://devmedeiros.com/tags/stopwords/</link>
+      <pubDate>Tue, 04 Apr 2023 22:30:00 -0300</pubDate>
+      
+      <guid>https://devmedeiros.com/tags/stopwords/</guid>
+      <description></description>
+    </item>
+    
+    <item>
+      <title>storytelling</title>
+      <link>https://devmedeiros.com/tags/storytelling/</link>
+      <pubDate>Tue, 04 Apr 2023 22:30:00 -0300</pubDate>
+      
+      <guid>https://devmedeiros.com/tags/storytelling/</guid>
+      <description></description>
+    </item>
+    
+    <item>
+      <title>word cloud</title>
+      <link>https://devmedeiros.com/tags/word-cloud/</link>
+      <pubDate>Tue, 04 Apr 2023 22:30:00 -0300</pubDate>
+      
+      <guid>https://devmedeiros.com/tags/word-cloud/</guid>
+      <description></description>
+    </item>
+    
     <item>
       <title>database</title>
       <link>https://devmedeiros.com/tags/database/</link>
@@ -120,15 +165,6 @@
     </item>
     
     <item>
-      <title>data visualization</title>
-      <link>https://devmedeiros.com/tags/data-visualization/</link>
-      <pubDate>Tue, 15 Nov 2022 08:01:00 -0300</pubDate>
-      
-      <guid>https://devmedeiros.com/tags/data-visualization/</guid>
-      <description></description>
-    </item>
-    
-    <item>
       <title>ethic</title>
       <link>https://devmedeiros.com/tags/ethic/</link>
       <pubDate>Tue, 15 Nov 2022 08:01:00 -0300</pubDate>
@@ -143,15 +179,6 @@
       <pubDate>Tue, 15 Nov 2022 08:01:00 -0300</pubDate>
       
       <guid>https://devmedeiros.com/tags/review/</guid>
-      <description></description>
-    </item>
-    
-    <item>
-      <title>storytelling</title>
-      <link>https://devmedeiros.com/tags/storytelling/</link>
-      <pubDate>Tue, 15 Nov 2022 08:01:00 -0300</pubDate>
-      
-      <guid>https://devmedeiros.com/tags/storytelling/</guid>
       <description></description>
     </item>
     

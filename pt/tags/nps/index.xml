@@ -1,0 +1,24 @@
+<?xml version="1.0" encoding="utf-8" standalone="yes"?>
+<rss version="2.0" xmlns:atom="http://www.w3.org/2005/Atom" xmlns:content="http://purl.org/rss/1.0/modules/content/">
+  <channel>
+    <title>NPS on Dev_Medeiros</title>
+    <link>https://devmedeiros.com/pt/tags/nps/</link>
+    <description>Recent content in NPS on Dev_Medeiros</description>
+    <image>
+      <title>Dev_Medeiros</title>
+      <url>https://devmedeiros.com/cover.png</url>
+      <link>https://devmedeiros.com/cover.png</link>
+    </image>
+    <generator>Hugo -- gohugo.io</generator>
+    <lastBuildDate>Tue, 04 Apr 2023 22:30:00 -0300</lastBuildDate><atom:link href="https://devmedeiros.com/pt/tags/nps/index.xml" rel="self" type="application/rss+xml" />
+    <item>
+      <title>Como usar nuvem de palavras?</title>
+      <link>https://devmedeiros.com/pt/post/how-to-use-word-clouds/</link>
+      <pubDate>Tue, 04 Apr 2023 22:30:00 -0300</pubDate>
+      
+      <guid>https://devmedeiros.com/pt/post/how-to-use-word-clouds/</guid>
+      <description>Nuvens de palavras são uma visualização popular para analisar textos, mas é preciso apresentá-las de forma clara para que a mensagem seja compreendida.</description>
+    </item>
+    
+  </channel>
+</rss>

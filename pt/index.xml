@@ -10,7 +10,16 @@
       <link>https://devmedeiros.com/cover.png</link>
     </image>
     <generator>Hugo -- gohugo.io</generator>
-    <lastBuildDate>Tue, 07 Mar 2023 20:02:00 -0300</lastBuildDate><atom:link href="https://devmedeiros.com/pt/index.xml" rel="self" type="application/rss+xml" />
+    <lastBuildDate>Tue, 04 Apr 2023 22:30:00 -0300</lastBuildDate><atom:link href="https://devmedeiros.com/pt/index.xml" rel="self" type="application/rss+xml" />
+    <item>
+      <title>Como usar nuvem de palavras?</title>
+      <link>https://devmedeiros.com/pt/post/how-to-use-word-clouds/</link>
+      <pubDate>Tue, 04 Apr 2023 22:30:00 -0300</pubDate>
+      
+      <guid>https://devmedeiros.com/pt/post/how-to-use-word-clouds/</guid>
+      <description>Nuvens de palavras são uma visualização popular para analisar textos, mas é preciso apresentá-las de forma clara para que a mensagem seja compreendida.</description>
+    </item>
+    
     <item>
       <title>O que é SQL?</title>
       <link>https://devmedeiros.com/pt/post/what-is-sql/</link>

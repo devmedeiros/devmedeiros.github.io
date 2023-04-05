@@ -1,0 +1,24 @@
+<?xml version="1.0" encoding="utf-8" standalone="yes"?>
+<rss version="2.0" xmlns:atom="http://www.w3.org/2005/Atom" xmlns:content="http://purl.org/rss/1.0/modules/content/">
+  <channel>
+    <title>word cloud on Dev_Medeiros</title>
+    <link>https://devmedeiros.com/tags/word-cloud/</link>
+    <description>Recent content in word cloud on Dev_Medeiros</description>
+    <image>
+      <title>Dev_Medeiros</title>
+      <url>https://devmedeiros.com/cover.png</url>
+      <link>https://devmedeiros.com/cover.png</link>
+    </image>
+    <generator>Hugo -- gohugo.io</generator>
+    <lastBuildDate>Tue, 04 Apr 2023 22:30:00 -0300</lastBuildDate><atom:link href="https://devmedeiros.com/tags/word-cloud/index.xml" rel="self" type="application/rss+xml" />
+    <item>
+      <title>How to use Word clouds?</title>
+      <link>https://devmedeiros.com/post/how-to-use-word-clouds/</link>
+      <pubDate>Tue, 04 Apr 2023 22:30:00 -0300</pubDate>
+      
+      <guid>https://devmedeiros.com/post/how-to-use-word-clouds/</guid>
+      <description>Word clouds are a popular data visualization tool for analyzing texts, but they need to be presented clearly for the message to be understood.</description>
+    </item>
+    
+  </channel>
+</rss>

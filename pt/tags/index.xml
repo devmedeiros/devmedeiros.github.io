@@ -10,7 +10,61 @@
       <link>https://devmedeiros.com/cover.png</link>
     </image>
     <generator>Hugo -- gohugo.io</generator>
-    <lastBuildDate>Tue, 07 Mar 2023 20:02:00 -0300</lastBuildDate><atom:link href="https://devmedeiros.com/pt/tags/index.xml" rel="self" type="application/rss+xml" />
+    <lastBuildDate>Tue, 04 Apr 2023 22:30:00 -0300</lastBuildDate><atom:link href="https://devmedeiros.com/pt/tags/index.xml" rel="self" type="application/rss+xml" />
+    <item>
+      <title>NPS</title>
+      <link>https://devmedeiros.com/pt/tags/nps/</link>
+      <pubDate>Tue, 04 Apr 2023 22:30:00 -0300</pubDate>
+      
+      <guid>https://devmedeiros.com/pt/tags/nps/</guid>
+      <description></description>
+    </item>
+    
+    <item>
+      <title>nuvem de palavras</title>
+      <link>https://devmedeiros.com/pt/tags/nuvem-de-palavras/</link>
+      <pubDate>Tue, 04 Apr 2023 22:30:00 -0300</pubDate>
+      
+      <guid>https://devmedeiros.com/pt/tags/nuvem-de-palavras/</guid>
+      <description></description>
+    </item>
+    
+    <item>
+      <title>stopwords</title>
+      <link>https://devmedeiros.com/pt/tags/stopwords/</link>
+      <pubDate>Tue, 04 Apr 2023 22:30:00 -0300</pubDate>
+      
+      <guid>https://devmedeiros.com/pt/tags/stopwords/</guid>
+      <description></description>
+    </item>
+    
+    <item>
+      <title>storytelling</title>
+      <link>https://devmedeiros.com/pt/tags/storytelling/</link>
+      <pubDate>Tue, 04 Apr 2023 22:30:00 -0300</pubDate>
+      
+      <guid>https://devmedeiros.com/pt/tags/storytelling/</guid>
+      <description></description>
+    </item>
+    
+    <item>
+      <title>visualização de dados</title>
+      <link>https://devmedeiros.com/pt/tags/visualiza%C3%A7%C3%A3o-de-dados/</link>
+      <pubDate>Tue, 04 Apr 2023 22:30:00 -0300</pubDate>
+      
+      <guid>https://devmedeiros.com/pt/tags/visualiza%C3%A7%C3%A3o-de-dados/</guid>
+      <description></description>
+    </item>
+    
+    <item>
+      <title>word cloud</title>
+      <link>https://devmedeiros.com/pt/tags/word-cloud/</link>
+      <pubDate>Tue, 04 Apr 2023 22:30:00 -0300</pubDate>
+      
+      <guid>https://devmedeiros.com/pt/tags/word-cloud/</guid>
+      <description></description>
+    </item>
+    
     <item>
       <title>banco de dados</title>
       <link>https://devmedeiros.com/pt/tags/banco-de-dados/</link>
@@ -174,15 +228,6 @@
     </item>
     
     <item>
-      <title>storytelling</title>
-      <link>https://devmedeiros.com/pt/tags/storytelling/</link>
-      <pubDate>Tue, 15 Nov 2022 08:01:00 -0300</pubDate>
-      
-      <guid>https://devmedeiros.com/pt/tags/storytelling/</guid>
-      <description></description>
-    </item>
-    
-    <item>
       <title>análise de dados</title>
       <link>https://devmedeiros.com/pt/tags/an%C3%A1lise-de-dados/</link>
       <pubDate>Tue, 23 Aug 2022 22:57:00 -0300</pubDate>
@@ -314,15 +359,6 @@
       <pubDate>Mon, 08 Aug 2022 17:17:00 -0300</pubDate>
       
       <guid>https://devmedeiros.com/pt/tags/streamlit/</guid>
-      <description></description>
-    </item>
-    
-    <item>
-      <title>visualização de dados</title>
-      <link>https://devmedeiros.com/pt/tags/visualiza%C3%A7%C3%A3o-de-dados/</link>
-      <pubDate>Mon, 08 Aug 2022 17:17:00 -0300</pubDate>
-      
-      <guid>https://devmedeiros.com/pt/tags/visualiza%C3%A7%C3%A3o-de-dados/</guid>
       <description></description>
     </item>
     
