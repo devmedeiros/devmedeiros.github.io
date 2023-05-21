@@ -10,7 +10,124 @@
       <link>https://devmedeiros.com/cover.png</link>
     </image>
     <generator>Hugo -- gohugo.io</generator>
-    <lastBuildDate>Tue, 04 Apr 2023 22:30:00 -0300</lastBuildDate><atom:link href="https://devmedeiros.com/pt/tags/index.xml" rel="self" type="application/rss+xml" />
+    <lastBuildDate>Sat, 20 May 2023 19:46:00 -0300</lastBuildDate><atom:link href="https://devmedeiros.com/pt/tags/index.xml" rel="self" type="application/rss+xml" />
+    <item>
+      <title>AI</title>
+      <link>https://devmedeiros.com/pt/tags/ai/</link>
+      <pubDate>Sat, 20 May 2023 19:46:00 -0300</pubDate>
+      
+      <guid>https://devmedeiros.com/pt/tags/ai/</guid>
+      <description></description>
+    </item>
+    
+    <item>
+      <title>aprendizado de máquina</title>
+      <link>https://devmedeiros.com/pt/tags/aprendizado-de-m%C3%A1quina/</link>
+      <pubDate>Sat, 20 May 2023 19:46:00 -0300</pubDate>
+      
+      <guid>https://devmedeiros.com/pt/tags/aprendizado-de-m%C3%A1quina/</guid>
+      <description></description>
+    </item>
+    
+    <item>
+      <title>business</title>
+      <link>https://devmedeiros.com/pt/tags/business/</link>
+      <pubDate>Sat, 20 May 2023 19:46:00 -0300</pubDate>
+      
+      <guid>https://devmedeiros.com/pt/tags/business/</guid>
+      <description></description>
+    </item>
+    
+    <item>
+      <title>ciência de dados</title>
+      <link>https://devmedeiros.com/pt/tags/ci%C3%AAncia-de-dados/</link>
+      <pubDate>Sat, 20 May 2023 19:46:00 -0300</pubDate>
+      
+      <guid>https://devmedeiros.com/pt/tags/ci%C3%AAncia-de-dados/</guid>
+      <description></description>
+    </item>
+    
+    <item>
+      <title>clean data</title>
+      <link>https://devmedeiros.com/pt/tags/clean-data/</link>
+      <pubDate>Sat, 20 May 2023 19:46:00 -0300</pubDate>
+      
+      <guid>https://devmedeiros.com/pt/tags/clean-data/</guid>
+      <description></description>
+    </item>
+    
+    <item>
+      <title>data pipeline</title>
+      <link>https://devmedeiros.com/pt/tags/data-pipeline/</link>
+      <pubDate>Sat, 20 May 2023 19:46:00 -0300</pubDate>
+      
+      <guid>https://devmedeiros.com/pt/tags/data-pipeline/</guid>
+      <description></description>
+    </item>
+    
+    <item>
+      <title>data science</title>
+      <link>https://devmedeiros.com/pt/tags/data-science/</link>
+      <pubDate>Sat, 20 May 2023 19:46:00 -0300</pubDate>
+      
+      <guid>https://devmedeiros.com/pt/tags/data-science/</guid>
+      <description></description>
+    </item>
+    
+    <item>
+      <title>data-driven</title>
+      <link>https://devmedeiros.com/pt/tags/data-driven/</link>
+      <pubDate>Sat, 20 May 2023 19:46:00 -0300</pubDate>
+      
+      <guid>https://devmedeiros.com/pt/tags/data-driven/</guid>
+      <description></description>
+    </item>
+    
+    <item>
+      <title>decision-making</title>
+      <link>https://devmedeiros.com/pt/tags/decision-making/</link>
+      <pubDate>Sat, 20 May 2023 19:46:00 -0300</pubDate>
+      
+      <guid>https://devmedeiros.com/pt/tags/decision-making/</guid>
+      <description></description>
+    </item>
+    
+    <item>
+      <title>eficiência</title>
+      <link>https://devmedeiros.com/pt/tags/efici%C3%AAncia/</link>
+      <pubDate>Sat, 20 May 2023 19:46:00 -0300</pubDate>
+      
+      <guid>https://devmedeiros.com/pt/tags/efici%C3%AAncia/</guid>
+      <description></description>
+    </item>
+    
+    <item>
+      <title>machine learning</title>
+      <link>https://devmedeiros.com/pt/tags/machine-learning/</link>
+      <pubDate>Sat, 20 May 2023 19:46:00 -0300</pubDate>
+      
+      <guid>https://devmedeiros.com/pt/tags/machine-learning/</guid>
+      <description></description>
+    </item>
+    
+    <item>
+      <title>ML</title>
+      <link>https://devmedeiros.com/pt/tags/ml/</link>
+      <pubDate>Sat, 20 May 2023 19:46:00 -0300</pubDate>
+      
+      <guid>https://devmedeiros.com/pt/tags/ml/</guid>
+      <description></description>
+    </item>
+    
+    <item>
+      <title>pipeline de dados</title>
+      <link>https://devmedeiros.com/pt/tags/pipeline-de-dados/</link>
+      <pubDate>Sat, 20 May 2023 19:46:00 -0300</pubDate>
+      
+      <guid>https://devmedeiros.com/pt/tags/pipeline-de-dados/</guid>
+      <description></description>
+    </item>
+    
     <item>
       <title>NPS</title>
       <link>https://devmedeiros.com/pt/tags/nps/</link>
@@ -116,15 +233,6 @@
       <pubDate>Tue, 07 Mar 2023 20:02:00 -0300</pubDate>
       
       <guid>https://devmedeiros.com/pt/tags/tutorial/</guid>
-      <description></description>
-    </item>
-    
-    <item>
-      <title>AI</title>
-      <link>https://devmedeiros.com/pt/tags/ai/</link>
-      <pubDate>Thu, 26 Jan 2023 20:33:00 -0300</pubDate>
-      
-      <guid>https://devmedeiros.com/pt/tags/ai/</guid>
       <description></description>
     </item>
     
@@ -305,24 +413,6 @@
       <pubDate>Mon, 08 Aug 2022 17:17:00 -0300</pubDate>
       
       <guid>https://devmedeiros.com/pt/tags/aplicativo/</guid>
-      <description></description>
-    </item>
-    
-    <item>
-      <title>aprendizado de máquina</title>
-      <link>https://devmedeiros.com/pt/tags/aprendizado-de-m%C3%A1quina/</link>
-      <pubDate>Mon, 08 Aug 2022 17:17:00 -0300</pubDate>
-      
-      <guid>https://devmedeiros.com/pt/tags/aprendizado-de-m%C3%A1quina/</guid>
-      <description></description>
-    </item>
-    
-    <item>
-      <title>ciência de dados</title>
-      <link>https://devmedeiros.com/pt/tags/ci%C3%AAncia-de-dados/</link>
-      <pubDate>Mon, 08 Aug 2022 17:17:00 -0300</pubDate>
-      
-      <guid>https://devmedeiros.com/pt/tags/ci%C3%AAncia-de-dados/</guid>
       <description></description>
     </item>
     
