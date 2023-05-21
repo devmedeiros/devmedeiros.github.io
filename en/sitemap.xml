@@ -393,8 +393,18 @@
     <loc>https://devmedeiros.com/tags/data-analysis/</loc>
     <lastmod>2022-08-27T10:54:00-03:00</lastmod>
   </url><url>
-    <loc>https://devmedeiros.com/tags/data-engineering&#43;/</loc>
+    <loc>https://devmedeiros.com/tags/data-engineering/</loc>
     <lastmod>2022-08-27T10:54:00-03:00</lastmod>
+    <xhtml:link
+                rel="alternate"
+                hreflang="pt"
+                href="https://devmedeiros.com/pt/tags/data-engineering/"
+                />
+    <xhtml:link
+                rel="alternate"
+                hreflang="en"
+                href="https://devmedeiros.com/tags/data-engineering/"
+                />
   </url><url>
     <loc>https://devmedeiros.com/tags/data-manipulation/</loc>
     <lastmod>2022-08-27T10:54:00-03:00</lastmod>

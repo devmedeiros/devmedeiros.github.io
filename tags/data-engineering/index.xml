@@ -1,16 +1,16 @@
 <?xml version="1.0" encoding="utf-8" standalone="yes"?>
 <rss version="2.0" xmlns:atom="http://www.w3.org/2005/Atom" xmlns:content="http://purl.org/rss/1.0/modules/content/">
   <channel>
-    <title>data engineering&#43; on Dev_Medeiros</title>
-    <link>https://devmedeiros.com/tags/data-engineering&#43;/</link>
-    <description>Recent content in data engineering&#43; on Dev_Medeiros</description>
+    <title>data engineering on Dev_Medeiros</title>
+    <link>https://devmedeiros.com/tags/data-engineering/</link>
+    <description>Recent content in data engineering on Dev_Medeiros</description>
     <image>
       <title>Dev_Medeiros</title>
       <url>https://devmedeiros.com/cover.png</url>
       <link>https://devmedeiros.com/cover.png</link>
     </image>
     <generator>Hugo -- gohugo.io</generator>
-    <lastBuildDate>Tue, 23 Aug 2022 22:57:00 -0300</lastBuildDate><atom:link href="https://devmedeiros.com/tags/data-engineering+/index.xml" rel="self" type="application/rss+xml" />
+    <lastBuildDate>Tue, 23 Aug 2022 22:57:00 -0300</lastBuildDate><atom:link href="https://devmedeiros.com/tags/data-engineering/index.xml" rel="self" type="application/rss+xml" />
     <item>
       <title>Case Study Analytics Engineer</title>
       <link>https://devmedeiros.com/post/case-study-analytics-engineer/</link>
