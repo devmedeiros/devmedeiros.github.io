@@ -4,7 +4,7 @@ date: 2023-05-31 21:54:00 -0300
 categories: [Blog]
 tags: [github, gitlab, github actions, ci/cd, sqlite, database, scrapping, python, tutorial, SQL, git]
 showtoc: true
-summary: Find out if the use of machine learning is essential in all business cases. Evaluate benefits and limitations.
+summary: Discover a free alternative to cloud engines for data scraping on GitHub Actions!
 cover:
     image: "https://i.imgur.com/GoVtXjz.jpg"
     alt: "a skyline of a powerline symbolizing the seamly connection between github actions and sqlite"
