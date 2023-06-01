@@ -1,6 +1,6 @@
 # Dev Medeiros
 
-[![github pages](https://github.com/devmedeiros/devmedeiros.github.io/workflows/github%20pages/badge.svg)](https://github.com/devmedeiros/devmedeiros.github.io/actions?query=workflow:"github+pages") [![License](https://img.shields.io/badge/License-CC_BY--NC--SA_4.0-blue)](#license) [![Website devmedeiros.com](https://img.shields.io/website-up-down-green-red/http/devmedeiros.com.svg)](http://devmedeiros.com/)
+[![github pages](https://github.com/devmedeiros/devmedeiros.github.io/actions/workflows/gh-pages.yml/badge.svg)](https://github.com/devmedeiros/devmedeiros.github.io/actions/workflows/gh-pages.yml) [![License](https://img.shields.io/badge/License-CC_BY--NC--SA_4.0-blue)](#license) [![Website devmedeiros.com](https://img.shields.io/website-up-down-green-red/http/devmedeiros.com.svg)](http://devmedeiros.com/)
 
 ## About
 
@@ -17,7 +17,7 @@ All source code on this website is licensed under MIT.
 ```txt
 MIT License
 
-Copyright 2021-2022 Jaqueline Souza Medeiros
+Copyright 2021-2023 Jaqueline Souza Medeiros
 
 Permission is hereby granted, free of charge, to any person obtaining a copy of this 
 software and associated documentation files (the "Software"), to deal in the Software
