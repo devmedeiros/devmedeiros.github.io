@@ -2,6 +2,134 @@
 <urlset xmlns="http://www.sitemaps.org/schemas/sitemap/0.9"
   xmlns:xhtml="http://www.w3.org/1999/xhtml">
   <url>
+    <loc>https://devmedeiros.com/categories/blog/</loc>
+    <lastmod>2023-05-31T21:54:00-03:00</lastmod>
+    <xhtml:link
+                rel="alternate"
+                hreflang="pt"
+                href="https://devmedeiros.com/pt/categories/blog/"
+                />
+    <xhtml:link
+                rel="alternate"
+                hreflang="en"
+                href="https://devmedeiros.com/categories/blog/"
+                />
+  </url><url>
+    <loc>https://devmedeiros.com/categories/</loc>
+    <lastmod>2023-05-31T21:54:00-03:00</lastmod>
+    <xhtml:link
+                rel="alternate"
+                hreflang="pt"
+                href="https://devmedeiros.com/pt/categories/"
+                />
+    <xhtml:link
+                rel="alternate"
+                hreflang="en"
+                href="https://devmedeiros.com/categories/"
+                />
+  </url><url>
+    <loc>https://devmedeiros.com/tags/database/</loc>
+    <lastmod>2023-05-31T21:54:00-03:00</lastmod>
+  </url><url>
+    <loc>https://devmedeiros.com/</loc>
+    <lastmod>2023-05-31T21:54:00-03:00</lastmod>
+    <xhtml:link
+                rel="alternate"
+                hreflang="pt"
+                href="https://devmedeiros.com/pt/"
+                />
+    <xhtml:link
+                rel="alternate"
+                hreflang="en"
+                href="https://devmedeiros.com/"
+                />
+  </url><url>
+    <loc>https://devmedeiros.com/tags/git/</loc>
+    <lastmod>2023-05-31T21:54:00-03:00</lastmod>
+  </url><url>
+    <loc>https://devmedeiros.com/tags/github/</loc>
+    <lastmod>2023-05-31T21:54:00-03:00</lastmod>
+  </url><url>
+    <loc>https://devmedeiros.com/tags/github-actions/</loc>
+    <lastmod>2023-05-31T21:54:00-03:00</lastmod>
+  </url><url>
+    <loc>https://devmedeiros.com/tags/gitlab/</loc>
+    <lastmod>2023-05-31T21:54:00-03:00</lastmod>
+  </url><url>
+    <loc>https://devmedeiros.com/post/sqlite-database-github-actions/</loc>
+    <lastmod>2023-05-31T21:54:00-03:00</lastmod>
+  </url><url>
+    <loc>https://devmedeiros.com/post/</loc>
+    <lastmod>2023-05-31T21:54:00-03:00</lastmod>
+    <xhtml:link
+                rel="alternate"
+                hreflang="pt"
+                href="https://devmedeiros.com/pt/post/"
+                />
+    <xhtml:link
+                rel="alternate"
+                hreflang="en"
+                href="https://devmedeiros.com/post/"
+                />
+  </url><url>
+    <loc>https://devmedeiros.com/tags/python/</loc>
+    <lastmod>2023-05-31T21:54:00-03:00</lastmod>
+    <xhtml:link
+                rel="alternate"
+                hreflang="pt"
+                href="https://devmedeiros.com/pt/tags/python/"
+                />
+    <xhtml:link
+                rel="alternate"
+                hreflang="en"
+                href="https://devmedeiros.com/tags/python/"
+                />
+  </url><url>
+    <loc>https://devmedeiros.com/tags/scrapping/</loc>
+    <lastmod>2023-05-31T21:54:00-03:00</lastmod>
+  </url><url>
+    <loc>https://devmedeiros.com/tags/sql/</loc>
+    <lastmod>2023-05-31T21:54:00-03:00</lastmod>
+    <xhtml:link
+                rel="alternate"
+                hreflang="pt"
+                href="https://devmedeiros.com/pt/tags/sql/"
+                />
+    <xhtml:link
+                rel="alternate"
+                hreflang="en"
+                href="https://devmedeiros.com/tags/sql/"
+                />
+  </url><url>
+    <loc>https://devmedeiros.com/tags/sqlite/</loc>
+    <lastmod>2023-05-31T21:54:00-03:00</lastmod>
+  </url><url>
+    <loc>https://devmedeiros.com/tags/</loc>
+    <lastmod>2023-05-31T21:54:00-03:00</lastmod>
+    <xhtml:link
+                rel="alternate"
+                hreflang="pt"
+                href="https://devmedeiros.com/pt/tags/"
+                />
+    <xhtml:link
+                rel="alternate"
+                hreflang="en"
+                href="https://devmedeiros.com/tags/"
+                />
+  </url><url>
+    <loc>https://devmedeiros.com/tags/tutorial/</loc>
+    <lastmod>2023-05-31T21:54:00-03:00</lastmod>
+    <xhtml:link
+                rel="alternate"
+                hreflang="pt"
+                href="https://devmedeiros.com/pt/tags/tutorial/"
+                />
+    <xhtml:link
+                rel="alternate"
+                hreflang="en"
+                href="https://devmedeiros.com/tags/tutorial/"
+                />
+  </url><url>
     <loc>https://devmedeiros.com/tags/ai/</loc>
     <lastmod>2023-05-20T19:46:00-03:00</lastmod>
     <xhtml:link
@@ -15,19 +143,6 @@
                 href="https://devmedeiros.com/tags/ai/"
                 />
   </url><url>
-    <loc>https://devmedeiros.com/categories/blog/</loc>
-    <lastmod>2023-05-20T19:46:00-03:00</lastmod>
-    <xhtml:link
-                rel="alternate"
-                hreflang="pt"
-                href="https://devmedeiros.com/pt/categories/blog/"
-                />
-    <xhtml:link
-                rel="alternate"
-                hreflang="en"
-                href="https://devmedeiros.com/categories/blog/"
-                />
-  </url><url>
     <loc>https://devmedeiros.com/tags/business/</loc>
     <lastmod>2023-05-20T19:46:00-03:00</lastmod>
     <xhtml:link
@@ -39,19 +154,6 @@
                 rel="alternate"
                 hreflang="en"
                 href="https://devmedeiros.com/tags/business/"
-                />
-  </url><url>
-    <loc>https://devmedeiros.com/categories/</loc>
-    <lastmod>2023-05-20T19:46:00-03:00</lastmod>
-    <xhtml:link
-                rel="alternate"
-                hreflang="pt"
-                href="https://devmedeiros.com/pt/categories/"
-                />
-    <xhtml:link
-                rel="alternate"
-                hreflang="en"
-                href="https://devmedeiros.com/categories/"
                 />
   </url><url>
     <loc>https://devmedeiros.com/tags/clean-data/</loc>
@@ -119,19 +221,6 @@
                 href="https://devmedeiros.com/tags/decision-making/"
                 />
   </url><url>
-    <loc>https://devmedeiros.com/</loc>
-    <lastmod>2023-05-20T19:46:00-03:00</lastmod>
-    <xhtml:link
-                rel="alternate"
-                hreflang="pt"
-                href="https://devmedeiros.com/pt/"
-                />
-    <xhtml:link
-                rel="alternate"
-                hreflang="en"
-                href="https://devmedeiros.com/"
-                />
-  </url><url>
     <loc>https://devmedeiros.com/tags/efficiency/</loc>
     <lastmod>2023-05-20T19:46:00-03:00</lastmod>
   </url><url>
@@ -159,32 +248,6 @@
                 rel="alternate"
                 hreflang="en"
                 href="https://devmedeiros.com/tags/ml/"
-                />
-  </url><url>
-    <loc>https://devmedeiros.com/post/</loc>
-    <lastmod>2023-05-20T19:46:00-03:00</lastmod>
-    <xhtml:link
-                rel="alternate"
-                hreflang="pt"
-                href="https://devmedeiros.com/pt/post/"
-                />
-    <xhtml:link
-                rel="alternate"
-                hreflang="en"
-                href="https://devmedeiros.com/post/"
-                />
-  </url><url>
-    <loc>https://devmedeiros.com/tags/</loc>
-    <lastmod>2023-05-20T19:46:00-03:00</lastmod>
-    <xhtml:link
-                rel="alternate"
-                hreflang="pt"
-                href="https://devmedeiros.com/pt/tags/"
-                />
-    <xhtml:link
-                rel="alternate"
-                hreflang="en"
-                href="https://devmedeiros.com/tags/"
                 />
   </url><url>
     <loc>https://devmedeiros.com/post/unlocking-machine-learning/</loc>
@@ -278,9 +341,6 @@
                 href="https://devmedeiros.com/tags/word-cloud/"
                 />
   </url><url>
-    <loc>https://devmedeiros.com/tags/database/</loc>
-    <lastmod>2023-03-07T20:02:00-03:00</lastmod>
-  </url><url>
     <loc>https://devmedeiros.com/tags/oracle/</loc>
     <lastmod>2023-03-07T20:02:00-03:00</lastmod>
     <xhtml:link
@@ -318,32 +378,6 @@
                 rel="alternate"
                 hreflang="en"
                 href="https://devmedeiros.com/tags/postgresql/"
-                />
-  </url><url>
-    <loc>https://devmedeiros.com/tags/sql/</loc>
-    <lastmod>2023-03-07T20:02:00-03:00</lastmod>
-    <xhtml:link
-                rel="alternate"
-                hreflang="pt"
-                href="https://devmedeiros.com/pt/tags/sql/"
-                />
-    <xhtml:link
-                rel="alternate"
-                hreflang="en"
-                href="https://devmedeiros.com/tags/sql/"
-                />
-  </url><url>
-    <loc>https://devmedeiros.com/tags/tutorial/</loc>
-    <lastmod>2023-03-07T20:02:00-03:00</lastmod>
-    <xhtml:link
-                rel="alternate"
-                hreflang="pt"
-                href="https://devmedeiros.com/pt/tags/tutorial/"
-                />
-    <xhtml:link
-                rel="alternate"
-                hreflang="en"
-                href="https://devmedeiros.com/tags/tutorial/"
                 />
   </url><url>
     <loc>https://devmedeiros.com/post/what-is-sql/</loc>
@@ -550,19 +584,6 @@
                 rel="alternate"
                 hreflang="en"
                 href="https://devmedeiros.com/categories/projects/"
-                />
-  </url><url>
-    <loc>https://devmedeiros.com/tags/python/</loc>
-    <lastmod>2022-08-27T10:54:00-03:00</lastmod>
-    <xhtml:link
-                rel="alternate"
-                hreflang="pt"
-                href="https://devmedeiros.com/pt/tags/python/"
-                />
-    <xhtml:link
-                rel="alternate"
-                hreflang="en"
-                href="https://devmedeiros.com/tags/python/"
                 />
   </url><url>
     <loc>https://devmedeiros.com/tags/app/</loc>
@@ -1019,6 +1040,8 @@
                 hreflang="en"
                 href="https://devmedeiros.com/archives/"
                 />
+  </url><url>
+    <loc>https://devmedeiros.com/tags/ci/cd/</loc>
   </url><url>
     <loc>https://devmedeiros.com/projects/</loc>
     <xhtml:link

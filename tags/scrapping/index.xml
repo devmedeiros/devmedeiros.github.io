@@ -1,0 +1,24 @@
+<?xml version="1.0" encoding="utf-8" standalone="yes"?>
+<rss version="2.0" xmlns:atom="http://www.w3.org/2005/Atom" xmlns:content="http://purl.org/rss/1.0/modules/content/">
+  <channel>
+    <title>scrapping on Dev_Medeiros</title>
+    <link>https://devmedeiros.com/tags/scrapping/</link>
+    <description>Recent content in scrapping on Dev_Medeiros</description>
+    <image>
+      <title>Dev_Medeiros</title>
+      <url>https://devmedeiros.com/cover.png</url>
+      <link>https://devmedeiros.com/cover.png</link>
+    </image>
+    <generator>Hugo -- gohugo.io</generator>
+    <lastBuildDate>Wed, 31 May 2023 21:54:00 -0300</lastBuildDate><atom:link href="https://devmedeiros.com/tags/scrapping/index.xml" rel="self" type="application/rss+xml" />
+    <item>
+      <title>How to Use SQLite Database with Github Actions</title>
+      <link>https://devmedeiros.com/post/sqlite-database-github-actions/</link>
+      <pubDate>Wed, 31 May 2023 21:54:00 -0300</pubDate>
+      
+      <guid>https://devmedeiros.com/post/sqlite-database-github-actions/</guid>
+      <description>Discover a free alternative to cloud engines for data scraping on GitHub Actions!</description>
+    </item>
+    
+  </channel>
+</rss>
