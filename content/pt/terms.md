@@ -27,7 +27,7 @@ Todo o código-fonte neste site está licenciado sob o MIT.
 ```txt
 MIT License
 
-Copyright 2021-2022 Jaqueline Souza Medeiros
+Copyright 2021-2023 Jaqueline Souza Medeiros
 
 Permission is hereby granted, free of charge, to any person obtaining a copy of this 
 software and associated documentation files (the "Software"), to deal in the Software
