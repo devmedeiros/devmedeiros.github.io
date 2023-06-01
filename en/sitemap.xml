@@ -30,6 +30,16 @@
   </url><url>
     <loc>https://devmedeiros.com/tags/database/</loc>
     <lastmod>2023-05-31T21:54:00-03:00</lastmod>
+    <xhtml:link
+                rel="alternate"
+                hreflang="pt"
+                href="https://devmedeiros.com/pt/tags/database/"
+                />
+    <xhtml:link
+                rel="alternate"
+                hreflang="en"
+                href="https://devmedeiros.com/tags/database/"
+                />
   </url><url>
     <loc>https://devmedeiros.com/</loc>
     <lastmod>2023-05-31T21:54:00-03:00</lastmod>
@@ -46,18 +56,68 @@
   </url><url>
     <loc>https://devmedeiros.com/tags/git/</loc>
     <lastmod>2023-05-31T21:54:00-03:00</lastmod>
+    <xhtml:link
+                rel="alternate"
+                hreflang="pt"
+                href="https://devmedeiros.com/pt/tags/git/"
+                />
+    <xhtml:link
+                rel="alternate"
+                hreflang="en"
+                href="https://devmedeiros.com/tags/git/"
+                />
   </url><url>
     <loc>https://devmedeiros.com/tags/github/</loc>
     <lastmod>2023-05-31T21:54:00-03:00</lastmod>
+    <xhtml:link
+                rel="alternate"
+                hreflang="pt"
+                href="https://devmedeiros.com/pt/tags/github/"
+                />
+    <xhtml:link
+                rel="alternate"
+                hreflang="en"
+                href="https://devmedeiros.com/tags/github/"
+                />
   </url><url>
     <loc>https://devmedeiros.com/tags/github-actions/</loc>
     <lastmod>2023-05-31T21:54:00-03:00</lastmod>
+    <xhtml:link
+                rel="alternate"
+                hreflang="pt"
+                href="https://devmedeiros.com/pt/tags/github-actions/"
+                />
+    <xhtml:link
+                rel="alternate"
+                hreflang="en"
+                href="https://devmedeiros.com/tags/github-actions/"
+                />
   </url><url>
     <loc>https://devmedeiros.com/tags/gitlab/</loc>
     <lastmod>2023-05-31T21:54:00-03:00</lastmod>
+    <xhtml:link
+                rel="alternate"
+                hreflang="pt"
+                href="https://devmedeiros.com/pt/tags/gitlab/"
+                />
+    <xhtml:link
+                rel="alternate"
+                hreflang="en"
+                href="https://devmedeiros.com/tags/gitlab/"
+                />
   </url><url>
     <loc>https://devmedeiros.com/post/sqlite-database-github-actions/</loc>
     <lastmod>2023-05-31T21:54:00-03:00</lastmod>
+    <xhtml:link
+                rel="alternate"
+                hreflang="pt"
+                href="https://devmedeiros.com/pt/post/sqlite-database-github-actions/"
+                />
+    <xhtml:link
+                rel="alternate"
+                hreflang="en"
+                href="https://devmedeiros.com/post/sqlite-database-github-actions/"
+                />
   </url><url>
     <loc>https://devmedeiros.com/post/</loc>
     <lastmod>2023-05-31T21:54:00-03:00</lastmod>
@@ -87,6 +147,16 @@
   </url><url>
     <loc>https://devmedeiros.com/tags/scrapping/</loc>
     <lastmod>2023-05-31T21:54:00-03:00</lastmod>
+    <xhtml:link
+                rel="alternate"
+                hreflang="pt"
+                href="https://devmedeiros.com/pt/tags/scrapping/"
+                />
+    <xhtml:link
+                rel="alternate"
+                hreflang="en"
+                href="https://devmedeiros.com/tags/scrapping/"
+                />
   </url><url>
     <loc>https://devmedeiros.com/tags/sql/</loc>
     <lastmod>2023-05-31T21:54:00-03:00</lastmod>
@@ -103,6 +173,16 @@
   </url><url>
     <loc>https://devmedeiros.com/tags/sqlite/</loc>
     <lastmod>2023-05-31T21:54:00-03:00</lastmod>
+    <xhtml:link
+                rel="alternate"
+                hreflang="pt"
+                href="https://devmedeiros.com/pt/tags/sqlite/"
+                />
+    <xhtml:link
+                rel="alternate"
+                hreflang="en"
+                href="https://devmedeiros.com/tags/sqlite/"
+                />
   </url><url>
     <loc>https://devmedeiros.com/tags/</loc>
     <lastmod>2023-05-31T21:54:00-03:00</lastmod>
@@ -1042,6 +1122,16 @@
                 />
   </url><url>
     <loc>https://devmedeiros.com/tags/ci/cd/</loc>
+    <xhtml:link
+                rel="alternate"
+                hreflang="pt"
+                href="https://devmedeiros.com/pt/tags/ci/cd/"
+                />
+    <xhtml:link
+                rel="alternate"
+                hreflang="en"
+                href="https://devmedeiros.com/tags/ci/cd/"
+                />
   </url><url>
     <loc>https://devmedeiros.com/projects/</loc>
     <xhtml:link

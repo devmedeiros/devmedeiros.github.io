@@ -10,7 +10,16 @@
       <link>https://devmedeiros.com/cover.png</link>
     </image>
     <generator>Hugo -- gohugo.io</generator>
-    <lastBuildDate>Sat, 20 May 2023 19:46:00 -0300</lastBuildDate><atom:link href="https://devmedeiros.com/pt/post/index.xml" rel="self" type="application/rss+xml" />
+    <lastBuildDate>Wed, 31 May 2023 21:54:00 -0300</lastBuildDate><atom:link href="https://devmedeiros.com/pt/post/index.xml" rel="self" type="application/rss+xml" />
+    <item>
+      <title>Como Usar o Banco SQLite com o Github Actions</title>
+      <link>https://devmedeiros.com/pt/post/sqlite-database-github-actions/</link>
+      <pubDate>Wed, 31 May 2023 21:54:00 -0300</pubDate>
+      
+      <guid>https://devmedeiros.com/pt/post/sqlite-database-github-actions/</guid>
+      <description>Descubra uma alternativa de graça a computação em nuvem para data scraping com GitHub Actions!</description>
+    </item>
+    
     <item>
       <title>Desvendando o Aprendizado de Máquina: é Realmente Necessário para o Seu Negócio?</title>
       <link>https://devmedeiros.com/pt/post/unlocking-machine-learning/</link>

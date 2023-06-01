@@ -10,7 +10,106 @@
       <link>https://devmedeiros.com/cover.png</link>
     </image>
     <generator>Hugo -- gohugo.io</generator>
-    <lastBuildDate>Sat, 20 May 2023 19:46:00 -0300</lastBuildDate><atom:link href="https://devmedeiros.com/pt/tags/index.xml" rel="self" type="application/rss+xml" />
+    <lastBuildDate>Wed, 31 May 2023 21:54:00 -0300</lastBuildDate><atom:link href="https://devmedeiros.com/pt/tags/index.xml" rel="self" type="application/rss+xml" />
+    <item>
+      <title>banco de dados</title>
+      <link>https://devmedeiros.com/pt/tags/banco-de-dados/</link>
+      <pubDate>Wed, 31 May 2023 21:54:00 -0300</pubDate>
+      
+      <guid>https://devmedeiros.com/pt/tags/banco-de-dados/</guid>
+      <description></description>
+    </item>
+    
+    <item>
+      <title>database</title>
+      <link>https://devmedeiros.com/pt/tags/database/</link>
+      <pubDate>Wed, 31 May 2023 21:54:00 -0300</pubDate>
+      
+      <guid>https://devmedeiros.com/pt/tags/database/</guid>
+      <description></description>
+    </item>
+    
+    <item>
+      <title>git</title>
+      <link>https://devmedeiros.com/pt/tags/git/</link>
+      <pubDate>Wed, 31 May 2023 21:54:00 -0300</pubDate>
+      
+      <guid>https://devmedeiros.com/pt/tags/git/</guid>
+      <description></description>
+    </item>
+    
+    <item>
+      <title>github</title>
+      <link>https://devmedeiros.com/pt/tags/github/</link>
+      <pubDate>Wed, 31 May 2023 21:54:00 -0300</pubDate>
+      
+      <guid>https://devmedeiros.com/pt/tags/github/</guid>
+      <description></description>
+    </item>
+    
+    <item>
+      <title>github actions</title>
+      <link>https://devmedeiros.com/pt/tags/github-actions/</link>
+      <pubDate>Wed, 31 May 2023 21:54:00 -0300</pubDate>
+      
+      <guid>https://devmedeiros.com/pt/tags/github-actions/</guid>
+      <description></description>
+    </item>
+    
+    <item>
+      <title>gitlab</title>
+      <link>https://devmedeiros.com/pt/tags/gitlab/</link>
+      <pubDate>Wed, 31 May 2023 21:54:00 -0300</pubDate>
+      
+      <guid>https://devmedeiros.com/pt/tags/gitlab/</guid>
+      <description></description>
+    </item>
+    
+    <item>
+      <title>python</title>
+      <link>https://devmedeiros.com/pt/tags/python/</link>
+      <pubDate>Wed, 31 May 2023 21:54:00 -0300</pubDate>
+      
+      <guid>https://devmedeiros.com/pt/tags/python/</guid>
+      <description></description>
+    </item>
+    
+    <item>
+      <title>scrapping</title>
+      <link>https://devmedeiros.com/pt/tags/scrapping/</link>
+      <pubDate>Wed, 31 May 2023 21:54:00 -0300</pubDate>
+      
+      <guid>https://devmedeiros.com/pt/tags/scrapping/</guid>
+      <description></description>
+    </item>
+    
+    <item>
+      <title>SQL</title>
+      <link>https://devmedeiros.com/pt/tags/sql/</link>
+      <pubDate>Wed, 31 May 2023 21:54:00 -0300</pubDate>
+      
+      <guid>https://devmedeiros.com/pt/tags/sql/</guid>
+      <description></description>
+    </item>
+    
+    <item>
+      <title>sqlite</title>
+      <link>https://devmedeiros.com/pt/tags/sqlite/</link>
+      <pubDate>Wed, 31 May 2023 21:54:00 -0300</pubDate>
+      
+      <guid>https://devmedeiros.com/pt/tags/sqlite/</guid>
+      <description></description>
+    </item>
+    
+    <item>
+      <title>tutorial</title>
+      <link>https://devmedeiros.com/pt/tags/tutorial/</link>
+      <pubDate>Wed, 31 May 2023 21:54:00 -0300</pubDate>
+      
+      <guid>https://devmedeiros.com/pt/tags/tutorial/</guid>
+      <description></description>
+    </item>
+    
     <item>
       <title>AI</title>
       <link>https://devmedeiros.com/pt/tags/ai/</link>
@@ -183,15 +282,6 @@
     </item>
     
     <item>
-      <title>banco de dados</title>
-      <link>https://devmedeiros.com/pt/tags/banco-de-dados/</link>
-      <pubDate>Tue, 07 Mar 2023 20:02:00 -0300</pubDate>
-      
-      <guid>https://devmedeiros.com/pt/tags/banco-de-dados/</guid>
-      <description></description>
-    </item>
-    
-    <item>
       <title>oracle</title>
       <link>https://devmedeiros.com/pt/tags/oracle/</link>
       <pubDate>Tue, 07 Mar 2023 20:02:00 -0300</pubDate>
@@ -215,24 +305,6 @@
       <pubDate>Tue, 07 Mar 2023 20:02:00 -0300</pubDate>
       
       <guid>https://devmedeiros.com/pt/tags/postgresql/</guid>
-      <description></description>
-    </item>
-    
-    <item>
-      <title>SQL</title>
-      <link>https://devmedeiros.com/pt/tags/sql/</link>
-      <pubDate>Tue, 07 Mar 2023 20:02:00 -0300</pubDate>
-      
-      <guid>https://devmedeiros.com/pt/tags/sql/</guid>
-      <description></description>
-    </item>
-    
-    <item>
-      <title>tutorial</title>
-      <link>https://devmedeiros.com/pt/tags/tutorial/</link>
-      <pubDate>Tue, 07 Mar 2023 20:02:00 -0300</pubDate>
-      
-      <guid>https://devmedeiros.com/pt/tags/tutorial/</guid>
       <description></description>
     </item>
     
@@ -395,15 +467,6 @@
       <pubDate>Tue, 23 Aug 2022 22:57:00 -0300</pubDate>
       
       <guid>https://devmedeiros.com/pt/tags/manipula%C3%A7%C3%A3o-de-dados/</guid>
-      <description></description>
-    </item>
-    
-    <item>
-      <title>python</title>
-      <link>https://devmedeiros.com/pt/tags/python/</link>
-      <pubDate>Tue, 23 Aug 2022 22:57:00 -0300</pubDate>
-      
-      <guid>https://devmedeiros.com/pt/tags/python/</guid>
       <description></description>
     </item>
     
@@ -647,6 +710,15 @@
       <pubDate>Tue, 12 Oct 2021 19:47:00 -0300</pubDate>
       
       <guid>https://devmedeiros.com/pt/tags/an%C3%A1lise-de-sentimentos/</guid>
+      <description></description>
+    </item>
+    
+    <item>
+      <title>ci/cd</title>
+      <link>https://devmedeiros.com/pt/tags/ci/cd/</link>
+      <pubDate>Mon, 01 Jan 0001 00:00:00 +0000</pubDate>
+      
+      <guid>https://devmedeiros.com/pt/tags/ci/cd/</guid>
       <description></description>
     </item>
     
