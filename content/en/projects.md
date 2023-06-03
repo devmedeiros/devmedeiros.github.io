@@ -1,7 +1,7 @@
 ---
 title: "Projects" # in any language you want
 layout: "single" # is necessary
-summary: "projects"
+summary: "Explore my personal projects on GitHub, including a credit score classification app, Nota Fiscal Goiana, and Alura's Business Intelligence challenge."
 author: ' '
 showtoc: true
 showReadingTime: false
