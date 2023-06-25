@@ -8,6 +8,7 @@ searchHidden: true
 author: ' '
 showReadingTime: false
 noComment: true
+disableShare: true
 ---
 
 This is my personal blog, the content here is written and edited by me (Jaqueline Souza Medeiros). By continue to use this website, in any and all forms, constitutes acceptance of these terms and policies.
@@ -48,12 +49,3 @@ OTHER DEALINGS IN THE SOFTWARE.
 ```
 
 The [CC-BY-SA-4.0](https://creativecommons.org/licenses/by-nc-sa/4.0/) applies for all content otherwise noticed under /post/ and /projects/.
-
-## Favicon
-
-This site favicon was generated using the following graphics from Twitter Twemoji:
-
-- Graphics Title: 1f4ca.svg
-- Graphics Author: Copyright 2020 Twitter, Inc and other contributors (https://github.com/twitter/twemoji)
-- Graphics Source: https://github.com/twitter/twemoji/blob/master/assets/svg/1f4ca.svg
-- Graphics License: CC-BY 4.0 (https://creativecommons.org/licenses/by/4.0/)

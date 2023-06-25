@@ -1,5 +1,5 @@
 baseURL: "https://devmedeiros.com/"
-title: Dev_Medeiros
+title: devmedeiros
 paginate: 5
 theme: PaperMod
 
@@ -63,18 +63,18 @@ languages:
     homeInfoParams:
       Title: "Jaqueline Medeiros"
       Content: >
-        Analytics Engineer interessada em transparência, transformação e governança de dados.
+        Bem-vindo ao meu blog sobre ciência de dados! Aqui posto conceitos sobre o campo, falo sobre aplicações do mundo real e compartilho minha jornada de aprendizado enquanto aprofundo mais a cada dia.
 
 params:
   env: production # to enable google analytics, opengraph, twitter-cards and schema.
-  title: Dev_Medeiros
+  title: devmedeiros
   description: "A blog about Data Science"
   keywords: [Blog, Portfolio, Data Science, Python, R, Data Analytics, Data Engineering]
   author: Jaqueline Souza Medeiros
   images: ["cover.png"]
   DateFormat: "2006-01-02"
   defaultTheme: light # dark, light
-  disableThemeToggle: false
+  disableThemeToggle: true
   displayFullLangName: true
   ShowReadingTime: true
   ShowShareButtons: true
@@ -99,21 +99,19 @@ params:
     safari_pinned_tab: "<link / abs url>"
 
   label:
-    text: "Dev_Medeiros"
-    iconHeight: 35
+    icon: "/logo_grande.svg"
+    iconHeight: 25
 
   homeInfoParams:
       Title: "Jaqueline Medeiros"
       Content: >
-        Analytics Engineer interested in transparency, data transformation and governance.
+        Welcome to my data science blog! Where I post insights about the field, talk about real-world applications and share my learning journey as I dive further everyday.
 
   socialIcons:
     - name: github
       url: "https://github.com/devmedeiros"
     - name: linkedin
       url: "https://www.linkedin.com/in/medeiros-jaqueline/?locale=en_US"
-    - name: twitter
-      url: "https://twitter.com/dev_medeiros"
 
   fuseOpts:
     isCaseSensitive: false

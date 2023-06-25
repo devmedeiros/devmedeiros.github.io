@@ -8,6 +8,7 @@ searchHidden: true
 author: ' '
 showReadingTime: false
 noComment: true
+disableShare: true
 ---
 
 Este é meu blog pessoal, o conteúdo aqui é escrito e editado por mim (Jaqueline Souza Medeiros). Ao continuar a usar este site, em todas e quaisquer formas, constitui aceite s estes termos e políticas.
@@ -48,12 +49,3 @@ OTHER DEALINGS IN THE SOFTWARE.
 ```
 
 O [CC-BY-SA-4.0](https://creativecommons.org/licenses/by-nc-sa/4.0/) se aplica a todo o conteúdo observado em /post/ e /projects/.
-
-## Favicon
-
-Este favicon do site foi gerado usando os seguintes gráficos do Twitter Twemoji:
-
-- Título dos gráficos: 1f4ca.svg
-- Autor Gráfico: Copyright 2020 Twitter, Inc e outros colaboradores (https://github.com/twitter/twemoji)
-- Fonte Gráfica: https://github.com/twitter/twemoji/blob/master/assets/svg/1f4ca.svg
-- Licença Gráfica: CC-BY 4.0 (https://creativecommons.org/licenses/by/4.0/)
