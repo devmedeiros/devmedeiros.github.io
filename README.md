@@ -47,10 +47,6 @@ Hence, any individual or group of individuals can reuse and modify the material 
 
 - The new material must be distributed under the same license.
 
-## Favicon
-
-This site favicon was generated using the following graphics from Twitter Twemoji:
-
 - Graphics Title: 1f4ca.svg
 - Graphics Author: Copyright 2020 Twitter, Inc and other contributors (https://github.com/twitter/twemoji)
 - Graphics Source: https://github.com/twitter/twemoji/blob/master/assets/svg/1f4ca.svg
