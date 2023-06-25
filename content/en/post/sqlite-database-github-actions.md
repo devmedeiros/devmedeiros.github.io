@@ -1,6 +1,7 @@
 ---
 title: "How to Use SQLite Database with Github Actions"
 date: 2023-05-31 21:54:00 -0300
+lastmod: 2023-06-25 15:43:00 -0300
 categories: [Blog]
 tags: [github, gitlab, github actions, ci/cd, sqlite, database, scrapping, python, tutorial, SQL, git]
 showtoc: true
@@ -67,27 +68,35 @@ jobs:
     steps:
       - name: Checkout repo
         uses: actions/checkout@v3
+
       - name: Set up Python
         uses: actions/setup-python@v4
         with:
           python-version: '3.10' # setting python version to 3.10
+
       - name: Install requirements
         run: pip3 install -r requirements.txt # setting the environment
+
       - name: Run random data
         run: python main.py
-      - name: Commit and push changes
+
+      - name: Commit changes
         run: |
-          git config --global user.name "your username"
-          git config --global user.email "your email"
+          git config --global user.name "github-actions"
+          git config --global user.email "action@github.com"
 
           git add -A
-          git commit -m "message"
-          git push
+          git commit -m "add more data"
+      
+      - name: Push changes
+        uses: ad-m/github-push-action@master
+        with:
+          github_token: ${{ secrets.GITHUB_TOKEN }}
 ```
 
 Don't forget to enable workflow permissions, on your repo go to `Settings > Actions > General`, and select **Read and write permissions**.
 
-![](https://i.imgur.com/pOym60i.png#center)
+![workflow permissions from github official website](https://i.imgur.com/pOym60i.png#center)
 
 ## Conclusion
 

@@ -1,6 +1,7 @@
 ---
 title: "Como Usar o Banco SQLite com o Github Actions"
 date: 2023-05-31 21:54:00 -0300
+lastmod: 2023-06-25 15:43:00 -0300
 categories: [Blog]
 tags: [github, gitlab, github actions, ci/cd, sqlite, database, banco de dados, scrapping, python, tutorial, SQL, git]
 showtoc: true
@@ -67,27 +68,36 @@ jobs:
     steps:
       - name: Checkout repo
         uses: actions/checkout@v3
+
       - name: Set up Python
         uses: actions/setup-python@v4
+
         with:
           python-version: '3.10' # fixa o python para a versão 3.10
+
       - name: Install requirements
         run: pip3 install -r requirements.txt # configura o ambiente
+
       - name: Run random data
         run: python main.py
-      - name: Commit and push changes
+
+      - name: Commit changes
         run: |
-          git config --global user.name "your username"
-          git config --global user.email "your email"
+          git config --global user.name "github-actions"
+          git config --global user.email "action@github.com"
 
           git add -A
-          git commit -m "message"
-          git push
+          git commit -m "add more data"
+      
+      - name: Push changes
+        uses: ad-m/github-push-action@master
+        with:
+          github_token: ${{ secrets.GITHUB_TOKEN }}
 ```
 
 Não se esqueça de habilitar as permissões do seu workflow, no seu repositório navegue até `Settings > Actions > General`, e selecione **Read and write permissions**.
 
-![](https://i.imgur.com/pOym60i.png#center)
+![worflow permissions do site oficial do github](https://i.imgur.com/pOym60i.png#center)
 
 ## Conclusão
 
@@ -95,4 +105,4 @@ Essa pode ser uma boa alternativa gratuita caso você queira ser capaz de compar
 
 ---
 
-Caso queira ver uma aplicação real do que foi discutido aqui, você pode checar esse [respositório](https://github.com/devmedeiros/nota-fiscal-goiana). Onde eu implementei um scrapper mensal que coleta os dados e os disponibiliza num banco SQLite para todas as pessoas.
+Caso queira ver uma aplicação real do que foi discutido aqui, você pode checar esse [respositório](https://github.com/devmedeiros/nota-fiscal-goiana). Onde eu implementei um scrapper mensal que coleta os dados e os disponibiliza num banco SQLite para todos.
