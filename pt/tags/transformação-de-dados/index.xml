@@ -1,0 +1,24 @@
+<?xml version="1.0" encoding="utf-8" standalone="yes"?>
+<rss version="2.0" xmlns:atom="http://www.w3.org/2005/Atom" xmlns:content="http://purl.org/rss/1.0/modules/content/">
+  <channel>
+    <title>transformação de dados on devmedeiros</title>
+    <link>https://devmedeiros.com/pt/tags/transforma%C3%A7%C3%A3o-de-dados/</link>
+    <description>Recent content in transformação de dados on devmedeiros</description>
+    <image>
+      <title>devmedeiros</title>
+      <url>https://devmedeiros.com/cover.png</url>
+      <link>https://devmedeiros.com/cover.png</link>
+    </image>
+    <generator>Hugo -- gohugo.io</generator>
+    <lastBuildDate>Wed, 27 Oct 2021 09:41:00 -0300</lastBuildDate><atom:link href="https://devmedeiros.com/pt/tags/transforma%C3%A7%C3%A3o-de-dados/index.xml" rel="self" type="application/rss+xml" />
+    <item>
+      <title>Uma Visão Geral Sobre o Pacote data.table do R</title>
+      <link>https://devmedeiros.com/pt/post/2021-10-27-data-table/</link>
+      <pubDate>Wed, 27 Oct 2021 09:41:00 -0300</pubDate>
+      
+      <guid>https://devmedeiros.com/pt/post/2021-10-27-data-table/</guid>
+      <description>Um dos pacotes de manipulação de dados mais rápidos do R</description>
+    </item>
+    
+  </channel>
+</rss>
