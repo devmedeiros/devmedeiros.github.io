@@ -4,7 +4,7 @@ date: 2023-01-26 20:33:00 -0300
 categories: [Blog]
 tags: [AI, artificial intelligence, chatgpt, NLP, opencv]
 showtoc: false
-summary: Uma nova forma de usar ferramentas de inteligência artificial, como ChatGPT, ao seu favor.
+summary: How to use AI tools, like ChatGPT, in your favor.
 cover:
     image: https://i.imgur.com/HtkNfTq.jpg
     alt: "close up of a woman tipying on a laptop"
