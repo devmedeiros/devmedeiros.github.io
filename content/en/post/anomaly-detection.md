@@ -35,6 +35,6 @@ Even though it has some overlap on what is trying to do, unless you have a class
 
 ---
 
-I talked about class imbalance before on a churn rate problem in a fictitious telecommunication company, if you are interested you can check it [here](/2022-05-30-churn-rate-challenge).
+I talked about class imbalance before on a churn rate problem in a fictitious telecommunication company, if you are interested you can check it [here](/post/2022-05-30-churn-rate-challenge/).
 
 [^1]: Chandola, V., Banerjee, A., and Kumar, V. 2009. Anomaly detection: A survey. ACM Comput. Surv. 41, 3, Article 15 (July 2009), 58 pages. DOI = [10.1145/1541880.1541882](http://doi.acm.org/10.1145/1541880.1541882)
