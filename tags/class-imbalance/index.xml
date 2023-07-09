@@ -1,0 +1,33 @@
+<?xml version="1.0" encoding="utf-8" standalone="yes"?>
+<rss version="2.0" xmlns:atom="http://www.w3.org/2005/Atom" xmlns:content="http://purl.org/rss/1.0/modules/content/">
+  <channel>
+    <title>class imbalance on devmedeiros</title>
+    <link>https://devmedeiros.com/tags/class-imbalance/</link>
+    <description>Recent content in class imbalance on devmedeiros</description>
+    <image>
+      <title>devmedeiros</title>
+      <url>https://devmedeiros.com/cover.png</url>
+      <link>https://devmedeiros.com/cover.png</link>
+    </image>
+    <generator>Hugo -- gohugo.io</generator>
+    <lastBuildDate>Sun, 09 Jul 2023 16:32:00 -0300</lastBuildDate><atom:link href="https://devmedeiros.com/tags/class-imbalance/index.xml" rel="self" type="application/rss+xml" />
+    <item>
+      <title>What is Anomaly Detection?</title>
+      <link>https://devmedeiros.com/post/anomaly-detection/</link>
+      <pubDate>Sun, 09 Jul 2023 16:32:00 -0300</pubDate>
+      
+      <guid>https://devmedeiros.com/post/anomaly-detection/</guid>
+      <description>How can your credit card issuer know if a purchase is made by you or a cloned version of your credit card?</description>
+    </item>
+    
+    <item>
+      <title>Data Science Challenge - Churn Rate</title>
+      <link>https://devmedeiros.com/post/2022-05-30-churn-rate-challenge/</link>
+      <pubDate>Mon, 30 May 2022 16:49:00 -0300</pubDate>
+      
+      <guid>https://devmedeiros.com/post/2022-05-30-churn-rate-challenge/</guid>
+      <description>Alura hosted a four-week Data Science Challenge using an imbalanced dataset of Churn Rate of a company Alura Voz</description>
+    </item>
+    
+  </channel>
+</rss>

@@ -10,7 +10,16 @@
       <link>https://devmedeiros.com/cover.png</link>
     </image>
     <generator>Hugo -- gohugo.io</generator>
-    <lastBuildDate>Wed, 31 May 2023 21:54:00 -0300</lastBuildDate><atom:link href="https://devmedeiros.com/categories/blog/index.xml" rel="self" type="application/rss+xml" />
+    <lastBuildDate>Sun, 09 Jul 2023 16:32:00 -0300</lastBuildDate><atom:link href="https://devmedeiros.com/categories/blog/index.xml" rel="self" type="application/rss+xml" />
+    <item>
+      <title>What is Anomaly Detection?</title>
+      <link>https://devmedeiros.com/post/anomaly-detection/</link>
+      <pubDate>Sun, 09 Jul 2023 16:32:00 -0300</pubDate>
+      
+      <guid>https://devmedeiros.com/post/anomaly-detection/</guid>
+      <description>How can your credit card issuer know if a purchase is made by you or a cloned version of your credit card?</description>
+    </item>
+    
     <item>
       <title>How to Use SQLite Database with Github Actions</title>
       <link>https://devmedeiros.com/post/sqlite-database-github-actions/</link>
@@ -53,7 +62,7 @@
       <pubDate>Thu, 26 Jan 2023 20:33:00 -0300</pubDate>
       
       <guid>https://devmedeiros.com/post/using-ai-in-your-favor/</guid>
-      <description>Uma nova forma de usar ferramentas de inteligência artificial, como ChatGPT, ao seu favor.</description>
+      <description>How to use AI tools, like ChatGPT, in your favor.</description>
     </item>
     
     <item>

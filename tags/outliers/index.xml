@@ -1,0 +1,24 @@
+<?xml version="1.0" encoding="utf-8" standalone="yes"?>
+<rss version="2.0" xmlns:atom="http://www.w3.org/2005/Atom" xmlns:content="http://purl.org/rss/1.0/modules/content/">
+  <channel>
+    <title>outliers on devmedeiros</title>
+    <link>https://devmedeiros.com/tags/outliers/</link>
+    <description>Recent content in outliers on devmedeiros</description>
+    <image>
+      <title>devmedeiros</title>
+      <url>https://devmedeiros.com/cover.png</url>
+      <link>https://devmedeiros.com/cover.png</link>
+    </image>
+    <generator>Hugo -- gohugo.io</generator>
+    <lastBuildDate>Sun, 09 Jul 2023 16:32:00 -0300</lastBuildDate><atom:link href="https://devmedeiros.com/tags/outliers/index.xml" rel="self" type="application/rss+xml" />
+    <item>
+      <title>What is Anomaly Detection?</title>
+      <link>https://devmedeiros.com/post/anomaly-detection/</link>
+      <pubDate>Sun, 09 Jul 2023 16:32:00 -0300</pubDate>
+      
+      <guid>https://devmedeiros.com/post/anomaly-detection/</guid>
+      <description>How can your credit card issuer know if a purchase is made by you or a cloned version of your credit card?</description>
+    </item>
+    
+  </channel>
+</rss>
