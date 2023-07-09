@@ -3,7 +3,7 @@ title: Data Science Challenge - Churn Rate
 date: 2022-05-30 16:49:00 -0300
 lastmod: 2022-06-09 18:08:00 -0300
 categories: [Blog]
-tags: [storytelling, python, data analysis, machine learning, neural network]
+tags: [storytelling, python, data analysis, machine learning, neural network, class imbalance]
 showtoc: true
 summary: Alura hosted a four-week Data Science Challenge using an imbalanced dataset of Churn Rate of a company Alura Voz
 cover:

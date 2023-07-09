@@ -7,7 +7,7 @@ tags: [github, gitlab, github actions, ci/cd, sqlite, database, scrapping, pytho
 showtoc: true
 summary: Discover a free alternative to cloud engines for data scraping on GitHub Actions!
 cover:
-    image: "https://i.imgur.com/GoVtXjz.jpg"
+    image: "https://i.imgur.com/QbH3RpT.jpg"
     alt: "a skyline of a powerline symbolizing the seamly connection between github actions and sqlite"
     caption: "Photo by kiwi thompson on Unsplash"
 ---
