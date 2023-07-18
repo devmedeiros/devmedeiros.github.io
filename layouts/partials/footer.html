@@ -3,12 +3,13 @@
     {{- if .Site.Copyright }}
     <span>{{ .Site.Copyright | markdownify }}</span>
     {{- else }}
-    <span>&copy; 2021 - {{ now.Year }} <a href="https://devmedeiros.com/terms/">{{ .Site.Title }}</a></span>
+    <span>&copy; 2021 - {{ now.Year }} {{ .Site.Title }}</span>
     {{- end }}
     <span>
         Powered by
         <a href="https://gohugo.io/" rel="noopener noreferrer" target="_blank">Hugo</a> &
-        <a href="https://git.io/hugopapermod" rel="noopener" target="_blank">PaperMod</a>
+        <a href="https://git.io/hugopapermod" rel="noopener" target="_blank">PaperMod</a> | 
+        <a href="https://devmedeiros.com/terms/">Terms & Policy</a>
     </span>
 </footer>
 {{- end }}

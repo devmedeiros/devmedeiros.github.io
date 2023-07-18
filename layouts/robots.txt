@@ -1,0 +1,10 @@
+User-agent: *
+
+Disallow: /
+Disallow: /tags/
+Disallow: /search/
+Disallow: 404.html
+Disallow: terms.html
+Disallow: /page/
+
+Sitemap: {{ "sitemap.xml" | absURL }}
