@@ -1,3 +1,10 @@
 User-agent: *
-Disallow:
+
+Disallow: /
+Disallow: /tags/
+Disallow: /search/
+Disallow: 404.html
+Disallow: terms.html
+Disallow: /page/
+
 Sitemap: https://devmedeiros.com/sitemap.xml
