@@ -66,7 +66,7 @@ languages:
         Bem-vindo ao meu blog sobre ciência de dados! Aqui posto conceitos sobre o campo, falo sobre aplicações do mundo real e compartilho minha jornada de aprendizado enquanto aprofundo mais a cada dia.
 
 params:
-  env: production # to enable google analytics, opengraph, twitter-cards and schema.
+  env: #production # to enable google analytics, opengraph, twitter-cards and schema.
   title: devmedeiros
   description: "A blog about Data Science"
   keywords: [Blog, Portfolio, Data Science, Python, R, Data Analytics, Data Engineering]
@@ -74,7 +74,7 @@ params:
   images: ["cover.png"]
   DateFormat: "2006-01-02"
   defaultTheme: light # dark, light
-  disableThemeToggle: true
+  disableThemeToggle: false
   displayFullLangName: true
   ShowReadingTime: true
   ShowShareButtons: true
@@ -84,8 +84,7 @@ params:
   ShowCodeCopyButtons: true
   disableSpecial1stPost: false
   disableScrollToTop: false
-  comments:
-    provider: giscus
+  comments: false
   hidemeta: false
   hideSummary: false
   showtoc: false
@@ -102,7 +101,7 @@ params:
     publisherType: "CreativeWork"
 
   label:
-    icon: "/logo_grande.svg"
+    icon: "/devmedeiros_logo_light.svg"
     iconHeight: 25
 
   homeInfoParams:
