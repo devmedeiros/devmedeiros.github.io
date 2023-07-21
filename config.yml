@@ -70,7 +70,7 @@ params:
   title: devmedeiros
   description: "A blog about Data Science"
   keywords: [Blog, Portfolio, Data Science, Python, R, Data Analytics, Data Engineering]
-  author: Jaqueline Souza Medeiros
+  author: Jaqueline Medeiros
   images: ["cover.png"]
   DateFormat: "2006-01-02"
   defaultTheme: light # dark, light
@@ -101,7 +101,7 @@ params:
     publisherType: "CreativeWork"
 
   label:
-    icon: "/devmedeiros_logo_light.svg"
+    icon: "/devmedeiros_logo_dark.svg"
     iconHeight: 25
 
   homeInfoParams:
