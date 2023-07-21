@@ -61,10 +61,10 @@
                         {{- end }}
                     {{- end }}
                     <img src="{{ $img.Permalink }}" alt="devmedeiros logo" aria-label="logo"
-                        height="{{- site.Params.label.iconHeight | default "30" -}}" width="auto">
+                        height="{{- site.Params.label.iconHeight | default "30" -}}">
                 {{- else }}
                 <img id="siteLogo" src="{{- site.Params.label.icon | absURL -}}" alt="devmedeiros logo" aria-label="logo"
-                    height="{{- site.Params.label.iconHeight | default "30" -}}" width="auto">
+                    height="{{- site.Params.label.iconHeight | default "30" -}}">
                     <script>
                         if (document.body.className.includes("dark")) {
                             document.getElementById("siteLogo").src = "/devmedeiros_logo_light.svg";
