@@ -101,8 +101,7 @@ params:
     publisherType: "CreativeWork"
 
   label:
-    icon: "/devmedeiros_logo_dark.svg"
-    iconHeight: 25
+      iconHeight: 35
 
   homeInfoParams:
       Title: "Jaqueline Medeiros"
