@@ -18,6 +18,263 @@
       
       <guid>https://devmedeiros.com/pt/post/case-study-analytics-engineer/</guid>
       <description>Projeto explorando tarefas comuns que um Analytics Engineer faz diariamente.</description>
+      <content:encoded><![CDATA[<h2 id="como-é-trabalhar-como-um-analytics-engineer">Como é trabalhar como um Analytics Engineer?</h2>
+<p>Analytics Engineer refere-se a um profissional de ciência de dados focado em transformar dados em informações de fácil acesso ao usuário final. Eles fornecem relatórios estatísticos e dinâmicos que capacitam a equipe de negócios sem que eles precisem pensar na complexidade por trás da análise de dados.</p>
+<p>Neste estudo de caso, quero falar sobre quais seriam as tarefas comuns que um Analytics Engineer precisaria executar e como eu as conduziria.</p>
+<p>Nesse cenário, o Analytics Engineer trabalha para o Bankio, um banco digital do Brasil. Como a maioria dos bancos digitais no Brasil, o Bankio oferece transferências gratuitas para todas as contas bancárias do país. Também possui muitos produtos como conta de investimento, conta poupança, conta bancária individual, cartão de crédito sem anuidade e muito mais.</p>
+<h3 id="tarefa-1-consulta-sql">Tarefa 1: Consulta SQL</h3>
+<blockquote>
+<p>Um Analista de Negócios (<em>Bussiness Analyst</em>) do Bankio pede sua ajuda para escrever uma consulta SQL para obter todo o saldo mensal da conta entre janeiro de 2020 e dezembro de 2020.</p>
+</blockquote>
+
+
+<p><details >
+  <summary markdown="span">Solução da consulta SQL <em>(clique para expandir)</em></summary>
+  <div class="highlight"><pre tabindex="0" style="color:#f8f8f2;background-color:#272822;-moz-tab-size:4;-o-tab-size:4;tab-size:4;"><code class="language-SQL" data-lang="SQL"><span style="display:flex;"><span><span style="color:#66d9ef">SELECT</span>
+</span></span><span style="display:flex;"><span>  a.<span style="color:#f92672">*</span>,
+</span></span><span style="display:flex;"><span>  <span style="color:#75715e">-- Aqui eu calculo a soma cumulativa do total de depósitos de cada cliente ordenando
+</span></span></span><span style="display:flex;"><span><span style="color:#75715e"></span>  <span style="color:#75715e">-- por mês, se for nulo, altero o valor para 0, então subtraio a soma cumulativa do
+</span></span></span><span style="display:flex;"><span><span style="color:#75715e"></span>  <span style="color:#75715e">-- total de retiradas para cada cliente ordenando por mês, se for nulo, altero o
+</span></span></span><span style="display:flex;"><span><span style="color:#75715e"></span>  <span style="color:#75715e">-- valor para 0 e eu salvo isso como account_monthly_balance
+</span></span></span><span style="display:flex;"><span><span style="color:#75715e"></span>  NVL(<span style="color:#66d9ef">SUM</span>(total_transfer_in) OVER (PARTITION <span style="color:#66d9ef">BY</span> customer_id 
+</span></span><span style="display:flex;"><span><span style="color:#66d9ef">ORDER</span> <span style="color:#66d9ef">BY</span>
+</span></span><span style="display:flex;"><span>  action_month), <span style="color:#ae81ff">0</span>) <span style="color:#f92672">-</span> NVL(<span style="color:#66d9ef">SUM</span>(total_transfer_out) OVER (PARTITION <span style="color:#66d9ef">BY</span> customer_id 
+</span></span><span style="display:flex;"><span><span style="color:#66d9ef">ORDER</span> <span style="color:#66d9ef">BY</span>
+</span></span><span style="display:flex;"><span>  action_month), <span style="color:#ae81ff">0</span>) <span style="color:#66d9ef">AS</span> account_monthly_balance 
+</span></span><span style="display:flex;"><span><span style="color:#66d9ef">FROM</span>
+</span></span><span style="display:flex;"><span>  <span style="color:#75715e">-- subconsulta total de transações de entrada/saída
+</span></span></span><span style="display:flex;"><span><span style="color:#75715e"></span>( 
+</span></span><span style="display:flex;"><span>  <span style="color:#66d9ef">SELECT</span>
+</span></span><span style="display:flex;"><span>    <span style="color:#f92672">*</span> 
+</span></span><span style="display:flex;"><span>  <span style="color:#66d9ef">FROM</span>
+</span></span><span style="display:flex;"><span>    <span style="color:#75715e">-- subconsulta de depósitos totais
+</span></span></span><span style="display:flex;"><span><span style="color:#75715e"></span>( 
+</span></span><span style="display:flex;"><span>    <span style="color:#66d9ef">SELECT</span>
+</span></span><span style="display:flex;"><span>      action_month, customer_id, <span style="color:#66d9ef">SUM</span>(amount) <span style="color:#66d9ef">AS</span> total_transfer_in 
+</span></span><span style="display:flex;"><span>    <span style="color:#66d9ef">FROM</span>
+</span></span><span style="display:flex;"><span>      (
+</span></span><span style="display:flex;"><span>        <span style="color:#66d9ef">SELECT</span>
+</span></span><span style="display:flex;"><span>          <span style="color:#f92672">*</span> 
+</span></span><span style="display:flex;"><span>        <span style="color:#66d9ef">FROM</span>
+</span></span><span style="display:flex;"><span>          <span style="color:#75715e">-- subconsulta de depósitos regulares
+</span></span></span><span style="display:flex;"><span><span style="color:#75715e"></span>( 
+</span></span><span style="display:flex;"><span>          <span style="color:#66d9ef">SELECT</span>
+</span></span><span style="display:flex;"><span>            d_month.action_month, accounts.customer_id, <span style="color:#66d9ef">SUM</span>(transfer_ins.amount) <span style="color:#66d9ef">AS</span> amount 
+</span></span><span style="display:flex;"><span>          <span style="color:#66d9ef">FROM</span>
+</span></span><span style="display:flex;"><span>            d_time 
+</span></span><span style="display:flex;"><span>            <span style="color:#66d9ef">INNER</span> <span style="color:#66d9ef">JOIN</span>
+</span></span><span style="display:flex;"><span>              transfer_ins 
+</span></span><span style="display:flex;"><span>              <span style="color:#66d9ef">ON</span> transfer_ins.transaction_completed_at <span style="color:#f92672">=</span> d_time.time_id 
+</span></span><span style="display:flex;"><span>            <span style="color:#66d9ef">LEFT</span> <span style="color:#66d9ef">JOIN</span>
+</span></span><span style="display:flex;"><span>              d_month <span style="color:#66d9ef">USING</span>(month_id) 
+</span></span><span style="display:flex;"><span>            <span style="color:#66d9ef">LEFT</span> <span style="color:#66d9ef">JOIN</span>
+</span></span><span style="display:flex;"><span>              accounts <span style="color:#66d9ef">USING</span>(account_id) 
+</span></span><span style="display:flex;"><span>          <span style="color:#66d9ef">WHERE</span>
+</span></span><span style="display:flex;"><span>            transfer_ins.status <span style="color:#f92672">=</span> <span style="color:#e6db74">&#39;completed&#39;</span> 
+</span></span><span style="display:flex;"><span>          <span style="color:#66d9ef">GROUP</span> <span style="color:#66d9ef">BY</span>
+</span></span><span style="display:flex;"><span>            d_month.action_month, accounts.customer_id ) transfer_in 
+</span></span><span style="display:flex;"><span>          <span style="color:#66d9ef">UNION</span> <span style="color:#66d9ef">ALL</span>
+</span></span><span style="display:flex;"><span>          <span style="color:#66d9ef">SELECT</span>
+</span></span><span style="display:flex;"><span>            <span style="color:#f92672">*</span> 
+</span></span><span style="display:flex;"><span>          <span style="color:#66d9ef">FROM</span>
+</span></span><span style="display:flex;"><span>            <span style="color:#75715e">-- subconsulta de depósitos pix
+</span></span></span><span style="display:flex;"><span><span style="color:#75715e"></span>( 
+</span></span><span style="display:flex;"><span>            <span style="color:#66d9ef">SELECT</span>
+</span></span><span style="display:flex;"><span>              d_month.action_month, accounts.customer_id, <span style="color:#66d9ef">SUM</span>(pix_movements.pix_amount) <span style="color:#66d9ef">AS</span> amount 
+</span></span><span style="display:flex;"><span>            <span style="color:#66d9ef">FROM</span>
+</span></span><span style="display:flex;"><span>              d_time 
+</span></span><span style="display:flex;"><span>              <span style="color:#66d9ef">INNER</span> <span style="color:#66d9ef">JOIN</span>
+</span></span><span style="display:flex;"><span>                pix_movements 
+</span></span><span style="display:flex;"><span>                <span style="color:#66d9ef">ON</span> pix_movements.pix_completed_at <span style="color:#f92672">=</span> d_time.time_id 
+</span></span><span style="display:flex;"><span>              <span style="color:#66d9ef">LEFT</span> <span style="color:#66d9ef">JOIN</span>
+</span></span><span style="display:flex;"><span>                d_month <span style="color:#66d9ef">USING</span>(month_id) 
+</span></span><span style="display:flex;"><span>              <span style="color:#66d9ef">LEFT</span> <span style="color:#66d9ef">JOIN</span>
+</span></span><span style="display:flex;"><span>                accounts <span style="color:#66d9ef">USING</span>(account_id) 
+</span></span><span style="display:flex;"><span>            <span style="color:#66d9ef">WHERE</span>
+</span></span><span style="display:flex;"><span>              pix_movements.status <span style="color:#f92672">=</span> <span style="color:#e6db74">&#39;completed&#39;</span> 
+</span></span><span style="display:flex;"><span>              <span style="color:#66d9ef">AND</span> pix_movements.in_or_out <span style="color:#f92672">=</span> <span style="color:#e6db74">&#39;pix_in&#39;</span> 
+</span></span><span style="display:flex;"><span>            <span style="color:#66d9ef">GROUP</span> <span style="color:#66d9ef">BY</span>
+</span></span><span style="display:flex;"><span>              d_month.action_month, accounts.customer_id ) 
+</span></span><span style="display:flex;"><span>      )
+</span></span><span style="display:flex;"><span>    <span style="color:#66d9ef">GROUP</span> <span style="color:#66d9ef">BY</span>
+</span></span><span style="display:flex;"><span>      action_month, customer_id ) 
+</span></span><span style="display:flex;"><span>      <span style="color:#66d9ef">FULL</span> <span style="color:#66d9ef">JOIN</span>
+</span></span><span style="display:flex;"><span>        (
+</span></span><span style="display:flex;"><span>          <span style="color:#66d9ef">SELECT</span>
+</span></span><span style="display:flex;"><span>            action_month,
+</span></span><span style="display:flex;"><span>            customer_id,
+</span></span><span style="display:flex;"><span>            <span style="color:#66d9ef">SUM</span>(amount) <span style="color:#66d9ef">AS</span> total_transfer_out 
+</span></span><span style="display:flex;"><span>          <span style="color:#66d9ef">FROM</span>
+</span></span><span style="display:flex;"><span>            <span style="color:#75715e">-- subconsulta de saques totais
+</span></span></span><span style="display:flex;"><span><span style="color:#75715e"></span>( 
+</span></span><span style="display:flex;"><span>            <span style="color:#66d9ef">SELECT</span>
+</span></span><span style="display:flex;"><span>              <span style="color:#f92672">*</span> 
+</span></span><span style="display:flex;"><span>            <span style="color:#66d9ef">FROM</span>
+</span></span><span style="display:flex;"><span>              <span style="color:#75715e">-- subconsulta de retirada regular
+</span></span></span><span style="display:flex;"><span><span style="color:#75715e"></span>( 
+</span></span><span style="display:flex;"><span>              <span style="color:#66d9ef">SELECT</span>
+</span></span><span style="display:flex;"><span>                d_month.action_month, accounts.customer_id, <span style="color:#66d9ef">SUM</span>(transfer_outs.amount) <span style="color:#66d9ef">AS</span> amount 
+</span></span><span style="display:flex;"><span>              <span style="color:#66d9ef">FROM</span>
+</span></span><span style="display:flex;"><span>                d_time 
+</span></span><span style="display:flex;"><span>                <span style="color:#66d9ef">INNER</span> <span style="color:#66d9ef">JOIN</span>
+</span></span><span style="display:flex;"><span>                  transfer_outs 
+</span></span><span style="display:flex;"><span>                  <span style="color:#66d9ef">ON</span> transfer_outs.transaction_completed_at <span style="color:#f92672">=</span> d_time.time_id 
+</span></span><span style="display:flex;"><span>                <span style="color:#66d9ef">LEFT</span> <span style="color:#66d9ef">JOIN</span>
+</span></span><span style="display:flex;"><span>                  d_month <span style="color:#66d9ef">USING</span>(month_id) 
+</span></span><span style="display:flex;"><span>                <span style="color:#66d9ef">LEFT</span> <span style="color:#66d9ef">JOIN</span>
+</span></span><span style="display:flex;"><span>                  accounts <span style="color:#66d9ef">USING</span>(account_id) 
+</span></span><span style="display:flex;"><span>              <span style="color:#66d9ef">WHERE</span>
+</span></span><span style="display:flex;"><span>                transfer_outs.status <span style="color:#f92672">=</span> <span style="color:#e6db74">&#39;completed&#39;</span> 
+</span></span><span style="display:flex;"><span>              <span style="color:#66d9ef">GROUP</span> <span style="color:#66d9ef">BY</span>
+</span></span><span style="display:flex;"><span>                d_month.action_month, accounts.customer_id ) 
+</span></span><span style="display:flex;"><span>              <span style="color:#66d9ef">UNION</span> <span style="color:#66d9ef">ALL</span>
+</span></span><span style="display:flex;"><span>              <span style="color:#66d9ef">SELECT</span>
+</span></span><span style="display:flex;"><span>                <span style="color:#f92672">*</span> 
+</span></span><span style="display:flex;"><span>              <span style="color:#66d9ef">FROM</span>
+</span></span><span style="display:flex;"><span>                <span style="color:#75715e">-- subconsulta de retirada de pix
+</span></span></span><span style="display:flex;"><span><span style="color:#75715e"></span>( 
+</span></span><span style="display:flex;"><span>                <span style="color:#66d9ef">SELECT</span>
+</span></span><span style="display:flex;"><span>                  d_month.action_month, accounts.customer_id, <span style="color:#66d9ef">SUM</span>(pix_movements.pix_amount) <span style="color:#66d9ef">AS</span> amount 
+</span></span><span style="display:flex;"><span>                <span style="color:#66d9ef">FROM</span>
+</span></span><span style="display:flex;"><span>                  d_time 
+</span></span><span style="display:flex;"><span>                  <span style="color:#66d9ef">INNER</span> <span style="color:#66d9ef">JOIN</span>
+</span></span><span style="display:flex;"><span>                    pix_movements 
+</span></span><span style="display:flex;"><span>                    <span style="color:#66d9ef">ON</span> pix_movements.pix_completed_at <span style="color:#f92672">=</span> d_time.time_id 
+</span></span><span style="display:flex;"><span>                  <span style="color:#66d9ef">LEFT</span> <span style="color:#66d9ef">JOIN</span>
+</span></span><span style="display:flex;"><span>                    d_month <span style="color:#66d9ef">USING</span>(month_id) 
+</span></span><span style="display:flex;"><span>                  <span style="color:#66d9ef">LEFT</span> <span style="color:#66d9ef">JOIN</span>
+</span></span><span style="display:flex;"><span>                    accounts <span style="color:#66d9ef">USING</span>(account_id) 
+</span></span><span style="display:flex;"><span>                <span style="color:#66d9ef">WHERE</span>
+</span></span><span style="display:flex;"><span>                  pix_movements.status <span style="color:#f92672">=</span> <span style="color:#e6db74">&#39;completed&#39;</span> 
+</span></span><span style="display:flex;"><span>                  <span style="color:#66d9ef">AND</span> pix_movements.in_or_out <span style="color:#f92672">=</span> <span style="color:#e6db74">&#39;pix_out&#39;</span> 
+</span></span><span style="display:flex;"><span>                <span style="color:#66d9ef">GROUP</span> <span style="color:#66d9ef">BY</span>
+</span></span><span style="display:flex;"><span>                  d_month.action_month, accounts.customer_id ) ) 
+</span></span><span style="display:flex;"><span>                <span style="color:#66d9ef">GROUP</span> <span style="color:#66d9ef">BY</span>
+</span></span><span style="display:flex;"><span>                  action_month,
+</span></span><span style="display:flex;"><span>                  customer_id 
+</span></span><span style="display:flex;"><span>        )
+</span></span><span style="display:flex;"><span>        <span style="color:#66d9ef">USING</span> (action_month, customer_id) ) a;
+</span></span></code></pre></div>
+</details></p>
+
+<h3 id="tarefa-2-indicadores-chaves-de-performance-kpi">Tarefa 2: Indicadores Chaves de Performance (KPI)</h3>
+<figure>
+    <img loading="lazy" src="https://images.unsplash.com/photo-1526628953301-3e589a6a8b74"
+         alt="tela do computador com 8 retângulos preenchidos com indicadores-chave"/> <figcaption>
+            <p>Foto de Stephen Dawson de Unsplash</p>
+        </figcaption>
+</figure>
+
+<blockquote>
+<p>Outro colega do Bankio está interessado em analisar o sucesso do produto <a href="#pix">PIX</a> da empresa em nível comercial e técnico. Então eles pediram que você apresentasse alguns indicadores-chave para medir isso.</p>
+</blockquote>
+
+
+<p><details >
+  <summary markdown="span">Tempo médio de processamento das transações PIX <em>(clique para expandir)</em></summary>
+  Isso pode ser obtido usando o tempo que um cliente solicita uma transação PIX e quando ela é concluída, calculamos isso para todas as transações PIX e, em seguida, fazemos a média. O PIX deve ser instantâneo, portanto, essa métrica deve ser a menor possível.
+</details></p>
+
+
+
+<p><details >
+  <summary markdown="span">A proporção de falhas do PIX <em>(clique para expandir)</em></summary>
+  Este indicador é importante porque é inconveniente para o cliente que sua transação falhe. Podemos calcular isso dividindo a soma das transações PIX com falha pelo total de transações PIX. Esta medida deve ser minimizada.
+</details></p>
+
+
+
+<p><details >
+  <summary markdown="span">A proporção de transações usando PIX <em>(clique para expandir)</em></summary>
+  <p>O sucesso do PIX pode ser medido pela proporção de movimentações usando PIX sobre transações normais. Então, basta contar quantas transações foram concluídas usando o PIX e dividir pelo valor total de transações concluídas. Um valor maior reflete o sucesso do PIX sobre transações regulares.</p>
+<p>Alternativamente, em vez de apenas contar as transações, podemos avaliar quanto dinheiro cada tipo de transação está movimentando.</p>
+
+</details></p>
+
+
+
+<p><details >
+  <summary markdown="span">A proporção de entrada/saída do PIX <em>(clique para expandir)</em></summary>
+  <p>Essa medida é boa para analisar se os clientes estão usando seu PIX mais para receber dinheiro ou para enviar dinheiro. Seria melhor se mais clientes estivessem recebendo mais dinheiro do que enviando. Como o Bankio já tinha transações gratuitas para qualquer banco, antes do PIX aparecer, outros ainda tinham que pagar taxas para enviar dinheiro para sua conta do Bankio. Por esse motivo, é melhor contar quantas transações estão chegando pelo PIX e dividi-las por todas as transações PIX. Quanto mais alto melhor.</p>
+<p>Nesse caso, também podemos somar o saldo de depósitos e saques da conta do Bankio usando o PIX e compará-lo com transações regulares.</p>
+
+</details></p>
+
+<h3 id="tarefa-3-retorno-diário-do-investimento">Tarefa 3: Retorno Diário do Investimento</h3>
+<blockquote>
+<p>O Bankio tem uma conta bancária em que o cliente pode investir num produto de rendimento fixo. Considere que este produto oferece aos clientes um retorno diário de 0,01% de acordo com o valor do saldo diário investido. Calcule quanto cada cliente tem em sua conta bankio durante o ano de 2020.</p>
+</blockquote>
+<p>Este retorno é calculado diariamente após todos os saques e/ou depósitos feitos em um determinado dia. E todos os dias, mesmo finais de semana, geram algum retorno.</p>
+<p>O exemplo a seguir descreve o cliente A que começa a investir nesse produto de renda fixa no dia 16 do primeiro mês. O saldo anterior era zero, pois esse consumidor está fazendo um primeiro depósito no investimento. Seu depósito inicial foi de 1.000 e, no final do dia, produziu a uma taxa de renda diária de 0,01% de seu saldo. O mesmo produto continua sendo consumido por esse cliente em momentos diferentes ao longo do mês. Lembre-se que esta é apenas uma amostra fictícia do log de transações com cálculos diários aplicados. Observe que a receita desse dia deve ser zerada no caso de Movimentos negativos.</p>
+<table>
+<thead>
+<tr>
+<th>Dia</th>
+<th>Mês</th>
+<th>ID Conta</th>
+<th>Depósito</th>
+<th>Retirada</th>
+<th>Renda no final do Dia</th>
+<th>Rendimento Diário da Conta</th>
+</tr>
+</thead>
+<tbody>
+<tr>
+<td>16</td>
+<td>1</td>
+<td>A</td>
+<td>1000</td>
+<td>0</td>
+<td>0,1</td>
+<td>1000,10</td>
+</tr>
+<tr>
+<td>20</td>
+<td>1</td>
+<td>A</td>
+<td>500</td>
+<td>0</td>
+<td>0,15</td>
+<td>1500,55</td>
+</tr>
+<tr>
+<td>2</td>
+<td>2</td>
+<td>A</td>
+<td>0</td>
+<td>200</td>
+<td>0,13</td>
+<td>1302,48</td>
+</tr>
+<tr>
+<td>19</td>
+<td>2</td>
+<td>A</td>
+<td>1000</td>
+<td>200</td>
+<td>0,21</td>
+<td>2104,78</td>
+</tr>
+</tbody>
+</table>
+<p><em>Movimentos = Saldo do dia anterior + Depósito - Retirada</em></p>
+<p><em>Renda no final do dia = Movimentos * Taxa de Renda</em></p>
+<p><em>Saldo Diário da Conta = Movimentos + Renda no Fim do Dia</em></p>
+<script type="application/javascript" src="https://gist.github.com/devmedeiros/2a52cf2c4431a1993a98bf7f36d0f412.js?file=bankio-task-3-pt.ipynb"></script>
+
+<hr>
+<h2 id="glossário">Glossário</h2>
+<h4 id="saldo-mensal-da-conta">Saldo Mensal da Conta</h4>
+<p>É a quantidade de dinheiro que um cliente tinha em sua conta no final de um determinado mês.</p>
+<h4 id="informações-da-conta-agência-número-da-conta-e-dígito-de-verificação">Informações da conta (agência, número da conta e dígito de verificação)</h4>
+<p>No Brasil, uma conta bancária pode ser identificada exclusivamente por três números. O código <strong>agência</strong>, que indica em qual agência bancária as contas foram abertas, vem primeiro. O segundo é o <strong>número da conta</strong> que uma agência usa para identificar contas. O <strong>dígito de verificação</strong>, que é usado apenas para detecção de erros, é o último.</p>
+<h4 id="cpf">CPF</h4>
+<p>É a identificação cadastral do contribuinte individual brasileiro.</p>
+<h4 id="pix">PIX</h4>
+<p>No Brasil, este é o método mais recente de transferência de dinheiro. Não é pago. É imediato, e tudo o que é necessário para concluir uma transação é a chave PIX associada à conta.</p>
+<h4 id="transferências-não-pix">Transferências não PIX</h4>
+<p>Estes são os métodos convencionais para transferir dinheiro entre contas bancárias. Esse tipo de transação exige que sejam fornecidos o CPF, o código da agência, o número da conta e o dígito verificador da conta que receberá os recursos. A maioria dos bancos cobra uma taxa nessas transações, e a confirmação da transação normalmente leva várias horas a dias.</p>
+]]></content:encoded>
     </item>
     
     <item>
@@ -27,6 +284,33 @@
       
       <guid>https://devmedeiros.com/pt/post/credit-score-classification-app/</guid>
       <description>Usando o Streamlit para fazer um aplicativo da web que classifica sua pontuação de crédito usando Python</description>
+      <content:encoded><![CDATA[<h2 id="visão-geral-do-projeto">Visão Geral do Projeto</h2>
+<p>Este projeto mostra um ciclo de vida de ciência de dados, onde eu limpo e preparo o banco de dados, <em>feature engineering</em>, aprendizado de máquina, <em>deploy</em> e visualização de dados.</p>
+<p><img loading="lazy" src="https://ik.imagekit.io/devmedeiros/data-science-cycle_QZwyHaXsP.png?ik-sdk-version=javascript-1.4.3&amp;updatedAt=1659975338736#center" alt="ciclo de ciência de dados deste projeto em um diagrama"  />
+</p>
+<p>O conjunto de dados vem do <a href="https://www.kaggle.com/datasets/parisrohan/credit-score-classification?select=train.csv">kaggle</a>, e possui muitas informações sobre o crédito e os dados bancários de uma pessoa, mas ele também tem muitos erros de digitação, dados ausentes e dados censurados. Este conjunto de dados precisava ser limpo e também precisava de <em>feature engineering</em>, eu precisava alterar algumas <em>features</em>, para que pudessem ser lidos pelo modelo. Assim, quando apresentada com dados categóricos, eu precisava identificar se era ordinal ou nominal, se fosse uma variável ordinal, seria mapeada para números sequenciais, caso contrário, eu faria uma <em>dummy</em>. Para as variáveis ​​_sim_ e <em>não</em> eu escolhi fazer apenas uma <em>dummy</em>, mas para os tipos de empréstimos fiz uma <em>dummy</em> para cada tipo de empréstimo e se alguém não tiver um empréstimo, simplesmente obtém 0 em todos as <em>features</em> de tipo de empréstimo. Eu falo sobre o processo de limpeza e <em>feature engeeniring</em> neste conjunto de dados <a href="/pt/post/data-cleaning-credit-score/">aqui</a>.</p>
+<p>Então eu precisava de um modelo de ML que pudesse prever o score de crédito de uma pessoa com base em algumas <em>features</em>. Para decidir quais <em>features</em> eu iria usar eu analisei quais variáveis são usadas em empresas reais, e eu também escolhi variáveis que eu achei que faziam sentido. Eu acabei escolhendo as seguintes variáveis:</p>
+<ul>
+<li>Idade</li>
+<li>Renda anual</li>
+<li>Quantidade de contas bancárias</li>
+<li>Quantidade de cartões de crédito</li>
+<li>Quantidade de pagamentos atrasados</li>
+<li>Proporção de uso do cartão de crédito</li>
+<li>Quantidade de pagamento de empréstimos</li>
+<li>Idade do histórico de crédito em meses</li>
+<li>Empréstimos</li>
+<li>Perdeu algum pagamento nos últimos 12 meses</li>
+<li>Pagou o valor mínimo em pelo menos um cartão de crédito</li>
+</ul>
+<p>Com as <em>features</em> prontas, eu comecei a trabalhar no modelo, por enquanto eu decidi usar um modelo simples de Floresta Aleatória (Random Forest), eu pretendo melhorar esse modelo, mas nesse primeiro momento eu foquei eu fazer o app do streamlit.</p>
+<p>Depois que terminei o modelo eu serializei ele e o <em>scaler</em> usando o pacote <code>pickle</code>. Para fazer o <em>deploy</em> do modelo e construir a visualização, usei o <a href="https://streamlit.io/">streamlit</a>.</p>
+<p><img loading="lazy" src="https://user-images.githubusercontent.com/33239902/183321842-be97fb04-f00b-4b62-8e6e-2b53d25335a0.gif" alt="um gif mostrando como funciona o aplicativo de score de crédito streamlit"  />
+</p>
+<p>Neste aplicativo, você pode preencher um formulário ou apenas selecionar um dos três perfis padrão fornecidos para ver como o modelo avalia a pontuação de crédito de cada pessoa. Ele também apresenta &ldquo;a certeza&rdquo; do modelo exibindo um gráfico de pizza com a probabilidade (em porcentagem) de cada grupo de score de crédito em que as respostas se encaixam. Ele também mostra o quanto cada recurso conta para sua pontuação de crédito, de acordo com esse modelo. Você pode ver o aplicativo ao vivo <a href="https://devmedeiros-credit-score-classification-appstreamlit-app-fcakrl.streamlitapp.com/">aqui</a>.</p>
+<hr>
+<p>Todo o código está disponível no meu <a href="https://github.com/devmedeiros/credit-score-classification-app">repositório</a> do GitHub. Além do código, lá você encontra a documentação, os dados originais e tratados (todas as etapas do tratamento), todos os requisitos para a construção deste projeto e como executá-lo localmente.</p>
+]]></content:encoded>
     </item>
     
   </channel>

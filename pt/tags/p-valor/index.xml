@@ -18,6 +18,18 @@
       
       <guid>https://devmedeiros.com/pt/post/2022-04-12-comprehending-the-p-value/</guid>
       <description>A definição do p-valor, como usar ele, e como interpretar a medida</description>
+      <content:encoded><![CDATA[<h2 id="o-que-é-o-p-valor">O que é o p-valor?</h2>
+<p>Em estatística temos os testes de hipóteses, que são feitos para tomar uma decisão, de rejeitar ou <em>não</em> rejeitar a hipótese nula. Alguns exemplos de teste de hipótese são: Neyman-Pearson, Shapiro-Wilk, T de Student, entre outros.</p>
+<p>Todos testes de hipóteses possuem uma estatística de teste específico dele. E essa estatística é utilizada para avaliar o teste, mas essa tarefa pode ser cansativa até com o uso de computadores, pois a maioria dos <em>softwares</em> não devolvem como resposta a estatística de comparação, apenas a estatística amostral. Nesse caso o p-valor vem para facilitar essa comparação, pois ele já é uma representação dessa estatística de teste. Ele representa a probabilidade de se obter uma estatística de teste igual ou mais extrema que a calculada na sua amostra, considerando a hipótese nula como verdadeira.</p>
+<p>Isso facilita, pois sabendo o nível de confiança que você quer testar a sua hipótese basta comparar se o p-valor é menor ou maior que o seu nível de confiança, enquanto que se fosse usar a estatística de teste ainda seria necessário calcular a estatística para cada nível de confiança diferente que você fosse comparar. Então suponha que queira comparar 1%, 5% e 10%, você teria que calcular três estatísticas de teste diferentes para comparar a sua estatística amostral.</p>
+<h2 id="como-usar-ele">Como usar ele?</h2>
+<p>É muito comum quando estamos aprendendo estatística por conta própria lermos que se o p-valor for menor que 5% rejeitamos a hipótese ou que se for maior &ldquo;aceitamos&rdquo; a hipótese.</p>
+<p>O valor com o qual comparamos o p-valor deve ser definido juntamente com pessoas da área de negócio do que você está trabalhando, é muito comum em alguns setores utilizarem um p-valor muito pequeno como 1% ou até 0,1% e em outros usarem valores maiores de que 5%.</p>
+<p>Veja que um p-valor de 0,02 seria rejeitado se considerarmos <code>α = 1%</code>, mas não seria se <code>α = 5%</code>. Na dúvida sobre qual usar, primeiramente é recomendado tomar essa decisão antes de fazer o teste. Segundo, tenha em mente que um <code>α = 1%</code> vai ter uma confiança de <code>99% (1-α)</code>, enquanto que se fosse 5% seria <del>apenas</del> 95%. Pode parecer que é melhor pegar o valor que lhe dá mais &ldquo;confiança&rdquo;, mas um p-valor muito pequeno pode levar a mais rejeições da sua hipótese.</p>
+<p>A verdade é que os testes de hipóteses só nos dão a informação da rejeição, quando uma hipótese nula não é rejeitada isso quer dizer que não foram encontradas evidências que contradizem o que ela afirma, isso não quer dizer que provamos que ela está correta. Então é preciso tomar muito cuidado ao utilizar o p-valor.</p>
+<h2 id="interpretando-a-medida">Interpretando a medida</h2>
+<p>Uma forma de interpretar a medida muito comum é <em>&ldquo;Rejeita-se a hipótese nula, com α% de confiança&rdquo;</em>, no caso de rejeição (em que o <code>p-valor &gt; α</code>) e no caso de <em>não</em> rejeição (<code>p-valor &lt; α</code>) <em>&ldquo;Não foram encontradas evidências suficientes para rejeitar a hipótese nula, com α% de confiança&rdquo;</em>.</p>
+]]></content:encoded>
     </item>
     
   </channel>

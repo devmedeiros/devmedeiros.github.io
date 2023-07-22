@@ -18,6 +18,78 @@
       
       <guid>https://devmedeiros.com/post/2022-04-29-ux-power-bi-dashboards/</guid>
       <description>Defining UX/UI in the context of Bussiness Intelligence for Dashboards with examples</description>
+      <content:encoded><![CDATA[<h2 id="what-is-uxui">What is UX/UI?</h2>
+<p>UX is the acronym for User Experience, it is a recent concept about making design decisions while thinking about the user experience. The UX designer needs to be concerned about whether their product is easy to use and intuitive, making changes to it whenever necessary to suit the user&rsquo;s needs.</p>
+<p>UI stands for User Interface. It is everything involved in the interaction of the user and the product. The UI designer is responsible for developing interfaces, not only limited to the visual aspects but also ensuring that the interfaces are functional and usable and generally contribute to a good user experience.</p>
+<h2 id="how-to-improve-the-experience-of-bi-dashboards">How to Improve the Experience of BI Dashboards?</h2>
+<p>Many people see BI dashboards as web pages. This comes with some expectations. For example, most sites that have some navigation system use a top menu with buttons, a side menu (most common in Brazil being on the left, but in some countries, it is on the right), or a hamburger menu (the one we click on it and the options appear).</p>
+<figure>
+    <img loading="lazy" src="https://ik.imagekit.io/devmedeiros/site_layout_C0BWt0-Rh.png?ik-sdk-version=javascript-1.4.3&amp;updatedAt=1651180441785"
+         alt="Image with three website layouts, the first with a top navigation bar, the second with a left-side menu and the third with a sandwich menu"/> <figcaption>
+            <p>Jaqueline Medeiros - All rights reserved</p>
+        </figcaption>
+</figure>
+
+<p>With this, a majority of people who use the dashboards expect to find navigation buttons and data segmentation (filter) in these places, in addition to other information such as logo and title.</p>
+<h3 id="data-segmentation">Data Segmentation</h3>
+<p>Also commonly called a data filter, it is a fundamental part of several dashboards, its positioning needs to be defined carefully, because if it is in a place that the user does not expect, it can prevent your dashboard from being used efficiently, in addition to maintaining a visual standard for everyone its filters help people more easily recognize what is and isn&rsquo;t a filter.</p>
+<figure>
+    <img loading="lazy" src="https://ik.imagekit.io/devmedeiros/base_7_vbzsb9L.png?ik-sdk-version=javascript-1.4.3&amp;updatedAt=1651183332760"
+         alt="Image with six filters, distributed in two columns, each one with three. One filter is for a city, the other is for a restaurant and the last one is for reservations? The only difference between them is the design, on the left they are consistent and on the right, each one has a unique design."/> 
+</figure>
+
+<p>You can and should use and experiment with different themes in your projects. What matters, when making it easier for users, is consistency, pick a model for your filters with the desired colors and all the graphic specifications that are of interest to you and use it in all filters, as this will help people quickly find it and recognize that it&rsquo;s a filter.</p>
+<p><img loading="lazy" src="https://ik.imagekit.io/devmedeiros/borracha_Xwi_TYTHB.png?ik-sdk-version=javascript-1.4.3&amp;updatedAt=1651183773246#center" alt="Three filters with, city, restaurant and accept reservation? Where the city shows an eraser next to the title and the text Clear selections"  />
+</p>
+<p>It&rsquo;s common for people when they are reading something on the computer to position the mouse pointer where they are reading. For Power BI, this makes it easier for the user to find the clear data segmentation button because when hovering the mouse over the filter name, a rubber appears on the left side where the filter name is. If you use Power BI, you probably already knew that, but we can improve this by using something that the user already knows, which is the <strong>rubber</strong>, and create a button using it as an icon and make this button clear all filters at the same time. If you want to know how to make this button <a href="https://community.powerbi.com/t5/Desktop/Clear-All-Slicers-by-one-button-in-power-bi-desktop/m-p/494518">here</a>, in the Power BI forum, explains how.</p>
+<p>This feature needs may be unnoticed at first. Regularly dashboard users don&rsquo;t realize which filters they have used or they use so many that they just want to be able to clear the selection faster and more efficiently, so this button makes the process easier.</p>
+<h3 id="page-navigation">Page Navigation</h3>
+<p>Power BI&rsquo;s native page navigation is not intuitive for most people and you may want to direct the navigation in a specific flow that facilitates understanding and contributes to the intended storytelling. In this case, we have the option to hide all the report tabs, except for the opening/home page. But what&rsquo;s the best way to direct the user to the other pages? Suppose your report is simple, you have an overview tab and another tab with a breakdown, a simple button would solve your problem, but if your report is extensive it may be unfeasible to put a button for each tab on all pages.</p>
+<figure>
+    <img loading="lazy" src="https://ik.imagekit.io/devmedeiros/infografico_kQJe_yhQD.png?ik-sdk-version=javascript-1.4.3&amp;updatedAt=1651241421864"
+         alt="A circle with four rectangles around it, a line connects the rectangles to the circle" width="100%"/> <figcaption>
+            <p>Jaqueline Medeiros - All rights reserved</p>
+        </figcaption>
+</figure>
+
+<p>In this case, it might be interesting to consider having a home page that leads to all the other pages and placing a <code>home</code> or <code>back</code> button on them.</p>
+<h2 id="how-to-improve-dashboards-interface">How to Improve Dashboards Interface?</h2>
+<h3 id="prototyping-programs">Prototyping Programs</h3>
+<p>Using a specific program to prototype your dashboard allows for greater artistic freedom compared to what Business Intelligence applications typically provide. Figma is a great tool for this, you can create advanced backgrounds and prototypes with amazing quality to use in your BI dashboards.</p>
+<p>Here&rsquo;s an example of a dashboard I made a few months ago:</p>
+<figure>
+    <img loading="lazy" src="https://raw.githubusercontent.com/devmedeiros/Alura-Challenge-BI-2/main/Alura%20Food/alura%20food%20resume.png"
+         alt="In the picture you can read the text: Overview of Indian Restaurants Market Dev_Medeiros City Restaurant Accepts Reservations? 19.21 % Restaurants with Online Delivery Average Rating 3.72 R$ 39.48 Average Price per Person 9577 Total Restaurants 5 Most Popular Cities Restaurants 5 Most Popular Cuisine"/> <figcaption>
+            Panel with data
+        </figcaption>
+</figure>
+
+<p>The background of this panel was done completely in Figma, even some of the titles of the BI visuals.</p>
+<figure>
+    <img loading="lazy" src="https://raw.githubusercontent.com/devmedeiros/Alura-Challenge-BI-2/main/Alura%20Food/Alura%20Food.png"
+         alt=" In the image you can read the text: Overview of Indian Restaurants Market Dev_Medeiros City Restaurant Accepts Reservations? % of Restaurants with Online Delivery Average Rating Average Price per Person Total Restaurants 5 Cities with the most Restaurants 5 Most Popular Cuisine"/> <figcaption>
+            Background made in Figma
+        </figcaption>
+</figure>
+
+<p>You can check out more <a href="/post/alura-challenge-bi-2">Power BI Dashboards</a> I made for Alura Challenge BI.</p>
+<h3 id="figures-and-icons">Figures and Icons</h3>
+<figure class="align-center ">
+    <img loading="lazy" src="https://img.freepik.com/vetores-gratis/employees-dando-as-maos-e-ajudando-os-colegas-a-cliir-as-escadas_74855-5236.jpg?w%20=1380&amp;t=st=1651239796~exp=1651240396~hmac=1b2ab902322bbf8ce26e3bc83f602e69075fcc2e18f0afdc91a328c7942ba746#center"
+         alt="Vector created by pch.vector - br.freepik.com"/> <figcaption>
+            <p>Vector created by pch.vector - br.freepik.com</p>
+        </figcaption>
+</figure>
+
+<p>Figures and icons when used correctly help make the panel stand out, and make it more eye-catching and beautiful. There are several ways to get images, if you or your team can&rsquo;t create them yourself there is the option of using online platforms that provide vectorized images. On these platforms, there are free options, which require some type of attribution, and premium (paid) options, which often do not need to attribute the author and have a higher quality.</p>
+<figure class="align-center ">
+    <img loading="lazy" src="https://img.icons8.com/dusk/344/cash-register.png#center"
+         alt="Cash register icon"/> <figcaption>
+            <p>ICONS8 icon</p>
+        </figcaption>
+</figure>
+
+]]></content:encoded>
     </item>
     
   </channel>

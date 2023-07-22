@@ -18,6 +18,30 @@
       
       <guid>https://devmedeiros.com/post/anomaly-detection/</guid>
       <description>How can your credit card issuer know if a purchase is made by you or a cloned version of your credit card?</description>
+      <content:encoded><![CDATA[<p>Have you ever had a purchase blocked by your credit card issuer without you taking any action? If this happened to you, your credit card issuer probably had detected that your purchase didn&rsquo;t match your <em>normal spending habit</em>, maybe you were at a different location or spend a lot of money suddenly. Anyway, the credit card company was using <strong>anomaly detection</strong> techniques to prevent fraudulent activities.</p>
+<h2 id="what-is-anomaly-detection">What is Anomaly Detection?</h2>
+<blockquote>
+<p><em>Anomaly detection</em> refers to the problem of finding patterns in data that do not conform to expected behavior. <sup id="fnref:1"><a href="#fn:1" class="footnote-ref" role="doc-noteref">1</a></sup></p>
+</blockquote>
+<p>In statistics there is a famous distribution that is called &ldquo;The Normal Distribution&rdquo;, this name is not in vain. A lot of random things are normally distributed, for instance, if you select 100 random people and measure their height, and made a distribution plot, you&rsquo;d end up with something looking like a symmetrical bell curve.</p>
+<p>Even though abnormal results are possible, it is expected that most people or things will fall within a normal distribution. When something is divergent from this normality it is said to be an outlier or an anomaly.</p>
+<p>When dealing with something like credit card fraud you can create an expectation of a person expanding habits, so if your daily routine consists of waking up and driving to your workplace and buying a coffee, then lunch in New York. Your credit card company would find it weird if you suddenly made a physical purchase in Rio de Janeiro.</p>
+<p>In simple terms, that is what anomaly detection is trying to do, understand how something works so it can identify if it starts acting weird.</p>
+<h2 id="anomaly-detection-x-class-imbalance-in-datasets">Anomaly Detection x Class Imbalance in Datasets</h2>
+<p>If you are aware of what class imbalance is, you may be wondering <em>&ldquo;can&rsquo;t I use anomaly detection to solve this class imbalance problem?&rdquo;</em> - sometimes you can, but it&rsquo;s not appropriate.</p>
+<p>Class imbalance occurs when one class has significantly more samples than the other class(es). This can lead to biased models that favor the majority class and perform poorly on minority classes. While anomaly detection focuses on identifying rare or abnormal data points that deviate significantly from the normal patterns in the dataset.</p>
+<p>Even though it has some overlap on what is trying to do, unless you have a class imbalance problem that the minority class can be considered an abnormal behavior, you won&rsquo;t be able to use anomaly detection.</p>
+<hr>
+<p>I talked about class imbalance before on a churn rate problem in a fictitious telecommunication company, if you are interested you can check it <a href="/post/2022-05-30-churn-rate-challenge/">here</a>.</p>
+<div class="footnotes" role="doc-endnotes">
+<hr>
+<ol>
+<li id="fn:1">
+<p>Chandola, V., Banerjee, A., and Kumar, V. 2009. Anomaly detection: A survey. ACM Comput. Surv. 41, 3, Article 15 (July 2009), 58 pages. DOI = <a href="http://doi.acm.org/10.1145/1541880.1541882">10.1145/1541880.1541882</a>&#160;<a href="#fnref:1" class="footnote-backref" role="doc-backlink">&#x21a9;&#xfe0e;</a></p>
+</li>
+</ol>
+</div>
+]]></content:encoded>
     </item>
     
     <item>
@@ -27,6 +51,263 @@
       
       <guid>https://devmedeiros.com/post/case-study-analytics-engineer/</guid>
       <description>Project exploring common tasks an Analytics Engineer needs to perform on a daily day.</description>
+      <content:encoded><![CDATA[<h2 id="what-is-it-like-working-as-an-analytics-engineer">What is it like working as an Analytics Engineer?</h2>
+<p>Analytics Engineer refers to a Data Science professional focused on transforming data into information that is easy to access to the end-user. They provide static and dynamic reports that empower the business team without them needing to think about the complexity behind data analysis.</p>
+<p>In this case study, I want to talk about what would be common tasks that an Analytics Engineer would need to perform and how I&rsquo;d navigate them.</p>
+<p>In this scenario, the Analytics Engineer works for Bankio a digital bank from Brazil. Like most digital banks in Brazil, Bankio offers free transfers for every bank account in the country. It also has many products like an investment account, a savings account, an individual bank account, a credit card without an annual fee, and many more.</p>
+<h3 id="task-1-sql-query">Task 1: SQL Query</h3>
+<blockquote>
+<p>A Bussiness Analyst from Bankio asks for your assistance writing a SQL query to get all the account&rsquo;s monthly balance between January 2020 to December 2020.</p>
+</blockquote>
+
+
+<p><details >
+  <summary markdown="span">SQL Query Solution <em>(click to expand)</em></summary>
+  <div class="highlight"><pre tabindex="0" style="color:#f8f8f2;background-color:#272822;-moz-tab-size:4;-o-tab-size:4;tab-size:4;"><code class="language-SQL" data-lang="SQL"><span style="display:flex;"><span><span style="color:#66d9ef">SELECT</span>
+</span></span><span style="display:flex;"><span>  a.<span style="color:#f92672">*</span>,
+</span></span><span style="display:flex;"><span>  <span style="color:#75715e">-- Here I calculate the cumulative sum of total deposits for each customer ordering it 
+</span></span></span><span style="display:flex;"><span><span style="color:#75715e"></span>  <span style="color:#75715e">-- by month, if its null I change the value to 0 then I subtract the cumulative sum of
+</span></span></span><span style="display:flex;"><span><span style="color:#75715e"></span>  <span style="color:#75715e">-- total withdrawals for each customer ordering it by month, if its null I change the 
+</span></span></span><span style="display:flex;"><span><span style="color:#75715e"></span>  <span style="color:#75715e">-- value to 0 and I save this as ours account_monthly_balance
+</span></span></span><span style="display:flex;"><span><span style="color:#75715e"></span>  NVL(<span style="color:#66d9ef">SUM</span>(total_transfer_in) OVER (PARTITION <span style="color:#66d9ef">BY</span> customer_id 
+</span></span><span style="display:flex;"><span><span style="color:#66d9ef">ORDER</span> <span style="color:#66d9ef">BY</span>
+</span></span><span style="display:flex;"><span>  action_month), <span style="color:#ae81ff">0</span>) <span style="color:#f92672">-</span> NVL(<span style="color:#66d9ef">SUM</span>(total_transfer_out) OVER (PARTITION <span style="color:#66d9ef">BY</span> customer_id 
+</span></span><span style="display:flex;"><span><span style="color:#66d9ef">ORDER</span> <span style="color:#66d9ef">BY</span>
+</span></span><span style="display:flex;"><span>  action_month), <span style="color:#ae81ff">0</span>) <span style="color:#66d9ef">AS</span> account_monthly_balance 
+</span></span><span style="display:flex;"><span><span style="color:#66d9ef">FROM</span>
+</span></span><span style="display:flex;"><span>  <span style="color:#75715e">-- total transactions in/out subquery
+</span></span></span><span style="display:flex;"><span><span style="color:#75715e"></span>( 
+</span></span><span style="display:flex;"><span>  <span style="color:#66d9ef">SELECT</span>
+</span></span><span style="display:flex;"><span>    <span style="color:#f92672">*</span> 
+</span></span><span style="display:flex;"><span>  <span style="color:#66d9ef">FROM</span>
+</span></span><span style="display:flex;"><span>    <span style="color:#75715e">-- total deposits subquery
+</span></span></span><span style="display:flex;"><span><span style="color:#75715e"></span>( 
+</span></span><span style="display:flex;"><span>    <span style="color:#66d9ef">SELECT</span>
+</span></span><span style="display:flex;"><span>      action_month, customer_id, <span style="color:#66d9ef">SUM</span>(amount) <span style="color:#66d9ef">AS</span> total_transfer_in 
+</span></span><span style="display:flex;"><span>    <span style="color:#66d9ef">FROM</span>
+</span></span><span style="display:flex;"><span>      (
+</span></span><span style="display:flex;"><span>        <span style="color:#66d9ef">SELECT</span>
+</span></span><span style="display:flex;"><span>          <span style="color:#f92672">*</span> 
+</span></span><span style="display:flex;"><span>        <span style="color:#66d9ef">FROM</span>
+</span></span><span style="display:flex;"><span>          <span style="color:#75715e">-- regular deposits subquery
+</span></span></span><span style="display:flex;"><span><span style="color:#75715e"></span>( 
+</span></span><span style="display:flex;"><span>          <span style="color:#66d9ef">SELECT</span>
+</span></span><span style="display:flex;"><span>            d_month.action_month, accounts.customer_id, <span style="color:#66d9ef">SUM</span>(transfer_ins.amount) <span style="color:#66d9ef">AS</span> amount 
+</span></span><span style="display:flex;"><span>          <span style="color:#66d9ef">FROM</span>
+</span></span><span style="display:flex;"><span>            d_time 
+</span></span><span style="display:flex;"><span>            <span style="color:#66d9ef">INNER</span> <span style="color:#66d9ef">JOIN</span>
+</span></span><span style="display:flex;"><span>              transfer_ins 
+</span></span><span style="display:flex;"><span>              <span style="color:#66d9ef">ON</span> transfer_ins.transaction_completed_at <span style="color:#f92672">=</span> d_time.time_id 
+</span></span><span style="display:flex;"><span>            <span style="color:#66d9ef">LEFT</span> <span style="color:#66d9ef">JOIN</span>
+</span></span><span style="display:flex;"><span>              d_month <span style="color:#66d9ef">USING</span>(month_id) 
+</span></span><span style="display:flex;"><span>            <span style="color:#66d9ef">LEFT</span> <span style="color:#66d9ef">JOIN</span>
+</span></span><span style="display:flex;"><span>              accounts <span style="color:#66d9ef">USING</span>(account_id) 
+</span></span><span style="display:flex;"><span>          <span style="color:#66d9ef">WHERE</span>
+</span></span><span style="display:flex;"><span>            transfer_ins.status <span style="color:#f92672">=</span> <span style="color:#e6db74">&#39;completed&#39;</span> 
+</span></span><span style="display:flex;"><span>          <span style="color:#66d9ef">GROUP</span> <span style="color:#66d9ef">BY</span>
+</span></span><span style="display:flex;"><span>            d_month.action_month, accounts.customer_id ) transfer_in 
+</span></span><span style="display:flex;"><span>          <span style="color:#66d9ef">UNION</span> <span style="color:#66d9ef">ALL</span>
+</span></span><span style="display:flex;"><span>          <span style="color:#66d9ef">SELECT</span>
+</span></span><span style="display:flex;"><span>            <span style="color:#f92672">*</span> 
+</span></span><span style="display:flex;"><span>          <span style="color:#66d9ef">FROM</span>
+</span></span><span style="display:flex;"><span>            <span style="color:#75715e">-- pix deposits subquery
+</span></span></span><span style="display:flex;"><span><span style="color:#75715e"></span>( 
+</span></span><span style="display:flex;"><span>            <span style="color:#66d9ef">SELECT</span>
+</span></span><span style="display:flex;"><span>              d_month.action_month, accounts.customer_id, <span style="color:#66d9ef">SUM</span>(pix_movements.pix_amount) <span style="color:#66d9ef">AS</span> amount 
+</span></span><span style="display:flex;"><span>            <span style="color:#66d9ef">FROM</span>
+</span></span><span style="display:flex;"><span>              d_time 
+</span></span><span style="display:flex;"><span>              <span style="color:#66d9ef">INNER</span> <span style="color:#66d9ef">JOIN</span>
+</span></span><span style="display:flex;"><span>                pix_movements 
+</span></span><span style="display:flex;"><span>                <span style="color:#66d9ef">ON</span> pix_movements.pix_completed_at <span style="color:#f92672">=</span> d_time.time_id 
+</span></span><span style="display:flex;"><span>              <span style="color:#66d9ef">LEFT</span> <span style="color:#66d9ef">JOIN</span>
+</span></span><span style="display:flex;"><span>                d_month <span style="color:#66d9ef">USING</span>(month_id) 
+</span></span><span style="display:flex;"><span>              <span style="color:#66d9ef">LEFT</span> <span style="color:#66d9ef">JOIN</span>
+</span></span><span style="display:flex;"><span>                accounts <span style="color:#66d9ef">USING</span>(account_id) 
+</span></span><span style="display:flex;"><span>            <span style="color:#66d9ef">WHERE</span>
+</span></span><span style="display:flex;"><span>              pix_movements.status <span style="color:#f92672">=</span> <span style="color:#e6db74">&#39;completed&#39;</span> 
+</span></span><span style="display:flex;"><span>              <span style="color:#66d9ef">AND</span> pix_movements.in_or_out <span style="color:#f92672">=</span> <span style="color:#e6db74">&#39;pix_in&#39;</span> 
+</span></span><span style="display:flex;"><span>            <span style="color:#66d9ef">GROUP</span> <span style="color:#66d9ef">BY</span>
+</span></span><span style="display:flex;"><span>              d_month.action_month, accounts.customer_id ) 
+</span></span><span style="display:flex;"><span>      )
+</span></span><span style="display:flex;"><span>    <span style="color:#66d9ef">GROUP</span> <span style="color:#66d9ef">BY</span>
+</span></span><span style="display:flex;"><span>      action_month, customer_id ) 
+</span></span><span style="display:flex;"><span>      <span style="color:#66d9ef">FULL</span> <span style="color:#66d9ef">JOIN</span>
+</span></span><span style="display:flex;"><span>        (
+</span></span><span style="display:flex;"><span>          <span style="color:#66d9ef">SELECT</span>
+</span></span><span style="display:flex;"><span>            action_month,
+</span></span><span style="display:flex;"><span>            customer_id,
+</span></span><span style="display:flex;"><span>            <span style="color:#66d9ef">SUM</span>(amount) <span style="color:#66d9ef">AS</span> total_transfer_out 
+</span></span><span style="display:flex;"><span>          <span style="color:#66d9ef">FROM</span>
+</span></span><span style="display:flex;"><span>            <span style="color:#75715e">-- total withdrawals subquery
+</span></span></span><span style="display:flex;"><span><span style="color:#75715e"></span>( 
+</span></span><span style="display:flex;"><span>            <span style="color:#66d9ef">SELECT</span>
+</span></span><span style="display:flex;"><span>              <span style="color:#f92672">*</span> 
+</span></span><span style="display:flex;"><span>            <span style="color:#66d9ef">FROM</span>
+</span></span><span style="display:flex;"><span>              <span style="color:#75715e">-- regular withdrawal subquery
+</span></span></span><span style="display:flex;"><span><span style="color:#75715e"></span>( 
+</span></span><span style="display:flex;"><span>              <span style="color:#66d9ef">SELECT</span>
+</span></span><span style="display:flex;"><span>                d_month.action_month, accounts.customer_id, <span style="color:#66d9ef">SUM</span>(transfer_outs.amount) <span style="color:#66d9ef">AS</span> amount 
+</span></span><span style="display:flex;"><span>              <span style="color:#66d9ef">FROM</span>
+</span></span><span style="display:flex;"><span>                d_time 
+</span></span><span style="display:flex;"><span>                <span style="color:#66d9ef">INNER</span> <span style="color:#66d9ef">JOIN</span>
+</span></span><span style="display:flex;"><span>                  transfer_outs 
+</span></span><span style="display:flex;"><span>                  <span style="color:#66d9ef">ON</span> transfer_outs.transaction_completed_at <span style="color:#f92672">=</span> d_time.time_id 
+</span></span><span style="display:flex;"><span>                <span style="color:#66d9ef">LEFT</span> <span style="color:#66d9ef">JOIN</span>
+</span></span><span style="display:flex;"><span>                  d_month <span style="color:#66d9ef">USING</span>(month_id) 
+</span></span><span style="display:flex;"><span>                <span style="color:#66d9ef">LEFT</span> <span style="color:#66d9ef">JOIN</span>
+</span></span><span style="display:flex;"><span>                  accounts <span style="color:#66d9ef">USING</span>(account_id) 
+</span></span><span style="display:flex;"><span>              <span style="color:#66d9ef">WHERE</span>
+</span></span><span style="display:flex;"><span>                transfer_outs.status <span style="color:#f92672">=</span> <span style="color:#e6db74">&#39;completed&#39;</span> 
+</span></span><span style="display:flex;"><span>              <span style="color:#66d9ef">GROUP</span> <span style="color:#66d9ef">BY</span>
+</span></span><span style="display:flex;"><span>                d_month.action_month, accounts.customer_id ) 
+</span></span><span style="display:flex;"><span>              <span style="color:#66d9ef">UNION</span> <span style="color:#66d9ef">ALL</span>
+</span></span><span style="display:flex;"><span>              <span style="color:#66d9ef">SELECT</span>
+</span></span><span style="display:flex;"><span>                <span style="color:#f92672">*</span> 
+</span></span><span style="display:flex;"><span>              <span style="color:#66d9ef">FROM</span>
+</span></span><span style="display:flex;"><span>                <span style="color:#75715e">-- pix withdrawal subquery
+</span></span></span><span style="display:flex;"><span><span style="color:#75715e"></span>( 
+</span></span><span style="display:flex;"><span>                <span style="color:#66d9ef">SELECT</span>
+</span></span><span style="display:flex;"><span>                  d_month.action_month, accounts.customer_id, <span style="color:#66d9ef">SUM</span>(pix_movements.pix_amount) <span style="color:#66d9ef">AS</span> amount 
+</span></span><span style="display:flex;"><span>                <span style="color:#66d9ef">FROM</span>
+</span></span><span style="display:flex;"><span>                  d_time 
+</span></span><span style="display:flex;"><span>                  <span style="color:#66d9ef">INNER</span> <span style="color:#66d9ef">JOIN</span>
+</span></span><span style="display:flex;"><span>                    pix_movements 
+</span></span><span style="display:flex;"><span>                    <span style="color:#66d9ef">ON</span> pix_movements.pix_completed_at <span style="color:#f92672">=</span> d_time.time_id 
+</span></span><span style="display:flex;"><span>                  <span style="color:#66d9ef">LEFT</span> <span style="color:#66d9ef">JOIN</span>
+</span></span><span style="display:flex;"><span>                    d_month <span style="color:#66d9ef">USING</span>(month_id) 
+</span></span><span style="display:flex;"><span>                  <span style="color:#66d9ef">LEFT</span> <span style="color:#66d9ef">JOIN</span>
+</span></span><span style="display:flex;"><span>                    accounts <span style="color:#66d9ef">USING</span>(account_id) 
+</span></span><span style="display:flex;"><span>                <span style="color:#66d9ef">WHERE</span>
+</span></span><span style="display:flex;"><span>                  pix_movements.status <span style="color:#f92672">=</span> <span style="color:#e6db74">&#39;completed&#39;</span> 
+</span></span><span style="display:flex;"><span>                  <span style="color:#66d9ef">AND</span> pix_movements.in_or_out <span style="color:#f92672">=</span> <span style="color:#e6db74">&#39;pix_out&#39;</span> 
+</span></span><span style="display:flex;"><span>                <span style="color:#66d9ef">GROUP</span> <span style="color:#66d9ef">BY</span>
+</span></span><span style="display:flex;"><span>                  d_month.action_month, accounts.customer_id ) ) 
+</span></span><span style="display:flex;"><span>                <span style="color:#66d9ef">GROUP</span> <span style="color:#66d9ef">BY</span>
+</span></span><span style="display:flex;"><span>                  action_month,
+</span></span><span style="display:flex;"><span>                  customer_id 
+</span></span><span style="display:flex;"><span>        )
+</span></span><span style="display:flex;"><span>        <span style="color:#66d9ef">USING</span> (action_month, customer_id) ) a;
+</span></span></code></pre></div>
+</details></p>
+
+<h3 id="task-2-key-performance-indicators">Task 2: Key Performance Indicators</h3>
+<figure>
+    <img loading="lazy" src="https://images.unsplash.com/photo-1526628953301-3e589a6a8b74"
+         alt="computer screen with 8 rectangles filled with key indicators"/> <figcaption>
+            <p>Photo by Stephen Dawson on Unsplash</p>
+        </figcaption>
+</figure>
+
+<blockquote>
+<p>Another collegue from Bankio is interested in analysing the success of the company product <a href="#pix">PIX</a> on a business and technical level. So they asked you to come up with some key indicators to measure this.</p>
+</blockquote>
+
+
+<p><details >
+  <summary markdown="span">Mean processing time of PIX transactions <em>(click to expand)</em></summary>
+  This can be obtained using the time a customer requests a PIX transaction and when it is completed, we calculate this for all the PIX transactions then we take the mean value. PIX is supposed to be instantaneous, so this metric should be as small as possible.
+</details></p>
+
+
+
+<p><details >
+  <summary markdown="span">The proportion of PIX failures <em>(click to expand)</em></summary>
+  This indicator is important because it’s inconvenient for the client to have their transaction fail. We can calculate this by dividing the sum of failed PIX transactions by the total PIX transactions. This measure should be minimized.
+</details></p>
+
+
+
+<p><details >
+  <summary markdown="span">The proportion of transactions using PIX <em>(click to expand)</em></summary>
+  <p>PIX success can be measured by the proportion of transaction movements using PIX over normal transactions. So just count how many completed transactions using PIX were made and divide it by the total amount of completed transactions. A bigger measurement reflects PIX success over regular transactions.</p>
+<p>Alternatively instead of just counting the transactions we can evaluate how much money each transaction type is moving.</p>
+
+</details></p>
+
+
+
+<p><details >
+  <summary markdown="span">The proportion of in/out of PIX <em>(click to expand)</em></summary>
+  <p>This measure is good to analyze if customers are using their PIX to receive more money or to send money. It would be better if more customers are receiving more money than they are sending. Because Bankio already had free transactions for any bank, before PIX came around, others still had to pay fees to send money to your Bankio account. For this reason, it is better to count how many transactions are coming in through PIX and divide it by all PIX transactions. The higher the better.</p>
+<p>In this case we could also sum the balance of deposit and withdrawals from the Bankio account using PIX and compare it with regular transactions.</p>
+
+</details></p>
+
+<h3 id="task-3-daily-investment-return">Task 3: Daily Investment Return</h3>
+<blockquote>
+<p>Bankio has a customer banking account that allows you to invest on a fixed rate income product. Consider that this product provides customers with a daily return of 0.01% according to their daily invested balance amount. Calculate how much each customer has on their bankio account during the year 2020.</p>
+</blockquote>
+<p>This return is calculated daily after all withdrawals and/or deposits made on a given day. And every day, even weekends, generate some return.</p>
+<p>The following example describes customer A who begins investing in this fixed income product on day 16 of the first month. The prior balance was zero since this consumer is making a first-time deposit into the investment. His initial deposit was 1,000, and at the end of the day, it produced a daily income rate of 0.01% of his balance. The same product is still being consumed by this client at different times throughout the month. Remember that this is just a dummy sample of the transaction log with daily calculations applied. Note that the income for that day should be set to zero in the event of negative Movements.</p>
+<table>
+<thead>
+<tr>
+<th>Day</th>
+<th>Month</th>
+<th>Account ID</th>
+<th>Deposit</th>
+<th>Withdrawal</th>
+<th>End of Day Income</th>
+<th>Account Daily Balance</th>
+</tr>
+</thead>
+<tbody>
+<tr>
+<td>16</td>
+<td>1</td>
+<td>A</td>
+<td>1000</td>
+<td>0</td>
+<td>0.1</td>
+<td>1000.10</td>
+</tr>
+<tr>
+<td>20</td>
+<td>1</td>
+<td>A</td>
+<td>500</td>
+<td>0</td>
+<td>0.15</td>
+<td>1500.55</td>
+</tr>
+<tr>
+<td>2</td>
+<td>2</td>
+<td>A</td>
+<td>0</td>
+<td>200</td>
+<td>0.13</td>
+<td>1302.48</td>
+</tr>
+<tr>
+<td>19</td>
+<td>2</td>
+<td>A</td>
+<td>1000</td>
+<td>200</td>
+<td>0.21</td>
+<td>2104.78</td>
+</tr>
+</tbody>
+</table>
+<p><em>Movements = Previous Day Balance + Deposit - Withdrawal</em></p>
+<p><em>End of Day Income = Movements * Income Rate</em></p>
+<p><em>Account Daily Balance = Movements + End of Day Income</em></p>
+<script type="application/javascript" src="https://gist.github.com/devmedeiros/2a52cf2c4431a1993a98bf7f36d0f412.js?file=bankio-task-3.ipynb"></script>
+
+<hr>
+<h2 id="glossary">Glossary</h2>
+<h4 id="account-monthly-balance">Account Monthly Balance</h4>
+<p>It is the amount of money a customer had in their account at the end of a given month.</p>
+<h4 id="account-info-branch-number-and-check-digit">Account info (branch, number and check-digit)</h4>
+<p>In Brazil, a bank account can be uniquely identifiable by three numbers. The <strong>branch</strong> code, which indicates which bank branch the accounts were opened in, comes first. The second is the <strong>account number</strong> that a branch uses to identify accounts. The <strong>check-digit</strong>, which is only used for error detection, is the last.</p>
+<h4 id="cpf">CPF</h4>
+<p>It is the Brazilian individual taxpayer registry identification.</p>
+<h4 id="pix">PIX</h4>
+<p>In Brazil, this is the most recent method of money transmission. It&rsquo;s unpaid. It is immediate, and all that is required to complete a transaction is the Pix-Key associated with the account.</p>
+<h4 id="non-pix-transfers">Non PIX transfers</h4>
+<p>These are the conventional methods for transferring money between bank accounts. This type of transaction requires the CPF, the branch code, the account number, and the check digit of the account that will receive the funds to be provided. Most banks charge a fee in these transactions, and the confirmation of the transaction typically takes several hours to days.</p>
+]]></content:encoded>
     </item>
     
     <item>
@@ -36,6 +317,112 @@
       
       <guid>https://devmedeiros.com/post/2022-05-30-churn-rate-challenge/</guid>
       <description>Alura hosted a four-week Data Science Challenge using an imbalanced dataset of Churn Rate of a company Alura Voz</description>
+      <content:encoded><![CDATA[<p>I was challenged to take the role of a new data scientist hired at Alura Voz. This made-up company is a telecommunication company and it needs to reduce the Churn Rate.</p>
+<p>The challenge is divided into four weeks. For the first week, the goal was to clean the dataset provided by an API. Next, we need to identify clients who are more likely to leave the company, using data exploration and analysis. Then, in the third week, we made machine learning models to predict the churn rate for Alura Voz. The last week is to show off what we made during the challenge and build our portfolio. In case you are interested in seeing the code for the challenge just head over to my GitHub <a href="https://github.com/devmedeiros/Challenge-Data-Science">repository</a>.</p>
+<h2 id="first-week">First Week</h2>
+<h3 id="reading-the-dataset">Reading the dataset</h3>
+<p>The dataset is available in a JSON file, at first glance it looked like a normal data frame.</p>
+<p><img loading="lazy" src="https://raw.githubusercontent.com/devmedeiros/Challenge-Data-Science/main/1%20-%20Data%20Cleaning/table_head.png#center" alt="table head with the first five rows"  />
+</p>
+<p>But, as we can see, <code>customer</code>, <code>phone</code>, <code>internet</code>, and <code>account</code> are their own separate table. So I had to normalize them separately and then I just concatenated all these tables into one.</p>
+<h3 id="missing-data">Missing data</h3>
+<p>The first time I looked for missing data in this dataset I notice that apparently, that wasn&rsquo;t anything missing, but later on, I noticed that there was empty space and just space not being counted as <code>NaN</code>. So I corrected this, and now the dataset had 224 missing values for <code>Churn</code> and 11 missing for <code>Charges.Total</code>.</p>
+<p>I decided to drop the missing <code>Churn</code> because this is going to be the object of our study and there isn&rsquo;t a point in studying something that doesn&rsquo;t exist. For the missing <code>Charges.Total</code>, I think it represents a customer that hasn&rsquo;t paid anything yet, because all of them had a tenure of 0, meaning that they had just become a client, so I just replaced the missing value for 0.</p>
+<h3 id="feature-encoding">Feature Encoding</h3>
+<p>The feature <code>SeniorCitizen</code> was the only one that came with <code>0</code> and <code>1</code> instead of <code>Yes</code> and <code>No</code>. For now, I&rsquo;m changing it to yes and no, because it&rsquo;ll make the analysis simpler to read.</p>
+<p><code>Charges.Monthly</code> and <code>Charges.Total</code> were renamed to lose the dot because the dot gets in the way when calling the feature in python.</p>
+<h2 id="second-week">Second Week</h2>
+<h3 id="data-analysis">Data Analysis</h3>
+<p>In the first plot, we can see how much unbalanced our data set is. There&rsquo;re over 5000 clients that didn&rsquo;t leave the company and a little less than 2000 that left.</p>
+<p><img loading="lazy" src="https://raw.githubusercontent.com/devmedeiros/Challenge-Data-Science/main/2%20-%20Data%20Analysis/churn.jpg#center" alt="bar plot with two bars, the first one is for &amp;rsquo;no&amp;rsquo; and the second is for &amp;lsquo;yes&amp;rsquo;, the first bar is over 5000 count and the second one is around 2000"  />
+</p>
+<p>I experimented with oversampling the dataset to handle this imbalance, but it made the machine learning models worse. And undersampling isn&rsquo;t an option with this dataset size, so I just decided to leave it the way it is, and when it&rsquo;s time to split the training and test set I&rsquo;ll stratify the dataset by the <code>Churn</code> feature.</p>
+<p>I also generated 16 plots for all the discrete data, to see all the plots check this <a href="https://github.com/devmedeiros/Challenge-Data-Science/blob/main/2%20-%20Data%20Analysis/data_analysis.ipynb">notebook</a>. I wanted to see if there was any behavior that made some clients more likely to leave the company. Is clear that all, except for <code>gender</code>, seems to play a role in determining if a client will leave the company or not. More specifically payment methods, contracts, online backup, tech support, and internet service.</p>
+<p>In the <code>tenure</code> plot, I decided to make a distribution plot for the tenure, one plot for clients that didn&rsquo;t churn and another for the clients that did churn. We can see that clients that left the company tend to do so at the beginning of their time in the company.</p>
+<p><img loading="lazy" src="https://raw.githubusercontent.com/devmedeiros/Challenge-Data-Science/main/2%20-%20Data%20Analysis/tenure.jpg#center" alt="there are two plots side-by-side, in the first one the title is &amp;lsquo;Churn = No&amp;rsquo; the data is along the tenure axis and is in a U shape. the second plot has the title &amp;lsquo;Churn = Yes&amp;rsquo; and starts high and drops fast along the tenure line"  />
+</p>
+<p>The average monthly charge for clients that didn&rsquo;t churn is 61.27 monetary units, while clients that churn were paying 74.44. This is probably because of the type of contract they prefer, but either way is known that higher prices drive the customers away.</p>
+<h3 id="the-churn-profile">The Churn Profile</h3>
+<p><img loading="lazy" src="https://64.media.tumblr.com/tumblr_lojvnhHFH91qlh1s6o1_400.gifv#center" alt="person jumping through the window"  />
+</p>
+<p>Considering everything that I could see through plots and measures. I came up with a profile for clients that are more likely to churn.</p>
+<ul>
+<li>
+<p>New clients are more likely to churn than older clients.</p>
+</li>
+<li>
+<p>Customers that use fewer services and products tend to leave the company. Also, when they aren&rsquo;t tied down to a longer contract they seem to be more likely to quit.</p>
+</li>
+<li>
+<p>Regarding the payment method, clients that churn have a <strong>strong</strong> preference for electronic checks and usually are spending 13.17 monetary units more than the average client that didn&rsquo;t leave.</p>
+</li>
+</ul>
+<h2 id="third-week">Third Week</h2>
+<h3 id="preparing-the-dataset">Preparing the dataset</h3>
+<p>We start by making dummies variables dropping the first, so we would have n-1 dummies for n categories. Then we move on to look at features correlation.</p>
+<p><img loading="lazy" src="https://raw.githubusercontent.com/devmedeiros/Challenge-Data-Science/main/3%20-%20Model%20Selection/corr_matrix.jpg#center" alt="correlation matrix with all the features"  />
+</p>
+<p>We can see that the <code>InternetService_No</code> feature has a lot of strong correlations with many other features, this is because these other features depend on the client having internet service. So I&rsquo;ll drop all features that are dependent on this one. The same thing happens with <code>PhoneService_Yes</code>.</p>
+<p><code>tenure</code> and <code>ChargesTotal</code> also have a strong correlation, so I tried running the models without one of them and both, and it had a worse performance and took a long time to converge, so I decided to keep them as they are relevant as well.</p>
+<p>After dropping the features I finish preparing the dataset by normalizing the numeric data, <code>ChargesTotal</code> and <code>tenure</code>.</p>
+<h3 id="test-and-training-dataset">Test and training dataset</h3>
+<p>I split the dataset into training and testing sets, 20% for testing and the rest for training. I stratified the data by the <code>Churn</code> feature and I shuffle the dataset before splitting. The same split is used by all the models. After splitting the dataset I decided to oversample the <strong>train</strong> data using SMOTE<sup id="fnref:1"><a href="#fn:1" class="footnote-ref" role="doc-noteref">1</a></sup> because the dataset is imbalanced. The reason that I only used this technique on the training set is that I don&rsquo;t want to have a biased result, oversampling all the datasets would mean that I&rsquo;d be testing my models on the same data that I trained, and that&rsquo;s not the goal here.</p>
+<h3 id="model-evaluation">Model Evaluation</h3>
+<p>I&rsquo;ll use a dummy classifier to have a baseline model for the accuracy score, and I&rsquo;ll also use the metrics: <code>precision</code>, <code>recall</code> and <code>f1 score</code><sup id="fnref:2"><a href="#fn:2" class="footnote-ref" role="doc-noteref">2</a></sup>. Although the dummy model won&rsquo;t have values for this metrics, I&rsquo;ll keep it for comparison on how much the models improved.</p>
+<h3 id="baseline">Baseline</h3>
+<p>I made the baseline model using a dummy classifier that guessed that every client behaved the same. It is always guessed that no client will leave the company. By using this approach we got a baseline accuracy score of <code>0.73456</code>.</p>
+<p>All models moving forward will have the same random state.</p>
+<h3 id="model-1---random-forest">Model 1 - Random Forest</h3>
+<p>I start by using a grid search with cross-validation to find the best parameters within a given pool of options using the <code>recall</code> as the strategy to evaluate the performance. The best model was:</p>
+<div class="highlight"><pre tabindex="0" style="color:#f8f8f2;background-color:#272822;-moz-tab-size:4;-o-tab-size:4;tab-size:4;"><code class="language-python" data-lang="python"><span style="display:flex;"><span>RandomForestClassifier(criterion<span style="color:#f92672">=</span><span style="color:#e6db74">&#39;entropy&#39;</span>, max_depth<span style="color:#f92672">=</span><span style="color:#ae81ff">5</span>, max_leaf_nodes<span style="color:#f92672">=</span><span style="color:#ae81ff">70</span>, random_state<span style="color:#f92672">=</span><span style="color:#ae81ff">22</span>)
+</span></span></code></pre></div><p>After fitting this model, the evaluating metrics were:</p>
+<ul>
+<li>Accuracy Score: 0.72534</li>
+<li>Precision Score: 0.48922</li>
+<li>Recall Score: 0.78877</li>
+<li>F1 Score: 0.60389</li>
+</ul>
+<h3 id="model-2---linear-svc">Model 2 - Linear SVC</h3>
+<p>For this model, I just used the default parameters and set the ceiling for the maximum of iterations to <code>900000</code>.</p>
+<div class="highlight"><pre tabindex="0" style="color:#f8f8f2;background-color:#272822;-moz-tab-size:4;-o-tab-size:4;tab-size:4;"><code class="language-python" data-lang="python"><span style="display:flex;"><span>LinearSVC(max_iter<span style="color:#f92672">=</span><span style="color:#ae81ff">900000</span>, random_state<span style="color:#f92672">=</span><span style="color:#ae81ff">22</span>)
+</span></span></code></pre></div><p>After fitting this model, the evaluating metrics were:</p>
+<ul>
+<li>Accuracy Score: 0.71966</li>
+<li>Precision Score: 0.48217</li>
+<li>Recall Score: 0.75936</li>
+<li>F1 Score: 0.58982</li>
+</ul>
+<h3 id="model-3---multi-layer-perceptron">Model 3 - Multi-layer Perceptron</h3>
+<p>Here I fixed the solver to LBFGS, because according to the documentation it has a better performance in smaller datasets<sup id="fnref:3"><a href="#fn:3" class="footnote-ref" role="doc-noteref">3</a></sup>, and used grid search with cross-validation to find a hidden layer size that would be the best. The best model was:</p>
+<div class="highlight"><pre tabindex="0" style="color:#f8f8f2;background-color:#272822;-moz-tab-size:4;-o-tab-size:4;tab-size:4;"><code class="language-python" data-lang="python"><span style="display:flex;"><span>MLPClassifier(hidden_layer_sizes<span style="color:#f92672">=</span>(<span style="color:#ae81ff">1</span>,), max_iter<span style="color:#f92672">=</span><span style="color:#ae81ff">9999</span>, random_state<span style="color:#f92672">=</span><span style="color:#ae81ff">22</span>, solver<span style="color:#f92672">=</span><span style="color:#e6db74">&#39;lbfgs&#39;</span>)
+</span></span></code></pre></div><p>After fitting this model, the evaluating metrics were:</p>
+<ul>
+<li>Accuracy Score: 0.72818</li>
+<li>Precision Score: 0.49133</li>
+<li>Recall Score: 0.68182</li>
+<li>F1 Score: 0.57111</li>
+</ul>
+<h3 id="conclusion">Conclusion</h3>
+<p>After running the three models, all of them used the same random_state. I got the following accuracy scores and improvements (compared to the baseline model):</p>
+<p><img loading="lazy" src="https://raw.githubusercontent.com/devmedeiros/Challenge-Data-Science/main/3%20-%20Model%20Selection/results_table.png#center" alt="results table"  />
+</p>
+<p>In the end, the Random Forest had the best metrics overall. This model can <em>recall</em> a great portion of clients that churn correctly, still is not perfect but is certainly a starting point. The <em>accuracy</em> score is not as high as I&rsquo;d like, but in this particular problem, the goal is to keep clients from leaving the company and is better to use resources to keep a client that will not leave than to do nothing.</p>
+<p>In the end, I liked this challenge, because I don&rsquo;t usually practice machine learning, but thanks to the challenge I got the chance to make a small project in this area that is so relevant and important. This was my first time working with neural networks and tunning hyper-parameters, and I&rsquo;m sure the next time I&rsquo;ll get even better results.</p>
+<div class="footnotes" role="doc-endnotes">
+<hr>
+<ol>
+<li id="fn:1">
+<p><a href="https://imbalanced-learn.org/stable/references/generated/imblearn.over_sampling.SMOTE.html">imbalanced-learn documentation</a>&#160;<a href="#fnref:1" class="footnote-backref" role="doc-backlink">&#x21a9;&#xfe0e;</a></p>
+</li>
+<li id="fn:2">
+<p><a href="https://towardsdatascience.com/accuracy-precision-recall-or-f1-331fb37c5cb9">Accuracy, Precision, Recall or F1? - Koo Ping Shung</a>&#160;<a href="#fnref:2" class="footnote-backref" role="doc-backlink">&#x21a9;&#xfe0e;</a></p>
+</li>
+<li id="fn:3">
+<p><a href="https://scikit-learn.org/stable/modules/generated/sklearn.neural_network.MLPClassifier.html">scikit-learn documentation</a>&#160;<a href="#fnref:3" class="footnote-backref" role="doc-backlink">&#x21a9;&#xfe0e;</a></p>
+</li>
+</ol>
+</div>
+]]></content:encoded>
     </item>
     
     <item>
@@ -45,6 +432,50 @@
       
       <guid>https://devmedeiros.com/post/2022-04-17-storytelling-with-ceap/</guid>
       <description>The storytelling of how much each deputy/senator spends in Brazil</description>
+      <content:encoded><![CDATA[<h2 id="the-dataset">The Dataset</h2>
+<p>CEAP stands for <em>Cota para o Exercício da Atividade Parlamentar</em>, in English, Exercise of Parliamentary Activity from Brazil. The quota is a monthly amount that can be used by the deputy/senator to defray typical expenses of the exercise of the parliamentary mandate.</p>
+<p>The monthly amounts don&rsquo;t accumulate over the months. Another important thing is Senators in Brazil have an 8-year mandate, and there are elections every 4 years.</p>
+<p>The main dataset is provided by the Brazilian government through the transparency portal.<sup id="fnref:1"><a href="#fn:1" class="footnote-ref" role="doc-noteref">1</a></sup> I gathered additional data to link the quota for each senator and federal unit.<sup id="fnref:2"><a href="#fn:2" class="footnote-ref" role="doc-noteref">2</a></sup><sup id="fnref:3"><a href="#fn:3" class="footnote-ref" role="doc-noteref">3</a></sup></p>
+<h2 id="data-analysis">Data Analysis</h2>
+<h3 id="total-amount-refunded-by-year">Total Amount Refunded by Year</h3>
+<p><img loading="lazy" src="https://raw.githubusercontent.com/devmedeiros/7DaysOfCode/main/img/refunded_year.jpg#center" alt="Bar plot with blue bars and green bars indicating election years, shows the total amount refunded by senators in Brazil"  />
+</p>
+<p>On the image above we can see how much was refunded by year. The year 2022 is the smallest because is not over yet. The data was collected on April 16, 2022.</p>
+<p>There seems to be a trend to spend slightly less money on election years.</p>
+<p>The first three years were the three lowest spending years, <strong>11.52M</strong>, <strong>11.61M</strong>, and <strong>10.64M</strong> from 2008 to 2010, respectively. This was probably because in the following years the expenses that could be refunded increased in 2011.</p>
+<h3 id="top-highest-and-lowest-average-refunded-percentages-by-senators">Top Highest and Lowest Average Refunded Percentages by Senators</h3>
+<p>These percentages represent the quota percentage a given senator refunded on average.</p>
+<p><img loading="lazy" src="https://raw.githubusercontent.com/devmedeiros/7DaysOfCode/main/img/senator_refund_highest_mean.jpg#center" alt="Horizontal bar plot with the 10 highest refundees, on average, senators"  />
+</p>
+<p>In the image above, it&rsquo;s seen highest refunded senators note that they’re all closed together, the highest refundee, on average, is João Capiberibe, using <strong>99.78%</strong> of his quota. On the lowest side (image below), it&rsquo;s presented the lowest use of the refund quota, on average. Nailde Panta, is the lowest refundee, on average, using just <strong>4.1%</strong> of her quota.</p>
+<p><img loading="lazy" src="https://raw.githubusercontent.com/devmedeiros/7DaysOfCode/main/img/senator_refund_lowest_mean.jpg#center" alt="Horizontal bar plot with the 10 lowest refundees, on average, senators"  />
+</p>
+<h3 id="expense-types-over-the-years">Expense Types Over the Years</h3>
+<p>Here we can see that in the years 2008 to 2010 there wasn’t any refund by transport and private security services.</p>
+<p><img loading="lazy" src="https://raw.githubusercontent.com/devmedeiros/7DaysOfCode/main/img/expense_type_year.jpg#center" alt="Bar plot of expenses type refunded by the years 2008 to 2022"  />
+</p>
+<p>In 2008, the main expenses were publication of parliamentary activity (over <strong>R$ 7,000.00</strong>) and locomotion/accommodation (almost <strong>R$ 6,500.00</strong>). In the subsequent years, those expenses dropped in half, for the publications and to less than <strong>R$ 1,000.00</strong> for locomotion.</p>
+<p>In 2013 and 2014 the expense of private security was the highest ever with over <strong>R$ 4,000.00</strong>. Probably due to protests in those years.</p>
+<h2 id="to-learn-more">To learn more</h2>
+<p>To learn how The Chamber of Deputies from Brazil works click <a href="https://www2.camara.leg.br/english">here</a>.</p>
+<p>This is presentation is for learning purposes, from a challenge proposed by Alura #7DaysOfCode. In case you want to know what else can be done with the data, check the <a href="https://serenata.ai/en/">Serenata de Amor</a>. It&rsquo;s a Brazilian project that uses AI to track refunded requests by deputies.</p>
+<p>See my code at my GitHub <a href="https://github.com/devmedeiros/7DaysOfCode">repo</a>, there you can also find a slide presentation, learn about how the data was cleaned, and know more about the next task from the challenge.</p>
+<h3 id="references">References</h3>
+<div class="footnotes" role="doc-endnotes">
+<hr>
+<ol>
+<li id="fn:1">
+<p><a href="https://www12.senado.leg.br/transparencia/dados-abertos-transparencia/dados-abertos-ceaps">https://www12.senado.leg.br/transparencia/dados-abertos-transparencia/dados-abertos-ceaps</a>&#160;<a href="#fnref:1" class="footnote-backref" role="doc-backlink">&#x21a9;&#xfe0e;</a></p>
+</li>
+<li id="fn:2">
+<p><a href="https://pt.wikipedia.org/wiki/Lista_de_senadores_do_Brasil#Nova_Rep%C3%BAblica_(1987%E2%80%932023)">https://pt.wikipedia.org/wiki/Lista_de_senadores_do_Brasil#Nova_Rep%C3%BAblica_(1987%E2%80%932023)</a>&#160;<a href="#fnref:2" class="footnote-backref" role="doc-backlink">&#x21a9;&#xfe0e;</a></p>
+</li>
+<li id="fn:3">
+<p><a href="https://www2.camara.leg.br/legin/int/atomes/2009/atodamesa-43-21-maio-2009-588364-publicacaooriginal-112820-cd-mesa.html">https://www2.camara.leg.br/legin/int/atomes/2009/atodamesa-43-21-maio-2009-588364-publicacaooriginal-112820-cd-mesa.html</a>&#160;<a href="#fnref:3" class="footnote-backref" role="doc-backlink">&#x21a9;&#xfe0e;</a></p>
+</li>
+</ol>
+</div>
+]]></content:encoded>
     </item>
     
     <item>
@@ -54,6 +485,171 @@
       
       <guid>https://devmedeiros.com/post/2021-12-28-amazon-top-50-books/</guid>
       <description>Exploratory Data Analysis of Amazon&amp;rsquo;s top 50 bestselling books 2009 - 2019</description>
+      <content:encoded><![CDATA[<p>Recently I finished an Alura course named <em>Python for Data Science</em> and I want to put what I learned into practice, to do so I&rsquo;ll make a descriptive analysis on this dataset <a href="https://www.kaggle.com/sootersaalu/amazon-top-50-bestselling-books-2009-2019"><strong>Amazon Top 50 Bestselling Books 2009 - 2019</strong></a>. It contains 550 books and the data has been categorized as fiction and non-fiction by Goodreads. All of the code can be found <a href="https://gist.github.com/devmedeiros/12813bebd78f7662966096e963ed0aa9">here</a>.</p>
+<p>I started checking the first five observations from the dataset.</p>
+<table>
+<thead>
+<tr>
+<th>Name</th>
+<th>Author</th>
+<th>User Rating</th>
+<th>Reviews</th>
+<th>Price</th>
+<th>Year</th>
+<th>Genre</th>
+</tr>
+</thead>
+<tbody>
+<tr>
+<td>10-Day Green Smoothie Cleanse</td>
+<td>JJ Smith</td>
+<td>4.7</td>
+<td>17350</td>
+<td>8</td>
+<td>2016</td>
+<td>Non Fiction</td>
+</tr>
+<tr>
+<td>11/22/63: A Novel</td>
+<td>Stephen King</td>
+<td>4.6</td>
+<td>2052</td>
+<td>22</td>
+<td>2011</td>
+<td>Fiction</td>
+</tr>
+<tr>
+<td>12 Rules for Life: An Antidote to Chaos</td>
+<td>Jordan B. Peterson</td>
+<td>4.7</td>
+<td>18979</td>
+<td>15</td>
+<td>2018</td>
+<td>Non Fiction</td>
+</tr>
+<tr>
+<td>1984 (Signet Classics)</td>
+<td>George Orwell</td>
+<td>4.7</td>
+<td>21424</td>
+<td>6</td>
+<td>2017</td>
+<td>Fiction</td>
+</tr>
+<tr>
+<td>5,000 Awesome Facts (About Everything!) (Natio&hellip;</td>
+<td>National Geographic Kids</td>
+<td>4.8</td>
+<td>7665</td>
+<td>12</td>
+<td>2019</td>
+<td>Non Fiction</td>
+</tr>
+</tbody>
+</table>
+<p>Here it&rsquo;s possible to see that the data has the <strong>Year</strong> in which the book was on the <em>top 50</em> list, it&rsquo;s <strong>Price</strong>, the average <strong>User Rating</strong>, total <strong>Reviews</strong>, <strong>Author</strong>, <strong>Name</strong> and lastly, <strong>Genre</strong>.</p>
+<p>There are no null values in the dataset. And from 550 books there are 248 unique authors, so let&rsquo;s see which authors have had more books in the top 50 bestselling during this period.</p>
+<table>
+<thead>
+<tr>
+<th>Author</th>
+<th>Number of Books</th>
+</tr>
+</thead>
+<tbody>
+<tr>
+<td>Jeff Kinney</td>
+<td>12</td>
+</tr>
+<tr>
+<td>Gary Chapman</td>
+<td>11</td>
+</tr>
+<tr>
+<td>Rick Riordan</td>
+<td>11</td>
+</tr>
+<tr>
+<td>Suzanne Collins</td>
+<td>11</td>
+</tr>
+<tr>
+<td>American Psychological Association</td>
+<td>10</td>
+</tr>
+<tr>
+<td>Dr. Seuss</td>
+<td>9</td>
+</tr>
+<tr>
+<td>Gallup</td>
+<td>9</td>
+</tr>
+<tr>
+<td>Rob Elliott</td>
+<td>8</td>
+</tr>
+<tr>
+<td>Stephen R. Covey</td>
+<td>7</td>
+</tr>
+<tr>
+<td>Stephenie Meyer</td>
+<td>7</td>
+</tr>
+<tr>
+<td>Dav Pilkey</td>
+<td>7</td>
+</tr>
+<tr>
+<td>Bill O&rsquo;Reilly</td>
+<td>7</td>
+</tr>
+<tr>
+<td>Eric Carle</td>
+<td>7</td>
+</tr>
+</tbody>
+</table>
+<p>The author with more books in the top 50 list was Jeff Kinney, tied at second, with 11 books, was Gary Chapman, Rick Riordan, and Suzanne Collins. Tied at 9th is Stephen R. Covey, Stephenie Meyer, Dav Pilkey, Bill O&rsquo;Reilly, and Eric Carle, with 7 books.</p>
+<p><img loading="lazy" src="https://ik.imagekit.io/devmedeiros/violing_ur_vmTFo02uK.jpg?updatedAt=1640708039606" alt="Violing plot of User Rating"  />
+</p>
+<p>With the violing plot, we can see how the user rating is concentrated and because our data is composed of bestsellers it makes sense that the user rating is mostly concentrated around 4.5 and 4.75.</p>
+<p><img loading="lazy" src="https://ik.imagekit.io/devmedeiros/boxplot_year_reviews_Pa1YGMhj2z1.jpg?updatedAt=1640708039777" alt="Boxplot of Review Count by Year"  />
+</p>
+<p>This boxplot of reviews count by year shows that the variability increases through the years, having its peak at 2014 and gradually stabilizing. We can also see that in the first years, 2010 and 2011, there were more outliers in the data.</p>
+<p>I wanted to look at the user rating and price by book genre. So I calculated these average values.</p>
+<table>
+<thead>
+<tr>
+<th>Genre</th>
+<th>User Rating</th>
+<th>Price</th>
+</tr>
+</thead>
+<tbody>
+<tr>
+<td>Fiction</td>
+<td>4.65</td>
+<td>10.85</td>
+</tr>
+<tr>
+<td>Non Fiction</td>
+<td>4.60</td>
+<td>14.84</td>
+</tr>
+</tbody>
+</table>
+<p>The user rating average by genre seems to be similar just 0.05 difference, but the price has a bigger difference 10.85 for fiction and 14.84 for non-fiction books. To be sure that these differences are statistically significant I&rsquo;ll use the Mann-Whitney test.</p>
+<p>The Mann-Whitney null hypothesis is that the samples have the same distribution, and in both cases, we reject the null hypothesis with a 95% confidence level. The p-value for the price data was 8.34e-08 and the user rating was 1.495e-07.</p>
+<p>To visually show how different their distribution is we can take a look at the following plots.</p>
+<p><img loading="lazy" src="https://ik.imagekit.io/devmedeiros/hist_price_qxT6fxEGQ.jpg?updatedAt=1640708039771" alt="Distribution for Book Price by Genre"  />
+</p>
+<p>The distribution for the price of fiction books is heavily inclined to the left and consistently diminishes as the price goes up. While the non-fiction books price starts high and becomes even higher, 120 and almost 140 occurrences in the first two categories, then it rapidly diminishes.</p>
+<p><img loading="lazy" src="https://ik.imagekit.io/devmedeiros/hist_ur_6YxOQ_Huz.jpg?updatedAt=1640708040024" alt="Distribution for User Rating by Genre"  />
+</p>
+<p>The distribution for the user rating by the fiction genre slowly increases, having its peek at around 4.8. And the distribution of the non-fiction genre has its peak at a little over 4.6.</p>
+]]></content:encoded>
     </item>
     
     <item>
@@ -63,6 +659,115 @@
       
       <guid>https://devmedeiros.com/post/2021-11-02-sql-california-traffic/</guid>
       <description>Using SQL to analyze if COVID impacted California Traffic Collisions</description>
+      <content:encoded><![CDATA[<h2 id="introduction">Introduction</h2>
+<p>COVID-19 has changed many things in our day-to-day life, from ordering more delivery, working from home, or even just getting a new pet. And now I want to see if it has impacted traffic crashes in California. The dataset that I’ll be using comes from Kaggle. It covers collisions from January 2001 up to December 2020 from California. <sup id="fnref:1"><a href="#fn:1" class="footnote-ref" role="doc-noteref">1</a></sup> The following are the tables present in the dataset:</p>
+<ul>
+<li>case_id</li>
+<li>collisions</li>
+<li>parties</li>
+<li>victims</li>
+</ul>
+<p>The <strong>case_id</strong> contains the <em>case_id</em> and <em>db_year</em>. The <strong>collisions</strong> table contains all the information about each collision. While the <strong>parties</strong> table contains information about all the parties involved in the collisions, in this case, parties can be drivers, pedestrians, cyclists, and parked vehicles. The <strong>victims</strong> table contain information about all the victims, it also includes passengers.</p>
+<p>To answer if the pandemic has impacted the collisions I need to separate my data. Knowing that the first case of COVID was on January 26, 2020, in California. <sup id="fnref:2"><a href="#fn:2" class="footnote-ref" role="doc-noteref">2</a></sup> I’ll be separating the dataset as before COVID for every crash that happened before the first case and after COVID for every crash on the same day and forward.</p>
+<p>To compare <em>before COVID</em> and <em>after COVID</em> I’ll looking at a couple of things, <strong>Proportion of DUIs</strong> and <strong>Fatality of Crashes</strong>.</p>
+<p>To do this I’ll be querying the database with SQLite through R. For the complete code go to my GitHub <a href="https://github.com/devmedeiros/california-traffic-collisions">repo</a>.</p>
+<h2 id="proportion-of-duis">Proportion of DUIs</h2>
+<p>Alcohol use has changed in the US during the pandemic <sup id="fnref:3"><a href="#fn:3" class="footnote-ref" role="doc-noteref">3</a></sup> and with all the lockdowns and working from home we may wonder if this alcohol use has caused more crashes or not. With this in mind we take a look at our data about California.</p>
+<p>As we can see from the following table, the percentages before and after COVID are very similar. Only <strong>7.3%</strong> and <strong>8.96%</strong> of violations occurred from DUIs.</p>
+<table>
+<thead>
+<tr>
+<th></th>
+<th style="text-align:right">Before COVID</th>
+<th style="text-align:right"></th>
+<th style="text-align:right">After COVID</th>
+<th style="text-align:right"></th>
+</tr>
+</thead>
+<tbody>
+<tr>
+<td>Violation</td>
+<td style="text-align:right">Qnty</td>
+<td style="text-align:right">Perc</td>
+<td style="text-align:right">Qnty</td>
+<td style="text-align:right">Perc</td>
+</tr>
+<tr>
+<td>DUI</td>
+<td style="text-align:right">653467</td>
+<td style="text-align:right">7.3</td>
+<td style="text-align:right">42169</td>
+<td style="text-align:right">8.96</td>
+</tr>
+<tr>
+<td>Other</td>
+<td style="text-align:right">8300399</td>
+<td style="text-align:right">92.7</td>
+<td style="text-align:right">428299</td>
+<td style="text-align:right">91.04</td>
+</tr>
+</tbody>
+</table>
+<h2 id="fatality-of-crashes">Fatality of Crashes</h2>
+<p>Moving on to our next task, to see if crashes after COVID became more or less fatal. The analysis is going to look at how many people died from collisions, how many got some injury, and no injury at all.</p>
+<p>Looking at the table below you can see that the percentage of collisions that resulted in someone dying was <strong>0.74%</strong> before the pandemic and is now <strong>1.29%</strong>, is not a big difference, but when you look at <em>no injury</em>, you can see that before COVID <strong>45.24%</strong> of collisions didn&rsquo;t result in someone having an injury and after the pandemic, this number drops to <strong>18.57%</strong>. This <em>could</em> indicate some influence of the pandemic, but further research is needed.</p>
+<table>
+<thead>
+<tr>
+<th></th>
+<th style="text-align:right">Before COVID</th>
+<th style="text-align:right"></th>
+<th style="text-align:right">After COVID</th>
+<th style="text-align:right"></th>
+</tr>
+</thead>
+<tbody>
+<tr>
+<td>Degree of Injury</td>
+<td style="text-align:right">Qnty</td>
+<td style="text-align:right">Perc</td>
+<td style="text-align:right">Qnty</td>
+<td style="text-align:right">Perc</td>
+</tr>
+<tr>
+<td>Death</td>
+<td style="text-align:right">68875</td>
+<td style="text-align:right">0.74</td>
+<td style="text-align:right">4131</td>
+<td style="text-align:right">1.29</td>
+</tr>
+<tr>
+<td>Some injury</td>
+<td style="text-align:right">5033610</td>
+<td style="text-align:right">54.02</td>
+<td style="text-align:right">257057</td>
+<td style="text-align:right">80.14</td>
+</tr>
+<tr>
+<td>No injury</td>
+<td style="text-align:right">4216085</td>
+<td style="text-align:right">45.24</td>
+<td style="text-align:right">59576</td>
+<td style="text-align:right">18.57</td>
+</tr>
+</tbody>
+</table>
+<h3 id="references">References</h3>
+<div class="footnotes" role="doc-endnotes">
+<hr>
+<ol>
+<li id="fn:1">
+<p><a href="https://www.kaggle.com/alexgude/california-traffic-collision-data-from-switrs">Alexander Gude and California Highway Patrol, “California Traffic Collision Data from SWITRS.” Kaggle, 2021, doi: 10.34740/KAGGLE/DSV/2569326.</a>&#160;<a href="#fnref:1" class="footnote-backref" role="doc-backlink">&#x21a9;&#xfe0e;</a></p>
+</li>
+<li id="fn:2">
+<p><a href="https://abc7news.com/timeline-of-coronavirus-us-covid-19-bay-area-sf/6047519/">Timeline of Coronavirus US</a>&#160;<a href="#fnref:2" class="footnote-backref" role="doc-backlink">&#x21a9;&#xfe0e;</a></p>
+</li>
+<li id="fn:3">
+<p><a href="https://jamanetwork.com/journals/jamanetworkopen/fullarticle/2770975">Pollard MS, Tucker JS, Green HD. Changes in Adult Alcohol Use and Consequences During the COVID-19 Pandemic in the US. JAMA Netw Open. 2020;3(9):e2022942. doi:10.1001/jamanetworkopen.2020.22942</a>&#160;<a href="#fnref:3" class="footnote-backref" role="doc-backlink">&#x21a9;&#xfe0e;</a></p>
+</li>
+</ol>
+</div>
+]]></content:encoded>
     </item>
     
   </channel>

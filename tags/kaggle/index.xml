@@ -18,6 +18,213 @@
       
       <guid>https://devmedeiros.com/post/data-cleaning-credit-score/</guid>
       <description>How to come up with ways to clean a dataset using Python</description>
+      <content:encoded><![CDATA[<blockquote>
+<p><strong>Disclaimer:</strong> I&rsquo;ll be talking about how to come up with the python code, if you want to read the actual code please go to this <a href="https://github.com/devmedeiros/credit-score-classification-app/tree/main/notebooks">repo</a>.</p>
+</blockquote>
+<h2 id="meet-the-credit-score-classification-dataset">Meet the Credit Score Classification Dataset</h2>
+<p>The dataset that we&rsquo;ll clean comes from <a href="https://www.kaggle.com/datasets/parisrohan/credit-score-classification?select=train.csv">kaggle</a>, which is the <code>train.csv</code> dataset, but this could be used for the <code>test.csv</code> as well.</p>
+<p>There are 28 columns and 100k rows in this dataset. I compiled a feature description table that you can see below.</p>
+<table>
+<thead>
+<tr>
+<th>Feature</th>
+<th>Description</th>
+</tr>
+</thead>
+<tbody>
+<tr>
+<td><code>ID</code></td>
+<td>Represents a unique identification of an entry</td>
+</tr>
+<tr>
+<td><code>Customer_ID</code></td>
+<td>Represents a unique identification of a person</td>
+</tr>
+<tr>
+<td><code>Month</code></td>
+<td>Represents the month of the year</td>
+</tr>
+<tr>
+<td><code>Name</code></td>
+<td>Represents the name of a person</td>
+</tr>
+<tr>
+<td><code>Age</code></td>
+<td>Represents the age of the person</td>
+</tr>
+<tr>
+<td><code>SSN</code></td>
+<td>Represents the social security number of a person</td>
+</tr>
+<tr>
+<td><code>Occupation</code></td>
+<td>Represents the occupation of the person</td>
+</tr>
+<tr>
+<td><code>Annual_Income</code></td>
+<td>Represents the annual income of the person</td>
+</tr>
+<tr>
+<td><code>Monthly_Inhand_Salary</code></td>
+<td>Represents the monthly base salary of a person</td>
+</tr>
+<tr>
+<td><code>Num_Bank_Accounts</code></td>
+<td>Represents the number of bank accounts a person holds</td>
+</tr>
+<tr>
+<td><code>Num_Credit_Card</code></td>
+<td>Represents the number of other credit cards held by a person</td>
+</tr>
+<tr>
+<td><code>Interest_Rate</code></td>
+<td>Represents the interest rate on a credit card</td>
+</tr>
+<tr>
+<td><code>Num_of_Loan</code></td>
+<td>Represents the number of loans taken from the bank</td>
+</tr>
+<tr>
+<td><code>Type_of_Loan</code></td>
+<td>Represents the types of loan taken by a person</td>
+</tr>
+<tr>
+<td><code>Delay_from_due_date</code></td>
+<td>Represents the average number of days delayed from the payment date</td>
+</tr>
+<tr>
+<td><code>Num_of_Delayed_Payment</code></td>
+<td>Represents the average number of payments delayed by a person</td>
+</tr>
+<tr>
+<td><code>Changed_Credit_Limit</code></td>
+<td>Represents the percentage change in credit card limit</td>
+</tr>
+<tr>
+<td><code>Num_Credit_Inquiries</code></td>
+<td>Represents the number of credit card inquiries</td>
+</tr>
+<tr>
+<td><code>Credit_Mix</code></td>
+<td>Represents the classification of the mix of credits</td>
+</tr>
+<tr>
+<td><code>Outstanding_Debt</code></td>
+<td>Represents the remaining debt to be paid (in USD)</td>
+</tr>
+<tr>
+<td><code>Credit_Utilization_Ratio</code></td>
+<td>Represents the utilization ratio of credit cards</td>
+</tr>
+<tr>
+<td><code>Credit_History_Age</code></td>
+<td>Represents the age of credit history of the person</td>
+</tr>
+<tr>
+<td><code>Payment_of_Min_Amount</code></td>
+<td>Represents whether only the minimum amount was paid by the person</td>
+</tr>
+<tr>
+<td><code>Total_EMI_per_month</code></td>
+<td>Represents the monthly EMI payments (in USD)</td>
+</tr>
+<tr>
+<td><code>Amount_invested_monthly</code></td>
+<td>Represents the monthly amount invested by the customer (in USD)</td>
+</tr>
+<tr>
+<td><code>Payment_Behaviour</code></td>
+<td>Represents the payment behavior of the customer (in USD)</td>
+</tr>
+<tr>
+<td><code>Monthly_Balance</code></td>
+<td>Represents the monthly balance amount of the customer (in USD)</td>
+</tr>
+<tr>
+<td><code>Credit_Score</code></td>
+<td>Represents the bracket of credit score (Poor, Standard, Good)</td>
+</tr>
+</tbody>
+</table>
+<p>Even though we have 100k rows, within these rows that are only 12,500 different customers, each customer appears 8 times (from January to August). So basically we can select a particular customer and look at their information and easily find incorrect data and be able to adjust it.</p>
+<h2 id="cleaning-typos-and-outliers">Cleaning Typos and Outliers</h2>
+<p>In this dataset that is a lot of typos or just straight-up nonsense. You&rsquo;ll find some values to be: <code>_</code>, <code>!@9#%8</code>, <code>__10000__</code>, <code>NM</code> or <code>_______</code>. I believe these typos are in the dataset to represent the improbability that you may find when dealing with real-world data and most of them mean that this is a null value.</p>
+<p>For a moment I thought <code>__10000__</code> would just be a typo, but there is no amount invested monthly that is over 200 dollars.</p>
+<div class="highlight"><pre tabindex="0" style="color:#f8f8f2;background-color:#272822;-moz-tab-size:4;-o-tab-size:4;tab-size:4;"><code class="language-txt" data-lang="txt"><span style="display:flex;"><span>__10000__             4305
+</span></span><span style="display:flex;"><span>0.0                    169
+</span></span><span style="display:flex;"><span>80.41529543900253        1
+</span></span><span style="display:flex;"><span>36.66235139442514        1
+</span></span><span style="display:flex;"><span>89.7384893604547         1
+</span></span><span style="display:flex;"><span>                      ... 
+</span></span><span style="display:flex;"><span>36.541908593249026       1
+</span></span><span style="display:flex;"><span>93.45116318631192        1
+</span></span><span style="display:flex;"><span>140.80972223052834       1
+</span></span><span style="display:flex;"><span>38.73937670100975        1
+</span></span><span style="display:flex;"><span>167.1638651610451        1
+</span></span><span style="display:flex;"><span>Name: Amount_invested_monthly, Length: 91049, dtype: int64
+</span></span></code></pre></div><p>Following this logic, I looked for nonsense in the data frame and I started to replace them with numpy <code>nan</code>&rsquo;s. I also looked for outliers by looking at the distribution of values, if there was a value that only appeared once and was isolated I substitute it for a null value. I based this decision not only on this but also when I looked for customers that had this outlier and I observed all the data from this particular customer, I&rsquo;d see weird things like:</p>
+<p><img loading="lazy" src="https://raw.githubusercontent.com/devmedeiros/credit-score-classification-app/main/reports/figures/annual_income.png#center" alt="a table displaying information on a given customer and showing an outlier on its annual income"  />
+</p>
+<p>By looking at this customer is clear that he didn&rsquo;t make this much money annually only one month of the year.</p>
+<p>When you finish this search for typos and outliers don&rsquo;t forget to assign the correct data type to your features. Some features like <code>age</code> started with string characters among the age values and because of this, it&rsquo;s uploaded as an object instead of int or float.</p>
+<h2 id="filling-null-values">Filling Null Values</h2>
+<p>After dealing with all the outliers and typos, we ended up with a lot of null values, as you can see:</p>
+<div class="highlight"><pre tabindex="0" style="color:#f8f8f2;background-color:#272822;-moz-tab-size:4;-o-tab-size:4;tab-size:4;"><code class="language-python" data-lang="python"><span style="display:flex;"><span>df<span style="color:#f92672">.</span>isna()<span style="color:#f92672">.</span>sum()[df<span style="color:#f92672">.</span>isna()<span style="color:#f92672">.</span>sum() <span style="color:#f92672">&gt;</span> <span style="color:#ae81ff">0</span>]
+</span></span></code></pre></div><div class="highlight"><pre tabindex="0" style="color:#f8f8f2;background-color:#272822;-moz-tab-size:4;-o-tab-size:4;tab-size:4;"><code class="language-txt" data-lang="txt"><span style="display:flex;"><span>Age                         2776
+</span></span><span style="display:flex;"><span>Occupation                  7062
+</span></span><span style="display:flex;"><span>Annual_Income                993
+</span></span><span style="display:flex;"><span>Monthly_Inhand_Salary      15002
+</span></span><span style="display:flex;"><span>Num_Credit_Card             2271
+</span></span><span style="display:flex;"><span>Interest_Rate               2034
+</span></span><span style="display:flex;"><span>Num_of_Loan                 4348
+</span></span><span style="display:flex;"><span>Type_of_Loan               11408
+</span></span><span style="display:flex;"><span>Num_of_Delayed_Payment      7002
+</span></span><span style="display:flex;"><span>Changed_Credit_Limit        2091
+</span></span><span style="display:flex;"><span>Num_Credit_Inquiries        1965
+</span></span><span style="display:flex;"><span>Credit_Mix                 20195
+</span></span><span style="display:flex;"><span>Credit_History_Age          9030
+</span></span><span style="display:flex;"><span>Payment_of_Min_Amount      12007
+</span></span><span style="display:flex;"><span>Amount_invested_monthly     8784
+</span></span><span style="display:flex;"><span>Payment_Behaviour           7600
+</span></span><span style="display:flex;"><span>Monthly_Balance             1200
+</span></span><span style="display:flex;"><span>dtype: int64
+</span></span></code></pre></div><p>Instead of just dropping all these null values I first try to fill them using the information I already have. Remember that I said that a customer has historical data for 8 months? We can just use this historical data to fill the null values using an aggregation measurement of our choice filtering for the customer, this will be more accurate than just calculating the mean value of the database.</p>
+<p>I decided to use the average values for the following columns:</p>
+<div class="highlight"><pre tabindex="0" style="color:#f8f8f2;background-color:#272822;-moz-tab-size:4;-o-tab-size:4;tab-size:4;"><code class="language-python" data-lang="python"><span style="display:flex;"><span>mean_columns <span style="color:#f92672">=</span> [
+</span></span><span style="display:flex;"><span>    <span style="color:#e6db74">&#39;Num_of_Delayed_Payment&#39;</span>, <span style="color:#e6db74">&#39;Changed_Credit_Limit&#39;</span>, <span style="color:#e6db74">&#39;Num_Credit_Inquiries&#39;</span>,
+</span></span><span style="display:flex;"><span>    <span style="color:#e6db74">&#39;Amount_invested_monthly&#39;</span>, <span style="color:#e6db74">&#39;Monthly_Balance&#39;</span>, <span style="color:#e6db74">&#39;Num_of_Loan&#39;</span>,
+</span></span><span style="display:flex;"><span>    <span style="color:#e6db74">&#39;Num_Credit_Card&#39;</span>, <span style="color:#e6db74">&#39;Interest_Rate&#39;</span>, <span style="color:#e6db74">&#39;Annual_Income&#39;</span>, <span style="color:#e6db74">&#39;Monthly_Inhand_Salary&#39;</span>
+</span></span><span style="display:flex;"><span>    ]
+</span></span></code></pre></div><p>And the last non-empty value for these:</p>
+<div class="highlight"><pre tabindex="0" style="color:#f8f8f2;background-color:#272822;-moz-tab-size:4;-o-tab-size:4;tab-size:4;"><code class="language-python" data-lang="python"><span style="display:flex;"><span>last_columns <span style="color:#f92672">=</span> [<span style="color:#e6db74">&#39;Age&#39;</span>, <span style="color:#e6db74">&#39;Occupation&#39;</span>, <span style="color:#e6db74">&#39;Type_of_Loan&#39;</span>, <span style="color:#e6db74">&#39;Credit_Mix&#39;</span>]
+</span></span></code></pre></div><p>The reason for not using the mean for all my values is that I didn&rsquo;t want to have someone be 20.5 years old and <code>Occupation</code>, <code>Type_of_Loan</code>, and <code>Credit_Mix</code> are discrete data.</p>
+<h2 id="feature-engineering">Feature Engineering</h2>
+<p>With the clean data, we can proceed to feature engineering. In this case, we first want to change the <code>Type_of_Loan</code>, because that are some occurrences that it has all the loans in one value, as you can see:</p>
+<div class="highlight"><pre tabindex="0" style="color:#f8f8f2;background-color:#272822;-moz-tab-size:4;-o-tab-size:4;tab-size:4;"><code class="language-txt" data-lang="txt"><span style="display:flex;"><span>Not Specified, Mortgage Loan, Auto Loan, and Payday Loan                                                                                         8
+</span></span><span style="display:flex;"><span>Payday Loan, Mortgage Loan, Debt Consolidation Loan, and Student Loan                                                                            8
+</span></span><span style="display:flex;"><span>Debt Consolidation Loan, Auto Loan, Personal Loan, Debt Consolidation Loan, Student Loan, and Credit-Builder Loan                                8
+</span></span><span style="display:flex;"><span>Student Loan, Auto Loan, Student Loan, Credit-Builder Loan, Home Equity Loan, Debt Consolidation Loan, and Debt Consolidation Loan               8
+</span></span><span style="display:flex;"><span>Personal Loan, Auto Loan, Mortgage Loan, Student Loan, and Student Loan                                                                          8
+</span></span><span style="display:flex;"><span>Name: Type_of_Loan, Length: 5380, dtype: int64
+</span></span></code></pre></div><p>So I&rsquo;ll save all the different loan types in one vector, by splitting the loans every time there is a <code>,</code> or <code>, and</code>.</p>
+<div class="highlight"><pre tabindex="0" style="color:#f8f8f2;background-color:#272822;-moz-tab-size:4;-o-tab-size:4;tab-size:4;"><code class="language-python" data-lang="python"><span style="display:flex;"><span>loan_types <span style="color:#f92672">=</span> []
+</span></span><span style="display:flex;"><span><span style="color:#66d9ef">for</span> index <span style="color:#f92672">in</span> df<span style="color:#f92672">.</span>index:
+</span></span><span style="display:flex;"><span>    temp <span style="color:#f92672">=</span> df<span style="color:#f92672">.</span>Type_of_Loan[index]<span style="color:#f92672">.</span>replace(<span style="color:#e6db74">&#39;and &#39;</span>, <span style="color:#e6db74">&#39;&#39;</span>)<span style="color:#f92672">.</span>split(<span style="color:#e6db74">&#39;, &#39;</span>)
+</span></span><span style="display:flex;"><span>    <span style="color:#66d9ef">for</span> i <span style="color:#f92672">in</span> temp: <span style="color:#75715e">#loan in temp array</span>
+</span></span><span style="display:flex;"><span>        <span style="color:#66d9ef">if</span> i <span style="color:#f92672">not</span> <span style="color:#f92672">in</span> loan_types: <span style="color:#75715e">#if loan is not in loan_types</span>
+</span></span><span style="display:flex;"><span>            loan_types<span style="color:#f92672">.</span>append(i) <span style="color:#75715e">#add it</span>
+</span></span></code></pre></div><p>Now we can create dummy variables of these <code>loan_types</code>, so a customer will receive the number 1 if they have this loan or a 0 if they don&rsquo;t.</p>
+<div class="highlight"><pre tabindex="0" style="color:#f8f8f2;background-color:#272822;-moz-tab-size:4;-o-tab-size:4;tab-size:4;"><code class="language-python" data-lang="python"><span style="display:flex;"><span><span style="color:#66d9ef">for</span> loan <span style="color:#f92672">in</span> loan_types:
+</span></span><span style="display:flex;"><span>    df[loan] <span style="color:#f92672">=</span> <span style="color:#ae81ff">0</span> <span style="color:#75715e">#create the loan column in the df with 0</span>
+</span></span><span style="display:flex;"><span>    <span style="color:#66d9ef">for</span> index <span style="color:#f92672">in</span> df<span style="color:#f92672">.</span>index:
+</span></span><span style="display:flex;"><span>        temp <span style="color:#f92672">=</span> df<span style="color:#f92672">.</span>Type_of_Loan[index]<span style="color:#f92672">.</span>replace(<span style="color:#e6db74">&#39;and &#39;</span>, <span style="color:#e6db74">&#39;&#39;</span>)<span style="color:#f92672">.</span>split(<span style="color:#e6db74">&#39;, &#39;</span>)
+</span></span><span style="display:flex;"><span>        <span style="color:#66d9ef">if</span> loan <span style="color:#f92672">in</span> temp:
+</span></span><span style="display:flex;"><span>            df<span style="color:#f92672">.</span>loc[index, loan] <span style="color:#f92672">=</span> <span style="color:#ae81ff">1</span>
+</span></span></code></pre></div><p>Now I want to keep working on this dataset to make it ready for training a machine learning model. For this reason, I need to transform my discrete data into numeric.</p>
+<p>The feature <code>Credit_History_Age</code> has the values as strings &ldquo;22 Years and 5 Months&rdquo;, this pattern repeats itself, so we can take advantage of this and select the year multiplied by 12 and sum the month, resulting in a new feature with the credit history age in months. When we are done with this, there are still going to be null values, to fill them I choose to interpolate the values, this works great when the missing value is in February up until July because it interpolates with the customer&rsquo;s credit history age, but it becomes a bad guessed when the missing value is in January or August.</p>
+<p>The months&rsquo; names are going to be replaced by their number counterpart, so January is 1, February is 2, and so on. <code>credit_mix</code> and <code>credit_score</code> have 3 sequential categories, I choose to go with -1, 0, and 1, but you can use 1, 2, 3 and it&rsquo;ll produce the same result.</p>
+<p>Don&rsquo;t forget to check the GitHub <a href="https://github.com/devmedeiros/credit-score-classification-app/tree/main/">Repository</a> for the complete code mentioned here and the cleaned dataset.</p>
+]]></content:encoded>
     </item>
     
   </channel>

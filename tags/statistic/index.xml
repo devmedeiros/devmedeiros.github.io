@@ -18,6 +18,18 @@
       
       <guid>https://devmedeiros.com/post/2022-04-12-comprehending-the-p-value/</guid>
       <description>P-value definition, how to use it, and interpreting the measurement</description>
+      <content:encoded><![CDATA[<h2 id="what-is-the-p-value">What is the p-value?</h2>
+<p>In statistics, we have hypothesis tests, which are made to decide whether to reject or <em>not</em> reject the null hypothesis. Some examples of hypothesis testing are Neyman-Pearson, Shapiro-Wilk, Student&rsquo;s T-test, and others.</p>
+<p>All hypothesis tests have a test statistic specific to them. And this statistic is used to evaluate the test, but this task can be tiring even with the use of computers because most software does not return the comparison statistic as an output, only the sample statistic. In this case, the p-value comes to facilitate this comparison, as it is already a representation of this test statistic. It represents the probability of obtaining a test statistic equal to or more extreme than the one calculated in your sample, considering the null hypothesis to be true.</p>
+<p>This makes it easier because by knowing the confidence level that you want to test your hypothesis, you just need to compare if the p-value is smaller or greater than your confidence level, while if you were to use the test statistic it would still be necessary to calculate the statistic for each different confidence level than you would compare. So suppose you want to compare 1%, 5%, and 10%, you would have to calculate three different test statistics to compare your sample statistic.</p>
+<h2 id="how-to-use-it">How to use it?</h2>
+<p>It is very common when we are learning statistics on our own, to read that if the p-value is less than 5% we reject the hypothesis or that if it is higher we &ldquo;accept&rdquo; the hypothesis.</p>
+<p>The value with which we compare the p-value must be defined together with people from the business area you are working with, it is very common in some sectors to use a very small p-value such as 1% or even 0.1% and in others use values ​​greater than 5%.</p>
+<p>Note that a p-value of 0.02 would be rejected if we consider <code>α = 1%</code>, but not if <code>α = 5%</code>. When in doubt about which one to use, it is first recommended to make this decision before taking the test. Second, keep in mind that an <code>α = 1%</code> will have a confidence of <code>99% (1-α)</code>, whereas if it were 5% it would be <del>only</del> 95%. It might seem like it&rsquo;s best to take the value that gives you the most &ldquo;confidence&rdquo;, but a very small p-value can lead to more rejections of your hypothesis.</p>
+<p>The truth is that hypothesis tests only give us the rejection information, when a null hypothesis is not rejected, it means that no evidence was found that contradicts what it claims, it does not mean that we have proved it to be correct. So you have to be very careful when using the p-value.</p>
+<h2 id="interpreting-the-measure">Interpreting the measure</h2>
+<p>A very common way of interpreting the measure is <em>&ldquo;The null hypothesis is rejected, with α% confidence&rdquo;</em>, in the case of rejection (where the <code>p-value &gt; α</code>) and the case of <em>no</em> rejection (<code>p-value &lt; α</code>) <em>&ldquo;Not enough evidence was found to reject the null hypothesis, with α% confidence&rdquo;</em>.</p>
+]]></content:encoded>
     </item>
     
     <item>
@@ -27,6 +39,115 @@
       
       <guid>https://devmedeiros.com/post/2021-11-02-sql-california-traffic/</guid>
       <description>Using SQL to analyze if COVID impacted California Traffic Collisions</description>
+      <content:encoded><![CDATA[<h2 id="introduction">Introduction</h2>
+<p>COVID-19 has changed many things in our day-to-day life, from ordering more delivery, working from home, or even just getting a new pet. And now I want to see if it has impacted traffic crashes in California. The dataset that I’ll be using comes from Kaggle. It covers collisions from January 2001 up to December 2020 from California. <sup id="fnref:1"><a href="#fn:1" class="footnote-ref" role="doc-noteref">1</a></sup> The following are the tables present in the dataset:</p>
+<ul>
+<li>case_id</li>
+<li>collisions</li>
+<li>parties</li>
+<li>victims</li>
+</ul>
+<p>The <strong>case_id</strong> contains the <em>case_id</em> and <em>db_year</em>. The <strong>collisions</strong> table contains all the information about each collision. While the <strong>parties</strong> table contains information about all the parties involved in the collisions, in this case, parties can be drivers, pedestrians, cyclists, and parked vehicles. The <strong>victims</strong> table contain information about all the victims, it also includes passengers.</p>
+<p>To answer if the pandemic has impacted the collisions I need to separate my data. Knowing that the first case of COVID was on January 26, 2020, in California. <sup id="fnref:2"><a href="#fn:2" class="footnote-ref" role="doc-noteref">2</a></sup> I’ll be separating the dataset as before COVID for every crash that happened before the first case and after COVID for every crash on the same day and forward.</p>
+<p>To compare <em>before COVID</em> and <em>after COVID</em> I’ll looking at a couple of things, <strong>Proportion of DUIs</strong> and <strong>Fatality of Crashes</strong>.</p>
+<p>To do this I’ll be querying the database with SQLite through R. For the complete code go to my GitHub <a href="https://github.com/devmedeiros/california-traffic-collisions">repo</a>.</p>
+<h2 id="proportion-of-duis">Proportion of DUIs</h2>
+<p>Alcohol use has changed in the US during the pandemic <sup id="fnref:3"><a href="#fn:3" class="footnote-ref" role="doc-noteref">3</a></sup> and with all the lockdowns and working from home we may wonder if this alcohol use has caused more crashes or not. With this in mind we take a look at our data about California.</p>
+<p>As we can see from the following table, the percentages before and after COVID are very similar. Only <strong>7.3%</strong> and <strong>8.96%</strong> of violations occurred from DUIs.</p>
+<table>
+<thead>
+<tr>
+<th></th>
+<th style="text-align:right">Before COVID</th>
+<th style="text-align:right"></th>
+<th style="text-align:right">After COVID</th>
+<th style="text-align:right"></th>
+</tr>
+</thead>
+<tbody>
+<tr>
+<td>Violation</td>
+<td style="text-align:right">Qnty</td>
+<td style="text-align:right">Perc</td>
+<td style="text-align:right">Qnty</td>
+<td style="text-align:right">Perc</td>
+</tr>
+<tr>
+<td>DUI</td>
+<td style="text-align:right">653467</td>
+<td style="text-align:right">7.3</td>
+<td style="text-align:right">42169</td>
+<td style="text-align:right">8.96</td>
+</tr>
+<tr>
+<td>Other</td>
+<td style="text-align:right">8300399</td>
+<td style="text-align:right">92.7</td>
+<td style="text-align:right">428299</td>
+<td style="text-align:right">91.04</td>
+</tr>
+</tbody>
+</table>
+<h2 id="fatality-of-crashes">Fatality of Crashes</h2>
+<p>Moving on to our next task, to see if crashes after COVID became more or less fatal. The analysis is going to look at how many people died from collisions, how many got some injury, and no injury at all.</p>
+<p>Looking at the table below you can see that the percentage of collisions that resulted in someone dying was <strong>0.74%</strong> before the pandemic and is now <strong>1.29%</strong>, is not a big difference, but when you look at <em>no injury</em>, you can see that before COVID <strong>45.24%</strong> of collisions didn&rsquo;t result in someone having an injury and after the pandemic, this number drops to <strong>18.57%</strong>. This <em>could</em> indicate some influence of the pandemic, but further research is needed.</p>
+<table>
+<thead>
+<tr>
+<th></th>
+<th style="text-align:right">Before COVID</th>
+<th style="text-align:right"></th>
+<th style="text-align:right">After COVID</th>
+<th style="text-align:right"></th>
+</tr>
+</thead>
+<tbody>
+<tr>
+<td>Degree of Injury</td>
+<td style="text-align:right">Qnty</td>
+<td style="text-align:right">Perc</td>
+<td style="text-align:right">Qnty</td>
+<td style="text-align:right">Perc</td>
+</tr>
+<tr>
+<td>Death</td>
+<td style="text-align:right">68875</td>
+<td style="text-align:right">0.74</td>
+<td style="text-align:right">4131</td>
+<td style="text-align:right">1.29</td>
+</tr>
+<tr>
+<td>Some injury</td>
+<td style="text-align:right">5033610</td>
+<td style="text-align:right">54.02</td>
+<td style="text-align:right">257057</td>
+<td style="text-align:right">80.14</td>
+</tr>
+<tr>
+<td>No injury</td>
+<td style="text-align:right">4216085</td>
+<td style="text-align:right">45.24</td>
+<td style="text-align:right">59576</td>
+<td style="text-align:right">18.57</td>
+</tr>
+</tbody>
+</table>
+<h3 id="references">References</h3>
+<div class="footnotes" role="doc-endnotes">
+<hr>
+<ol>
+<li id="fn:1">
+<p><a href="https://www.kaggle.com/alexgude/california-traffic-collision-data-from-switrs">Alexander Gude and California Highway Patrol, “California Traffic Collision Data from SWITRS.” Kaggle, 2021, doi: 10.34740/KAGGLE/DSV/2569326.</a>&#160;<a href="#fnref:1" class="footnote-backref" role="doc-backlink">&#x21a9;&#xfe0e;</a></p>
+</li>
+<li id="fn:2">
+<p><a href="https://abc7news.com/timeline-of-coronavirus-us-covid-19-bay-area-sf/6047519/">Timeline of Coronavirus US</a>&#160;<a href="#fnref:2" class="footnote-backref" role="doc-backlink">&#x21a9;&#xfe0e;</a></p>
+</li>
+<li id="fn:3">
+<p><a href="https://jamanetwork.com/journals/jamanetworkopen/fullarticle/2770975">Pollard MS, Tucker JS, Green HD. Changes in Adult Alcohol Use and Consequences During the COVID-19 Pandemic in the US. JAMA Netw Open. 2020;3(9):e2022942. doi:10.1001/jamanetworkopen.2020.22942</a>&#160;<a href="#fnref:3" class="footnote-backref" role="doc-backlink">&#x21a9;&#xfe0e;</a></p>
+</li>
+</ol>
+</div>
+]]></content:encoded>
     </item>
     
   </channel>

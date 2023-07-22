@@ -18,6 +18,30 @@
       
       <guid>https://devmedeiros.com/post/anomaly-detection/</guid>
       <description>How can your credit card issuer know if a purchase is made by you or a cloned version of your credit card?</description>
+      <content:encoded><![CDATA[<p>Have you ever had a purchase blocked by your credit card issuer without you taking any action? If this happened to you, your credit card issuer probably had detected that your purchase didn&rsquo;t match your <em>normal spending habit</em>, maybe you were at a different location or spend a lot of money suddenly. Anyway, the credit card company was using <strong>anomaly detection</strong> techniques to prevent fraudulent activities.</p>
+<h2 id="what-is-anomaly-detection">What is Anomaly Detection?</h2>
+<blockquote>
+<p><em>Anomaly detection</em> refers to the problem of finding patterns in data that do not conform to expected behavior. <sup id="fnref:1"><a href="#fn:1" class="footnote-ref" role="doc-noteref">1</a></sup></p>
+</blockquote>
+<p>In statistics there is a famous distribution that is called &ldquo;The Normal Distribution&rdquo;, this name is not in vain. A lot of random things are normally distributed, for instance, if you select 100 random people and measure their height, and made a distribution plot, you&rsquo;d end up with something looking like a symmetrical bell curve.</p>
+<p>Even though abnormal results are possible, it is expected that most people or things will fall within a normal distribution. When something is divergent from this normality it is said to be an outlier or an anomaly.</p>
+<p>When dealing with something like credit card fraud you can create an expectation of a person expanding habits, so if your daily routine consists of waking up and driving to your workplace and buying a coffee, then lunch in New York. Your credit card company would find it weird if you suddenly made a physical purchase in Rio de Janeiro.</p>
+<p>In simple terms, that is what anomaly detection is trying to do, understand how something works so it can identify if it starts acting weird.</p>
+<h2 id="anomaly-detection-x-class-imbalance-in-datasets">Anomaly Detection x Class Imbalance in Datasets</h2>
+<p>If you are aware of what class imbalance is, you may be wondering <em>&ldquo;can&rsquo;t I use anomaly detection to solve this class imbalance problem?&rdquo;</em> - sometimes you can, but it&rsquo;s not appropriate.</p>
+<p>Class imbalance occurs when one class has significantly more samples than the other class(es). This can lead to biased models that favor the majority class and perform poorly on minority classes. While anomaly detection focuses on identifying rare or abnormal data points that deviate significantly from the normal patterns in the dataset.</p>
+<p>Even though it has some overlap on what is trying to do, unless you have a class imbalance problem that the minority class can be considered an abnormal behavior, you won&rsquo;t be able to use anomaly detection.</p>
+<hr>
+<p>I talked about class imbalance before on a churn rate problem in a fictitious telecommunication company, if you are interested you can check it <a href="/post/2022-05-30-churn-rate-challenge/">here</a>.</p>
+<div class="footnotes" role="doc-endnotes">
+<hr>
+<ol>
+<li id="fn:1">
+<p>Chandola, V., Banerjee, A., and Kumar, V. 2009. Anomaly detection: A survey. ACM Comput. Surv. 41, 3, Article 15 (July 2009), 58 pages. DOI = <a href="http://doi.acm.org/10.1145/1541880.1541882">10.1145/1541880.1541882</a>&#160;<a href="#fnref:1" class="footnote-backref" role="doc-backlink">&#x21a9;&#xfe0e;</a></p>
+</li>
+</ol>
+</div>
+]]></content:encoded>
     </item>
     
   </channel>

@@ -18,6 +18,20 @@
       
       <guid>https://devmedeiros.com/pt/post/using-ai-in-your-favor/</guid>
       <description>Uma nova forma de usar ferramentas de inteligência artificial, como ChatGPT, ao seu favor.</description>
+      <content:encoded><![CDATA[<p>Nos últimos meses mais uma vez IA se tornou o assunto do momento. Depois de diversas pesquisas na área de arte usando inteligência artificial agora é a vez da popularização de textos escritos por IA.</p>
+<p>Modelos de aprendizado de máquina já estavam auxiliando as pessoas há muito tempo, como corretores ortográficos, ferramentas que reescrevem um texto para retirar plágio e até ferramentas que fazem de tudo - <em>desde que você saiba como pedir</em>. Ferramentas como o ChatGPT não são novas, apenas explodiram em popularidade recentemente, você com certeza já
+ouviu falar de diversas formas de usar essas ferramentas de inteligência artificial, mas eu quero propor mais <strong>uma</strong> forma em que podemos aproveitar-las.</p>
+<p>Pesquisar coisas na internet pode ser algo difícil, as vezes você precisa de muita informação sobre o que está procurando, o que dificulta a sua jornada. Nesses casos, usar ferramentas de IA pode ser proveitoso. Diferente de buscadores como o Google, ferramentas de inteligência artificial são capazes de entender uma pergunta e lhe responder de forma mais variada sem a necessidade de usar &ldquo;códigos&rdquo; ou filtros especiais, usando apenas <strong>linguagem natural</strong>.</p>
+<hr>
+<p>Recentemente eu estava procurando como encontrar círculos em imagens usando Python. Todos os resultados da primeira página do Google retornaram respostas usando o pacote OpenCV, que é um dos principais pacotes na área de <strong>Processamento Digital de Imagens</strong> (PDI), mas eu queria algo diferente.</p>
+<p>Mesmo alterando os parâmetros das minhas buscas, os buscadores da internet continuaram insistindo em me sugerir páginas com o pacote <code>opencv</code>, mesmo quando eu explicitamente escrevia <em>&ldquo;sem usar opencv&rdquo;</em>, então eu decidi testar o <strong>ChatGPT</strong>. Primeiro eu tentei pedir que ele escrevesse uma função para encontrar círculos.</p>
+<p><img loading="lazy" src="https://i.imgur.com/ZEFy6ls.png#center" alt="uma imagem em inglês escrito: escreva uma função em python que recebe uma imagem e retorna quantos círculos existem na imagem. ela precisa ser capaz de contar quantos círculos há mesmo que eles estejam levemente distorcidos ou com pequenos brilhos. a saída da ferramente é uma amostra de código usando a biblioteca opencv"  />
+</p>
+<p>Ele escreveu uma função que funciona, bem semelhante ao que eu tinha escrito, mas ainda assim usava OpenCV. Então eu decidi ser mais específica e pedir outras formas de fazer isso, ao invés de pedir pelo código.</p>
+<p><img loading="lazy" src="https://i.imgur.com/E9kHjI7.png#center" alt="uma imagem em inglês escrito: há outros métodos, além de opencv para detectar imagens usando python e abaixo a saída da ferramenta citando cinco exemplos"  />
+</p>
+<p>Não sei se todos os métodos citados funcionam ou sequer existem, mas essas respostas me ajudaram a quebrar meu bloqueio de ideias e voltar a progredir no meu projeto. Agora eu posso estudar sobre o <code>scikit-image</code>, que eu não conhecia, e estou podendo testar com outras bibliotecas. Foi muito satisfatório poder encontrar outras formas de resolver um mesmo problema. Assim eu posso garantir que estou explorando vários caminhos diferentes e não fico presa apenas ao que já conheço e uso.</p>
+]]></content:encoded>
     </item>
     
     <item>
@@ -27,6 +41,61 @@
       
       <guid>https://devmedeiros.com/pt/post/2021-10-12-fakenews-sentiment/</guid>
       <description>Análise de Sentimento comparando notícias falsas e notícias reais</description>
+      <content:encoded><![CDATA[<p>Eu quero fazer uma análise de sentimentos usando o R como uma forma de aprender. Com isso em mente começamos carregando todos os pacotes que iremos utilizar.</p>
+<div class="highlight"><pre tabindex="0" style="color:#f8f8f2;background-color:#272822;-moz-tab-size:4;-o-tab-size:4;tab-size:4;"><code class="language-r" data-lang="r"><span style="display:flex;"><span><span style="color:#a6e22e">library</span>(readr)
+</span></span><span style="display:flex;"><span><span style="color:#a6e22e">library</span>(dplyr)
+</span></span><span style="display:flex;"><span><span style="color:#a6e22e">library</span>(tidytext)
+</span></span><span style="display:flex;"><span><span style="color:#a6e22e">library</span>(tokenizers)
+</span></span><span style="display:flex;"><span><span style="color:#a6e22e">library</span>(stopwords)
+</span></span><span style="display:flex;"><span><span style="color:#a6e22e">library</span>(ggplot2)
+</span></span></code></pre></div><p>Então precisamos carregar nosso banco de dados. Esses dados são do  Kaggle <a href="https://www.kaggle.com/clmentbisaillon/fake-and-real-news-dataset"><em>Fake and real news dataset</em></a>.</p>
+<div class="highlight"><pre tabindex="0" style="color:#f8f8f2;background-color:#272822;-moz-tab-size:4;-o-tab-size:4;tab-size:4;"><code class="language-r" data-lang="r"><span style="display:flex;"><span>Fake <span style="color:#f92672">&lt;-</span> <span style="color:#a6e22e">read_csv</span>(<span style="color:#e6db74">&#39;~/fakenews/Fake.csv&#39;</span>)
+</span></span><span style="display:flex;"><span>True <span style="color:#f92672">&lt;-</span> <span style="color:#a6e22e">read.csv</span>(<span style="color:#e6db74">&#39;~/fakenews/True.csv&#39;</span>)
+</span></span></code></pre></div><p>Eu quero unir ambos os dados, mas antes é preciso criar uma nova columa que irá informar de onde os dados vieram.</p>
+<div class="highlight"><pre tabindex="0" style="color:#f8f8f2;background-color:#272822;-moz-tab-size:4;-o-tab-size:4;tab-size:4;"><code class="language-r" data-lang="r"><span style="display:flex;"><span>Fake<span style="color:#f92672">$</span>news <span style="color:#f92672">&lt;-</span> <span style="color:#e6db74">&#39;fake&#39;</span>
+</span></span><span style="display:flex;"><span>True<span style="color:#f92672">$</span>news <span style="color:#f92672">&lt;-</span> <span style="color:#e6db74">&#39;real&#39;</span>
+</span></span><span style="display:flex;"><span>
+</span></span><span style="display:flex;"><span>data <span style="color:#f92672">&lt;-</span> <span style="color:#a6e22e">rbind</span>(Fake,True)
+</span></span></code></pre></div><p>Agora podemos iniciar a limpeza dos dados. Neste primeiro momento, fazemos os tokens nas variáveis <strong>title</strong> e <strong>text</strong>. Em seguida iremos remover as <em>stopwords</em> (palavras redundantes) de acordo com a fonte <em>snowball</em> do pacote <em>stopwords</em>.</p>
+<div class="highlight"><pre tabindex="0" style="color:#f8f8f2;background-color:#272822;-moz-tab-size:4;-o-tab-size:4;tab-size:4;"><code class="language-r" data-lang="r"><span style="display:flex;"><span>title <span style="color:#f92672">&lt;-</span> <span style="color:#a6e22e">tibble</span>(news <span style="color:#f92672">=</span> data<span style="color:#f92672">$</span>news, text <span style="color:#f92672">=</span> data<span style="color:#f92672">$</span>title)
+</span></span><span style="display:flex;"><span>
+</span></span><span style="display:flex;"><span>corpus <span style="color:#f92672">&lt;-</span> <span style="color:#a6e22e">tibble</span>(news <span style="color:#f92672">=</span> data<span style="color:#f92672">$</span>news, corpus <span style="color:#f92672">=</span> data<span style="color:#f92672">$</span>text)
+</span></span><span style="display:flex;"><span>
+</span></span><span style="display:flex;"><span>tidy_title <span style="color:#f92672">&lt;-</span> title <span style="color:#f92672">%&gt;%</span>
+</span></span><span style="display:flex;"><span>  <span style="color:#a6e22e">unnest_tokens</span>(word, text, token <span style="color:#f92672">=</span> <span style="color:#e6db74">&#39;words&#39;</span>) <span style="color:#f92672">%&gt;%</span>
+</span></span><span style="display:flex;"><span>  <span style="color:#a6e22e">filter</span>(<span style="color:#f92672">!</span>(word <span style="color:#f92672">%in%</span> <span style="color:#a6e22e">stopwords</span>(source <span style="color:#f92672">=</span> <span style="color:#e6db74">&#39;snowball&#39;</span>)))
+</span></span><span style="display:flex;"><span>
+</span></span><span style="display:flex;"><span>tidy_corpus <span style="color:#f92672">&lt;-</span> corpus <span style="color:#f92672">%&gt;%</span>
+</span></span><span style="display:flex;"><span>  <span style="color:#a6e22e">unnest_tokens</span>(word, corpus, token <span style="color:#f92672">=</span> <span style="color:#e6db74">&#39;words&#39;</span>) <span style="color:#f92672">%&gt;%</span>
+</span></span><span style="display:flex;"><span>  <span style="color:#a6e22e">filter</span>(<span style="color:#f92672">!</span>(word <span style="color:#f92672">%in%</span> <span style="color:#a6e22e">stopwords</span>(source <span style="color:#f92672">=</span> <span style="color:#e6db74">&#34;snowball&#34;</span>)))
+</span></span></code></pre></div><p>Com os dados limpos podemos selecionar as dez palavras mais frequentes dos títulos das noticias, separado por grupo real ou falso.</p>
+<div class="highlight"><pre tabindex="0" style="color:#f8f8f2;background-color:#272822;-moz-tab-size:4;-o-tab-size:4;tab-size:4;"><code class="language-r" data-lang="r"><span style="display:flex;"><span>p0 <span style="color:#f92672">&lt;-</span> tidy_title <span style="color:#f92672">%&gt;%</span>
+</span></span><span style="display:flex;"><span>  <span style="color:#a6e22e">group_by</span>(news, word) <span style="color:#f92672">%&gt;%</span>
+</span></span><span style="display:flex;"><span>  <span style="color:#a6e22e">summarise</span>(n <span style="color:#f92672">=</span> <span style="color:#a6e22e">n</span>()) <span style="color:#f92672">%&gt;%</span>
+</span></span><span style="display:flex;"><span>  <span style="color:#a6e22e">arrange</span>(<span style="color:#a6e22e">desc</span>(n)) <span style="color:#f92672">%&gt;%</span>
+</span></span><span style="display:flex;"><span>  <span style="color:#a6e22e">slice</span>(<span style="color:#ae81ff">1</span><span style="color:#f92672">:</span><span style="color:#ae81ff">10</span>)
+</span></span></code></pre></div><p>Títulos de notícias falsas mencionam muito mais <em>video</em> e <em>trump</em>, 8477 e 7874, respectivamente. Já no caso de títulos de notícias reais, <em>trump</em> também é uma das palavras mais mencionadas, aparecendo em primeiro com 4883 aparições, seguido por <em>u.s</em> com 4187 e <em>says</em> com 2981.</p>
+<p><img loading="lazy" src="https://ik.imagekit.io/devmedeiros/10_popular_titles_H0dG3ljPN.png?updatedAt=1634083210303" alt="10 most frequent words by fake news titles and real news"  title="Top 10 words by fake news and real news"  />
+</p>
+<p>Agora iremos preparar os dados para a análise de sentimento. Eu estou interessada em classificar os dados em sentimentos de alegria, raiva, medo ou surpresa, por exemplo. Então eu iriei utilizar o os dados de <code>nrc</code> <a href="http://saifmohammad.com/WebPages/NRC-Emotion-Lexicon.htm">Saif Mohammad and Peter Turney</a>.</p>
+<div class="highlight"><pre tabindex="0" style="color:#f8f8f2;background-color:#272822;-moz-tab-size:4;-o-tab-size:4;tab-size:4;"><code class="language-r" data-lang="r"><span style="display:flex;"><span>p1 <span style="color:#f92672">&lt;-</span> tidy_title <span style="color:#f92672">%&gt;%</span>
+</span></span><span style="display:flex;"><span>  <span style="color:#a6e22e">inner_join</span>(<span style="color:#a6e22e">get_sentiments</span>(<span style="color:#e6db74">&#39;nrc&#39;</span>)) <span style="color:#f92672">%&gt;%</span>
+</span></span><span style="display:flex;"><span>  <span style="color:#a6e22e">group_by</span>(sentiment, news) <span style="color:#f92672">%&gt;%</span>
+</span></span><span style="display:flex;"><span>  <span style="color:#a6e22e">summarise</span>(n <span style="color:#f92672">=</span> <span style="color:#a6e22e">n</span>()) <span style="color:#f92672">%&gt;%</span>
+</span></span><span style="display:flex;"><span>  <span style="color:#a6e22e">mutate</span>(prop <span style="color:#f92672">=</span> n<span style="color:#f92672">/</span><span style="color:#a6e22e">sum</span>(n))
+</span></span></code></pre></div><p><img loading="lazy" src="https://ik.imagekit.io/devmedeiros/title_sentiment_lkDe-y_p97.png?updatedAt=1634083978487" alt="sentiment from news titles"  title="Sentiment from news titles"  />
+</p>
+<p><strong>Disgust</strong> (nojo) aparenta ser o sentimento mais comum envolvendo títulos de notícias falsas, enquanto que <strong>trust</strong> (confiança) é o menor, mesmo que ainda seja maior que 50%. Em geral, títulos de notícias falsas aparentam ter mais &ldquo;sentimento&rdquo; do que títulos de notícias reais, neste banco de dados. Isso vale até para sentimentos positivos como <strong>joy</strong> (alegria) e <strong>surprise</strong> (surpresa).</p>
+<div class="highlight"><pre tabindex="0" style="color:#f8f8f2;background-color:#272822;-moz-tab-size:4;-o-tab-size:4;tab-size:4;"><code class="language-r" data-lang="r"><span style="display:flex;"><span>p2 <span style="color:#f92672">&lt;-</span> tidy_corpus <span style="color:#f92672">%&gt;%</span>
+</span></span><span style="display:flex;"><span><span style="color:#a6e22e">inner_join</span>(<span style="color:#a6e22e">get_sentiments</span>(<span style="color:#e6db74">&#39;nrc&#39;</span>)) <span style="color:#f92672">%&gt;%</span>
+</span></span><span style="display:flex;"><span><span style="color:#a6e22e">group_by</span>(sentiment, news) <span style="color:#f92672">%&gt;%</span>
+</span></span><span style="display:flex;"><span><span style="color:#a6e22e">summarise</span>(n <span style="color:#f92672">=</span> <span style="color:#a6e22e">n</span>()) <span style="color:#f92672">%&gt;%</span>
+</span></span><span style="display:flex;"><span><span style="color:#a6e22e">mutate</span>(prop <span style="color:#f92672">=</span> n<span style="color:#f92672">/</span><span style="color:#a6e22e">sum</span>(n))
+</span></span></code></pre></div><p>Para o corpo das notícias reais pode-se notas que os mesmos sentimentos são prevalentes, mas a proporção é menor comparado ao título. Um artigo de notícias falsas perde confiança (<strong>trust</strong>) quando o leitor lê o corpo do artigo. Ele também se torna menos negativo (<strong>negative</strong>) e apresenta menos medo (<strong>fear</strong>)</p>
+<p><img loading="lazy" src="https://ik.imagekit.io/devmedeiros/corpus_sentiment_302EKlTtO.png?updatedAt=1634083978312" alt="sentiment from news text"  title="Sentiment from news corpus text"  />
+</p>
+<p>Uma melhoria que poderia ser feito aqui é tentar construir nosso próprio dicionário de palavras redundantes (<em>stopwords</em>) e alterar a forma que a toneização foi feita. Pois houveram momentos em que <em>trump</em> e <em>trump&rsquo;s</em> não corresponderam a mesma coisa e se estes dados tivessem sido usados para treinar um modelo isso poderia se tornar um problema.</p>
+]]></content:encoded>
     </item>
     
   </channel>

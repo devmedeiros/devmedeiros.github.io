@@ -18,6 +18,171 @@
       
       <guid>https://devmedeiros.com/post/2021-12-28-amazon-top-50-books/</guid>
       <description>Exploratory Data Analysis of Amazon&amp;rsquo;s top 50 bestselling books 2009 - 2019</description>
+      <content:encoded><![CDATA[<p>Recently I finished an Alura course named <em>Python for Data Science</em> and I want to put what I learned into practice, to do so I&rsquo;ll make a descriptive analysis on this dataset <a href="https://www.kaggle.com/sootersaalu/amazon-top-50-bestselling-books-2009-2019"><strong>Amazon Top 50 Bestselling Books 2009 - 2019</strong></a>. It contains 550 books and the data has been categorized as fiction and non-fiction by Goodreads. All of the code can be found <a href="https://gist.github.com/devmedeiros/12813bebd78f7662966096e963ed0aa9">here</a>.</p>
+<p>I started checking the first five observations from the dataset.</p>
+<table>
+<thead>
+<tr>
+<th>Name</th>
+<th>Author</th>
+<th>User Rating</th>
+<th>Reviews</th>
+<th>Price</th>
+<th>Year</th>
+<th>Genre</th>
+</tr>
+</thead>
+<tbody>
+<tr>
+<td>10-Day Green Smoothie Cleanse</td>
+<td>JJ Smith</td>
+<td>4.7</td>
+<td>17350</td>
+<td>8</td>
+<td>2016</td>
+<td>Non Fiction</td>
+</tr>
+<tr>
+<td>11/22/63: A Novel</td>
+<td>Stephen King</td>
+<td>4.6</td>
+<td>2052</td>
+<td>22</td>
+<td>2011</td>
+<td>Fiction</td>
+</tr>
+<tr>
+<td>12 Rules for Life: An Antidote to Chaos</td>
+<td>Jordan B. Peterson</td>
+<td>4.7</td>
+<td>18979</td>
+<td>15</td>
+<td>2018</td>
+<td>Non Fiction</td>
+</tr>
+<tr>
+<td>1984 (Signet Classics)</td>
+<td>George Orwell</td>
+<td>4.7</td>
+<td>21424</td>
+<td>6</td>
+<td>2017</td>
+<td>Fiction</td>
+</tr>
+<tr>
+<td>5,000 Awesome Facts (About Everything!) (Natio&hellip;</td>
+<td>National Geographic Kids</td>
+<td>4.8</td>
+<td>7665</td>
+<td>12</td>
+<td>2019</td>
+<td>Non Fiction</td>
+</tr>
+</tbody>
+</table>
+<p>Here it&rsquo;s possible to see that the data has the <strong>Year</strong> in which the book was on the <em>top 50</em> list, it&rsquo;s <strong>Price</strong>, the average <strong>User Rating</strong>, total <strong>Reviews</strong>, <strong>Author</strong>, <strong>Name</strong> and lastly, <strong>Genre</strong>.</p>
+<p>There are no null values in the dataset. And from 550 books there are 248 unique authors, so let&rsquo;s see which authors have had more books in the top 50 bestselling during this period.</p>
+<table>
+<thead>
+<tr>
+<th>Author</th>
+<th>Number of Books</th>
+</tr>
+</thead>
+<tbody>
+<tr>
+<td>Jeff Kinney</td>
+<td>12</td>
+</tr>
+<tr>
+<td>Gary Chapman</td>
+<td>11</td>
+</tr>
+<tr>
+<td>Rick Riordan</td>
+<td>11</td>
+</tr>
+<tr>
+<td>Suzanne Collins</td>
+<td>11</td>
+</tr>
+<tr>
+<td>American Psychological Association</td>
+<td>10</td>
+</tr>
+<tr>
+<td>Dr. Seuss</td>
+<td>9</td>
+</tr>
+<tr>
+<td>Gallup</td>
+<td>9</td>
+</tr>
+<tr>
+<td>Rob Elliott</td>
+<td>8</td>
+</tr>
+<tr>
+<td>Stephen R. Covey</td>
+<td>7</td>
+</tr>
+<tr>
+<td>Stephenie Meyer</td>
+<td>7</td>
+</tr>
+<tr>
+<td>Dav Pilkey</td>
+<td>7</td>
+</tr>
+<tr>
+<td>Bill O&rsquo;Reilly</td>
+<td>7</td>
+</tr>
+<tr>
+<td>Eric Carle</td>
+<td>7</td>
+</tr>
+</tbody>
+</table>
+<p>The author with more books in the top 50 list was Jeff Kinney, tied at second, with 11 books, was Gary Chapman, Rick Riordan, and Suzanne Collins. Tied at 9th is Stephen R. Covey, Stephenie Meyer, Dav Pilkey, Bill O&rsquo;Reilly, and Eric Carle, with 7 books.</p>
+<p><img loading="lazy" src="https://ik.imagekit.io/devmedeiros/violing_ur_vmTFo02uK.jpg?updatedAt=1640708039606" alt="Violing plot of User Rating"  />
+</p>
+<p>With the violing plot, we can see how the user rating is concentrated and because our data is composed of bestsellers it makes sense that the user rating is mostly concentrated around 4.5 and 4.75.</p>
+<p><img loading="lazy" src="https://ik.imagekit.io/devmedeiros/boxplot_year_reviews_Pa1YGMhj2z1.jpg?updatedAt=1640708039777" alt="Boxplot of Review Count by Year"  />
+</p>
+<p>This boxplot of reviews count by year shows that the variability increases through the years, having its peak at 2014 and gradually stabilizing. We can also see that in the first years, 2010 and 2011, there were more outliers in the data.</p>
+<p>I wanted to look at the user rating and price by book genre. So I calculated these average values.</p>
+<table>
+<thead>
+<tr>
+<th>Genre</th>
+<th>User Rating</th>
+<th>Price</th>
+</tr>
+</thead>
+<tbody>
+<tr>
+<td>Fiction</td>
+<td>4.65</td>
+<td>10.85</td>
+</tr>
+<tr>
+<td>Non Fiction</td>
+<td>4.60</td>
+<td>14.84</td>
+</tr>
+</tbody>
+</table>
+<p>The user rating average by genre seems to be similar just 0.05 difference, but the price has a bigger difference 10.85 for fiction and 14.84 for non-fiction books. To be sure that these differences are statistically significant I&rsquo;ll use the Mann-Whitney test.</p>
+<p>The Mann-Whitney null hypothesis is that the samples have the same distribution, and in both cases, we reject the null hypothesis with a 95% confidence level. The p-value for the price data was 8.34e-08 and the user rating was 1.495e-07.</p>
+<p>To visually show how different their distribution is we can take a look at the following plots.</p>
+<p><img loading="lazy" src="https://ik.imagekit.io/devmedeiros/hist_price_qxT6fxEGQ.jpg?updatedAt=1640708039771" alt="Distribution for Book Price by Genre"  />
+</p>
+<p>The distribution for the price of fiction books is heavily inclined to the left and consistently diminishes as the price goes up. While the non-fiction books price starts high and becomes even higher, 120 and almost 140 occurrences in the first two categories, then it rapidly diminishes.</p>
+<p><img loading="lazy" src="https://ik.imagekit.io/devmedeiros/hist_ur_6YxOQ_Huz.jpg?updatedAt=1640708040024" alt="Distribution for User Rating by Genre"  />
+</p>
+<p>The distribution for the user rating by the fiction genre slowly increases, having its peek at around 4.8. And the distribution of the non-fiction genre has its peak at a little over 4.6.</p>
+]]></content:encoded>
     </item>
     
   </channel>

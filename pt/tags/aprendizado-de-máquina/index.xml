@@ -18,6 +18,35 @@
       
       <guid>https://devmedeiros.com/pt/post/unlocking-machine-learning/</guid>
       <description>Descubra se o uso de aprendizado de máquina é essencial em todos os casos de negócios. Avalie os benefícios e as limitações.</description>
+      <content:encoded><![CDATA[<p>No mundo dos negócios cada vez mais orientado a dados, o aprendizado de máquina ganhou destaque como uma ferramenta poderosa para impulsionar o sucesso dos negócios. No entanto, surge uma questão crucial: o aprendizado de máquina é realmente necessário em todos os casos? Nesta postagem, vamos nos aprofundar nessa discussão, explorando as aplicações, benefícios e limitações do aprendizado de máquina. Além disso, forneceremos critérios úteis para ajudá-lo a decidir se essa abordagem é essencial para o seu negócio.</p>
+<h2 id="o-que-é-aprendizado-de-máquina">O que é Aprendizado de Máquina?</h2>
+<p>Aprendizado de máquina, do inglês <em>Machine Learning</em> (ML) é um termo usado para descrever algoritmos que podem ser modelados para prever ou explicar algo. Você pode criar <em>modelos de aprendizado de máquina</em> que podem prever vendas mensais, rotatividade de clientes (<em>churn</em>), sistemas de recomendação, entre outros.</p>
+<p>Para fazer esses modelos, você precisará de muitos dados, mas não apenas isso. Você vai precisar de bons dados, imparciais e limpos.</p>
+<p>Esses modelos podem ser escritos em várias linguagens de programação diferentes, as mais populares são <strong>Python</strong> e <strong>R</strong>, mas você também pode usar <strong>Julia</strong>, <strong>Scala</strong>, <strong>GO</strong>, e muitos outros.</p>
+<h2 id="usos-de-aprendizado-de-máquina">Usos de Aprendizado de Máquina</h2>
+<h3 id="sistemas-de-recomendação">Sistemas de Recomendação</h3>
+<p>Se você já se perguntou como seu serviço de streaming favorito semmpre tem uma nova música ou programa recomendado para você, isso se deve aos sistemas de recomendação. Eles têm muitos algoritmos diferentes para adivinhar o que um usuários gostaria.</p>
+<p>Um desses algoritmos cria clusters de usuários semelhantes e usa coisas que os outros usuários gostam e recomenda a você. Uma abordagem mais simples, recomendaria apenas os itens mais populares.</p>
+<h3 id="evasão-de-clientes">Evasão de Clientes</h3>
+<p>Esse tipo de modelo é muito popular entre empresas como provedores de internet e bancos. Esses modelos analisam o comportamento do cliente ao interagir como a empresa para tentar identificar o que faz com que um cliente <em>desista</em> de trabalhar com eles.</p>
+<p>É útil para encontrar problemas em uma empresa em relação à experiência do cliente e à qualidade dos serviços prestados.</p>
+<h2 id="os-benefícios-de-aprendizado-de-máquina">Os Benefícios de Aprendizado de Máquina</h2>
+<p>Com Aprendizado de máquina, as empresas podem tomar decisões embasadas sobre seus negócios. Por exemplo, um restaurante pode prever quantas refeições serão encomendadas semanalmente e então comprar ingredientes suficientes para evitar o desperdício de comida; ou uma empresa pode calcular a probabilidade de abandono (churn) de um determinado cliente e então oferecer descontos ou melhoria nos serviços para tentar manter o cliente.</p>
+<p>Esses processos podem ser automatizados e - <em>se o modelo for bem construído</em> - só melhorará com o tempo, aumentando a precisão e a eficiência em geral.</p>
+<h2 id="limitações">Limitações</h2>
+<p>Embora Aprendizado de Máquina seja incrível e às vezes pareça ter saído de um filme de ficção científica, não é uma solução que sirva para todos. Alguns problemas de negócios não possuem dados de qualidade suficientes para construir um modelo e, mesmo quando você os possui, o poder de computação e o conhecimento necessário tornam-no uma ferramenta cara.</p>
+<p>Às vezes você pode chegar a um resultado próximo a um modelo de ML apenas pegando uma média móvel, não é perfeito, mas quando você leva em consideração o investimento e o retorno de ambas as abordagens, pode fazer mais sentido escolher a opção mais barata primeiro, antes de seguir para modelos mais complexos.</p>
+<h2 id="como-se-decidir-se-aprendizado-de-máquina-é-necessário">Como se Decidir se Aprendizado de Máquina é Necessário?</h2>
+<p>Antes de decidir se um modelo de ML é necessário, verifique se você já realizou o seguinte:</p>
+<ul>
+<li>você possui um pipeline de dados de qualidade</li>
+<li>sua empresa é orientada por dados</li>
+<li>você tem orçamento para investir em uma equipe de ciência de dados ou contratar uma empresa para fazer isso</li>
+<li>seu problema pode ser resolvido com ML</li>
+<li>você já testou/experimentou outras opções mais simples</li>
+</ul>
+<p>Essas não são regras escritas em pedra, apenas algo que acho importante ter em mente antes de optar por investir em Aprendizado de Máquina. Você não quer perder tempo trabalhando em algo apenas para desistir porque percebeu que o ML não atende às necessidades do seu negócio ou não oferece resultados extraordinários.</p>
+]]></content:encoded>
     </item>
     
     <item>
@@ -27,6 +56,33 @@
       
       <guid>https://devmedeiros.com/pt/post/credit-score-classification-app/</guid>
       <description>Usando o Streamlit para fazer um aplicativo da web que classifica sua pontuação de crédito usando Python</description>
+      <content:encoded><![CDATA[<h2 id="visão-geral-do-projeto">Visão Geral do Projeto</h2>
+<p>Este projeto mostra um ciclo de vida de ciência de dados, onde eu limpo e preparo o banco de dados, <em>feature engineering</em>, aprendizado de máquina, <em>deploy</em> e visualização de dados.</p>
+<p><img loading="lazy" src="https://ik.imagekit.io/devmedeiros/data-science-cycle_QZwyHaXsP.png?ik-sdk-version=javascript-1.4.3&amp;updatedAt=1659975338736#center" alt="ciclo de ciência de dados deste projeto em um diagrama"  />
+</p>
+<p>O conjunto de dados vem do <a href="https://www.kaggle.com/datasets/parisrohan/credit-score-classification?select=train.csv">kaggle</a>, e possui muitas informações sobre o crédito e os dados bancários de uma pessoa, mas ele também tem muitos erros de digitação, dados ausentes e dados censurados. Este conjunto de dados precisava ser limpo e também precisava de <em>feature engineering</em>, eu precisava alterar algumas <em>features</em>, para que pudessem ser lidos pelo modelo. Assim, quando apresentada com dados categóricos, eu precisava identificar se era ordinal ou nominal, se fosse uma variável ordinal, seria mapeada para números sequenciais, caso contrário, eu faria uma <em>dummy</em>. Para as variáveis ​​_sim_ e <em>não</em> eu escolhi fazer apenas uma <em>dummy</em>, mas para os tipos de empréstimos fiz uma <em>dummy</em> para cada tipo de empréstimo e se alguém não tiver um empréstimo, simplesmente obtém 0 em todos as <em>features</em> de tipo de empréstimo. Eu falo sobre o processo de limpeza e <em>feature engeeniring</em> neste conjunto de dados <a href="/pt/post/data-cleaning-credit-score/">aqui</a>.</p>
+<p>Então eu precisava de um modelo de ML que pudesse prever o score de crédito de uma pessoa com base em algumas <em>features</em>. Para decidir quais <em>features</em> eu iria usar eu analisei quais variáveis são usadas em empresas reais, e eu também escolhi variáveis que eu achei que faziam sentido. Eu acabei escolhendo as seguintes variáveis:</p>
+<ul>
+<li>Idade</li>
+<li>Renda anual</li>
+<li>Quantidade de contas bancárias</li>
+<li>Quantidade de cartões de crédito</li>
+<li>Quantidade de pagamentos atrasados</li>
+<li>Proporção de uso do cartão de crédito</li>
+<li>Quantidade de pagamento de empréstimos</li>
+<li>Idade do histórico de crédito em meses</li>
+<li>Empréstimos</li>
+<li>Perdeu algum pagamento nos últimos 12 meses</li>
+<li>Pagou o valor mínimo em pelo menos um cartão de crédito</li>
+</ul>
+<p>Com as <em>features</em> prontas, eu comecei a trabalhar no modelo, por enquanto eu decidi usar um modelo simples de Floresta Aleatória (Random Forest), eu pretendo melhorar esse modelo, mas nesse primeiro momento eu foquei eu fazer o app do streamlit.</p>
+<p>Depois que terminei o modelo eu serializei ele e o <em>scaler</em> usando o pacote <code>pickle</code>. Para fazer o <em>deploy</em> do modelo e construir a visualização, usei o <a href="https://streamlit.io/">streamlit</a>.</p>
+<p><img loading="lazy" src="https://user-images.githubusercontent.com/33239902/183321842-be97fb04-f00b-4b62-8e6e-2b53d25335a0.gif" alt="um gif mostrando como funciona o aplicativo de score de crédito streamlit"  />
+</p>
+<p>Neste aplicativo, você pode preencher um formulário ou apenas selecionar um dos três perfis padrão fornecidos para ver como o modelo avalia a pontuação de crédito de cada pessoa. Ele também apresenta &ldquo;a certeza&rdquo; do modelo exibindo um gráfico de pizza com a probabilidade (em porcentagem) de cada grupo de score de crédito em que as respostas se encaixam. Ele também mostra o quanto cada recurso conta para sua pontuação de crédito, de acordo com esse modelo. Você pode ver o aplicativo ao vivo <a href="https://devmedeiros-credit-score-classification-appstreamlit-app-fcakrl.streamlitapp.com/">aqui</a>.</p>
+<hr>
+<p>Todo o código está disponível no meu <a href="https://github.com/devmedeiros/credit-score-classification-app">repositório</a> do GitHub. Além do código, lá você encontra a documentação, os dados originais e tratados (todas as etapas do tratamento), todos os requisitos para a construção deste projeto e como executá-lo localmente.</p>
+]]></content:encoded>
     </item>
     
     <item>
@@ -36,6 +92,112 @@
       
       <guid>https://devmedeiros.com/pt/post/2022-05-30-churn-rate-challenge/</guid>
       <description>Alura fez um desafio de quatro semanas &amp;ldquo;Data Science Challenge&amp;rdquo; utilizando um banco desbalanceado da taxa de evasão da empresa Alura Voz</description>
+      <content:encoded><![CDATA[<p>Eu fui desafiada a tomar o papel da nova cientista de dados na Alura Voz. Essa empresa fictícia é do ramo de telecomunicação e precisa reduzir sua taxa de evasão de clientes.</p>
+<p>Esse desafio é dividido em quatro semanas. Para a primeira semana o objetivo é tratar o banco de dados proveniente de uma API. Em seguida, precisamos identificar clientes que são mais propensos a deixar a empresa, usando exploração e análise de dados. E então, na terceira semana, nós usamos modelos de <em>machine learning</em> para prever a taxa de evasão da Alura Voz. A última semana é para expor o que fizemos durante o desafio e construir nosso portfolio. Caso esteja interessado em ver o código, ele está disponível no meu <a href="https://github.com/devmedeiros/Challenge-Data-Science">repositório</a> do GitHub.</p>
+<h2 id="primeira-semana">Primeira Semana</h2>
+<h3 id="lendo-o-banco-de-dados">Lendo o Banco de Dados</h3>
+<p>O banco de dados foi disponibilizado no formato JSON e num primeiro momento aparenta ser um <em>data frame</em> normal.</p>
+<p><img loading="lazy" src="https://raw.githubusercontent.com/devmedeiros/Challenge-Data-Science/main/1%20-%20Data%20Cleaning/table_head.png#center" alt="table head with the first five rows"  />
+</p>
+<p>Entretanto, como pode ser observado, <code>customer</code>, <code>phone</code>, <code>internet</code>, e <code>account</code> são suas próprias tabelas. Então eu normalizei elas separadamente e depois simplesmente concatenei todas essas tabelas em uma.</p>
+<h3 id="dados-faltantes">Dados Faltantes</h3>
+<p>A primeira vez que eu procurei por dados faltantes nessa base nenhum foi encontrado, mas a medida que eu explorei os dados eu percebi que havia espaços em branco e vazios não sendo contados como <code>NaN</code>. Então eu corrigi isso e descobri que havia 224 dados faltantes para a variável <code>Churn</code> e 11 para <code>Charges.Total</code>.</p>
+<p>Eu decidi desconsiderar os dados faltantes da variável <code>Churn</code>, pois este será nosso objeto de estudo e não há sentido em estudar algo que não existe. No caso dos dados faltantes de <code>Charges.Total</code>, eu imagino que representa um cliente que não pagou nada ainda, pois todos eles possuem 0 meses de contrato, ou seja, eles acabaram de se tornar clientes, então eu simplesmente substitui o valor faltante por 0.</p>
+<h3 id="codificação-de-variáveis">Codificação de Variáveis</h3>
+<p>A variável <code>SeniorCitizen</code> foi a única que veio com <code>0</code> e <code>1</code> ao invés de <code>Yes</code> e <code>No</code>. Por hora eu irei trocar esses valores por &ldquo;yes&rdquo; e &ldquo;no&rdquo;, pois isto torna a análise mais simples de ser lida.</p>
+<p><code>Charges.Monthly</code> e <code>Charges.Total</code> foram renomeadas para perderem o ponto, pois isto atrapalha na hora de lidar com elas no <em>python</em>.</p>
+<h2 id="segunda-semana">Segunda Semana</h2>
+<h3 id="análise-de-dados">Análise de Dados</h3>
+<p>No primeiro gráfico podemos ver o quão desbalanceado nosso banco de dados é. Há mais de 5000 clientes que não deixaram a empresa e um pouco menos de 2000 que deixaram.</p>
+<p><img loading="lazy" src="https://raw.githubusercontent.com/devmedeiros/Challenge-Data-Science/main/2%20-%20Data%20Analysis/churn.jpg#center" alt="bar plot with two bars, the first one is for &amp;rsquo;no&amp;rsquo; and the second is for &amp;lsquo;yes&amp;rsquo;, the first bar is over 5000 count and the second one is around 2000"  />
+</p>
+<p>Eu experimentei usar técnicas de sobreamostragem (<em>oversampling</em>) para lidar com esse deslanceamento, mas isto fez com que os modelos de aprendizado de máquina tivessem uma performance pior. E subamostragem (<em>undersampling</em>) não é uma opção com um banco de dados desse tamanho, então eu decidi deixar do jeito que está, e quando for hora de separar os dados de treino e teste eu irei estratificar o banco de acordo com a variável <code>Churn</code>.</p>
+<p>Eu também gerei 16 gráficos para todas as variáveis discretas, para ver todos os gráficos olhe este <a href="https://github.com/devmedeiros/Challenge-Data-Science/blob/main/2%20-%20Data%20Analysis/data_analysis.ipynb">notebook</a>. O objetivo é ver se havia algum comportamento que fazia alguns cliente mais propensos a deixar a empresa. É claro que todas, exceto por <code>gender</code>, parecem ter algum papel em determinar se um cliente vai ou não deixar a empresa. Mais especificamente forma de pagamento, contratos, <em>backup online</em>, suporte técnico, e serviço de internet.</p>
+<p>No gráfico de <code>tenure</code>, eu decidi fazer gráficos de distribuição dos meses de contrato do cliente, um gráfico para os cliente que não evadiram e um para os que evadiram. Podemos ver que clientes que evadiram o fizeram no início do seu tempo na empresa.</p>
+<p><img loading="lazy" src="https://raw.githubusercontent.com/devmedeiros/Challenge-Data-Science/main/2%20-%20Data%20Analysis/tenure.jpg#center" alt="there are two plots side-by-side, in the first one the title is &amp;lsquo;Churn = No&amp;rsquo; the data is along the tenure axis and is in a U shape. the second plot has the title &amp;lsquo;Churn = Yes&amp;rsquo; and starts high and drops fast along the tenure line"  />
+</p>
+<p>A cobrança mensal média para os cliente que não evadiram é de 61,27 unidades monetária, enquanto que clientes que evadiram pagam 74,44. Isso provavelmente é por conta do tipo de contrato que esses tipo de clintes preferem, mas de qualquer forma é senso comum que preços altos afastam clientes.</p>
+<h3 id="o-perfil-de-evasão">O Perfil de Evasão</h3>
+<p><img loading="lazy" src="https://64.media.tumblr.com/tumblr_lojvnhHFH91qlh1s6o1_400.gifv#center" alt="person jumping through the window"  />
+</p>
+<p>Considerando tudo que eu pude observar através de gráficos e medidas, eu fiz um perfil de clientes que são mais propensos a evadir a empresa.</p>
+<ul>
+<li>
+<p>Clientes novos são mais propensos a evadir do que clientes antigos.</p>
+</li>
+<li>
+<p>Clientes com poucos serviços e produtos tendem a deixar a empresa. Se eles não estão presos a um contrato mais longo eles aparentam ser mais propensos a abandonar a empresa.</p>
+</li>
+<li>
+<p>Sobre os meios de pagamentos, cliente que evadem possuem uma preferência <strong>forte</strong> por cheques eletrônicos e usualmente gastam 13,17 unidades monetárias a mais que a média de clientes que não deixaram a empresa.</p>
+</li>
+</ul>
+<h2 id="terceira-semana">Terceira Semana</h2>
+<h3 id="preparando-o-banco-de-dados">Preparando o Banco de Dados</h3>
+<p>Damos início fazendo variáveis <em>dummies</em>, de forma que teremos n-1 <em>dummies</em> para n variáveis. Então fazemos uma matriz de correlação para avaliar a correlação das nossas variáveis.</p>
+<p><img loading="lazy" src="https://raw.githubusercontent.com/devmedeiros/Challenge-Data-Science/main/3%20-%20Model%20Selection/corr_matrix.jpg#center" alt="correlation matrix with all the features"  />
+</p>
+<p>Podemos ver que a variável <code>InternetService_No</code> possui correlações altas com diversas outras variáveis, isso se dá porque as outras variáveis depende do cliente ter ou não acesso a internet. Então irei tirar essas variáveis dependentes do modelo. A mesma coisa ocorre com <code>PhoneService_Yes</code>.</p>
+<p><code>tenure</code> e <code>ChargesTotal</code> também possuem uma alta correlação, mas eu testei rodar os modelos sem uma das duas ou ambas e os modelos tiveram uma performance pior e levaram mais tempo para covergirem, então eu decidi manter elas no modelo, e elas são relevantes para o problema.</p>
+<p>Após retirar essas variáveis eu termino de preparar o banco de dados com uma normalização das variáveis numéricas, <code>ChargesTotal</code> e <code>tenure</code>.</p>
+<h3 id="banco-de-dados-de-teste-e-treino">Banco de Dados de Teste e Treino</h3>
+<p>Eu dividi o banco de dados em treino e teste, 20% para teste e o resto para treino. Eu estratifiquei os dados de acordo com a variável <code>Churn</code> e embaralhei os dados antes de separar. A mesma divisão de dados é usada em todos os modelos. Após separar os dados eu decidi fazer uma sobreamostragem (<em>oversampling</em>) dos dados de <strong>teste</strong> usando SMOTE<sup id="fnref:1"><a href="#fn:1" class="footnote-ref" role="doc-noteref">1</a></sup>, pois os dados são muito desbalanceados. O motivo de eu usar essa técnica apenas nos dados de teste é que eu não quero ter um resultado viesado, se eu sobreamostrar todo o banco de dados isso quer dizer que eu vou testar meu modelo no mesmo dado que eu o treinei, e este não é meu objetivo.</p>
+<h3 id="avaliação-dos-modelos">Avaliação dos Modelos</h3>
+<p>Eu vou utilizar um classificador <em>dummy</em> para ter uma base para a medida de acurácia, e eu também vou utilizar as métricas: <code>precision</code> (precisão), <code>recall</code> (recordação) and <code>f1 score</code> (medida f1)<sup id="fnref:2"><a href="#fn:2" class="footnote-ref" role="doc-noteref">2</a></sup>. Apesar de que o modelo <em>dummy</em> não ter valor para essas métricas eu vou manter ele para comparar a melhora dos modelos.</p>
+<h3 id="modelo-base">Modelo Base</h3>
+<p>O modelo base foi feito através de um classificador <em>dummy</em>, basicamente ele diz que todos os clientes se comportam da mesma forma. Neste caso o modelo chutou que nenhum cliente iria deixar a empresa. Usando essa abordagem o modelo base obteve uma acurácia de <code>0,73456</code>.</p>
+<p>A seguir todos os modelos terão a mesma semente aleatória (<em>random state</em>).</p>
+<h3 id="modelo-1---florestas-aleatórias">Modelo 1 - Florestas Aleatórias</h3>
+<p>Eu inicio usando uma busca no grid com validação cruzada (<em>grid search with cross-validation</em>) para encontrar os melhores parâmetros dentro de uma seleção de opções utilizando o <code>recall</code> como estratégia para avaliar a performance. O melhor modelo encontrado pela busca foi:</p>
+<div class="highlight"><pre tabindex="0" style="color:#f8f8f2;background-color:#272822;-moz-tab-size:4;-o-tab-size:4;tab-size:4;"><code class="language-python" data-lang="python"><span style="display:flex;"><span>RandomForestClassifier(criterion<span style="color:#f92672">=</span><span style="color:#e6db74">&#39;entropy&#39;</span>, max_depth<span style="color:#f92672">=</span><span style="color:#ae81ff">5</span>, max_leaf_nodes<span style="color:#f92672">=</span><span style="color:#ae81ff">70</span>, random_state<span style="color:#f92672">=</span><span style="color:#ae81ff">22</span>)
+</span></span></code></pre></div><p>Após ajustar o modelo, as medidas de avaliação foram:</p>
+<ul>
+<li>Medida Accuracy: 0,72534</li>
+<li>Medida Precision: 0,48922</li>
+<li>Medida Recall: 0,78877</li>
+<li>Medida F1: 0,60389</li>
+</ul>
+<h3 id="modelo-2---classificação-de-vetores-de-suporte-linear">Modelo 2 - Classificação de Vetores de Suporte Linear</h3>
+<p>Neste modelo eu usei os parâmetros padrões e aumentei o teto para o máximo de iterações para <code>900000</code>.</p>
+<div class="highlight"><pre tabindex="0" style="color:#f8f8f2;background-color:#272822;-moz-tab-size:4;-o-tab-size:4;tab-size:4;"><code class="language-python" data-lang="python"><span style="display:flex;"><span>LinearSVC(max_iter<span style="color:#f92672">=</span><span style="color:#ae81ff">900000</span>, random_state<span style="color:#f92672">=</span><span style="color:#ae81ff">22</span>)
+</span></span></code></pre></div><p>Após ajustar o modelo, as medidas de avaliação foram:</p>
+<ul>
+<li>Medida Accuracy: 0,71966</li>
+<li>Medida Precision: 0,48217</li>
+<li>Medida Recall: 0,75936</li>
+<li>Medida F1: 0,58982</li>
+</ul>
+<h3 id="modelo-3---rede-neural-multicamada-perceptron">Modelo 3 - Rede Neural Multicamada Perceptron</h3>
+<p>Aqui eu fixei o solucionador LBFGS, pois de acordo com a documentação do <code>scikit-learn</code> ele tem uma performance melhor em banco de dados pequenos <sup id="fnref:3"><a href="#fn:3" class="footnote-ref" role="doc-noteref">3</a></sup>, e também fiz uma busca no grid com validação cruzada para encontrar o melhor tamanho da camada oculta. O melhor modelo foi:</p>
+<div class="highlight"><pre tabindex="0" style="color:#f8f8f2;background-color:#272822;-moz-tab-size:4;-o-tab-size:4;tab-size:4;"><code class="language-python" data-lang="python"><span style="display:flex;"><span>MLPClassifier(hidden_layer_sizes<span style="color:#f92672">=</span>(<span style="color:#ae81ff">1</span>,), max_iter<span style="color:#f92672">=</span><span style="color:#ae81ff">9999</span>, random_state<span style="color:#f92672">=</span><span style="color:#ae81ff">22</span>, solver<span style="color:#f92672">=</span><span style="color:#e6db74">&#39;lbfgs&#39;</span>)
+</span></span></code></pre></div><p>Após ajustar o modelo, as medidas de avaliação foram:</p>
+<ul>
+<li>Medida Accuracy: 0,72818</li>
+<li>Medida Precision: 0,49133</li>
+<li>Medida Recall: 0,68182</li>
+<li>Medida F1: 0,57111</li>
+</ul>
+<h3 id="conclusão">Conclusão</h3>
+<p>Após rodar os três modelos, todos usando o mesmo <code>random_state</code>. Eu encontrei as seguintes medidas de acurácia e melhorias no desempenho (comparado com o modelo base):</p>
+<p><img loading="lazy" src="https://raw.githubusercontent.com/devmedeiros/Challenge-Data-Science/main/3%20-%20Model%20Selection/results_table.png#center" alt="results table"  />
+</p>
+<p>No fim, a Floresta Aleatória teve as melhores métricas. Este modelo consegue <em>recordar</em> uma grande parte dos clientes que evadem corretamente, ainda não é perfeito, mas já é um ponto de partida. A medida de <em>acurácia</em> não é tão alta como eu gostaria, mas para este problema em particular o objetivo é impedir os clientes de deixar a empresa e é melhor utilizar recursos para manter um cliente que não vai deixar a empresa do que não fazer nada.</p>
+<p>No fim, eu gostei desse desafio, pois é raro eu praticar aprendizado de máquina, mas graças ao desafio eu tive a oportunidade de fazer um pequeno projeto nessa área que é tão importante e relevante. Essa foi a minha primeira vez trabalhando com redes neurais e ajuste de hiperparâmetros, e tenho certeza que na próxima vez terei resultados ainda melhores.</p>
+<div class="footnotes" role="doc-endnotes">
+<hr>
+<ol>
+<li id="fn:1">
+<p><a href="https://imbalanced-learn.org/stable/references/generated/imblearn.over_sampling.SMOTE.html">imbalanced-learn documentation</a>&#160;<a href="#fnref:1" class="footnote-backref" role="doc-backlink">&#x21a9;&#xfe0e;</a></p>
+</li>
+<li id="fn:2">
+<p><a href="https://towardsdatascience.com/accuracy-precision-recall-or-f1-331fb37c5cb9">Accuracy, Precision, Recall or F1? - Koo Ping Shung</a>&#160;<a href="#fnref:2" class="footnote-backref" role="doc-backlink">&#x21a9;&#xfe0e;</a></p>
+</li>
+<li id="fn:3">
+<p><a href="https://scikit-learn.org/stable/modules/generated/sklearn.neural_network.MLPClassifier.html">scikit-learn documentation</a>&#160;<a href="#fnref:3" class="footnote-backref" role="doc-backlink">&#x21a9;&#xfe0e;</a></p>
+</li>
+</ol>
+</div>
+]]></content:encoded>
     </item>
     
   </channel>

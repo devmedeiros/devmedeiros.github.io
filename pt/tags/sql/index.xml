@@ -18,6 +18,86 @@
       
       <guid>https://devmedeiros.com/pt/post/sqlite-database-github-actions/</guid>
       <description>Descubra uma alternativa de graça a computação em nuvem para data scraping com GitHub Actions!</description>
+      <content:encoded><![CDATA[<p>Recentemente eu venho trabalhando com um projeto de raspagem de dados (web scrapping) que trabalha com uma pequena quantidade de dados, tão pequena que eu poderia usar tranquilamente os recursos gratuitos dos serviços de cloud disponíveis, mas eu não gosto de correr o risco de ser cobrada por um projeto pessoal. Para resolver isso eu estive procurando uma alternativa gratuita em que eu também possa compartilhar os dados e que rode com o Github Actions.</p>
+<p>Caso queira checar o repositório que contém o código discutido neste post, siga este <a href="https://github.com/devmedeiros/template-sqlite-actions">link</a>.</p>
+<blockquote>
+<p>Eu vou ilustrar como integrar o banco de dados SQLite com o Github Actions usando Python, mas caso você saiba como modificar um arquivo usando outra linguagem de programação esse post ainda é relevante para você.</p>
+</blockquote>
+<h2 id="escrevendo-seu-gerador-de-dadosscrapper">Escrevendo seu Gerador de Dados/Scrapper</h2>
+<p>Primeiro, seu projeto precisa estar em um repositório, no meu caso estou usando o Github. Eu escrevi um código Python que faz uma raspagem de dados numa página web e salva esses dados num banco SQLite, nesse exemplo vou ilustrar isso com um código mais simples.</p>
+<div class="highlight"><pre tabindex="0" style="color:#f8f8f2;background-color:#272822;-moz-tab-size:4;-o-tab-size:4;tab-size:4;"><code class="language-python" data-lang="python"><span style="display:flex;"><span><span style="color:#75715e"># Importe as bibliotecas</span>
+</span></span><span style="display:flex;"><span><span style="color:#f92672">import</span> pandas <span style="color:#66d9ef">as</span> pd
+</span></span><span style="display:flex;"><span><span style="color:#f92672">import</span> random
+</span></span><span style="display:flex;"><span><span style="color:#f92672">from</span> sqlalchemy <span style="color:#f92672">import</span> create_engine
+</span></span><span style="display:flex;"><span><span style="color:#f92672">from</span> datetime <span style="color:#f92672">import</span> datetime
+</span></span><span style="display:flex;"><span>
+</span></span><span style="display:flex;"><span><span style="color:#75715e"># Crie os dados aleatórios</span>
+</span></span><span style="display:flex;"><span>people <span style="color:#f92672">=</span> [<span style="color:#e6db74">&#39;Ana&#39;</span>, <span style="color:#e6db74">&#39;Bob&#39;</span>, <span style="color:#e6db74">&#39;Charles&#39;</span>, <span style="color:#e6db74">&#39;Daiana&#39;</span>]
+</span></span><span style="display:flex;"><span>values <span style="color:#f92672">=</span> [random<span style="color:#f92672">.</span>random(), random<span style="color:#f92672">.</span>random(), random<span style="color:#f92672">.</span>random(), random<span style="color:#f92672">.</span>random()]
+</span></span><span style="display:flex;"><span>
+</span></span><span style="display:flex;"><span><span style="color:#75715e"># Crie uma conexão com o banco de dados</span>
+</span></span><span style="display:flex;"><span>engine <span style="color:#f92672">=</span> create_engine(<span style="color:#e6db74">&#39;sqlite:///data.db&#39;</span>)
+</span></span><span style="display:flex;"><span>
+</span></span><span style="display:flex;"><span><span style="color:#75715e"># Crie o data frame</span>
+</span></span><span style="display:flex;"><span>data <span style="color:#f92672">=</span> pd<span style="color:#f92672">.</span>DataFrame({<span style="color:#e6db74">&#39;people&#39;</span>: people, <span style="color:#e6db74">&#39;values&#39;</span>: values, <span style="color:#e6db74">&#39;load_date&#39;</span>: datetime<span style="color:#f92672">.</span>now()})
+</span></span><span style="display:flex;"><span>
+</span></span><span style="display:flex;"><span><span style="color:#75715e"># Salve o data frame</span>
+</span></span><span style="display:flex;"><span>data<span style="color:#f92672">.</span>to_sql(<span style="color:#e6db74">&#39;data&#39;</span>, if_exists<span style="color:#f92672">=</span><span style="color:#e6db74">&#39;append&#39;</span>, con<span style="color:#f92672">=</span>engine, index<span style="color:#f92672">=</span><span style="color:#66d9ef">False</span>)
+</span></span></code></pre></div><h2 id="configurando-o-workflow">Configurando o Workflow</h2>
+<p>Se você rodar o código acima diversas vezes numa máquina local ele irá funcionar, mas você irá notar que no Github ele não irá persistir as mudanças, isso é porque é necessário fazer um commit. Para fazer isso você precisará criar um workflow, no seu repositório crie um arquivo yaml na pasta <code>.github/workflow</code>. Esse arquivo será o seu workflow, você pode escolher qualquer nome que quiser.</p>
+<div class="highlight"><pre tabindex="0" style="color:#f8f8f2;background-color:#272822;-moz-tab-size:4;-o-tab-size:4;tab-size:4;"><code class="language-yaml" data-lang="yaml"><span style="display:flex;"><span><span style="color:#75715e"># dê um nome para o workflow</span>
+</span></span><span style="display:flex;"><span><span style="color:#f92672">name</span>: <span style="color:#ae81ff">random data</span>
+</span></span><span style="display:flex;"><span>
+</span></span><span style="display:flex;"><span><span style="color:#75715e"># defina a frequência que ele irá rodar</span>
+</span></span><span style="display:flex;"><span><span style="color:#f92672">on</span>:
+</span></span><span style="display:flex;"><span>  <span style="color:#f92672">schedule</span>:
+</span></span><span style="display:flex;"><span>    - <span style="color:#f92672">cron</span>: <span style="color:#e6db74">&#34;0 * * * *&#34;</span> <span style="color:#75715e"># a cada hora</span>
+</span></span><span style="display:flex;"><span>  <span style="color:#f92672">workflow_dispatch</span>:
+</span></span><span style="display:flex;"><span>
+</span></span><span style="display:flex;"><span><span style="color:#f92672">env</span>:
+</span></span><span style="display:flex;"><span>  <span style="color:#f92672">ACTIONS_ALLOW_UNSECURE_COMMANDS</span>: <span style="color:#66d9ef">true</span>
+</span></span><span style="display:flex;"><span>
+</span></span><span style="display:flex;"><span><span style="color:#75715e"># crie as tarefas/jobs</span>
+</span></span><span style="display:flex;"><span><span style="color:#f92672">jobs</span>:
+</span></span><span style="display:flex;"><span>  <span style="color:#f92672">generate-latest</span>:
+</span></span><span style="display:flex;"><span>    <span style="color:#f92672">runs-on</span>: <span style="color:#ae81ff">ubuntu-latest</span>
+</span></span><span style="display:flex;"><span>
+</span></span><span style="display:flex;"><span>    <span style="color:#f92672">steps</span>:
+</span></span><span style="display:flex;"><span>      - <span style="color:#f92672">name</span>: <span style="color:#ae81ff">Checkout repo</span>
+</span></span><span style="display:flex;"><span>        <span style="color:#f92672">uses</span>: <span style="color:#ae81ff">actions/checkout@v3</span>
+</span></span><span style="display:flex;"><span>
+</span></span><span style="display:flex;"><span>      - <span style="color:#f92672">name</span>: <span style="color:#ae81ff">Set up Python</span>
+</span></span><span style="display:flex;"><span>        <span style="color:#f92672">uses</span>: <span style="color:#ae81ff">actions/setup-python@v4</span>
+</span></span><span style="display:flex;"><span>
+</span></span><span style="display:flex;"><span>        <span style="color:#f92672">with</span>:
+</span></span><span style="display:flex;"><span>          <span style="color:#f92672">python-version</span>: <span style="color:#e6db74">&#39;3.10&#39;</span> <span style="color:#75715e"># fixa o python para a versão 3.10</span>
+</span></span><span style="display:flex;"><span>
+</span></span><span style="display:flex;"><span>      - <span style="color:#f92672">name</span>: <span style="color:#ae81ff">Install requirements</span>
+</span></span><span style="display:flex;"><span>        <span style="color:#f92672">run</span>: <span style="color:#ae81ff">pip3 install -r requirements.txt</span> <span style="color:#75715e"># configura o ambiente</span>
+</span></span><span style="display:flex;"><span>
+</span></span><span style="display:flex;"><span>      - <span style="color:#f92672">name</span>: <span style="color:#ae81ff">Run random data</span>
+</span></span><span style="display:flex;"><span>        <span style="color:#f92672">run</span>: <span style="color:#ae81ff">python main.py</span>
+</span></span><span style="display:flex;"><span>
+</span></span><span style="display:flex;"><span>      - <span style="color:#f92672">name</span>: <span style="color:#ae81ff">Commit changes</span>
+</span></span><span style="display:flex;"><span>        <span style="color:#f92672">run</span>: |<span style="color:#e6db74">
+</span></span></span><span style="display:flex;"><span><span style="color:#e6db74">          git config --global user.name &#34;github-actions&#34;
+</span></span></span><span style="display:flex;"><span><span style="color:#e6db74">          git config --global user.email &#34;action@github.com&#34;
+</span></span></span><span style="display:flex;"><span><span style="color:#e6db74">
+</span></span></span><span style="display:flex;"><span><span style="color:#e6db74">          git add -A
+</span></span></span><span style="display:flex;"><span><span style="color:#e6db74">          git commit -m &#34;add more data&#34;</span>          
+</span></span><span style="display:flex;"><span>      
+</span></span><span style="display:flex;"><span>      - <span style="color:#f92672">name</span>: <span style="color:#ae81ff">Push changes</span>
+</span></span><span style="display:flex;"><span>        <span style="color:#f92672">uses</span>: <span style="color:#ae81ff">ad-m/github-push-action@master</span>
+</span></span><span style="display:flex;"><span>        <span style="color:#f92672">with</span>:
+</span></span><span style="display:flex;"><span>          <span style="color:#f92672">github_token</span>: <span style="color:#ae81ff">${{ secrets.GITHUB_TOKEN }}</span>
+</span></span></code></pre></div><p>Não se esqueça de habilitar as permissões do seu workflow, no seu repositório navegue até <code>Settings &gt; Actions &gt; General</code>, e selecione <strong>Read and write permissions</strong>.</p>
+<p><img loading="lazy" src="https://i.imgur.com/pOym60i.png#center" alt="worflow permissions do site oficial do github"  />
+</p>
+<h2 id="conclusão">Conclusão</h2>
+<p>Essa pode ser uma boa alternativa gratuita caso você queira ser capaz de compartilhar os dados que você está coletando ou gerando. Mas não se esqueça de ficar atento nas limitações do Github quando usando a versão free. Veja os limites de uso atuais no <a href="https://docs.github.com/en/actions/learn-github-actions/usage-limits-billing-and-administration#usage-limits">site oficial</a> deles.</p>
+<hr>
+<p>Caso queira ver uma aplicação real do que foi discutido aqui, você pode checar esse <a href="https://github.com/devmedeiros/nota-fiscal-goiana">respositório</a>. Onde eu implementei um scrapper mensal que coleta os dados e os disponibiliza num banco SQLite para todos.</p>
+]]></content:encoded>
     </item>
     
     <item>
@@ -27,6 +107,17 @@
       
       <guid>https://devmedeiros.com/pt/post/what-is-sql/</guid>
       <description>SQL é sigla para Linguagem de Query Estruturada. Uma linguagem de query é uma linguagem de programação especializada que permite pesquisar e alterar os conteúdos de um banco de dados.</description>
+      <content:encoded><![CDATA[<p>SQL é sigla para Linguagem de Query Estruturada (<em>Structured Query Language</em>). Uma linguagem de query é uma linguagem de programação especializada que permite pesquisar e alterar os conteúdos de um banco de dados.</p>
+<p>Assim como em português, SQL possui diferentes dialetos com palavras chaves especiais. A maioria das palavras chaves de diferentes dialetos são as mesmas, elas compõe o SQL comum, mas existem algumas palavras específicas a alguns bancos de dados como:</p>
+<ul>
+<li>PostgreSQL</li>
+<li>SQL Server</li>
+<li>Oracle SQL</li>
+</ul>
+<p>Quando uma palavra chave é específica de um dialeto, normalmente você consegue encontrar alguma equivalência em outro dialeto. Logo, você pode focar em aprender seu dialeto preferido e quando você precisar usar outro banco de dados, você pode facilmente pesquisar o que você quer no outro dialeto, por exemplo, <code>oracle sql nvl no postgre</code>.</p>
+<h2 id="qual-dialeto-aprender">Qual dialeto aprender?</h2>
+<p>O conhecimento que você adquirir aprendendo qualquer dialeto de SQL é transferível, então você pode escolher qualquer um. Se por acaso você tiver acesso a algum banco de dados, tome proveito dessa oportunidade e aprenda o dialeto dele, mas caso não tenha nenhum contato, escolha qualquer um que achar melhor.</p>
+]]></content:encoded>
     </item>
     
     <item>
@@ -36,6 +127,263 @@
       
       <guid>https://devmedeiros.com/pt/post/case-study-analytics-engineer/</guid>
       <description>Projeto explorando tarefas comuns que um Analytics Engineer faz diariamente.</description>
+      <content:encoded><![CDATA[<h2 id="como-é-trabalhar-como-um-analytics-engineer">Como é trabalhar como um Analytics Engineer?</h2>
+<p>Analytics Engineer refere-se a um profissional de ciência de dados focado em transformar dados em informações de fácil acesso ao usuário final. Eles fornecem relatórios estatísticos e dinâmicos que capacitam a equipe de negócios sem que eles precisem pensar na complexidade por trás da análise de dados.</p>
+<p>Neste estudo de caso, quero falar sobre quais seriam as tarefas comuns que um Analytics Engineer precisaria executar e como eu as conduziria.</p>
+<p>Nesse cenário, o Analytics Engineer trabalha para o Bankio, um banco digital do Brasil. Como a maioria dos bancos digitais no Brasil, o Bankio oferece transferências gratuitas para todas as contas bancárias do país. Também possui muitos produtos como conta de investimento, conta poupança, conta bancária individual, cartão de crédito sem anuidade e muito mais.</p>
+<h3 id="tarefa-1-consulta-sql">Tarefa 1: Consulta SQL</h3>
+<blockquote>
+<p>Um Analista de Negócios (<em>Bussiness Analyst</em>) do Bankio pede sua ajuda para escrever uma consulta SQL para obter todo o saldo mensal da conta entre janeiro de 2020 e dezembro de 2020.</p>
+</blockquote>
+
+
+<p><details >
+  <summary markdown="span">Solução da consulta SQL <em>(clique para expandir)</em></summary>
+  <div class="highlight"><pre tabindex="0" style="color:#f8f8f2;background-color:#272822;-moz-tab-size:4;-o-tab-size:4;tab-size:4;"><code class="language-SQL" data-lang="SQL"><span style="display:flex;"><span><span style="color:#66d9ef">SELECT</span>
+</span></span><span style="display:flex;"><span>  a.<span style="color:#f92672">*</span>,
+</span></span><span style="display:flex;"><span>  <span style="color:#75715e">-- Aqui eu calculo a soma cumulativa do total de depósitos de cada cliente ordenando
+</span></span></span><span style="display:flex;"><span><span style="color:#75715e"></span>  <span style="color:#75715e">-- por mês, se for nulo, altero o valor para 0, então subtraio a soma cumulativa do
+</span></span></span><span style="display:flex;"><span><span style="color:#75715e"></span>  <span style="color:#75715e">-- total de retiradas para cada cliente ordenando por mês, se for nulo, altero o
+</span></span></span><span style="display:flex;"><span><span style="color:#75715e"></span>  <span style="color:#75715e">-- valor para 0 e eu salvo isso como account_monthly_balance
+</span></span></span><span style="display:flex;"><span><span style="color:#75715e"></span>  NVL(<span style="color:#66d9ef">SUM</span>(total_transfer_in) OVER (PARTITION <span style="color:#66d9ef">BY</span> customer_id 
+</span></span><span style="display:flex;"><span><span style="color:#66d9ef">ORDER</span> <span style="color:#66d9ef">BY</span>
+</span></span><span style="display:flex;"><span>  action_month), <span style="color:#ae81ff">0</span>) <span style="color:#f92672">-</span> NVL(<span style="color:#66d9ef">SUM</span>(total_transfer_out) OVER (PARTITION <span style="color:#66d9ef">BY</span> customer_id 
+</span></span><span style="display:flex;"><span><span style="color:#66d9ef">ORDER</span> <span style="color:#66d9ef">BY</span>
+</span></span><span style="display:flex;"><span>  action_month), <span style="color:#ae81ff">0</span>) <span style="color:#66d9ef">AS</span> account_monthly_balance 
+</span></span><span style="display:flex;"><span><span style="color:#66d9ef">FROM</span>
+</span></span><span style="display:flex;"><span>  <span style="color:#75715e">-- subconsulta total de transações de entrada/saída
+</span></span></span><span style="display:flex;"><span><span style="color:#75715e"></span>( 
+</span></span><span style="display:flex;"><span>  <span style="color:#66d9ef">SELECT</span>
+</span></span><span style="display:flex;"><span>    <span style="color:#f92672">*</span> 
+</span></span><span style="display:flex;"><span>  <span style="color:#66d9ef">FROM</span>
+</span></span><span style="display:flex;"><span>    <span style="color:#75715e">-- subconsulta de depósitos totais
+</span></span></span><span style="display:flex;"><span><span style="color:#75715e"></span>( 
+</span></span><span style="display:flex;"><span>    <span style="color:#66d9ef">SELECT</span>
+</span></span><span style="display:flex;"><span>      action_month, customer_id, <span style="color:#66d9ef">SUM</span>(amount) <span style="color:#66d9ef">AS</span> total_transfer_in 
+</span></span><span style="display:flex;"><span>    <span style="color:#66d9ef">FROM</span>
+</span></span><span style="display:flex;"><span>      (
+</span></span><span style="display:flex;"><span>        <span style="color:#66d9ef">SELECT</span>
+</span></span><span style="display:flex;"><span>          <span style="color:#f92672">*</span> 
+</span></span><span style="display:flex;"><span>        <span style="color:#66d9ef">FROM</span>
+</span></span><span style="display:flex;"><span>          <span style="color:#75715e">-- subconsulta de depósitos regulares
+</span></span></span><span style="display:flex;"><span><span style="color:#75715e"></span>( 
+</span></span><span style="display:flex;"><span>          <span style="color:#66d9ef">SELECT</span>
+</span></span><span style="display:flex;"><span>            d_month.action_month, accounts.customer_id, <span style="color:#66d9ef">SUM</span>(transfer_ins.amount) <span style="color:#66d9ef">AS</span> amount 
+</span></span><span style="display:flex;"><span>          <span style="color:#66d9ef">FROM</span>
+</span></span><span style="display:flex;"><span>            d_time 
+</span></span><span style="display:flex;"><span>            <span style="color:#66d9ef">INNER</span> <span style="color:#66d9ef">JOIN</span>
+</span></span><span style="display:flex;"><span>              transfer_ins 
+</span></span><span style="display:flex;"><span>              <span style="color:#66d9ef">ON</span> transfer_ins.transaction_completed_at <span style="color:#f92672">=</span> d_time.time_id 
+</span></span><span style="display:flex;"><span>            <span style="color:#66d9ef">LEFT</span> <span style="color:#66d9ef">JOIN</span>
+</span></span><span style="display:flex;"><span>              d_month <span style="color:#66d9ef">USING</span>(month_id) 
+</span></span><span style="display:flex;"><span>            <span style="color:#66d9ef">LEFT</span> <span style="color:#66d9ef">JOIN</span>
+</span></span><span style="display:flex;"><span>              accounts <span style="color:#66d9ef">USING</span>(account_id) 
+</span></span><span style="display:flex;"><span>          <span style="color:#66d9ef">WHERE</span>
+</span></span><span style="display:flex;"><span>            transfer_ins.status <span style="color:#f92672">=</span> <span style="color:#e6db74">&#39;completed&#39;</span> 
+</span></span><span style="display:flex;"><span>          <span style="color:#66d9ef">GROUP</span> <span style="color:#66d9ef">BY</span>
+</span></span><span style="display:flex;"><span>            d_month.action_month, accounts.customer_id ) transfer_in 
+</span></span><span style="display:flex;"><span>          <span style="color:#66d9ef">UNION</span> <span style="color:#66d9ef">ALL</span>
+</span></span><span style="display:flex;"><span>          <span style="color:#66d9ef">SELECT</span>
+</span></span><span style="display:flex;"><span>            <span style="color:#f92672">*</span> 
+</span></span><span style="display:flex;"><span>          <span style="color:#66d9ef">FROM</span>
+</span></span><span style="display:flex;"><span>            <span style="color:#75715e">-- subconsulta de depósitos pix
+</span></span></span><span style="display:flex;"><span><span style="color:#75715e"></span>( 
+</span></span><span style="display:flex;"><span>            <span style="color:#66d9ef">SELECT</span>
+</span></span><span style="display:flex;"><span>              d_month.action_month, accounts.customer_id, <span style="color:#66d9ef">SUM</span>(pix_movements.pix_amount) <span style="color:#66d9ef">AS</span> amount 
+</span></span><span style="display:flex;"><span>            <span style="color:#66d9ef">FROM</span>
+</span></span><span style="display:flex;"><span>              d_time 
+</span></span><span style="display:flex;"><span>              <span style="color:#66d9ef">INNER</span> <span style="color:#66d9ef">JOIN</span>
+</span></span><span style="display:flex;"><span>                pix_movements 
+</span></span><span style="display:flex;"><span>                <span style="color:#66d9ef">ON</span> pix_movements.pix_completed_at <span style="color:#f92672">=</span> d_time.time_id 
+</span></span><span style="display:flex;"><span>              <span style="color:#66d9ef">LEFT</span> <span style="color:#66d9ef">JOIN</span>
+</span></span><span style="display:flex;"><span>                d_month <span style="color:#66d9ef">USING</span>(month_id) 
+</span></span><span style="display:flex;"><span>              <span style="color:#66d9ef">LEFT</span> <span style="color:#66d9ef">JOIN</span>
+</span></span><span style="display:flex;"><span>                accounts <span style="color:#66d9ef">USING</span>(account_id) 
+</span></span><span style="display:flex;"><span>            <span style="color:#66d9ef">WHERE</span>
+</span></span><span style="display:flex;"><span>              pix_movements.status <span style="color:#f92672">=</span> <span style="color:#e6db74">&#39;completed&#39;</span> 
+</span></span><span style="display:flex;"><span>              <span style="color:#66d9ef">AND</span> pix_movements.in_or_out <span style="color:#f92672">=</span> <span style="color:#e6db74">&#39;pix_in&#39;</span> 
+</span></span><span style="display:flex;"><span>            <span style="color:#66d9ef">GROUP</span> <span style="color:#66d9ef">BY</span>
+</span></span><span style="display:flex;"><span>              d_month.action_month, accounts.customer_id ) 
+</span></span><span style="display:flex;"><span>      )
+</span></span><span style="display:flex;"><span>    <span style="color:#66d9ef">GROUP</span> <span style="color:#66d9ef">BY</span>
+</span></span><span style="display:flex;"><span>      action_month, customer_id ) 
+</span></span><span style="display:flex;"><span>      <span style="color:#66d9ef">FULL</span> <span style="color:#66d9ef">JOIN</span>
+</span></span><span style="display:flex;"><span>        (
+</span></span><span style="display:flex;"><span>          <span style="color:#66d9ef">SELECT</span>
+</span></span><span style="display:flex;"><span>            action_month,
+</span></span><span style="display:flex;"><span>            customer_id,
+</span></span><span style="display:flex;"><span>            <span style="color:#66d9ef">SUM</span>(amount) <span style="color:#66d9ef">AS</span> total_transfer_out 
+</span></span><span style="display:flex;"><span>          <span style="color:#66d9ef">FROM</span>
+</span></span><span style="display:flex;"><span>            <span style="color:#75715e">-- subconsulta de saques totais
+</span></span></span><span style="display:flex;"><span><span style="color:#75715e"></span>( 
+</span></span><span style="display:flex;"><span>            <span style="color:#66d9ef">SELECT</span>
+</span></span><span style="display:flex;"><span>              <span style="color:#f92672">*</span> 
+</span></span><span style="display:flex;"><span>            <span style="color:#66d9ef">FROM</span>
+</span></span><span style="display:flex;"><span>              <span style="color:#75715e">-- subconsulta de retirada regular
+</span></span></span><span style="display:flex;"><span><span style="color:#75715e"></span>( 
+</span></span><span style="display:flex;"><span>              <span style="color:#66d9ef">SELECT</span>
+</span></span><span style="display:flex;"><span>                d_month.action_month, accounts.customer_id, <span style="color:#66d9ef">SUM</span>(transfer_outs.amount) <span style="color:#66d9ef">AS</span> amount 
+</span></span><span style="display:flex;"><span>              <span style="color:#66d9ef">FROM</span>
+</span></span><span style="display:flex;"><span>                d_time 
+</span></span><span style="display:flex;"><span>                <span style="color:#66d9ef">INNER</span> <span style="color:#66d9ef">JOIN</span>
+</span></span><span style="display:flex;"><span>                  transfer_outs 
+</span></span><span style="display:flex;"><span>                  <span style="color:#66d9ef">ON</span> transfer_outs.transaction_completed_at <span style="color:#f92672">=</span> d_time.time_id 
+</span></span><span style="display:flex;"><span>                <span style="color:#66d9ef">LEFT</span> <span style="color:#66d9ef">JOIN</span>
+</span></span><span style="display:flex;"><span>                  d_month <span style="color:#66d9ef">USING</span>(month_id) 
+</span></span><span style="display:flex;"><span>                <span style="color:#66d9ef">LEFT</span> <span style="color:#66d9ef">JOIN</span>
+</span></span><span style="display:flex;"><span>                  accounts <span style="color:#66d9ef">USING</span>(account_id) 
+</span></span><span style="display:flex;"><span>              <span style="color:#66d9ef">WHERE</span>
+</span></span><span style="display:flex;"><span>                transfer_outs.status <span style="color:#f92672">=</span> <span style="color:#e6db74">&#39;completed&#39;</span> 
+</span></span><span style="display:flex;"><span>              <span style="color:#66d9ef">GROUP</span> <span style="color:#66d9ef">BY</span>
+</span></span><span style="display:flex;"><span>                d_month.action_month, accounts.customer_id ) 
+</span></span><span style="display:flex;"><span>              <span style="color:#66d9ef">UNION</span> <span style="color:#66d9ef">ALL</span>
+</span></span><span style="display:flex;"><span>              <span style="color:#66d9ef">SELECT</span>
+</span></span><span style="display:flex;"><span>                <span style="color:#f92672">*</span> 
+</span></span><span style="display:flex;"><span>              <span style="color:#66d9ef">FROM</span>
+</span></span><span style="display:flex;"><span>                <span style="color:#75715e">-- subconsulta de retirada de pix
+</span></span></span><span style="display:flex;"><span><span style="color:#75715e"></span>( 
+</span></span><span style="display:flex;"><span>                <span style="color:#66d9ef">SELECT</span>
+</span></span><span style="display:flex;"><span>                  d_month.action_month, accounts.customer_id, <span style="color:#66d9ef">SUM</span>(pix_movements.pix_amount) <span style="color:#66d9ef">AS</span> amount 
+</span></span><span style="display:flex;"><span>                <span style="color:#66d9ef">FROM</span>
+</span></span><span style="display:flex;"><span>                  d_time 
+</span></span><span style="display:flex;"><span>                  <span style="color:#66d9ef">INNER</span> <span style="color:#66d9ef">JOIN</span>
+</span></span><span style="display:flex;"><span>                    pix_movements 
+</span></span><span style="display:flex;"><span>                    <span style="color:#66d9ef">ON</span> pix_movements.pix_completed_at <span style="color:#f92672">=</span> d_time.time_id 
+</span></span><span style="display:flex;"><span>                  <span style="color:#66d9ef">LEFT</span> <span style="color:#66d9ef">JOIN</span>
+</span></span><span style="display:flex;"><span>                    d_month <span style="color:#66d9ef">USING</span>(month_id) 
+</span></span><span style="display:flex;"><span>                  <span style="color:#66d9ef">LEFT</span> <span style="color:#66d9ef">JOIN</span>
+</span></span><span style="display:flex;"><span>                    accounts <span style="color:#66d9ef">USING</span>(account_id) 
+</span></span><span style="display:flex;"><span>                <span style="color:#66d9ef">WHERE</span>
+</span></span><span style="display:flex;"><span>                  pix_movements.status <span style="color:#f92672">=</span> <span style="color:#e6db74">&#39;completed&#39;</span> 
+</span></span><span style="display:flex;"><span>                  <span style="color:#66d9ef">AND</span> pix_movements.in_or_out <span style="color:#f92672">=</span> <span style="color:#e6db74">&#39;pix_out&#39;</span> 
+</span></span><span style="display:flex;"><span>                <span style="color:#66d9ef">GROUP</span> <span style="color:#66d9ef">BY</span>
+</span></span><span style="display:flex;"><span>                  d_month.action_month, accounts.customer_id ) ) 
+</span></span><span style="display:flex;"><span>                <span style="color:#66d9ef">GROUP</span> <span style="color:#66d9ef">BY</span>
+</span></span><span style="display:flex;"><span>                  action_month,
+</span></span><span style="display:flex;"><span>                  customer_id 
+</span></span><span style="display:flex;"><span>        )
+</span></span><span style="display:flex;"><span>        <span style="color:#66d9ef">USING</span> (action_month, customer_id) ) a;
+</span></span></code></pre></div>
+</details></p>
+
+<h3 id="tarefa-2-indicadores-chaves-de-performance-kpi">Tarefa 2: Indicadores Chaves de Performance (KPI)</h3>
+<figure>
+    <img loading="lazy" src="https://images.unsplash.com/photo-1526628953301-3e589a6a8b74"
+         alt="tela do computador com 8 retângulos preenchidos com indicadores-chave"/> <figcaption>
+            <p>Foto de Stephen Dawson de Unsplash</p>
+        </figcaption>
+</figure>
+
+<blockquote>
+<p>Outro colega do Bankio está interessado em analisar o sucesso do produto <a href="#pix">PIX</a> da empresa em nível comercial e técnico. Então eles pediram que você apresentasse alguns indicadores-chave para medir isso.</p>
+</blockquote>
+
+
+<p><details >
+  <summary markdown="span">Tempo médio de processamento das transações PIX <em>(clique para expandir)</em></summary>
+  Isso pode ser obtido usando o tempo que um cliente solicita uma transação PIX e quando ela é concluída, calculamos isso para todas as transações PIX e, em seguida, fazemos a média. O PIX deve ser instantâneo, portanto, essa métrica deve ser a menor possível.
+</details></p>
+
+
+
+<p><details >
+  <summary markdown="span">A proporção de falhas do PIX <em>(clique para expandir)</em></summary>
+  Este indicador é importante porque é inconveniente para o cliente que sua transação falhe. Podemos calcular isso dividindo a soma das transações PIX com falha pelo total de transações PIX. Esta medida deve ser minimizada.
+</details></p>
+
+
+
+<p><details >
+  <summary markdown="span">A proporção de transações usando PIX <em>(clique para expandir)</em></summary>
+  <p>O sucesso do PIX pode ser medido pela proporção de movimentações usando PIX sobre transações normais. Então, basta contar quantas transações foram concluídas usando o PIX e dividir pelo valor total de transações concluídas. Um valor maior reflete o sucesso do PIX sobre transações regulares.</p>
+<p>Alternativamente, em vez de apenas contar as transações, podemos avaliar quanto dinheiro cada tipo de transação está movimentando.</p>
+
+</details></p>
+
+
+
+<p><details >
+  <summary markdown="span">A proporção de entrada/saída do PIX <em>(clique para expandir)</em></summary>
+  <p>Essa medida é boa para analisar se os clientes estão usando seu PIX mais para receber dinheiro ou para enviar dinheiro. Seria melhor se mais clientes estivessem recebendo mais dinheiro do que enviando. Como o Bankio já tinha transações gratuitas para qualquer banco, antes do PIX aparecer, outros ainda tinham que pagar taxas para enviar dinheiro para sua conta do Bankio. Por esse motivo, é melhor contar quantas transações estão chegando pelo PIX e dividi-las por todas as transações PIX. Quanto mais alto melhor.</p>
+<p>Nesse caso, também podemos somar o saldo de depósitos e saques da conta do Bankio usando o PIX e compará-lo com transações regulares.</p>
+
+</details></p>
+
+<h3 id="tarefa-3-retorno-diário-do-investimento">Tarefa 3: Retorno Diário do Investimento</h3>
+<blockquote>
+<p>O Bankio tem uma conta bancária em que o cliente pode investir num produto de rendimento fixo. Considere que este produto oferece aos clientes um retorno diário de 0,01% de acordo com o valor do saldo diário investido. Calcule quanto cada cliente tem em sua conta bankio durante o ano de 2020.</p>
+</blockquote>
+<p>Este retorno é calculado diariamente após todos os saques e/ou depósitos feitos em um determinado dia. E todos os dias, mesmo finais de semana, geram algum retorno.</p>
+<p>O exemplo a seguir descreve o cliente A que começa a investir nesse produto de renda fixa no dia 16 do primeiro mês. O saldo anterior era zero, pois esse consumidor está fazendo um primeiro depósito no investimento. Seu depósito inicial foi de 1.000 e, no final do dia, produziu a uma taxa de renda diária de 0,01% de seu saldo. O mesmo produto continua sendo consumido por esse cliente em momentos diferentes ao longo do mês. Lembre-se que esta é apenas uma amostra fictícia do log de transações com cálculos diários aplicados. Observe que a receita desse dia deve ser zerada no caso de Movimentos negativos.</p>
+<table>
+<thead>
+<tr>
+<th>Dia</th>
+<th>Mês</th>
+<th>ID Conta</th>
+<th>Depósito</th>
+<th>Retirada</th>
+<th>Renda no final do Dia</th>
+<th>Rendimento Diário da Conta</th>
+</tr>
+</thead>
+<tbody>
+<tr>
+<td>16</td>
+<td>1</td>
+<td>A</td>
+<td>1000</td>
+<td>0</td>
+<td>0,1</td>
+<td>1000,10</td>
+</tr>
+<tr>
+<td>20</td>
+<td>1</td>
+<td>A</td>
+<td>500</td>
+<td>0</td>
+<td>0,15</td>
+<td>1500,55</td>
+</tr>
+<tr>
+<td>2</td>
+<td>2</td>
+<td>A</td>
+<td>0</td>
+<td>200</td>
+<td>0,13</td>
+<td>1302,48</td>
+</tr>
+<tr>
+<td>19</td>
+<td>2</td>
+<td>A</td>
+<td>1000</td>
+<td>200</td>
+<td>0,21</td>
+<td>2104,78</td>
+</tr>
+</tbody>
+</table>
+<p><em>Movimentos = Saldo do dia anterior + Depósito - Retirada</em></p>
+<p><em>Renda no final do dia = Movimentos * Taxa de Renda</em></p>
+<p><em>Saldo Diário da Conta = Movimentos + Renda no Fim do Dia</em></p>
+<script type="application/javascript" src="https://gist.github.com/devmedeiros/2a52cf2c4431a1993a98bf7f36d0f412.js?file=bankio-task-3-pt.ipynb"></script>
+
+<hr>
+<h2 id="glossário">Glossário</h2>
+<h4 id="saldo-mensal-da-conta">Saldo Mensal da Conta</h4>
+<p>É a quantidade de dinheiro que um cliente tinha em sua conta no final de um determinado mês.</p>
+<h4 id="informações-da-conta-agência-número-da-conta-e-dígito-de-verificação">Informações da conta (agência, número da conta e dígito de verificação)</h4>
+<p>No Brasil, uma conta bancária pode ser identificada exclusivamente por três números. O código <strong>agência</strong>, que indica em qual agência bancária as contas foram abertas, vem primeiro. O segundo é o <strong>número da conta</strong> que uma agência usa para identificar contas. O <strong>dígito de verificação</strong>, que é usado apenas para detecção de erros, é o último.</p>
+<h4 id="cpf">CPF</h4>
+<p>É a identificação cadastral do contribuinte individual brasileiro.</p>
+<h4 id="pix">PIX</h4>
+<p>No Brasil, este é o método mais recente de transferência de dinheiro. Não é pago. É imediato, e tudo o que é necessário para concluir uma transação é a chave PIX associada à conta.</p>
+<h4 id="transferências-não-pix">Transferências não PIX</h4>
+<p>Estes são os métodos convencionais para transferir dinheiro entre contas bancárias. Esse tipo de transação exige que sejam fornecidos o CPF, o código da agência, o número da conta e o dígito verificador da conta que receberá os recursos. A maioria dos bancos cobra uma taxa nessas transações, e a confirmação da transação normalmente leva várias horas a dias.</p>
+]]></content:encoded>
     </item>
     
     <item>
@@ -45,6 +393,408 @@
       
       <guid>https://devmedeiros.com/pt/post/alura-challenge-bi-2/</guid>
       <description>Alura ofereceu um desafio de quatro semanas Challenge BI, onde os participantes precisavam fazer 3 dashboards</description>
+      <content:encoded><![CDATA[<p>O Alura Challenge BI 2 foi um evento que durou quatro semanas, no qual nós fomos desafiados a fazer um painél de <em>Business Intelligence</em> com base nos requisitos de três empresas fictícias. Durante o evento eu fiz esses três painés usando o Power BI, você pode ver também os arquivos fontes dos painéis no meu <a href="https://github.com/devmedeiros/Alura-Challenge-BI-2">repositório</a>.</p>
+<br />
+<style>
+	nav {
+		display: block;
+	}
+
+	.nav {
+		display: -ms-flexbox;
+		display: ruby;
+		-ms-flex-wrap: wrap;
+		flex-wrap: wrap;
+		padding-left: 0;
+		margin-bottom: 1em;
+		list-style: none;
+	}
+
+	.nav-tabs .nav-item {
+		margin-bottom: 0;
+	}
+
+	.nav-tabs .nav-link {
+		border: solid #e9ecef;
+		border-top-left-radius: 0.25rem;
+		border-top-right-radius: 0.25rem;
+	}
+
+	.nav-tabs .nav-link:focus,
+	.nav-tabs .nav-link:hover {
+		border-color: #e9ecef #e9ecef #dee2e6;
+	}
+
+	.nav-tabs .nav-link.disabled {
+		color: #6c757d;
+		background-color: transparent;
+		border-color: transparent;
+	}
+
+	.nav-tabs .nav-item.show .nav-link,
+	.nav-tabs .nav-link.active {
+		color: #495057;
+		background-color: #fff;
+		border-color: #dee2e6 #dee2e6 #fff;
+	}
+
+	.nav-fill .nav-item {
+		-ms-flex: 1 1 auto;
+		flex: 1 1 auto;
+		text-align: center;
+	}
+
+	.nav-tabs .dropdown-menu {
+		margin-top: -1px;
+		border-top-left-radius: 0;
+		border-top-right-radius: 0;
+	}
+
+	.nav-justified .nav-item {
+		-ms-flex-preferred-size: 0;
+		flex-basis: 0;
+		-ms-flex-positive: 1;
+		flex-grow: 1;
+		text-align: center;
+	}
+
+	.nav-link {
+		display: block;
+		padding: 0.5rem 1rem;
+	}
+
+	.nav-link:focus,
+	.nav-link:hover {
+		text-decoration: none;
+	}
+
+	.nav-link.disabled {
+		color: #6c757d;
+		pointer-events: none;
+		cursor: default;
+	}
+
+	.nav-tabs .nav-link {
+		border: 1px solid #e9ecef;
+		border-top-left-radius: 0.25rem;
+		border-top-right-radius: 0.25rem;
+	}
+
+	.nav-tabs .nav-link:focus,
+	.nav-tabs .nav-link:hover {
+		border-color: #e9ecef #e9ecef #dee2e6;
+	}
+
+	.nav-tabs .nav-link.disabled {
+		color: #6c757d;
+		background-color: transparent;
+		border-color: transparent;
+	}
+
+	.nav-tabs .nav-item.show .nav-link,
+	.nav-tabs .nav-link.active {
+		color: black;
+		background-color: #F5F5F5;
+		border-color: #dee2e6 #dee2e6 #fff;
+	}
+
+	.nav-pills .nav-link {
+		border-radius: 0.25rem;
+	}
+
+	.nav-pills .nav-link.active,
+	.nav-pills .show>.nav-link {
+		color: #fff;
+		background-color: #007bff;
+	}
+
+	.navbar-nav .nav-link {
+		padding-right: 0;
+		padding-left: 0;
+	}
+
+	.navbar-expand .navbar-nav .nav-link {
+		padding-right: 0.5rem;
+		padding-left: 0.5rem;
+	}
+
+	.navbar-light .navbar-nav .nav-link {
+		color: rgba(0, 0, 0, 0.5);
+	}
+
+	.navbar-light .navbar-nav .nav-link:focus,
+	.navbar-light .navbar-nav .nav-link:hover {
+		color: rgba(0, 0, 0, 0.7);
+	}
+
+	.navbar-light .navbar-nav .nav-link.disabled {
+		color: rgba(0, 0, 0, 0.3);
+	}
+
+	.navbar-light .navbar-nav .active>.nav-link,
+	.navbar-light .navbar-nav .nav-link.active,
+	.navbar-light .navbar-nav .nav-link.show,
+	.navbar-light .navbar-nav .show>.nav-link {
+		color: rgba(0, 0, 0, 0.9);
+	}
+
+	.navbar-dark .navbar-nav .nav-link {
+		color: rgba(255, 255, 255, 0.5);
+	}
+
+	.navbar-dark .navbar-nav .nav-link:focus,
+	.navbar-dark .navbar-nav .nav-link:hover {
+		color: rgba(255, 255, 255, 0.75);
+	}
+
+	.navbar-dark .navbar-nav .nav-link.disabled {
+		color: rgba(255, 255, 255, 0.25);
+	}
+
+	.navbar-dark .navbar-nav .active>.nav-link,
+	.navbar-dark .navbar-nav .nav-link.active,
+	.navbar-dark .navbar-nav .nav-link.show,
+	.navbar-dark .navbar-nav .show>.nav-link {
+		color: #fff;
+	}
+</style>
+
+<nav>
+	<div class="nav nav-tabs" id="nav-tab" role="tablist">
+
+		
+		
+		
+		
+
+		
+
+		<a class="nav-item nav-link  active "
+		   id="nav-fdaecb" data-toggle="tab" href="#fdaecb"
+		   role="tab" aria-controls="nav-home" aria-selected="true">Alura Films</a>
+
+		
+
+		<a class="nav-item nav-link "
+		   id="nav-deacfb" data-toggle="tab" href="#deacfb"
+		   role="tab" aria-controls="nav-home" aria-selected="true">Alura Food</a>
+
+		
+
+		<a class="nav-item nav-link "
+		   id="nav-ebdfca" data-toggle="tab" href="#ebdfca"
+		   role="tab" aria-controls="nav-home" aria-selected="true">Alura Skimó</a>
+
+		
+
+	</div>
+</nav>
+
+<div class="tab-content" id="nav-tab-content">
+
+	
+<style>
+	.tab-content>.tab-pane {
+		display: none;
+	}
+
+	.tab-content>.active {
+		display: block;
+	}
+
+	.fade {
+		transition: opacity 0.15s linear;
+	}
+	.fade:not(.show) {
+		opacity: 0;
+	  }
+	  .modal.fade .modal-dialog {
+		transition: -webkit-transform 0.3s ease-out;
+		transition: transform 0.3s ease-out;
+		transition: transform 0.3s ease-out, -webkit-transform 0.3s ease-out;
+		-webkit-transform: translate(0, -50px);
+		transform: translate(0, -50px);
+	  }
+	  .modal-backdrop.fade {
+		opacity: 0;
+	  }
+	  .carousel-fade .carousel-item {
+		opacity: 0;
+		transition-property: opacity;
+		-webkit-transform: none;
+		transform: none;
+	  }
+	  .carousel-fade .carousel-item-next.carousel-item-left,
+	  .carousel-fade .carousel-item-prev.carousel-item-right,
+	  .carousel-fade .carousel-item.active {
+		z-index: 1;
+		opacity: 1;
+	  }
+	  .carousel-fade .active.carousel-item-left,
+	  .carousel-fade .active.carousel-item-right {
+		z-index: 0;
+		opacity: 0;
+		transition: opacity 0s 0.6s;
+	  }
+</style>
+
+
+
+
+
+
+<div class="tab-pane fade show active " id="fdaecb" role="tabpanel" aria-labelledby="nav-1">
+
+	
+
+<p>O objetivo deste painel é ajudar a encontrar a melhor seleção para um filme que será produzido.</p>
+
+<iframe title="Relatório Alura Films" width="100%" height="450" src="https://app.powerbi.com/view?r=eyJrIjoiZTllNjE2ZTQtNjdkMy00OGI4LTllNTAtM2RhNGE2YWU4YmZlIiwidCI6IjI2ZjA4NzIyLTFjOWUtNGVkZS1iN2VkLThhMmI3N2ZmM2Q5YyJ9&pageName=ReportSection11c983afd307f2fa2f9a" frameborder="0" allowFullScreen="true"></iframe>
+
+<p>Com isso em mente, eu explorei na primeira aba um pequeno resumo sobre os filmes no banco de dados, com ela você pode ter uma ideia geral dos nossos dados. Na segunda aba é apresentado a nota no IMDB e o Meta Score dos filmes. Eu também criei uma medida que mostra o quanto essas duas avaliações concordam entre si. Uma medida de 100 quer dizer que <strong>não concordam nem um pouco</strong> e 0 quer dizer <strong>concordam completamente</strong>, a medida de concordância foi de 9,48.</p>
+<p>Nossa terceira aba apresenta informação sobre as estrelas dos filmes, os 10 atores com a maior rentabilidade, e os 10 atores com a maior contagem de filmes.</p>
+<p>A quarta aba apresenta a distribuição da renda bruta pela quantidade de gêneros diferentes que um filme tem. Ela também mostra quantos filmes tem um certo gênero, como por exemplo, <strong>Drama</strong> é a escolha mais popular para gênero de filme, com 72% dos filmes do banco de dados. Por fim, essa aba também mostra a renda bruta média por gênero.</p>
+<p>A quinta e última aba mostra um pouco de informação sobre a classificação indicativa brasileira e mostra o Meta Score médio para filmes com certificação. Ela também mostra a renda bruta, em média, para cada classificação indicativa.</p>
+
+
+
+</div>
+<style>
+	.tab-content>.tab-pane {
+		display: none;
+	}
+
+	.tab-content>.active {
+		display: block;
+	}
+
+	.fade {
+		transition: opacity 0.15s linear;
+	}
+	.fade:not(.show) {
+		opacity: 0;
+	  }
+	  .modal.fade .modal-dialog {
+		transition: -webkit-transform 0.3s ease-out;
+		transition: transform 0.3s ease-out;
+		transition: transform 0.3s ease-out, -webkit-transform 0.3s ease-out;
+		-webkit-transform: translate(0, -50px);
+		transform: translate(0, -50px);
+	  }
+	  .modal-backdrop.fade {
+		opacity: 0;
+	  }
+	  .carousel-fade .carousel-item {
+		opacity: 0;
+		transition-property: opacity;
+		-webkit-transform: none;
+		transform: none;
+	  }
+	  .carousel-fade .carousel-item-next.carousel-item-left,
+	  .carousel-fade .carousel-item-prev.carousel-item-right,
+	  .carousel-fade .carousel-item.active {
+		z-index: 1;
+		opacity: 1;
+	  }
+	  .carousel-fade .active.carousel-item-left,
+	  .carousel-fade .active.carousel-item-right {
+		z-index: 0;
+		opacity: 0;
+		transition: opacity 0s 0.6s;
+	  }
+</style>
+
+
+
+
+
+
+<div class="tab-pane fade show " id="deacfb" role="tabpanel" aria-labelledby="nav-1">
+
+	
+
+<p>A <strong>Alura Food</strong> está interessada em expandir seus negócios para o mercado indiano. Para isso, a empresa pediu para calcular medidas que os ajudem a tomarem uma melhor decisão.</p>
+
+<iframe title="Relatório Alura Food" width="100%" height="450" src="https://app.powerbi.com/view?r=eyJrIjoiNGEzMTQzMGYtNzFhNC00YjcyLThiMDMtMGE2YTMzMDRhODFiIiwidCI6IjI2ZjA4NzIyLTFjOWUtNGVkZS1iN2VkLThhMmI3N2ZmM2Q5YyJ9&pageName=ReportSection" frameborder="0" allowFullScreen="true"></iframe>
+
+<p>Primeiramente, eu fiz uma junção dos bancos de dados e limpei eles através do Power BI, traduzi alguns dos textos de inglês para português através da Planilhas Google, e converti o preço das refeições da sua moeda original para o real (moeda brasileira). Por fim, eu usei o Figma para fazer o background, incluindo imagens e títulos.</p>
+<p>Neste projeto, eu optei por usar apenas uma página para mostrar toda a informação pedida, pois eu acredito que isso facilita a análise dos dados.</p>
+<p>A maioria dos restaurantes neste mercado indiano não oferecem entrega online, com apenas 19,21% deles tendo este serviço. A avaliação média dos restaurantes é de 3,72, de um total de 5, essa avaliação também é apresentada em formato textual, com um <strong>Muito Bom</strong> sendo uma nota acima de 4.</p>
+<p>O preço médio de uma refeição por pessoa é de R$ 39,48 (em torno de USD 7,65). E há 9577 restaurantes diferentes em todo o banco de dados, dos quais 3968, especializam na culinária do norte indiano. Nova Delhi é, de longe, o local mais popular para se abrir um restaurante, com 5473 deles, a segunda cidade é Gurgaon, com 1118 restaurantes.</p>
+
+
+
+</div>
+<style>
+	.tab-content>.tab-pane {
+		display: none;
+	}
+
+	.tab-content>.active {
+		display: block;
+	}
+
+	.fade {
+		transition: opacity 0.15s linear;
+	}
+	.fade:not(.show) {
+		opacity: 0;
+	  }
+	  .modal.fade .modal-dialog {
+		transition: -webkit-transform 0.3s ease-out;
+		transition: transform 0.3s ease-out;
+		transition: transform 0.3s ease-out, -webkit-transform 0.3s ease-out;
+		-webkit-transform: translate(0, -50px);
+		transform: translate(0, -50px);
+	  }
+	  .modal-backdrop.fade {
+		opacity: 0;
+	  }
+	  .carousel-fade .carousel-item {
+		opacity: 0;
+		transition-property: opacity;
+		-webkit-transform: none;
+		transform: none;
+	  }
+	  .carousel-fade .carousel-item-next.carousel-item-left,
+	  .carousel-fade .carousel-item-prev.carousel-item-right,
+	  .carousel-fade .carousel-item.active {
+		z-index: 1;
+		opacity: 1;
+	  }
+	  .carousel-fade .active.carousel-item-left,
+	  .carousel-fade .active.carousel-item-right {
+		z-index: 0;
+		opacity: 0;
+		transition: opacity 0s 0.6s;
+	  }
+</style>
+
+
+
+
+
+
+<div class="tab-pane fade show " id="ebdfca" role="tabpanel" aria-labelledby="nav-1">
+
+	
+
+<p>A <strong>Alura Skimo</strong> está interessada em analisar seus dados de vendas, para ajudar com isso eu fiz este <i>dashboard</i>.</p>
+
+<iframe title="Relatório Alura Food" width="100%" height="450" src="https://app.powerbi.com/view?r=eyJrIjoiNTllYjJmODItYzQxNC00ZmEzLTk5ZGMtZDgzNzY2NDM2ZGMxIiwidCI6IjI2ZjA4NzIyLTFjOWUtNGVkZS1iN2VkLThhMmI3N2ZmM2Q5YyJ9" frameborder="0" allowFullScreen="true"></iframe>
+
+<p>Ele é composto de três páginas. A primeira apresenta um resumo com todas as principais medidas que encontramos no painel, filtrado para mostrar o mês mais recente. Nesta primeira página, você pode parar o cursor do mouse sobre uma medida e isso fará com que apareça um pequeno gráfico com a série histórica com uma linha de tendência.</p>
+<p>Seguindo para a próxima página, nela você pode ver toda a informação sobre os produtos vendidos pela <strong>Alura Skimo</strong>. Você pode filtrar os dados por sabor de sorvete, tipo de embalagem, categoria, e custo do produto. Ela mostra a informação básica sobre os produtos, junto de um ranque dos produtos que são os mais bem vendidos e dois gráficos que mostram as vendas por sabor e vendas por categoria.</p>
+<p>Na última página, você pode encontrar informações sobre os vendedores da nossa empresa. Ele mostra quando o funcionário entrou para a empresa, a comissão deles, o faturamento e quantas vendas cada um fez, tudo isso no último ano (2018).</p>
+<p>Esse painel foi complexo comparado aos outros dois, pois nosso banco de dados veio de arquivos SQL. Primeiro eu tive que criar o banco de dados e carregar cada arquivo SQL para ele, então eu só tive que carregar o banco para o Power BI. Por fim, toda a limpeza, tratamento e processamento de dados foi feito no próprio Power BI.</p>
+
+
+
+</div>
+
+
+</div>
+]]></content:encoded>
     </item>
     
   </channel>

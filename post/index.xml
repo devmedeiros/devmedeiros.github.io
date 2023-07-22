@@ -18,6 +18,30 @@
       
       <guid>https://devmedeiros.com/post/anomaly-detection/</guid>
       <description>How can your credit card issuer know if a purchase is made by you or a cloned version of your credit card?</description>
+      <content:encoded><![CDATA[<p>Have you ever had a purchase blocked by your credit card issuer without you taking any action? If this happened to you, your credit card issuer probably had detected that your purchase didn&rsquo;t match your <em>normal spending habit</em>, maybe you were at a different location or spend a lot of money suddenly. Anyway, the credit card company was using <strong>anomaly detection</strong> techniques to prevent fraudulent activities.</p>
+<h2 id="what-is-anomaly-detection">What is Anomaly Detection?</h2>
+<blockquote>
+<p><em>Anomaly detection</em> refers to the problem of finding patterns in data that do not conform to expected behavior. <sup id="fnref:1"><a href="#fn:1" class="footnote-ref" role="doc-noteref">1</a></sup></p>
+</blockquote>
+<p>In statistics there is a famous distribution that is called &ldquo;The Normal Distribution&rdquo;, this name is not in vain. A lot of random things are normally distributed, for instance, if you select 100 random people and measure their height, and made a distribution plot, you&rsquo;d end up with something looking like a symmetrical bell curve.</p>
+<p>Even though abnormal results are possible, it is expected that most people or things will fall within a normal distribution. When something is divergent from this normality it is said to be an outlier or an anomaly.</p>
+<p>When dealing with something like credit card fraud you can create an expectation of a person expanding habits, so if your daily routine consists of waking up and driving to your workplace and buying a coffee, then lunch in New York. Your credit card company would find it weird if you suddenly made a physical purchase in Rio de Janeiro.</p>
+<p>In simple terms, that is what anomaly detection is trying to do, understand how something works so it can identify if it starts acting weird.</p>
+<h2 id="anomaly-detection-x-class-imbalance-in-datasets">Anomaly Detection x Class Imbalance in Datasets</h2>
+<p>If you are aware of what class imbalance is, you may be wondering <em>&ldquo;can&rsquo;t I use anomaly detection to solve this class imbalance problem?&rdquo;</em> - sometimes you can, but it&rsquo;s not appropriate.</p>
+<p>Class imbalance occurs when one class has significantly more samples than the other class(es). This can lead to biased models that favor the majority class and perform poorly on minority classes. While anomaly detection focuses on identifying rare or abnormal data points that deviate significantly from the normal patterns in the dataset.</p>
+<p>Even though it has some overlap on what is trying to do, unless you have a class imbalance problem that the minority class can be considered an abnormal behavior, you won&rsquo;t be able to use anomaly detection.</p>
+<hr>
+<p>I talked about class imbalance before on a churn rate problem in a fictitious telecommunication company, if you are interested you can check it <a href="/post/2022-05-30-churn-rate-challenge/">here</a>.</p>
+<div class="footnotes" role="doc-endnotes">
+<hr>
+<ol>
+<li id="fn:1">
+<p>Chandola, V., Banerjee, A., and Kumar, V. 2009. Anomaly detection: A survey. ACM Comput. Surv. 41, 3, Article 15 (July 2009), 58 pages. DOI = <a href="http://doi.acm.org/10.1145/1541880.1541882">10.1145/1541880.1541882</a>&#160;<a href="#fnref:1" class="footnote-backref" role="doc-backlink">&#x21a9;&#xfe0e;</a></p>
+</li>
+</ol>
+</div>
+]]></content:encoded>
     </item>
     
     <item>
@@ -27,6 +51,85 @@
       
       <guid>https://devmedeiros.com/post/sqlite-database-github-actions/</guid>
       <description>Discover a free alternative to cloud engines for data scraping on GitHub Actions!</description>
+      <content:encoded><![CDATA[<p>Recently I’ve been working with a data scrapping project that works with a small amount of data, small enough that free resources/tier from the most popular cloud engines are enough to allocate my data, but I don’t like having the risk of being billed over this personal project. To solve this I’ve been looking for a free alternative that I can share and that runs automatically with Github Actions.</p>
+<p>If you want to check out the repo that contains the code discussed in this post, follow this <a href="https://github.com/devmedeiros/template-sqlite-actions">link</a>.</p>
+<blockquote>
+<p>I&rsquo;ll illustrate how to integrate SQLite Databases with Github Actions using Python, but if you know how to modify a file using another programming language this post is still relevant to you.</p>
+</blockquote>
+<h2 id="writing-your-data-generatorscrapper">Writing your Data Generator/Scrapper</h2>
+<p>First, your project needs to be on a repository, in my case, I’m using Github. I wrote a Python code that scrapes a webpage and saves the data to a SQLite database, on this example I’ll illustrate this with a much simpler code.</p>
+<div class="highlight"><pre tabindex="0" style="color:#f8f8f2;background-color:#272822;-moz-tab-size:4;-o-tab-size:4;tab-size:4;"><code class="language-python" data-lang="python"><span style="display:flex;"><span><span style="color:#75715e"># Import libraries</span>
+</span></span><span style="display:flex;"><span><span style="color:#f92672">import</span> pandas <span style="color:#66d9ef">as</span> pd
+</span></span><span style="display:flex;"><span><span style="color:#f92672">import</span> random
+</span></span><span style="display:flex;"><span><span style="color:#f92672">from</span> sqlalchemy <span style="color:#f92672">import</span> create_engine
+</span></span><span style="display:flex;"><span><span style="color:#f92672">from</span> datetime <span style="color:#f92672">import</span> datetime
+</span></span><span style="display:flex;"><span>
+</span></span><span style="display:flex;"><span><span style="color:#75715e"># Create random data</span>
+</span></span><span style="display:flex;"><span>people <span style="color:#f92672">=</span> [<span style="color:#e6db74">&#39;Ana&#39;</span>, <span style="color:#e6db74">&#39;Bob&#39;</span>, <span style="color:#e6db74">&#39;Charles&#39;</span>, <span style="color:#e6db74">&#39;Daiana&#39;</span>]
+</span></span><span style="display:flex;"><span>values <span style="color:#f92672">=</span> [random<span style="color:#f92672">.</span>random(), random<span style="color:#f92672">.</span>random(), random<span style="color:#f92672">.</span>random(), random<span style="color:#f92672">.</span>random()]
+</span></span><span style="display:flex;"><span>
+</span></span><span style="display:flex;"><span><span style="color:#75715e"># Create db connection</span>
+</span></span><span style="display:flex;"><span>engine <span style="color:#f92672">=</span> create_engine(<span style="color:#e6db74">&#39;sqlite:///data.db&#39;</span>)
+</span></span><span style="display:flex;"><span>
+</span></span><span style="display:flex;"><span><span style="color:#75715e"># Create the dataframe</span>
+</span></span><span style="display:flex;"><span>data <span style="color:#f92672">=</span> pd<span style="color:#f92672">.</span>DataFrame({<span style="color:#e6db74">&#39;people&#39;</span>: people, <span style="color:#e6db74">&#39;values&#39;</span>: values, <span style="color:#e6db74">&#39;load_date&#39;</span>: datetime<span style="color:#f92672">.</span>now()})
+</span></span><span style="display:flex;"><span>
+</span></span><span style="display:flex;"><span><span style="color:#75715e"># Save the data frame</span>
+</span></span><span style="display:flex;"><span>data<span style="color:#f92672">.</span>to_sql(<span style="color:#e6db74">&#39;data&#39;</span>, if_exists<span style="color:#f92672">=</span><span style="color:#e6db74">&#39;append&#39;</span>, con<span style="color:#f92672">=</span>engine, index<span style="color:#f92672">=</span><span style="color:#66d9ef">False</span>)
+</span></span></code></pre></div><h2 id="setting-the-workflow">Setting the Workflow</h2>
+<p>If you run the above code multiple times on a local machine it’ll work, but you’ll notice that on Github it’ll not persist the changes, that is because you need to commit the changes. To do this you’ll need to create a workflow, on your repo create a yaml file on <code>.github/workflow</code>. This file is going to be your workflow, you can choose any name you want.</p>
+<div class="highlight"><pre tabindex="0" style="color:#f8f8f2;background-color:#272822;-moz-tab-size:4;-o-tab-size:4;tab-size:4;"><code class="language-yaml" data-lang="yaml"><span style="display:flex;"><span><span style="color:#75715e"># name your workflow</span>
+</span></span><span style="display:flex;"><span><span style="color:#f92672">name</span>: <span style="color:#ae81ff">random data</span>
+</span></span><span style="display:flex;"><span>
+</span></span><span style="display:flex;"><span><span style="color:#75715e"># definy the frequency it&#39;ll run</span>
+</span></span><span style="display:flex;"><span><span style="color:#f92672">on</span>:
+</span></span><span style="display:flex;"><span>  <span style="color:#f92672">schedule</span>:
+</span></span><span style="display:flex;"><span>    - <span style="color:#f92672">cron</span>: <span style="color:#e6db74">&#34;0 * * * *&#34;</span> <span style="color:#75715e"># hourly</span>
+</span></span><span style="display:flex;"><span>  <span style="color:#f92672">workflow_dispatch</span>:
+</span></span><span style="display:flex;"><span>
+</span></span><span style="display:flex;"><span><span style="color:#f92672">env</span>:
+</span></span><span style="display:flex;"><span>  <span style="color:#f92672">ACTIONS_ALLOW_UNSECURE_COMMANDS</span>: <span style="color:#66d9ef">true</span>
+</span></span><span style="display:flex;"><span>
+</span></span><span style="display:flex;"><span><span style="color:#75715e"># create the jobs</span>
+</span></span><span style="display:flex;"><span><span style="color:#f92672">jobs</span>:
+</span></span><span style="display:flex;"><span>  <span style="color:#f92672">generate-latest</span>:
+</span></span><span style="display:flex;"><span>    <span style="color:#f92672">runs-on</span>: <span style="color:#ae81ff">ubuntu-latest</span>
+</span></span><span style="display:flex;"><span>
+</span></span><span style="display:flex;"><span>    <span style="color:#f92672">steps</span>:
+</span></span><span style="display:flex;"><span>      - <span style="color:#f92672">name</span>: <span style="color:#ae81ff">Checkout repo</span>
+</span></span><span style="display:flex;"><span>        <span style="color:#f92672">uses</span>: <span style="color:#ae81ff">actions/checkout@v3</span>
+</span></span><span style="display:flex;"><span>
+</span></span><span style="display:flex;"><span>      - <span style="color:#f92672">name</span>: <span style="color:#ae81ff">Set up Python</span>
+</span></span><span style="display:flex;"><span>        <span style="color:#f92672">uses</span>: <span style="color:#ae81ff">actions/setup-python@v4</span>
+</span></span><span style="display:flex;"><span>        <span style="color:#f92672">with</span>:
+</span></span><span style="display:flex;"><span>          <span style="color:#f92672">python-version</span>: <span style="color:#e6db74">&#39;3.10&#39;</span> <span style="color:#75715e"># setting python version to 3.10</span>
+</span></span><span style="display:flex;"><span>
+</span></span><span style="display:flex;"><span>      - <span style="color:#f92672">name</span>: <span style="color:#ae81ff">Install requirements</span>
+</span></span><span style="display:flex;"><span>        <span style="color:#f92672">run</span>: <span style="color:#ae81ff">pip3 install -r requirements.txt</span> <span style="color:#75715e"># setting the environment</span>
+</span></span><span style="display:flex;"><span>
+</span></span><span style="display:flex;"><span>      - <span style="color:#f92672">name</span>: <span style="color:#ae81ff">Run random data</span>
+</span></span><span style="display:flex;"><span>        <span style="color:#f92672">run</span>: <span style="color:#ae81ff">python main.py</span>
+</span></span><span style="display:flex;"><span>
+</span></span><span style="display:flex;"><span>      - <span style="color:#f92672">name</span>: <span style="color:#ae81ff">Commit changes</span>
+</span></span><span style="display:flex;"><span>        <span style="color:#f92672">run</span>: |<span style="color:#e6db74">
+</span></span></span><span style="display:flex;"><span><span style="color:#e6db74">          git config --global user.name &#34;github-actions&#34;
+</span></span></span><span style="display:flex;"><span><span style="color:#e6db74">          git config --global user.email &#34;action@github.com&#34;
+</span></span></span><span style="display:flex;"><span><span style="color:#e6db74">
+</span></span></span><span style="display:flex;"><span><span style="color:#e6db74">          git add -A
+</span></span></span><span style="display:flex;"><span><span style="color:#e6db74">          git commit -m &#34;add more data&#34;</span>          
+</span></span><span style="display:flex;"><span>      
+</span></span><span style="display:flex;"><span>      - <span style="color:#f92672">name</span>: <span style="color:#ae81ff">Push changes</span>
+</span></span><span style="display:flex;"><span>        <span style="color:#f92672">uses</span>: <span style="color:#ae81ff">ad-m/github-push-action@master</span>
+</span></span><span style="display:flex;"><span>        <span style="color:#f92672">with</span>:
+</span></span><span style="display:flex;"><span>          <span style="color:#f92672">github_token</span>: <span style="color:#ae81ff">${{ secrets.GITHUB_TOKEN }}</span>
+</span></span></code></pre></div><p>Don&rsquo;t forget to enable workflow permissions, on your repo go to <code>Settings &gt; Actions &gt; General</code>, and select <strong>Read and write permissions</strong>.</p>
+<p><img loading="lazy" src="https://i.imgur.com/pOym60i.png#center" alt="workflow permissions from github official website"  />
+</p>
+<h2 id="conclusion">Conclusion</h2>
+<p>This can be a good free alternative in case you want to be able to share the data you are scrapping or generating. But you still need to keep an eye on Github&rsquo;s limitations when using the free version. See the current usage limits on their <a href="https://docs.github.com/en/actions/learn-github-actions/usage-limits-billing-and-administration#usage-limits">official website</a>.</p>
+<hr>
+<p>If you would like to see a real-like application of this you can go to <a href="https://github.com/devmedeiros/nota-fiscal-goiana">this repo</a>. Where I&rsquo;ve implemented a monthly scrapper that saves the data to an SQLite database that is available to everyone.</p>
+]]></content:encoded>
     </item>
     
     <item>
@@ -36,6 +139,35 @@
       
       <guid>https://devmedeiros.com/post/unlocking-machine-learning/</guid>
       <description>Find out if the use of machine learning is essential in all business cases. Evaluate benefits and limitations.</description>
+      <content:encoded><![CDATA[<p>In the increasingly data-driven business world, machine learning has gained prominence as a powerful tool to drive business success. However, a crucial question arises: is machine learning really necessary in all cases? In this post, we&rsquo;ll delve into that discussion, exploring the applications, benefits, and limitations of machine learning. In addition, we will provide useful criteria to help you decide whether this approach is essential for your business.</p>
+<h2 id="what-is-machine-learning">What is Machine Learning?</h2>
+<p>Machine Learning (ML) is a term used to describe algorithms that can be modeled to predict or explain something. You can make <em>machine learning models</em> that can predict monthly sales, customer churn, recommendation systems, etc.</p>
+<p>To make these models you&rsquo;ll need a lot of data, but not only that. You&rsquo;ll need good data, unbiased and clean.</p>
+<p>These models can be written in many different programming languages, the most popular ones are <strong>Python</strong> and <strong>R</strong>, but you could also use <strong>Julia</strong>, <strong>Scala</strong>, <strong>GO</strong>, and many others.</p>
+<h2 id="machine-learning-cases">Machine Learning Cases</h2>
+<h3 id="recommendation-systems">Recommendation Systems</h3>
+<p>If you ever wonder how your favorite streaming service always has a new song or show recommended to you, this is thanks to recommendation systems. They have many different algorithms to guess what a user would like.</p>
+<p>One of these algorithms creates clusters of similar users and uses things the other users enjoy to recommend to you. A simpler approach would just recommend the most popular items.</p>
+<h3 id="customer-churn">Customer Churn</h3>
+<p>This kind of model is really popular amongst companies like internet providers and banks. These models look at customer behavior when interacting with the company to try to identify what causes a customer to <em>give up</em> working with them.</p>
+<p>Is useful to find problems in a company regarding customer experience and the quality of the services provided.</p>
+<h2 id="the-benefits-of-machine-learning">The benefits of Machine Learning</h2>
+<p>With Machine Learning companies can make informed decisions about their business. For example, a restaurant can predict how many meals are going to be ordered weekly and then buy enough ingredients to avoid wasting food; or a company can calculate how likely a certain customer is to churn and then offer discounts or better deals to try to keep the customer.</p>
+<p>These processes can be automated and - <em>if the model is well built</em> - it&rsquo;ll only get better with time, increasing the accuracy and overall efficiency.</p>
+<h2 id="limitations">Limitations</h2>
+<p>Even though Machine Learning is incredible and sometimes looks like it came out of a sci-fi movie, it&rsquo;s not a solution that fits all. Some business problems don&rsquo;t have enough quality data to build a model, and even when you do have it, the computing power and expertise needed make it an expensive tool.</p>
+<p>Sometimes you can achieve a close result to an ML model by just taking a moving average, it&rsquo;s not perfect, but when you take into consideration the investment and the return of both approaches, it may make more sense to choose the cheaper option first, before moving into more complex models.</p>
+<h2 id="how-to-decide-if-machine-learning-is-needed">How to decide if Machine Learning is Needed</h2>
+<p>Before deciding if an ML model is necessary check if you already accomplished the following things:</p>
+<ul>
+<li>you have a quality data pipeline</li>
+<li>your company is data-driven</li>
+<li>you have the budget to invest in a data science team or to hire a company to do it</li>
+<li>your problem can be solved with ML</li>
+<li>have you already tested/tried simpler options available</li>
+</ul>
+<p>These aren&rsquo;t rules written in stone, just something that I think is important to keep in mind before choosing to invest in Machine Learning. You don&rsquo;t want to spend time working on something just to give up because then you realized that ML doesn&rsquo;t fit your business needs or it doesn&rsquo;t deliver extraordinary results.</p>
+]]></content:encoded>
     </item>
     
     <item>
@@ -45,6 +177,16 @@
       
       <guid>https://devmedeiros.com/post/how-to-use-word-clouds/</guid>
       <description>Word clouds are a popular data visualization tool for analyzing texts, but they need to be presented clearly for the message to be understood.</description>
+      <content:encoded><![CDATA[<p>Word clouds are a popular data visualization tool for analyzing texts, comment boxes, and reviews. And it&rsquo;s not popular for no reason, it is an efficient visualization to show the opinion of a group of people in a summarized way, but it is not always presented effectively. So, here are some points to pay attention to when presenting the best word cloud you can.</p>
+<h2 id="1--removing-common-and-irrelevant-words">1- Removing common and irrelevant words</h2>
+<p>One of the most common words in the English language is the article &ldquo;the&rdquo;. This is not surprising, given that it is essential for forming sentences, but despite being fundamental, when we think in terms of how it helps to explain the theme or idea of a sentence, it does not contribute to it at all. These articles and other common words are called <strong>stopwords</strong>.</p>
+<p>So, whenever we work with word clouds, it&rsquo;s important to remove these stopwords to make it clear what your theme is and to reduce information pollution.</p>
+<h2 id="2--simplicity-over-complexity">2- Simplicity over complexity</h2>
+<p>When working with visual presentations, it&rsquo;s common to want to do something extravagant that catches people&rsquo;s attention, but sometimes complex visualizations can distract people from the story you want to tell and make it difficult to understand your message.</p>
+<h2 id="3--segment-your-data">3- Segment your data</h2>
+<p>One of the most common uses of word clouds is in customer reviews and company evaluations (such as NPS), in these cases, where we have different &ldquo;types&rdquo; of customers, it&rsquo;s expected that they have very different behaviors, a satisfied or happy customer will have different comments from one who is dissatisfied. So, if you make only one-word cloud without segmenting your data, you may find a word cloud that means nothing more than &ldquo;many people mentioned this&rdquo;.</p>
+<p>By segmenting the data by customer ratings or by detractors and promoters, you can identify what customers who are happy with your service are saying and contrast it with what those who are dissatisfied are saying, and identify areas for improvement.</p>
+]]></content:encoded>
     </item>
     
     <item>
@@ -54,6 +196,17 @@
       
       <guid>https://devmedeiros.com/post/what-is-sql/</guid>
       <description>SQL stands for Structured Query Language. A query language is a specialized programming language that you can use to search and change the contents of a database.</description>
+      <content:encoded><![CDATA[<p>SQL stands for Structured Query Language. A query language is a specialized programming language that you can use to search and change the contents of a database.</p>
+<p>Like English, SQL has different dialects with special keywords. Most keywords on different dialects are the same, these are the standard SQL, but there are more dialects specific to some databases like:</p>
+<ul>
+<li>PostgreSQL</li>
+<li>SQL Server</li>
+<li>Oracle SQL</li>
+</ul>
+<p>When a keyword is specific to a dialect, usually, you can find an equivalent in another dialect. So you can focus on learning your preferred dialect and when you need to use another database you can easily look up how to do what you want in the other dialect, for instance, <code>oracle sql nvl on postgre</code>.</p>
+<h2 id="which-should-you-learn">Which should you learn?</h2>
+<p>The knowledge from learning any SQL dialect is transferable, so you can choose whichever you like. If you have contact with a database take advantage of that and learn it, but if you don&rsquo;t have any connection any choice will be good enough.</p>
+]]></content:encoded>
     </item>
     
     <item>
@@ -63,6 +216,19 @@
       
       <guid>https://devmedeiros.com/post/using-ai-in-your-favor/</guid>
       <description>How to use AI tools, like ChatGPT, in your favor.</description>
+      <content:encoded><![CDATA[<p>In the last months, once again AI became a hot topic, after several papers regarding art made by artificial intelligence, now is the time for text written by AI to shine.</p>
+<p>Machine learning models were already helping people for a long time, such as grammar checkers, tools to rewrite text to avoid plagiarism, and even tools that do it all - <em>as long as you know how to ask</em>. Tools like ChatGPT aren&rsquo;t new, they just exploded in popularity recently, and you certainly have heard about many ways to use these artificial intelligence tools, but I want to propose a <strong>new</strong> way in which we can take advantage of them.</p>
+<p>Looking stuff up on the internet can be hard, and sometimes you need a lot of information regarding what you&rsquo;re looking for, which makes your journey slow. In these cases, using AI tools can be helpful. Unlike search engines like Google, artificial intelligence tools are capable to understand a question and give you an elaborated answer without the need to use special &ldquo;codes&rdquo; or filters, you just need to use <strong>natural language</strong>.</p>
+<hr>
+<p>Recently I was looking for how to find circles on images using Python. All the search results on the first page of Google returned an answer containing the package OpenCV, which is one of the main packages in the area of <strong>Digital Image Processing</strong>, but I wanted something different.</p>
+<p>Even though I changed the parameters of my search, the search engines kept insisting on showing me pages with the package <code>opencv</code>, even when I explicitly wrote <em>&ldquo;without using opencv&rdquo;</em>, then I decided to test <strong>ChatGPT</strong>. First I try asking you to write a function to find the circles.</p>
+<p><img loading="lazy" src="https://i.imgur.com/ZEFy6ls.png#center" alt="uma imagem em inglês escrito: escreva uma função em python que recebe uma imagem e retorna quantos círculos existem na imagem. ela precisa ser capaz de contar quantos círculos há mesmo que eles estejam levemente distorcidos ou com pequenos brilhos. a saída da ferramente é uma amostra de código usando a biblioteca opencv"  />
+</p>
+<p>It did write a functioning function, pretty similar to what I had written, but it still was using OpenCV, then I decided to be more specific and ask for other ways to do this, instead of just asking for the code.</p>
+<p><img loading="lazy" src="https://i.imgur.com/E9kHjI7.png#center" alt="uma imagem em inglês escrito: há outros métodos, além de opencv para detectar imagens usando python e abaixo a saída da ferramenta citando cinco exemplos"  />
+</p>
+<p>I don&rsquo;t know if all the methods it suggested work or even exist, but these answers help me break a creative block I had, regarding how to solve this issue, and it made it possible for me to get back on making progress on this project. Now I can learn more about <code>scikit-image</code>, which I didn&rsquo;t even know, and test new packages. It was satisfactory to be able to find new ways to solve the same problem. Using this I can assure you I&rsquo;m exploring many different paths and I&rsquo;m not stuck on just what I already know and use.</p>
+]]></content:encoded>
     </item>
     
     <item>
@@ -72,6 +238,33 @@
       
       <guid>https://devmedeiros.com/post/choose-the-best-graph/</guid>
       <description>Choosing the best graph or plot can be a hard task, but it doesn&amp;rsquo;t need to be.</description>
+      <content:encoded><![CDATA[<p>Learning how to make better visualizations come with study and practice, today I want to talk about sources you can use to guide you into making better graphs and other data visualizations in general.</p>
+<h2 id="from-data-to-viz">From Data to Viz</h2>
+<p><img loading="lazy" src="https://i.imgur.com/416qeWj.png" alt="infograph showing different possibilities for choosing a plot"  />
+</p>
+<p><a href="https://www.data-to-viz.com/">From Data to Viz</a> brings a lot of tools to help navigate the data visualization world. In the website <code>Explore</code> tab you are faced with an interactive infographic that helps you pick a plot, you can choose between: <code>numeric</code>, <code>categoric</code>, <code>numeric&amp;categoric</code>, <code>maps</code>, <code>network</code>, and <code>time series</code>. But it doesn&rsquo;t only show plots that would be good for your type of data, it also shows a description explaining the plot and common mistakes people make when using that specific plot.</p>
+<p>At the end of each branch from the infographic, there is also a <code>story</code> link, where you can read about an implementation of that type of plot using real-world data.</p>
+<p>And in the case, you are just starting and don&rsquo;t know many terms or are unsure if your data contains <code>too many</code> or <code>few</code> points when you rest your mouse over the options nodes you&rsquo;ll be able to see a description with an example table representing what that means.</p>
+<p>By heading to the <code>Caveats</code> tab you&rsquo;re able to see a collection of caveats, you can filter them by:</p>
+<ul>
+<li>
+<p><strong>Improvement:</strong> all caveats that will suggest some sort of improvement on plots.</p>
+</li>
+<li>
+<p><strong>Misleading:</strong> some plots may be misleading by omitting some information, may it be sample size or how proportionally different two categories are. By reading this you&rsquo;ll be able to spot bad practices that lead to confusion or manipulation.</p>
+</li>
+</ul>
+<p>This website also provides links to <strong>Python</strong> and <strong>R</strong> galleries where you can get code snippets to reproduce these plots.</p>
+<p>If you prefer to learn by looking at what not to do, you should check out <a href="https://viz.wtf/">WTF Visualizations</a>. It showcases bad visualizations that don&rsquo;t make sense or are somehow misleading.</p>
+<p>There you&rsquo;ll find several pie plots that don&rsquo;t add up to 100%, area graphs where the numbers don&rsquo;t match the area, and just straight-up manipulation like the example below.</p>
+<figure class="align-center ">
+    <img loading="lazy" src="https://64.media.tumblr.com/d8bcf748d564125312aeba4001b96df5/tumblr_qzg4n3nfJY1sgh0voo1_640.jpg#center"
+         alt="a donut graph showing &#39;yes&#39; as a majority while it represents 10%, and &#39;no&#39; as a minority while it represents 90%"/> <figcaption>
+            <p>piechart from <a href="https://viz.wtf/">WTF Visualizations</a></p>
+        </figcaption>
+</figure>
+
+]]></content:encoded>
     </item>
     
     <item>
@@ -81,6 +274,42 @@
       
       <guid>https://devmedeiros.com/post/ethics-data-science/</guid>
       <description>Data Science is an exciting field, but it&amp;rsquo;s also full of ethical dilemmas.</description>
+      <content:encoded><![CDATA[<h2 id="introduction">Introduction</h2>
+<p>Data science is an exciting field, but it’s also full of ethical pitfalls. If you want to avoid getting drawn into a situation that could damage your company or client, it’s important to understand the basics of data ethics and how they can affect your work.</p>
+<h2 id="learning-from-the-past">Learning from the past</h2>
+<p>Learning from the past is important because it can help us avoid making ethical mistakes that others already committed. The following examples are a sampling of some of the most popular data science ethics issues over the years:</p>
+<ul>
+<li><strong>Google&rsquo;s Street View privacy concerns (2011)</strong></li>
+</ul>
+<p>In 2011, Google came under fire for collecting personal data from unsecured wireless networks while taking pictures for its Street View service. The company said it was an accident and that it had not intended to collect any information from these Wi-Fi networks. However, computer security experts discovered a code in the software used by Google&rsquo;s cars that indicated that they were designed to do just that.</p>
+<p>Google said it had collected data like emails and passwords, but it wasn&rsquo;t sure how much. The fact that Google didn&rsquo;t know what data was collected raised concerns about its commitment to user privacy and security.</p>
+<ul>
+<li><strong>Facebook&rsquo;s Cambridge Analytica scandal (2018)</strong></li>
+</ul>
+<p>In March 2018, Facebook revealed that it had been the victim of a massive data breach involving tens of millions of users. The company said that Cambridge Analytica, a political consultancy firm with ties to the Trump presidential campaign, had gained access to information from up to 87 million.</p>
+<p>Users were unaware that the app was collecting data from them, and Facebook did not do enough to prevent it. The incident led to intense scrutiny of Facebook&rsquo;s use of user data and its responsibility for protecting users&rsquo; privacy. In April 2018, Facebook CEO Mark Zuckerberg testified before American Congress on the matter. He apologized for his company&rsquo;s mistakes in handling user data and outlined some steps he would take to ensure that similar breaches didn&rsquo;t occur again.</p>
+<ul>
+<li><strong>IBM’s Photo-scraping scandal (2019)</strong></li>
+</ul>
+<p>IBM faced a photo-scraping controversial scandal in 2019 where the controversy focused on 1 million pictures of human faces that IBM scrapped from Flickr, the online photo-hosting site.</p>
+<p>This scandal brought to light how their data is being used. People aren’t consenting to have their details used for profit.</p>
+<ul>
+<li><strong>Predictive Policing Software</strong></li>
+</ul>
+<p>It would be nice to be able to predict crime or be able to estimate where law enforcement needs to be to prevent crime, but many predictions made by this kind of software don’t come true. This happens because these tools are fed bad data.</p>
+<blockquote>
+<p>“Data collected by police is notoriously bad, easily manipulated, glaringly incomplete, and too often undermined by racial bias.” – <a href="https://www.aclu.org/news/criminal-law-reform/predictive-policing-software-more-accurate">Ezekiel Edwards, ACLU</a></p>
+</blockquote>
+<p>This polluted data makes the software produce equally contaminated results, leading the software to be better at predicting policing instead of predicting crime, becoming a self-fulfilling prophecy.</p>
+<h2 id="conclusion">Conclusion</h2>
+<p>These examples show that there are many ways to make mistakes when it comes to handling user data, but they also serve as excellent educational resources for anyone interested in learning more about <em>how</em> these kinds of problems can be avoided in future projects.</p>
+<p>There are lots of resources to learn more about this theme and how to combat this issue when working with machine learning models and user data. I&rsquo;ll list some, but remember this is a broad and deep topic, and my research may not find everything there is to it.</p>
+<ul>
+<li><a href="https://geomblog.github.io/fairness/">A free course on Fairness, Accountability, and Transparency sponsored by GIAN.</a></li>
+<li><a href="https://www.youtube.com/watch?v=bXitS_PMyFQ">Why Mathematicians Won&rsquo;t Help Cops - VSauce2</a></li>
+<li><a href="https://www.gov.uk/government/publications/data-ethics-framework/data-ethics-framework-2020">Data Ethics Framework - UK Government</a></li>
+</ul>
+]]></content:encoded>
     </item>
     
     <item>
@@ -90,6 +319,263 @@
       
       <guid>https://devmedeiros.com/post/case-study-analytics-engineer/</guid>
       <description>Project exploring common tasks an Analytics Engineer needs to perform on a daily day.</description>
+      <content:encoded><![CDATA[<h2 id="what-is-it-like-working-as-an-analytics-engineer">What is it like working as an Analytics Engineer?</h2>
+<p>Analytics Engineer refers to a Data Science professional focused on transforming data into information that is easy to access to the end-user. They provide static and dynamic reports that empower the business team without them needing to think about the complexity behind data analysis.</p>
+<p>In this case study, I want to talk about what would be common tasks that an Analytics Engineer would need to perform and how I&rsquo;d navigate them.</p>
+<p>In this scenario, the Analytics Engineer works for Bankio a digital bank from Brazil. Like most digital banks in Brazil, Bankio offers free transfers for every bank account in the country. It also has many products like an investment account, a savings account, an individual bank account, a credit card without an annual fee, and many more.</p>
+<h3 id="task-1-sql-query">Task 1: SQL Query</h3>
+<blockquote>
+<p>A Bussiness Analyst from Bankio asks for your assistance writing a SQL query to get all the account&rsquo;s monthly balance between January 2020 to December 2020.</p>
+</blockquote>
+
+
+<p><details >
+  <summary markdown="span">SQL Query Solution <em>(click to expand)</em></summary>
+  <div class="highlight"><pre tabindex="0" style="color:#f8f8f2;background-color:#272822;-moz-tab-size:4;-o-tab-size:4;tab-size:4;"><code class="language-SQL" data-lang="SQL"><span style="display:flex;"><span><span style="color:#66d9ef">SELECT</span>
+</span></span><span style="display:flex;"><span>  a.<span style="color:#f92672">*</span>,
+</span></span><span style="display:flex;"><span>  <span style="color:#75715e">-- Here I calculate the cumulative sum of total deposits for each customer ordering it 
+</span></span></span><span style="display:flex;"><span><span style="color:#75715e"></span>  <span style="color:#75715e">-- by month, if its null I change the value to 0 then I subtract the cumulative sum of
+</span></span></span><span style="display:flex;"><span><span style="color:#75715e"></span>  <span style="color:#75715e">-- total withdrawals for each customer ordering it by month, if its null I change the 
+</span></span></span><span style="display:flex;"><span><span style="color:#75715e"></span>  <span style="color:#75715e">-- value to 0 and I save this as ours account_monthly_balance
+</span></span></span><span style="display:flex;"><span><span style="color:#75715e"></span>  NVL(<span style="color:#66d9ef">SUM</span>(total_transfer_in) OVER (PARTITION <span style="color:#66d9ef">BY</span> customer_id 
+</span></span><span style="display:flex;"><span><span style="color:#66d9ef">ORDER</span> <span style="color:#66d9ef">BY</span>
+</span></span><span style="display:flex;"><span>  action_month), <span style="color:#ae81ff">0</span>) <span style="color:#f92672">-</span> NVL(<span style="color:#66d9ef">SUM</span>(total_transfer_out) OVER (PARTITION <span style="color:#66d9ef">BY</span> customer_id 
+</span></span><span style="display:flex;"><span><span style="color:#66d9ef">ORDER</span> <span style="color:#66d9ef">BY</span>
+</span></span><span style="display:flex;"><span>  action_month), <span style="color:#ae81ff">0</span>) <span style="color:#66d9ef">AS</span> account_monthly_balance 
+</span></span><span style="display:flex;"><span><span style="color:#66d9ef">FROM</span>
+</span></span><span style="display:flex;"><span>  <span style="color:#75715e">-- total transactions in/out subquery
+</span></span></span><span style="display:flex;"><span><span style="color:#75715e"></span>( 
+</span></span><span style="display:flex;"><span>  <span style="color:#66d9ef">SELECT</span>
+</span></span><span style="display:flex;"><span>    <span style="color:#f92672">*</span> 
+</span></span><span style="display:flex;"><span>  <span style="color:#66d9ef">FROM</span>
+</span></span><span style="display:flex;"><span>    <span style="color:#75715e">-- total deposits subquery
+</span></span></span><span style="display:flex;"><span><span style="color:#75715e"></span>( 
+</span></span><span style="display:flex;"><span>    <span style="color:#66d9ef">SELECT</span>
+</span></span><span style="display:flex;"><span>      action_month, customer_id, <span style="color:#66d9ef">SUM</span>(amount) <span style="color:#66d9ef">AS</span> total_transfer_in 
+</span></span><span style="display:flex;"><span>    <span style="color:#66d9ef">FROM</span>
+</span></span><span style="display:flex;"><span>      (
+</span></span><span style="display:flex;"><span>        <span style="color:#66d9ef">SELECT</span>
+</span></span><span style="display:flex;"><span>          <span style="color:#f92672">*</span> 
+</span></span><span style="display:flex;"><span>        <span style="color:#66d9ef">FROM</span>
+</span></span><span style="display:flex;"><span>          <span style="color:#75715e">-- regular deposits subquery
+</span></span></span><span style="display:flex;"><span><span style="color:#75715e"></span>( 
+</span></span><span style="display:flex;"><span>          <span style="color:#66d9ef">SELECT</span>
+</span></span><span style="display:flex;"><span>            d_month.action_month, accounts.customer_id, <span style="color:#66d9ef">SUM</span>(transfer_ins.amount) <span style="color:#66d9ef">AS</span> amount 
+</span></span><span style="display:flex;"><span>          <span style="color:#66d9ef">FROM</span>
+</span></span><span style="display:flex;"><span>            d_time 
+</span></span><span style="display:flex;"><span>            <span style="color:#66d9ef">INNER</span> <span style="color:#66d9ef">JOIN</span>
+</span></span><span style="display:flex;"><span>              transfer_ins 
+</span></span><span style="display:flex;"><span>              <span style="color:#66d9ef">ON</span> transfer_ins.transaction_completed_at <span style="color:#f92672">=</span> d_time.time_id 
+</span></span><span style="display:flex;"><span>            <span style="color:#66d9ef">LEFT</span> <span style="color:#66d9ef">JOIN</span>
+</span></span><span style="display:flex;"><span>              d_month <span style="color:#66d9ef">USING</span>(month_id) 
+</span></span><span style="display:flex;"><span>            <span style="color:#66d9ef">LEFT</span> <span style="color:#66d9ef">JOIN</span>
+</span></span><span style="display:flex;"><span>              accounts <span style="color:#66d9ef">USING</span>(account_id) 
+</span></span><span style="display:flex;"><span>          <span style="color:#66d9ef">WHERE</span>
+</span></span><span style="display:flex;"><span>            transfer_ins.status <span style="color:#f92672">=</span> <span style="color:#e6db74">&#39;completed&#39;</span> 
+</span></span><span style="display:flex;"><span>          <span style="color:#66d9ef">GROUP</span> <span style="color:#66d9ef">BY</span>
+</span></span><span style="display:flex;"><span>            d_month.action_month, accounts.customer_id ) transfer_in 
+</span></span><span style="display:flex;"><span>          <span style="color:#66d9ef">UNION</span> <span style="color:#66d9ef">ALL</span>
+</span></span><span style="display:flex;"><span>          <span style="color:#66d9ef">SELECT</span>
+</span></span><span style="display:flex;"><span>            <span style="color:#f92672">*</span> 
+</span></span><span style="display:flex;"><span>          <span style="color:#66d9ef">FROM</span>
+</span></span><span style="display:flex;"><span>            <span style="color:#75715e">-- pix deposits subquery
+</span></span></span><span style="display:flex;"><span><span style="color:#75715e"></span>( 
+</span></span><span style="display:flex;"><span>            <span style="color:#66d9ef">SELECT</span>
+</span></span><span style="display:flex;"><span>              d_month.action_month, accounts.customer_id, <span style="color:#66d9ef">SUM</span>(pix_movements.pix_amount) <span style="color:#66d9ef">AS</span> amount 
+</span></span><span style="display:flex;"><span>            <span style="color:#66d9ef">FROM</span>
+</span></span><span style="display:flex;"><span>              d_time 
+</span></span><span style="display:flex;"><span>              <span style="color:#66d9ef">INNER</span> <span style="color:#66d9ef">JOIN</span>
+</span></span><span style="display:flex;"><span>                pix_movements 
+</span></span><span style="display:flex;"><span>                <span style="color:#66d9ef">ON</span> pix_movements.pix_completed_at <span style="color:#f92672">=</span> d_time.time_id 
+</span></span><span style="display:flex;"><span>              <span style="color:#66d9ef">LEFT</span> <span style="color:#66d9ef">JOIN</span>
+</span></span><span style="display:flex;"><span>                d_month <span style="color:#66d9ef">USING</span>(month_id) 
+</span></span><span style="display:flex;"><span>              <span style="color:#66d9ef">LEFT</span> <span style="color:#66d9ef">JOIN</span>
+</span></span><span style="display:flex;"><span>                accounts <span style="color:#66d9ef">USING</span>(account_id) 
+</span></span><span style="display:flex;"><span>            <span style="color:#66d9ef">WHERE</span>
+</span></span><span style="display:flex;"><span>              pix_movements.status <span style="color:#f92672">=</span> <span style="color:#e6db74">&#39;completed&#39;</span> 
+</span></span><span style="display:flex;"><span>              <span style="color:#66d9ef">AND</span> pix_movements.in_or_out <span style="color:#f92672">=</span> <span style="color:#e6db74">&#39;pix_in&#39;</span> 
+</span></span><span style="display:flex;"><span>            <span style="color:#66d9ef">GROUP</span> <span style="color:#66d9ef">BY</span>
+</span></span><span style="display:flex;"><span>              d_month.action_month, accounts.customer_id ) 
+</span></span><span style="display:flex;"><span>      )
+</span></span><span style="display:flex;"><span>    <span style="color:#66d9ef">GROUP</span> <span style="color:#66d9ef">BY</span>
+</span></span><span style="display:flex;"><span>      action_month, customer_id ) 
+</span></span><span style="display:flex;"><span>      <span style="color:#66d9ef">FULL</span> <span style="color:#66d9ef">JOIN</span>
+</span></span><span style="display:flex;"><span>        (
+</span></span><span style="display:flex;"><span>          <span style="color:#66d9ef">SELECT</span>
+</span></span><span style="display:flex;"><span>            action_month,
+</span></span><span style="display:flex;"><span>            customer_id,
+</span></span><span style="display:flex;"><span>            <span style="color:#66d9ef">SUM</span>(amount) <span style="color:#66d9ef">AS</span> total_transfer_out 
+</span></span><span style="display:flex;"><span>          <span style="color:#66d9ef">FROM</span>
+</span></span><span style="display:flex;"><span>            <span style="color:#75715e">-- total withdrawals subquery
+</span></span></span><span style="display:flex;"><span><span style="color:#75715e"></span>( 
+</span></span><span style="display:flex;"><span>            <span style="color:#66d9ef">SELECT</span>
+</span></span><span style="display:flex;"><span>              <span style="color:#f92672">*</span> 
+</span></span><span style="display:flex;"><span>            <span style="color:#66d9ef">FROM</span>
+</span></span><span style="display:flex;"><span>              <span style="color:#75715e">-- regular withdrawal subquery
+</span></span></span><span style="display:flex;"><span><span style="color:#75715e"></span>( 
+</span></span><span style="display:flex;"><span>              <span style="color:#66d9ef">SELECT</span>
+</span></span><span style="display:flex;"><span>                d_month.action_month, accounts.customer_id, <span style="color:#66d9ef">SUM</span>(transfer_outs.amount) <span style="color:#66d9ef">AS</span> amount 
+</span></span><span style="display:flex;"><span>              <span style="color:#66d9ef">FROM</span>
+</span></span><span style="display:flex;"><span>                d_time 
+</span></span><span style="display:flex;"><span>                <span style="color:#66d9ef">INNER</span> <span style="color:#66d9ef">JOIN</span>
+</span></span><span style="display:flex;"><span>                  transfer_outs 
+</span></span><span style="display:flex;"><span>                  <span style="color:#66d9ef">ON</span> transfer_outs.transaction_completed_at <span style="color:#f92672">=</span> d_time.time_id 
+</span></span><span style="display:flex;"><span>                <span style="color:#66d9ef">LEFT</span> <span style="color:#66d9ef">JOIN</span>
+</span></span><span style="display:flex;"><span>                  d_month <span style="color:#66d9ef">USING</span>(month_id) 
+</span></span><span style="display:flex;"><span>                <span style="color:#66d9ef">LEFT</span> <span style="color:#66d9ef">JOIN</span>
+</span></span><span style="display:flex;"><span>                  accounts <span style="color:#66d9ef">USING</span>(account_id) 
+</span></span><span style="display:flex;"><span>              <span style="color:#66d9ef">WHERE</span>
+</span></span><span style="display:flex;"><span>                transfer_outs.status <span style="color:#f92672">=</span> <span style="color:#e6db74">&#39;completed&#39;</span> 
+</span></span><span style="display:flex;"><span>              <span style="color:#66d9ef">GROUP</span> <span style="color:#66d9ef">BY</span>
+</span></span><span style="display:flex;"><span>                d_month.action_month, accounts.customer_id ) 
+</span></span><span style="display:flex;"><span>              <span style="color:#66d9ef">UNION</span> <span style="color:#66d9ef">ALL</span>
+</span></span><span style="display:flex;"><span>              <span style="color:#66d9ef">SELECT</span>
+</span></span><span style="display:flex;"><span>                <span style="color:#f92672">*</span> 
+</span></span><span style="display:flex;"><span>              <span style="color:#66d9ef">FROM</span>
+</span></span><span style="display:flex;"><span>                <span style="color:#75715e">-- pix withdrawal subquery
+</span></span></span><span style="display:flex;"><span><span style="color:#75715e"></span>( 
+</span></span><span style="display:flex;"><span>                <span style="color:#66d9ef">SELECT</span>
+</span></span><span style="display:flex;"><span>                  d_month.action_month, accounts.customer_id, <span style="color:#66d9ef">SUM</span>(pix_movements.pix_amount) <span style="color:#66d9ef">AS</span> amount 
+</span></span><span style="display:flex;"><span>                <span style="color:#66d9ef">FROM</span>
+</span></span><span style="display:flex;"><span>                  d_time 
+</span></span><span style="display:flex;"><span>                  <span style="color:#66d9ef">INNER</span> <span style="color:#66d9ef">JOIN</span>
+</span></span><span style="display:flex;"><span>                    pix_movements 
+</span></span><span style="display:flex;"><span>                    <span style="color:#66d9ef">ON</span> pix_movements.pix_completed_at <span style="color:#f92672">=</span> d_time.time_id 
+</span></span><span style="display:flex;"><span>                  <span style="color:#66d9ef">LEFT</span> <span style="color:#66d9ef">JOIN</span>
+</span></span><span style="display:flex;"><span>                    d_month <span style="color:#66d9ef">USING</span>(month_id) 
+</span></span><span style="display:flex;"><span>                  <span style="color:#66d9ef">LEFT</span> <span style="color:#66d9ef">JOIN</span>
+</span></span><span style="display:flex;"><span>                    accounts <span style="color:#66d9ef">USING</span>(account_id) 
+</span></span><span style="display:flex;"><span>                <span style="color:#66d9ef">WHERE</span>
+</span></span><span style="display:flex;"><span>                  pix_movements.status <span style="color:#f92672">=</span> <span style="color:#e6db74">&#39;completed&#39;</span> 
+</span></span><span style="display:flex;"><span>                  <span style="color:#66d9ef">AND</span> pix_movements.in_or_out <span style="color:#f92672">=</span> <span style="color:#e6db74">&#39;pix_out&#39;</span> 
+</span></span><span style="display:flex;"><span>                <span style="color:#66d9ef">GROUP</span> <span style="color:#66d9ef">BY</span>
+</span></span><span style="display:flex;"><span>                  d_month.action_month, accounts.customer_id ) ) 
+</span></span><span style="display:flex;"><span>                <span style="color:#66d9ef">GROUP</span> <span style="color:#66d9ef">BY</span>
+</span></span><span style="display:flex;"><span>                  action_month,
+</span></span><span style="display:flex;"><span>                  customer_id 
+</span></span><span style="display:flex;"><span>        )
+</span></span><span style="display:flex;"><span>        <span style="color:#66d9ef">USING</span> (action_month, customer_id) ) a;
+</span></span></code></pre></div>
+</details></p>
+
+<h3 id="task-2-key-performance-indicators">Task 2: Key Performance Indicators</h3>
+<figure>
+    <img loading="lazy" src="https://images.unsplash.com/photo-1526628953301-3e589a6a8b74"
+         alt="computer screen with 8 rectangles filled with key indicators"/> <figcaption>
+            <p>Photo by Stephen Dawson on Unsplash</p>
+        </figcaption>
+</figure>
+
+<blockquote>
+<p>Another collegue from Bankio is interested in analysing the success of the company product <a href="#pix">PIX</a> on a business and technical level. So they asked you to come up with some key indicators to measure this.</p>
+</blockquote>
+
+
+<p><details >
+  <summary markdown="span">Mean processing time of PIX transactions <em>(click to expand)</em></summary>
+  This can be obtained using the time a customer requests a PIX transaction and when it is completed, we calculate this for all the PIX transactions then we take the mean value. PIX is supposed to be instantaneous, so this metric should be as small as possible.
+</details></p>
+
+
+
+<p><details >
+  <summary markdown="span">The proportion of PIX failures <em>(click to expand)</em></summary>
+  This indicator is important because it’s inconvenient for the client to have their transaction fail. We can calculate this by dividing the sum of failed PIX transactions by the total PIX transactions. This measure should be minimized.
+</details></p>
+
+
+
+<p><details >
+  <summary markdown="span">The proportion of transactions using PIX <em>(click to expand)</em></summary>
+  <p>PIX success can be measured by the proportion of transaction movements using PIX over normal transactions. So just count how many completed transactions using PIX were made and divide it by the total amount of completed transactions. A bigger measurement reflects PIX success over regular transactions.</p>
+<p>Alternatively instead of just counting the transactions we can evaluate how much money each transaction type is moving.</p>
+
+</details></p>
+
+
+
+<p><details >
+  <summary markdown="span">The proportion of in/out of PIX <em>(click to expand)</em></summary>
+  <p>This measure is good to analyze if customers are using their PIX to receive more money or to send money. It would be better if more customers are receiving more money than they are sending. Because Bankio already had free transactions for any bank, before PIX came around, others still had to pay fees to send money to your Bankio account. For this reason, it is better to count how many transactions are coming in through PIX and divide it by all PIX transactions. The higher the better.</p>
+<p>In this case we could also sum the balance of deposit and withdrawals from the Bankio account using PIX and compare it with regular transactions.</p>
+
+</details></p>
+
+<h3 id="task-3-daily-investment-return">Task 3: Daily Investment Return</h3>
+<blockquote>
+<p>Bankio has a customer banking account that allows you to invest on a fixed rate income product. Consider that this product provides customers with a daily return of 0.01% according to their daily invested balance amount. Calculate how much each customer has on their bankio account during the year 2020.</p>
+</blockquote>
+<p>This return is calculated daily after all withdrawals and/or deposits made on a given day. And every day, even weekends, generate some return.</p>
+<p>The following example describes customer A who begins investing in this fixed income product on day 16 of the first month. The prior balance was zero since this consumer is making a first-time deposit into the investment. His initial deposit was 1,000, and at the end of the day, it produced a daily income rate of 0.01% of his balance. The same product is still being consumed by this client at different times throughout the month. Remember that this is just a dummy sample of the transaction log with daily calculations applied. Note that the income for that day should be set to zero in the event of negative Movements.</p>
+<table>
+<thead>
+<tr>
+<th>Day</th>
+<th>Month</th>
+<th>Account ID</th>
+<th>Deposit</th>
+<th>Withdrawal</th>
+<th>End of Day Income</th>
+<th>Account Daily Balance</th>
+</tr>
+</thead>
+<tbody>
+<tr>
+<td>16</td>
+<td>1</td>
+<td>A</td>
+<td>1000</td>
+<td>0</td>
+<td>0.1</td>
+<td>1000.10</td>
+</tr>
+<tr>
+<td>20</td>
+<td>1</td>
+<td>A</td>
+<td>500</td>
+<td>0</td>
+<td>0.15</td>
+<td>1500.55</td>
+</tr>
+<tr>
+<td>2</td>
+<td>2</td>
+<td>A</td>
+<td>0</td>
+<td>200</td>
+<td>0.13</td>
+<td>1302.48</td>
+</tr>
+<tr>
+<td>19</td>
+<td>2</td>
+<td>A</td>
+<td>1000</td>
+<td>200</td>
+<td>0.21</td>
+<td>2104.78</td>
+</tr>
+</tbody>
+</table>
+<p><em>Movements = Previous Day Balance + Deposit - Withdrawal</em></p>
+<p><em>End of Day Income = Movements * Income Rate</em></p>
+<p><em>Account Daily Balance = Movements + End of Day Income</em></p>
+<script type="application/javascript" src="https://gist.github.com/devmedeiros/2a52cf2c4431a1993a98bf7f36d0f412.js?file=bankio-task-3.ipynb"></script>
+
+<hr>
+<h2 id="glossary">Glossary</h2>
+<h4 id="account-monthly-balance">Account Monthly Balance</h4>
+<p>It is the amount of money a customer had in their account at the end of a given month.</p>
+<h4 id="account-info-branch-number-and-check-digit">Account info (branch, number and check-digit)</h4>
+<p>In Brazil, a bank account can be uniquely identifiable by three numbers. The <strong>branch</strong> code, which indicates which bank branch the accounts were opened in, comes first. The second is the <strong>account number</strong> that a branch uses to identify accounts. The <strong>check-digit</strong>, which is only used for error detection, is the last.</p>
+<h4 id="cpf">CPF</h4>
+<p>It is the Brazilian individual taxpayer registry identification.</p>
+<h4 id="pix">PIX</h4>
+<p>In Brazil, this is the most recent method of money transmission. It&rsquo;s unpaid. It is immediate, and all that is required to complete a transaction is the Pix-Key associated with the account.</p>
+<h4 id="non-pix-transfers">Non PIX transfers</h4>
+<p>These are the conventional methods for transferring money between bank accounts. This type of transaction requires the CPF, the branch code, the account number, and the check digit of the account that will receive the funds to be provided. Most banks charge a fee in these transactions, and the confirmation of the transaction typically takes several hours to days.</p>
+]]></content:encoded>
     </item>
     
     <item>
@@ -99,6 +585,33 @@
       
       <guid>https://devmedeiros.com/post/credit-score-classification-app/</guid>
       <description>Using Streamlit to make a web app that classifies your credit score using Python</description>
+      <content:encoded><![CDATA[<h2 id="project-overview">Project Overview</h2>
+<p>This project showcase a data science life cycle, where I clean and prepare the dataset, use feature engineering, machine learning, deploy, and data visualization.</p>
+<p><img loading="lazy" src="https://ik.imagekit.io/devmedeiros/data-science-cycle_QZwyHaXsP.png?ik-sdk-version=javascript-1.4.3&amp;updatedAt=1659975338736#center" alt="data science cycle of this project in a diagram"  />
+</p>
+<p>The dataset comes from <a href="https://www.kaggle.com/datasets/parisrohan/credit-score-classification?select=train.csv">kaggle</a>, it has a lot of information about a person&rsquo;s credit and bank details, but it also has a lot of typos, missing data, and censored data. This dataset needed cleaning and also needed some feature engineering, I needed to mutate some features, so they could be read by the model. Thus when presented with categorical data I needed to identify if it was ordinal or nominal, if it was an ordinal variable then it would be mapped to sequential numbers otherwise I&rsquo;d make a dummy. For <em>yes</em> and <em>no</em> variables I choose to make just one dummy, but for types of loans I made one dummy for each loan type and if someone didn&rsquo;t have a loan they simply get 0 on all loan type features. I talk about the process of cleaning and feature engineering on this dataset <a href="/post/data-cleaning-credit-score/">here</a>.</p>
+<p>Then I needed a machine learning model that I could predict a person&rsquo;s credit score based on some features. To decide which features I was going to use I based my decision on what is commonly used among real companies, and I also choose variables that I thought made sense. I ended up with the following features:</p>
+<ul>
+<li>Age</li>
+<li>Annual income</li>
+<li>Number of bank accounts</li>
+<li>Number of credit cards</li>
+<li>Number of delayed payments</li>
+<li>Credit card utilization ratio</li>
+<li>Total EMI paid monthly</li>
+<li>Credit history age in months</li>
+<li>Loans</li>
+<li>Missed any payment in the last 12 months</li>
+<li>Paid minimum amount on at least one credit card</li>
+</ul>
+<p>With the features ready, I moved on to making the model, I decided to use a simple Random Forest, for now, I do intend to work on making this model better, but in this first instance, I wanted to focus on making the streamlit app.</p>
+<p>After I finished the model I serialized it and the scaler using the <code>pickle</code> package. To deploy the model and build a visualization I used <a href="https://streamlit.io/">streamlit</a>.</p>
+<p><img loading="lazy" src="https://user-images.githubusercontent.com/33239902/183321842-be97fb04-f00b-4b62-8e6e-2b53d25335a0.gif" alt="a gif showing how the streamlit credit score app works"  />
+</p>
+<p>In this app, you can fill out a form or just select one of the three default profiles given to see how the model evaluates each person&rsquo;s credit score. It also presents how certain the model was by displaying a pie graph with the probability (in percentage) of each credit score group the answers fit. It also shows how much each feature counts towards your credit score, according to this model. You can see the app live <a href="https://devmedeiros-credit-score-classification-appstreamlit-app-fcakrl.streamlitapp.com/">here</a>.</p>
+<hr>
+<p>All of the code is available at my GitHub <a href="https://github.com/devmedeiros/credit-score-classification-app">repository</a>. Besides the code, there you&rsquo;ll find the documentation, the original and treated data (all the stages of treatment), all the requirements for building this project, and how to run it locally.</p>
+]]></content:encoded>
     </item>
     
     <item>
@@ -108,6 +621,213 @@
       
       <guid>https://devmedeiros.com/post/data-cleaning-credit-score/</guid>
       <description>How to come up with ways to clean a dataset using Python</description>
+      <content:encoded><![CDATA[<blockquote>
+<p><strong>Disclaimer:</strong> I&rsquo;ll be talking about how to come up with the python code, if you want to read the actual code please go to this <a href="https://github.com/devmedeiros/credit-score-classification-app/tree/main/notebooks">repo</a>.</p>
+</blockquote>
+<h2 id="meet-the-credit-score-classification-dataset">Meet the Credit Score Classification Dataset</h2>
+<p>The dataset that we&rsquo;ll clean comes from <a href="https://www.kaggle.com/datasets/parisrohan/credit-score-classification?select=train.csv">kaggle</a>, which is the <code>train.csv</code> dataset, but this could be used for the <code>test.csv</code> as well.</p>
+<p>There are 28 columns and 100k rows in this dataset. I compiled a feature description table that you can see below.</p>
+<table>
+<thead>
+<tr>
+<th>Feature</th>
+<th>Description</th>
+</tr>
+</thead>
+<tbody>
+<tr>
+<td><code>ID</code></td>
+<td>Represents a unique identification of an entry</td>
+</tr>
+<tr>
+<td><code>Customer_ID</code></td>
+<td>Represents a unique identification of a person</td>
+</tr>
+<tr>
+<td><code>Month</code></td>
+<td>Represents the month of the year</td>
+</tr>
+<tr>
+<td><code>Name</code></td>
+<td>Represents the name of a person</td>
+</tr>
+<tr>
+<td><code>Age</code></td>
+<td>Represents the age of the person</td>
+</tr>
+<tr>
+<td><code>SSN</code></td>
+<td>Represents the social security number of a person</td>
+</tr>
+<tr>
+<td><code>Occupation</code></td>
+<td>Represents the occupation of the person</td>
+</tr>
+<tr>
+<td><code>Annual_Income</code></td>
+<td>Represents the annual income of the person</td>
+</tr>
+<tr>
+<td><code>Monthly_Inhand_Salary</code></td>
+<td>Represents the monthly base salary of a person</td>
+</tr>
+<tr>
+<td><code>Num_Bank_Accounts</code></td>
+<td>Represents the number of bank accounts a person holds</td>
+</tr>
+<tr>
+<td><code>Num_Credit_Card</code></td>
+<td>Represents the number of other credit cards held by a person</td>
+</tr>
+<tr>
+<td><code>Interest_Rate</code></td>
+<td>Represents the interest rate on a credit card</td>
+</tr>
+<tr>
+<td><code>Num_of_Loan</code></td>
+<td>Represents the number of loans taken from the bank</td>
+</tr>
+<tr>
+<td><code>Type_of_Loan</code></td>
+<td>Represents the types of loan taken by a person</td>
+</tr>
+<tr>
+<td><code>Delay_from_due_date</code></td>
+<td>Represents the average number of days delayed from the payment date</td>
+</tr>
+<tr>
+<td><code>Num_of_Delayed_Payment</code></td>
+<td>Represents the average number of payments delayed by a person</td>
+</tr>
+<tr>
+<td><code>Changed_Credit_Limit</code></td>
+<td>Represents the percentage change in credit card limit</td>
+</tr>
+<tr>
+<td><code>Num_Credit_Inquiries</code></td>
+<td>Represents the number of credit card inquiries</td>
+</tr>
+<tr>
+<td><code>Credit_Mix</code></td>
+<td>Represents the classification of the mix of credits</td>
+</tr>
+<tr>
+<td><code>Outstanding_Debt</code></td>
+<td>Represents the remaining debt to be paid (in USD)</td>
+</tr>
+<tr>
+<td><code>Credit_Utilization_Ratio</code></td>
+<td>Represents the utilization ratio of credit cards</td>
+</tr>
+<tr>
+<td><code>Credit_History_Age</code></td>
+<td>Represents the age of credit history of the person</td>
+</tr>
+<tr>
+<td><code>Payment_of_Min_Amount</code></td>
+<td>Represents whether only the minimum amount was paid by the person</td>
+</tr>
+<tr>
+<td><code>Total_EMI_per_month</code></td>
+<td>Represents the monthly EMI payments (in USD)</td>
+</tr>
+<tr>
+<td><code>Amount_invested_monthly</code></td>
+<td>Represents the monthly amount invested by the customer (in USD)</td>
+</tr>
+<tr>
+<td><code>Payment_Behaviour</code></td>
+<td>Represents the payment behavior of the customer (in USD)</td>
+</tr>
+<tr>
+<td><code>Monthly_Balance</code></td>
+<td>Represents the monthly balance amount of the customer (in USD)</td>
+</tr>
+<tr>
+<td><code>Credit_Score</code></td>
+<td>Represents the bracket of credit score (Poor, Standard, Good)</td>
+</tr>
+</tbody>
+</table>
+<p>Even though we have 100k rows, within these rows that are only 12,500 different customers, each customer appears 8 times (from January to August). So basically we can select a particular customer and look at their information and easily find incorrect data and be able to adjust it.</p>
+<h2 id="cleaning-typos-and-outliers">Cleaning Typos and Outliers</h2>
+<p>In this dataset that is a lot of typos or just straight-up nonsense. You&rsquo;ll find some values to be: <code>_</code>, <code>!@9#%8</code>, <code>__10000__</code>, <code>NM</code> or <code>_______</code>. I believe these typos are in the dataset to represent the improbability that you may find when dealing with real-world data and most of them mean that this is a null value.</p>
+<p>For a moment I thought <code>__10000__</code> would just be a typo, but there is no amount invested monthly that is over 200 dollars.</p>
+<div class="highlight"><pre tabindex="0" style="color:#f8f8f2;background-color:#272822;-moz-tab-size:4;-o-tab-size:4;tab-size:4;"><code class="language-txt" data-lang="txt"><span style="display:flex;"><span>__10000__             4305
+</span></span><span style="display:flex;"><span>0.0                    169
+</span></span><span style="display:flex;"><span>80.41529543900253        1
+</span></span><span style="display:flex;"><span>36.66235139442514        1
+</span></span><span style="display:flex;"><span>89.7384893604547         1
+</span></span><span style="display:flex;"><span>                      ... 
+</span></span><span style="display:flex;"><span>36.541908593249026       1
+</span></span><span style="display:flex;"><span>93.45116318631192        1
+</span></span><span style="display:flex;"><span>140.80972223052834       1
+</span></span><span style="display:flex;"><span>38.73937670100975        1
+</span></span><span style="display:flex;"><span>167.1638651610451        1
+</span></span><span style="display:flex;"><span>Name: Amount_invested_monthly, Length: 91049, dtype: int64
+</span></span></code></pre></div><p>Following this logic, I looked for nonsense in the data frame and I started to replace them with numpy <code>nan</code>&rsquo;s. I also looked for outliers by looking at the distribution of values, if there was a value that only appeared once and was isolated I substitute it for a null value. I based this decision not only on this but also when I looked for customers that had this outlier and I observed all the data from this particular customer, I&rsquo;d see weird things like:</p>
+<p><img loading="lazy" src="https://raw.githubusercontent.com/devmedeiros/credit-score-classification-app/main/reports/figures/annual_income.png#center" alt="a table displaying information on a given customer and showing an outlier on its annual income"  />
+</p>
+<p>By looking at this customer is clear that he didn&rsquo;t make this much money annually only one month of the year.</p>
+<p>When you finish this search for typos and outliers don&rsquo;t forget to assign the correct data type to your features. Some features like <code>age</code> started with string characters among the age values and because of this, it&rsquo;s uploaded as an object instead of int or float.</p>
+<h2 id="filling-null-values">Filling Null Values</h2>
+<p>After dealing with all the outliers and typos, we ended up with a lot of null values, as you can see:</p>
+<div class="highlight"><pre tabindex="0" style="color:#f8f8f2;background-color:#272822;-moz-tab-size:4;-o-tab-size:4;tab-size:4;"><code class="language-python" data-lang="python"><span style="display:flex;"><span>df<span style="color:#f92672">.</span>isna()<span style="color:#f92672">.</span>sum()[df<span style="color:#f92672">.</span>isna()<span style="color:#f92672">.</span>sum() <span style="color:#f92672">&gt;</span> <span style="color:#ae81ff">0</span>]
+</span></span></code></pre></div><div class="highlight"><pre tabindex="0" style="color:#f8f8f2;background-color:#272822;-moz-tab-size:4;-o-tab-size:4;tab-size:4;"><code class="language-txt" data-lang="txt"><span style="display:flex;"><span>Age                         2776
+</span></span><span style="display:flex;"><span>Occupation                  7062
+</span></span><span style="display:flex;"><span>Annual_Income                993
+</span></span><span style="display:flex;"><span>Monthly_Inhand_Salary      15002
+</span></span><span style="display:flex;"><span>Num_Credit_Card             2271
+</span></span><span style="display:flex;"><span>Interest_Rate               2034
+</span></span><span style="display:flex;"><span>Num_of_Loan                 4348
+</span></span><span style="display:flex;"><span>Type_of_Loan               11408
+</span></span><span style="display:flex;"><span>Num_of_Delayed_Payment      7002
+</span></span><span style="display:flex;"><span>Changed_Credit_Limit        2091
+</span></span><span style="display:flex;"><span>Num_Credit_Inquiries        1965
+</span></span><span style="display:flex;"><span>Credit_Mix                 20195
+</span></span><span style="display:flex;"><span>Credit_History_Age          9030
+</span></span><span style="display:flex;"><span>Payment_of_Min_Amount      12007
+</span></span><span style="display:flex;"><span>Amount_invested_monthly     8784
+</span></span><span style="display:flex;"><span>Payment_Behaviour           7600
+</span></span><span style="display:flex;"><span>Monthly_Balance             1200
+</span></span><span style="display:flex;"><span>dtype: int64
+</span></span></code></pre></div><p>Instead of just dropping all these null values I first try to fill them using the information I already have. Remember that I said that a customer has historical data for 8 months? We can just use this historical data to fill the null values using an aggregation measurement of our choice filtering for the customer, this will be more accurate than just calculating the mean value of the database.</p>
+<p>I decided to use the average values for the following columns:</p>
+<div class="highlight"><pre tabindex="0" style="color:#f8f8f2;background-color:#272822;-moz-tab-size:4;-o-tab-size:4;tab-size:4;"><code class="language-python" data-lang="python"><span style="display:flex;"><span>mean_columns <span style="color:#f92672">=</span> [
+</span></span><span style="display:flex;"><span>    <span style="color:#e6db74">&#39;Num_of_Delayed_Payment&#39;</span>, <span style="color:#e6db74">&#39;Changed_Credit_Limit&#39;</span>, <span style="color:#e6db74">&#39;Num_Credit_Inquiries&#39;</span>,
+</span></span><span style="display:flex;"><span>    <span style="color:#e6db74">&#39;Amount_invested_monthly&#39;</span>, <span style="color:#e6db74">&#39;Monthly_Balance&#39;</span>, <span style="color:#e6db74">&#39;Num_of_Loan&#39;</span>,
+</span></span><span style="display:flex;"><span>    <span style="color:#e6db74">&#39;Num_Credit_Card&#39;</span>, <span style="color:#e6db74">&#39;Interest_Rate&#39;</span>, <span style="color:#e6db74">&#39;Annual_Income&#39;</span>, <span style="color:#e6db74">&#39;Monthly_Inhand_Salary&#39;</span>
+</span></span><span style="display:flex;"><span>    ]
+</span></span></code></pre></div><p>And the last non-empty value for these:</p>
+<div class="highlight"><pre tabindex="0" style="color:#f8f8f2;background-color:#272822;-moz-tab-size:4;-o-tab-size:4;tab-size:4;"><code class="language-python" data-lang="python"><span style="display:flex;"><span>last_columns <span style="color:#f92672">=</span> [<span style="color:#e6db74">&#39;Age&#39;</span>, <span style="color:#e6db74">&#39;Occupation&#39;</span>, <span style="color:#e6db74">&#39;Type_of_Loan&#39;</span>, <span style="color:#e6db74">&#39;Credit_Mix&#39;</span>]
+</span></span></code></pre></div><p>The reason for not using the mean for all my values is that I didn&rsquo;t want to have someone be 20.5 years old and <code>Occupation</code>, <code>Type_of_Loan</code>, and <code>Credit_Mix</code> are discrete data.</p>
+<h2 id="feature-engineering">Feature Engineering</h2>
+<p>With the clean data, we can proceed to feature engineering. In this case, we first want to change the <code>Type_of_Loan</code>, because that are some occurrences that it has all the loans in one value, as you can see:</p>
+<div class="highlight"><pre tabindex="0" style="color:#f8f8f2;background-color:#272822;-moz-tab-size:4;-o-tab-size:4;tab-size:4;"><code class="language-txt" data-lang="txt"><span style="display:flex;"><span>Not Specified, Mortgage Loan, Auto Loan, and Payday Loan                                                                                         8
+</span></span><span style="display:flex;"><span>Payday Loan, Mortgage Loan, Debt Consolidation Loan, and Student Loan                                                                            8
+</span></span><span style="display:flex;"><span>Debt Consolidation Loan, Auto Loan, Personal Loan, Debt Consolidation Loan, Student Loan, and Credit-Builder Loan                                8
+</span></span><span style="display:flex;"><span>Student Loan, Auto Loan, Student Loan, Credit-Builder Loan, Home Equity Loan, Debt Consolidation Loan, and Debt Consolidation Loan               8
+</span></span><span style="display:flex;"><span>Personal Loan, Auto Loan, Mortgage Loan, Student Loan, and Student Loan                                                                          8
+</span></span><span style="display:flex;"><span>Name: Type_of_Loan, Length: 5380, dtype: int64
+</span></span></code></pre></div><p>So I&rsquo;ll save all the different loan types in one vector, by splitting the loans every time there is a <code>,</code> or <code>, and</code>.</p>
+<div class="highlight"><pre tabindex="0" style="color:#f8f8f2;background-color:#272822;-moz-tab-size:4;-o-tab-size:4;tab-size:4;"><code class="language-python" data-lang="python"><span style="display:flex;"><span>loan_types <span style="color:#f92672">=</span> []
+</span></span><span style="display:flex;"><span><span style="color:#66d9ef">for</span> index <span style="color:#f92672">in</span> df<span style="color:#f92672">.</span>index:
+</span></span><span style="display:flex;"><span>    temp <span style="color:#f92672">=</span> df<span style="color:#f92672">.</span>Type_of_Loan[index]<span style="color:#f92672">.</span>replace(<span style="color:#e6db74">&#39;and &#39;</span>, <span style="color:#e6db74">&#39;&#39;</span>)<span style="color:#f92672">.</span>split(<span style="color:#e6db74">&#39;, &#39;</span>)
+</span></span><span style="display:flex;"><span>    <span style="color:#66d9ef">for</span> i <span style="color:#f92672">in</span> temp: <span style="color:#75715e">#loan in temp array</span>
+</span></span><span style="display:flex;"><span>        <span style="color:#66d9ef">if</span> i <span style="color:#f92672">not</span> <span style="color:#f92672">in</span> loan_types: <span style="color:#75715e">#if loan is not in loan_types</span>
+</span></span><span style="display:flex;"><span>            loan_types<span style="color:#f92672">.</span>append(i) <span style="color:#75715e">#add it</span>
+</span></span></code></pre></div><p>Now we can create dummy variables of these <code>loan_types</code>, so a customer will receive the number 1 if they have this loan or a 0 if they don&rsquo;t.</p>
+<div class="highlight"><pre tabindex="0" style="color:#f8f8f2;background-color:#272822;-moz-tab-size:4;-o-tab-size:4;tab-size:4;"><code class="language-python" data-lang="python"><span style="display:flex;"><span><span style="color:#66d9ef">for</span> loan <span style="color:#f92672">in</span> loan_types:
+</span></span><span style="display:flex;"><span>    df[loan] <span style="color:#f92672">=</span> <span style="color:#ae81ff">0</span> <span style="color:#75715e">#create the loan column in the df with 0</span>
+</span></span><span style="display:flex;"><span>    <span style="color:#66d9ef">for</span> index <span style="color:#f92672">in</span> df<span style="color:#f92672">.</span>index:
+</span></span><span style="display:flex;"><span>        temp <span style="color:#f92672">=</span> df<span style="color:#f92672">.</span>Type_of_Loan[index]<span style="color:#f92672">.</span>replace(<span style="color:#e6db74">&#39;and &#39;</span>, <span style="color:#e6db74">&#39;&#39;</span>)<span style="color:#f92672">.</span>split(<span style="color:#e6db74">&#39;, &#39;</span>)
+</span></span><span style="display:flex;"><span>        <span style="color:#66d9ef">if</span> loan <span style="color:#f92672">in</span> temp:
+</span></span><span style="display:flex;"><span>            df<span style="color:#f92672">.</span>loc[index, loan] <span style="color:#f92672">=</span> <span style="color:#ae81ff">1</span>
+</span></span></code></pre></div><p>Now I want to keep working on this dataset to make it ready for training a machine learning model. For this reason, I need to transform my discrete data into numeric.</p>
+<p>The feature <code>Credit_History_Age</code> has the values as strings &ldquo;22 Years and 5 Months&rdquo;, this pattern repeats itself, so we can take advantage of this and select the year multiplied by 12 and sum the month, resulting in a new feature with the credit history age in months. When we are done with this, there are still going to be null values, to fill them I choose to interpolate the values, this works great when the missing value is in February up until July because it interpolates with the customer&rsquo;s credit history age, but it becomes a bad guessed when the missing value is in January or August.</p>
+<p>The months&rsquo; names are going to be replaced by their number counterpart, so January is 1, February is 2, and so on. <code>credit_mix</code> and <code>credit_score</code> have 3 sequential categories, I choose to go with -1, 0, and 1, but you can use 1, 2, 3 and it&rsquo;ll produce the same result.</p>
+<p>Don&rsquo;t forget to check the GitHub <a href="https://github.com/devmedeiros/credit-score-classification-app/tree/main/">Repository</a> for the complete code mentioned here and the cleaned dataset.</p>
+]]></content:encoded>
     </item>
     
     <item>
@@ -117,6 +837,408 @@
       
       <guid>https://devmedeiros.com/post/alura-challenge-bi-2/</guid>
       <description>Alura hosted a four-week Challenge BI, where participants needed to make 3 dashboards</description>
+      <content:encoded><![CDATA[<p>The Alura Challenge BI 2 was a four-week event where we&rsquo;re challenged to make <em>Business Intelligence</em> dashboards according to the request of three made-up companies. During the event I made this three dashboard using Power BI, you can look at the source file of all dashboards at my <a href="https://github.com/devmedeiros/Alura-Challenge-BI-2">repo</a>.</p>
+<br />
+<style>
+	nav {
+		display: block;
+	}
+
+	.nav {
+		display: -ms-flexbox;
+		display: ruby;
+		-ms-flex-wrap: wrap;
+		flex-wrap: wrap;
+		padding-left: 0;
+		margin-bottom: 1em;
+		list-style: none;
+	}
+
+	.nav-tabs .nav-item {
+		margin-bottom: 0;
+	}
+
+	.nav-tabs .nav-link {
+		border: solid #e9ecef;
+		border-top-left-radius: 0.25rem;
+		border-top-right-radius: 0.25rem;
+	}
+
+	.nav-tabs .nav-link:focus,
+	.nav-tabs .nav-link:hover {
+		border-color: #e9ecef #e9ecef #dee2e6;
+	}
+
+	.nav-tabs .nav-link.disabled {
+		color: #6c757d;
+		background-color: transparent;
+		border-color: transparent;
+	}
+
+	.nav-tabs .nav-item.show .nav-link,
+	.nav-tabs .nav-link.active {
+		color: #495057;
+		background-color: #fff;
+		border-color: #dee2e6 #dee2e6 #fff;
+	}
+
+	.nav-fill .nav-item {
+		-ms-flex: 1 1 auto;
+		flex: 1 1 auto;
+		text-align: center;
+	}
+
+	.nav-tabs .dropdown-menu {
+		margin-top: -1px;
+		border-top-left-radius: 0;
+		border-top-right-radius: 0;
+	}
+
+	.nav-justified .nav-item {
+		-ms-flex-preferred-size: 0;
+		flex-basis: 0;
+		-ms-flex-positive: 1;
+		flex-grow: 1;
+		text-align: center;
+	}
+
+	.nav-link {
+		display: block;
+		padding: 0.5rem 1rem;
+	}
+
+	.nav-link:focus,
+	.nav-link:hover {
+		text-decoration: none;
+	}
+
+	.nav-link.disabled {
+		color: #6c757d;
+		pointer-events: none;
+		cursor: default;
+	}
+
+	.nav-tabs .nav-link {
+		border: 1px solid #e9ecef;
+		border-top-left-radius: 0.25rem;
+		border-top-right-radius: 0.25rem;
+	}
+
+	.nav-tabs .nav-link:focus,
+	.nav-tabs .nav-link:hover {
+		border-color: #e9ecef #e9ecef #dee2e6;
+	}
+
+	.nav-tabs .nav-link.disabled {
+		color: #6c757d;
+		background-color: transparent;
+		border-color: transparent;
+	}
+
+	.nav-tabs .nav-item.show .nav-link,
+	.nav-tabs .nav-link.active {
+		color: black;
+		background-color: #F5F5F5;
+		border-color: #dee2e6 #dee2e6 #fff;
+	}
+
+	.nav-pills .nav-link {
+		border-radius: 0.25rem;
+	}
+
+	.nav-pills .nav-link.active,
+	.nav-pills .show>.nav-link {
+		color: #fff;
+		background-color: #007bff;
+	}
+
+	.navbar-nav .nav-link {
+		padding-right: 0;
+		padding-left: 0;
+	}
+
+	.navbar-expand .navbar-nav .nav-link {
+		padding-right: 0.5rem;
+		padding-left: 0.5rem;
+	}
+
+	.navbar-light .navbar-nav .nav-link {
+		color: rgba(0, 0, 0, 0.5);
+	}
+
+	.navbar-light .navbar-nav .nav-link:focus,
+	.navbar-light .navbar-nav .nav-link:hover {
+		color: rgba(0, 0, 0, 0.7);
+	}
+
+	.navbar-light .navbar-nav .nav-link.disabled {
+		color: rgba(0, 0, 0, 0.3);
+	}
+
+	.navbar-light .navbar-nav .active>.nav-link,
+	.navbar-light .navbar-nav .nav-link.active,
+	.navbar-light .navbar-nav .nav-link.show,
+	.navbar-light .navbar-nav .show>.nav-link {
+		color: rgba(0, 0, 0, 0.9);
+	}
+
+	.navbar-dark .navbar-nav .nav-link {
+		color: rgba(255, 255, 255, 0.5);
+	}
+
+	.navbar-dark .navbar-nav .nav-link:focus,
+	.navbar-dark .navbar-nav .nav-link:hover {
+		color: rgba(255, 255, 255, 0.75);
+	}
+
+	.navbar-dark .navbar-nav .nav-link.disabled {
+		color: rgba(255, 255, 255, 0.25);
+	}
+
+	.navbar-dark .navbar-nav .active>.nav-link,
+	.navbar-dark .navbar-nav .nav-link.active,
+	.navbar-dark .navbar-nav .nav-link.show,
+	.navbar-dark .navbar-nav .show>.nav-link {
+		color: #fff;
+	}
+</style>
+
+<nav>
+	<div class="nav nav-tabs" id="nav-tab" role="tablist">
+
+		
+		
+		
+		
+
+		
+
+		<a class="nav-item nav-link  active "
+		   id="nav-fbedac" data-toggle="tab" href="#fbedac"
+		   role="tab" aria-controls="nav-home" aria-selected="true">Alura Films</a>
+
+		
+
+		<a class="nav-item nav-link "
+		   id="nav-dafceb" data-toggle="tab" href="#dafceb"
+		   role="tab" aria-controls="nav-home" aria-selected="true">Alura Food</a>
+
+		
+
+		<a class="nav-item nav-link "
+		   id="nav-dcbfae" data-toggle="tab" href="#dcbfae"
+		   role="tab" aria-controls="nav-home" aria-selected="true">Alura Skimó</a>
+
+		
+
+	</div>
+</nav>
+
+<div class="tab-content" id="nav-tab-content">
+
+	
+<style>
+	.tab-content>.tab-pane {
+		display: none;
+	}
+
+	.tab-content>.active {
+		display: block;
+	}
+
+	.fade {
+		transition: opacity 0.15s linear;
+	}
+	.fade:not(.show) {
+		opacity: 0;
+	  }
+	  .modal.fade .modal-dialog {
+		transition: -webkit-transform 0.3s ease-out;
+		transition: transform 0.3s ease-out;
+		transition: transform 0.3s ease-out, -webkit-transform 0.3s ease-out;
+		-webkit-transform: translate(0, -50px);
+		transform: translate(0, -50px);
+	  }
+	  .modal-backdrop.fade {
+		opacity: 0;
+	  }
+	  .carousel-fade .carousel-item {
+		opacity: 0;
+		transition-property: opacity;
+		-webkit-transform: none;
+		transform: none;
+	  }
+	  .carousel-fade .carousel-item-next.carousel-item-left,
+	  .carousel-fade .carousel-item-prev.carousel-item-right,
+	  .carousel-fade .carousel-item.active {
+		z-index: 1;
+		opacity: 1;
+	  }
+	  .carousel-fade .active.carousel-item-left,
+	  .carousel-fade .active.carousel-item-right {
+		z-index: 0;
+		opacity: 0;
+		transition: opacity 0s 0.6s;
+	  }
+</style>
+
+
+
+
+
+
+<div class="tab-pane fade show active " id="fbedac" role="tabpanel" aria-labelledby="nav-1">
+
+	
+
+<p>The objective of this dashboard is to help find the best selection for an upcoming movie.</p>
+
+<iframe title="Relatório Alura Films" width="100%" height="450" src="https://app.powerbi.com/view?r=eyJrIjoiZTllNjE2ZTQtNjdkMy00OGI4LTllNTAtM2RhNGE2YWU4YmZlIiwidCI6IjI2ZjA4NzIyLTFjOWUtNGVkZS1iN2VkLThhMmI3N2ZmM2Q5YyJ9&pageName=ReportSection11c983afd307f2fa2f9a" frameborder="0" allowFullScreen="true"></iframe>
+
+<p>With this in mind, I explored in the first tab a little summary about the movies in the database, with this you can get a general view of our data. The second tab is displayed the IMDB and Meta Score of the movies. I also created a measure to show how much both measurements agree. A score of 100 means <strong>doesn't agree at all</strong> and 0 means <strong>completely agree</strong>, the agreeable score was 9.48.</p>
+<p>Our third tab shows information about the movie stars, the top 10 actors with the highest movie gross revenue, and the top 10 actors with the biggest movie count.</p>
+<p>The fourth tab presents the distribution of gross revenue by how many different genres a movie has. It also shows how many movies have a given genre, for example, <strong>Drama</strong> is the most popular choice for movie genre, with 72% of movies in the dataset. At last, this tab also shows the mean gross revenue by genre.</p>
+<p>The fifth and last tab shows a bit of information about the Brazillian Parental Guide and shows the average Meta Score for movies by the parental guide certification. It also shows how much gross revenue, on average, each parental guide certification earned.</p>
+
+
+
+</div>
+<style>
+	.tab-content>.tab-pane {
+		display: none;
+	}
+
+	.tab-content>.active {
+		display: block;
+	}
+
+	.fade {
+		transition: opacity 0.15s linear;
+	}
+	.fade:not(.show) {
+		opacity: 0;
+	  }
+	  .modal.fade .modal-dialog {
+		transition: -webkit-transform 0.3s ease-out;
+		transition: transform 0.3s ease-out;
+		transition: transform 0.3s ease-out, -webkit-transform 0.3s ease-out;
+		-webkit-transform: translate(0, -50px);
+		transform: translate(0, -50px);
+	  }
+	  .modal-backdrop.fade {
+		opacity: 0;
+	  }
+	  .carousel-fade .carousel-item {
+		opacity: 0;
+		transition-property: opacity;
+		-webkit-transform: none;
+		transform: none;
+	  }
+	  .carousel-fade .carousel-item-next.carousel-item-left,
+	  .carousel-fade .carousel-item-prev.carousel-item-right,
+	  .carousel-fade .carousel-item.active {
+		z-index: 1;
+		opacity: 1;
+	  }
+	  .carousel-fade .active.carousel-item-left,
+	  .carousel-fade .active.carousel-item-right {
+		z-index: 0;
+		opacity: 0;
+		transition: opacity 0s 0.6s;
+	  }
+</style>
+
+
+
+
+
+
+<div class="tab-pane fade show " id="dafceb" role="tabpanel" aria-labelledby="nav-1">
+
+	
+
+<p><strong>Alura Food</strong> is interested in expanding its business by entering the Indian market. To do so, the company asked to calculate measures to help them make a better decision.</p>
+
+<iframe title="Relatório Alura Food" width="100%" height="450" src="https://app.powerbi.com/view?r=eyJrIjoiNGEzMTQzMGYtNzFhNC00YjcyLThiMDMtMGE2YTMzMDRhODFiIiwidCI6IjI2ZjA4NzIyLTFjOWUtNGVkZS1iN2VkLThhMmI3N2ZmM2Q5YyJ9&pageName=ReportSection" frameborder="0" allowFullScreen="true"></iframe>
+
+<p>First of all, I merged the datasets and cleaned the data through Power BI, translated a few texts from English to Portuguese through Google Sheets, and converted the meals price from their respective currency value to BRL (Brazillian Currency). Finally, I used Figma to make the background, including images and titles.</p>
+<p>In this project, I opted to used a single page to display all the requested information as I believe it makes it easier to analyze the data.</p>
+<p>Most restaurants in this Indian market don't offer online delivery, with just 19.21% having it. The average rating for the restaurants is 3.72 out of a maximum of 5, the rating is also presented as text, with a <em>Muito Bom</em> (Very Good) being a score over 4.</p>
+<p>The average price of a meal per person is around R$ 39.48 (around USD 7.65). And there are 9577 different restaurants in the dataset, of which 3968, specialize in North Indian cuisine. New Delhi is, by far, the most popular choice to open a restaurant with 5473, the second closest city is Gurgaon, with 1118 restaurants.</p>
+
+
+
+</div>
+<style>
+	.tab-content>.tab-pane {
+		display: none;
+	}
+
+	.tab-content>.active {
+		display: block;
+	}
+
+	.fade {
+		transition: opacity 0.15s linear;
+	}
+	.fade:not(.show) {
+		opacity: 0;
+	  }
+	  .modal.fade .modal-dialog {
+		transition: -webkit-transform 0.3s ease-out;
+		transition: transform 0.3s ease-out;
+		transition: transform 0.3s ease-out, -webkit-transform 0.3s ease-out;
+		-webkit-transform: translate(0, -50px);
+		transform: translate(0, -50px);
+	  }
+	  .modal-backdrop.fade {
+		opacity: 0;
+	  }
+	  .carousel-fade .carousel-item {
+		opacity: 0;
+		transition-property: opacity;
+		-webkit-transform: none;
+		transform: none;
+	  }
+	  .carousel-fade .carousel-item-next.carousel-item-left,
+	  .carousel-fade .carousel-item-prev.carousel-item-right,
+	  .carousel-fade .carousel-item.active {
+		z-index: 1;
+		opacity: 1;
+	  }
+	  .carousel-fade .active.carousel-item-left,
+	  .carousel-fade .active.carousel-item-right {
+		z-index: 0;
+		opacity: 0;
+		transition: opacity 0s 0.6s;
+	  }
+</style>
+
+
+
+
+
+
+<div class="tab-pane fade show " id="dcbfae" role="tabpanel" aria-labelledby="nav-1">
+
+	
+
+<p><strong>Alura Skimo</strong> is interested in analyzing their sales data, to help with this I made this dashboard.</p>
+
+<iframe title="Relatório Alura Skimo" width="100%" height="450" src="https://app.powerbi.com/view?r=eyJrIjoiNTllYjJmODItYzQxNC00ZmEzLTk5ZGMtZDgzNzY2NDM2ZGMxIiwidCI6IjI2ZjA4NzIyLTFjOWUtNGVkZS1iN2VkLThhMmI3N2ZmM2Q5YyJ9" frameborder="0" allowFullScreen="true"></iframe>
+
+<p>It’s composed of three pages. The first one presents a summary of all the main measures you’ll find in the dashboard, filtered for the most recent month. On this first page, you can also rest your mouse cursor over a measure and it’ll show a small plot with the historical series with a tendency line.</p>
+<p>Moving on to the next page, you can see all the information about the products sold by <strong>Alura Skimo</strong>. You can filter the data by ice cream flavor, type of package, category, and product cost. It displayed the basic information about the products, along with a rank of the best-selling products and a couple of plots showing the sales by flavor and sales by category.</p>
+<p>On the last page, you can find information about the salesperson from our company. It shows when they joined the company, how much is their cut, how much revenue they got and how many sales each one made, everything in the last year (2018).</p>
+<p>This dashboard is complex next to the other two because our dataset came from SQL files. First, I had to create the database and load each SQL file into it, then all I had to do was load it on Power BI. At last, I did all the data cleaning and processing on it.</p>
+
+
+
+</div>
+
+
+</div>
+]]></content:encoded>
     </item>
     
     <item>
@@ -126,6 +1248,38 @@
       
       <guid>https://devmedeiros.com/post/2022-06-14-feature-selection/</guid>
       <description>Defining feature selection and showing how you can select features in Machine Learning</description>
+      <content:encoded><![CDATA[<h2 id="what-is-feature-selection">What is feature selection?</h2>
+<p>Feature selection is the process of finding pertinent features and eliminating unnecessary, redundant, or noisy data. It can be useful to help the training process be faster and it can also avoid overfitting. According to Munson and Caruana, the goal of feature selection is to identify the feature set that best balances the risks of having too few features with the risks of having too many features. It can also help improve the prediction accuracy and the interpretation of models.<sup id="fnref:1"><a href="#fn:1" class="footnote-ref" role="doc-noteref">1</a></sup> <sup id="fnref:2"><a href="#fn:2" class="footnote-ref" role="doc-noteref">2</a></sup></p>
+<p>I chose three methods for feature selection to show, but these are not all available methods, in the <code>scikit-learn</code> package that are 17 algorithms implemented at the time of writing. <sup id="fnref:3"><a href="#fn:3" class="footnote-ref" role="doc-noteref">3</a></sup></p>
+<h2 id="correlation-among-features">Correlation among features</h2>
+<p>Correlation among features can bring unnecessary noise to your model. Because a high correlation means that when one feature increases the other increases as well (or decreases if is negative). So if two features have a high correlation they aren’t bringing any new information to our model, in this case, is best to choose one of them to keep and drop the other.</p>
+<p>Look at the following correlation matrix, for example:</p>
+<p><img loading="lazy" src="https://ik.imagekit.io/devmedeiros/out_w4T4rFn5h.png?ik-sdk-version=javascript-1.4.3&amp;updatedAt=1655244061311#center" alt="small correlation plot with weight, height and BMI"  />
+</p>
+<p>We can see that height and weight are heavily correlated with BMI, we don’t need to keep these three features, we can drop height and weight and keep just the BMI, or depending on what you want with the model you just drop the BMI.</p>
+<h2 id="low-variance">Low Variance</h2>
+<p>Removing features with low variance is a simple method of feature selection. You can set a minimal variance a feature needs to determine if it continues in the model or not. The reasoning behind this is that a low variance means it has a small effect on the final model.</p>
+<p>Although there isn&rsquo;t concrete information on what is a &ldquo;low variance&rdquo;, the <code>scikit-learn</code> default option for this method is 0, but you can test other values for your dataset and see what works best for you.</p>
+<h2 id="recursive-feature-elimination">Recursive feature elimination</h2>
+<p>The purpose of recursive feature elimination (RFE) is to pick features by iteratively considering smaller and smaller sets of features given an external estimator that assigns weights to features. The importance of each feature is first determined through any particular attribute, and the estimator is then trained on the initial set of features. The least crucial features are then removed from the present list of features. On the pruned set, that process is continued recursively until the target number of features to select is eventually attained. <sup id="fnref:4"><a href="#fn:4" class="footnote-ref" role="doc-noteref">4</a></sup></p>
+<div class="footnotes" role="doc-endnotes">
+<hr>
+<ol>
+<li id="fn:1">
+<p><a href="https://link.springer.com/chapter/10.1007/978-3-642-04174-7_10">MUNSON, M. Arthur; CARUANA, Rich. On feature selection, bias-variance, and bagging. In: <strong>Joint European Conference on Machine Learning and Knowledge Discovery in Databases</strong>. Springer, Berlin, Heidelberg, 2009. p. 144-159.</a>&#160;<a href="#fnref:1" class="footnote-backref" role="doc-backlink">&#x21a9;&#xfe0e;</a></p>
+</li>
+<li id="fn:2">
+<p><a href="https://faculty.cc.gatech.edu/~hic/CS7616/Papers/Kumar-Minz-2014.pdf">KUMAR, Vipin; MINZ, Sonajharia. Feature selection: a literature review. <strong>SmartCR</strong>, v. 4, n. 3, p. 211-229, 2014.</a>&#160;<a href="#fnref:2" class="footnote-backref" role="doc-backlink">&#x21a9;&#xfe0e;</a></p>
+</li>
+<li id="fn:3">
+<p><a href="https://scikit-learn.org/stable/modules/classes.html#module-sklearn.feature_selection">API Reference — scikit-learn 1.1.1 documentation</a>&#160;<a href="#fnref:3" class="footnote-backref" role="doc-backlink">&#x21a9;&#xfe0e;</a></p>
+</li>
+<li id="fn:4">
+<p><a href="https://scikit-learn.org/stable/modules/feature_selection.html">1.13. Feature selection — scikit-learn 1.1.1 documentation</a>&#160;<a href="#fnref:4" class="footnote-backref" role="doc-backlink">&#x21a9;&#xfe0e;</a></p>
+</li>
+</ol>
+</div>
+]]></content:encoded>
     </item>
     
     <item>
@@ -135,6 +1289,112 @@
       
       <guid>https://devmedeiros.com/post/2022-05-30-churn-rate-challenge/</guid>
       <description>Alura hosted a four-week Data Science Challenge using an imbalanced dataset of Churn Rate of a company Alura Voz</description>
+      <content:encoded><![CDATA[<p>I was challenged to take the role of a new data scientist hired at Alura Voz. This made-up company is a telecommunication company and it needs to reduce the Churn Rate.</p>
+<p>The challenge is divided into four weeks. For the first week, the goal was to clean the dataset provided by an API. Next, we need to identify clients who are more likely to leave the company, using data exploration and analysis. Then, in the third week, we made machine learning models to predict the churn rate for Alura Voz. The last week is to show off what we made during the challenge and build our portfolio. In case you are interested in seeing the code for the challenge just head over to my GitHub <a href="https://github.com/devmedeiros/Challenge-Data-Science">repository</a>.</p>
+<h2 id="first-week">First Week</h2>
+<h3 id="reading-the-dataset">Reading the dataset</h3>
+<p>The dataset is available in a JSON file, at first glance it looked like a normal data frame.</p>
+<p><img loading="lazy" src="https://raw.githubusercontent.com/devmedeiros/Challenge-Data-Science/main/1%20-%20Data%20Cleaning/table_head.png#center" alt="table head with the first five rows"  />
+</p>
+<p>But, as we can see, <code>customer</code>, <code>phone</code>, <code>internet</code>, and <code>account</code> are their own separate table. So I had to normalize them separately and then I just concatenated all these tables into one.</p>
+<h3 id="missing-data">Missing data</h3>
+<p>The first time I looked for missing data in this dataset I notice that apparently, that wasn&rsquo;t anything missing, but later on, I noticed that there was empty space and just space not being counted as <code>NaN</code>. So I corrected this, and now the dataset had 224 missing values for <code>Churn</code> and 11 missing for <code>Charges.Total</code>.</p>
+<p>I decided to drop the missing <code>Churn</code> because this is going to be the object of our study and there isn&rsquo;t a point in studying something that doesn&rsquo;t exist. For the missing <code>Charges.Total</code>, I think it represents a customer that hasn&rsquo;t paid anything yet, because all of them had a tenure of 0, meaning that they had just become a client, so I just replaced the missing value for 0.</p>
+<h3 id="feature-encoding">Feature Encoding</h3>
+<p>The feature <code>SeniorCitizen</code> was the only one that came with <code>0</code> and <code>1</code> instead of <code>Yes</code> and <code>No</code>. For now, I&rsquo;m changing it to yes and no, because it&rsquo;ll make the analysis simpler to read.</p>
+<p><code>Charges.Monthly</code> and <code>Charges.Total</code> were renamed to lose the dot because the dot gets in the way when calling the feature in python.</p>
+<h2 id="second-week">Second Week</h2>
+<h3 id="data-analysis">Data Analysis</h3>
+<p>In the first plot, we can see how much unbalanced our data set is. There&rsquo;re over 5000 clients that didn&rsquo;t leave the company and a little less than 2000 that left.</p>
+<p><img loading="lazy" src="https://raw.githubusercontent.com/devmedeiros/Challenge-Data-Science/main/2%20-%20Data%20Analysis/churn.jpg#center" alt="bar plot with two bars, the first one is for &amp;rsquo;no&amp;rsquo; and the second is for &amp;lsquo;yes&amp;rsquo;, the first bar is over 5000 count and the second one is around 2000"  />
+</p>
+<p>I experimented with oversampling the dataset to handle this imbalance, but it made the machine learning models worse. And undersampling isn&rsquo;t an option with this dataset size, so I just decided to leave it the way it is, and when it&rsquo;s time to split the training and test set I&rsquo;ll stratify the dataset by the <code>Churn</code> feature.</p>
+<p>I also generated 16 plots for all the discrete data, to see all the plots check this <a href="https://github.com/devmedeiros/Challenge-Data-Science/blob/main/2%20-%20Data%20Analysis/data_analysis.ipynb">notebook</a>. I wanted to see if there was any behavior that made some clients more likely to leave the company. Is clear that all, except for <code>gender</code>, seems to play a role in determining if a client will leave the company or not. More specifically payment methods, contracts, online backup, tech support, and internet service.</p>
+<p>In the <code>tenure</code> plot, I decided to make a distribution plot for the tenure, one plot for clients that didn&rsquo;t churn and another for the clients that did churn. We can see that clients that left the company tend to do so at the beginning of their time in the company.</p>
+<p><img loading="lazy" src="https://raw.githubusercontent.com/devmedeiros/Challenge-Data-Science/main/2%20-%20Data%20Analysis/tenure.jpg#center" alt="there are two plots side-by-side, in the first one the title is &amp;lsquo;Churn = No&amp;rsquo; the data is along the tenure axis and is in a U shape. the second plot has the title &amp;lsquo;Churn = Yes&amp;rsquo; and starts high and drops fast along the tenure line"  />
+</p>
+<p>The average monthly charge for clients that didn&rsquo;t churn is 61.27 monetary units, while clients that churn were paying 74.44. This is probably because of the type of contract they prefer, but either way is known that higher prices drive the customers away.</p>
+<h3 id="the-churn-profile">The Churn Profile</h3>
+<p><img loading="lazy" src="https://64.media.tumblr.com/tumblr_lojvnhHFH91qlh1s6o1_400.gifv#center" alt="person jumping through the window"  />
+</p>
+<p>Considering everything that I could see through plots and measures. I came up with a profile for clients that are more likely to churn.</p>
+<ul>
+<li>
+<p>New clients are more likely to churn than older clients.</p>
+</li>
+<li>
+<p>Customers that use fewer services and products tend to leave the company. Also, when they aren&rsquo;t tied down to a longer contract they seem to be more likely to quit.</p>
+</li>
+<li>
+<p>Regarding the payment method, clients that churn have a <strong>strong</strong> preference for electronic checks and usually are spending 13.17 monetary units more than the average client that didn&rsquo;t leave.</p>
+</li>
+</ul>
+<h2 id="third-week">Third Week</h2>
+<h3 id="preparing-the-dataset">Preparing the dataset</h3>
+<p>We start by making dummies variables dropping the first, so we would have n-1 dummies for n categories. Then we move on to look at features correlation.</p>
+<p><img loading="lazy" src="https://raw.githubusercontent.com/devmedeiros/Challenge-Data-Science/main/3%20-%20Model%20Selection/corr_matrix.jpg#center" alt="correlation matrix with all the features"  />
+</p>
+<p>We can see that the <code>InternetService_No</code> feature has a lot of strong correlations with many other features, this is because these other features depend on the client having internet service. So I&rsquo;ll drop all features that are dependent on this one. The same thing happens with <code>PhoneService_Yes</code>.</p>
+<p><code>tenure</code> and <code>ChargesTotal</code> also have a strong correlation, so I tried running the models without one of them and both, and it had a worse performance and took a long time to converge, so I decided to keep them as they are relevant as well.</p>
+<p>After dropping the features I finish preparing the dataset by normalizing the numeric data, <code>ChargesTotal</code> and <code>tenure</code>.</p>
+<h3 id="test-and-training-dataset">Test and training dataset</h3>
+<p>I split the dataset into training and testing sets, 20% for testing and the rest for training. I stratified the data by the <code>Churn</code> feature and I shuffle the dataset before splitting. The same split is used by all the models. After splitting the dataset I decided to oversample the <strong>train</strong> data using SMOTE<sup id="fnref:1"><a href="#fn:1" class="footnote-ref" role="doc-noteref">1</a></sup> because the dataset is imbalanced. The reason that I only used this technique on the training set is that I don&rsquo;t want to have a biased result, oversampling all the datasets would mean that I&rsquo;d be testing my models on the same data that I trained, and that&rsquo;s not the goal here.</p>
+<h3 id="model-evaluation">Model Evaluation</h3>
+<p>I&rsquo;ll use a dummy classifier to have a baseline model for the accuracy score, and I&rsquo;ll also use the metrics: <code>precision</code>, <code>recall</code> and <code>f1 score</code><sup id="fnref:2"><a href="#fn:2" class="footnote-ref" role="doc-noteref">2</a></sup>. Although the dummy model won&rsquo;t have values for this metrics, I&rsquo;ll keep it for comparison on how much the models improved.</p>
+<h3 id="baseline">Baseline</h3>
+<p>I made the baseline model using a dummy classifier that guessed that every client behaved the same. It is always guessed that no client will leave the company. By using this approach we got a baseline accuracy score of <code>0.73456</code>.</p>
+<p>All models moving forward will have the same random state.</p>
+<h3 id="model-1---random-forest">Model 1 - Random Forest</h3>
+<p>I start by using a grid search with cross-validation to find the best parameters within a given pool of options using the <code>recall</code> as the strategy to evaluate the performance. The best model was:</p>
+<div class="highlight"><pre tabindex="0" style="color:#f8f8f2;background-color:#272822;-moz-tab-size:4;-o-tab-size:4;tab-size:4;"><code class="language-python" data-lang="python"><span style="display:flex;"><span>RandomForestClassifier(criterion<span style="color:#f92672">=</span><span style="color:#e6db74">&#39;entropy&#39;</span>, max_depth<span style="color:#f92672">=</span><span style="color:#ae81ff">5</span>, max_leaf_nodes<span style="color:#f92672">=</span><span style="color:#ae81ff">70</span>, random_state<span style="color:#f92672">=</span><span style="color:#ae81ff">22</span>)
+</span></span></code></pre></div><p>After fitting this model, the evaluating metrics were:</p>
+<ul>
+<li>Accuracy Score: 0.72534</li>
+<li>Precision Score: 0.48922</li>
+<li>Recall Score: 0.78877</li>
+<li>F1 Score: 0.60389</li>
+</ul>
+<h3 id="model-2---linear-svc">Model 2 - Linear SVC</h3>
+<p>For this model, I just used the default parameters and set the ceiling for the maximum of iterations to <code>900000</code>.</p>
+<div class="highlight"><pre tabindex="0" style="color:#f8f8f2;background-color:#272822;-moz-tab-size:4;-o-tab-size:4;tab-size:4;"><code class="language-python" data-lang="python"><span style="display:flex;"><span>LinearSVC(max_iter<span style="color:#f92672">=</span><span style="color:#ae81ff">900000</span>, random_state<span style="color:#f92672">=</span><span style="color:#ae81ff">22</span>)
+</span></span></code></pre></div><p>After fitting this model, the evaluating metrics were:</p>
+<ul>
+<li>Accuracy Score: 0.71966</li>
+<li>Precision Score: 0.48217</li>
+<li>Recall Score: 0.75936</li>
+<li>F1 Score: 0.58982</li>
+</ul>
+<h3 id="model-3---multi-layer-perceptron">Model 3 - Multi-layer Perceptron</h3>
+<p>Here I fixed the solver to LBFGS, because according to the documentation it has a better performance in smaller datasets<sup id="fnref:3"><a href="#fn:3" class="footnote-ref" role="doc-noteref">3</a></sup>, and used grid search with cross-validation to find a hidden layer size that would be the best. The best model was:</p>
+<div class="highlight"><pre tabindex="0" style="color:#f8f8f2;background-color:#272822;-moz-tab-size:4;-o-tab-size:4;tab-size:4;"><code class="language-python" data-lang="python"><span style="display:flex;"><span>MLPClassifier(hidden_layer_sizes<span style="color:#f92672">=</span>(<span style="color:#ae81ff">1</span>,), max_iter<span style="color:#f92672">=</span><span style="color:#ae81ff">9999</span>, random_state<span style="color:#f92672">=</span><span style="color:#ae81ff">22</span>, solver<span style="color:#f92672">=</span><span style="color:#e6db74">&#39;lbfgs&#39;</span>)
+</span></span></code></pre></div><p>After fitting this model, the evaluating metrics were:</p>
+<ul>
+<li>Accuracy Score: 0.72818</li>
+<li>Precision Score: 0.49133</li>
+<li>Recall Score: 0.68182</li>
+<li>F1 Score: 0.57111</li>
+</ul>
+<h3 id="conclusion">Conclusion</h3>
+<p>After running the three models, all of them used the same random_state. I got the following accuracy scores and improvements (compared to the baseline model):</p>
+<p><img loading="lazy" src="https://raw.githubusercontent.com/devmedeiros/Challenge-Data-Science/main/3%20-%20Model%20Selection/results_table.png#center" alt="results table"  />
+</p>
+<p>In the end, the Random Forest had the best metrics overall. This model can <em>recall</em> a great portion of clients that churn correctly, still is not perfect but is certainly a starting point. The <em>accuracy</em> score is not as high as I&rsquo;d like, but in this particular problem, the goal is to keep clients from leaving the company and is better to use resources to keep a client that will not leave than to do nothing.</p>
+<p>In the end, I liked this challenge, because I don&rsquo;t usually practice machine learning, but thanks to the challenge I got the chance to make a small project in this area that is so relevant and important. This was my first time working with neural networks and tunning hyper-parameters, and I&rsquo;m sure the next time I&rsquo;ll get even better results.</p>
+<div class="footnotes" role="doc-endnotes">
+<hr>
+<ol>
+<li id="fn:1">
+<p><a href="https://imbalanced-learn.org/stable/references/generated/imblearn.over_sampling.SMOTE.html">imbalanced-learn documentation</a>&#160;<a href="#fnref:1" class="footnote-backref" role="doc-backlink">&#x21a9;&#xfe0e;</a></p>
+</li>
+<li id="fn:2">
+<p><a href="https://towardsdatascience.com/accuracy-precision-recall-or-f1-331fb37c5cb9">Accuracy, Precision, Recall or F1? - Koo Ping Shung</a>&#160;<a href="#fnref:2" class="footnote-backref" role="doc-backlink">&#x21a9;&#xfe0e;</a></p>
+</li>
+<li id="fn:3">
+<p><a href="https://scikit-learn.org/stable/modules/generated/sklearn.neural_network.MLPClassifier.html">scikit-learn documentation</a>&#160;<a href="#fnref:3" class="footnote-backref" role="doc-backlink">&#x21a9;&#xfe0e;</a></p>
+</li>
+</ol>
+</div>
+]]></content:encoded>
     </item>
     
     <item>
@@ -144,6 +1404,78 @@
       
       <guid>https://devmedeiros.com/post/2022-04-29-ux-power-bi-dashboards/</guid>
       <description>Defining UX/UI in the context of Bussiness Intelligence for Dashboards with examples</description>
+      <content:encoded><![CDATA[<h2 id="what-is-uxui">What is UX/UI?</h2>
+<p>UX is the acronym for User Experience, it is a recent concept about making design decisions while thinking about the user experience. The UX designer needs to be concerned about whether their product is easy to use and intuitive, making changes to it whenever necessary to suit the user&rsquo;s needs.</p>
+<p>UI stands for User Interface. It is everything involved in the interaction of the user and the product. The UI designer is responsible for developing interfaces, not only limited to the visual aspects but also ensuring that the interfaces are functional and usable and generally contribute to a good user experience.</p>
+<h2 id="how-to-improve-the-experience-of-bi-dashboards">How to Improve the Experience of BI Dashboards?</h2>
+<p>Many people see BI dashboards as web pages. This comes with some expectations. For example, most sites that have some navigation system use a top menu with buttons, a side menu (most common in Brazil being on the left, but in some countries, it is on the right), or a hamburger menu (the one we click on it and the options appear).</p>
+<figure>
+    <img loading="lazy" src="https://ik.imagekit.io/devmedeiros/site_layout_C0BWt0-Rh.png?ik-sdk-version=javascript-1.4.3&amp;updatedAt=1651180441785"
+         alt="Image with three website layouts, the first with a top navigation bar, the second with a left-side menu and the third with a sandwich menu"/> <figcaption>
+            <p>Jaqueline Medeiros - All rights reserved</p>
+        </figcaption>
+</figure>
+
+<p>With this, a majority of people who use the dashboards expect to find navigation buttons and data segmentation (filter) in these places, in addition to other information such as logo and title.</p>
+<h3 id="data-segmentation">Data Segmentation</h3>
+<p>Also commonly called a data filter, it is a fundamental part of several dashboards, its positioning needs to be defined carefully, because if it is in a place that the user does not expect, it can prevent your dashboard from being used efficiently, in addition to maintaining a visual standard for everyone its filters help people more easily recognize what is and isn&rsquo;t a filter.</p>
+<figure>
+    <img loading="lazy" src="https://ik.imagekit.io/devmedeiros/base_7_vbzsb9L.png?ik-sdk-version=javascript-1.4.3&amp;updatedAt=1651183332760"
+         alt="Image with six filters, distributed in two columns, each one with three. One filter is for a city, the other is for a restaurant and the last one is for reservations? The only difference between them is the design, on the left they are consistent and on the right, each one has a unique design."/> 
+</figure>
+
+<p>You can and should use and experiment with different themes in your projects. What matters, when making it easier for users, is consistency, pick a model for your filters with the desired colors and all the graphic specifications that are of interest to you and use it in all filters, as this will help people quickly find it and recognize that it&rsquo;s a filter.</p>
+<p><img loading="lazy" src="https://ik.imagekit.io/devmedeiros/borracha_Xwi_TYTHB.png?ik-sdk-version=javascript-1.4.3&amp;updatedAt=1651183773246#center" alt="Three filters with, city, restaurant and accept reservation? Where the city shows an eraser next to the title and the text Clear selections"  />
+</p>
+<p>It&rsquo;s common for people when they are reading something on the computer to position the mouse pointer where they are reading. For Power BI, this makes it easier for the user to find the clear data segmentation button because when hovering the mouse over the filter name, a rubber appears on the left side where the filter name is. If you use Power BI, you probably already knew that, but we can improve this by using something that the user already knows, which is the <strong>rubber</strong>, and create a button using it as an icon and make this button clear all filters at the same time. If you want to know how to make this button <a href="https://community.powerbi.com/t5/Desktop/Clear-All-Slicers-by-one-button-in-power-bi-desktop/m-p/494518">here</a>, in the Power BI forum, explains how.</p>
+<p>This feature needs may be unnoticed at first. Regularly dashboard users don&rsquo;t realize which filters they have used or they use so many that they just want to be able to clear the selection faster and more efficiently, so this button makes the process easier.</p>
+<h3 id="page-navigation">Page Navigation</h3>
+<p>Power BI&rsquo;s native page navigation is not intuitive for most people and you may want to direct the navigation in a specific flow that facilitates understanding and contributes to the intended storytelling. In this case, we have the option to hide all the report tabs, except for the opening/home page. But what&rsquo;s the best way to direct the user to the other pages? Suppose your report is simple, you have an overview tab and another tab with a breakdown, a simple button would solve your problem, but if your report is extensive it may be unfeasible to put a button for each tab on all pages.</p>
+<figure>
+    <img loading="lazy" src="https://ik.imagekit.io/devmedeiros/infografico_kQJe_yhQD.png?ik-sdk-version=javascript-1.4.3&amp;updatedAt=1651241421864"
+         alt="A circle with four rectangles around it, a line connects the rectangles to the circle" width="100%"/> <figcaption>
+            <p>Jaqueline Medeiros - All rights reserved</p>
+        </figcaption>
+</figure>
+
+<p>In this case, it might be interesting to consider having a home page that leads to all the other pages and placing a <code>home</code> or <code>back</code> button on them.</p>
+<h2 id="how-to-improve-dashboards-interface">How to Improve Dashboards Interface?</h2>
+<h3 id="prototyping-programs">Prototyping Programs</h3>
+<p>Using a specific program to prototype your dashboard allows for greater artistic freedom compared to what Business Intelligence applications typically provide. Figma is a great tool for this, you can create advanced backgrounds and prototypes with amazing quality to use in your BI dashboards.</p>
+<p>Here&rsquo;s an example of a dashboard I made a few months ago:</p>
+<figure>
+    <img loading="lazy" src="https://raw.githubusercontent.com/devmedeiros/Alura-Challenge-BI-2/main/Alura%20Food/alura%20food%20resume.png"
+         alt="In the picture you can read the text: Overview of Indian Restaurants Market Dev_Medeiros City Restaurant Accepts Reservations? 19.21 % Restaurants with Online Delivery Average Rating 3.72 R$ 39.48 Average Price per Person 9577 Total Restaurants 5 Most Popular Cities Restaurants 5 Most Popular Cuisine"/> <figcaption>
+            Panel with data
+        </figcaption>
+</figure>
+
+<p>The background of this panel was done completely in Figma, even some of the titles of the BI visuals.</p>
+<figure>
+    <img loading="lazy" src="https://raw.githubusercontent.com/devmedeiros/Alura-Challenge-BI-2/main/Alura%20Food/Alura%20Food.png"
+         alt=" In the image you can read the text: Overview of Indian Restaurants Market Dev_Medeiros City Restaurant Accepts Reservations? % of Restaurants with Online Delivery Average Rating Average Price per Person Total Restaurants 5 Cities with the most Restaurants 5 Most Popular Cuisine"/> <figcaption>
+            Background made in Figma
+        </figcaption>
+</figure>
+
+<p>You can check out more <a href="/post/alura-challenge-bi-2">Power BI Dashboards</a> I made for Alura Challenge BI.</p>
+<h3 id="figures-and-icons">Figures and Icons</h3>
+<figure class="align-center ">
+    <img loading="lazy" src="https://img.freepik.com/vetores-gratis/employees-dando-as-maos-e-ajudando-os-colegas-a-cliir-as-escadas_74855-5236.jpg?w%20=1380&amp;t=st=1651239796~exp=1651240396~hmac=1b2ab902322bbf8ce26e3bc83f602e69075fcc2e18f0afdc91a328c7942ba746#center"
+         alt="Vector created by pch.vector - br.freepik.com"/> <figcaption>
+            <p>Vector created by pch.vector - br.freepik.com</p>
+        </figcaption>
+</figure>
+
+<p>Figures and icons when used correctly help make the panel stand out, and make it more eye-catching and beautiful. There are several ways to get images, if you or your team can&rsquo;t create them yourself there is the option of using online platforms that provide vectorized images. On these platforms, there are free options, which require some type of attribution, and premium (paid) options, which often do not need to attribute the author and have a higher quality.</p>
+<figure class="align-center ">
+    <img loading="lazy" src="https://img.icons8.com/dusk/344/cash-register.png#center"
+         alt="Cash register icon"/> <figcaption>
+            <p>ICONS8 icon</p>
+        </figcaption>
+</figure>
+
+]]></content:encoded>
     </item>
     
     <item>
@@ -153,6 +1485,50 @@
       
       <guid>https://devmedeiros.com/post/2022-04-17-storytelling-with-ceap/</guid>
       <description>The storytelling of how much each deputy/senator spends in Brazil</description>
+      <content:encoded><![CDATA[<h2 id="the-dataset">The Dataset</h2>
+<p>CEAP stands for <em>Cota para o Exercício da Atividade Parlamentar</em>, in English, Exercise of Parliamentary Activity from Brazil. The quota is a monthly amount that can be used by the deputy/senator to defray typical expenses of the exercise of the parliamentary mandate.</p>
+<p>The monthly amounts don&rsquo;t accumulate over the months. Another important thing is Senators in Brazil have an 8-year mandate, and there are elections every 4 years.</p>
+<p>The main dataset is provided by the Brazilian government through the transparency portal.<sup id="fnref:1"><a href="#fn:1" class="footnote-ref" role="doc-noteref">1</a></sup> I gathered additional data to link the quota for each senator and federal unit.<sup id="fnref:2"><a href="#fn:2" class="footnote-ref" role="doc-noteref">2</a></sup><sup id="fnref:3"><a href="#fn:3" class="footnote-ref" role="doc-noteref">3</a></sup></p>
+<h2 id="data-analysis">Data Analysis</h2>
+<h3 id="total-amount-refunded-by-year">Total Amount Refunded by Year</h3>
+<p><img loading="lazy" src="https://raw.githubusercontent.com/devmedeiros/7DaysOfCode/main/img/refunded_year.jpg#center" alt="Bar plot with blue bars and green bars indicating election years, shows the total amount refunded by senators in Brazil"  />
+</p>
+<p>On the image above we can see how much was refunded by year. The year 2022 is the smallest because is not over yet. The data was collected on April 16, 2022.</p>
+<p>There seems to be a trend to spend slightly less money on election years.</p>
+<p>The first three years were the three lowest spending years, <strong>11.52M</strong>, <strong>11.61M</strong>, and <strong>10.64M</strong> from 2008 to 2010, respectively. This was probably because in the following years the expenses that could be refunded increased in 2011.</p>
+<h3 id="top-highest-and-lowest-average-refunded-percentages-by-senators">Top Highest and Lowest Average Refunded Percentages by Senators</h3>
+<p>These percentages represent the quota percentage a given senator refunded on average.</p>
+<p><img loading="lazy" src="https://raw.githubusercontent.com/devmedeiros/7DaysOfCode/main/img/senator_refund_highest_mean.jpg#center" alt="Horizontal bar plot with the 10 highest refundees, on average, senators"  />
+</p>
+<p>In the image above, it&rsquo;s seen highest refunded senators note that they’re all closed together, the highest refundee, on average, is João Capiberibe, using <strong>99.78%</strong> of his quota. On the lowest side (image below), it&rsquo;s presented the lowest use of the refund quota, on average. Nailde Panta, is the lowest refundee, on average, using just <strong>4.1%</strong> of her quota.</p>
+<p><img loading="lazy" src="https://raw.githubusercontent.com/devmedeiros/7DaysOfCode/main/img/senator_refund_lowest_mean.jpg#center" alt="Horizontal bar plot with the 10 lowest refundees, on average, senators"  />
+</p>
+<h3 id="expense-types-over-the-years">Expense Types Over the Years</h3>
+<p>Here we can see that in the years 2008 to 2010 there wasn’t any refund by transport and private security services.</p>
+<p><img loading="lazy" src="https://raw.githubusercontent.com/devmedeiros/7DaysOfCode/main/img/expense_type_year.jpg#center" alt="Bar plot of expenses type refunded by the years 2008 to 2022"  />
+</p>
+<p>In 2008, the main expenses were publication of parliamentary activity (over <strong>R$ 7,000.00</strong>) and locomotion/accommodation (almost <strong>R$ 6,500.00</strong>). In the subsequent years, those expenses dropped in half, for the publications and to less than <strong>R$ 1,000.00</strong> for locomotion.</p>
+<p>In 2013 and 2014 the expense of private security was the highest ever with over <strong>R$ 4,000.00</strong>. Probably due to protests in those years.</p>
+<h2 id="to-learn-more">To learn more</h2>
+<p>To learn how The Chamber of Deputies from Brazil works click <a href="https://www2.camara.leg.br/english">here</a>.</p>
+<p>This is presentation is for learning purposes, from a challenge proposed by Alura #7DaysOfCode. In case you want to know what else can be done with the data, check the <a href="https://serenata.ai/en/">Serenata de Amor</a>. It&rsquo;s a Brazilian project that uses AI to track refunded requests by deputies.</p>
+<p>See my code at my GitHub <a href="https://github.com/devmedeiros/7DaysOfCode">repo</a>, there you can also find a slide presentation, learn about how the data was cleaned, and know more about the next task from the challenge.</p>
+<h3 id="references">References</h3>
+<div class="footnotes" role="doc-endnotes">
+<hr>
+<ol>
+<li id="fn:1">
+<p><a href="https://www12.senado.leg.br/transparencia/dados-abertos-transparencia/dados-abertos-ceaps">https://www12.senado.leg.br/transparencia/dados-abertos-transparencia/dados-abertos-ceaps</a>&#160;<a href="#fnref:1" class="footnote-backref" role="doc-backlink">&#x21a9;&#xfe0e;</a></p>
+</li>
+<li id="fn:2">
+<p><a href="https://pt.wikipedia.org/wiki/Lista_de_senadores_do_Brasil#Nova_Rep%C3%BAblica_(1987%E2%80%932023)">https://pt.wikipedia.org/wiki/Lista_de_senadores_do_Brasil#Nova_Rep%C3%BAblica_(1987%E2%80%932023)</a>&#160;<a href="#fnref:2" class="footnote-backref" role="doc-backlink">&#x21a9;&#xfe0e;</a></p>
+</li>
+<li id="fn:3">
+<p><a href="https://www2.camara.leg.br/legin/int/atomes/2009/atodamesa-43-21-maio-2009-588364-publicacaooriginal-112820-cd-mesa.html">https://www2.camara.leg.br/legin/int/atomes/2009/atodamesa-43-21-maio-2009-588364-publicacaooriginal-112820-cd-mesa.html</a>&#160;<a href="#fnref:3" class="footnote-backref" role="doc-backlink">&#x21a9;&#xfe0e;</a></p>
+</li>
+</ol>
+</div>
+]]></content:encoded>
     </item>
     
     <item>
@@ -162,6 +1538,18 @@
       
       <guid>https://devmedeiros.com/post/2022-04-12-comprehending-the-p-value/</guid>
       <description>P-value definition, how to use it, and interpreting the measurement</description>
+      <content:encoded><![CDATA[<h2 id="what-is-the-p-value">What is the p-value?</h2>
+<p>In statistics, we have hypothesis tests, which are made to decide whether to reject or <em>not</em> reject the null hypothesis. Some examples of hypothesis testing are Neyman-Pearson, Shapiro-Wilk, Student&rsquo;s T-test, and others.</p>
+<p>All hypothesis tests have a test statistic specific to them. And this statistic is used to evaluate the test, but this task can be tiring even with the use of computers because most software does not return the comparison statistic as an output, only the sample statistic. In this case, the p-value comes to facilitate this comparison, as it is already a representation of this test statistic. It represents the probability of obtaining a test statistic equal to or more extreme than the one calculated in your sample, considering the null hypothesis to be true.</p>
+<p>This makes it easier because by knowing the confidence level that you want to test your hypothesis, you just need to compare if the p-value is smaller or greater than your confidence level, while if you were to use the test statistic it would still be necessary to calculate the statistic for each different confidence level than you would compare. So suppose you want to compare 1%, 5%, and 10%, you would have to calculate three different test statistics to compare your sample statistic.</p>
+<h2 id="how-to-use-it">How to use it?</h2>
+<p>It is very common when we are learning statistics on our own, to read that if the p-value is less than 5% we reject the hypothesis or that if it is higher we &ldquo;accept&rdquo; the hypothesis.</p>
+<p>The value with which we compare the p-value must be defined together with people from the business area you are working with, it is very common in some sectors to use a very small p-value such as 1% or even 0.1% and in others use values ​​greater than 5%.</p>
+<p>Note that a p-value of 0.02 would be rejected if we consider <code>α = 1%</code>, but not if <code>α = 5%</code>. When in doubt about which one to use, it is first recommended to make this decision before taking the test. Second, keep in mind that an <code>α = 1%</code> will have a confidence of <code>99% (1-α)</code>, whereas if it were 5% it would be <del>only</del> 95%. It might seem like it&rsquo;s best to take the value that gives you the most &ldquo;confidence&rdquo;, but a very small p-value can lead to more rejections of your hypothesis.</p>
+<p>The truth is that hypothesis tests only give us the rejection information, when a null hypothesis is not rejected, it means that no evidence was found that contradicts what it claims, it does not mean that we have proved it to be correct. So you have to be very careful when using the p-value.</p>
+<h2 id="interpreting-the-measure">Interpreting the measure</h2>
+<p>A very common way of interpreting the measure is <em>&ldquo;The null hypothesis is rejected, with α% confidence&rdquo;</em>, in the case of rejection (where the <code>p-value &gt; α</code>) and the case of <em>no</em> rejection (<code>p-value &lt; α</code>) <em>&ldquo;Not enough evidence was found to reject the null hypothesis, with α% confidence&rdquo;</em>.</p>
+]]></content:encoded>
     </item>
     
     <item>
@@ -171,6 +1559,12 @@
       
       <guid>https://devmedeiros.com/post/2022-01-24-podcast-review-mlg/</guid>
       <description>A review about the podcast Machine Learning Guide</description>
+      <content:encoded><![CDATA[<p><img loading="lazy" src="https://ocdevel.com/static/media/MLG-Option-1.24e2cc63.jpg#center" alt="Machine Learning Guide Podcast Cover"  />
+</p>
+<p>The show is presented by Tyler Renelle from Depth, since 2021 it has been redone to update the content. The podcast offers a <a href="https://ocdevel.com/mlg/resources">resource</a> list where you can find all of the books, courses, and sites mentioned during the podcast. It&rsquo;s a great podcast for anyone who is learning about machine learning, it can be useful for a complete beginner, an enthusiast, or someone who is looking to further even more on this topic.</p>
+<p>The show starts by talking about what is <em>data science</em>, how it relates to <em>machine learning</em> and <em>artificial intelligence</em>. It also talks about the first attempts humans had made to create AI, with some examples coming from as early as the 13th century.</p>
+<p>I like that the show talks about concepts of machine learning in a different way than I&rsquo;m used to. When people are talking about machine learning, as a Statistician, I always feel that I understand what people are talking about, except I never knew the keywords they were using. What machine learning engineers might call <em>features</em> I was taught as <em>variable</em>, so I got confused when talking to friends about machine learning when they came from a different background as me (e.g. computer science). This is one of the reasons why I like the podcast so much because it talks about deep details about every machine learning concept so if it is talking about something that I already know I can now make that connection.</p>
+]]></content:encoded>
     </item>
     
     <item>
@@ -180,6 +1574,171 @@
       
       <guid>https://devmedeiros.com/post/2021-12-28-amazon-top-50-books/</guid>
       <description>Exploratory Data Analysis of Amazon&amp;rsquo;s top 50 bestselling books 2009 - 2019</description>
+      <content:encoded><![CDATA[<p>Recently I finished an Alura course named <em>Python for Data Science</em> and I want to put what I learned into practice, to do so I&rsquo;ll make a descriptive analysis on this dataset <a href="https://www.kaggle.com/sootersaalu/amazon-top-50-bestselling-books-2009-2019"><strong>Amazon Top 50 Bestselling Books 2009 - 2019</strong></a>. It contains 550 books and the data has been categorized as fiction and non-fiction by Goodreads. All of the code can be found <a href="https://gist.github.com/devmedeiros/12813bebd78f7662966096e963ed0aa9">here</a>.</p>
+<p>I started checking the first five observations from the dataset.</p>
+<table>
+<thead>
+<tr>
+<th>Name</th>
+<th>Author</th>
+<th>User Rating</th>
+<th>Reviews</th>
+<th>Price</th>
+<th>Year</th>
+<th>Genre</th>
+</tr>
+</thead>
+<tbody>
+<tr>
+<td>10-Day Green Smoothie Cleanse</td>
+<td>JJ Smith</td>
+<td>4.7</td>
+<td>17350</td>
+<td>8</td>
+<td>2016</td>
+<td>Non Fiction</td>
+</tr>
+<tr>
+<td>11/22/63: A Novel</td>
+<td>Stephen King</td>
+<td>4.6</td>
+<td>2052</td>
+<td>22</td>
+<td>2011</td>
+<td>Fiction</td>
+</tr>
+<tr>
+<td>12 Rules for Life: An Antidote to Chaos</td>
+<td>Jordan B. Peterson</td>
+<td>4.7</td>
+<td>18979</td>
+<td>15</td>
+<td>2018</td>
+<td>Non Fiction</td>
+</tr>
+<tr>
+<td>1984 (Signet Classics)</td>
+<td>George Orwell</td>
+<td>4.7</td>
+<td>21424</td>
+<td>6</td>
+<td>2017</td>
+<td>Fiction</td>
+</tr>
+<tr>
+<td>5,000 Awesome Facts (About Everything!) (Natio&hellip;</td>
+<td>National Geographic Kids</td>
+<td>4.8</td>
+<td>7665</td>
+<td>12</td>
+<td>2019</td>
+<td>Non Fiction</td>
+</tr>
+</tbody>
+</table>
+<p>Here it&rsquo;s possible to see that the data has the <strong>Year</strong> in which the book was on the <em>top 50</em> list, it&rsquo;s <strong>Price</strong>, the average <strong>User Rating</strong>, total <strong>Reviews</strong>, <strong>Author</strong>, <strong>Name</strong> and lastly, <strong>Genre</strong>.</p>
+<p>There are no null values in the dataset. And from 550 books there are 248 unique authors, so let&rsquo;s see which authors have had more books in the top 50 bestselling during this period.</p>
+<table>
+<thead>
+<tr>
+<th>Author</th>
+<th>Number of Books</th>
+</tr>
+</thead>
+<tbody>
+<tr>
+<td>Jeff Kinney</td>
+<td>12</td>
+</tr>
+<tr>
+<td>Gary Chapman</td>
+<td>11</td>
+</tr>
+<tr>
+<td>Rick Riordan</td>
+<td>11</td>
+</tr>
+<tr>
+<td>Suzanne Collins</td>
+<td>11</td>
+</tr>
+<tr>
+<td>American Psychological Association</td>
+<td>10</td>
+</tr>
+<tr>
+<td>Dr. Seuss</td>
+<td>9</td>
+</tr>
+<tr>
+<td>Gallup</td>
+<td>9</td>
+</tr>
+<tr>
+<td>Rob Elliott</td>
+<td>8</td>
+</tr>
+<tr>
+<td>Stephen R. Covey</td>
+<td>7</td>
+</tr>
+<tr>
+<td>Stephenie Meyer</td>
+<td>7</td>
+</tr>
+<tr>
+<td>Dav Pilkey</td>
+<td>7</td>
+</tr>
+<tr>
+<td>Bill O&rsquo;Reilly</td>
+<td>7</td>
+</tr>
+<tr>
+<td>Eric Carle</td>
+<td>7</td>
+</tr>
+</tbody>
+</table>
+<p>The author with more books in the top 50 list was Jeff Kinney, tied at second, with 11 books, was Gary Chapman, Rick Riordan, and Suzanne Collins. Tied at 9th is Stephen R. Covey, Stephenie Meyer, Dav Pilkey, Bill O&rsquo;Reilly, and Eric Carle, with 7 books.</p>
+<p><img loading="lazy" src="https://ik.imagekit.io/devmedeiros/violing_ur_vmTFo02uK.jpg?updatedAt=1640708039606" alt="Violing plot of User Rating"  />
+</p>
+<p>With the violing plot, we can see how the user rating is concentrated and because our data is composed of bestsellers it makes sense that the user rating is mostly concentrated around 4.5 and 4.75.</p>
+<p><img loading="lazy" src="https://ik.imagekit.io/devmedeiros/boxplot_year_reviews_Pa1YGMhj2z1.jpg?updatedAt=1640708039777" alt="Boxplot of Review Count by Year"  />
+</p>
+<p>This boxplot of reviews count by year shows that the variability increases through the years, having its peak at 2014 and gradually stabilizing. We can also see that in the first years, 2010 and 2011, there were more outliers in the data.</p>
+<p>I wanted to look at the user rating and price by book genre. So I calculated these average values.</p>
+<table>
+<thead>
+<tr>
+<th>Genre</th>
+<th>User Rating</th>
+<th>Price</th>
+</tr>
+</thead>
+<tbody>
+<tr>
+<td>Fiction</td>
+<td>4.65</td>
+<td>10.85</td>
+</tr>
+<tr>
+<td>Non Fiction</td>
+<td>4.60</td>
+<td>14.84</td>
+</tr>
+</tbody>
+</table>
+<p>The user rating average by genre seems to be similar just 0.05 difference, but the price has a bigger difference 10.85 for fiction and 14.84 for non-fiction books. To be sure that these differences are statistically significant I&rsquo;ll use the Mann-Whitney test.</p>
+<p>The Mann-Whitney null hypothesis is that the samples have the same distribution, and in both cases, we reject the null hypothesis with a 95% confidence level. The p-value for the price data was 8.34e-08 and the user rating was 1.495e-07.</p>
+<p>To visually show how different their distribution is we can take a look at the following plots.</p>
+<p><img loading="lazy" src="https://ik.imagekit.io/devmedeiros/hist_price_qxT6fxEGQ.jpg?updatedAt=1640708039771" alt="Distribution for Book Price by Genre"  />
+</p>
+<p>The distribution for the price of fiction books is heavily inclined to the left and consistently diminishes as the price goes up. While the non-fiction books price starts high and becomes even higher, 120 and almost 140 occurrences in the first two categories, then it rapidly diminishes.</p>
+<p><img loading="lazy" src="https://ik.imagekit.io/devmedeiros/hist_ur_6YxOQ_Huz.jpg?updatedAt=1640708040024" alt="Distribution for User Rating by Genre"  />
+</p>
+<p>The distribution for the user rating by the fiction genre slowly increases, having its peek at around 4.8. And the distribution of the non-fiction genre has its peak at a little over 4.6.</p>
+]]></content:encoded>
     </item>
     
     <item>
@@ -189,6 +1748,121 @@
       
       <guid>https://devmedeiros.com/post/2021-11-07-seaborn-package-guide/</guid>
       <description>A simple guide on how to make basic plots using the seaborn package from Python</description>
+      <content:encoded><![CDATA[<h2 id="introduction">Introduction</h2>
+<p>I&rsquo;m learning data visualization in Python and I see myself as a &lsquo;hands on&rsquo; learner, so I&rsquo;ll be reproducing some basic plots using <code>seaborn</code> package that you can use as a reference everytime you need to fresh up your memory.</p>
+<p>At first is required that the packages are properly imported, after that I load the iris dataset.</p>
+<div class="highlight"><pre tabindex="0" style="color:#f8f8f2;background-color:#272822;-moz-tab-size:4;-o-tab-size:4;tab-size:4;"><code class="language-python" data-lang="python"><span style="display:flex;"><span><span style="color:#f92672">import</span> pandas <span style="color:#66d9ef">as</span> pd
+</span></span><span style="display:flex;"><span><span style="color:#f92672">import</span> seaborn <span style="color:#66d9ef">as</span> sns
+</span></span><span style="display:flex;"><span><span style="color:#f92672">import</span> matplotlib.pyplot <span style="color:#66d9ef">as</span> plt
+</span></span><span style="display:flex;"><span>
+</span></span><span style="display:flex;"><span>url <span style="color:#f92672">=</span> <span style="color:#e6db74">&#34;https://git.io/JXciW&#34;</span>
+</span></span><span style="display:flex;"><span>
+</span></span><span style="display:flex;"><span>iris <span style="color:#f92672">=</span> pd<span style="color:#f92672">.</span>read_csv(url)
+</span></span></code></pre></div><p>If you&rsquo;re not familiar with the iris dataset, you can see its first five rows below:</p>
+<table>
+<thead>
+<tr>
+<th>sepal_length</th>
+<th>sepal_width</th>
+<th>petal_length</th>
+<th>petal_width</th>
+<th>species</th>
+</tr>
+</thead>
+<tbody>
+<tr>
+<td>5.1</td>
+<td>3.5</td>
+<td>1.4</td>
+<td>0.2</td>
+<td>setosa</td>
+</tr>
+<tr>
+<td>4.9</td>
+<td>3.0</td>
+<td>1.4</td>
+<td>0.2</td>
+<td>setosa</td>
+</tr>
+<tr>
+<td>4.7</td>
+<td>3.2</td>
+<td>1.3</td>
+<td>0.2</td>
+<td>setosa</td>
+</tr>
+<tr>
+<td>4.6</td>
+<td>3.1</td>
+<td>1.5</td>
+<td>0.2</td>
+<td>setosa</td>
+</tr>
+<tr>
+<td>5.0</td>
+<td>3.6</td>
+<td>1.4</td>
+<td>0.2</td>
+<td>setosa</td>
+</tr>
+</tbody>
+</table>
+<h2 id="barplots">Barplots</h2>
+<p>To create simple barplots.</p>
+<div class="highlight"><pre tabindex="0" style="color:#f8f8f2;background-color:#272822;-moz-tab-size:4;-o-tab-size:4;tab-size:4;"><code class="language-python" data-lang="python"><span style="display:flex;"><span>sns<span style="color:#f92672">.</span>barplot(x<span style="color:#f92672">=</span><span style="color:#e6db74">&#34;species&#34;</span>, y<span style="color:#f92672">=</span><span style="color:#e6db74">&#34;petal_width&#34;</span>, data<span style="color:#f92672">=</span>iris)
+</span></span></code></pre></div><p><img loading="lazy" src="https://ik.imagekit.io/devmedeiros/python_seaborn/barplot_EGCCNkum4y.jpg?updatedAt=1636308224965" alt="seaborn barplot species x petal_width"  />
+</p>
+<p>Making a horizontal barplot.</p>
+<div class="highlight"><pre tabindex="0" style="color:#f8f8f2;background-color:#272822;-moz-tab-size:4;-o-tab-size:4;tab-size:4;"><code class="language-python" data-lang="python"><span style="display:flex;"><span>sns<span style="color:#f92672">.</span>barplot(x<span style="color:#f92672">=</span><span style="color:#e6db74">&#34;petal_width&#34;</span>, y<span style="color:#f92672">=</span><span style="color:#e6db74">&#34;species&#34;</span>, data<span style="color:#f92672">=</span>iris)
+</span></span></code></pre></div><p><img loading="lazy" src="https://ik.imagekit.io/devmedeiros/python_seaborn/horizontal-barplot_pcHXoAQWTH.jpg?updatedAt=1636308226028" alt="seaborn barplot horizontal species x petal_width"  />
+</p>
+<p>Custom bar order.</p>
+<div class="highlight"><pre tabindex="0" style="color:#f8f8f2;background-color:#272822;-moz-tab-size:4;-o-tab-size:4;tab-size:4;"><code class="language-python" data-lang="python"><span style="display:flex;"><span>sns<span style="color:#f92672">.</span>barplot(
+</span></span><span style="display:flex;"><span>    x<span style="color:#f92672">=</span><span style="color:#e6db74">&#34;species&#34;</span>,
+</span></span><span style="display:flex;"><span>    y<span style="color:#f92672">=</span><span style="color:#e6db74">&#34;petal_width&#34;</span>,
+</span></span><span style="display:flex;"><span>    data<span style="color:#f92672">=</span>iris,
+</span></span><span style="display:flex;"><span>    order<span style="color:#f92672">=</span>[<span style="color:#e6db74">&#34;virginica&#34;</span>, <span style="color:#e6db74">&#34;setosa&#34;</span>, <span style="color:#e6db74">&#34;versicolor&#34;</span>])
+</span></span></code></pre></div><p><img loading="lazy" src="https://ik.imagekit.io/devmedeiros/python_seaborn/barplot-custom-order_hUl5vUQOi.jpg?updatedAt=1636308225481" alt="seaborn barplot custom bar order"  />
+</p>
+<p>Add caps to error bars.</p>
+<div class="highlight"><pre tabindex="0" style="color:#f8f8f2;background-color:#272822;-moz-tab-size:4;-o-tab-size:4;tab-size:4;"><code class="language-python" data-lang="python"><span style="display:flex;"><span>sns<span style="color:#f92672">.</span>barplot(x<span style="color:#f92672">=</span><span style="color:#e6db74">&#34;species&#34;</span>, y<span style="color:#f92672">=</span><span style="color:#e6db74">&#34;petal_width&#34;</span>, data<span style="color:#f92672">=</span>iris, capsize<span style="color:#f92672">=</span><span style="color:#ae81ff">.2</span>)
+</span></span></code></pre></div><p><img loading="lazy" src="https://ik.imagekit.io/devmedeiros/python_seaborn/barplot-cap-error-bar_xD7fHewAZ.jpg?updatedAt=1636308225172" alt="seaborn barplot caps error"  />
+</p>
+<p>Barplot withough error bar.</p>
+<div class="highlight"><pre tabindex="0" style="color:#f8f8f2;background-color:#272822;-moz-tab-size:4;-o-tab-size:4;tab-size:4;"><code class="language-python" data-lang="python"><span style="display:flex;"><span>sns<span style="color:#f92672">.</span>barplot(x<span style="color:#f92672">=</span><span style="color:#e6db74">&#34;species&#34;</span>, y<span style="color:#f92672">=</span><span style="color:#e6db74">&#34;petal_width&#34;</span>, data<span style="color:#f92672">=</span>iris, ci<span style="color:#f92672">=</span><span style="color:#66d9ef">None</span>)
+</span></span></code></pre></div><p><img loading="lazy" src="https://ik.imagekit.io/devmedeiros/python_seaborn/barplot-no-cap-error_5sf2jPDpBag.jpg?updatedAt=1636308225717" alt="barplot no error bar"  />
+</p>
+<h2 id="scatterplots">Scatterplots</h2>
+<p>A simple scatterplot.</p>
+<div class="highlight"><pre tabindex="0" style="color:#f8f8f2;background-color:#272822;-moz-tab-size:4;-o-tab-size:4;tab-size:4;"><code class="language-python" data-lang="python"><span style="display:flex;"><span>sns<span style="color:#f92672">.</span>scatterplot(x<span style="color:#f92672">=</span><span style="color:#e6db74">&#34;sepal_width&#34;</span>, y<span style="color:#f92672">=</span><span style="color:#e6db74">&#34;petal_width&#34;</span>, data<span style="color:#f92672">=</span>iris)
+</span></span></code></pre></div><p><img loading="lazy" src="https://ik.imagekit.io/devmedeiros/python_seaborn/scatterplot_nj8frw1JV.jpg?updatedAt=1636308224619" alt="seaborn scatterplot"  />
+</p>
+<p>Mapping groups to scatterplot.</p>
+<div class="highlight"><pre tabindex="0" style="color:#f8f8f2;background-color:#272822;-moz-tab-size:4;-o-tab-size:4;tab-size:4;"><code class="language-python" data-lang="python"><span style="display:flex;"><span>sns<span style="color:#f92672">.</span>scatterplot(x<span style="color:#f92672">=</span><span style="color:#e6db74">&#34;sepal_width&#34;</span>, y<span style="color:#f92672">=</span><span style="color:#e6db74">&#34;petal_width&#34;</span>, data<span style="color:#f92672">=</span>iris, hue<span style="color:#f92672">=</span><span style="color:#e6db74">&#34;species&#34;</span>)
+</span></span></code></pre></div><p><img loading="lazy" src="https://ik.imagekit.io/devmedeiros/python_seaborn/scatterplot-grouped_JHOKt9xydY.jpg?updatedAt=1636308224802" alt="seaborn scatterplot grouped"  />
+</p>
+<p>Mapping groups and scalling scatterplot.</p>
+<div class="highlight"><pre tabindex="0" style="color:#f8f8f2;background-color:#272822;-moz-tab-size:4;-o-tab-size:4;tab-size:4;"><code class="language-python" data-lang="python"><span style="display:flex;"><span>sns<span style="color:#f92672">.</span>scatterplot(
+</span></span><span style="display:flex;"><span>    x<span style="color:#f92672">=</span><span style="color:#e6db74">&#34;sepal_width&#34;</span>,
+</span></span><span style="display:flex;"><span>    y<span style="color:#f92672">=</span><span style="color:#e6db74">&#34;petal_width&#34;</span>,
+</span></span><span style="display:flex;"><span>    data<span style="color:#f92672">=</span>iris,
+</span></span><span style="display:flex;"><span>    hue<span style="color:#f92672">=</span><span style="color:#e6db74">&#34;sepal_length&#34;</span>,
+</span></span><span style="display:flex;"><span>    size<span style="color:#f92672">=</span><span style="color:#e6db74">&#34;sepal_length&#34;</span>)
+</span></span></code></pre></div><p><img loading="lazy" src="https://ik.imagekit.io/devmedeiros/python_seaborn/scatterplot-grouped-size_mZJt-TjEv.jpg?updatedAt=1636308224806" alt="seaborn scatterplot grouped size"  />
+</p>
+<h2 id="legend-and-axes">Legend and Axes</h2>
+<p>To change the plot legend to the outside of the plot area, you can use <code>bbox_to_anchor = (1,1), loc=2</code>. The following plot has a custom title, a new x axis label, and a y axis label.</p>
+<div class="highlight"><pre tabindex="0" style="color:#f8f8f2;background-color:#272822;-moz-tab-size:4;-o-tab-size:4;tab-size:4;"><code class="language-python" data-lang="python"><span style="display:flex;"><span>sns<span style="color:#f92672">.</span>scatterplot(x<span style="color:#f92672">=</span><span style="color:#e6db74">&#34;sepal_width&#34;</span>, y<span style="color:#f92672">=</span><span style="color:#e6db74">&#34;petal_width&#34;</span>, data<span style="color:#f92672">=</span>iris, hue<span style="color:#f92672">=</span><span style="color:#e6db74">&#34;species&#34;</span>)
+</span></span><span style="display:flex;"><span>plt<span style="color:#f92672">.</span>legend(
+</span></span><span style="display:flex;"><span>    title<span style="color:#f92672">=</span><span style="color:#e6db74">&#34;Species&#34;</span>,
+</span></span><span style="display:flex;"><span>    bbox_to_anchor <span style="color:#f92672">=</span> (<span style="color:#ae81ff">1</span>,<span style="color:#ae81ff">1</span>),
+</span></span><span style="display:flex;"><span>    loc<span style="color:#f92672">=</span><span style="color:#ae81ff">2</span>)
+</span></span><span style="display:flex;"><span>plt<span style="color:#f92672">.</span>xlabel(<span style="color:#e6db74">&#34;Sepal Width&#34;</span>)
+</span></span><span style="display:flex;"><span>plt<span style="color:#f92672">.</span>ylabel(<span style="color:#e6db74">&#34;Petal Width&#34;</span>)
+</span></span><span style="display:flex;"><span>plt<span style="color:#f92672">.</span>title(<span style="color:#e6db74">&#34;Sepal Width x Petal Width&#34;</span>)
+</span></span></code></pre></div><p><img loading="lazy" src="https://ik.imagekit.io/devmedeiros/python_seaborn/title-axis-outside-legend__zUIAf_2427.jpg?updatedAt=1636308224813" alt="seaborn scatterplot outside legend with custom title and axis labels"  />
+</p>
+]]></content:encoded>
     </item>
     
     <item>
@@ -198,6 +1872,115 @@
       
       <guid>https://devmedeiros.com/post/2021-11-02-sql-california-traffic/</guid>
       <description>Using SQL to analyze if COVID impacted California Traffic Collisions</description>
+      <content:encoded><![CDATA[<h2 id="introduction">Introduction</h2>
+<p>COVID-19 has changed many things in our day-to-day life, from ordering more delivery, working from home, or even just getting a new pet. And now I want to see if it has impacted traffic crashes in California. The dataset that I’ll be using comes from Kaggle. It covers collisions from January 2001 up to December 2020 from California. <sup id="fnref:1"><a href="#fn:1" class="footnote-ref" role="doc-noteref">1</a></sup> The following are the tables present in the dataset:</p>
+<ul>
+<li>case_id</li>
+<li>collisions</li>
+<li>parties</li>
+<li>victims</li>
+</ul>
+<p>The <strong>case_id</strong> contains the <em>case_id</em> and <em>db_year</em>. The <strong>collisions</strong> table contains all the information about each collision. While the <strong>parties</strong> table contains information about all the parties involved in the collisions, in this case, parties can be drivers, pedestrians, cyclists, and parked vehicles. The <strong>victims</strong> table contain information about all the victims, it also includes passengers.</p>
+<p>To answer if the pandemic has impacted the collisions I need to separate my data. Knowing that the first case of COVID was on January 26, 2020, in California. <sup id="fnref:2"><a href="#fn:2" class="footnote-ref" role="doc-noteref">2</a></sup> I’ll be separating the dataset as before COVID for every crash that happened before the first case and after COVID for every crash on the same day and forward.</p>
+<p>To compare <em>before COVID</em> and <em>after COVID</em> I’ll looking at a couple of things, <strong>Proportion of DUIs</strong> and <strong>Fatality of Crashes</strong>.</p>
+<p>To do this I’ll be querying the database with SQLite through R. For the complete code go to my GitHub <a href="https://github.com/devmedeiros/california-traffic-collisions">repo</a>.</p>
+<h2 id="proportion-of-duis">Proportion of DUIs</h2>
+<p>Alcohol use has changed in the US during the pandemic <sup id="fnref:3"><a href="#fn:3" class="footnote-ref" role="doc-noteref">3</a></sup> and with all the lockdowns and working from home we may wonder if this alcohol use has caused more crashes or not. With this in mind we take a look at our data about California.</p>
+<p>As we can see from the following table, the percentages before and after COVID are very similar. Only <strong>7.3%</strong> and <strong>8.96%</strong> of violations occurred from DUIs.</p>
+<table>
+<thead>
+<tr>
+<th></th>
+<th style="text-align:right">Before COVID</th>
+<th style="text-align:right"></th>
+<th style="text-align:right">After COVID</th>
+<th style="text-align:right"></th>
+</tr>
+</thead>
+<tbody>
+<tr>
+<td>Violation</td>
+<td style="text-align:right">Qnty</td>
+<td style="text-align:right">Perc</td>
+<td style="text-align:right">Qnty</td>
+<td style="text-align:right">Perc</td>
+</tr>
+<tr>
+<td>DUI</td>
+<td style="text-align:right">653467</td>
+<td style="text-align:right">7.3</td>
+<td style="text-align:right">42169</td>
+<td style="text-align:right">8.96</td>
+</tr>
+<tr>
+<td>Other</td>
+<td style="text-align:right">8300399</td>
+<td style="text-align:right">92.7</td>
+<td style="text-align:right">428299</td>
+<td style="text-align:right">91.04</td>
+</tr>
+</tbody>
+</table>
+<h2 id="fatality-of-crashes">Fatality of Crashes</h2>
+<p>Moving on to our next task, to see if crashes after COVID became more or less fatal. The analysis is going to look at how many people died from collisions, how many got some injury, and no injury at all.</p>
+<p>Looking at the table below you can see that the percentage of collisions that resulted in someone dying was <strong>0.74%</strong> before the pandemic and is now <strong>1.29%</strong>, is not a big difference, but when you look at <em>no injury</em>, you can see that before COVID <strong>45.24%</strong> of collisions didn&rsquo;t result in someone having an injury and after the pandemic, this number drops to <strong>18.57%</strong>. This <em>could</em> indicate some influence of the pandemic, but further research is needed.</p>
+<table>
+<thead>
+<tr>
+<th></th>
+<th style="text-align:right">Before COVID</th>
+<th style="text-align:right"></th>
+<th style="text-align:right">After COVID</th>
+<th style="text-align:right"></th>
+</tr>
+</thead>
+<tbody>
+<tr>
+<td>Degree of Injury</td>
+<td style="text-align:right">Qnty</td>
+<td style="text-align:right">Perc</td>
+<td style="text-align:right">Qnty</td>
+<td style="text-align:right">Perc</td>
+</tr>
+<tr>
+<td>Death</td>
+<td style="text-align:right">68875</td>
+<td style="text-align:right">0.74</td>
+<td style="text-align:right">4131</td>
+<td style="text-align:right">1.29</td>
+</tr>
+<tr>
+<td>Some injury</td>
+<td style="text-align:right">5033610</td>
+<td style="text-align:right">54.02</td>
+<td style="text-align:right">257057</td>
+<td style="text-align:right">80.14</td>
+</tr>
+<tr>
+<td>No injury</td>
+<td style="text-align:right">4216085</td>
+<td style="text-align:right">45.24</td>
+<td style="text-align:right">59576</td>
+<td style="text-align:right">18.57</td>
+</tr>
+</tbody>
+</table>
+<h3 id="references">References</h3>
+<div class="footnotes" role="doc-endnotes">
+<hr>
+<ol>
+<li id="fn:1">
+<p><a href="https://www.kaggle.com/alexgude/california-traffic-collision-data-from-switrs">Alexander Gude and California Highway Patrol, “California Traffic Collision Data from SWITRS.” Kaggle, 2021, doi: 10.34740/KAGGLE/DSV/2569326.</a>&#160;<a href="#fnref:1" class="footnote-backref" role="doc-backlink">&#x21a9;&#xfe0e;</a></p>
+</li>
+<li id="fn:2">
+<p><a href="https://abc7news.com/timeline-of-coronavirus-us-covid-19-bay-area-sf/6047519/">Timeline of Coronavirus US</a>&#160;<a href="#fnref:2" class="footnote-backref" role="doc-backlink">&#x21a9;&#xfe0e;</a></p>
+</li>
+<li id="fn:3">
+<p><a href="https://jamanetwork.com/journals/jamanetworkopen/fullarticle/2770975">Pollard MS, Tucker JS, Green HD. Changes in Adult Alcohol Use and Consequences During the COVID-19 Pandemic in the US. JAMA Netw Open. 2020;3(9):e2022942. doi:10.1001/jamanetworkopen.2020.22942</a>&#160;<a href="#fnref:3" class="footnote-backref" role="doc-backlink">&#x21a9;&#xfe0e;</a></p>
+</li>
+</ol>
+</div>
+]]></content:encoded>
     </item>
     
     <item>
@@ -207,6 +1990,34 @@
       
       <guid>https://devmedeiros.com/post/2021-10-27-data-table/</guid>
       <description>One of the fastest packages for data manipulation on R</description>
+      <content:encoded><![CDATA[<p>The <code>data.table</code> package is one of the fastest packages for data manipulation, currently, it is even faster than <code>pandas</code> and <code>dplyr</code> <sup id="fnref:1"><a href="#fn:1" class="footnote-ref" role="doc-noteref">1</a></sup>. <code>data.table</code> syntax is <code>dt[i, j, by]</code>, where:</p>
+<ul>
+<li>i is used to subset rows</li>
+<li>j is used to subset columns</li>
+<li>by is used to subset groups, like <strong>GROUP BY</strong> from SQL</li>
+</ul>
+<p>You can read it <em>out loud</em>  as<sup id="fnref:2"><a href="#fn:2" class="footnote-ref" role="doc-noteref">2</a></sup>:</p>
+<blockquote>
+<p>Take <code>dt</code>, subset/reorder rows using <code>i</code>, then calculate <code>j</code>, grouped by <code>by</code>.</p>
+</blockquote>
+<p>A <code>data.table</code> is also a <code>data.frame</code> and all of the basic data manipulations you can use in <code>data.frame</code>s applies to <code>data.table</code>. Like <code>ncol()</code>, <code>nrow()</code>, <code>names()</code>, <code>summary()</code>. But it has more possibilities, for instance in <code>data.table</code> there is a special variable <code>.N</code> which is an integer that contains the row number in the group. If you use <code>dt[.N]</code> you&rsquo;ll get the last row of your <code>data.table</code>.</p>
+<p>Another cool feature of <code>data.table</code> is that if you want filter/subset a column you don&rsquo;t need to use <code>df$x[df$x == 1]</code> you can simple use <code>dt[x == 1]</code> which make your code much more readable and clean.</p>
+<p>You also get to use special operators: <code>%like%</code>, <code>%in%</code> and <code>%between%</code>. These operators work like SQL operators, <strong>LIKE</strong>, <strong>IN</strong>, and <strong>BETWEEN</strong>, respectively.</p>
+<p>If you are familiar with SQL there is this one thing the package offers that will catch your eye. It&rsquo;s called <em>chaining</em>, which allows you to perform a sequence of operations in a <code>data.table</code>, you just need to use <code>dt[][]</code> and chain multiple operations &ldquo;[]&rdquo;.</p>
+<p>But that&rsquo;s not all with the operator <code>:=</code> you can alter data without making a new copy in the memory.</p>
+<p>If you want to start using the package I suggest you use the <a href="https://raw.githubusercontent.com/rstudio/cheatsheets/master/datatable.pdf">cheatsheet</a>. It&rsquo;s really useful if you already have a basic knowledge about <code>data.frame</code>s.</p>
+<div class="footnotes" role="doc-endnotes">
+<hr>
+<ol>
+<li id="fn:1">
+<p><a href="https://h2oai.github.io/db-benchmark/">https://h2oai.github.io/db-benchmark/</a>&#160;<a href="#fnref:1" class="footnote-backref" role="doc-backlink">&#x21a9;&#xfe0e;</a></p>
+</li>
+<li id="fn:2">
+<p><a href="https://cran.r-project.org/web/packages/data.table/vignettes/datatable-intro.html">https://cran.r-project.org/web/packages/data.table/vignettes/datatable-intro.html</a>&#160;<a href="#fnref:2" class="footnote-backref" role="doc-backlink">&#x21a9;&#xfe0e;</a></p>
+</li>
+</ol>
+</div>
+]]></content:encoded>
     </item>
     
     <item>
@@ -216,6 +2027,21 @@
       
       <guid>https://devmedeiros.com/post/2021-10-24-blackjack-simulation/</guid>
       <description>A blackjack simulation using R and Shiny, you can run a single game with p players, d decks, n times</description>
+      <content:encoded><![CDATA[<p>I got inspired to simulate a blackjack game, so I decided to make a series of functions to emulate the dealer&rsquo;s behavior, a newbie player, a cautious player, and a strategist. With this set of functions, you can run a single game with <strong>p</strong> players, <strong>d</strong> decks, any combination of players archetypes. And you can also run it <strong>n</strong> times.</p>
+<p>I also made a <a href="https://jaqueline-medeiros.shinyapps.io/appa/">shiny app</a> to display how the simulation works. In the app, you are limited by the number of players, but if you wish to run the code with more players you can check the GitHub <a href="https://github.com/devmedeiros/blackjack-simulation">repository</a>. There you can find the rules considered for the simulation and the complete code.</p>
+<p>If you are familiar with the R language you can also run the app locally, you just need to run the <code>library(shiny)</code> and <code>runGitHub(&quot;blackjack-simulation&quot;, &quot;devmedeiros&quot;, ref = &quot;main&quot;)</code>.</p>
+<p>The app is composed of a sidebar with a space to choose the archetypes, the number of decks to use, and how many rounds you want to see simulated. Depending on how many rounds you choose it can get slow as it&rsquo;ll simulate according to your choices every time you hit the <strong>RUN SIMULATION RUN</strong>.</p>
+<p>In the plot tab, we have the evolution of the lose rate through the rounds.</p>
+<p>A <strong>1</strong> means the player lost that round and a <strong>0</strong> means the player won.</p>
+<p><img loading="lazy" src="https://ik.imagekit.io/devmedeiros/plot_cm7Dhm0u6a.png?updatedAt=1635119435941" alt="An image of the shiny app, plot tab"  />
+</p>
+<p>The game setup tab shows all the cards dealt in the simulation, each card was dealt from left to right and a blank cell means the player didn&rsquo;t ask for another card (hit).</p>
+<p><img loading="lazy" src="https://ik.imagekit.io/devmedeiros/game-setup_-FspHIe5w.png?updatedAt=1635119436114" alt="An image of the shiny app, the game setup"  />
+</p>
+<p>And lastly, the lose rate tab shows us the same data from the plot tab, but now as a table. This is useful if you want to take a deeper look at how one strategy was better than the other.</p>
+<p><img loading="lazy" src="https://ik.imagekit.io/devmedeiros/lose_rate_jPTu-cXHuN.png?updatedAt=1635119436123" alt="An image of the shiny app, the lose rate"  />
+</p>
+]]></content:encoded>
     </item>
     
     <item>
@@ -225,6 +2051,61 @@
       
       <guid>https://devmedeiros.com/post/2021-10-12-fakenews-sentiment/</guid>
       <description>Sentiment Analysis comparing Fake News and Real News using R</description>
+      <content:encoded><![CDATA[<p>I want to tackle sentiment analysis using R in a simple way, just to get me started. With this in mind we begin loading all the packages we&rsquo;ll be using.</p>
+<div class="highlight"><pre tabindex="0" style="color:#f8f8f2;background-color:#272822;-moz-tab-size:4;-o-tab-size:4;tab-size:4;"><code class="language-r" data-lang="r"><span style="display:flex;"><span><span style="color:#a6e22e">library</span>(readr)
+</span></span><span style="display:flex;"><span><span style="color:#a6e22e">library</span>(dplyr)
+</span></span><span style="display:flex;"><span><span style="color:#a6e22e">library</span>(tidytext)
+</span></span><span style="display:flex;"><span><span style="color:#a6e22e">library</span>(tokenizers)
+</span></span><span style="display:flex;"><span><span style="color:#a6e22e">library</span>(stopwords)
+</span></span><span style="display:flex;"><span><span style="color:#a6e22e">library</span>(ggplot2)
+</span></span></code></pre></div><p>Then we need to load our dataset. This data comes from Kaggle <a href="https://www.kaggle.com/clmentbisaillon/fake-and-real-news-dataset"><em>Fake and real news dataset</em></a>.</p>
+<div class="highlight"><pre tabindex="0" style="color:#f8f8f2;background-color:#272822;-moz-tab-size:4;-o-tab-size:4;tab-size:4;"><code class="language-r" data-lang="r"><span style="display:flex;"><span>Fake <span style="color:#f92672">&lt;-</span> <span style="color:#a6e22e">read_csv</span>(<span style="color:#e6db74">&#39;~/fakenews/Fake.csv&#39;</span>)
+</span></span><span style="display:flex;"><span>True <span style="color:#f92672">&lt;-</span> <span style="color:#a6e22e">read.csv</span>(<span style="color:#e6db74">&#39;~/fakenews/True.csv&#39;</span>)
+</span></span></code></pre></div><p>I want to merge the two datasets, but first we need to create a new column that will tell me where the data came from.</p>
+<div class="highlight"><pre tabindex="0" style="color:#f8f8f2;background-color:#272822;-moz-tab-size:4;-o-tab-size:4;tab-size:4;"><code class="language-r" data-lang="r"><span style="display:flex;"><span>Fake<span style="color:#f92672">$</span>news <span style="color:#f92672">&lt;-</span> <span style="color:#e6db74">&#39;fake&#39;</span>
+</span></span><span style="display:flex;"><span>True<span style="color:#f92672">$</span>news <span style="color:#f92672">&lt;-</span> <span style="color:#e6db74">&#39;real&#39;</span>
+</span></span><span style="display:flex;"><span>
+</span></span><span style="display:flex;"><span>data <span style="color:#f92672">&lt;-</span> <span style="color:#a6e22e">rbind</span>(Fake,True)
+</span></span></code></pre></div><p>Now we can start the data cleaning. In this first moment, we&rsquo;ll do a simple tokenization on the <strong>title</strong> and <strong>text</strong> variables. Then we&rsquo;ll be removing the stopwords according to the <em>snowball</em> source from the <em>stopwords</em> package.</p>
+<div class="highlight"><pre tabindex="0" style="color:#f8f8f2;background-color:#272822;-moz-tab-size:4;-o-tab-size:4;tab-size:4;"><code class="language-r" data-lang="r"><span style="display:flex;"><span>title <span style="color:#f92672">&lt;-</span> <span style="color:#a6e22e">tibble</span>(news <span style="color:#f92672">=</span> data<span style="color:#f92672">$</span>news, text <span style="color:#f92672">=</span> data<span style="color:#f92672">$</span>title)
+</span></span><span style="display:flex;"><span>
+</span></span><span style="display:flex;"><span>corpus <span style="color:#f92672">&lt;-</span> <span style="color:#a6e22e">tibble</span>(news <span style="color:#f92672">=</span> data<span style="color:#f92672">$</span>news, corpus <span style="color:#f92672">=</span> data<span style="color:#f92672">$</span>text)
+</span></span><span style="display:flex;"><span>
+</span></span><span style="display:flex;"><span>tidy_title <span style="color:#f92672">&lt;-</span> title <span style="color:#f92672">%&gt;%</span>
+</span></span><span style="display:flex;"><span>  <span style="color:#a6e22e">unnest_tokens</span>(word, text, token <span style="color:#f92672">=</span> <span style="color:#e6db74">&#39;words&#39;</span>) <span style="color:#f92672">%&gt;%</span>
+</span></span><span style="display:flex;"><span>  <span style="color:#a6e22e">filter</span>(<span style="color:#f92672">!</span>(word <span style="color:#f92672">%in%</span> <span style="color:#a6e22e">stopwords</span>(source <span style="color:#f92672">=</span> <span style="color:#e6db74">&#39;snowball&#39;</span>)))
+</span></span><span style="display:flex;"><span>
+</span></span><span style="display:flex;"><span>tidy_corpus <span style="color:#f92672">&lt;-</span> corpus <span style="color:#f92672">%&gt;%</span>
+</span></span><span style="display:flex;"><span>  <span style="color:#a6e22e">unnest_tokens</span>(word, corpus, token <span style="color:#f92672">=</span> <span style="color:#e6db74">&#39;words&#39;</span>) <span style="color:#f92672">%&gt;%</span>
+</span></span><span style="display:flex;"><span>  <span style="color:#a6e22e">filter</span>(<span style="color:#f92672">!</span>(word <span style="color:#f92672">%in%</span> <span style="color:#a6e22e">stopwords</span>(source <span style="color:#f92672">=</span> <span style="color:#e6db74">&#34;snowball&#34;</span>)))
+</span></span></code></pre></div><p>With the tidy data we can select the ten most frequent words from which title news&rsquo; group.</p>
+<div class="highlight"><pre tabindex="0" style="color:#f8f8f2;background-color:#272822;-moz-tab-size:4;-o-tab-size:4;tab-size:4;"><code class="language-r" data-lang="r"><span style="display:flex;"><span>p0 <span style="color:#f92672">&lt;-</span> tidy_title <span style="color:#f92672">%&gt;%</span>
+</span></span><span style="display:flex;"><span>  <span style="color:#a6e22e">group_by</span>(news, word) <span style="color:#f92672">%&gt;%</span>
+</span></span><span style="display:flex;"><span>  <span style="color:#a6e22e">summarise</span>(n <span style="color:#f92672">=</span> <span style="color:#a6e22e">n</span>()) <span style="color:#f92672">%&gt;%</span>
+</span></span><span style="display:flex;"><span>  <span style="color:#a6e22e">arrange</span>(<span style="color:#a6e22e">desc</span>(n)) <span style="color:#f92672">%&gt;%</span>
+</span></span><span style="display:flex;"><span>  <span style="color:#a6e22e">slice</span>(<span style="color:#ae81ff">1</span><span style="color:#f92672">:</span><span style="color:#ae81ff">10</span>)
+</span></span></code></pre></div><p>Fake news titles mention <em>video</em> and <em>trump</em> by a large margin, 8477 and 7874 respectively. On the real news titles, <em>trump</em> is also one of the most mentioned, coming on first with 4883 appearances, followed by <em>u.s</em>, 4187, and <em>says</em> with 2981.</p>
+<p><img loading="lazy" src="https://ik.imagekit.io/devmedeiros/10_popular_titles_H0dG3ljPN.png?updatedAt=1634083210303" alt="10 most frequent words by fake news titles and real news"  title="Top 10 words by fake news and real news"  />
+</p>
+<p>Now we prepare the data to the sentiment analysis. I&rsquo;m interested in classifing the data into sentiments of joy, anger, fear or surprise, for example. So I&rsquo;ll be using the <code>nrc</code> dataset from <a href="http://saifmohammad.com/WebPages/NRC-Emotion-Lexicon.htm">Saif Mohammad and Peter Turney</a>.</p>
+<div class="highlight"><pre tabindex="0" style="color:#f8f8f2;background-color:#272822;-moz-tab-size:4;-o-tab-size:4;tab-size:4;"><code class="language-r" data-lang="r"><span style="display:flex;"><span>p1 <span style="color:#f92672">&lt;-</span> tidy_title <span style="color:#f92672">%&gt;%</span>
+</span></span><span style="display:flex;"><span>  <span style="color:#a6e22e">inner_join</span>(<span style="color:#a6e22e">get_sentiments</span>(<span style="color:#e6db74">&#39;nrc&#39;</span>)) <span style="color:#f92672">%&gt;%</span>
+</span></span><span style="display:flex;"><span>  <span style="color:#a6e22e">group_by</span>(sentiment, news) <span style="color:#f92672">%&gt;%</span>
+</span></span><span style="display:flex;"><span>  <span style="color:#a6e22e">summarise</span>(n <span style="color:#f92672">=</span> <span style="color:#a6e22e">n</span>()) <span style="color:#f92672">%&gt;%</span>
+</span></span><span style="display:flex;"><span>  <span style="color:#a6e22e">mutate</span>(prop <span style="color:#f92672">=</span> n<span style="color:#f92672">/</span><span style="color:#a6e22e">sum</span>(n))
+</span></span></code></pre></div><p><img loading="lazy" src="https://ik.imagekit.io/devmedeiros/title_sentiment_lkDe-y_p97.png?updatedAt=1634083978487" alt="sentiment from news titles"  title="Sentiment from news titles"  />
+</p>
+<p><strong>Disgust</strong> seems to be the most common sentiment around fake news titles while <strong>trust</strong> is the lowest, even though it still is more than 50%. Overall fake news titles seems to have more &ldquo;sentiment&rdquo; than real news in this particular dataset. Even positive sentiments like <strong>joy</strong> and <strong>surprise</strong>.</p>
+<div class="highlight"><pre tabindex="0" style="color:#f8f8f2;background-color:#272822;-moz-tab-size:4;-o-tab-size:4;tab-size:4;"><code class="language-r" data-lang="r"><span style="display:flex;"><span>p2 <span style="color:#f92672">&lt;-</span> tidy_corpus <span style="color:#f92672">%&gt;%</span>
+</span></span><span style="display:flex;"><span><span style="color:#a6e22e">inner_join</span>(<span style="color:#a6e22e">get_sentiments</span>(<span style="color:#e6db74">&#39;nrc&#39;</span>)) <span style="color:#f92672">%&gt;%</span>
+</span></span><span style="display:flex;"><span><span style="color:#a6e22e">group_by</span>(sentiment, news) <span style="color:#f92672">%&gt;%</span>
+</span></span><span style="display:flex;"><span><span style="color:#a6e22e">summarise</span>(n <span style="color:#f92672">=</span> <span style="color:#a6e22e">n</span>()) <span style="color:#f92672">%&gt;%</span>
+</span></span><span style="display:flex;"><span><span style="color:#a6e22e">mutate</span>(prop <span style="color:#f92672">=</span> n<span style="color:#f92672">/</span><span style="color:#a6e22e">sum</span>(n))
+</span></span></code></pre></div><p>For the news&rsquo; corpus we can see the same sentiments are prevalent, but the proportion is lower compared to the title. A fake news article loses <strong>trust</strong> when the reader takes more time to read it. It also becames less <strong>negative</strong> and shows less <strong>fear</strong>.</p>
+<p><img loading="lazy" src="https://ik.imagekit.io/devmedeiros/corpus_sentiment_302EKlTtO.png?updatedAt=1634083978312" alt="sentiment from news text"  title="Sentiment from news corpus text"  />
+</p>
+<p>An improvement we could do here is to use our own stopwords and change the way we made the tokens. We had instances were <em>trump</em> and <em>trump&rsquo;s</em> didn&rsquo;t correspond to the same thing and if we had used this data to train a model this could become problematic.</p>
+]]></content:encoded>
     </item>
     
   </channel>

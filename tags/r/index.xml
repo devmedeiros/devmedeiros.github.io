@@ -18,6 +18,115 @@
       
       <guid>https://devmedeiros.com/post/2021-11-02-sql-california-traffic/</guid>
       <description>Using SQL to analyze if COVID impacted California Traffic Collisions</description>
+      <content:encoded><![CDATA[<h2 id="introduction">Introduction</h2>
+<p>COVID-19 has changed many things in our day-to-day life, from ordering more delivery, working from home, or even just getting a new pet. And now I want to see if it has impacted traffic crashes in California. The dataset that I’ll be using comes from Kaggle. It covers collisions from January 2001 up to December 2020 from California. <sup id="fnref:1"><a href="#fn:1" class="footnote-ref" role="doc-noteref">1</a></sup> The following are the tables present in the dataset:</p>
+<ul>
+<li>case_id</li>
+<li>collisions</li>
+<li>parties</li>
+<li>victims</li>
+</ul>
+<p>The <strong>case_id</strong> contains the <em>case_id</em> and <em>db_year</em>. The <strong>collisions</strong> table contains all the information about each collision. While the <strong>parties</strong> table contains information about all the parties involved in the collisions, in this case, parties can be drivers, pedestrians, cyclists, and parked vehicles. The <strong>victims</strong> table contain information about all the victims, it also includes passengers.</p>
+<p>To answer if the pandemic has impacted the collisions I need to separate my data. Knowing that the first case of COVID was on January 26, 2020, in California. <sup id="fnref:2"><a href="#fn:2" class="footnote-ref" role="doc-noteref">2</a></sup> I’ll be separating the dataset as before COVID for every crash that happened before the first case and after COVID for every crash on the same day and forward.</p>
+<p>To compare <em>before COVID</em> and <em>after COVID</em> I’ll looking at a couple of things, <strong>Proportion of DUIs</strong> and <strong>Fatality of Crashes</strong>.</p>
+<p>To do this I’ll be querying the database with SQLite through R. For the complete code go to my GitHub <a href="https://github.com/devmedeiros/california-traffic-collisions">repo</a>.</p>
+<h2 id="proportion-of-duis">Proportion of DUIs</h2>
+<p>Alcohol use has changed in the US during the pandemic <sup id="fnref:3"><a href="#fn:3" class="footnote-ref" role="doc-noteref">3</a></sup> and with all the lockdowns and working from home we may wonder if this alcohol use has caused more crashes or not. With this in mind we take a look at our data about California.</p>
+<p>As we can see from the following table, the percentages before and after COVID are very similar. Only <strong>7.3%</strong> and <strong>8.96%</strong> of violations occurred from DUIs.</p>
+<table>
+<thead>
+<tr>
+<th></th>
+<th style="text-align:right">Before COVID</th>
+<th style="text-align:right"></th>
+<th style="text-align:right">After COVID</th>
+<th style="text-align:right"></th>
+</tr>
+</thead>
+<tbody>
+<tr>
+<td>Violation</td>
+<td style="text-align:right">Qnty</td>
+<td style="text-align:right">Perc</td>
+<td style="text-align:right">Qnty</td>
+<td style="text-align:right">Perc</td>
+</tr>
+<tr>
+<td>DUI</td>
+<td style="text-align:right">653467</td>
+<td style="text-align:right">7.3</td>
+<td style="text-align:right">42169</td>
+<td style="text-align:right">8.96</td>
+</tr>
+<tr>
+<td>Other</td>
+<td style="text-align:right">8300399</td>
+<td style="text-align:right">92.7</td>
+<td style="text-align:right">428299</td>
+<td style="text-align:right">91.04</td>
+</tr>
+</tbody>
+</table>
+<h2 id="fatality-of-crashes">Fatality of Crashes</h2>
+<p>Moving on to our next task, to see if crashes after COVID became more or less fatal. The analysis is going to look at how many people died from collisions, how many got some injury, and no injury at all.</p>
+<p>Looking at the table below you can see that the percentage of collisions that resulted in someone dying was <strong>0.74%</strong> before the pandemic and is now <strong>1.29%</strong>, is not a big difference, but when you look at <em>no injury</em>, you can see that before COVID <strong>45.24%</strong> of collisions didn&rsquo;t result in someone having an injury and after the pandemic, this number drops to <strong>18.57%</strong>. This <em>could</em> indicate some influence of the pandemic, but further research is needed.</p>
+<table>
+<thead>
+<tr>
+<th></th>
+<th style="text-align:right">Before COVID</th>
+<th style="text-align:right"></th>
+<th style="text-align:right">After COVID</th>
+<th style="text-align:right"></th>
+</tr>
+</thead>
+<tbody>
+<tr>
+<td>Degree of Injury</td>
+<td style="text-align:right">Qnty</td>
+<td style="text-align:right">Perc</td>
+<td style="text-align:right">Qnty</td>
+<td style="text-align:right">Perc</td>
+</tr>
+<tr>
+<td>Death</td>
+<td style="text-align:right">68875</td>
+<td style="text-align:right">0.74</td>
+<td style="text-align:right">4131</td>
+<td style="text-align:right">1.29</td>
+</tr>
+<tr>
+<td>Some injury</td>
+<td style="text-align:right">5033610</td>
+<td style="text-align:right">54.02</td>
+<td style="text-align:right">257057</td>
+<td style="text-align:right">80.14</td>
+</tr>
+<tr>
+<td>No injury</td>
+<td style="text-align:right">4216085</td>
+<td style="text-align:right">45.24</td>
+<td style="text-align:right">59576</td>
+<td style="text-align:right">18.57</td>
+</tr>
+</tbody>
+</table>
+<h3 id="references">References</h3>
+<div class="footnotes" role="doc-endnotes">
+<hr>
+<ol>
+<li id="fn:1">
+<p><a href="https://www.kaggle.com/alexgude/california-traffic-collision-data-from-switrs">Alexander Gude and California Highway Patrol, “California Traffic Collision Data from SWITRS.” Kaggle, 2021, doi: 10.34740/KAGGLE/DSV/2569326.</a>&#160;<a href="#fnref:1" class="footnote-backref" role="doc-backlink">&#x21a9;&#xfe0e;</a></p>
+</li>
+<li id="fn:2">
+<p><a href="https://abc7news.com/timeline-of-coronavirus-us-covid-19-bay-area-sf/6047519/">Timeline of Coronavirus US</a>&#160;<a href="#fnref:2" class="footnote-backref" role="doc-backlink">&#x21a9;&#xfe0e;</a></p>
+</li>
+<li id="fn:3">
+<p><a href="https://jamanetwork.com/journals/jamanetworkopen/fullarticle/2770975">Pollard MS, Tucker JS, Green HD. Changes in Adult Alcohol Use and Consequences During the COVID-19 Pandemic in the US. JAMA Netw Open. 2020;3(9):e2022942. doi:10.1001/jamanetworkopen.2020.22942</a>&#160;<a href="#fnref:3" class="footnote-backref" role="doc-backlink">&#x21a9;&#xfe0e;</a></p>
+</li>
+</ol>
+</div>
+]]></content:encoded>
     </item>
     
     <item>
@@ -27,6 +136,34 @@
       
       <guid>https://devmedeiros.com/post/2021-10-27-data-table/</guid>
       <description>One of the fastest packages for data manipulation on R</description>
+      <content:encoded><![CDATA[<p>The <code>data.table</code> package is one of the fastest packages for data manipulation, currently, it is even faster than <code>pandas</code> and <code>dplyr</code> <sup id="fnref:1"><a href="#fn:1" class="footnote-ref" role="doc-noteref">1</a></sup>. <code>data.table</code> syntax is <code>dt[i, j, by]</code>, where:</p>
+<ul>
+<li>i is used to subset rows</li>
+<li>j is used to subset columns</li>
+<li>by is used to subset groups, like <strong>GROUP BY</strong> from SQL</li>
+</ul>
+<p>You can read it <em>out loud</em>  as<sup id="fnref:2"><a href="#fn:2" class="footnote-ref" role="doc-noteref">2</a></sup>:</p>
+<blockquote>
+<p>Take <code>dt</code>, subset/reorder rows using <code>i</code>, then calculate <code>j</code>, grouped by <code>by</code>.</p>
+</blockquote>
+<p>A <code>data.table</code> is also a <code>data.frame</code> and all of the basic data manipulations you can use in <code>data.frame</code>s applies to <code>data.table</code>. Like <code>ncol()</code>, <code>nrow()</code>, <code>names()</code>, <code>summary()</code>. But it has more possibilities, for instance in <code>data.table</code> there is a special variable <code>.N</code> which is an integer that contains the row number in the group. If you use <code>dt[.N]</code> you&rsquo;ll get the last row of your <code>data.table</code>.</p>
+<p>Another cool feature of <code>data.table</code> is that if you want filter/subset a column you don&rsquo;t need to use <code>df$x[df$x == 1]</code> you can simple use <code>dt[x == 1]</code> which make your code much more readable and clean.</p>
+<p>You also get to use special operators: <code>%like%</code>, <code>%in%</code> and <code>%between%</code>. These operators work like SQL operators, <strong>LIKE</strong>, <strong>IN</strong>, and <strong>BETWEEN</strong>, respectively.</p>
+<p>If you are familiar with SQL there is this one thing the package offers that will catch your eye. It&rsquo;s called <em>chaining</em>, which allows you to perform a sequence of operations in a <code>data.table</code>, you just need to use <code>dt[][]</code> and chain multiple operations &ldquo;[]&rdquo;.</p>
+<p>But that&rsquo;s not all with the operator <code>:=</code> you can alter data without making a new copy in the memory.</p>
+<p>If you want to start using the package I suggest you use the <a href="https://raw.githubusercontent.com/rstudio/cheatsheets/master/datatable.pdf">cheatsheet</a>. It&rsquo;s really useful if you already have a basic knowledge about <code>data.frame</code>s.</p>
+<div class="footnotes" role="doc-endnotes">
+<hr>
+<ol>
+<li id="fn:1">
+<p><a href="https://h2oai.github.io/db-benchmark/">https://h2oai.github.io/db-benchmark/</a>&#160;<a href="#fnref:1" class="footnote-backref" role="doc-backlink">&#x21a9;&#xfe0e;</a></p>
+</li>
+<li id="fn:2">
+<p><a href="https://cran.r-project.org/web/packages/data.table/vignettes/datatable-intro.html">https://cran.r-project.org/web/packages/data.table/vignettes/datatable-intro.html</a>&#160;<a href="#fnref:2" class="footnote-backref" role="doc-backlink">&#x21a9;&#xfe0e;</a></p>
+</li>
+</ol>
+</div>
+]]></content:encoded>
     </item>
     
     <item>
@@ -36,6 +173,21 @@
       
       <guid>https://devmedeiros.com/post/2021-10-24-blackjack-simulation/</guid>
       <description>A blackjack simulation using R and Shiny, you can run a single game with p players, d decks, n times</description>
+      <content:encoded><![CDATA[<p>I got inspired to simulate a blackjack game, so I decided to make a series of functions to emulate the dealer&rsquo;s behavior, a newbie player, a cautious player, and a strategist. With this set of functions, you can run a single game with <strong>p</strong> players, <strong>d</strong> decks, any combination of players archetypes. And you can also run it <strong>n</strong> times.</p>
+<p>I also made a <a href="https://jaqueline-medeiros.shinyapps.io/appa/">shiny app</a> to display how the simulation works. In the app, you are limited by the number of players, but if you wish to run the code with more players you can check the GitHub <a href="https://github.com/devmedeiros/blackjack-simulation">repository</a>. There you can find the rules considered for the simulation and the complete code.</p>
+<p>If you are familiar with the R language you can also run the app locally, you just need to run the <code>library(shiny)</code> and <code>runGitHub(&quot;blackjack-simulation&quot;, &quot;devmedeiros&quot;, ref = &quot;main&quot;)</code>.</p>
+<p>The app is composed of a sidebar with a space to choose the archetypes, the number of decks to use, and how many rounds you want to see simulated. Depending on how many rounds you choose it can get slow as it&rsquo;ll simulate according to your choices every time you hit the <strong>RUN SIMULATION RUN</strong>.</p>
+<p>In the plot tab, we have the evolution of the lose rate through the rounds.</p>
+<p>A <strong>1</strong> means the player lost that round and a <strong>0</strong> means the player won.</p>
+<p><img loading="lazy" src="https://ik.imagekit.io/devmedeiros/plot_cm7Dhm0u6a.png?updatedAt=1635119435941" alt="An image of the shiny app, plot tab"  />
+</p>
+<p>The game setup tab shows all the cards dealt in the simulation, each card was dealt from left to right and a blank cell means the player didn&rsquo;t ask for another card (hit).</p>
+<p><img loading="lazy" src="https://ik.imagekit.io/devmedeiros/game-setup_-FspHIe5w.png?updatedAt=1635119436114" alt="An image of the shiny app, the game setup"  />
+</p>
+<p>And lastly, the lose rate tab shows us the same data from the plot tab, but now as a table. This is useful if you want to take a deeper look at how one strategy was better than the other.</p>
+<p><img loading="lazy" src="https://ik.imagekit.io/devmedeiros/lose_rate_jPTu-cXHuN.png?updatedAt=1635119436123" alt="An image of the shiny app, the lose rate"  />
+</p>
+]]></content:encoded>
     </item>
     
     <item>
@@ -45,6 +197,61 @@
       
       <guid>https://devmedeiros.com/post/2021-10-12-fakenews-sentiment/</guid>
       <description>Sentiment Analysis comparing Fake News and Real News using R</description>
+      <content:encoded><![CDATA[<p>I want to tackle sentiment analysis using R in a simple way, just to get me started. With this in mind we begin loading all the packages we&rsquo;ll be using.</p>
+<div class="highlight"><pre tabindex="0" style="color:#f8f8f2;background-color:#272822;-moz-tab-size:4;-o-tab-size:4;tab-size:4;"><code class="language-r" data-lang="r"><span style="display:flex;"><span><span style="color:#a6e22e">library</span>(readr)
+</span></span><span style="display:flex;"><span><span style="color:#a6e22e">library</span>(dplyr)
+</span></span><span style="display:flex;"><span><span style="color:#a6e22e">library</span>(tidytext)
+</span></span><span style="display:flex;"><span><span style="color:#a6e22e">library</span>(tokenizers)
+</span></span><span style="display:flex;"><span><span style="color:#a6e22e">library</span>(stopwords)
+</span></span><span style="display:flex;"><span><span style="color:#a6e22e">library</span>(ggplot2)
+</span></span></code></pre></div><p>Then we need to load our dataset. This data comes from Kaggle <a href="https://www.kaggle.com/clmentbisaillon/fake-and-real-news-dataset"><em>Fake and real news dataset</em></a>.</p>
+<div class="highlight"><pre tabindex="0" style="color:#f8f8f2;background-color:#272822;-moz-tab-size:4;-o-tab-size:4;tab-size:4;"><code class="language-r" data-lang="r"><span style="display:flex;"><span>Fake <span style="color:#f92672">&lt;-</span> <span style="color:#a6e22e">read_csv</span>(<span style="color:#e6db74">&#39;~/fakenews/Fake.csv&#39;</span>)
+</span></span><span style="display:flex;"><span>True <span style="color:#f92672">&lt;-</span> <span style="color:#a6e22e">read.csv</span>(<span style="color:#e6db74">&#39;~/fakenews/True.csv&#39;</span>)
+</span></span></code></pre></div><p>I want to merge the two datasets, but first we need to create a new column that will tell me where the data came from.</p>
+<div class="highlight"><pre tabindex="0" style="color:#f8f8f2;background-color:#272822;-moz-tab-size:4;-o-tab-size:4;tab-size:4;"><code class="language-r" data-lang="r"><span style="display:flex;"><span>Fake<span style="color:#f92672">$</span>news <span style="color:#f92672">&lt;-</span> <span style="color:#e6db74">&#39;fake&#39;</span>
+</span></span><span style="display:flex;"><span>True<span style="color:#f92672">$</span>news <span style="color:#f92672">&lt;-</span> <span style="color:#e6db74">&#39;real&#39;</span>
+</span></span><span style="display:flex;"><span>
+</span></span><span style="display:flex;"><span>data <span style="color:#f92672">&lt;-</span> <span style="color:#a6e22e">rbind</span>(Fake,True)
+</span></span></code></pre></div><p>Now we can start the data cleaning. In this first moment, we&rsquo;ll do a simple tokenization on the <strong>title</strong> and <strong>text</strong> variables. Then we&rsquo;ll be removing the stopwords according to the <em>snowball</em> source from the <em>stopwords</em> package.</p>
+<div class="highlight"><pre tabindex="0" style="color:#f8f8f2;background-color:#272822;-moz-tab-size:4;-o-tab-size:4;tab-size:4;"><code class="language-r" data-lang="r"><span style="display:flex;"><span>title <span style="color:#f92672">&lt;-</span> <span style="color:#a6e22e">tibble</span>(news <span style="color:#f92672">=</span> data<span style="color:#f92672">$</span>news, text <span style="color:#f92672">=</span> data<span style="color:#f92672">$</span>title)
+</span></span><span style="display:flex;"><span>
+</span></span><span style="display:flex;"><span>corpus <span style="color:#f92672">&lt;-</span> <span style="color:#a6e22e">tibble</span>(news <span style="color:#f92672">=</span> data<span style="color:#f92672">$</span>news, corpus <span style="color:#f92672">=</span> data<span style="color:#f92672">$</span>text)
+</span></span><span style="display:flex;"><span>
+</span></span><span style="display:flex;"><span>tidy_title <span style="color:#f92672">&lt;-</span> title <span style="color:#f92672">%&gt;%</span>
+</span></span><span style="display:flex;"><span>  <span style="color:#a6e22e">unnest_tokens</span>(word, text, token <span style="color:#f92672">=</span> <span style="color:#e6db74">&#39;words&#39;</span>) <span style="color:#f92672">%&gt;%</span>
+</span></span><span style="display:flex;"><span>  <span style="color:#a6e22e">filter</span>(<span style="color:#f92672">!</span>(word <span style="color:#f92672">%in%</span> <span style="color:#a6e22e">stopwords</span>(source <span style="color:#f92672">=</span> <span style="color:#e6db74">&#39;snowball&#39;</span>)))
+</span></span><span style="display:flex;"><span>
+</span></span><span style="display:flex;"><span>tidy_corpus <span style="color:#f92672">&lt;-</span> corpus <span style="color:#f92672">%&gt;%</span>
+</span></span><span style="display:flex;"><span>  <span style="color:#a6e22e">unnest_tokens</span>(word, corpus, token <span style="color:#f92672">=</span> <span style="color:#e6db74">&#39;words&#39;</span>) <span style="color:#f92672">%&gt;%</span>
+</span></span><span style="display:flex;"><span>  <span style="color:#a6e22e">filter</span>(<span style="color:#f92672">!</span>(word <span style="color:#f92672">%in%</span> <span style="color:#a6e22e">stopwords</span>(source <span style="color:#f92672">=</span> <span style="color:#e6db74">&#34;snowball&#34;</span>)))
+</span></span></code></pre></div><p>With the tidy data we can select the ten most frequent words from which title news&rsquo; group.</p>
+<div class="highlight"><pre tabindex="0" style="color:#f8f8f2;background-color:#272822;-moz-tab-size:4;-o-tab-size:4;tab-size:4;"><code class="language-r" data-lang="r"><span style="display:flex;"><span>p0 <span style="color:#f92672">&lt;-</span> tidy_title <span style="color:#f92672">%&gt;%</span>
+</span></span><span style="display:flex;"><span>  <span style="color:#a6e22e">group_by</span>(news, word) <span style="color:#f92672">%&gt;%</span>
+</span></span><span style="display:flex;"><span>  <span style="color:#a6e22e">summarise</span>(n <span style="color:#f92672">=</span> <span style="color:#a6e22e">n</span>()) <span style="color:#f92672">%&gt;%</span>
+</span></span><span style="display:flex;"><span>  <span style="color:#a6e22e">arrange</span>(<span style="color:#a6e22e">desc</span>(n)) <span style="color:#f92672">%&gt;%</span>
+</span></span><span style="display:flex;"><span>  <span style="color:#a6e22e">slice</span>(<span style="color:#ae81ff">1</span><span style="color:#f92672">:</span><span style="color:#ae81ff">10</span>)
+</span></span></code></pre></div><p>Fake news titles mention <em>video</em> and <em>trump</em> by a large margin, 8477 and 7874 respectively. On the real news titles, <em>trump</em> is also one of the most mentioned, coming on first with 4883 appearances, followed by <em>u.s</em>, 4187, and <em>says</em> with 2981.</p>
+<p><img loading="lazy" src="https://ik.imagekit.io/devmedeiros/10_popular_titles_H0dG3ljPN.png?updatedAt=1634083210303" alt="10 most frequent words by fake news titles and real news"  title="Top 10 words by fake news and real news"  />
+</p>
+<p>Now we prepare the data to the sentiment analysis. I&rsquo;m interested in classifing the data into sentiments of joy, anger, fear or surprise, for example. So I&rsquo;ll be using the <code>nrc</code> dataset from <a href="http://saifmohammad.com/WebPages/NRC-Emotion-Lexicon.htm">Saif Mohammad and Peter Turney</a>.</p>
+<div class="highlight"><pre tabindex="0" style="color:#f8f8f2;background-color:#272822;-moz-tab-size:4;-o-tab-size:4;tab-size:4;"><code class="language-r" data-lang="r"><span style="display:flex;"><span>p1 <span style="color:#f92672">&lt;-</span> tidy_title <span style="color:#f92672">%&gt;%</span>
+</span></span><span style="display:flex;"><span>  <span style="color:#a6e22e">inner_join</span>(<span style="color:#a6e22e">get_sentiments</span>(<span style="color:#e6db74">&#39;nrc&#39;</span>)) <span style="color:#f92672">%&gt;%</span>
+</span></span><span style="display:flex;"><span>  <span style="color:#a6e22e">group_by</span>(sentiment, news) <span style="color:#f92672">%&gt;%</span>
+</span></span><span style="display:flex;"><span>  <span style="color:#a6e22e">summarise</span>(n <span style="color:#f92672">=</span> <span style="color:#a6e22e">n</span>()) <span style="color:#f92672">%&gt;%</span>
+</span></span><span style="display:flex;"><span>  <span style="color:#a6e22e">mutate</span>(prop <span style="color:#f92672">=</span> n<span style="color:#f92672">/</span><span style="color:#a6e22e">sum</span>(n))
+</span></span></code></pre></div><p><img loading="lazy" src="https://ik.imagekit.io/devmedeiros/title_sentiment_lkDe-y_p97.png?updatedAt=1634083978487" alt="sentiment from news titles"  title="Sentiment from news titles"  />
+</p>
+<p><strong>Disgust</strong> seems to be the most common sentiment around fake news titles while <strong>trust</strong> is the lowest, even though it still is more than 50%. Overall fake news titles seems to have more &ldquo;sentiment&rdquo; than real news in this particular dataset. Even positive sentiments like <strong>joy</strong> and <strong>surprise</strong>.</p>
+<div class="highlight"><pre tabindex="0" style="color:#f8f8f2;background-color:#272822;-moz-tab-size:4;-o-tab-size:4;tab-size:4;"><code class="language-r" data-lang="r"><span style="display:flex;"><span>p2 <span style="color:#f92672">&lt;-</span> tidy_corpus <span style="color:#f92672">%&gt;%</span>
+</span></span><span style="display:flex;"><span><span style="color:#a6e22e">inner_join</span>(<span style="color:#a6e22e">get_sentiments</span>(<span style="color:#e6db74">&#39;nrc&#39;</span>)) <span style="color:#f92672">%&gt;%</span>
+</span></span><span style="display:flex;"><span><span style="color:#a6e22e">group_by</span>(sentiment, news) <span style="color:#f92672">%&gt;%</span>
+</span></span><span style="display:flex;"><span><span style="color:#a6e22e">summarise</span>(n <span style="color:#f92672">=</span> <span style="color:#a6e22e">n</span>()) <span style="color:#f92672">%&gt;%</span>
+</span></span><span style="display:flex;"><span><span style="color:#a6e22e">mutate</span>(prop <span style="color:#f92672">=</span> n<span style="color:#f92672">/</span><span style="color:#a6e22e">sum</span>(n))
+</span></span></code></pre></div><p>For the news&rsquo; corpus we can see the same sentiments are prevalent, but the proportion is lower compared to the title. A fake news article loses <strong>trust</strong> when the reader takes more time to read it. It also becames less <strong>negative</strong> and shows less <strong>fear</strong>.</p>
+<p><img loading="lazy" src="https://ik.imagekit.io/devmedeiros/corpus_sentiment_302EKlTtO.png?updatedAt=1634083978312" alt="sentiment from news text"  title="Sentiment from news corpus text"  />
+</p>
+<p>An improvement we could do here is to use our own stopwords and change the way we made the tokens. We had instances were <em>trump</em> and <em>trump&rsquo;s</em> didn&rsquo;t correspond to the same thing and if we had used this data to train a model this could become problematic.</p>
+]]></content:encoded>
     </item>
     
   </channel>

@@ -18,6 +18,35 @@
       
       <guid>https://devmedeiros.com/post/unlocking-machine-learning/</guid>
       <description>Find out if the use of machine learning is essential in all business cases. Evaluate benefits and limitations.</description>
+      <content:encoded><![CDATA[<p>In the increasingly data-driven business world, machine learning has gained prominence as a powerful tool to drive business success. However, a crucial question arises: is machine learning really necessary in all cases? In this post, we&rsquo;ll delve into that discussion, exploring the applications, benefits, and limitations of machine learning. In addition, we will provide useful criteria to help you decide whether this approach is essential for your business.</p>
+<h2 id="what-is-machine-learning">What is Machine Learning?</h2>
+<p>Machine Learning (ML) is a term used to describe algorithms that can be modeled to predict or explain something. You can make <em>machine learning models</em> that can predict monthly sales, customer churn, recommendation systems, etc.</p>
+<p>To make these models you&rsquo;ll need a lot of data, but not only that. You&rsquo;ll need good data, unbiased and clean.</p>
+<p>These models can be written in many different programming languages, the most popular ones are <strong>Python</strong> and <strong>R</strong>, but you could also use <strong>Julia</strong>, <strong>Scala</strong>, <strong>GO</strong>, and many others.</p>
+<h2 id="machine-learning-cases">Machine Learning Cases</h2>
+<h3 id="recommendation-systems">Recommendation Systems</h3>
+<p>If you ever wonder how your favorite streaming service always has a new song or show recommended to you, this is thanks to recommendation systems. They have many different algorithms to guess what a user would like.</p>
+<p>One of these algorithms creates clusters of similar users and uses things the other users enjoy to recommend to you. A simpler approach would just recommend the most popular items.</p>
+<h3 id="customer-churn">Customer Churn</h3>
+<p>This kind of model is really popular amongst companies like internet providers and banks. These models look at customer behavior when interacting with the company to try to identify what causes a customer to <em>give up</em> working with them.</p>
+<p>Is useful to find problems in a company regarding customer experience and the quality of the services provided.</p>
+<h2 id="the-benefits-of-machine-learning">The benefits of Machine Learning</h2>
+<p>With Machine Learning companies can make informed decisions about their business. For example, a restaurant can predict how many meals are going to be ordered weekly and then buy enough ingredients to avoid wasting food; or a company can calculate how likely a certain customer is to churn and then offer discounts or better deals to try to keep the customer.</p>
+<p>These processes can be automated and - <em>if the model is well built</em> - it&rsquo;ll only get better with time, increasing the accuracy and overall efficiency.</p>
+<h2 id="limitations">Limitations</h2>
+<p>Even though Machine Learning is incredible and sometimes looks like it came out of a sci-fi movie, it&rsquo;s not a solution that fits all. Some business problems don&rsquo;t have enough quality data to build a model, and even when you do have it, the computing power and expertise needed make it an expensive tool.</p>
+<p>Sometimes you can achieve a close result to an ML model by just taking a moving average, it&rsquo;s not perfect, but when you take into consideration the investment and the return of both approaches, it may make more sense to choose the cheaper option first, before moving into more complex models.</p>
+<h2 id="how-to-decide-if-machine-learning-is-needed">How to decide if Machine Learning is Needed</h2>
+<p>Before deciding if an ML model is necessary check if you already accomplished the following things:</p>
+<ul>
+<li>you have a quality data pipeline</li>
+<li>your company is data-driven</li>
+<li>you have the budget to invest in a data science team or to hire a company to do it</li>
+<li>your problem can be solved with ML</li>
+<li>have you already tested/tried simpler options available</li>
+</ul>
+<p>These aren&rsquo;t rules written in stone, just something that I think is important to keep in mind before choosing to invest in Machine Learning. You don&rsquo;t want to spend time working on something just to give up because then you realized that ML doesn&rsquo;t fit your business needs or it doesn&rsquo;t deliver extraordinary results.</p>
+]]></content:encoded>
     </item>
     
     <item>
@@ -27,6 +56,42 @@
       
       <guid>https://devmedeiros.com/post/ethics-data-science/</guid>
       <description>Data Science is an exciting field, but it&amp;rsquo;s also full of ethical dilemmas.</description>
+      <content:encoded><![CDATA[<h2 id="introduction">Introduction</h2>
+<p>Data science is an exciting field, but it’s also full of ethical pitfalls. If you want to avoid getting drawn into a situation that could damage your company or client, it’s important to understand the basics of data ethics and how they can affect your work.</p>
+<h2 id="learning-from-the-past">Learning from the past</h2>
+<p>Learning from the past is important because it can help us avoid making ethical mistakes that others already committed. The following examples are a sampling of some of the most popular data science ethics issues over the years:</p>
+<ul>
+<li><strong>Google&rsquo;s Street View privacy concerns (2011)</strong></li>
+</ul>
+<p>In 2011, Google came under fire for collecting personal data from unsecured wireless networks while taking pictures for its Street View service. The company said it was an accident and that it had not intended to collect any information from these Wi-Fi networks. However, computer security experts discovered a code in the software used by Google&rsquo;s cars that indicated that they were designed to do just that.</p>
+<p>Google said it had collected data like emails and passwords, but it wasn&rsquo;t sure how much. The fact that Google didn&rsquo;t know what data was collected raised concerns about its commitment to user privacy and security.</p>
+<ul>
+<li><strong>Facebook&rsquo;s Cambridge Analytica scandal (2018)</strong></li>
+</ul>
+<p>In March 2018, Facebook revealed that it had been the victim of a massive data breach involving tens of millions of users. The company said that Cambridge Analytica, a political consultancy firm with ties to the Trump presidential campaign, had gained access to information from up to 87 million.</p>
+<p>Users were unaware that the app was collecting data from them, and Facebook did not do enough to prevent it. The incident led to intense scrutiny of Facebook&rsquo;s use of user data and its responsibility for protecting users&rsquo; privacy. In April 2018, Facebook CEO Mark Zuckerberg testified before American Congress on the matter. He apologized for his company&rsquo;s mistakes in handling user data and outlined some steps he would take to ensure that similar breaches didn&rsquo;t occur again.</p>
+<ul>
+<li><strong>IBM’s Photo-scraping scandal (2019)</strong></li>
+</ul>
+<p>IBM faced a photo-scraping controversial scandal in 2019 where the controversy focused on 1 million pictures of human faces that IBM scrapped from Flickr, the online photo-hosting site.</p>
+<p>This scandal brought to light how their data is being used. People aren’t consenting to have their details used for profit.</p>
+<ul>
+<li><strong>Predictive Policing Software</strong></li>
+</ul>
+<p>It would be nice to be able to predict crime or be able to estimate where law enforcement needs to be to prevent crime, but many predictions made by this kind of software don’t come true. This happens because these tools are fed bad data.</p>
+<blockquote>
+<p>“Data collected by police is notoriously bad, easily manipulated, glaringly incomplete, and too often undermined by racial bias.” – <a href="https://www.aclu.org/news/criminal-law-reform/predictive-policing-software-more-accurate">Ezekiel Edwards, ACLU</a></p>
+</blockquote>
+<p>This polluted data makes the software produce equally contaminated results, leading the software to be better at predicting policing instead of predicting crime, becoming a self-fulfilling prophecy.</p>
+<h2 id="conclusion">Conclusion</h2>
+<p>These examples show that there are many ways to make mistakes when it comes to handling user data, but they also serve as excellent educational resources for anyone interested in learning more about <em>how</em> these kinds of problems can be avoided in future projects.</p>
+<p>There are lots of resources to learn more about this theme and how to combat this issue when working with machine learning models and user data. I&rsquo;ll list some, but remember this is a broad and deep topic, and my research may not find everything there is to it.</p>
+<ul>
+<li><a href="https://geomblog.github.io/fairness/">A free course on Fairness, Accountability, and Transparency sponsored by GIAN.</a></li>
+<li><a href="https://www.youtube.com/watch?v=bXitS_PMyFQ">Why Mathematicians Won&rsquo;t Help Cops - VSauce2</a></li>
+<li><a href="https://www.gov.uk/government/publications/data-ethics-framework/data-ethics-framework-2020">Data Ethics Framework - UK Government</a></li>
+</ul>
+]]></content:encoded>
     </item>
     
     <item>
@@ -36,6 +101,33 @@
       
       <guid>https://devmedeiros.com/post/credit-score-classification-app/</guid>
       <description>Using Streamlit to make a web app that classifies your credit score using Python</description>
+      <content:encoded><![CDATA[<h2 id="project-overview">Project Overview</h2>
+<p>This project showcase a data science life cycle, where I clean and prepare the dataset, use feature engineering, machine learning, deploy, and data visualization.</p>
+<p><img loading="lazy" src="https://ik.imagekit.io/devmedeiros/data-science-cycle_QZwyHaXsP.png?ik-sdk-version=javascript-1.4.3&amp;updatedAt=1659975338736#center" alt="data science cycle of this project in a diagram"  />
+</p>
+<p>The dataset comes from <a href="https://www.kaggle.com/datasets/parisrohan/credit-score-classification?select=train.csv">kaggle</a>, it has a lot of information about a person&rsquo;s credit and bank details, but it also has a lot of typos, missing data, and censored data. This dataset needed cleaning and also needed some feature engineering, I needed to mutate some features, so they could be read by the model. Thus when presented with categorical data I needed to identify if it was ordinal or nominal, if it was an ordinal variable then it would be mapped to sequential numbers otherwise I&rsquo;d make a dummy. For <em>yes</em> and <em>no</em> variables I choose to make just one dummy, but for types of loans I made one dummy for each loan type and if someone didn&rsquo;t have a loan they simply get 0 on all loan type features. I talk about the process of cleaning and feature engineering on this dataset <a href="/post/data-cleaning-credit-score/">here</a>.</p>
+<p>Then I needed a machine learning model that I could predict a person&rsquo;s credit score based on some features. To decide which features I was going to use I based my decision on what is commonly used among real companies, and I also choose variables that I thought made sense. I ended up with the following features:</p>
+<ul>
+<li>Age</li>
+<li>Annual income</li>
+<li>Number of bank accounts</li>
+<li>Number of credit cards</li>
+<li>Number of delayed payments</li>
+<li>Credit card utilization ratio</li>
+<li>Total EMI paid monthly</li>
+<li>Credit history age in months</li>
+<li>Loans</li>
+<li>Missed any payment in the last 12 months</li>
+<li>Paid minimum amount on at least one credit card</li>
+</ul>
+<p>With the features ready, I moved on to making the model, I decided to use a simple Random Forest, for now, I do intend to work on making this model better, but in this first instance, I wanted to focus on making the streamlit app.</p>
+<p>After I finished the model I serialized it and the scaler using the <code>pickle</code> package. To deploy the model and build a visualization I used <a href="https://streamlit.io/">streamlit</a>.</p>
+<p><img loading="lazy" src="https://user-images.githubusercontent.com/33239902/183321842-be97fb04-f00b-4b62-8e6e-2b53d25335a0.gif" alt="a gif showing how the streamlit credit score app works"  />
+</p>
+<p>In this app, you can fill out a form or just select one of the three default profiles given to see how the model evaluates each person&rsquo;s credit score. It also presents how certain the model was by displaying a pie graph with the probability (in percentage) of each credit score group the answers fit. It also shows how much each feature counts towards your credit score, according to this model. You can see the app live <a href="https://devmedeiros-credit-score-classification-appstreamlit-app-fcakrl.streamlitapp.com/">here</a>.</p>
+<hr>
+<p>All of the code is available at my GitHub <a href="https://github.com/devmedeiros/credit-score-classification-app">repository</a>. Besides the code, there you&rsquo;ll find the documentation, the original and treated data (all the stages of treatment), all the requirements for building this project, and how to run it locally.</p>
+]]></content:encoded>
     </item>
     
     <item>
@@ -45,6 +137,50 @@
       
       <guid>https://devmedeiros.com/post/2022-04-17-storytelling-with-ceap/</guid>
       <description>The storytelling of how much each deputy/senator spends in Brazil</description>
+      <content:encoded><![CDATA[<h2 id="the-dataset">The Dataset</h2>
+<p>CEAP stands for <em>Cota para o Exercício da Atividade Parlamentar</em>, in English, Exercise of Parliamentary Activity from Brazil. The quota is a monthly amount that can be used by the deputy/senator to defray typical expenses of the exercise of the parliamentary mandate.</p>
+<p>The monthly amounts don&rsquo;t accumulate over the months. Another important thing is Senators in Brazil have an 8-year mandate, and there are elections every 4 years.</p>
+<p>The main dataset is provided by the Brazilian government through the transparency portal.<sup id="fnref:1"><a href="#fn:1" class="footnote-ref" role="doc-noteref">1</a></sup> I gathered additional data to link the quota for each senator and federal unit.<sup id="fnref:2"><a href="#fn:2" class="footnote-ref" role="doc-noteref">2</a></sup><sup id="fnref:3"><a href="#fn:3" class="footnote-ref" role="doc-noteref">3</a></sup></p>
+<h2 id="data-analysis">Data Analysis</h2>
+<h3 id="total-amount-refunded-by-year">Total Amount Refunded by Year</h3>
+<p><img loading="lazy" src="https://raw.githubusercontent.com/devmedeiros/7DaysOfCode/main/img/refunded_year.jpg#center" alt="Bar plot with blue bars and green bars indicating election years, shows the total amount refunded by senators in Brazil"  />
+</p>
+<p>On the image above we can see how much was refunded by year. The year 2022 is the smallest because is not over yet. The data was collected on April 16, 2022.</p>
+<p>There seems to be a trend to spend slightly less money on election years.</p>
+<p>The first three years were the three lowest spending years, <strong>11.52M</strong>, <strong>11.61M</strong>, and <strong>10.64M</strong> from 2008 to 2010, respectively. This was probably because in the following years the expenses that could be refunded increased in 2011.</p>
+<h3 id="top-highest-and-lowest-average-refunded-percentages-by-senators">Top Highest and Lowest Average Refunded Percentages by Senators</h3>
+<p>These percentages represent the quota percentage a given senator refunded on average.</p>
+<p><img loading="lazy" src="https://raw.githubusercontent.com/devmedeiros/7DaysOfCode/main/img/senator_refund_highest_mean.jpg#center" alt="Horizontal bar plot with the 10 highest refundees, on average, senators"  />
+</p>
+<p>In the image above, it&rsquo;s seen highest refunded senators note that they’re all closed together, the highest refundee, on average, is João Capiberibe, using <strong>99.78%</strong> of his quota. On the lowest side (image below), it&rsquo;s presented the lowest use of the refund quota, on average. Nailde Panta, is the lowest refundee, on average, using just <strong>4.1%</strong> of her quota.</p>
+<p><img loading="lazy" src="https://raw.githubusercontent.com/devmedeiros/7DaysOfCode/main/img/senator_refund_lowest_mean.jpg#center" alt="Horizontal bar plot with the 10 lowest refundees, on average, senators"  />
+</p>
+<h3 id="expense-types-over-the-years">Expense Types Over the Years</h3>
+<p>Here we can see that in the years 2008 to 2010 there wasn’t any refund by transport and private security services.</p>
+<p><img loading="lazy" src="https://raw.githubusercontent.com/devmedeiros/7DaysOfCode/main/img/expense_type_year.jpg#center" alt="Bar plot of expenses type refunded by the years 2008 to 2022"  />
+</p>
+<p>In 2008, the main expenses were publication of parliamentary activity (over <strong>R$ 7,000.00</strong>) and locomotion/accommodation (almost <strong>R$ 6,500.00</strong>). In the subsequent years, those expenses dropped in half, for the publications and to less than <strong>R$ 1,000.00</strong> for locomotion.</p>
+<p>In 2013 and 2014 the expense of private security was the highest ever with over <strong>R$ 4,000.00</strong>. Probably due to protests in those years.</p>
+<h2 id="to-learn-more">To learn more</h2>
+<p>To learn how The Chamber of Deputies from Brazil works click <a href="https://www2.camara.leg.br/english">here</a>.</p>
+<p>This is presentation is for learning purposes, from a challenge proposed by Alura #7DaysOfCode. In case you want to know what else can be done with the data, check the <a href="https://serenata.ai/en/">Serenata de Amor</a>. It&rsquo;s a Brazilian project that uses AI to track refunded requests by deputies.</p>
+<p>See my code at my GitHub <a href="https://github.com/devmedeiros/7DaysOfCode">repo</a>, there you can also find a slide presentation, learn about how the data was cleaned, and know more about the next task from the challenge.</p>
+<h3 id="references">References</h3>
+<div class="footnotes" role="doc-endnotes">
+<hr>
+<ol>
+<li id="fn:1">
+<p><a href="https://www12.senado.leg.br/transparencia/dados-abertos-transparencia/dados-abertos-ceaps">https://www12.senado.leg.br/transparencia/dados-abertos-transparencia/dados-abertos-ceaps</a>&#160;<a href="#fnref:1" class="footnote-backref" role="doc-backlink">&#x21a9;&#xfe0e;</a></p>
+</li>
+<li id="fn:2">
+<p><a href="https://pt.wikipedia.org/wiki/Lista_de_senadores_do_Brasil#Nova_Rep%C3%BAblica_(1987%E2%80%932023)">https://pt.wikipedia.org/wiki/Lista_de_senadores_do_Brasil#Nova_Rep%C3%BAblica_(1987%E2%80%932023)</a>&#160;<a href="#fnref:2" class="footnote-backref" role="doc-backlink">&#x21a9;&#xfe0e;</a></p>
+</li>
+<li id="fn:3">
+<p><a href="https://www2.camara.leg.br/legin/int/atomes/2009/atodamesa-43-21-maio-2009-588364-publicacaooriginal-112820-cd-mesa.html">https://www2.camara.leg.br/legin/int/atomes/2009/atodamesa-43-21-maio-2009-588364-publicacaooriginal-112820-cd-mesa.html</a>&#160;<a href="#fnref:3" class="footnote-backref" role="doc-backlink">&#x21a9;&#xfe0e;</a></p>
+</li>
+</ol>
+</div>
+]]></content:encoded>
     </item>
     
     <item>
@@ -54,6 +190,61 @@
       
       <guid>https://devmedeiros.com/post/2021-10-12-fakenews-sentiment/</guid>
       <description>Sentiment Analysis comparing Fake News and Real News using R</description>
+      <content:encoded><![CDATA[<p>I want to tackle sentiment analysis using R in a simple way, just to get me started. With this in mind we begin loading all the packages we&rsquo;ll be using.</p>
+<div class="highlight"><pre tabindex="0" style="color:#f8f8f2;background-color:#272822;-moz-tab-size:4;-o-tab-size:4;tab-size:4;"><code class="language-r" data-lang="r"><span style="display:flex;"><span><span style="color:#a6e22e">library</span>(readr)
+</span></span><span style="display:flex;"><span><span style="color:#a6e22e">library</span>(dplyr)
+</span></span><span style="display:flex;"><span><span style="color:#a6e22e">library</span>(tidytext)
+</span></span><span style="display:flex;"><span><span style="color:#a6e22e">library</span>(tokenizers)
+</span></span><span style="display:flex;"><span><span style="color:#a6e22e">library</span>(stopwords)
+</span></span><span style="display:flex;"><span><span style="color:#a6e22e">library</span>(ggplot2)
+</span></span></code></pre></div><p>Then we need to load our dataset. This data comes from Kaggle <a href="https://www.kaggle.com/clmentbisaillon/fake-and-real-news-dataset"><em>Fake and real news dataset</em></a>.</p>
+<div class="highlight"><pre tabindex="0" style="color:#f8f8f2;background-color:#272822;-moz-tab-size:4;-o-tab-size:4;tab-size:4;"><code class="language-r" data-lang="r"><span style="display:flex;"><span>Fake <span style="color:#f92672">&lt;-</span> <span style="color:#a6e22e">read_csv</span>(<span style="color:#e6db74">&#39;~/fakenews/Fake.csv&#39;</span>)
+</span></span><span style="display:flex;"><span>True <span style="color:#f92672">&lt;-</span> <span style="color:#a6e22e">read.csv</span>(<span style="color:#e6db74">&#39;~/fakenews/True.csv&#39;</span>)
+</span></span></code></pre></div><p>I want to merge the two datasets, but first we need to create a new column that will tell me where the data came from.</p>
+<div class="highlight"><pre tabindex="0" style="color:#f8f8f2;background-color:#272822;-moz-tab-size:4;-o-tab-size:4;tab-size:4;"><code class="language-r" data-lang="r"><span style="display:flex;"><span>Fake<span style="color:#f92672">$</span>news <span style="color:#f92672">&lt;-</span> <span style="color:#e6db74">&#39;fake&#39;</span>
+</span></span><span style="display:flex;"><span>True<span style="color:#f92672">$</span>news <span style="color:#f92672">&lt;-</span> <span style="color:#e6db74">&#39;real&#39;</span>
+</span></span><span style="display:flex;"><span>
+</span></span><span style="display:flex;"><span>data <span style="color:#f92672">&lt;-</span> <span style="color:#a6e22e">rbind</span>(Fake,True)
+</span></span></code></pre></div><p>Now we can start the data cleaning. In this first moment, we&rsquo;ll do a simple tokenization on the <strong>title</strong> and <strong>text</strong> variables. Then we&rsquo;ll be removing the stopwords according to the <em>snowball</em> source from the <em>stopwords</em> package.</p>
+<div class="highlight"><pre tabindex="0" style="color:#f8f8f2;background-color:#272822;-moz-tab-size:4;-o-tab-size:4;tab-size:4;"><code class="language-r" data-lang="r"><span style="display:flex;"><span>title <span style="color:#f92672">&lt;-</span> <span style="color:#a6e22e">tibble</span>(news <span style="color:#f92672">=</span> data<span style="color:#f92672">$</span>news, text <span style="color:#f92672">=</span> data<span style="color:#f92672">$</span>title)
+</span></span><span style="display:flex;"><span>
+</span></span><span style="display:flex;"><span>corpus <span style="color:#f92672">&lt;-</span> <span style="color:#a6e22e">tibble</span>(news <span style="color:#f92672">=</span> data<span style="color:#f92672">$</span>news, corpus <span style="color:#f92672">=</span> data<span style="color:#f92672">$</span>text)
+</span></span><span style="display:flex;"><span>
+</span></span><span style="display:flex;"><span>tidy_title <span style="color:#f92672">&lt;-</span> title <span style="color:#f92672">%&gt;%</span>
+</span></span><span style="display:flex;"><span>  <span style="color:#a6e22e">unnest_tokens</span>(word, text, token <span style="color:#f92672">=</span> <span style="color:#e6db74">&#39;words&#39;</span>) <span style="color:#f92672">%&gt;%</span>
+</span></span><span style="display:flex;"><span>  <span style="color:#a6e22e">filter</span>(<span style="color:#f92672">!</span>(word <span style="color:#f92672">%in%</span> <span style="color:#a6e22e">stopwords</span>(source <span style="color:#f92672">=</span> <span style="color:#e6db74">&#39;snowball&#39;</span>)))
+</span></span><span style="display:flex;"><span>
+</span></span><span style="display:flex;"><span>tidy_corpus <span style="color:#f92672">&lt;-</span> corpus <span style="color:#f92672">%&gt;%</span>
+</span></span><span style="display:flex;"><span>  <span style="color:#a6e22e">unnest_tokens</span>(word, corpus, token <span style="color:#f92672">=</span> <span style="color:#e6db74">&#39;words&#39;</span>) <span style="color:#f92672">%&gt;%</span>
+</span></span><span style="display:flex;"><span>  <span style="color:#a6e22e">filter</span>(<span style="color:#f92672">!</span>(word <span style="color:#f92672">%in%</span> <span style="color:#a6e22e">stopwords</span>(source <span style="color:#f92672">=</span> <span style="color:#e6db74">&#34;snowball&#34;</span>)))
+</span></span></code></pre></div><p>With the tidy data we can select the ten most frequent words from which title news&rsquo; group.</p>
+<div class="highlight"><pre tabindex="0" style="color:#f8f8f2;background-color:#272822;-moz-tab-size:4;-o-tab-size:4;tab-size:4;"><code class="language-r" data-lang="r"><span style="display:flex;"><span>p0 <span style="color:#f92672">&lt;-</span> tidy_title <span style="color:#f92672">%&gt;%</span>
+</span></span><span style="display:flex;"><span>  <span style="color:#a6e22e">group_by</span>(news, word) <span style="color:#f92672">%&gt;%</span>
+</span></span><span style="display:flex;"><span>  <span style="color:#a6e22e">summarise</span>(n <span style="color:#f92672">=</span> <span style="color:#a6e22e">n</span>()) <span style="color:#f92672">%&gt;%</span>
+</span></span><span style="display:flex;"><span>  <span style="color:#a6e22e">arrange</span>(<span style="color:#a6e22e">desc</span>(n)) <span style="color:#f92672">%&gt;%</span>
+</span></span><span style="display:flex;"><span>  <span style="color:#a6e22e">slice</span>(<span style="color:#ae81ff">1</span><span style="color:#f92672">:</span><span style="color:#ae81ff">10</span>)
+</span></span></code></pre></div><p>Fake news titles mention <em>video</em> and <em>trump</em> by a large margin, 8477 and 7874 respectively. On the real news titles, <em>trump</em> is also one of the most mentioned, coming on first with 4883 appearances, followed by <em>u.s</em>, 4187, and <em>says</em> with 2981.</p>
+<p><img loading="lazy" src="https://ik.imagekit.io/devmedeiros/10_popular_titles_H0dG3ljPN.png?updatedAt=1634083210303" alt="10 most frequent words by fake news titles and real news"  title="Top 10 words by fake news and real news"  />
+</p>
+<p>Now we prepare the data to the sentiment analysis. I&rsquo;m interested in classifing the data into sentiments of joy, anger, fear or surprise, for example. So I&rsquo;ll be using the <code>nrc</code> dataset from <a href="http://saifmohammad.com/WebPages/NRC-Emotion-Lexicon.htm">Saif Mohammad and Peter Turney</a>.</p>
+<div class="highlight"><pre tabindex="0" style="color:#f8f8f2;background-color:#272822;-moz-tab-size:4;-o-tab-size:4;tab-size:4;"><code class="language-r" data-lang="r"><span style="display:flex;"><span>p1 <span style="color:#f92672">&lt;-</span> tidy_title <span style="color:#f92672">%&gt;%</span>
+</span></span><span style="display:flex;"><span>  <span style="color:#a6e22e">inner_join</span>(<span style="color:#a6e22e">get_sentiments</span>(<span style="color:#e6db74">&#39;nrc&#39;</span>)) <span style="color:#f92672">%&gt;%</span>
+</span></span><span style="display:flex;"><span>  <span style="color:#a6e22e">group_by</span>(sentiment, news) <span style="color:#f92672">%&gt;%</span>
+</span></span><span style="display:flex;"><span>  <span style="color:#a6e22e">summarise</span>(n <span style="color:#f92672">=</span> <span style="color:#a6e22e">n</span>()) <span style="color:#f92672">%&gt;%</span>
+</span></span><span style="display:flex;"><span>  <span style="color:#a6e22e">mutate</span>(prop <span style="color:#f92672">=</span> n<span style="color:#f92672">/</span><span style="color:#a6e22e">sum</span>(n))
+</span></span></code></pre></div><p><img loading="lazy" src="https://ik.imagekit.io/devmedeiros/title_sentiment_lkDe-y_p97.png?updatedAt=1634083978487" alt="sentiment from news titles"  title="Sentiment from news titles"  />
+</p>
+<p><strong>Disgust</strong> seems to be the most common sentiment around fake news titles while <strong>trust</strong> is the lowest, even though it still is more than 50%. Overall fake news titles seems to have more &ldquo;sentiment&rdquo; than real news in this particular dataset. Even positive sentiments like <strong>joy</strong> and <strong>surprise</strong>.</p>
+<div class="highlight"><pre tabindex="0" style="color:#f8f8f2;background-color:#272822;-moz-tab-size:4;-o-tab-size:4;tab-size:4;"><code class="language-r" data-lang="r"><span style="display:flex;"><span>p2 <span style="color:#f92672">&lt;-</span> tidy_corpus <span style="color:#f92672">%&gt;%</span>
+</span></span><span style="display:flex;"><span><span style="color:#a6e22e">inner_join</span>(<span style="color:#a6e22e">get_sentiments</span>(<span style="color:#e6db74">&#39;nrc&#39;</span>)) <span style="color:#f92672">%&gt;%</span>
+</span></span><span style="display:flex;"><span><span style="color:#a6e22e">group_by</span>(sentiment, news) <span style="color:#f92672">%&gt;%</span>
+</span></span><span style="display:flex;"><span><span style="color:#a6e22e">summarise</span>(n <span style="color:#f92672">=</span> <span style="color:#a6e22e">n</span>()) <span style="color:#f92672">%&gt;%</span>
+</span></span><span style="display:flex;"><span><span style="color:#a6e22e">mutate</span>(prop <span style="color:#f92672">=</span> n<span style="color:#f92672">/</span><span style="color:#a6e22e">sum</span>(n))
+</span></span></code></pre></div><p>For the news&rsquo; corpus we can see the same sentiments are prevalent, but the proportion is lower compared to the title. A fake news article loses <strong>trust</strong> when the reader takes more time to read it. It also becames less <strong>negative</strong> and shows less <strong>fear</strong>.</p>
+<p><img loading="lazy" src="https://ik.imagekit.io/devmedeiros/corpus_sentiment_302EKlTtO.png?updatedAt=1634083978312" alt="sentiment from news text"  title="Sentiment from news corpus text"  />
+</p>
+<p>An improvement we could do here is to use our own stopwords and change the way we made the tokens. We had instances were <em>trump</em> and <em>trump&rsquo;s</em> didn&rsquo;t correspond to the same thing and if we had used this data to train a model this could become problematic.</p>
+]]></content:encoded>
     </item>
     
   </channel>

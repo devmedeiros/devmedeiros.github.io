@@ -18,6 +18,34 @@
       
       <guid>https://devmedeiros.com/pt/post/2021-10-27-data-table/</guid>
       <description>Um dos pacotes de manipulação de dados mais rápidos do R</description>
+      <content:encoded><![CDATA[<p>O pacote <code>data.table</code> é um dos pacotes de manipulação de dados mais rápido, atualmente ele é mais rápido até que o <code>pandas</code> e <code>dplyr</code> <sup id="fnref:1"><a href="#fn:1" class="footnote-ref" role="doc-noteref">1</a></sup>. A sintaxe de um <code>data.table</code> é <code>dt[i, j, by]</code>, em que:</p>
+<ul>
+<li>i é utilizado para amostrar linhas</li>
+<li>j é utilizado para amostrar colunas</li>
+<li>by é utilizado para amostrar grupos, igual ao <strong>GROUP BY</strong> do SQL</li>
+</ul>
+<p>Você pode ler em <em>voz alta</em> como<sup id="fnref:2"><a href="#fn:2" class="footnote-ref" role="doc-noteref">2</a></sup>:</p>
+<blockquote>
+<p>Pegue <code>dt</code>, amostra/reordene as linhas usando <code>i</code>, então calcule <code>j</code>, agrupando por <code>by</code>.</p>
+</blockquote>
+<p>Um <code>data.table</code> também é um <code>data.frame</code> e todas as manipulações de dados básicas que você pode usar em um <code>data.frame</code> se aplica a um <code>data.table</code>. Como <code>ncol()</code>, <code>nrow()</code>, <code>names()</code>, <code>summary()</code>. Mas ele não para por aí, por exemplo <code>data.table</code> possui uma variável especial <code>.N</code> que é um integral que contains os números das linhas no grupo. Se você usar <code>dt[.N]</code> você verá a última linha do seu <code>data.table</code>.</p>
+<p>Outra coisa interessante do <code>data.table</code> é que se você quiser filtrar/amostrar uma coluna, você não precisa utilizar <code>df$x[df$x == 1]</code> você pode simplesmente usar <code>dt[x == 1]</code> o que torna o seu código mais limpo e fácil de ler.</p>
+<p>Você também tem a possibilidade de utilizar operadores especiais como: <code>%like%</code>, <code>%in%</code> e <code>%between%</code>. Estes operadores funcionam como operadores de SQL, <strong>LIKE</strong>, <strong>IN</strong>, e <strong>BETWEEN</strong>, respectivamente.</p>
+<p>Se você está familiarizado com SQL tem uma coisa que esse pacote oferece que irá chamar a sua atenção. No inglês se chama <em>chaining</em> (acorrentar), que permite a você a fazer uma sequência de operações em um <code>data.table</code>, você apenas precisa utilizar <code>dt[][]</code> e <em>acorrentar</em> múltiplas operações com &ldquo;[]&rdquo;.</p>
+<p>Mas este não são todos os operadores, com <code>:=</code> você pode alterar dados sem fazer uma nova cópia na memória.</p>
+<p>Caso queira começar a usar o pacote eu sugiro que use a <a href="https://raw.githubusercontent.com/rstudio/cheatsheets/master/datatable.pdf">cheatsheet</a> (folha de referência/colinha). É extramente útil caso já tenha um conhecimento básico sobre <code>data.frame</code>s.</p>
+<div class="footnotes" role="doc-endnotes">
+<hr>
+<ol>
+<li id="fn:1">
+<p><a href="https://h2oai.github.io/db-benchmark/">https://h2oai.github.io/db-benchmark/</a>&#160;<a href="#fnref:1" class="footnote-backref" role="doc-backlink">&#x21a9;&#xfe0e;</a></p>
+</li>
+<li id="fn:2">
+<p><a href="https://cran.r-project.org/web/packages/data.table/vignettes/datatable-intro.html">https://cran.r-project.org/web/packages/data.table/vignettes/datatable-intro.html</a>&#160;<a href="#fnref:2" class="footnote-backref" role="doc-backlink">&#x21a9;&#xfe0e;</a></p>
+</li>
+</ol>
+</div>
+]]></content:encoded>
     </item>
     
   </channel>

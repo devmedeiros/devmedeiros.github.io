@@ -18,6 +18,121 @@
       
       <guid>https://devmedeiros.com/post/2021-11-07-seaborn-package-guide/</guid>
       <description>A simple guide on how to make basic plots using the seaborn package from Python</description>
+      <content:encoded><![CDATA[<h2 id="introduction">Introduction</h2>
+<p>I&rsquo;m learning data visualization in Python and I see myself as a &lsquo;hands on&rsquo; learner, so I&rsquo;ll be reproducing some basic plots using <code>seaborn</code> package that you can use as a reference everytime you need to fresh up your memory.</p>
+<p>At first is required that the packages are properly imported, after that I load the iris dataset.</p>
+<div class="highlight"><pre tabindex="0" style="color:#f8f8f2;background-color:#272822;-moz-tab-size:4;-o-tab-size:4;tab-size:4;"><code class="language-python" data-lang="python"><span style="display:flex;"><span><span style="color:#f92672">import</span> pandas <span style="color:#66d9ef">as</span> pd
+</span></span><span style="display:flex;"><span><span style="color:#f92672">import</span> seaborn <span style="color:#66d9ef">as</span> sns
+</span></span><span style="display:flex;"><span><span style="color:#f92672">import</span> matplotlib.pyplot <span style="color:#66d9ef">as</span> plt
+</span></span><span style="display:flex;"><span>
+</span></span><span style="display:flex;"><span>url <span style="color:#f92672">=</span> <span style="color:#e6db74">&#34;https://git.io/JXciW&#34;</span>
+</span></span><span style="display:flex;"><span>
+</span></span><span style="display:flex;"><span>iris <span style="color:#f92672">=</span> pd<span style="color:#f92672">.</span>read_csv(url)
+</span></span></code></pre></div><p>If you&rsquo;re not familiar with the iris dataset, you can see its first five rows below:</p>
+<table>
+<thead>
+<tr>
+<th>sepal_length</th>
+<th>sepal_width</th>
+<th>petal_length</th>
+<th>petal_width</th>
+<th>species</th>
+</tr>
+</thead>
+<tbody>
+<tr>
+<td>5.1</td>
+<td>3.5</td>
+<td>1.4</td>
+<td>0.2</td>
+<td>setosa</td>
+</tr>
+<tr>
+<td>4.9</td>
+<td>3.0</td>
+<td>1.4</td>
+<td>0.2</td>
+<td>setosa</td>
+</tr>
+<tr>
+<td>4.7</td>
+<td>3.2</td>
+<td>1.3</td>
+<td>0.2</td>
+<td>setosa</td>
+</tr>
+<tr>
+<td>4.6</td>
+<td>3.1</td>
+<td>1.5</td>
+<td>0.2</td>
+<td>setosa</td>
+</tr>
+<tr>
+<td>5.0</td>
+<td>3.6</td>
+<td>1.4</td>
+<td>0.2</td>
+<td>setosa</td>
+</tr>
+</tbody>
+</table>
+<h2 id="barplots">Barplots</h2>
+<p>To create simple barplots.</p>
+<div class="highlight"><pre tabindex="0" style="color:#f8f8f2;background-color:#272822;-moz-tab-size:4;-o-tab-size:4;tab-size:4;"><code class="language-python" data-lang="python"><span style="display:flex;"><span>sns<span style="color:#f92672">.</span>barplot(x<span style="color:#f92672">=</span><span style="color:#e6db74">&#34;species&#34;</span>, y<span style="color:#f92672">=</span><span style="color:#e6db74">&#34;petal_width&#34;</span>, data<span style="color:#f92672">=</span>iris)
+</span></span></code></pre></div><p><img loading="lazy" src="https://ik.imagekit.io/devmedeiros/python_seaborn/barplot_EGCCNkum4y.jpg?updatedAt=1636308224965" alt="seaborn barplot species x petal_width"  />
+</p>
+<p>Making a horizontal barplot.</p>
+<div class="highlight"><pre tabindex="0" style="color:#f8f8f2;background-color:#272822;-moz-tab-size:4;-o-tab-size:4;tab-size:4;"><code class="language-python" data-lang="python"><span style="display:flex;"><span>sns<span style="color:#f92672">.</span>barplot(x<span style="color:#f92672">=</span><span style="color:#e6db74">&#34;petal_width&#34;</span>, y<span style="color:#f92672">=</span><span style="color:#e6db74">&#34;species&#34;</span>, data<span style="color:#f92672">=</span>iris)
+</span></span></code></pre></div><p><img loading="lazy" src="https://ik.imagekit.io/devmedeiros/python_seaborn/horizontal-barplot_pcHXoAQWTH.jpg?updatedAt=1636308226028" alt="seaborn barplot horizontal species x petal_width"  />
+</p>
+<p>Custom bar order.</p>
+<div class="highlight"><pre tabindex="0" style="color:#f8f8f2;background-color:#272822;-moz-tab-size:4;-o-tab-size:4;tab-size:4;"><code class="language-python" data-lang="python"><span style="display:flex;"><span>sns<span style="color:#f92672">.</span>barplot(
+</span></span><span style="display:flex;"><span>    x<span style="color:#f92672">=</span><span style="color:#e6db74">&#34;species&#34;</span>,
+</span></span><span style="display:flex;"><span>    y<span style="color:#f92672">=</span><span style="color:#e6db74">&#34;petal_width&#34;</span>,
+</span></span><span style="display:flex;"><span>    data<span style="color:#f92672">=</span>iris,
+</span></span><span style="display:flex;"><span>    order<span style="color:#f92672">=</span>[<span style="color:#e6db74">&#34;virginica&#34;</span>, <span style="color:#e6db74">&#34;setosa&#34;</span>, <span style="color:#e6db74">&#34;versicolor&#34;</span>])
+</span></span></code></pre></div><p><img loading="lazy" src="https://ik.imagekit.io/devmedeiros/python_seaborn/barplot-custom-order_hUl5vUQOi.jpg?updatedAt=1636308225481" alt="seaborn barplot custom bar order"  />
+</p>
+<p>Add caps to error bars.</p>
+<div class="highlight"><pre tabindex="0" style="color:#f8f8f2;background-color:#272822;-moz-tab-size:4;-o-tab-size:4;tab-size:4;"><code class="language-python" data-lang="python"><span style="display:flex;"><span>sns<span style="color:#f92672">.</span>barplot(x<span style="color:#f92672">=</span><span style="color:#e6db74">&#34;species&#34;</span>, y<span style="color:#f92672">=</span><span style="color:#e6db74">&#34;petal_width&#34;</span>, data<span style="color:#f92672">=</span>iris, capsize<span style="color:#f92672">=</span><span style="color:#ae81ff">.2</span>)
+</span></span></code></pre></div><p><img loading="lazy" src="https://ik.imagekit.io/devmedeiros/python_seaborn/barplot-cap-error-bar_xD7fHewAZ.jpg?updatedAt=1636308225172" alt="seaborn barplot caps error"  />
+</p>
+<p>Barplot withough error bar.</p>
+<div class="highlight"><pre tabindex="0" style="color:#f8f8f2;background-color:#272822;-moz-tab-size:4;-o-tab-size:4;tab-size:4;"><code class="language-python" data-lang="python"><span style="display:flex;"><span>sns<span style="color:#f92672">.</span>barplot(x<span style="color:#f92672">=</span><span style="color:#e6db74">&#34;species&#34;</span>, y<span style="color:#f92672">=</span><span style="color:#e6db74">&#34;petal_width&#34;</span>, data<span style="color:#f92672">=</span>iris, ci<span style="color:#f92672">=</span><span style="color:#66d9ef">None</span>)
+</span></span></code></pre></div><p><img loading="lazy" src="https://ik.imagekit.io/devmedeiros/python_seaborn/barplot-no-cap-error_5sf2jPDpBag.jpg?updatedAt=1636308225717" alt="barplot no error bar"  />
+</p>
+<h2 id="scatterplots">Scatterplots</h2>
+<p>A simple scatterplot.</p>
+<div class="highlight"><pre tabindex="0" style="color:#f8f8f2;background-color:#272822;-moz-tab-size:4;-o-tab-size:4;tab-size:4;"><code class="language-python" data-lang="python"><span style="display:flex;"><span>sns<span style="color:#f92672">.</span>scatterplot(x<span style="color:#f92672">=</span><span style="color:#e6db74">&#34;sepal_width&#34;</span>, y<span style="color:#f92672">=</span><span style="color:#e6db74">&#34;petal_width&#34;</span>, data<span style="color:#f92672">=</span>iris)
+</span></span></code></pre></div><p><img loading="lazy" src="https://ik.imagekit.io/devmedeiros/python_seaborn/scatterplot_nj8frw1JV.jpg?updatedAt=1636308224619" alt="seaborn scatterplot"  />
+</p>
+<p>Mapping groups to scatterplot.</p>
+<div class="highlight"><pre tabindex="0" style="color:#f8f8f2;background-color:#272822;-moz-tab-size:4;-o-tab-size:4;tab-size:4;"><code class="language-python" data-lang="python"><span style="display:flex;"><span>sns<span style="color:#f92672">.</span>scatterplot(x<span style="color:#f92672">=</span><span style="color:#e6db74">&#34;sepal_width&#34;</span>, y<span style="color:#f92672">=</span><span style="color:#e6db74">&#34;petal_width&#34;</span>, data<span style="color:#f92672">=</span>iris, hue<span style="color:#f92672">=</span><span style="color:#e6db74">&#34;species&#34;</span>)
+</span></span></code></pre></div><p><img loading="lazy" src="https://ik.imagekit.io/devmedeiros/python_seaborn/scatterplot-grouped_JHOKt9xydY.jpg?updatedAt=1636308224802" alt="seaborn scatterplot grouped"  />
+</p>
+<p>Mapping groups and scalling scatterplot.</p>
+<div class="highlight"><pre tabindex="0" style="color:#f8f8f2;background-color:#272822;-moz-tab-size:4;-o-tab-size:4;tab-size:4;"><code class="language-python" data-lang="python"><span style="display:flex;"><span>sns<span style="color:#f92672">.</span>scatterplot(
+</span></span><span style="display:flex;"><span>    x<span style="color:#f92672">=</span><span style="color:#e6db74">&#34;sepal_width&#34;</span>,
+</span></span><span style="display:flex;"><span>    y<span style="color:#f92672">=</span><span style="color:#e6db74">&#34;petal_width&#34;</span>,
+</span></span><span style="display:flex;"><span>    data<span style="color:#f92672">=</span>iris,
+</span></span><span style="display:flex;"><span>    hue<span style="color:#f92672">=</span><span style="color:#e6db74">&#34;sepal_length&#34;</span>,
+</span></span><span style="display:flex;"><span>    size<span style="color:#f92672">=</span><span style="color:#e6db74">&#34;sepal_length&#34;</span>)
+</span></span></code></pre></div><p><img loading="lazy" src="https://ik.imagekit.io/devmedeiros/python_seaborn/scatterplot-grouped-size_mZJt-TjEv.jpg?updatedAt=1636308224806" alt="seaborn scatterplot grouped size"  />
+</p>
+<h2 id="legend-and-axes">Legend and Axes</h2>
+<p>To change the plot legend to the outside of the plot area, you can use <code>bbox_to_anchor = (1,1), loc=2</code>. The following plot has a custom title, a new x axis label, and a y axis label.</p>
+<div class="highlight"><pre tabindex="0" style="color:#f8f8f2;background-color:#272822;-moz-tab-size:4;-o-tab-size:4;tab-size:4;"><code class="language-python" data-lang="python"><span style="display:flex;"><span>sns<span style="color:#f92672">.</span>scatterplot(x<span style="color:#f92672">=</span><span style="color:#e6db74">&#34;sepal_width&#34;</span>, y<span style="color:#f92672">=</span><span style="color:#e6db74">&#34;petal_width&#34;</span>, data<span style="color:#f92672">=</span>iris, hue<span style="color:#f92672">=</span><span style="color:#e6db74">&#34;species&#34;</span>)
+</span></span><span style="display:flex;"><span>plt<span style="color:#f92672">.</span>legend(
+</span></span><span style="display:flex;"><span>    title<span style="color:#f92672">=</span><span style="color:#e6db74">&#34;Species&#34;</span>,
+</span></span><span style="display:flex;"><span>    bbox_to_anchor <span style="color:#f92672">=</span> (<span style="color:#ae81ff">1</span>,<span style="color:#ae81ff">1</span>),
+</span></span><span style="display:flex;"><span>    loc<span style="color:#f92672">=</span><span style="color:#ae81ff">2</span>)
+</span></span><span style="display:flex;"><span>plt<span style="color:#f92672">.</span>xlabel(<span style="color:#e6db74">&#34;Sepal Width&#34;</span>)
+</span></span><span style="display:flex;"><span>plt<span style="color:#f92672">.</span>ylabel(<span style="color:#e6db74">&#34;Petal Width&#34;</span>)
+</span></span><span style="display:flex;"><span>plt<span style="color:#f92672">.</span>title(<span style="color:#e6db74">&#34;Sepal Width x Petal Width&#34;</span>)
+</span></span></code></pre></div><p><img loading="lazy" src="https://ik.imagekit.io/devmedeiros/python_seaborn/title-axis-outside-legend__zUIAf_2427.jpg?updatedAt=1636308224813" alt="seaborn scatterplot outside legend with custom title and axis labels"  />
+</p>
+]]></content:encoded>
     </item>
     
   </channel>

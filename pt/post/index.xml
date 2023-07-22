@@ -18,6 +18,86 @@
       
       <guid>https://devmedeiros.com/pt/post/sqlite-database-github-actions/</guid>
       <description>Descubra uma alternativa de graça a computação em nuvem para data scraping com GitHub Actions!</description>
+      <content:encoded><![CDATA[<p>Recentemente eu venho trabalhando com um projeto de raspagem de dados (web scrapping) que trabalha com uma pequena quantidade de dados, tão pequena que eu poderia usar tranquilamente os recursos gratuitos dos serviços de cloud disponíveis, mas eu não gosto de correr o risco de ser cobrada por um projeto pessoal. Para resolver isso eu estive procurando uma alternativa gratuita em que eu também possa compartilhar os dados e que rode com o Github Actions.</p>
+<p>Caso queira checar o repositório que contém o código discutido neste post, siga este <a href="https://github.com/devmedeiros/template-sqlite-actions">link</a>.</p>
+<blockquote>
+<p>Eu vou ilustrar como integrar o banco de dados SQLite com o Github Actions usando Python, mas caso você saiba como modificar um arquivo usando outra linguagem de programação esse post ainda é relevante para você.</p>
+</blockquote>
+<h2 id="escrevendo-seu-gerador-de-dadosscrapper">Escrevendo seu Gerador de Dados/Scrapper</h2>
+<p>Primeiro, seu projeto precisa estar em um repositório, no meu caso estou usando o Github. Eu escrevi um código Python que faz uma raspagem de dados numa página web e salva esses dados num banco SQLite, nesse exemplo vou ilustrar isso com um código mais simples.</p>
+<div class="highlight"><pre tabindex="0" style="color:#f8f8f2;background-color:#272822;-moz-tab-size:4;-o-tab-size:4;tab-size:4;"><code class="language-python" data-lang="python"><span style="display:flex;"><span><span style="color:#75715e"># Importe as bibliotecas</span>
+</span></span><span style="display:flex;"><span><span style="color:#f92672">import</span> pandas <span style="color:#66d9ef">as</span> pd
+</span></span><span style="display:flex;"><span><span style="color:#f92672">import</span> random
+</span></span><span style="display:flex;"><span><span style="color:#f92672">from</span> sqlalchemy <span style="color:#f92672">import</span> create_engine
+</span></span><span style="display:flex;"><span><span style="color:#f92672">from</span> datetime <span style="color:#f92672">import</span> datetime
+</span></span><span style="display:flex;"><span>
+</span></span><span style="display:flex;"><span><span style="color:#75715e"># Crie os dados aleatórios</span>
+</span></span><span style="display:flex;"><span>people <span style="color:#f92672">=</span> [<span style="color:#e6db74">&#39;Ana&#39;</span>, <span style="color:#e6db74">&#39;Bob&#39;</span>, <span style="color:#e6db74">&#39;Charles&#39;</span>, <span style="color:#e6db74">&#39;Daiana&#39;</span>]
+</span></span><span style="display:flex;"><span>values <span style="color:#f92672">=</span> [random<span style="color:#f92672">.</span>random(), random<span style="color:#f92672">.</span>random(), random<span style="color:#f92672">.</span>random(), random<span style="color:#f92672">.</span>random()]
+</span></span><span style="display:flex;"><span>
+</span></span><span style="display:flex;"><span><span style="color:#75715e"># Crie uma conexão com o banco de dados</span>
+</span></span><span style="display:flex;"><span>engine <span style="color:#f92672">=</span> create_engine(<span style="color:#e6db74">&#39;sqlite:///data.db&#39;</span>)
+</span></span><span style="display:flex;"><span>
+</span></span><span style="display:flex;"><span><span style="color:#75715e"># Crie o data frame</span>
+</span></span><span style="display:flex;"><span>data <span style="color:#f92672">=</span> pd<span style="color:#f92672">.</span>DataFrame({<span style="color:#e6db74">&#39;people&#39;</span>: people, <span style="color:#e6db74">&#39;values&#39;</span>: values, <span style="color:#e6db74">&#39;load_date&#39;</span>: datetime<span style="color:#f92672">.</span>now()})
+</span></span><span style="display:flex;"><span>
+</span></span><span style="display:flex;"><span><span style="color:#75715e"># Salve o data frame</span>
+</span></span><span style="display:flex;"><span>data<span style="color:#f92672">.</span>to_sql(<span style="color:#e6db74">&#39;data&#39;</span>, if_exists<span style="color:#f92672">=</span><span style="color:#e6db74">&#39;append&#39;</span>, con<span style="color:#f92672">=</span>engine, index<span style="color:#f92672">=</span><span style="color:#66d9ef">False</span>)
+</span></span></code></pre></div><h2 id="configurando-o-workflow">Configurando o Workflow</h2>
+<p>Se você rodar o código acima diversas vezes numa máquina local ele irá funcionar, mas você irá notar que no Github ele não irá persistir as mudanças, isso é porque é necessário fazer um commit. Para fazer isso você precisará criar um workflow, no seu repositório crie um arquivo yaml na pasta <code>.github/workflow</code>. Esse arquivo será o seu workflow, você pode escolher qualquer nome que quiser.</p>
+<div class="highlight"><pre tabindex="0" style="color:#f8f8f2;background-color:#272822;-moz-tab-size:4;-o-tab-size:4;tab-size:4;"><code class="language-yaml" data-lang="yaml"><span style="display:flex;"><span><span style="color:#75715e"># dê um nome para o workflow</span>
+</span></span><span style="display:flex;"><span><span style="color:#f92672">name</span>: <span style="color:#ae81ff">random data</span>
+</span></span><span style="display:flex;"><span>
+</span></span><span style="display:flex;"><span><span style="color:#75715e"># defina a frequência que ele irá rodar</span>
+</span></span><span style="display:flex;"><span><span style="color:#f92672">on</span>:
+</span></span><span style="display:flex;"><span>  <span style="color:#f92672">schedule</span>:
+</span></span><span style="display:flex;"><span>    - <span style="color:#f92672">cron</span>: <span style="color:#e6db74">&#34;0 * * * *&#34;</span> <span style="color:#75715e"># a cada hora</span>
+</span></span><span style="display:flex;"><span>  <span style="color:#f92672">workflow_dispatch</span>:
+</span></span><span style="display:flex;"><span>
+</span></span><span style="display:flex;"><span><span style="color:#f92672">env</span>:
+</span></span><span style="display:flex;"><span>  <span style="color:#f92672">ACTIONS_ALLOW_UNSECURE_COMMANDS</span>: <span style="color:#66d9ef">true</span>
+</span></span><span style="display:flex;"><span>
+</span></span><span style="display:flex;"><span><span style="color:#75715e"># crie as tarefas/jobs</span>
+</span></span><span style="display:flex;"><span><span style="color:#f92672">jobs</span>:
+</span></span><span style="display:flex;"><span>  <span style="color:#f92672">generate-latest</span>:
+</span></span><span style="display:flex;"><span>    <span style="color:#f92672">runs-on</span>: <span style="color:#ae81ff">ubuntu-latest</span>
+</span></span><span style="display:flex;"><span>
+</span></span><span style="display:flex;"><span>    <span style="color:#f92672">steps</span>:
+</span></span><span style="display:flex;"><span>      - <span style="color:#f92672">name</span>: <span style="color:#ae81ff">Checkout repo</span>
+</span></span><span style="display:flex;"><span>        <span style="color:#f92672">uses</span>: <span style="color:#ae81ff">actions/checkout@v3</span>
+</span></span><span style="display:flex;"><span>
+</span></span><span style="display:flex;"><span>      - <span style="color:#f92672">name</span>: <span style="color:#ae81ff">Set up Python</span>
+</span></span><span style="display:flex;"><span>        <span style="color:#f92672">uses</span>: <span style="color:#ae81ff">actions/setup-python@v4</span>
+</span></span><span style="display:flex;"><span>
+</span></span><span style="display:flex;"><span>        <span style="color:#f92672">with</span>:
+</span></span><span style="display:flex;"><span>          <span style="color:#f92672">python-version</span>: <span style="color:#e6db74">&#39;3.10&#39;</span> <span style="color:#75715e"># fixa o python para a versão 3.10</span>
+</span></span><span style="display:flex;"><span>
+</span></span><span style="display:flex;"><span>      - <span style="color:#f92672">name</span>: <span style="color:#ae81ff">Install requirements</span>
+</span></span><span style="display:flex;"><span>        <span style="color:#f92672">run</span>: <span style="color:#ae81ff">pip3 install -r requirements.txt</span> <span style="color:#75715e"># configura o ambiente</span>
+</span></span><span style="display:flex;"><span>
+</span></span><span style="display:flex;"><span>      - <span style="color:#f92672">name</span>: <span style="color:#ae81ff">Run random data</span>
+</span></span><span style="display:flex;"><span>        <span style="color:#f92672">run</span>: <span style="color:#ae81ff">python main.py</span>
+</span></span><span style="display:flex;"><span>
+</span></span><span style="display:flex;"><span>      - <span style="color:#f92672">name</span>: <span style="color:#ae81ff">Commit changes</span>
+</span></span><span style="display:flex;"><span>        <span style="color:#f92672">run</span>: |<span style="color:#e6db74">
+</span></span></span><span style="display:flex;"><span><span style="color:#e6db74">          git config --global user.name &#34;github-actions&#34;
+</span></span></span><span style="display:flex;"><span><span style="color:#e6db74">          git config --global user.email &#34;action@github.com&#34;
+</span></span></span><span style="display:flex;"><span><span style="color:#e6db74">
+</span></span></span><span style="display:flex;"><span><span style="color:#e6db74">          git add -A
+</span></span></span><span style="display:flex;"><span><span style="color:#e6db74">          git commit -m &#34;add more data&#34;</span>          
+</span></span><span style="display:flex;"><span>      
+</span></span><span style="display:flex;"><span>      - <span style="color:#f92672">name</span>: <span style="color:#ae81ff">Push changes</span>
+</span></span><span style="display:flex;"><span>        <span style="color:#f92672">uses</span>: <span style="color:#ae81ff">ad-m/github-push-action@master</span>
+</span></span><span style="display:flex;"><span>        <span style="color:#f92672">with</span>:
+</span></span><span style="display:flex;"><span>          <span style="color:#f92672">github_token</span>: <span style="color:#ae81ff">${{ secrets.GITHUB_TOKEN }}</span>
+</span></span></code></pre></div><p>Não se esqueça de habilitar as permissões do seu workflow, no seu repositório navegue até <code>Settings &gt; Actions &gt; General</code>, e selecione <strong>Read and write permissions</strong>.</p>
+<p><img loading="lazy" src="https://i.imgur.com/pOym60i.png#center" alt="worflow permissions do site oficial do github"  />
+</p>
+<h2 id="conclusão">Conclusão</h2>
+<p>Essa pode ser uma boa alternativa gratuita caso você queira ser capaz de compartilhar os dados que você está coletando ou gerando. Mas não se esqueça de ficar atento nas limitações do Github quando usando a versão free. Veja os limites de uso atuais no <a href="https://docs.github.com/en/actions/learn-github-actions/usage-limits-billing-and-administration#usage-limits">site oficial</a> deles.</p>
+<hr>
+<p>Caso queira ver uma aplicação real do que foi discutido aqui, você pode checar esse <a href="https://github.com/devmedeiros/nota-fiscal-goiana">respositório</a>. Onde eu implementei um scrapper mensal que coleta os dados e os disponibiliza num banco SQLite para todos.</p>
+]]></content:encoded>
     </item>
     
     <item>
@@ -27,6 +107,35 @@
       
       <guid>https://devmedeiros.com/pt/post/unlocking-machine-learning/</guid>
       <description>Descubra se o uso de aprendizado de máquina é essencial em todos os casos de negócios. Avalie os benefícios e as limitações.</description>
+      <content:encoded><![CDATA[<p>No mundo dos negócios cada vez mais orientado a dados, o aprendizado de máquina ganhou destaque como uma ferramenta poderosa para impulsionar o sucesso dos negócios. No entanto, surge uma questão crucial: o aprendizado de máquina é realmente necessário em todos os casos? Nesta postagem, vamos nos aprofundar nessa discussão, explorando as aplicações, benefícios e limitações do aprendizado de máquina. Além disso, forneceremos critérios úteis para ajudá-lo a decidir se essa abordagem é essencial para o seu negócio.</p>
+<h2 id="o-que-é-aprendizado-de-máquina">O que é Aprendizado de Máquina?</h2>
+<p>Aprendizado de máquina, do inglês <em>Machine Learning</em> (ML) é um termo usado para descrever algoritmos que podem ser modelados para prever ou explicar algo. Você pode criar <em>modelos de aprendizado de máquina</em> que podem prever vendas mensais, rotatividade de clientes (<em>churn</em>), sistemas de recomendação, entre outros.</p>
+<p>Para fazer esses modelos, você precisará de muitos dados, mas não apenas isso. Você vai precisar de bons dados, imparciais e limpos.</p>
+<p>Esses modelos podem ser escritos em várias linguagens de programação diferentes, as mais populares são <strong>Python</strong> e <strong>R</strong>, mas você também pode usar <strong>Julia</strong>, <strong>Scala</strong>, <strong>GO</strong>, e muitos outros.</p>
+<h2 id="usos-de-aprendizado-de-máquina">Usos de Aprendizado de Máquina</h2>
+<h3 id="sistemas-de-recomendação">Sistemas de Recomendação</h3>
+<p>Se você já se perguntou como seu serviço de streaming favorito semmpre tem uma nova música ou programa recomendado para você, isso se deve aos sistemas de recomendação. Eles têm muitos algoritmos diferentes para adivinhar o que um usuários gostaria.</p>
+<p>Um desses algoritmos cria clusters de usuários semelhantes e usa coisas que os outros usuários gostam e recomenda a você. Uma abordagem mais simples, recomendaria apenas os itens mais populares.</p>
+<h3 id="evasão-de-clientes">Evasão de Clientes</h3>
+<p>Esse tipo de modelo é muito popular entre empresas como provedores de internet e bancos. Esses modelos analisam o comportamento do cliente ao interagir como a empresa para tentar identificar o que faz com que um cliente <em>desista</em> de trabalhar com eles.</p>
+<p>É útil para encontrar problemas em uma empresa em relação à experiência do cliente e à qualidade dos serviços prestados.</p>
+<h2 id="os-benefícios-de-aprendizado-de-máquina">Os Benefícios de Aprendizado de Máquina</h2>
+<p>Com Aprendizado de máquina, as empresas podem tomar decisões embasadas sobre seus negócios. Por exemplo, um restaurante pode prever quantas refeições serão encomendadas semanalmente e então comprar ingredientes suficientes para evitar o desperdício de comida; ou uma empresa pode calcular a probabilidade de abandono (churn) de um determinado cliente e então oferecer descontos ou melhoria nos serviços para tentar manter o cliente.</p>
+<p>Esses processos podem ser automatizados e - <em>se o modelo for bem construído</em> - só melhorará com o tempo, aumentando a precisão e a eficiência em geral.</p>
+<h2 id="limitações">Limitações</h2>
+<p>Embora Aprendizado de Máquina seja incrível e às vezes pareça ter saído de um filme de ficção científica, não é uma solução que sirva para todos. Alguns problemas de negócios não possuem dados de qualidade suficientes para construir um modelo e, mesmo quando você os possui, o poder de computação e o conhecimento necessário tornam-no uma ferramenta cara.</p>
+<p>Às vezes você pode chegar a um resultado próximo a um modelo de ML apenas pegando uma média móvel, não é perfeito, mas quando você leva em consideração o investimento e o retorno de ambas as abordagens, pode fazer mais sentido escolher a opção mais barata primeiro, antes de seguir para modelos mais complexos.</p>
+<h2 id="como-se-decidir-se-aprendizado-de-máquina-é-necessário">Como se Decidir se Aprendizado de Máquina é Necessário?</h2>
+<p>Antes de decidir se um modelo de ML é necessário, verifique se você já realizou o seguinte:</p>
+<ul>
+<li>você possui um pipeline de dados de qualidade</li>
+<li>sua empresa é orientada por dados</li>
+<li>você tem orçamento para investir em uma equipe de ciência de dados ou contratar uma empresa para fazer isso</li>
+<li>seu problema pode ser resolvido com ML</li>
+<li>você já testou/experimentou outras opções mais simples</li>
+</ul>
+<p>Essas não são regras escritas em pedra, apenas algo que acho importante ter em mente antes de optar por investir em Aprendizado de Máquina. Você não quer perder tempo trabalhando em algo apenas para desistir porque percebeu que o ML não atende às necessidades do seu negócio ou não oferece resultados extraordinários.</p>
+]]></content:encoded>
     </item>
     
     <item>
@@ -36,6 +145,16 @@
       
       <guid>https://devmedeiros.com/pt/post/how-to-use-word-clouds/</guid>
       <description>Nuvens de palavras são uma visualização popular para analisar textos, mas é preciso apresentá-las de forma clara para que a mensagem seja compreendida.</description>
+      <content:encoded><![CDATA[<p>Nuvens de palavras é uma visualização de dados muito popular para analisar textos, caixas de comentários, avaliações. E não é popular ao acaso, é uma visualização eficiente para mostrar de forma resumida a opinião de um grupo de pessoas, mas nem sempre é apresentada de forma efetiva. Então vou citar aqui alguns pontos para se atentar na hora de apresentar a melhor nuvem de palavras que você pode.</p>
+<h2 id="1--retirando-palavras-comuns-e-irrelevantes">1- Retirando palavras comuns e irrelevantes</h2>
+<p>Uma das palavras mais comum da língua portuguesa é os artigos a, o, as, os, um, uma, uns e umas. O que não surpreende, dado que são essenciais para a formação de frases, mas apesar de serem fundamentais, quando pensamos em termos de quão explicativos eles são para indicar o tema ou a ideia de uma frase, eles não contribuem em nada. Esses artigos e outras palavras comuns são chamadas de <strong>stopwords</strong> (palavras de parada/palavras vazias).</p>
+<p>Então sempre que vamos trabalhar com nuvens de palavras é importante remover essas palavras stopwords para deixar claro do que se trata o seu tema e diminuir a poluição de informação.</p>
+<h2 id="2--simplicidade-acima-de-complexidade">2- Simplicidade acima de complexidade</h2>
+<p>Quando está trabalhando com apresentações visuais é comum querer fazer algo extravagante que chama a atenção, mas as vezes visualizações complexas podem distrair as pessoas da história que você quer contar e torna difícil de entender a sua mensagem.</p>
+<h2 id="3--segmente-seus-dados">3- Segmente seus dados</h2>
+<p>Um dos usos mais comuns das nuvem de palavras é em reviews de clientes e avaliações de empresas (como NPS), nesses casos que temos “tipos” diferentes de clientes é esperado que eles comportamentos muito diferentes, um cliente que está satisfeito ou feliz vai ter comentários diferentes de outro que está insatisfeito. Logo se você faz apenas uma nuvem de palavras sem segmentar seus dados pode encontrar uma nuvem de palavras que não significa nada além de “muitas pessoas mencionaram isso”.</p>
+<p>Ao segmentar os dados pela nota dos clientes ou pelos detratores e promotores, você consegue identificar o que os clientes que estão felizes com o seu serviço estão dizendo e colocar isso em contraste com o que os que não estão satisfeito e identificar pontos de melhoria.</p>
+]]></content:encoded>
     </item>
     
     <item>
@@ -45,6 +164,17 @@
       
       <guid>https://devmedeiros.com/pt/post/what-is-sql/</guid>
       <description>SQL é sigla para Linguagem de Query Estruturada. Uma linguagem de query é uma linguagem de programação especializada que permite pesquisar e alterar os conteúdos de um banco de dados.</description>
+      <content:encoded><![CDATA[<p>SQL é sigla para Linguagem de Query Estruturada (<em>Structured Query Language</em>). Uma linguagem de query é uma linguagem de programação especializada que permite pesquisar e alterar os conteúdos de um banco de dados.</p>
+<p>Assim como em português, SQL possui diferentes dialetos com palavras chaves especiais. A maioria das palavras chaves de diferentes dialetos são as mesmas, elas compõe o SQL comum, mas existem algumas palavras específicas a alguns bancos de dados como:</p>
+<ul>
+<li>PostgreSQL</li>
+<li>SQL Server</li>
+<li>Oracle SQL</li>
+</ul>
+<p>Quando uma palavra chave é específica de um dialeto, normalmente você consegue encontrar alguma equivalência em outro dialeto. Logo, você pode focar em aprender seu dialeto preferido e quando você precisar usar outro banco de dados, você pode facilmente pesquisar o que você quer no outro dialeto, por exemplo, <code>oracle sql nvl no postgre</code>.</p>
+<h2 id="qual-dialeto-aprender">Qual dialeto aprender?</h2>
+<p>O conhecimento que você adquirir aprendendo qualquer dialeto de SQL é transferível, então você pode escolher qualquer um. Se por acaso você tiver acesso a algum banco de dados, tome proveito dessa oportunidade e aprenda o dialeto dele, mas caso não tenha nenhum contato, escolha qualquer um que achar melhor.</p>
+]]></content:encoded>
     </item>
     
     <item>
@@ -54,6 +184,20 @@
       
       <guid>https://devmedeiros.com/pt/post/using-ai-in-your-favor/</guid>
       <description>Uma nova forma de usar ferramentas de inteligência artificial, como ChatGPT, ao seu favor.</description>
+      <content:encoded><![CDATA[<p>Nos últimos meses mais uma vez IA se tornou o assunto do momento. Depois de diversas pesquisas na área de arte usando inteligência artificial agora é a vez da popularização de textos escritos por IA.</p>
+<p>Modelos de aprendizado de máquina já estavam auxiliando as pessoas há muito tempo, como corretores ortográficos, ferramentas que reescrevem um texto para retirar plágio e até ferramentas que fazem de tudo - <em>desde que você saiba como pedir</em>. Ferramentas como o ChatGPT não são novas, apenas explodiram em popularidade recentemente, você com certeza já
+ouviu falar de diversas formas de usar essas ferramentas de inteligência artificial, mas eu quero propor mais <strong>uma</strong> forma em que podemos aproveitar-las.</p>
+<p>Pesquisar coisas na internet pode ser algo difícil, as vezes você precisa de muita informação sobre o que está procurando, o que dificulta a sua jornada. Nesses casos, usar ferramentas de IA pode ser proveitoso. Diferente de buscadores como o Google, ferramentas de inteligência artificial são capazes de entender uma pergunta e lhe responder de forma mais variada sem a necessidade de usar &ldquo;códigos&rdquo; ou filtros especiais, usando apenas <strong>linguagem natural</strong>.</p>
+<hr>
+<p>Recentemente eu estava procurando como encontrar círculos em imagens usando Python. Todos os resultados da primeira página do Google retornaram respostas usando o pacote OpenCV, que é um dos principais pacotes na área de <strong>Processamento Digital de Imagens</strong> (PDI), mas eu queria algo diferente.</p>
+<p>Mesmo alterando os parâmetros das minhas buscas, os buscadores da internet continuaram insistindo em me sugerir páginas com o pacote <code>opencv</code>, mesmo quando eu explicitamente escrevia <em>&ldquo;sem usar opencv&rdquo;</em>, então eu decidi testar o <strong>ChatGPT</strong>. Primeiro eu tentei pedir que ele escrevesse uma função para encontrar círculos.</p>
+<p><img loading="lazy" src="https://i.imgur.com/ZEFy6ls.png#center" alt="uma imagem em inglês escrito: escreva uma função em python que recebe uma imagem e retorna quantos círculos existem na imagem. ela precisa ser capaz de contar quantos círculos há mesmo que eles estejam levemente distorcidos ou com pequenos brilhos. a saída da ferramente é uma amostra de código usando a biblioteca opencv"  />
+</p>
+<p>Ele escreveu uma função que funciona, bem semelhante ao que eu tinha escrito, mas ainda assim usava OpenCV. Então eu decidi ser mais específica e pedir outras formas de fazer isso, ao invés de pedir pelo código.</p>
+<p><img loading="lazy" src="https://i.imgur.com/E9kHjI7.png#center" alt="uma imagem em inglês escrito: há outros métodos, além de opencv para detectar imagens usando python e abaixo a saída da ferramenta citando cinco exemplos"  />
+</p>
+<p>Não sei se todos os métodos citados funcionam ou sequer existem, mas essas respostas me ajudaram a quebrar meu bloqueio de ideias e voltar a progredir no meu projeto. Agora eu posso estudar sobre o <code>scikit-image</code>, que eu não conhecia, e estou podendo testar com outras bibliotecas. Foi muito satisfatório poder encontrar outras formas de resolver um mesmo problema. Assim eu posso garantir que estou explorando vários caminhos diferentes e não fico presa apenas ao que já conheço e uso.</p>
+]]></content:encoded>
     </item>
     
     <item>
@@ -63,6 +207,33 @@
       
       <guid>https://devmedeiros.com/pt/post/choose-the-best-graph/</guid>
       <description>Escolher o melhor gráfico pode ser uma tarefa difícil, mas não precisa ser.</description>
+      <content:encoded><![CDATA[<p>Aprendendo a fazer melhores visualizações vem com estudo e prática, hoje quero falar sobre fontes que você pode usar para orientá-lo a fazer gráficos melhores e outras visualizações de dados em geral.</p>
+<h2 id="from-data-to-viz">From Data to Viz</h2>
+<p><img loading="lazy" src="https://i.imgur.com/416qeWj.png" alt="infográfico mostrando diferentes possibilidades de escolha de um terreno"  />
+</p>
+<p><a href="https://www.data-to-viz.com/">From Data to Viz</a> traz muitas ferramentas para ajudar a navegar no mundo da visualização de dados. Na guia <code>Explore</code> você se depara com um infográfico interativo que ajuda a escolher um enredo, você pode escolher entre: <code>numérico</code>, <code>categórico</code>, <code>numérico&amp;categórico</code>, <code>mapas</code>, <code>rede</code> e <code>série temporal</code>. Mas ele não mostra apenas gráficos que seriam bons para o seu tipo de dados, mas também uma descrição explicando o gráfico e os erros comuns que as pessoas cometem ao usar esse gráfico específico.</p>
+<p>No final de cada ramo do infográfico, há também um link <code>story</code>, onde você pode ler sobre uma implementação desse tipo de plot usando dados reais.</p>
+<p>Caso você esteja apenas começando e não conhece muitos termos ou não tem certeza se seus dados contêm <code>muitos</code> ou <code>poucos</code> pontos quando você passa o mouse sobre os nós de opções, você poderá ver uma descrição com uma tabela de exemplo representando o que isso significa.</p>
+<p>Ao ir para a guia <code>Caveats</code> você pode ver uma coleção de advertências e pode filtrá-las por:</p>
+<ul>
+<li>
+<p><strong>Improvement:</strong> todas as ressalvas que irão sugerir algum tipo de melhoria nas parcelas.</p>
+</li>
+<li>
+<p><strong>Misleading:</strong> alguns gráficos podem ser enganosos ao omitir algumas informações, seja o tamanho da amostra ou a diferença proporcional entre duas categorias. Ao ler isso, você poderá identificar práticas ruins que levam à confusão ou manipulação.</p>
+</li>
+</ul>
+<p>Este site também fornece links para galerias <strong>Python</strong> e <strong>R</strong>, onde você pode obter snippets de código para reproduzir esses gráficos.</p>
+<p>Se você preferir aprender observando o que não fazer, confira <a href="https://viz.wtf/">WTF Visualizations</a>. Ele mostra visualizações ruins que não fazem sentido ou são de alguma forma enganosas.</p>
+<p>Lá você encontrará vários gráficos de pizza que não somam 100%, gráficos de área onde os números não correspondem à área e apenas manipulação direta como no exemplo abaixo.</p>
+<figure class="align-center ">
+    <img loading="lazy" src="https://64.media.tumblr.com/d8bcf748d564125312aeba4001b96df5/tumblr_qzg4n3nfJY1sgh0voo1_640.jpg#center"
+         alt="um gráfico de rosca mostrando &#39;sim&#39; como maioria enquanto representa 10% e &#39;não&#39; como minoria enquanto representa 90%"/> <figcaption>
+            <p>gráfico de pizza de <a href="https://viz.wtf/">WTF Visualizations</a></p>
+        </figcaption>
+</figure>
+
+]]></content:encoded>
     </item>
     
     <item>
@@ -72,6 +243,263 @@
       
       <guid>https://devmedeiros.com/pt/post/case-study-analytics-engineer/</guid>
       <description>Projeto explorando tarefas comuns que um Analytics Engineer faz diariamente.</description>
+      <content:encoded><![CDATA[<h2 id="como-é-trabalhar-como-um-analytics-engineer">Como é trabalhar como um Analytics Engineer?</h2>
+<p>Analytics Engineer refere-se a um profissional de ciência de dados focado em transformar dados em informações de fácil acesso ao usuário final. Eles fornecem relatórios estatísticos e dinâmicos que capacitam a equipe de negócios sem que eles precisem pensar na complexidade por trás da análise de dados.</p>
+<p>Neste estudo de caso, quero falar sobre quais seriam as tarefas comuns que um Analytics Engineer precisaria executar e como eu as conduziria.</p>
+<p>Nesse cenário, o Analytics Engineer trabalha para o Bankio, um banco digital do Brasil. Como a maioria dos bancos digitais no Brasil, o Bankio oferece transferências gratuitas para todas as contas bancárias do país. Também possui muitos produtos como conta de investimento, conta poupança, conta bancária individual, cartão de crédito sem anuidade e muito mais.</p>
+<h3 id="tarefa-1-consulta-sql">Tarefa 1: Consulta SQL</h3>
+<blockquote>
+<p>Um Analista de Negócios (<em>Bussiness Analyst</em>) do Bankio pede sua ajuda para escrever uma consulta SQL para obter todo o saldo mensal da conta entre janeiro de 2020 e dezembro de 2020.</p>
+</blockquote>
+
+
+<p><details >
+  <summary markdown="span">Solução da consulta SQL <em>(clique para expandir)</em></summary>
+  <div class="highlight"><pre tabindex="0" style="color:#f8f8f2;background-color:#272822;-moz-tab-size:4;-o-tab-size:4;tab-size:4;"><code class="language-SQL" data-lang="SQL"><span style="display:flex;"><span><span style="color:#66d9ef">SELECT</span>
+</span></span><span style="display:flex;"><span>  a.<span style="color:#f92672">*</span>,
+</span></span><span style="display:flex;"><span>  <span style="color:#75715e">-- Aqui eu calculo a soma cumulativa do total de depósitos de cada cliente ordenando
+</span></span></span><span style="display:flex;"><span><span style="color:#75715e"></span>  <span style="color:#75715e">-- por mês, se for nulo, altero o valor para 0, então subtraio a soma cumulativa do
+</span></span></span><span style="display:flex;"><span><span style="color:#75715e"></span>  <span style="color:#75715e">-- total de retiradas para cada cliente ordenando por mês, se for nulo, altero o
+</span></span></span><span style="display:flex;"><span><span style="color:#75715e"></span>  <span style="color:#75715e">-- valor para 0 e eu salvo isso como account_monthly_balance
+</span></span></span><span style="display:flex;"><span><span style="color:#75715e"></span>  NVL(<span style="color:#66d9ef">SUM</span>(total_transfer_in) OVER (PARTITION <span style="color:#66d9ef">BY</span> customer_id 
+</span></span><span style="display:flex;"><span><span style="color:#66d9ef">ORDER</span> <span style="color:#66d9ef">BY</span>
+</span></span><span style="display:flex;"><span>  action_month), <span style="color:#ae81ff">0</span>) <span style="color:#f92672">-</span> NVL(<span style="color:#66d9ef">SUM</span>(total_transfer_out) OVER (PARTITION <span style="color:#66d9ef">BY</span> customer_id 
+</span></span><span style="display:flex;"><span><span style="color:#66d9ef">ORDER</span> <span style="color:#66d9ef">BY</span>
+</span></span><span style="display:flex;"><span>  action_month), <span style="color:#ae81ff">0</span>) <span style="color:#66d9ef">AS</span> account_monthly_balance 
+</span></span><span style="display:flex;"><span><span style="color:#66d9ef">FROM</span>
+</span></span><span style="display:flex;"><span>  <span style="color:#75715e">-- subconsulta total de transações de entrada/saída
+</span></span></span><span style="display:flex;"><span><span style="color:#75715e"></span>( 
+</span></span><span style="display:flex;"><span>  <span style="color:#66d9ef">SELECT</span>
+</span></span><span style="display:flex;"><span>    <span style="color:#f92672">*</span> 
+</span></span><span style="display:flex;"><span>  <span style="color:#66d9ef">FROM</span>
+</span></span><span style="display:flex;"><span>    <span style="color:#75715e">-- subconsulta de depósitos totais
+</span></span></span><span style="display:flex;"><span><span style="color:#75715e"></span>( 
+</span></span><span style="display:flex;"><span>    <span style="color:#66d9ef">SELECT</span>
+</span></span><span style="display:flex;"><span>      action_month, customer_id, <span style="color:#66d9ef">SUM</span>(amount) <span style="color:#66d9ef">AS</span> total_transfer_in 
+</span></span><span style="display:flex;"><span>    <span style="color:#66d9ef">FROM</span>
+</span></span><span style="display:flex;"><span>      (
+</span></span><span style="display:flex;"><span>        <span style="color:#66d9ef">SELECT</span>
+</span></span><span style="display:flex;"><span>          <span style="color:#f92672">*</span> 
+</span></span><span style="display:flex;"><span>        <span style="color:#66d9ef">FROM</span>
+</span></span><span style="display:flex;"><span>          <span style="color:#75715e">-- subconsulta de depósitos regulares
+</span></span></span><span style="display:flex;"><span><span style="color:#75715e"></span>( 
+</span></span><span style="display:flex;"><span>          <span style="color:#66d9ef">SELECT</span>
+</span></span><span style="display:flex;"><span>            d_month.action_month, accounts.customer_id, <span style="color:#66d9ef">SUM</span>(transfer_ins.amount) <span style="color:#66d9ef">AS</span> amount 
+</span></span><span style="display:flex;"><span>          <span style="color:#66d9ef">FROM</span>
+</span></span><span style="display:flex;"><span>            d_time 
+</span></span><span style="display:flex;"><span>            <span style="color:#66d9ef">INNER</span> <span style="color:#66d9ef">JOIN</span>
+</span></span><span style="display:flex;"><span>              transfer_ins 
+</span></span><span style="display:flex;"><span>              <span style="color:#66d9ef">ON</span> transfer_ins.transaction_completed_at <span style="color:#f92672">=</span> d_time.time_id 
+</span></span><span style="display:flex;"><span>            <span style="color:#66d9ef">LEFT</span> <span style="color:#66d9ef">JOIN</span>
+</span></span><span style="display:flex;"><span>              d_month <span style="color:#66d9ef">USING</span>(month_id) 
+</span></span><span style="display:flex;"><span>            <span style="color:#66d9ef">LEFT</span> <span style="color:#66d9ef">JOIN</span>
+</span></span><span style="display:flex;"><span>              accounts <span style="color:#66d9ef">USING</span>(account_id) 
+</span></span><span style="display:flex;"><span>          <span style="color:#66d9ef">WHERE</span>
+</span></span><span style="display:flex;"><span>            transfer_ins.status <span style="color:#f92672">=</span> <span style="color:#e6db74">&#39;completed&#39;</span> 
+</span></span><span style="display:flex;"><span>          <span style="color:#66d9ef">GROUP</span> <span style="color:#66d9ef">BY</span>
+</span></span><span style="display:flex;"><span>            d_month.action_month, accounts.customer_id ) transfer_in 
+</span></span><span style="display:flex;"><span>          <span style="color:#66d9ef">UNION</span> <span style="color:#66d9ef">ALL</span>
+</span></span><span style="display:flex;"><span>          <span style="color:#66d9ef">SELECT</span>
+</span></span><span style="display:flex;"><span>            <span style="color:#f92672">*</span> 
+</span></span><span style="display:flex;"><span>          <span style="color:#66d9ef">FROM</span>
+</span></span><span style="display:flex;"><span>            <span style="color:#75715e">-- subconsulta de depósitos pix
+</span></span></span><span style="display:flex;"><span><span style="color:#75715e"></span>( 
+</span></span><span style="display:flex;"><span>            <span style="color:#66d9ef">SELECT</span>
+</span></span><span style="display:flex;"><span>              d_month.action_month, accounts.customer_id, <span style="color:#66d9ef">SUM</span>(pix_movements.pix_amount) <span style="color:#66d9ef">AS</span> amount 
+</span></span><span style="display:flex;"><span>            <span style="color:#66d9ef">FROM</span>
+</span></span><span style="display:flex;"><span>              d_time 
+</span></span><span style="display:flex;"><span>              <span style="color:#66d9ef">INNER</span> <span style="color:#66d9ef">JOIN</span>
+</span></span><span style="display:flex;"><span>                pix_movements 
+</span></span><span style="display:flex;"><span>                <span style="color:#66d9ef">ON</span> pix_movements.pix_completed_at <span style="color:#f92672">=</span> d_time.time_id 
+</span></span><span style="display:flex;"><span>              <span style="color:#66d9ef">LEFT</span> <span style="color:#66d9ef">JOIN</span>
+</span></span><span style="display:flex;"><span>                d_month <span style="color:#66d9ef">USING</span>(month_id) 
+</span></span><span style="display:flex;"><span>              <span style="color:#66d9ef">LEFT</span> <span style="color:#66d9ef">JOIN</span>
+</span></span><span style="display:flex;"><span>                accounts <span style="color:#66d9ef">USING</span>(account_id) 
+</span></span><span style="display:flex;"><span>            <span style="color:#66d9ef">WHERE</span>
+</span></span><span style="display:flex;"><span>              pix_movements.status <span style="color:#f92672">=</span> <span style="color:#e6db74">&#39;completed&#39;</span> 
+</span></span><span style="display:flex;"><span>              <span style="color:#66d9ef">AND</span> pix_movements.in_or_out <span style="color:#f92672">=</span> <span style="color:#e6db74">&#39;pix_in&#39;</span> 
+</span></span><span style="display:flex;"><span>            <span style="color:#66d9ef">GROUP</span> <span style="color:#66d9ef">BY</span>
+</span></span><span style="display:flex;"><span>              d_month.action_month, accounts.customer_id ) 
+</span></span><span style="display:flex;"><span>      )
+</span></span><span style="display:flex;"><span>    <span style="color:#66d9ef">GROUP</span> <span style="color:#66d9ef">BY</span>
+</span></span><span style="display:flex;"><span>      action_month, customer_id ) 
+</span></span><span style="display:flex;"><span>      <span style="color:#66d9ef">FULL</span> <span style="color:#66d9ef">JOIN</span>
+</span></span><span style="display:flex;"><span>        (
+</span></span><span style="display:flex;"><span>          <span style="color:#66d9ef">SELECT</span>
+</span></span><span style="display:flex;"><span>            action_month,
+</span></span><span style="display:flex;"><span>            customer_id,
+</span></span><span style="display:flex;"><span>            <span style="color:#66d9ef">SUM</span>(amount) <span style="color:#66d9ef">AS</span> total_transfer_out 
+</span></span><span style="display:flex;"><span>          <span style="color:#66d9ef">FROM</span>
+</span></span><span style="display:flex;"><span>            <span style="color:#75715e">-- subconsulta de saques totais
+</span></span></span><span style="display:flex;"><span><span style="color:#75715e"></span>( 
+</span></span><span style="display:flex;"><span>            <span style="color:#66d9ef">SELECT</span>
+</span></span><span style="display:flex;"><span>              <span style="color:#f92672">*</span> 
+</span></span><span style="display:flex;"><span>            <span style="color:#66d9ef">FROM</span>
+</span></span><span style="display:flex;"><span>              <span style="color:#75715e">-- subconsulta de retirada regular
+</span></span></span><span style="display:flex;"><span><span style="color:#75715e"></span>( 
+</span></span><span style="display:flex;"><span>              <span style="color:#66d9ef">SELECT</span>
+</span></span><span style="display:flex;"><span>                d_month.action_month, accounts.customer_id, <span style="color:#66d9ef">SUM</span>(transfer_outs.amount) <span style="color:#66d9ef">AS</span> amount 
+</span></span><span style="display:flex;"><span>              <span style="color:#66d9ef">FROM</span>
+</span></span><span style="display:flex;"><span>                d_time 
+</span></span><span style="display:flex;"><span>                <span style="color:#66d9ef">INNER</span> <span style="color:#66d9ef">JOIN</span>
+</span></span><span style="display:flex;"><span>                  transfer_outs 
+</span></span><span style="display:flex;"><span>                  <span style="color:#66d9ef">ON</span> transfer_outs.transaction_completed_at <span style="color:#f92672">=</span> d_time.time_id 
+</span></span><span style="display:flex;"><span>                <span style="color:#66d9ef">LEFT</span> <span style="color:#66d9ef">JOIN</span>
+</span></span><span style="display:flex;"><span>                  d_month <span style="color:#66d9ef">USING</span>(month_id) 
+</span></span><span style="display:flex;"><span>                <span style="color:#66d9ef">LEFT</span> <span style="color:#66d9ef">JOIN</span>
+</span></span><span style="display:flex;"><span>                  accounts <span style="color:#66d9ef">USING</span>(account_id) 
+</span></span><span style="display:flex;"><span>              <span style="color:#66d9ef">WHERE</span>
+</span></span><span style="display:flex;"><span>                transfer_outs.status <span style="color:#f92672">=</span> <span style="color:#e6db74">&#39;completed&#39;</span> 
+</span></span><span style="display:flex;"><span>              <span style="color:#66d9ef">GROUP</span> <span style="color:#66d9ef">BY</span>
+</span></span><span style="display:flex;"><span>                d_month.action_month, accounts.customer_id ) 
+</span></span><span style="display:flex;"><span>              <span style="color:#66d9ef">UNION</span> <span style="color:#66d9ef">ALL</span>
+</span></span><span style="display:flex;"><span>              <span style="color:#66d9ef">SELECT</span>
+</span></span><span style="display:flex;"><span>                <span style="color:#f92672">*</span> 
+</span></span><span style="display:flex;"><span>              <span style="color:#66d9ef">FROM</span>
+</span></span><span style="display:flex;"><span>                <span style="color:#75715e">-- subconsulta de retirada de pix
+</span></span></span><span style="display:flex;"><span><span style="color:#75715e"></span>( 
+</span></span><span style="display:flex;"><span>                <span style="color:#66d9ef">SELECT</span>
+</span></span><span style="display:flex;"><span>                  d_month.action_month, accounts.customer_id, <span style="color:#66d9ef">SUM</span>(pix_movements.pix_amount) <span style="color:#66d9ef">AS</span> amount 
+</span></span><span style="display:flex;"><span>                <span style="color:#66d9ef">FROM</span>
+</span></span><span style="display:flex;"><span>                  d_time 
+</span></span><span style="display:flex;"><span>                  <span style="color:#66d9ef">INNER</span> <span style="color:#66d9ef">JOIN</span>
+</span></span><span style="display:flex;"><span>                    pix_movements 
+</span></span><span style="display:flex;"><span>                    <span style="color:#66d9ef">ON</span> pix_movements.pix_completed_at <span style="color:#f92672">=</span> d_time.time_id 
+</span></span><span style="display:flex;"><span>                  <span style="color:#66d9ef">LEFT</span> <span style="color:#66d9ef">JOIN</span>
+</span></span><span style="display:flex;"><span>                    d_month <span style="color:#66d9ef">USING</span>(month_id) 
+</span></span><span style="display:flex;"><span>                  <span style="color:#66d9ef">LEFT</span> <span style="color:#66d9ef">JOIN</span>
+</span></span><span style="display:flex;"><span>                    accounts <span style="color:#66d9ef">USING</span>(account_id) 
+</span></span><span style="display:flex;"><span>                <span style="color:#66d9ef">WHERE</span>
+</span></span><span style="display:flex;"><span>                  pix_movements.status <span style="color:#f92672">=</span> <span style="color:#e6db74">&#39;completed&#39;</span> 
+</span></span><span style="display:flex;"><span>                  <span style="color:#66d9ef">AND</span> pix_movements.in_or_out <span style="color:#f92672">=</span> <span style="color:#e6db74">&#39;pix_out&#39;</span> 
+</span></span><span style="display:flex;"><span>                <span style="color:#66d9ef">GROUP</span> <span style="color:#66d9ef">BY</span>
+</span></span><span style="display:flex;"><span>                  d_month.action_month, accounts.customer_id ) ) 
+</span></span><span style="display:flex;"><span>                <span style="color:#66d9ef">GROUP</span> <span style="color:#66d9ef">BY</span>
+</span></span><span style="display:flex;"><span>                  action_month,
+</span></span><span style="display:flex;"><span>                  customer_id 
+</span></span><span style="display:flex;"><span>        )
+</span></span><span style="display:flex;"><span>        <span style="color:#66d9ef">USING</span> (action_month, customer_id) ) a;
+</span></span></code></pre></div>
+</details></p>
+
+<h3 id="tarefa-2-indicadores-chaves-de-performance-kpi">Tarefa 2: Indicadores Chaves de Performance (KPI)</h3>
+<figure>
+    <img loading="lazy" src="https://images.unsplash.com/photo-1526628953301-3e589a6a8b74"
+         alt="tela do computador com 8 retângulos preenchidos com indicadores-chave"/> <figcaption>
+            <p>Foto de Stephen Dawson de Unsplash</p>
+        </figcaption>
+</figure>
+
+<blockquote>
+<p>Outro colega do Bankio está interessado em analisar o sucesso do produto <a href="#pix">PIX</a> da empresa em nível comercial e técnico. Então eles pediram que você apresentasse alguns indicadores-chave para medir isso.</p>
+</blockquote>
+
+
+<p><details >
+  <summary markdown="span">Tempo médio de processamento das transações PIX <em>(clique para expandir)</em></summary>
+  Isso pode ser obtido usando o tempo que um cliente solicita uma transação PIX e quando ela é concluída, calculamos isso para todas as transações PIX e, em seguida, fazemos a média. O PIX deve ser instantâneo, portanto, essa métrica deve ser a menor possível.
+</details></p>
+
+
+
+<p><details >
+  <summary markdown="span">A proporção de falhas do PIX <em>(clique para expandir)</em></summary>
+  Este indicador é importante porque é inconveniente para o cliente que sua transação falhe. Podemos calcular isso dividindo a soma das transações PIX com falha pelo total de transações PIX. Esta medida deve ser minimizada.
+</details></p>
+
+
+
+<p><details >
+  <summary markdown="span">A proporção de transações usando PIX <em>(clique para expandir)</em></summary>
+  <p>O sucesso do PIX pode ser medido pela proporção de movimentações usando PIX sobre transações normais. Então, basta contar quantas transações foram concluídas usando o PIX e dividir pelo valor total de transações concluídas. Um valor maior reflete o sucesso do PIX sobre transações regulares.</p>
+<p>Alternativamente, em vez de apenas contar as transações, podemos avaliar quanto dinheiro cada tipo de transação está movimentando.</p>
+
+</details></p>
+
+
+
+<p><details >
+  <summary markdown="span">A proporção de entrada/saída do PIX <em>(clique para expandir)</em></summary>
+  <p>Essa medida é boa para analisar se os clientes estão usando seu PIX mais para receber dinheiro ou para enviar dinheiro. Seria melhor se mais clientes estivessem recebendo mais dinheiro do que enviando. Como o Bankio já tinha transações gratuitas para qualquer banco, antes do PIX aparecer, outros ainda tinham que pagar taxas para enviar dinheiro para sua conta do Bankio. Por esse motivo, é melhor contar quantas transações estão chegando pelo PIX e dividi-las por todas as transações PIX. Quanto mais alto melhor.</p>
+<p>Nesse caso, também podemos somar o saldo de depósitos e saques da conta do Bankio usando o PIX e compará-lo com transações regulares.</p>
+
+</details></p>
+
+<h3 id="tarefa-3-retorno-diário-do-investimento">Tarefa 3: Retorno Diário do Investimento</h3>
+<blockquote>
+<p>O Bankio tem uma conta bancária em que o cliente pode investir num produto de rendimento fixo. Considere que este produto oferece aos clientes um retorno diário de 0,01% de acordo com o valor do saldo diário investido. Calcule quanto cada cliente tem em sua conta bankio durante o ano de 2020.</p>
+</blockquote>
+<p>Este retorno é calculado diariamente após todos os saques e/ou depósitos feitos em um determinado dia. E todos os dias, mesmo finais de semana, geram algum retorno.</p>
+<p>O exemplo a seguir descreve o cliente A que começa a investir nesse produto de renda fixa no dia 16 do primeiro mês. O saldo anterior era zero, pois esse consumidor está fazendo um primeiro depósito no investimento. Seu depósito inicial foi de 1.000 e, no final do dia, produziu a uma taxa de renda diária de 0,01% de seu saldo. O mesmo produto continua sendo consumido por esse cliente em momentos diferentes ao longo do mês. Lembre-se que esta é apenas uma amostra fictícia do log de transações com cálculos diários aplicados. Observe que a receita desse dia deve ser zerada no caso de Movimentos negativos.</p>
+<table>
+<thead>
+<tr>
+<th>Dia</th>
+<th>Mês</th>
+<th>ID Conta</th>
+<th>Depósito</th>
+<th>Retirada</th>
+<th>Renda no final do Dia</th>
+<th>Rendimento Diário da Conta</th>
+</tr>
+</thead>
+<tbody>
+<tr>
+<td>16</td>
+<td>1</td>
+<td>A</td>
+<td>1000</td>
+<td>0</td>
+<td>0,1</td>
+<td>1000,10</td>
+</tr>
+<tr>
+<td>20</td>
+<td>1</td>
+<td>A</td>
+<td>500</td>
+<td>0</td>
+<td>0,15</td>
+<td>1500,55</td>
+</tr>
+<tr>
+<td>2</td>
+<td>2</td>
+<td>A</td>
+<td>0</td>
+<td>200</td>
+<td>0,13</td>
+<td>1302,48</td>
+</tr>
+<tr>
+<td>19</td>
+<td>2</td>
+<td>A</td>
+<td>1000</td>
+<td>200</td>
+<td>0,21</td>
+<td>2104,78</td>
+</tr>
+</tbody>
+</table>
+<p><em>Movimentos = Saldo do dia anterior + Depósito - Retirada</em></p>
+<p><em>Renda no final do dia = Movimentos * Taxa de Renda</em></p>
+<p><em>Saldo Diário da Conta = Movimentos + Renda no Fim do Dia</em></p>
+<script type="application/javascript" src="https://gist.github.com/devmedeiros/2a52cf2c4431a1993a98bf7f36d0f412.js?file=bankio-task-3-pt.ipynb"></script>
+
+<hr>
+<h2 id="glossário">Glossário</h2>
+<h4 id="saldo-mensal-da-conta">Saldo Mensal da Conta</h4>
+<p>É a quantidade de dinheiro que um cliente tinha em sua conta no final de um determinado mês.</p>
+<h4 id="informações-da-conta-agência-número-da-conta-e-dígito-de-verificação">Informações da conta (agência, número da conta e dígito de verificação)</h4>
+<p>No Brasil, uma conta bancária pode ser identificada exclusivamente por três números. O código <strong>agência</strong>, que indica em qual agência bancária as contas foram abertas, vem primeiro. O segundo é o <strong>número da conta</strong> que uma agência usa para identificar contas. O <strong>dígito de verificação</strong>, que é usado apenas para detecção de erros, é o último.</p>
+<h4 id="cpf">CPF</h4>
+<p>É a identificação cadastral do contribuinte individual brasileiro.</p>
+<h4 id="pix">PIX</h4>
+<p>No Brasil, este é o método mais recente de transferência de dinheiro. Não é pago. É imediato, e tudo o que é necessário para concluir uma transação é a chave PIX associada à conta.</p>
+<h4 id="transferências-não-pix">Transferências não PIX</h4>
+<p>Estes são os métodos convencionais para transferir dinheiro entre contas bancárias. Esse tipo de transação exige que sejam fornecidos o CPF, o código da agência, o número da conta e o dígito verificador da conta que receberá os recursos. A maioria dos bancos cobra uma taxa nessas transações, e a confirmação da transação normalmente leva várias horas a dias.</p>
+]]></content:encoded>
     </item>
     
     <item>
@@ -81,6 +509,33 @@
       
       <guid>https://devmedeiros.com/pt/post/credit-score-classification-app/</guid>
       <description>Usando o Streamlit para fazer um aplicativo da web que classifica sua pontuação de crédito usando Python</description>
+      <content:encoded><![CDATA[<h2 id="visão-geral-do-projeto">Visão Geral do Projeto</h2>
+<p>Este projeto mostra um ciclo de vida de ciência de dados, onde eu limpo e preparo o banco de dados, <em>feature engineering</em>, aprendizado de máquina, <em>deploy</em> e visualização de dados.</p>
+<p><img loading="lazy" src="https://ik.imagekit.io/devmedeiros/data-science-cycle_QZwyHaXsP.png?ik-sdk-version=javascript-1.4.3&amp;updatedAt=1659975338736#center" alt="ciclo de ciência de dados deste projeto em um diagrama"  />
+</p>
+<p>O conjunto de dados vem do <a href="https://www.kaggle.com/datasets/parisrohan/credit-score-classification?select=train.csv">kaggle</a>, e possui muitas informações sobre o crédito e os dados bancários de uma pessoa, mas ele também tem muitos erros de digitação, dados ausentes e dados censurados. Este conjunto de dados precisava ser limpo e também precisava de <em>feature engineering</em>, eu precisava alterar algumas <em>features</em>, para que pudessem ser lidos pelo modelo. Assim, quando apresentada com dados categóricos, eu precisava identificar se era ordinal ou nominal, se fosse uma variável ordinal, seria mapeada para números sequenciais, caso contrário, eu faria uma <em>dummy</em>. Para as variáveis ​​_sim_ e <em>não</em> eu escolhi fazer apenas uma <em>dummy</em>, mas para os tipos de empréstimos fiz uma <em>dummy</em> para cada tipo de empréstimo e se alguém não tiver um empréstimo, simplesmente obtém 0 em todos as <em>features</em> de tipo de empréstimo. Eu falo sobre o processo de limpeza e <em>feature engeeniring</em> neste conjunto de dados <a href="/pt/post/data-cleaning-credit-score/">aqui</a>.</p>
+<p>Então eu precisava de um modelo de ML que pudesse prever o score de crédito de uma pessoa com base em algumas <em>features</em>. Para decidir quais <em>features</em> eu iria usar eu analisei quais variáveis são usadas em empresas reais, e eu também escolhi variáveis que eu achei que faziam sentido. Eu acabei escolhendo as seguintes variáveis:</p>
+<ul>
+<li>Idade</li>
+<li>Renda anual</li>
+<li>Quantidade de contas bancárias</li>
+<li>Quantidade de cartões de crédito</li>
+<li>Quantidade de pagamentos atrasados</li>
+<li>Proporção de uso do cartão de crédito</li>
+<li>Quantidade de pagamento de empréstimos</li>
+<li>Idade do histórico de crédito em meses</li>
+<li>Empréstimos</li>
+<li>Perdeu algum pagamento nos últimos 12 meses</li>
+<li>Pagou o valor mínimo em pelo menos um cartão de crédito</li>
+</ul>
+<p>Com as <em>features</em> prontas, eu comecei a trabalhar no modelo, por enquanto eu decidi usar um modelo simples de Floresta Aleatória (Random Forest), eu pretendo melhorar esse modelo, mas nesse primeiro momento eu foquei eu fazer o app do streamlit.</p>
+<p>Depois que terminei o modelo eu serializei ele e o <em>scaler</em> usando o pacote <code>pickle</code>. Para fazer o <em>deploy</em> do modelo e construir a visualização, usei o <a href="https://streamlit.io/">streamlit</a>.</p>
+<p><img loading="lazy" src="https://user-images.githubusercontent.com/33239902/183321842-be97fb04-f00b-4b62-8e6e-2b53d25335a0.gif" alt="um gif mostrando como funciona o aplicativo de score de crédito streamlit"  />
+</p>
+<p>Neste aplicativo, você pode preencher um formulário ou apenas selecionar um dos três perfis padrão fornecidos para ver como o modelo avalia a pontuação de crédito de cada pessoa. Ele também apresenta &ldquo;a certeza&rdquo; do modelo exibindo um gráfico de pizza com a probabilidade (em porcentagem) de cada grupo de score de crédito em que as respostas se encaixam. Ele também mostra o quanto cada recurso conta para sua pontuação de crédito, de acordo com esse modelo. Você pode ver o aplicativo ao vivo <a href="https://devmedeiros-credit-score-classification-appstreamlit-app-fcakrl.streamlitapp.com/">aqui</a>.</p>
+<hr>
+<p>Todo o código está disponível no meu <a href="https://github.com/devmedeiros/credit-score-classification-app">repositório</a> do GitHub. Além do código, lá você encontra a documentação, os dados originais e tratados (todas as etapas do tratamento), todos os requisitos para a construção deste projeto e como executá-lo localmente.</p>
+]]></content:encoded>
     </item>
     
     <item>
@@ -90,6 +545,213 @@
       
       <guid>https://devmedeiros.com/pt/post/data-cleaning-credit-score/</guid>
       <description>Como surgir com formas de limpar um banco de dados usando Python</description>
+      <content:encoded><![CDATA[<blockquote>
+<p><strong>Aviso:</strong> Eu estarei falando sobre como chegar no código python, caso queira ler o código em si, dirija-se a este <a href="https://github.com/devmedeiros/credit-score-classification-app/tree/main/notebooks">repositório</a>.</p>
+</blockquote>
+<h2 id="conheça-a-base-para-classificação-de-score-de-crédito">Conheça a Base para Classificação de Score de Crédito</h2>
+<p>A base de dados que vamos limpar vem do <a href="https://www.kaggle.com/datasets/parisrohan/credit-score-classification?select=train.csv">kaggle</a>, a qual está no arquivo <code>train.csv</code>, mas os passos que iremos falar também podem ser usados para <code>test.csv</code>.</p>
+<p>Há 28 colunas e 100 mil linhas neste banco de dados. Eu compilei uma descrição das variáveis na tabela a seguir.</p>
+<table>
+<thead>
+<tr>
+<th>Variável</th>
+<th>Descrição</th>
+</tr>
+</thead>
+<tbody>
+<tr>
+<td><code>ID</code></td>
+<td>Representa uma identificação única de uma entrada</td>
+</tr>
+<tr>
+<td><code>Customer_ID</code></td>
+<td>Representa uma identificação única de uma pessoa</td>
+</tr>
+<tr>
+<td><code>Month</code></td>
+<td>Representa o mês do ano</td>
+</tr>
+<tr>
+<td><code>Name</code></td>
+<td>Representa o nome de uma pessoa</td>
+</tr>
+<tr>
+<td><code>Age</code></td>
+<td>Representa a idade de uma pessoa</td>
+</tr>
+<tr>
+<td><code>SSN</code></td>
+<td>Representa o número social de uma pessoa americana</td>
+</tr>
+<tr>
+<td><code>Occupation</code></td>
+<td>Representa a profissão de uma pessoa</td>
+</tr>
+<tr>
+<td><code>Annual_Income</code></td>
+<td>Representa o salário anual de uma pessoa</td>
+</tr>
+<tr>
+<td><code>Monthly_Inhand_Salary</code></td>
+<td>Representa o salário mensal base de uma pessoa</td>
+</tr>
+<tr>
+<td><code>Num_Bank_Accounts</code></td>
+<td>Representa quantas contas bancárias uma pessoa possui</td>
+</tr>
+<tr>
+<td><code>Num_Credit_Card</code></td>
+<td>Representa o número de cartões de crédito que uma pessoa possui</td>
+</tr>
+<tr>
+<td><code>Interest_Rate</code></td>
+<td>Representa a taxa de juros de um cartão de crédito</td>
+</tr>
+<tr>
+<td><code>Num_of_Loan</code></td>
+<td>Representa quantos empréstimos uma pessoa fez com o banco</td>
+</tr>
+<tr>
+<td><code>Type_of_Loan</code></td>
+<td>Representa os tipos de empréstimos feitos por uma pessoa</td>
+</tr>
+<tr>
+<td><code>Delay_from_due_date</code></td>
+<td>Representa o numero médio de dias atrasados da data de pagamento</td>
+</tr>
+<tr>
+<td><code>Num_of_Delayed_Payment</code></td>
+<td>Representa o numério médio de pagamentos atrasados feitos por uma pessoa</td>
+</tr>
+<tr>
+<td><code>Changed_Credit_Limit</code></td>
+<td>Representa, em porcentagem, a mudança de limite do cartão de crédito</td>
+</tr>
+<tr>
+<td><code>Num_Credit_Inquiries</code></td>
+<td>Representa o número de consultas de cartão de crédito</td>
+</tr>
+<tr>
+<td><code>Credit_Mix</code></td>
+<td>Representa a classificação da mistura de créditos</td>
+</tr>
+<tr>
+<td><code>Outstanding_Debt</code></td>
+<td>Representa a quantidade de saldo devedor a ser pago em dólares americanos</td>
+</tr>
+<tr>
+<td><code>Credit_Utilization_Ratio</code></td>
+<td>Representa a proporção de utilização de cartões de crédito</td>
+</tr>
+<tr>
+<td><code>Credit_History_Age</code></td>
+<td>Representa a idade do histórico de uso de crédito de uma pessoa</td>
+</tr>
+<tr>
+<td><code>Payment_of_Min_Amount</code></td>
+<td>Representa se uma pessoa pagou apenas o mínimo</td>
+</tr>
+<tr>
+<td><code>Total_EMI_per_month</code></td>
+<td>Representa os pagamentos das parcelas mensais de empréstimos em dólares americanos</td>
+</tr>
+<tr>
+<td><code>Amount_invested_monthly</code></td>
+<td>Representa a quantidade de dinheiro investido pelo cliente em dólares americanos</td>
+</tr>
+<tr>
+<td><code>Payment_Behaviour</code></td>
+<td>Representa o comportamento de pagamento do cliente em dólares americanos</td>
+</tr>
+<tr>
+<td><code>Monthly_Balance</code></td>
+<td>Representa o extrato mensal do cliente em dólares americanos</td>
+</tr>
+<tr>
+<td><code>Credit_Score</code></td>
+<td>Representa as faixas de score de crédito (Baixo, Médio, Bom)</td>
+</tr>
+</tbody>
+</table>
+<p>Mesmo tendo 100 mil linhas, dentro dessas linhas existem apenas 12.500 clientes diferentes, cada cliente aparece 8 vezes (de Janeiro a Agosto). Então basicamente nós podemos selecionar um cliente específico e olhar as informações dele e facilmente identificar dados incorretos e somos capazes de ajustá-los.</p>
+<h2 id="lidando-com-erros-de-digitação-e-outliers">Lidando com Erros de Digitação e Outliers</h2>
+<p>Neste banco de dados há diversos erros de digitação ou simplesmente coisas que não fazem sentido. Você irá encontrar valores que são: <code>_</code>, <code>!@9#%8</code>, <code>__10000__</code>, <code>NM</code> ou <code>_______</code>. Eu acredito que esses erros estão na base para representar o caos que você pode encontrar quando estiver lidando com dados reais e a maioria deles significam que esse valor é nulo.</p>
+<p>Por um momento eu pensei que <code>__10000__</code> poderia ser apenas um erro de digitação, mas não há nenhuma quantidade de dinheiro investida mensalmente que é superior a 200 dólares americanos.</p>
+<div class="highlight"><pre tabindex="0" style="color:#f8f8f2;background-color:#272822;-moz-tab-size:4;-o-tab-size:4;tab-size:4;"><code class="language-txt" data-lang="txt"><span style="display:flex;"><span>__10000__             4305
+</span></span><span style="display:flex;"><span>0.0                    169
+</span></span><span style="display:flex;"><span>80.41529543900253        1
+</span></span><span style="display:flex;"><span>36.66235139442514        1
+</span></span><span style="display:flex;"><span>89.7384893604547         1
+</span></span><span style="display:flex;"><span>                      ... 
+</span></span><span style="display:flex;"><span>36.541908593249026       1
+</span></span><span style="display:flex;"><span>93.45116318631192        1
+</span></span><span style="display:flex;"><span>140.80972223052834       1
+</span></span><span style="display:flex;"><span>38.73937670100975        1
+</span></span><span style="display:flex;"><span>167.1638651610451        1
+</span></span><span style="display:flex;"><span>Name: Amount_invested_monthly, Length: 91049, dtype: int64
+</span></span></code></pre></div><p>Seguindo essa lógica, eu procurei por mais coisas que não faziam sentido no data frame e comecei a substituir esses valores pelos <code>nan</code>s do numpy. Eu também procurei por outliers olhando a distribuição dos valores, se havia um valor que aparecia apenas uma vez e ele estava isolado, eu o substituia por um valor nulo. Eu não baseiei essa decisão apenas nisso, eu também procurei por clientes que tinham esse outlier e observei todos os dados desse cliente específico, e eu sempre encontrava coisas estranhas como:</p>
+<p><img loading="lazy" src="https://raw.githubusercontent.com/devmedeiros/credit-score-classification-app/main/reports/figures/annual_income.png#center" alt="uma tabela mostrando informação sobre um cliente específico e mostrando um outlier na sua receita anual"  />
+</p>
+<p>Olhando para este cliente em específico é fácil ver que ele não ganhou todo esse dinheiro anualmente apenas um mês do ano.</p>
+<p>Ao terminar essa busca por erros de digitação e outliers, não esqueça de passar o novo tipo de dados para suas variáveis. Algumas variáveis como <code>age</code> começaram com caracteres string entre as idades e por isso ao ser feito a leitura dos dados o pandas os reconheceu como objeto e não como tipo int ou float.</p>
+<h2 id="preenchendo-valores-em-branco">Preenchendo Valores em Branco</h2>
+<p>Depois de lidar com todos os outliers e erros de digitação, nós terminamos com diversos valores nulos, como pode ser visto a baixo:</p>
+<div class="highlight"><pre tabindex="0" style="color:#f8f8f2;background-color:#272822;-moz-tab-size:4;-o-tab-size:4;tab-size:4;"><code class="language-python" data-lang="python"><span style="display:flex;"><span>df<span style="color:#f92672">.</span>isna()<span style="color:#f92672">.</span>sum()[df<span style="color:#f92672">.</span>isna()<span style="color:#f92672">.</span>sum() <span style="color:#f92672">&gt;</span> <span style="color:#ae81ff">0</span>]
+</span></span></code></pre></div><div class="highlight"><pre tabindex="0" style="color:#f8f8f2;background-color:#272822;-moz-tab-size:4;-o-tab-size:4;tab-size:4;"><code class="language-txt" data-lang="txt"><span style="display:flex;"><span>Age                         2776
+</span></span><span style="display:flex;"><span>Occupation                  7062
+</span></span><span style="display:flex;"><span>Annual_Income                993
+</span></span><span style="display:flex;"><span>Monthly_Inhand_Salary      15002
+</span></span><span style="display:flex;"><span>Num_Credit_Card             2271
+</span></span><span style="display:flex;"><span>Interest_Rate               2034
+</span></span><span style="display:flex;"><span>Num_of_Loan                 4348
+</span></span><span style="display:flex;"><span>Type_of_Loan               11408
+</span></span><span style="display:flex;"><span>Num_of_Delayed_Payment      7002
+</span></span><span style="display:flex;"><span>Changed_Credit_Limit        2091
+</span></span><span style="display:flex;"><span>Num_Credit_Inquiries        1965
+</span></span><span style="display:flex;"><span>Credit_Mix                 20195
+</span></span><span style="display:flex;"><span>Credit_History_Age          9030
+</span></span><span style="display:flex;"><span>Payment_of_Min_Amount      12007
+</span></span><span style="display:flex;"><span>Amount_invested_monthly     8784
+</span></span><span style="display:flex;"><span>Payment_Behaviour           7600
+</span></span><span style="display:flex;"><span>Monthly_Balance             1200
+</span></span><span style="display:flex;"><span>dtype: int64
+</span></span></code></pre></div><p>Ao invés de apagar todos os valores em branco eu primeiro tento preencher eles usando informação que já temos disponível. Lembra que eu mencionei que um cliente possui dados históricos de 8 meses atrás? Nós podemos apenas usar esses dados históricos para preencher os valores nulos usando uma medida resumo da nossa escolha filtrando para o cliente, isso será mais preciso do que apenas calcular a média do nosso banco de dados.</p>
+<p>Eu decidir usar o valor médio para as seguintes colunas:</p>
+<div class="highlight"><pre tabindex="0" style="color:#f8f8f2;background-color:#272822;-moz-tab-size:4;-o-tab-size:4;tab-size:4;"><code class="language-python" data-lang="python"><span style="display:flex;"><span>mean_columns <span style="color:#f92672">=</span> [
+</span></span><span style="display:flex;"><span>    <span style="color:#e6db74">&#39;Num_of_Delayed_Payment&#39;</span>, <span style="color:#e6db74">&#39;Changed_Credit_Limit&#39;</span>, <span style="color:#e6db74">&#39;Num_Credit_Inquiries&#39;</span>,
+</span></span><span style="display:flex;"><span>    <span style="color:#e6db74">&#39;Amount_invested_monthly&#39;</span>, <span style="color:#e6db74">&#39;Monthly_Balance&#39;</span>, <span style="color:#e6db74">&#39;Num_of_Loan&#39;</span>,
+</span></span><span style="display:flex;"><span>    <span style="color:#e6db74">&#39;Num_Credit_Card&#39;</span>, <span style="color:#e6db74">&#39;Interest_Rate&#39;</span>, <span style="color:#e6db74">&#39;Annual_Income&#39;</span>, <span style="color:#e6db74">&#39;Monthly_Inhand_Salary&#39;</span>
+</span></span><span style="display:flex;"><span>    ]
+</span></span></code></pre></div><p>E o último valor não nulo para estas:</p>
+<div class="highlight"><pre tabindex="0" style="color:#f8f8f2;background-color:#272822;-moz-tab-size:4;-o-tab-size:4;tab-size:4;"><code class="language-python" data-lang="python"><span style="display:flex;"><span>last_columns <span style="color:#f92672">=</span> [<span style="color:#e6db74">&#39;Age&#39;</span>, <span style="color:#e6db74">&#39;Occupation&#39;</span>, <span style="color:#e6db74">&#39;Type_of_Loan&#39;</span>, <span style="color:#e6db74">&#39;Credit_Mix&#39;</span>]
+</span></span></code></pre></div><p>O motivo de não usar a média para todos os meus valores é porque eu não queria ter que lidar com uma pessoa tendo 20,5 anos de idade e <code>Occupation</code>, <code>Type_of_Loan</code>, e <code>Credit_Mix</code> são dados discretos.</p>
+<h2 id="engenharia-das-features">Engenharia das Features</h2>
+<p>Com os dados limpos, nós podemos seguir com a engenharia das features. Vamos começar com a variável <code>Type_of_Loan</code>, que possui algumas ocorrências em que em uma única célula possui diversos tipos de empréstimos, como você pode ver:</p>
+<div class="highlight"><pre tabindex="0" style="color:#f8f8f2;background-color:#272822;-moz-tab-size:4;-o-tab-size:4;tab-size:4;"><code class="language-txt" data-lang="txt"><span style="display:flex;"><span>Not Specified, Mortgage Loan, Auto Loan, and Payday Loan                                                                                         8
+</span></span><span style="display:flex;"><span>Payday Loan, Mortgage Loan, Debt Consolidation Loan, and Student Loan                                                                            8
+</span></span><span style="display:flex;"><span>Debt Consolidation Loan, Auto Loan, Personal Loan, Debt Consolidation Loan, Student Loan, and Credit-Builder Loan                                8
+</span></span><span style="display:flex;"><span>Student Loan, Auto Loan, Student Loan, Credit-Builder Loan, Home Equity Loan, Debt Consolidation Loan, and Debt Consolidation Loan               8
+</span></span><span style="display:flex;"><span>Personal Loan, Auto Loan, Mortgage Loan, Student Loan, and Student Loan                                                                          8
+</span></span><span style="display:flex;"><span>Name: Type_of_Loan, Length: 5380, dtype: int64
+</span></span></code></pre></div><p>Então eu vou salvar todos os tipos de empréstimos diferentes em um vetor, separando todos os empréstimos sempre que surgir uma <code>,</code> ou <code>, and</code>.</p>
+<div class="highlight"><pre tabindex="0" style="color:#f8f8f2;background-color:#272822;-moz-tab-size:4;-o-tab-size:4;tab-size:4;"><code class="language-python" data-lang="python"><span style="display:flex;"><span>loan_types <span style="color:#f92672">=</span> []
+</span></span><span style="display:flex;"><span><span style="color:#66d9ef">for</span> index <span style="color:#f92672">in</span> df<span style="color:#f92672">.</span>index:
+</span></span><span style="display:flex;"><span>    temp <span style="color:#f92672">=</span> df<span style="color:#f92672">.</span>Type_of_Loan[index]<span style="color:#f92672">.</span>replace(<span style="color:#e6db74">&#39;and &#39;</span>, <span style="color:#e6db74">&#39;&#39;</span>)<span style="color:#f92672">.</span>split(<span style="color:#e6db74">&#39;, &#39;</span>)
+</span></span><span style="display:flex;"><span>    <span style="color:#66d9ef">for</span> i <span style="color:#f92672">in</span> temp: <span style="color:#75715e">#loan in temp array</span>
+</span></span><span style="display:flex;"><span>        <span style="color:#66d9ef">if</span> i <span style="color:#f92672">not</span> <span style="color:#f92672">in</span> loan_types: <span style="color:#75715e">#if loan is not in loan_types</span>
+</span></span><span style="display:flex;"><span>            loan_types<span style="color:#f92672">.</span>append(i) <span style="color:#75715e">#add it</span>
+</span></span></code></pre></div><p>Agora podemos criar variáveis dummies usando <code>loan_types</code>, assim um cliente recebe o número 1 se ele tiver esse empréstimo ou 0 caso não tenha.</p>
+<div class="highlight"><pre tabindex="0" style="color:#f8f8f2;background-color:#272822;-moz-tab-size:4;-o-tab-size:4;tab-size:4;"><code class="language-python" data-lang="python"><span style="display:flex;"><span><span style="color:#66d9ef">for</span> loan <span style="color:#f92672">in</span> loan_types:
+</span></span><span style="display:flex;"><span>    df[loan] <span style="color:#f92672">=</span> <span style="color:#ae81ff">0</span> <span style="color:#75715e">#create the loan column in the df with 0</span>
+</span></span><span style="display:flex;"><span>    <span style="color:#66d9ef">for</span> index <span style="color:#f92672">in</span> df<span style="color:#f92672">.</span>index:
+</span></span><span style="display:flex;"><span>        temp <span style="color:#f92672">=</span> df<span style="color:#f92672">.</span>Type_of_Loan[index]<span style="color:#f92672">.</span>replace(<span style="color:#e6db74">&#39;and &#39;</span>, <span style="color:#e6db74">&#39;&#39;</span>)<span style="color:#f92672">.</span>split(<span style="color:#e6db74">&#39;, &#39;</span>)
+</span></span><span style="display:flex;"><span>        <span style="color:#66d9ef">if</span> loan <span style="color:#f92672">in</span> temp:
+</span></span><span style="display:flex;"><span>            df<span style="color:#f92672">.</span>loc[index, loan] <span style="color:#f92672">=</span> <span style="color:#ae81ff">1</span>
+</span></span></code></pre></div><p>Agora eu continuo trabalhando nesse banco para o tornar pronto para o treinamento de um modelo de aprendizado de máquina. Para isso, eu preciso transformar todos os meus dados discretos em numéricos.</p>
+<p>A variável <code>Credit_History_Age</code> tem os valores como strings &ldquo;22 Years and 5 Months&rdquo; e esse padrão se repete, então podemos aproveitar isso e selecionar o ano multiplicado por 12 e somar o mês, resultando em um novo recurso com o crédito idade da história em meses. Quando acabarmos com isso ainda haverá valores nulos e, para preenchê-los, escolho interpolar os valores. Isso funciona muito bem quando o valor ausente é de fevereiro até julho porque interpola com a idade do histórico de crédito do cliente, mas torna-se uma suposição incorreta quando o valor ausente é em janeiro ou agosto.</p>
+<p>Os nomes dos meses serão substituidos pelo seu representante numérico, logo janeiro será 1, fevereiro será 2, e assim por diante. <code>credit_mix</code> e <code>credit_score</code> possuem 3 categorias sequenciais, eu escolhi usar -1, 0, e 1, mas você também pode usar 1, 2, 3 e irá produzir o mesmo resultado.</p>
+<p>Não se esqueça de checar o <a href="https://github.com/devmedeiros/credit-score-classification-app/tree/main/">repositório</a> no GitHub caso queira ver o código completo mencionado aqui e para baixar a base tratada.</p>
+]]></content:encoded>
     </item>
     
     <item>
@@ -99,6 +761,408 @@
       
       <guid>https://devmedeiros.com/pt/post/alura-challenge-bi-2/</guid>
       <description>Alura ofereceu um desafio de quatro semanas Challenge BI, onde os participantes precisavam fazer 3 dashboards</description>
+      <content:encoded><![CDATA[<p>O Alura Challenge BI 2 foi um evento que durou quatro semanas, no qual nós fomos desafiados a fazer um painél de <em>Business Intelligence</em> com base nos requisitos de três empresas fictícias. Durante o evento eu fiz esses três painés usando o Power BI, você pode ver também os arquivos fontes dos painéis no meu <a href="https://github.com/devmedeiros/Alura-Challenge-BI-2">repositório</a>.</p>
+<br />
+<style>
+	nav {
+		display: block;
+	}
+
+	.nav {
+		display: -ms-flexbox;
+		display: ruby;
+		-ms-flex-wrap: wrap;
+		flex-wrap: wrap;
+		padding-left: 0;
+		margin-bottom: 1em;
+		list-style: none;
+	}
+
+	.nav-tabs .nav-item {
+		margin-bottom: 0;
+	}
+
+	.nav-tabs .nav-link {
+		border: solid #e9ecef;
+		border-top-left-radius: 0.25rem;
+		border-top-right-radius: 0.25rem;
+	}
+
+	.nav-tabs .nav-link:focus,
+	.nav-tabs .nav-link:hover {
+		border-color: #e9ecef #e9ecef #dee2e6;
+	}
+
+	.nav-tabs .nav-link.disabled {
+		color: #6c757d;
+		background-color: transparent;
+		border-color: transparent;
+	}
+
+	.nav-tabs .nav-item.show .nav-link,
+	.nav-tabs .nav-link.active {
+		color: #495057;
+		background-color: #fff;
+		border-color: #dee2e6 #dee2e6 #fff;
+	}
+
+	.nav-fill .nav-item {
+		-ms-flex: 1 1 auto;
+		flex: 1 1 auto;
+		text-align: center;
+	}
+
+	.nav-tabs .dropdown-menu {
+		margin-top: -1px;
+		border-top-left-radius: 0;
+		border-top-right-radius: 0;
+	}
+
+	.nav-justified .nav-item {
+		-ms-flex-preferred-size: 0;
+		flex-basis: 0;
+		-ms-flex-positive: 1;
+		flex-grow: 1;
+		text-align: center;
+	}
+
+	.nav-link {
+		display: block;
+		padding: 0.5rem 1rem;
+	}
+
+	.nav-link:focus,
+	.nav-link:hover {
+		text-decoration: none;
+	}
+
+	.nav-link.disabled {
+		color: #6c757d;
+		pointer-events: none;
+		cursor: default;
+	}
+
+	.nav-tabs .nav-link {
+		border: 1px solid #e9ecef;
+		border-top-left-radius: 0.25rem;
+		border-top-right-radius: 0.25rem;
+	}
+
+	.nav-tabs .nav-link:focus,
+	.nav-tabs .nav-link:hover {
+		border-color: #e9ecef #e9ecef #dee2e6;
+	}
+
+	.nav-tabs .nav-link.disabled {
+		color: #6c757d;
+		background-color: transparent;
+		border-color: transparent;
+	}
+
+	.nav-tabs .nav-item.show .nav-link,
+	.nav-tabs .nav-link.active {
+		color: black;
+		background-color: #F5F5F5;
+		border-color: #dee2e6 #dee2e6 #fff;
+	}
+
+	.nav-pills .nav-link {
+		border-radius: 0.25rem;
+	}
+
+	.nav-pills .nav-link.active,
+	.nav-pills .show>.nav-link {
+		color: #fff;
+		background-color: #007bff;
+	}
+
+	.navbar-nav .nav-link {
+		padding-right: 0;
+		padding-left: 0;
+	}
+
+	.navbar-expand .navbar-nav .nav-link {
+		padding-right: 0.5rem;
+		padding-left: 0.5rem;
+	}
+
+	.navbar-light .navbar-nav .nav-link {
+		color: rgba(0, 0, 0, 0.5);
+	}
+
+	.navbar-light .navbar-nav .nav-link:focus,
+	.navbar-light .navbar-nav .nav-link:hover {
+		color: rgba(0, 0, 0, 0.7);
+	}
+
+	.navbar-light .navbar-nav .nav-link.disabled {
+		color: rgba(0, 0, 0, 0.3);
+	}
+
+	.navbar-light .navbar-nav .active>.nav-link,
+	.navbar-light .navbar-nav .nav-link.active,
+	.navbar-light .navbar-nav .nav-link.show,
+	.navbar-light .navbar-nav .show>.nav-link {
+		color: rgba(0, 0, 0, 0.9);
+	}
+
+	.navbar-dark .navbar-nav .nav-link {
+		color: rgba(255, 255, 255, 0.5);
+	}
+
+	.navbar-dark .navbar-nav .nav-link:focus,
+	.navbar-dark .navbar-nav .nav-link:hover {
+		color: rgba(255, 255, 255, 0.75);
+	}
+
+	.navbar-dark .navbar-nav .nav-link.disabled {
+		color: rgba(255, 255, 255, 0.25);
+	}
+
+	.navbar-dark .navbar-nav .active>.nav-link,
+	.navbar-dark .navbar-nav .nav-link.active,
+	.navbar-dark .navbar-nav .nav-link.show,
+	.navbar-dark .navbar-nav .show>.nav-link {
+		color: #fff;
+	}
+</style>
+
+<nav>
+	<div class="nav nav-tabs" id="nav-tab" role="tablist">
+
+		
+		
+		
+		
+
+		
+
+		<a class="nav-item nav-link  active "
+		   id="nav-fdaecb" data-toggle="tab" href="#fdaecb"
+		   role="tab" aria-controls="nav-home" aria-selected="true">Alura Films</a>
+
+		
+
+		<a class="nav-item nav-link "
+		   id="nav-deacfb" data-toggle="tab" href="#deacfb"
+		   role="tab" aria-controls="nav-home" aria-selected="true">Alura Food</a>
+
+		
+
+		<a class="nav-item nav-link "
+		   id="nav-ebdfca" data-toggle="tab" href="#ebdfca"
+		   role="tab" aria-controls="nav-home" aria-selected="true">Alura Skimó</a>
+
+		
+
+	</div>
+</nav>
+
+<div class="tab-content" id="nav-tab-content">
+
+	
+<style>
+	.tab-content>.tab-pane {
+		display: none;
+	}
+
+	.tab-content>.active {
+		display: block;
+	}
+
+	.fade {
+		transition: opacity 0.15s linear;
+	}
+	.fade:not(.show) {
+		opacity: 0;
+	  }
+	  .modal.fade .modal-dialog {
+		transition: -webkit-transform 0.3s ease-out;
+		transition: transform 0.3s ease-out;
+		transition: transform 0.3s ease-out, -webkit-transform 0.3s ease-out;
+		-webkit-transform: translate(0, -50px);
+		transform: translate(0, -50px);
+	  }
+	  .modal-backdrop.fade {
+		opacity: 0;
+	  }
+	  .carousel-fade .carousel-item {
+		opacity: 0;
+		transition-property: opacity;
+		-webkit-transform: none;
+		transform: none;
+	  }
+	  .carousel-fade .carousel-item-next.carousel-item-left,
+	  .carousel-fade .carousel-item-prev.carousel-item-right,
+	  .carousel-fade .carousel-item.active {
+		z-index: 1;
+		opacity: 1;
+	  }
+	  .carousel-fade .active.carousel-item-left,
+	  .carousel-fade .active.carousel-item-right {
+		z-index: 0;
+		opacity: 0;
+		transition: opacity 0s 0.6s;
+	  }
+</style>
+
+
+
+
+
+
+<div class="tab-pane fade show active " id="fdaecb" role="tabpanel" aria-labelledby="nav-1">
+
+	
+
+<p>O objetivo deste painel é ajudar a encontrar a melhor seleção para um filme que será produzido.</p>
+
+<iframe title="Relatório Alura Films" width="100%" height="450" src="https://app.powerbi.com/view?r=eyJrIjoiZTllNjE2ZTQtNjdkMy00OGI4LTllNTAtM2RhNGE2YWU4YmZlIiwidCI6IjI2ZjA4NzIyLTFjOWUtNGVkZS1iN2VkLThhMmI3N2ZmM2Q5YyJ9&pageName=ReportSection11c983afd307f2fa2f9a" frameborder="0" allowFullScreen="true"></iframe>
+
+<p>Com isso em mente, eu explorei na primeira aba um pequeno resumo sobre os filmes no banco de dados, com ela você pode ter uma ideia geral dos nossos dados. Na segunda aba é apresentado a nota no IMDB e o Meta Score dos filmes. Eu também criei uma medida que mostra o quanto essas duas avaliações concordam entre si. Uma medida de 100 quer dizer que <strong>não concordam nem um pouco</strong> e 0 quer dizer <strong>concordam completamente</strong>, a medida de concordância foi de 9,48.</p>
+<p>Nossa terceira aba apresenta informação sobre as estrelas dos filmes, os 10 atores com a maior rentabilidade, e os 10 atores com a maior contagem de filmes.</p>
+<p>A quarta aba apresenta a distribuição da renda bruta pela quantidade de gêneros diferentes que um filme tem. Ela também mostra quantos filmes tem um certo gênero, como por exemplo, <strong>Drama</strong> é a escolha mais popular para gênero de filme, com 72% dos filmes do banco de dados. Por fim, essa aba também mostra a renda bruta média por gênero.</p>
+<p>A quinta e última aba mostra um pouco de informação sobre a classificação indicativa brasileira e mostra o Meta Score médio para filmes com certificação. Ela também mostra a renda bruta, em média, para cada classificação indicativa.</p>
+
+
+
+</div>
+<style>
+	.tab-content>.tab-pane {
+		display: none;
+	}
+
+	.tab-content>.active {
+		display: block;
+	}
+
+	.fade {
+		transition: opacity 0.15s linear;
+	}
+	.fade:not(.show) {
+		opacity: 0;
+	  }
+	  .modal.fade .modal-dialog {
+		transition: -webkit-transform 0.3s ease-out;
+		transition: transform 0.3s ease-out;
+		transition: transform 0.3s ease-out, -webkit-transform 0.3s ease-out;
+		-webkit-transform: translate(0, -50px);
+		transform: translate(0, -50px);
+	  }
+	  .modal-backdrop.fade {
+		opacity: 0;
+	  }
+	  .carousel-fade .carousel-item {
+		opacity: 0;
+		transition-property: opacity;
+		-webkit-transform: none;
+		transform: none;
+	  }
+	  .carousel-fade .carousel-item-next.carousel-item-left,
+	  .carousel-fade .carousel-item-prev.carousel-item-right,
+	  .carousel-fade .carousel-item.active {
+		z-index: 1;
+		opacity: 1;
+	  }
+	  .carousel-fade .active.carousel-item-left,
+	  .carousel-fade .active.carousel-item-right {
+		z-index: 0;
+		opacity: 0;
+		transition: opacity 0s 0.6s;
+	  }
+</style>
+
+
+
+
+
+
+<div class="tab-pane fade show " id="deacfb" role="tabpanel" aria-labelledby="nav-1">
+
+	
+
+<p>A <strong>Alura Food</strong> está interessada em expandir seus negócios para o mercado indiano. Para isso, a empresa pediu para calcular medidas que os ajudem a tomarem uma melhor decisão.</p>
+
+<iframe title="Relatório Alura Food" width="100%" height="450" src="https://app.powerbi.com/view?r=eyJrIjoiNGEzMTQzMGYtNzFhNC00YjcyLThiMDMtMGE2YTMzMDRhODFiIiwidCI6IjI2ZjA4NzIyLTFjOWUtNGVkZS1iN2VkLThhMmI3N2ZmM2Q5YyJ9&pageName=ReportSection" frameborder="0" allowFullScreen="true"></iframe>
+
+<p>Primeiramente, eu fiz uma junção dos bancos de dados e limpei eles através do Power BI, traduzi alguns dos textos de inglês para português através da Planilhas Google, e converti o preço das refeições da sua moeda original para o real (moeda brasileira). Por fim, eu usei o Figma para fazer o background, incluindo imagens e títulos.</p>
+<p>Neste projeto, eu optei por usar apenas uma página para mostrar toda a informação pedida, pois eu acredito que isso facilita a análise dos dados.</p>
+<p>A maioria dos restaurantes neste mercado indiano não oferecem entrega online, com apenas 19,21% deles tendo este serviço. A avaliação média dos restaurantes é de 3,72, de um total de 5, essa avaliação também é apresentada em formato textual, com um <strong>Muito Bom</strong> sendo uma nota acima de 4.</p>
+<p>O preço médio de uma refeição por pessoa é de R$ 39,48 (em torno de USD 7,65). E há 9577 restaurantes diferentes em todo o banco de dados, dos quais 3968, especializam na culinária do norte indiano. Nova Delhi é, de longe, o local mais popular para se abrir um restaurante, com 5473 deles, a segunda cidade é Gurgaon, com 1118 restaurantes.</p>
+
+
+
+</div>
+<style>
+	.tab-content>.tab-pane {
+		display: none;
+	}
+
+	.tab-content>.active {
+		display: block;
+	}
+
+	.fade {
+		transition: opacity 0.15s linear;
+	}
+	.fade:not(.show) {
+		opacity: 0;
+	  }
+	  .modal.fade .modal-dialog {
+		transition: -webkit-transform 0.3s ease-out;
+		transition: transform 0.3s ease-out;
+		transition: transform 0.3s ease-out, -webkit-transform 0.3s ease-out;
+		-webkit-transform: translate(0, -50px);
+		transform: translate(0, -50px);
+	  }
+	  .modal-backdrop.fade {
+		opacity: 0;
+	  }
+	  .carousel-fade .carousel-item {
+		opacity: 0;
+		transition-property: opacity;
+		-webkit-transform: none;
+		transform: none;
+	  }
+	  .carousel-fade .carousel-item-next.carousel-item-left,
+	  .carousel-fade .carousel-item-prev.carousel-item-right,
+	  .carousel-fade .carousel-item.active {
+		z-index: 1;
+		opacity: 1;
+	  }
+	  .carousel-fade .active.carousel-item-left,
+	  .carousel-fade .active.carousel-item-right {
+		z-index: 0;
+		opacity: 0;
+		transition: opacity 0s 0.6s;
+	  }
+</style>
+
+
+
+
+
+
+<div class="tab-pane fade show " id="ebdfca" role="tabpanel" aria-labelledby="nav-1">
+
+	
+
+<p>A <strong>Alura Skimo</strong> está interessada em analisar seus dados de vendas, para ajudar com isso eu fiz este <i>dashboard</i>.</p>
+
+<iframe title="Relatório Alura Food" width="100%" height="450" src="https://app.powerbi.com/view?r=eyJrIjoiNTllYjJmODItYzQxNC00ZmEzLTk5ZGMtZDgzNzY2NDM2ZGMxIiwidCI6IjI2ZjA4NzIyLTFjOWUtNGVkZS1iN2VkLThhMmI3N2ZmM2Q5YyJ9" frameborder="0" allowFullScreen="true"></iframe>
+
+<p>Ele é composto de três páginas. A primeira apresenta um resumo com todas as principais medidas que encontramos no painel, filtrado para mostrar o mês mais recente. Nesta primeira página, você pode parar o cursor do mouse sobre uma medida e isso fará com que apareça um pequeno gráfico com a série histórica com uma linha de tendência.</p>
+<p>Seguindo para a próxima página, nela você pode ver toda a informação sobre os produtos vendidos pela <strong>Alura Skimo</strong>. Você pode filtrar os dados por sabor de sorvete, tipo de embalagem, categoria, e custo do produto. Ela mostra a informação básica sobre os produtos, junto de um ranque dos produtos que são os mais bem vendidos e dois gráficos que mostram as vendas por sabor e vendas por categoria.</p>
+<p>Na última página, você pode encontrar informações sobre os vendedores da nossa empresa. Ele mostra quando o funcionário entrou para a empresa, a comissão deles, o faturamento e quantas vendas cada um fez, tudo isso no último ano (2018).</p>
+<p>Esse painel foi complexo comparado aos outros dois, pois nosso banco de dados veio de arquivos SQL. Primeiro eu tive que criar o banco de dados e carregar cada arquivo SQL para ele, então eu só tive que carregar o banco para o Power BI. Por fim, toda a limpeza, tratamento e processamento de dados foi feito no próprio Power BI.</p>
+
+
+
+</div>
+
+
+</div>
+]]></content:encoded>
     </item>
     
     <item>
@@ -108,6 +1172,112 @@
       
       <guid>https://devmedeiros.com/pt/post/2022-05-30-churn-rate-challenge/</guid>
       <description>Alura fez um desafio de quatro semanas &amp;ldquo;Data Science Challenge&amp;rdquo; utilizando um banco desbalanceado da taxa de evasão da empresa Alura Voz</description>
+      <content:encoded><![CDATA[<p>Eu fui desafiada a tomar o papel da nova cientista de dados na Alura Voz. Essa empresa fictícia é do ramo de telecomunicação e precisa reduzir sua taxa de evasão de clientes.</p>
+<p>Esse desafio é dividido em quatro semanas. Para a primeira semana o objetivo é tratar o banco de dados proveniente de uma API. Em seguida, precisamos identificar clientes que são mais propensos a deixar a empresa, usando exploração e análise de dados. E então, na terceira semana, nós usamos modelos de <em>machine learning</em> para prever a taxa de evasão da Alura Voz. A última semana é para expor o que fizemos durante o desafio e construir nosso portfolio. Caso esteja interessado em ver o código, ele está disponível no meu <a href="https://github.com/devmedeiros/Challenge-Data-Science">repositório</a> do GitHub.</p>
+<h2 id="primeira-semana">Primeira Semana</h2>
+<h3 id="lendo-o-banco-de-dados">Lendo o Banco de Dados</h3>
+<p>O banco de dados foi disponibilizado no formato JSON e num primeiro momento aparenta ser um <em>data frame</em> normal.</p>
+<p><img loading="lazy" src="https://raw.githubusercontent.com/devmedeiros/Challenge-Data-Science/main/1%20-%20Data%20Cleaning/table_head.png#center" alt="table head with the first five rows"  />
+</p>
+<p>Entretanto, como pode ser observado, <code>customer</code>, <code>phone</code>, <code>internet</code>, e <code>account</code> são suas próprias tabelas. Então eu normalizei elas separadamente e depois simplesmente concatenei todas essas tabelas em uma.</p>
+<h3 id="dados-faltantes">Dados Faltantes</h3>
+<p>A primeira vez que eu procurei por dados faltantes nessa base nenhum foi encontrado, mas a medida que eu explorei os dados eu percebi que havia espaços em branco e vazios não sendo contados como <code>NaN</code>. Então eu corrigi isso e descobri que havia 224 dados faltantes para a variável <code>Churn</code> e 11 para <code>Charges.Total</code>.</p>
+<p>Eu decidi desconsiderar os dados faltantes da variável <code>Churn</code>, pois este será nosso objeto de estudo e não há sentido em estudar algo que não existe. No caso dos dados faltantes de <code>Charges.Total</code>, eu imagino que representa um cliente que não pagou nada ainda, pois todos eles possuem 0 meses de contrato, ou seja, eles acabaram de se tornar clientes, então eu simplesmente substitui o valor faltante por 0.</p>
+<h3 id="codificação-de-variáveis">Codificação de Variáveis</h3>
+<p>A variável <code>SeniorCitizen</code> foi a única que veio com <code>0</code> e <code>1</code> ao invés de <code>Yes</code> e <code>No</code>. Por hora eu irei trocar esses valores por &ldquo;yes&rdquo; e &ldquo;no&rdquo;, pois isto torna a análise mais simples de ser lida.</p>
+<p><code>Charges.Monthly</code> e <code>Charges.Total</code> foram renomeadas para perderem o ponto, pois isto atrapalha na hora de lidar com elas no <em>python</em>.</p>
+<h2 id="segunda-semana">Segunda Semana</h2>
+<h3 id="análise-de-dados">Análise de Dados</h3>
+<p>No primeiro gráfico podemos ver o quão desbalanceado nosso banco de dados é. Há mais de 5000 clientes que não deixaram a empresa e um pouco menos de 2000 que deixaram.</p>
+<p><img loading="lazy" src="https://raw.githubusercontent.com/devmedeiros/Challenge-Data-Science/main/2%20-%20Data%20Analysis/churn.jpg#center" alt="bar plot with two bars, the first one is for &amp;rsquo;no&amp;rsquo; and the second is for &amp;lsquo;yes&amp;rsquo;, the first bar is over 5000 count and the second one is around 2000"  />
+</p>
+<p>Eu experimentei usar técnicas de sobreamostragem (<em>oversampling</em>) para lidar com esse deslanceamento, mas isto fez com que os modelos de aprendizado de máquina tivessem uma performance pior. E subamostragem (<em>undersampling</em>) não é uma opção com um banco de dados desse tamanho, então eu decidi deixar do jeito que está, e quando for hora de separar os dados de treino e teste eu irei estratificar o banco de acordo com a variável <code>Churn</code>.</p>
+<p>Eu também gerei 16 gráficos para todas as variáveis discretas, para ver todos os gráficos olhe este <a href="https://github.com/devmedeiros/Challenge-Data-Science/blob/main/2%20-%20Data%20Analysis/data_analysis.ipynb">notebook</a>. O objetivo é ver se havia algum comportamento que fazia alguns cliente mais propensos a deixar a empresa. É claro que todas, exceto por <code>gender</code>, parecem ter algum papel em determinar se um cliente vai ou não deixar a empresa. Mais especificamente forma de pagamento, contratos, <em>backup online</em>, suporte técnico, e serviço de internet.</p>
+<p>No gráfico de <code>tenure</code>, eu decidi fazer gráficos de distribuição dos meses de contrato do cliente, um gráfico para os cliente que não evadiram e um para os que evadiram. Podemos ver que clientes que evadiram o fizeram no início do seu tempo na empresa.</p>
+<p><img loading="lazy" src="https://raw.githubusercontent.com/devmedeiros/Challenge-Data-Science/main/2%20-%20Data%20Analysis/tenure.jpg#center" alt="there are two plots side-by-side, in the first one the title is &amp;lsquo;Churn = No&amp;rsquo; the data is along the tenure axis and is in a U shape. the second plot has the title &amp;lsquo;Churn = Yes&amp;rsquo; and starts high and drops fast along the tenure line"  />
+</p>
+<p>A cobrança mensal média para os cliente que não evadiram é de 61,27 unidades monetária, enquanto que clientes que evadiram pagam 74,44. Isso provavelmente é por conta do tipo de contrato que esses tipo de clintes preferem, mas de qualquer forma é senso comum que preços altos afastam clientes.</p>
+<h3 id="o-perfil-de-evasão">O Perfil de Evasão</h3>
+<p><img loading="lazy" src="https://64.media.tumblr.com/tumblr_lojvnhHFH91qlh1s6o1_400.gifv#center" alt="person jumping through the window"  />
+</p>
+<p>Considerando tudo que eu pude observar através de gráficos e medidas, eu fiz um perfil de clientes que são mais propensos a evadir a empresa.</p>
+<ul>
+<li>
+<p>Clientes novos são mais propensos a evadir do que clientes antigos.</p>
+</li>
+<li>
+<p>Clientes com poucos serviços e produtos tendem a deixar a empresa. Se eles não estão presos a um contrato mais longo eles aparentam ser mais propensos a abandonar a empresa.</p>
+</li>
+<li>
+<p>Sobre os meios de pagamentos, cliente que evadem possuem uma preferência <strong>forte</strong> por cheques eletrônicos e usualmente gastam 13,17 unidades monetárias a mais que a média de clientes que não deixaram a empresa.</p>
+</li>
+</ul>
+<h2 id="terceira-semana">Terceira Semana</h2>
+<h3 id="preparando-o-banco-de-dados">Preparando o Banco de Dados</h3>
+<p>Damos início fazendo variáveis <em>dummies</em>, de forma que teremos n-1 <em>dummies</em> para n variáveis. Então fazemos uma matriz de correlação para avaliar a correlação das nossas variáveis.</p>
+<p><img loading="lazy" src="https://raw.githubusercontent.com/devmedeiros/Challenge-Data-Science/main/3%20-%20Model%20Selection/corr_matrix.jpg#center" alt="correlation matrix with all the features"  />
+</p>
+<p>Podemos ver que a variável <code>InternetService_No</code> possui correlações altas com diversas outras variáveis, isso se dá porque as outras variáveis depende do cliente ter ou não acesso a internet. Então irei tirar essas variáveis dependentes do modelo. A mesma coisa ocorre com <code>PhoneService_Yes</code>.</p>
+<p><code>tenure</code> e <code>ChargesTotal</code> também possuem uma alta correlação, mas eu testei rodar os modelos sem uma das duas ou ambas e os modelos tiveram uma performance pior e levaram mais tempo para covergirem, então eu decidi manter elas no modelo, e elas são relevantes para o problema.</p>
+<p>Após retirar essas variáveis eu termino de preparar o banco de dados com uma normalização das variáveis numéricas, <code>ChargesTotal</code> e <code>tenure</code>.</p>
+<h3 id="banco-de-dados-de-teste-e-treino">Banco de Dados de Teste e Treino</h3>
+<p>Eu dividi o banco de dados em treino e teste, 20% para teste e o resto para treino. Eu estratifiquei os dados de acordo com a variável <code>Churn</code> e embaralhei os dados antes de separar. A mesma divisão de dados é usada em todos os modelos. Após separar os dados eu decidi fazer uma sobreamostragem (<em>oversampling</em>) dos dados de <strong>teste</strong> usando SMOTE<sup id="fnref:1"><a href="#fn:1" class="footnote-ref" role="doc-noteref">1</a></sup>, pois os dados são muito desbalanceados. O motivo de eu usar essa técnica apenas nos dados de teste é que eu não quero ter um resultado viesado, se eu sobreamostrar todo o banco de dados isso quer dizer que eu vou testar meu modelo no mesmo dado que eu o treinei, e este não é meu objetivo.</p>
+<h3 id="avaliação-dos-modelos">Avaliação dos Modelos</h3>
+<p>Eu vou utilizar um classificador <em>dummy</em> para ter uma base para a medida de acurácia, e eu também vou utilizar as métricas: <code>precision</code> (precisão), <code>recall</code> (recordação) and <code>f1 score</code> (medida f1)<sup id="fnref:2"><a href="#fn:2" class="footnote-ref" role="doc-noteref">2</a></sup>. Apesar de que o modelo <em>dummy</em> não ter valor para essas métricas eu vou manter ele para comparar a melhora dos modelos.</p>
+<h3 id="modelo-base">Modelo Base</h3>
+<p>O modelo base foi feito através de um classificador <em>dummy</em>, basicamente ele diz que todos os clientes se comportam da mesma forma. Neste caso o modelo chutou que nenhum cliente iria deixar a empresa. Usando essa abordagem o modelo base obteve uma acurácia de <code>0,73456</code>.</p>
+<p>A seguir todos os modelos terão a mesma semente aleatória (<em>random state</em>).</p>
+<h3 id="modelo-1---florestas-aleatórias">Modelo 1 - Florestas Aleatórias</h3>
+<p>Eu inicio usando uma busca no grid com validação cruzada (<em>grid search with cross-validation</em>) para encontrar os melhores parâmetros dentro de uma seleção de opções utilizando o <code>recall</code> como estratégia para avaliar a performance. O melhor modelo encontrado pela busca foi:</p>
+<div class="highlight"><pre tabindex="0" style="color:#f8f8f2;background-color:#272822;-moz-tab-size:4;-o-tab-size:4;tab-size:4;"><code class="language-python" data-lang="python"><span style="display:flex;"><span>RandomForestClassifier(criterion<span style="color:#f92672">=</span><span style="color:#e6db74">&#39;entropy&#39;</span>, max_depth<span style="color:#f92672">=</span><span style="color:#ae81ff">5</span>, max_leaf_nodes<span style="color:#f92672">=</span><span style="color:#ae81ff">70</span>, random_state<span style="color:#f92672">=</span><span style="color:#ae81ff">22</span>)
+</span></span></code></pre></div><p>Após ajustar o modelo, as medidas de avaliação foram:</p>
+<ul>
+<li>Medida Accuracy: 0,72534</li>
+<li>Medida Precision: 0,48922</li>
+<li>Medida Recall: 0,78877</li>
+<li>Medida F1: 0,60389</li>
+</ul>
+<h3 id="modelo-2---classificação-de-vetores-de-suporte-linear">Modelo 2 - Classificação de Vetores de Suporte Linear</h3>
+<p>Neste modelo eu usei os parâmetros padrões e aumentei o teto para o máximo de iterações para <code>900000</code>.</p>
+<div class="highlight"><pre tabindex="0" style="color:#f8f8f2;background-color:#272822;-moz-tab-size:4;-o-tab-size:4;tab-size:4;"><code class="language-python" data-lang="python"><span style="display:flex;"><span>LinearSVC(max_iter<span style="color:#f92672">=</span><span style="color:#ae81ff">900000</span>, random_state<span style="color:#f92672">=</span><span style="color:#ae81ff">22</span>)
+</span></span></code></pre></div><p>Após ajustar o modelo, as medidas de avaliação foram:</p>
+<ul>
+<li>Medida Accuracy: 0,71966</li>
+<li>Medida Precision: 0,48217</li>
+<li>Medida Recall: 0,75936</li>
+<li>Medida F1: 0,58982</li>
+</ul>
+<h3 id="modelo-3---rede-neural-multicamada-perceptron">Modelo 3 - Rede Neural Multicamada Perceptron</h3>
+<p>Aqui eu fixei o solucionador LBFGS, pois de acordo com a documentação do <code>scikit-learn</code> ele tem uma performance melhor em banco de dados pequenos <sup id="fnref:3"><a href="#fn:3" class="footnote-ref" role="doc-noteref">3</a></sup>, e também fiz uma busca no grid com validação cruzada para encontrar o melhor tamanho da camada oculta. O melhor modelo foi:</p>
+<div class="highlight"><pre tabindex="0" style="color:#f8f8f2;background-color:#272822;-moz-tab-size:4;-o-tab-size:4;tab-size:4;"><code class="language-python" data-lang="python"><span style="display:flex;"><span>MLPClassifier(hidden_layer_sizes<span style="color:#f92672">=</span>(<span style="color:#ae81ff">1</span>,), max_iter<span style="color:#f92672">=</span><span style="color:#ae81ff">9999</span>, random_state<span style="color:#f92672">=</span><span style="color:#ae81ff">22</span>, solver<span style="color:#f92672">=</span><span style="color:#e6db74">&#39;lbfgs&#39;</span>)
+</span></span></code></pre></div><p>Após ajustar o modelo, as medidas de avaliação foram:</p>
+<ul>
+<li>Medida Accuracy: 0,72818</li>
+<li>Medida Precision: 0,49133</li>
+<li>Medida Recall: 0,68182</li>
+<li>Medida F1: 0,57111</li>
+</ul>
+<h3 id="conclusão">Conclusão</h3>
+<p>Após rodar os três modelos, todos usando o mesmo <code>random_state</code>. Eu encontrei as seguintes medidas de acurácia e melhorias no desempenho (comparado com o modelo base):</p>
+<p><img loading="lazy" src="https://raw.githubusercontent.com/devmedeiros/Challenge-Data-Science/main/3%20-%20Model%20Selection/results_table.png#center" alt="results table"  />
+</p>
+<p>No fim, a Floresta Aleatória teve as melhores métricas. Este modelo consegue <em>recordar</em> uma grande parte dos clientes que evadem corretamente, ainda não é perfeito, mas já é um ponto de partida. A medida de <em>acurácia</em> não é tão alta como eu gostaria, mas para este problema em particular o objetivo é impedir os clientes de deixar a empresa e é melhor utilizar recursos para manter um cliente que não vai deixar a empresa do que não fazer nada.</p>
+<p>No fim, eu gostei desse desafio, pois é raro eu praticar aprendizado de máquina, mas graças ao desafio eu tive a oportunidade de fazer um pequeno projeto nessa área que é tão importante e relevante. Essa foi a minha primeira vez trabalhando com redes neurais e ajuste de hiperparâmetros, e tenho certeza que na próxima vez terei resultados ainda melhores.</p>
+<div class="footnotes" role="doc-endnotes">
+<hr>
+<ol>
+<li id="fn:1">
+<p><a href="https://imbalanced-learn.org/stable/references/generated/imblearn.over_sampling.SMOTE.html">imbalanced-learn documentation</a>&#160;<a href="#fnref:1" class="footnote-backref" role="doc-backlink">&#x21a9;&#xfe0e;</a></p>
+</li>
+<li id="fn:2">
+<p><a href="https://towardsdatascience.com/accuracy-precision-recall-or-f1-331fb37c5cb9">Accuracy, Precision, Recall or F1? - Koo Ping Shung</a>&#160;<a href="#fnref:2" class="footnote-backref" role="doc-backlink">&#x21a9;&#xfe0e;</a></p>
+</li>
+<li id="fn:3">
+<p><a href="https://scikit-learn.org/stable/modules/generated/sklearn.neural_network.MLPClassifier.html">scikit-learn documentation</a>&#160;<a href="#fnref:3" class="footnote-backref" role="doc-backlink">&#x21a9;&#xfe0e;</a></p>
+</li>
+</ol>
+</div>
+]]></content:encoded>
     </item>
     
     <item>
@@ -117,6 +1287,78 @@
       
       <guid>https://devmedeiros.com/pt/post/2022-04-29-ux-power-bi-dashboards/</guid>
       <description>Definindo UX/UI no contexto de Bussiness Intelligence para Dashboards com exemplos</description>
+      <content:encoded><![CDATA[<h2 id="o-que-é-uxui">O que é UX/UI?</h2>
+<p>UX é a sigla em inglês para Experiência de Usuário, é um conceito recente que fala sobre tomar decisões de design pensando na experiência do usuário final. O designer de UX precisa se preocupar se seu produto é fácil de usar e intuitivo, fazendo mudanças nele sempre que necessário para se adequar as necessidades do usuário.</p>
+<p>UI, do inglês, significa Interface do Usuário. É tudo aquilo que está envolvido na interação do usuário e o produto. O designer de UI é responsável por desenvolver interfaces, não limitado apenas aos aspectos visuais, também é importante garantir que sejam funcionais, usáveis, e que em geral, contribuem para uma boa experiência do usuário.</p>
+<h2 id="como-melhorar-a-experiência-dos-painéis-de-bi">Como Melhorar a Experiência dos Painéis de BI?</h2>
+<p>Muitos pessoas veem os painéis de BI como páginas de web e isso traz algumas expectativas de uso. Por exemplo, a maioria dos sites que possuem algum sistema de navegação usam um menu superior com botões, um menu lateral (mais comum no Brasil sendo na esquerda, mas em alguns países é na direita) ou um menu sanduíche (aquele que clicamos no botão e aparece as opções).</p>
+<figure>
+    <img loading="lazy" src="https://ik.imagekit.io/devmedeiros/site_layout_C0BWt0-Rh.png?ik-sdk-version=javascript-1.4.3&amp;updatedAt=1651180441785"
+         alt="Imagem com três layouts de website, o primeiro com barra de navegação superior, o segundo com menu lateral a esquerda e o terceiro com um menu sanduíche"/> <figcaption>
+            <p>Jaqueline Medeiros - Todos os direitos reservados</p>
+        </figcaption>
+</figure>
+
+<p>Com isso uma grande parcela das pessoas que utilizam os painéis esperam encontrar botões de navegação e segmentação (filtro) de dados nestes locais, além de outras informações como logo e título.</p>
+<h3 id="segmentação-de-dados">Segmentação de Dados</h3>
+<p>Também comummente chamado de filtro de dados é uma peça fundamental de diversos <em>dashboards</em>, seu posicionamento precisa ser definido com cuidado, pois se estiver num lugar que o usuário não espera pode impedir que seu painel seja usado eficientemente, além disso manter um padrão visual para todos os seus filtros ajudam as pessoas a reconhecerem mais facilmente o que é ou não é um filtro.</p>
+<figure>
+    <img loading="lazy" src="https://ik.imagekit.io/devmedeiros/base_7_vbzsb9L.png?ik-sdk-version=javascript-1.4.3&amp;updatedAt=1651183332760"
+         alt="Imagem com seis filtros, distribuídos em duas colunas, cada uma com três. Um filtro é de cidade, o outro é de restaurante e o último é aceita reserva? A única diferença entre eles é o design, na esquerda são consistentes e na direita cada um tem um design único."/> 
+</figure>
+
+<p>Você pode e deve usar e experimentar com diversos temas nos seus trabalhos. O que importa, na hora de facilitar para os usuários, é a consistência, escolha um modelo de filtro com as cores desejadas e todas as especificações gráficas que são do seu interesse e utilize ela em todos os filtros, pois isso irá ajudar as pessoas a baterem o olho e reconhecer que aquilo é um filtro.</p>
+<p><img loading="lazy" src="https://ik.imagekit.io/devmedeiros/borracha_Xwi_TYTHB.png?ik-sdk-version=javascript-1.4.3&amp;updatedAt=1651183773246#center" alt="Três filtros com, de cidade, restaurante e aceita reserva?. Em que o da cidade mostra uma borracha ao lado do título e o texto Limpar seleções"  />
+</p>
+<p>É muito comum as pessoas quando estão lendo algo pelo computador posicionarem o ponteiro do mouse onde elas estão lendo. No caso do Power BI, isso torna mais fácil para o usuário encontrar o botão de limpar a segmentação de dados, pois ao passar o mouse no nome do filtro aparece uma borrachinha no lado esquerdo onde fica o nome do filtro. Tá mais se você usa o Power BI provavelmente já sabia disso, mas podemos melhorar isso usando algo que o usuário já conhece, que é a <strong>borrachinha</strong>, e criar um botão usando a borrachinha como ícone e fazer com que esse botão limpe todos os filtros ao mesmo tempo. Caso queira saber como fazer esse botão <a href="https://community.powerbi.com/t5/Desktop/Clear-All-Slicers-by-one-button-in-power-bi-desktop/m-p/494518">aqui</a> no fórum do Power BI explica como.</p>
+<p>Essa é uma característica que pode ter sua importância despercebida num primeiro momento, mas algo que ocorre muito é os usuários do painel não perceberem quais filtros eles usaram ou usarem tantos que só querem poder limpar a seleção de forma mais rápida e eficiente, então esse botão torna o processo muito mais <em>user friendly</em>.</p>
+<h3 id="navegação-de-página">Navegação de Página</h3>
+<p>A navegação de páginas nativa do Power BI não é intuitiva para a maioria das pessoas e em muitas vezes você pode querer direcionar a navegação num fluxo específico que facilita o entendimento e contribui para o <em>storytelling</em> planejado. Neste caso temos a opção de ocultar todas as abas do relatório, exceto uma que é a página de abertura/inicial. Mas qual a melhor forma de direcionar o usuário para as demais páginas? Bem, isso depende do que você está fazendo. Suponha que seu relatório seja bem simples, você tem uma aba de visão geral e outra aba com um detalhamento, um simples botão resolveria o seu problema, mas caso seu relatório seja muito extenso pode ser inviável colocar um botão para cada aba em todas as páginas.</p>
+<figure>
+    <img loading="lazy" src="https://ik.imagekit.io/devmedeiros/infografico_kQJe_yhQD.png?ik-sdk-version=javascript-1.4.3&amp;updatedAt=1651241421864"
+         alt="Um círculo com quatro retângulos em volta, uma linha liga os retângulos ao círculo" width="100%"/> <figcaption>
+            <p>Jaqueline Medeiros - Todos os direitos reservados</p>
+        </figcaption>
+</figure>
+
+<p>Neste caso pode ser interessante considerar ter uma página inicial que leva a todas as páginas do relatório e colocar um botão de <code>home</code> ou <code>voltar</code> nas outras páginas.</p>
+<h2 id="como-melhorar-a-interface-dos-dashboards">Como Melhorar a Interface dos Dashboards?</h2>
+<h3 id="programas-de-prototipagem">Programas de Prototipagem</h3>
+<p>Usar um programa específico para fazer o protótipo do seu painel permite uma liberdade artística maior comparado ao que os aplicativos de <em>Business Intelligence</em> normalmente fornecem. O Figma é ótimo para isso, você pode criar backgrounds e protótipos avançados com ótima qualidade para usar em seus painéis de BI.</p>
+<p>Veja um exemplo de um painel que eu fiz a alguns meses atrás:</p>
+<figure>
+    <img loading="lazy" src="https://raw.githubusercontent.com/devmedeiros/Alura-Challenge-BI-2/main/Alura%20Food/alura%20food%20resume.png"
+         alt="Na imagem pode-se ler o texto: Visão Geral do Mercado de Restaurantes Indianos Dev_Medeiros Cidade Restaurante Aceita Reservas? 19,21 % de Restaurantes com Entrega Online Avaliação Média 3,72 R$ 39,48 Preço Médio por Pessoa 9577 Total de Restaurantes 5 Cidades com mais Restaurantes 5 Cozinhas mais Populares"/> <figcaption>
+            Painel com os dados
+        </figcaption>
+</figure>
+
+<p>O plano de fundo desse painel foi feito completamente no Figma, até mesmo alguns dos títulos dos visuais do BI.</p>
+<figure>
+    <img loading="lazy" src="https://raw.githubusercontent.com/devmedeiros/Alura-Challenge-BI-2/main/Alura%20Food/Alura%20Food.png"
+         alt="Na imagem pode-se ler o texto: Visão Geral do Mercado de Restaurantes Indianos Dev_Medeiros Cidade Restaurante Aceita Reservas? % de Restaurantes com Entrega Online Avaliação Média Preço Médio por Pessoa Total de Restaurantes 5 Cidades com mais Restaurantes 5 Cozinhas mais Populares"/> <figcaption>
+            Background feito no Figma
+        </figcaption>
+</figure>
+
+<p>Você pode encontrar mais <a href="/pt/post/alura-challenge-bi-2">painéis de Power BI</a> que eu fiz para o Alura Challenge.</p>
+<h3 id="figuras-e-ícones">Figuras e Ícones</h3>
+<figure class="align-center ">
+    <img loading="lazy" src="https://img.freepik.com/vetores-gratis/funcionarios-dando-as-maos-e-ajudando-os-colegas-a-subir-as-escadas_74855-5236.jpg?w=1380&amp;t=st=1651239796~exp=1651240396~hmac=1b2ab902322bbf8ce26e3bc83f602e69075fcc2e18f0afdc91a328c7942ba746#center"
+         alt="Vetor criado por pch.vector - br.freepik.com"/> <figcaption>
+            <p>Vetor criado por pch.vector - br.freepik.com</p>
+        </figcaption>
+</figure>
+
+<p>Figuras e ícones quando usados corretamente ajudam a destacar o painel, o torna mais chamativo e bonito. Há diversas formas de se conseguir imagens, caso você ou sua equipe não consigam criar vocês mesmo existe a opção de usar plataformas online que disponibilizam imagens vetorizadas. Nessas plataformas existem as opções gratuitas, em que exigem algum tipo de atribuição, e opções <em>premium</em> (pagas), em que muitas vezes não precisa atribuir o autor e possuem uma qualidade maior.</p>
+<figure class="align-center ">
+    <img loading="lazy" src="https://img.icons8.com/dusk/344/cash-register.png#center"
+         alt="Ícone de caixa registradora"/> <figcaption>
+            <p>Ícone de ICONS8</p>
+        </figcaption>
+</figure>
+
+]]></content:encoded>
     </item>
     
     <item>
@@ -126,6 +1368,18 @@
       
       <guid>https://devmedeiros.com/pt/post/2022-04-12-comprehending-the-p-value/</guid>
       <description>A definição do p-valor, como usar ele, e como interpretar a medida</description>
+      <content:encoded><![CDATA[<h2 id="o-que-é-o-p-valor">O que é o p-valor?</h2>
+<p>Em estatística temos os testes de hipóteses, que são feitos para tomar uma decisão, de rejeitar ou <em>não</em> rejeitar a hipótese nula. Alguns exemplos de teste de hipótese são: Neyman-Pearson, Shapiro-Wilk, T de Student, entre outros.</p>
+<p>Todos testes de hipóteses possuem uma estatística de teste específico dele. E essa estatística é utilizada para avaliar o teste, mas essa tarefa pode ser cansativa até com o uso de computadores, pois a maioria dos <em>softwares</em> não devolvem como resposta a estatística de comparação, apenas a estatística amostral. Nesse caso o p-valor vem para facilitar essa comparação, pois ele já é uma representação dessa estatística de teste. Ele representa a probabilidade de se obter uma estatística de teste igual ou mais extrema que a calculada na sua amostra, considerando a hipótese nula como verdadeira.</p>
+<p>Isso facilita, pois sabendo o nível de confiança que você quer testar a sua hipótese basta comparar se o p-valor é menor ou maior que o seu nível de confiança, enquanto que se fosse usar a estatística de teste ainda seria necessário calcular a estatística para cada nível de confiança diferente que você fosse comparar. Então suponha que queira comparar 1%, 5% e 10%, você teria que calcular três estatísticas de teste diferentes para comparar a sua estatística amostral.</p>
+<h2 id="como-usar-ele">Como usar ele?</h2>
+<p>É muito comum quando estamos aprendendo estatística por conta própria lermos que se o p-valor for menor que 5% rejeitamos a hipótese ou que se for maior &ldquo;aceitamos&rdquo; a hipótese.</p>
+<p>O valor com o qual comparamos o p-valor deve ser definido juntamente com pessoas da área de negócio do que você está trabalhando, é muito comum em alguns setores utilizarem um p-valor muito pequeno como 1% ou até 0,1% e em outros usarem valores maiores de que 5%.</p>
+<p>Veja que um p-valor de 0,02 seria rejeitado se considerarmos <code>α = 1%</code>, mas não seria se <code>α = 5%</code>. Na dúvida sobre qual usar, primeiramente é recomendado tomar essa decisão antes de fazer o teste. Segundo, tenha em mente que um <code>α = 1%</code> vai ter uma confiança de <code>99% (1-α)</code>, enquanto que se fosse 5% seria <del>apenas</del> 95%. Pode parecer que é melhor pegar o valor que lhe dá mais &ldquo;confiança&rdquo;, mas um p-valor muito pequeno pode levar a mais rejeições da sua hipótese.</p>
+<p>A verdade é que os testes de hipóteses só nos dão a informação da rejeição, quando uma hipótese nula não é rejeitada isso quer dizer que não foram encontradas evidências que contradizem o que ela afirma, isso não quer dizer que provamos que ela está correta. Então é preciso tomar muito cuidado ao utilizar o p-valor.</p>
+<h2 id="interpretando-a-medida">Interpretando a medida</h2>
+<p>Uma forma de interpretar a medida muito comum é <em>&ldquo;Rejeita-se a hipótese nula, com α% de confiança&rdquo;</em>, no caso de rejeição (em que o <code>p-valor &gt; α</code>) e no caso de <em>não</em> rejeição (<code>p-valor &lt; α</code>) <em>&ldquo;Não foram encontradas evidências suficientes para rejeitar a hipótese nula, com α% de confiança&rdquo;</em>.</p>
+]]></content:encoded>
     </item>
     
     <item>
@@ -135,6 +1389,12 @@
       
       <guid>https://devmedeiros.com/pt/post/2022-01-24-podcast-review-mlg/</guid>
       <description>Uma resenha sobre o podcast Machine Learning Guide</description>
+      <content:encoded><![CDATA[<p><img loading="lazy" src="https://ocdevel.com/static/media/MLG-Option-1.24e2cc63.jpg#center" alt="Machine Learning Guide Podcast Capa"  />
+</p>
+<p>O show, apresentado por Tyler Renelle da Depth, oferece uma lista com <a href="https://ocdevel.com/mlg/resources">recursos</a> na qual você pode encontrar todos os livros, cursos, e sites mencionados durante o podcast. É um ótimo podcast para quem está aprendendo sobre aprendizado de máquina, podendo ser útil para iniciantes, entusiastas, ou para alguém que está procurando se aprofundar ainda mais no tópico. Desde 2021 o show está sendo renovado para atualizar o conteúdo.</p>
+<p>O show começa falando sobre o que é <em>ciência de dados</em> e como ela se relaciona com <em>aprendizado de máquina</em> e <em>inteligência artificial</em>. Ele também fala sobre as primeiras tentativas em criar IA, com alguns exemplos vindos desde o século 13.</p>
+<p>Eu gosto que o show fala sobre conceitos de aprendizado de máquina de uma forma diferente da qual eu estou acostumada. Quando pessoas falam sobre aprendizado de máquina, eu, como Estatística, sempre senti que entendia sobre o que as pessoas estavam falando, exceto que eu não conhecia algumas palavras chaves que elas usavam. Por exemplo, o que engenheiros de aprendizado de máquina chamam de <em>features</em> eu aprendi como <em>variável</em>, então eu ficava confusa quando conversava com amigos sobre aprendizado de máquina quando eles tinham um antecedente diferente do meu (ciência da computação, por exemplo). Esse é um dos motivos que faz eu gostar tanto do podcast, ele fala em ricos detalhes sobre cada conceito de aprendizado de máquina, então se ele fala sobre algo que eu conheço por outro nome eu consigo fazer a conexão.</p>
+]]></content:encoded>
     </item>
     
     <item>
@@ -144,6 +1404,170 @@
       
       <guid>https://devmedeiros.com/pt/post/2021-12-28-amazon-top-50-books/</guid>
       <description>Análise Exploratória de Dados dos 50 livros mais bem vendidos da Amazon de 2009 - 2019</description>
+      <content:encoded><![CDATA[<p>Recentemente eu terminei um curso na Alura chamado <em>Python para Data Science</em> e eu quero colocar o que eu aprendi em prática, para isso eu vou fazer uma análise descritiva nesse banco de dados <a href="https://www.kaggle.com/sootersaalu/amazon-top-50-bestselling-books-2009-2019"><strong>Amazon Top 50 Bestselling Books 2009 - 2019</strong></a>. Nele há 550 livros e eles foram categorizados como <strong>fiction</strong> (ficção) e <strong>non-fiction</strong> (não ficção) pelo Goodreads. Todo o código pode ser visto <a href="https://gist.github.com/devmedeiros/12813bebd78f7662966096e963ed0aa9">aqui</a>.</p>
+<p>Eu comecei olhando as cinco primeiras observações do banco de dados.</p>
+<table>
+<thead>
+<tr>
+<th>Name</th>
+<th>Author</th>
+<th>User Rating</th>
+<th>Reviews</th>
+<th>Price</th>
+<th>Year</th>
+<th>Genre</th>
+</tr>
+</thead>
+<tbody>
+<tr>
+<td>10-Day Green Smoothie Cleanse</td>
+<td>JJ Smith</td>
+<td>4.7</td>
+<td>17350</td>
+<td>8</td>
+<td>2016</td>
+<td>Non Fiction</td>
+</tr>
+<tr>
+<td>11/22/63: A Novel</td>
+<td>Stephen King</td>
+<td>4.6</td>
+<td>2052</td>
+<td>22</td>
+<td>2011</td>
+<td>Fiction</td>
+</tr>
+<tr>
+<td>12 Rules for Life: An Antidote to Chaos</td>
+<td>Jordan B. Peterson</td>
+<td>4.7</td>
+<td>18979</td>
+<td>15</td>
+<td>2018</td>
+<td>Non Fiction</td>
+</tr>
+<tr>
+<td>1984 (Signet Classics)</td>
+<td>George Orwell</td>
+<td>4.7</td>
+<td>21424</td>
+<td>6</td>
+<td>2017</td>
+<td>Fiction</td>
+</tr>
+<tr>
+<td>5,000 Awesome Facts (About Everything!) (Natio&hellip;</td>
+<td>National Geographic Kids</td>
+<td>4.8</td>
+<td>7665</td>
+<td>12</td>
+<td>2019</td>
+<td>Non Fiction</td>
+</tr>
+</tbody>
+</table>
+<p>Aqui é possível ver que os dados tem o <strong>Year</strong> (ano) em que o livro estava no <em>top 50 de mais vendidos</em>, seu <strong>Price</strong> (preço), a média dos <strong>User Rating</strong> (avaliação dos usuários), total de <strong>Reviews</strong> (avaliações), <strong>Author</strong> (autor), <strong>Name</strong> (nome do livro) e por fim, <strong>Genre</strong> (gênero).</p>
+<p>Não há valores nulos no banco de dados. E dos 550 livros há 248 autores diferentes, então vamos ver quais autores possuem mais livros no top 50 dos mais vendidos neste período.</p>
+<table>
+<thead>
+<tr>
+<th>Autor</th>
+<th>Número de livros</th>
+</tr>
+</thead>
+<tbody>
+<tr>
+<td>Jeff Kinney</td>
+<td>12</td>
+</tr>
+<tr>
+<td>Gary Chapman</td>
+<td>11</td>
+</tr>
+<tr>
+<td>Rick Riordan</td>
+<td>11</td>
+</tr>
+<tr>
+<td>Suzanne Collins</td>
+<td>11</td>
+</tr>
+<tr>
+<td>American Psychological Association</td>
+<td>10</td>
+</tr>
+<tr>
+<td>Dr. Seuss</td>
+<td>9</td>
+</tr>
+<tr>
+<td>Gallup</td>
+<td>9</td>
+</tr>
+<tr>
+<td>Rob Elliott</td>
+<td>8</td>
+</tr>
+<tr>
+<td>Stephen R. Covey</td>
+<td>7</td>
+</tr>
+<tr>
+<td>Stephenie Meyer</td>
+<td>7</td>
+</tr>
+<tr>
+<td>Dav Pilkey</td>
+<td>7</td>
+</tr>
+<tr>
+<td>Bill O&rsquo;Reilly</td>
+<td>7</td>
+</tr>
+<tr>
+<td>Eric Carle</td>
+<td>7</td>
+</tr>
+</tbody>
+</table>
+<p>O autor com mais livros no top 50 foi Jeff Kinney, empatado em segundo, com 11 livros, foi Gary Chapman, Rick Riordan, e Suzanne Collins. Empatado em 9º, está Stephen R. Covey, Stephenie Meyer, Dav Pilkey, Bill O&rsquo;Reilly, e Eric Carle, com 7 livros cada.</p>
+<p><img loading="lazy" src="https://ik.imagekit.io/devmedeiros/violing_ur_vmTFo02uK.jpg?updatedAt=1640708039606" alt="Gráfico de viola da avaliação dos usuários"  />
+</p>
+<p>Com o gráfico de violino podemos ver como está concentrado a avaliação dos usuários e como os dados são compostos de livros <em>bestsellers</em> faz sentido que a avaliação dos usuários está em sua maioria concentrada em torno de 4.5 e 4.75.</p>
+<p><img loading="lazy" src="https://ik.imagekit.io/devmedeiros/boxplot_year_reviews_Pa1YGMhj2z1.jpg?updatedAt=1640708039777" alt="Boxplot da quantidade de reviews por ano"  />
+</p>
+<p>Esse boxplot da quantidade de avaliações por ano mostra que a variabilidade aumentou através dos anos, tendo o seu pico em 2014 e gradualmente estabilizando. Podemos ver também que nos primeiros anos, 2010 e 2011, havia mais <em>outliers</em> nos dados.</p>
+<table>
+<thead>
+<tr>
+<th>Gênero</th>
+<th>Avaliação do Usuário</th>
+<th>Preço</th>
+</tr>
+</thead>
+<tbody>
+<tr>
+<td>Ficção</td>
+<td>4.65</td>
+<td>10.85</td>
+</tr>
+<tr>
+<td>Não Ficção</td>
+<td>4.60</td>
+<td>14.84</td>
+</tr>
+</tbody>
+</table>
+<p>A avaliação média do usuário por gênero parece ser semelhante, com apenas 0.05 de diferença, mas o preço já apresenta uma diferença maior, 10.85 para ficção e 14.84 para não ficção. Para termos certezas de que essas diferenças são estatisticamente significantes, eu vou utilizar o teste de Mann-Whitney.</p>
+<p>A hipótese nula do teste de Mann-Whitney é de que as amostras possuem a mesma distribuição, e em ambos os casos, nós rejeitamos a hipótese nula com 95% de confiança. O p-valor para os dados do preço foi de 8.34e-08 e o p-valor para a avaliação do usuário foi de 1.495e-07.</p>
+<p>Para mostrar visualmente quão diferente as suas distribuição são, podemos olhar para os seguintes gráficos.</p>
+<p><img loading="lazy" src="https://ik.imagekit.io/devmedeiros/hist_price_qxT6fxEGQ.jpg?updatedAt=1640708039771" alt="Distribuição do preço dos livros por gênero"  />
+</p>
+<p>A distribuição para os preços de livros de ficção é fortemente inclinados para a esquerda e consistentemente diminuem a medida que o preço aumenta. Enquanto que os livros de ficção começam altos e se tornam ainda mais altos, com 120 e quase 140 ocorrências nas duas primeiras categorias, então ele rapidamente diminui.</p>
+<p><img loading="lazy" src="https://ik.imagekit.io/devmedeiros/hist_ur_6YxOQ_Huz.jpg?updatedAt=1640708040024" alt="Distribuição da avaliação dos usuários por gênero"  />
+</p>
+<p>A distribuição para a avaliação do usuário do gênero de ficção lentamente aumenta, tendo seu pico próximo de 4.8. E a distribuição para o gênero de não ficção tem seu pico logo após 4.6.</p>
+]]></content:encoded>
     </item>
     
     <item>
@@ -153,6 +1577,121 @@
       
       <guid>https://devmedeiros.com/pt/post/2021-11-07-seaborn-package-guide/</guid>
       <description>Um guia simples de como fazer gráficos básicos usando o pacote seaborn do Python</description>
+      <content:encoded><![CDATA[<h2 id="introdução">Introdução</h2>
+<p>Eu estou aprendendo visualização de dados no Python e eu me vejo como alguém que aprende fazendo, por isso eu vou fazer alguns gráficos simples usando o pacote <code>seaborn</code> que poderão ser utilizados como referência sempre que precisar refrescar a memória.</p>
+<p>Primeiramente é necessários que os pacotes estejam propriamente importados, após isso eu carrego o banco de dados <em>iris</em>.</p>
+<div class="highlight"><pre tabindex="0" style="color:#f8f8f2;background-color:#272822;-moz-tab-size:4;-o-tab-size:4;tab-size:4;"><code class="language-python" data-lang="python"><span style="display:flex;"><span><span style="color:#f92672">import</span> pandas <span style="color:#66d9ef">as</span> pd
+</span></span><span style="display:flex;"><span><span style="color:#f92672">import</span> seaborn <span style="color:#66d9ef">as</span> sns
+</span></span><span style="display:flex;"><span><span style="color:#f92672">import</span> matplotlib.pyplot <span style="color:#66d9ef">as</span> plt
+</span></span><span style="display:flex;"><span>
+</span></span><span style="display:flex;"><span>url <span style="color:#f92672">=</span> <span style="color:#e6db74">&#34;https://git.io/JXciW&#34;</span>
+</span></span><span style="display:flex;"><span>
+</span></span><span style="display:flex;"><span>iris <span style="color:#f92672">=</span> pd<span style="color:#f92672">.</span>read_csv(url)
+</span></span></code></pre></div><p>Caso não esteja familiarizado com o banco de dados <em>iris</em>, veja as cinco primeiras linhas dele a seguir:</p>
+<table>
+<thead>
+<tr>
+<th>sepal_length</th>
+<th>sepal_width</th>
+<th>petal_length</th>
+<th>petal_width</th>
+<th>species</th>
+</tr>
+</thead>
+<tbody>
+<tr>
+<td>5.1</td>
+<td>3.5</td>
+<td>1.4</td>
+<td>0.2</td>
+<td>setosa</td>
+</tr>
+<tr>
+<td>4.9</td>
+<td>3.0</td>
+<td>1.4</td>
+<td>0.2</td>
+<td>setosa</td>
+</tr>
+<tr>
+<td>4.7</td>
+<td>3.2</td>
+<td>1.3</td>
+<td>0.2</td>
+<td>setosa</td>
+</tr>
+<tr>
+<td>4.6</td>
+<td>3.1</td>
+<td>1.5</td>
+<td>0.2</td>
+<td>setosa</td>
+</tr>
+<tr>
+<td>5.0</td>
+<td>3.6</td>
+<td>1.4</td>
+<td>0.2</td>
+<td>setosa</td>
+</tr>
+</tbody>
+</table>
+<h2 id="gráfico-de-barras">Gráfico de barras</h2>
+<p>Criar um simples gráfico de barras.</p>
+<div class="highlight"><pre tabindex="0" style="color:#f8f8f2;background-color:#272822;-moz-tab-size:4;-o-tab-size:4;tab-size:4;"><code class="language-python" data-lang="python"><span style="display:flex;"><span>sns<span style="color:#f92672">.</span>barplot(x<span style="color:#f92672">=</span><span style="color:#e6db74">&#34;species&#34;</span>, y<span style="color:#f92672">=</span><span style="color:#e6db74">&#34;petal_width&#34;</span>, data<span style="color:#f92672">=</span>iris)
+</span></span></code></pre></div><p><img loading="lazy" src="https://ik.imagekit.io/devmedeiros/python_seaborn/barplot_EGCCNkum4y.jpg?updatedAt=1636308224965" alt="seaborn barplot species x petal_width"  />
+</p>
+<p>Fazendo um gráfico de barras horizontais.</p>
+<div class="highlight"><pre tabindex="0" style="color:#f8f8f2;background-color:#272822;-moz-tab-size:4;-o-tab-size:4;tab-size:4;"><code class="language-python" data-lang="python"><span style="display:flex;"><span>sns<span style="color:#f92672">.</span>barplot(x<span style="color:#f92672">=</span><span style="color:#e6db74">&#34;petal_width&#34;</span>, y<span style="color:#f92672">=</span><span style="color:#e6db74">&#34;species&#34;</span>, data<span style="color:#f92672">=</span>iris)
+</span></span></code></pre></div><p><img loading="lazy" src="https://ik.imagekit.io/devmedeiros/python_seaborn/horizontal-barplot_pcHXoAQWTH.jpg?updatedAt=1636308226028" alt="seaborn barplot horizontal species x petal_width"  />
+</p>
+<p>Ordem das barras personalizada.</p>
+<div class="highlight"><pre tabindex="0" style="color:#f8f8f2;background-color:#272822;-moz-tab-size:4;-o-tab-size:4;tab-size:4;"><code class="language-python" data-lang="python"><span style="display:flex;"><span>sns<span style="color:#f92672">.</span>barplot(
+</span></span><span style="display:flex;"><span>    x<span style="color:#f92672">=</span><span style="color:#e6db74">&#34;species&#34;</span>,
+</span></span><span style="display:flex;"><span>    y<span style="color:#f92672">=</span><span style="color:#e6db74">&#34;petal_width&#34;</span>,
+</span></span><span style="display:flex;"><span>    data<span style="color:#f92672">=</span>iris,
+</span></span><span style="display:flex;"><span>    order<span style="color:#f92672">=</span>[<span style="color:#e6db74">&#34;virginica&#34;</span>, <span style="color:#e6db74">&#34;setosa&#34;</span>, <span style="color:#e6db74">&#34;versicolor&#34;</span>])
+</span></span></code></pre></div><p><img loading="lazy" src="https://ik.imagekit.io/devmedeiros/python_seaborn/barplot-custom-order_hUl5vUQOi.jpg?updatedAt=1636308225481" alt="seaborn barplot custom bar order"  />
+</p>
+<p>Acrescentar limites para as barras de erro.</p>
+<div class="highlight"><pre tabindex="0" style="color:#f8f8f2;background-color:#272822;-moz-tab-size:4;-o-tab-size:4;tab-size:4;"><code class="language-python" data-lang="python"><span style="display:flex;"><span>sns<span style="color:#f92672">.</span>barplot(x<span style="color:#f92672">=</span><span style="color:#e6db74">&#34;species&#34;</span>, y<span style="color:#f92672">=</span><span style="color:#e6db74">&#34;petal_width&#34;</span>, data<span style="color:#f92672">=</span>iris, capsize<span style="color:#f92672">=</span><span style="color:#ae81ff">.2</span>)
+</span></span></code></pre></div><p><img loading="lazy" src="https://ik.imagekit.io/devmedeiros/python_seaborn/barplot-cap-error-bar_xD7fHewAZ.jpg?updatedAt=1636308225172" alt="seaborn barplot caps error"  />
+</p>
+<p>Gráfico de barra sem barras de erro.</p>
+<div class="highlight"><pre tabindex="0" style="color:#f8f8f2;background-color:#272822;-moz-tab-size:4;-o-tab-size:4;tab-size:4;"><code class="language-python" data-lang="python"><span style="display:flex;"><span>sns<span style="color:#f92672">.</span>barplot(x<span style="color:#f92672">=</span><span style="color:#e6db74">&#34;species&#34;</span>, y<span style="color:#f92672">=</span><span style="color:#e6db74">&#34;petal_width&#34;</span>, data<span style="color:#f92672">=</span>iris, ci<span style="color:#f92672">=</span><span style="color:#66d9ef">None</span>)
+</span></span></code></pre></div><p><img loading="lazy" src="https://ik.imagekit.io/devmedeiros/python_seaborn/barplot-no-cap-error_5sf2jPDpBag.jpg?updatedAt=1636308225717" alt="barplot no error bar"  />
+</p>
+<h2 id="gráfico-de-dispersão">Gráfico de dispersão</h2>
+<p>Um gráfico de dispersão simples.</p>
+<div class="highlight"><pre tabindex="0" style="color:#f8f8f2;background-color:#272822;-moz-tab-size:4;-o-tab-size:4;tab-size:4;"><code class="language-python" data-lang="python"><span style="display:flex;"><span>sns<span style="color:#f92672">.</span>scatterplot(x<span style="color:#f92672">=</span><span style="color:#e6db74">&#34;sepal_width&#34;</span>, y<span style="color:#f92672">=</span><span style="color:#e6db74">&#34;petal_width&#34;</span>, data<span style="color:#f92672">=</span>iris)
+</span></span></code></pre></div><p><img loading="lazy" src="https://ik.imagekit.io/devmedeiros/python_seaborn/scatterplot_nj8frw1JV.jpg?updatedAt=1636308224619" alt="seaborn scatterplot"  />
+</p>
+<p>Acrescentando grupos no gráfico de dispersão.</p>
+<div class="highlight"><pre tabindex="0" style="color:#f8f8f2;background-color:#272822;-moz-tab-size:4;-o-tab-size:4;tab-size:4;"><code class="language-python" data-lang="python"><span style="display:flex;"><span>sns<span style="color:#f92672">.</span>scatterplot(x<span style="color:#f92672">=</span><span style="color:#e6db74">&#34;sepal_width&#34;</span>, y<span style="color:#f92672">=</span><span style="color:#e6db74">&#34;petal_width&#34;</span>, data<span style="color:#f92672">=</span>iris, hue<span style="color:#f92672">=</span><span style="color:#e6db74">&#34;species&#34;</span>)
+</span></span></code></pre></div><p><img loading="lazy" src="https://ik.imagekit.io/devmedeiros/python_seaborn/scatterplot-grouped_JHOKt9xydY.jpg?updatedAt=1636308224802" alt="seaborn scatterplot grouped"  />
+</p>
+<p>Acrescentando grupos e escalando os pontos de um gráfico de dispersão.</p>
+<div class="highlight"><pre tabindex="0" style="color:#f8f8f2;background-color:#272822;-moz-tab-size:4;-o-tab-size:4;tab-size:4;"><code class="language-python" data-lang="python"><span style="display:flex;"><span>sns<span style="color:#f92672">.</span>scatterplot(
+</span></span><span style="display:flex;"><span>    x<span style="color:#f92672">=</span><span style="color:#e6db74">&#34;sepal_width&#34;</span>,
+</span></span><span style="display:flex;"><span>    y<span style="color:#f92672">=</span><span style="color:#e6db74">&#34;petal_width&#34;</span>,
+</span></span><span style="display:flex;"><span>    data<span style="color:#f92672">=</span>iris,
+</span></span><span style="display:flex;"><span>    hue<span style="color:#f92672">=</span><span style="color:#e6db74">&#34;sepal_length&#34;</span>,
+</span></span><span style="display:flex;"><span>    size<span style="color:#f92672">=</span><span style="color:#e6db74">&#34;sepal_length&#34;</span>)
+</span></span></code></pre></div><p><img loading="lazy" src="https://ik.imagekit.io/devmedeiros/python_seaborn/scatterplot-grouped-size_mZJt-TjEv.jpg?updatedAt=1636308224806" alt="seaborn scatterplot grouped size"  />
+</p>
+<h2 id="legenda-e-eixos">Legenda e Eixos</h2>
+<p>Para mover a legenda do gráfico para fora da área de plotagem, você pode utilizar <code>bbox_to_anchor = (1,1), loc=2</code>. O gráfico a seguir possui um titulo personalizado, um novo título para o eixo x e pro eixo y.</p>
+<div class="highlight"><pre tabindex="0" style="color:#f8f8f2;background-color:#272822;-moz-tab-size:4;-o-tab-size:4;tab-size:4;"><code class="language-python" data-lang="python"><span style="display:flex;"><span>sns<span style="color:#f92672">.</span>scatterplot(x<span style="color:#f92672">=</span><span style="color:#e6db74">&#34;sepal_width&#34;</span>, y<span style="color:#f92672">=</span><span style="color:#e6db74">&#34;petal_width&#34;</span>, data<span style="color:#f92672">=</span>iris, hue<span style="color:#f92672">=</span><span style="color:#e6db74">&#34;species&#34;</span>)
+</span></span><span style="display:flex;"><span>plt<span style="color:#f92672">.</span>legend(
+</span></span><span style="display:flex;"><span>    title<span style="color:#f92672">=</span><span style="color:#e6db74">&#34;Species&#34;</span>,
+</span></span><span style="display:flex;"><span>    bbox_to_anchor <span style="color:#f92672">=</span> (<span style="color:#ae81ff">1</span>,<span style="color:#ae81ff">1</span>),
+</span></span><span style="display:flex;"><span>    loc<span style="color:#f92672">=</span><span style="color:#ae81ff">2</span>)
+</span></span><span style="display:flex;"><span>plt<span style="color:#f92672">.</span>xlabel(<span style="color:#e6db74">&#34;Sepal Width&#34;</span>)
+</span></span><span style="display:flex;"><span>plt<span style="color:#f92672">.</span>ylabel(<span style="color:#e6db74">&#34;Petal Width&#34;</span>)
+</span></span><span style="display:flex;"><span>plt<span style="color:#f92672">.</span>title(<span style="color:#e6db74">&#34;Sepal Width x Petal Width&#34;</span>)
+</span></span></code></pre></div><p><img loading="lazy" src="https://ik.imagekit.io/devmedeiros/python_seaborn/title-axis-outside-legend__zUIAf_2427.jpg?updatedAt=1636308224813" alt="seaborn scatterplot outside legend with custom title and axis labels"  />
+</p>
+]]></content:encoded>
     </item>
     
     <item>
@@ -162,6 +1701,34 @@
       
       <guid>https://devmedeiros.com/pt/post/2021-10-27-data-table/</guid>
       <description>Um dos pacotes de manipulação de dados mais rápidos do R</description>
+      <content:encoded><![CDATA[<p>O pacote <code>data.table</code> é um dos pacotes de manipulação de dados mais rápido, atualmente ele é mais rápido até que o <code>pandas</code> e <code>dplyr</code> <sup id="fnref:1"><a href="#fn:1" class="footnote-ref" role="doc-noteref">1</a></sup>. A sintaxe de um <code>data.table</code> é <code>dt[i, j, by]</code>, em que:</p>
+<ul>
+<li>i é utilizado para amostrar linhas</li>
+<li>j é utilizado para amostrar colunas</li>
+<li>by é utilizado para amostrar grupos, igual ao <strong>GROUP BY</strong> do SQL</li>
+</ul>
+<p>Você pode ler em <em>voz alta</em> como<sup id="fnref:2"><a href="#fn:2" class="footnote-ref" role="doc-noteref">2</a></sup>:</p>
+<blockquote>
+<p>Pegue <code>dt</code>, amostra/reordene as linhas usando <code>i</code>, então calcule <code>j</code>, agrupando por <code>by</code>.</p>
+</blockquote>
+<p>Um <code>data.table</code> também é um <code>data.frame</code> e todas as manipulações de dados básicas que você pode usar em um <code>data.frame</code> se aplica a um <code>data.table</code>. Como <code>ncol()</code>, <code>nrow()</code>, <code>names()</code>, <code>summary()</code>. Mas ele não para por aí, por exemplo <code>data.table</code> possui uma variável especial <code>.N</code> que é um integral que contains os números das linhas no grupo. Se você usar <code>dt[.N]</code> você verá a última linha do seu <code>data.table</code>.</p>
+<p>Outra coisa interessante do <code>data.table</code> é que se você quiser filtrar/amostrar uma coluna, você não precisa utilizar <code>df$x[df$x == 1]</code> você pode simplesmente usar <code>dt[x == 1]</code> o que torna o seu código mais limpo e fácil de ler.</p>
+<p>Você também tem a possibilidade de utilizar operadores especiais como: <code>%like%</code>, <code>%in%</code> e <code>%between%</code>. Estes operadores funcionam como operadores de SQL, <strong>LIKE</strong>, <strong>IN</strong>, e <strong>BETWEEN</strong>, respectivamente.</p>
+<p>Se você está familiarizado com SQL tem uma coisa que esse pacote oferece que irá chamar a sua atenção. No inglês se chama <em>chaining</em> (acorrentar), que permite a você a fazer uma sequência de operações em um <code>data.table</code>, você apenas precisa utilizar <code>dt[][]</code> e <em>acorrentar</em> múltiplas operações com &ldquo;[]&rdquo;.</p>
+<p>Mas este não são todos os operadores, com <code>:=</code> você pode alterar dados sem fazer uma nova cópia na memória.</p>
+<p>Caso queira começar a usar o pacote eu sugiro que use a <a href="https://raw.githubusercontent.com/rstudio/cheatsheets/master/datatable.pdf">cheatsheet</a> (folha de referência/colinha). É extramente útil caso já tenha um conhecimento básico sobre <code>data.frame</code>s.</p>
+<div class="footnotes" role="doc-endnotes">
+<hr>
+<ol>
+<li id="fn:1">
+<p><a href="https://h2oai.github.io/db-benchmark/">https://h2oai.github.io/db-benchmark/</a>&#160;<a href="#fnref:1" class="footnote-backref" role="doc-backlink">&#x21a9;&#xfe0e;</a></p>
+</li>
+<li id="fn:2">
+<p><a href="https://cran.r-project.org/web/packages/data.table/vignettes/datatable-intro.html">https://cran.r-project.org/web/packages/data.table/vignettes/datatable-intro.html</a>&#160;<a href="#fnref:2" class="footnote-backref" role="doc-backlink">&#x21a9;&#xfe0e;</a></p>
+</li>
+</ol>
+</div>
+]]></content:encoded>
     </item>
     
     <item>
@@ -171,6 +1738,21 @@
       
       <guid>https://devmedeiros.com/pt/post/2021-10-24-blackjack-simulation/</guid>
       <description>Uma simulação de 21 usando R e Shiny, você pode rodar um jogo com p jogadores, d baralhos, n vezes</description>
+      <content:encoded><![CDATA[<p>O meu objetivo com este projeto é de simular o ambiente de um jogo de 21, também conhecido como <em>blackjack</em>. Assim, eu decidi fazer diversas funções para emular o comportamento do <em>dealer</em>, de um jogador iniciante, um jogador cauteloso e um estrategista. Com esse conjunto de funções você pode rodar um jogo com <strong>p</strong> jogadores, <strong>d</strong> baralhos e quaisquer combinações de arquétipos de jogadores. Além disso, também pode rodar o jogo <strong>n</strong> vezes.</p>
+<p>Eu também fiz uma <a href="https://jaqueline-medeiros.shinyapps.io/appa/">aplicação shiny</a> para demonstrar como a simulação funciona. No aplicativo, você é limitado no número de jogadores, mas caso queira rodar o código com mais jogadores eu sugiro que olhe o <a href="https://github.com/devmedeiros/blackjack-simulation">respositório</a> do GitHub. Nele você encontra as regras consideradas para a simulação e o código completo.</p>
+<p>Caso seja familiar com a linguagem de programação R, você  também pode rodar o aplicativo localmente, basta carregar a biblioteca do shiny <code>library(shiny)</code> e rodar o código <code>runGitHub(&quot;blackjack-simulation&quot;, &quot;devmedeiros&quot;, ref = &quot;main&quot;)</code>.</p>
+<p>O app é composto de uma barra lateral com um espaço para escolher os arquétipos, o número de baralhos a ser usados e quantas rodadas você quer simular. Dependendo de quantas rodadas você escolher a simulação pode ficar mais lenta, pois a simulação roda de acordo com as suas escolhas todas vez que clica no botão <strong>RUN SIMULATION RUN</strong>.</p>
+<p>Na aba <em>plot</em>, nota-se a evolução da taxa de perda através das rodadas.</p>
+<p><strong>1</strong> quer dizer que o jogador perdeu aquela rodada e um <strong>0</strong> quer dizer que ele ganhou.</p>
+<p><img loading="lazy" src="https://ik.imagekit.io/devmedeiros/plot_cm7Dhm0u6a.png?updatedAt=1635119435941" alt="Aplicação do shiny, aba plot"  />
+</p>
+<p>A aba <em>game setup</em> mostra todas as cartas distribuídas na simulação, cada carta foi entregue da esquerda para a direita e uma célula em branco quer dizer que o jogador não pediu pra receber outra carta (<em>hit</em>, bate).</p>
+<p><img loading="lazy" src="https://ik.imagekit.io/devmedeiros/game-setup_-FspHIe5w.png?updatedAt=1635119436114" alt="Aplicação do shiny, aba game setup"  />
+</p>
+<p>Por fim, a aba <em>lose rate</em> mostra os mesmo dados da aba <em>plot</em>, mas em formato de tabela. Isso é útil quando se quer analisar como uma estratégia foi melhor do que outra.</p>
+<p><img loading="lazy" src="https://ik.imagekit.io/devmedeiros/lose_rate_jPTu-cXHuN.png?updatedAt=1635119436123" alt="Aplicação do shiny, aba lose rate"  />
+</p>
+]]></content:encoded>
     </item>
     
     <item>
@@ -180,6 +1762,61 @@
       
       <guid>https://devmedeiros.com/pt/post/2021-10-12-fakenews-sentiment/</guid>
       <description>Análise de Sentimento comparando notícias falsas e notícias reais</description>
+      <content:encoded><![CDATA[<p>Eu quero fazer uma análise de sentimentos usando o R como uma forma de aprender. Com isso em mente começamos carregando todos os pacotes que iremos utilizar.</p>
+<div class="highlight"><pre tabindex="0" style="color:#f8f8f2;background-color:#272822;-moz-tab-size:4;-o-tab-size:4;tab-size:4;"><code class="language-r" data-lang="r"><span style="display:flex;"><span><span style="color:#a6e22e">library</span>(readr)
+</span></span><span style="display:flex;"><span><span style="color:#a6e22e">library</span>(dplyr)
+</span></span><span style="display:flex;"><span><span style="color:#a6e22e">library</span>(tidytext)
+</span></span><span style="display:flex;"><span><span style="color:#a6e22e">library</span>(tokenizers)
+</span></span><span style="display:flex;"><span><span style="color:#a6e22e">library</span>(stopwords)
+</span></span><span style="display:flex;"><span><span style="color:#a6e22e">library</span>(ggplot2)
+</span></span></code></pre></div><p>Então precisamos carregar nosso banco de dados. Esses dados são do  Kaggle <a href="https://www.kaggle.com/clmentbisaillon/fake-and-real-news-dataset"><em>Fake and real news dataset</em></a>.</p>
+<div class="highlight"><pre tabindex="0" style="color:#f8f8f2;background-color:#272822;-moz-tab-size:4;-o-tab-size:4;tab-size:4;"><code class="language-r" data-lang="r"><span style="display:flex;"><span>Fake <span style="color:#f92672">&lt;-</span> <span style="color:#a6e22e">read_csv</span>(<span style="color:#e6db74">&#39;~/fakenews/Fake.csv&#39;</span>)
+</span></span><span style="display:flex;"><span>True <span style="color:#f92672">&lt;-</span> <span style="color:#a6e22e">read.csv</span>(<span style="color:#e6db74">&#39;~/fakenews/True.csv&#39;</span>)
+</span></span></code></pre></div><p>Eu quero unir ambos os dados, mas antes é preciso criar uma nova columa que irá informar de onde os dados vieram.</p>
+<div class="highlight"><pre tabindex="0" style="color:#f8f8f2;background-color:#272822;-moz-tab-size:4;-o-tab-size:4;tab-size:4;"><code class="language-r" data-lang="r"><span style="display:flex;"><span>Fake<span style="color:#f92672">$</span>news <span style="color:#f92672">&lt;-</span> <span style="color:#e6db74">&#39;fake&#39;</span>
+</span></span><span style="display:flex;"><span>True<span style="color:#f92672">$</span>news <span style="color:#f92672">&lt;-</span> <span style="color:#e6db74">&#39;real&#39;</span>
+</span></span><span style="display:flex;"><span>
+</span></span><span style="display:flex;"><span>data <span style="color:#f92672">&lt;-</span> <span style="color:#a6e22e">rbind</span>(Fake,True)
+</span></span></code></pre></div><p>Agora podemos iniciar a limpeza dos dados. Neste primeiro momento, fazemos os tokens nas variáveis <strong>title</strong> e <strong>text</strong>. Em seguida iremos remover as <em>stopwords</em> (palavras redundantes) de acordo com a fonte <em>snowball</em> do pacote <em>stopwords</em>.</p>
+<div class="highlight"><pre tabindex="0" style="color:#f8f8f2;background-color:#272822;-moz-tab-size:4;-o-tab-size:4;tab-size:4;"><code class="language-r" data-lang="r"><span style="display:flex;"><span>title <span style="color:#f92672">&lt;-</span> <span style="color:#a6e22e">tibble</span>(news <span style="color:#f92672">=</span> data<span style="color:#f92672">$</span>news, text <span style="color:#f92672">=</span> data<span style="color:#f92672">$</span>title)
+</span></span><span style="display:flex;"><span>
+</span></span><span style="display:flex;"><span>corpus <span style="color:#f92672">&lt;-</span> <span style="color:#a6e22e">tibble</span>(news <span style="color:#f92672">=</span> data<span style="color:#f92672">$</span>news, corpus <span style="color:#f92672">=</span> data<span style="color:#f92672">$</span>text)
+</span></span><span style="display:flex;"><span>
+</span></span><span style="display:flex;"><span>tidy_title <span style="color:#f92672">&lt;-</span> title <span style="color:#f92672">%&gt;%</span>
+</span></span><span style="display:flex;"><span>  <span style="color:#a6e22e">unnest_tokens</span>(word, text, token <span style="color:#f92672">=</span> <span style="color:#e6db74">&#39;words&#39;</span>) <span style="color:#f92672">%&gt;%</span>
+</span></span><span style="display:flex;"><span>  <span style="color:#a6e22e">filter</span>(<span style="color:#f92672">!</span>(word <span style="color:#f92672">%in%</span> <span style="color:#a6e22e">stopwords</span>(source <span style="color:#f92672">=</span> <span style="color:#e6db74">&#39;snowball&#39;</span>)))
+</span></span><span style="display:flex;"><span>
+</span></span><span style="display:flex;"><span>tidy_corpus <span style="color:#f92672">&lt;-</span> corpus <span style="color:#f92672">%&gt;%</span>
+</span></span><span style="display:flex;"><span>  <span style="color:#a6e22e">unnest_tokens</span>(word, corpus, token <span style="color:#f92672">=</span> <span style="color:#e6db74">&#39;words&#39;</span>) <span style="color:#f92672">%&gt;%</span>
+</span></span><span style="display:flex;"><span>  <span style="color:#a6e22e">filter</span>(<span style="color:#f92672">!</span>(word <span style="color:#f92672">%in%</span> <span style="color:#a6e22e">stopwords</span>(source <span style="color:#f92672">=</span> <span style="color:#e6db74">&#34;snowball&#34;</span>)))
+</span></span></code></pre></div><p>Com os dados limpos podemos selecionar as dez palavras mais frequentes dos títulos das noticias, separado por grupo real ou falso.</p>
+<div class="highlight"><pre tabindex="0" style="color:#f8f8f2;background-color:#272822;-moz-tab-size:4;-o-tab-size:4;tab-size:4;"><code class="language-r" data-lang="r"><span style="display:flex;"><span>p0 <span style="color:#f92672">&lt;-</span> tidy_title <span style="color:#f92672">%&gt;%</span>
+</span></span><span style="display:flex;"><span>  <span style="color:#a6e22e">group_by</span>(news, word) <span style="color:#f92672">%&gt;%</span>
+</span></span><span style="display:flex;"><span>  <span style="color:#a6e22e">summarise</span>(n <span style="color:#f92672">=</span> <span style="color:#a6e22e">n</span>()) <span style="color:#f92672">%&gt;%</span>
+</span></span><span style="display:flex;"><span>  <span style="color:#a6e22e">arrange</span>(<span style="color:#a6e22e">desc</span>(n)) <span style="color:#f92672">%&gt;%</span>
+</span></span><span style="display:flex;"><span>  <span style="color:#a6e22e">slice</span>(<span style="color:#ae81ff">1</span><span style="color:#f92672">:</span><span style="color:#ae81ff">10</span>)
+</span></span></code></pre></div><p>Títulos de notícias falsas mencionam muito mais <em>video</em> e <em>trump</em>, 8477 e 7874, respectivamente. Já no caso de títulos de notícias reais, <em>trump</em> também é uma das palavras mais mencionadas, aparecendo em primeiro com 4883 aparições, seguido por <em>u.s</em> com 4187 e <em>says</em> com 2981.</p>
+<p><img loading="lazy" src="https://ik.imagekit.io/devmedeiros/10_popular_titles_H0dG3ljPN.png?updatedAt=1634083210303" alt="10 most frequent words by fake news titles and real news"  title="Top 10 words by fake news and real news"  />
+</p>
+<p>Agora iremos preparar os dados para a análise de sentimento. Eu estou interessada em classificar os dados em sentimentos de alegria, raiva, medo ou surpresa, por exemplo. Então eu iriei utilizar o os dados de <code>nrc</code> <a href="http://saifmohammad.com/WebPages/NRC-Emotion-Lexicon.htm">Saif Mohammad and Peter Turney</a>.</p>
+<div class="highlight"><pre tabindex="0" style="color:#f8f8f2;background-color:#272822;-moz-tab-size:4;-o-tab-size:4;tab-size:4;"><code class="language-r" data-lang="r"><span style="display:flex;"><span>p1 <span style="color:#f92672">&lt;-</span> tidy_title <span style="color:#f92672">%&gt;%</span>
+</span></span><span style="display:flex;"><span>  <span style="color:#a6e22e">inner_join</span>(<span style="color:#a6e22e">get_sentiments</span>(<span style="color:#e6db74">&#39;nrc&#39;</span>)) <span style="color:#f92672">%&gt;%</span>
+</span></span><span style="display:flex;"><span>  <span style="color:#a6e22e">group_by</span>(sentiment, news) <span style="color:#f92672">%&gt;%</span>
+</span></span><span style="display:flex;"><span>  <span style="color:#a6e22e">summarise</span>(n <span style="color:#f92672">=</span> <span style="color:#a6e22e">n</span>()) <span style="color:#f92672">%&gt;%</span>
+</span></span><span style="display:flex;"><span>  <span style="color:#a6e22e">mutate</span>(prop <span style="color:#f92672">=</span> n<span style="color:#f92672">/</span><span style="color:#a6e22e">sum</span>(n))
+</span></span></code></pre></div><p><img loading="lazy" src="https://ik.imagekit.io/devmedeiros/title_sentiment_lkDe-y_p97.png?updatedAt=1634083978487" alt="sentiment from news titles"  title="Sentiment from news titles"  />
+</p>
+<p><strong>Disgust</strong> (nojo) aparenta ser o sentimento mais comum envolvendo títulos de notícias falsas, enquanto que <strong>trust</strong> (confiança) é o menor, mesmo que ainda seja maior que 50%. Em geral, títulos de notícias falsas aparentam ter mais &ldquo;sentimento&rdquo; do que títulos de notícias reais, neste banco de dados. Isso vale até para sentimentos positivos como <strong>joy</strong> (alegria) e <strong>surprise</strong> (surpresa).</p>
+<div class="highlight"><pre tabindex="0" style="color:#f8f8f2;background-color:#272822;-moz-tab-size:4;-o-tab-size:4;tab-size:4;"><code class="language-r" data-lang="r"><span style="display:flex;"><span>p2 <span style="color:#f92672">&lt;-</span> tidy_corpus <span style="color:#f92672">%&gt;%</span>
+</span></span><span style="display:flex;"><span><span style="color:#a6e22e">inner_join</span>(<span style="color:#a6e22e">get_sentiments</span>(<span style="color:#e6db74">&#39;nrc&#39;</span>)) <span style="color:#f92672">%&gt;%</span>
+</span></span><span style="display:flex;"><span><span style="color:#a6e22e">group_by</span>(sentiment, news) <span style="color:#f92672">%&gt;%</span>
+</span></span><span style="display:flex;"><span><span style="color:#a6e22e">summarise</span>(n <span style="color:#f92672">=</span> <span style="color:#a6e22e">n</span>()) <span style="color:#f92672">%&gt;%</span>
+</span></span><span style="display:flex;"><span><span style="color:#a6e22e">mutate</span>(prop <span style="color:#f92672">=</span> n<span style="color:#f92672">/</span><span style="color:#a6e22e">sum</span>(n))
+</span></span></code></pre></div><p>Para o corpo das notícias reais pode-se notas que os mesmos sentimentos são prevalentes, mas a proporção é menor comparado ao título. Um artigo de notícias falsas perde confiança (<strong>trust</strong>) quando o leitor lê o corpo do artigo. Ele também se torna menos negativo (<strong>negative</strong>) e apresenta menos medo (<strong>fear</strong>)</p>
+<p><img loading="lazy" src="https://ik.imagekit.io/devmedeiros/corpus_sentiment_302EKlTtO.png?updatedAt=1634083978312" alt="sentiment from news text"  title="Sentiment from news corpus text"  />
+</p>
+<p>Uma melhoria que poderia ser feito aqui é tentar construir nosso próprio dicionário de palavras redundantes (<em>stopwords</em>) e alterar a forma que a toneização foi feita. Pois houveram momentos em que <em>trump</em> e <em>trump&rsquo;s</em> não corresponderam a mesma coisa e se estes dados tivessem sido usados para treinar um modelo isso poderia se tornar um problema.</p>
+]]></content:encoded>
     </item>
     
   </channel>

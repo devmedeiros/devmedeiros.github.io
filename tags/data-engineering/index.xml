@@ -18,6 +18,263 @@
       
       <guid>https://devmedeiros.com/post/case-study-analytics-engineer/</guid>
       <description>Project exploring common tasks an Analytics Engineer needs to perform on a daily day.</description>
+      <content:encoded><![CDATA[<h2 id="what-is-it-like-working-as-an-analytics-engineer">What is it like working as an Analytics Engineer?</h2>
+<p>Analytics Engineer refers to a Data Science professional focused on transforming data into information that is easy to access to the end-user. They provide static and dynamic reports that empower the business team without them needing to think about the complexity behind data analysis.</p>
+<p>In this case study, I want to talk about what would be common tasks that an Analytics Engineer would need to perform and how I&rsquo;d navigate them.</p>
+<p>In this scenario, the Analytics Engineer works for Bankio a digital bank from Brazil. Like most digital banks in Brazil, Bankio offers free transfers for every bank account in the country. It also has many products like an investment account, a savings account, an individual bank account, a credit card without an annual fee, and many more.</p>
+<h3 id="task-1-sql-query">Task 1: SQL Query</h3>
+<blockquote>
+<p>A Bussiness Analyst from Bankio asks for your assistance writing a SQL query to get all the account&rsquo;s monthly balance between January 2020 to December 2020.</p>
+</blockquote>
+
+
+<p><details >
+  <summary markdown="span">SQL Query Solution <em>(click to expand)</em></summary>
+  <div class="highlight"><pre tabindex="0" style="color:#f8f8f2;background-color:#272822;-moz-tab-size:4;-o-tab-size:4;tab-size:4;"><code class="language-SQL" data-lang="SQL"><span style="display:flex;"><span><span style="color:#66d9ef">SELECT</span>
+</span></span><span style="display:flex;"><span>  a.<span style="color:#f92672">*</span>,
+</span></span><span style="display:flex;"><span>  <span style="color:#75715e">-- Here I calculate the cumulative sum of total deposits for each customer ordering it 
+</span></span></span><span style="display:flex;"><span><span style="color:#75715e"></span>  <span style="color:#75715e">-- by month, if its null I change the value to 0 then I subtract the cumulative sum of
+</span></span></span><span style="display:flex;"><span><span style="color:#75715e"></span>  <span style="color:#75715e">-- total withdrawals for each customer ordering it by month, if its null I change the 
+</span></span></span><span style="display:flex;"><span><span style="color:#75715e"></span>  <span style="color:#75715e">-- value to 0 and I save this as ours account_monthly_balance
+</span></span></span><span style="display:flex;"><span><span style="color:#75715e"></span>  NVL(<span style="color:#66d9ef">SUM</span>(total_transfer_in) OVER (PARTITION <span style="color:#66d9ef">BY</span> customer_id 
+</span></span><span style="display:flex;"><span><span style="color:#66d9ef">ORDER</span> <span style="color:#66d9ef">BY</span>
+</span></span><span style="display:flex;"><span>  action_month), <span style="color:#ae81ff">0</span>) <span style="color:#f92672">-</span> NVL(<span style="color:#66d9ef">SUM</span>(total_transfer_out) OVER (PARTITION <span style="color:#66d9ef">BY</span> customer_id 
+</span></span><span style="display:flex;"><span><span style="color:#66d9ef">ORDER</span> <span style="color:#66d9ef">BY</span>
+</span></span><span style="display:flex;"><span>  action_month), <span style="color:#ae81ff">0</span>) <span style="color:#66d9ef">AS</span> account_monthly_balance 
+</span></span><span style="display:flex;"><span><span style="color:#66d9ef">FROM</span>
+</span></span><span style="display:flex;"><span>  <span style="color:#75715e">-- total transactions in/out subquery
+</span></span></span><span style="display:flex;"><span><span style="color:#75715e"></span>( 
+</span></span><span style="display:flex;"><span>  <span style="color:#66d9ef">SELECT</span>
+</span></span><span style="display:flex;"><span>    <span style="color:#f92672">*</span> 
+</span></span><span style="display:flex;"><span>  <span style="color:#66d9ef">FROM</span>
+</span></span><span style="display:flex;"><span>    <span style="color:#75715e">-- total deposits subquery
+</span></span></span><span style="display:flex;"><span><span style="color:#75715e"></span>( 
+</span></span><span style="display:flex;"><span>    <span style="color:#66d9ef">SELECT</span>
+</span></span><span style="display:flex;"><span>      action_month, customer_id, <span style="color:#66d9ef">SUM</span>(amount) <span style="color:#66d9ef">AS</span> total_transfer_in 
+</span></span><span style="display:flex;"><span>    <span style="color:#66d9ef">FROM</span>
+</span></span><span style="display:flex;"><span>      (
+</span></span><span style="display:flex;"><span>        <span style="color:#66d9ef">SELECT</span>
+</span></span><span style="display:flex;"><span>          <span style="color:#f92672">*</span> 
+</span></span><span style="display:flex;"><span>        <span style="color:#66d9ef">FROM</span>
+</span></span><span style="display:flex;"><span>          <span style="color:#75715e">-- regular deposits subquery
+</span></span></span><span style="display:flex;"><span><span style="color:#75715e"></span>( 
+</span></span><span style="display:flex;"><span>          <span style="color:#66d9ef">SELECT</span>
+</span></span><span style="display:flex;"><span>            d_month.action_month, accounts.customer_id, <span style="color:#66d9ef">SUM</span>(transfer_ins.amount) <span style="color:#66d9ef">AS</span> amount 
+</span></span><span style="display:flex;"><span>          <span style="color:#66d9ef">FROM</span>
+</span></span><span style="display:flex;"><span>            d_time 
+</span></span><span style="display:flex;"><span>            <span style="color:#66d9ef">INNER</span> <span style="color:#66d9ef">JOIN</span>
+</span></span><span style="display:flex;"><span>              transfer_ins 
+</span></span><span style="display:flex;"><span>              <span style="color:#66d9ef">ON</span> transfer_ins.transaction_completed_at <span style="color:#f92672">=</span> d_time.time_id 
+</span></span><span style="display:flex;"><span>            <span style="color:#66d9ef">LEFT</span> <span style="color:#66d9ef">JOIN</span>
+</span></span><span style="display:flex;"><span>              d_month <span style="color:#66d9ef">USING</span>(month_id) 
+</span></span><span style="display:flex;"><span>            <span style="color:#66d9ef">LEFT</span> <span style="color:#66d9ef">JOIN</span>
+</span></span><span style="display:flex;"><span>              accounts <span style="color:#66d9ef">USING</span>(account_id) 
+</span></span><span style="display:flex;"><span>          <span style="color:#66d9ef">WHERE</span>
+</span></span><span style="display:flex;"><span>            transfer_ins.status <span style="color:#f92672">=</span> <span style="color:#e6db74">&#39;completed&#39;</span> 
+</span></span><span style="display:flex;"><span>          <span style="color:#66d9ef">GROUP</span> <span style="color:#66d9ef">BY</span>
+</span></span><span style="display:flex;"><span>            d_month.action_month, accounts.customer_id ) transfer_in 
+</span></span><span style="display:flex;"><span>          <span style="color:#66d9ef">UNION</span> <span style="color:#66d9ef">ALL</span>
+</span></span><span style="display:flex;"><span>          <span style="color:#66d9ef">SELECT</span>
+</span></span><span style="display:flex;"><span>            <span style="color:#f92672">*</span> 
+</span></span><span style="display:flex;"><span>          <span style="color:#66d9ef">FROM</span>
+</span></span><span style="display:flex;"><span>            <span style="color:#75715e">-- pix deposits subquery
+</span></span></span><span style="display:flex;"><span><span style="color:#75715e"></span>( 
+</span></span><span style="display:flex;"><span>            <span style="color:#66d9ef">SELECT</span>
+</span></span><span style="display:flex;"><span>              d_month.action_month, accounts.customer_id, <span style="color:#66d9ef">SUM</span>(pix_movements.pix_amount) <span style="color:#66d9ef">AS</span> amount 
+</span></span><span style="display:flex;"><span>            <span style="color:#66d9ef">FROM</span>
+</span></span><span style="display:flex;"><span>              d_time 
+</span></span><span style="display:flex;"><span>              <span style="color:#66d9ef">INNER</span> <span style="color:#66d9ef">JOIN</span>
+</span></span><span style="display:flex;"><span>                pix_movements 
+</span></span><span style="display:flex;"><span>                <span style="color:#66d9ef">ON</span> pix_movements.pix_completed_at <span style="color:#f92672">=</span> d_time.time_id 
+</span></span><span style="display:flex;"><span>              <span style="color:#66d9ef">LEFT</span> <span style="color:#66d9ef">JOIN</span>
+</span></span><span style="display:flex;"><span>                d_month <span style="color:#66d9ef">USING</span>(month_id) 
+</span></span><span style="display:flex;"><span>              <span style="color:#66d9ef">LEFT</span> <span style="color:#66d9ef">JOIN</span>
+</span></span><span style="display:flex;"><span>                accounts <span style="color:#66d9ef">USING</span>(account_id) 
+</span></span><span style="display:flex;"><span>            <span style="color:#66d9ef">WHERE</span>
+</span></span><span style="display:flex;"><span>              pix_movements.status <span style="color:#f92672">=</span> <span style="color:#e6db74">&#39;completed&#39;</span> 
+</span></span><span style="display:flex;"><span>              <span style="color:#66d9ef">AND</span> pix_movements.in_or_out <span style="color:#f92672">=</span> <span style="color:#e6db74">&#39;pix_in&#39;</span> 
+</span></span><span style="display:flex;"><span>            <span style="color:#66d9ef">GROUP</span> <span style="color:#66d9ef">BY</span>
+</span></span><span style="display:flex;"><span>              d_month.action_month, accounts.customer_id ) 
+</span></span><span style="display:flex;"><span>      )
+</span></span><span style="display:flex;"><span>    <span style="color:#66d9ef">GROUP</span> <span style="color:#66d9ef">BY</span>
+</span></span><span style="display:flex;"><span>      action_month, customer_id ) 
+</span></span><span style="display:flex;"><span>      <span style="color:#66d9ef">FULL</span> <span style="color:#66d9ef">JOIN</span>
+</span></span><span style="display:flex;"><span>        (
+</span></span><span style="display:flex;"><span>          <span style="color:#66d9ef">SELECT</span>
+</span></span><span style="display:flex;"><span>            action_month,
+</span></span><span style="display:flex;"><span>            customer_id,
+</span></span><span style="display:flex;"><span>            <span style="color:#66d9ef">SUM</span>(amount) <span style="color:#66d9ef">AS</span> total_transfer_out 
+</span></span><span style="display:flex;"><span>          <span style="color:#66d9ef">FROM</span>
+</span></span><span style="display:flex;"><span>            <span style="color:#75715e">-- total withdrawals subquery
+</span></span></span><span style="display:flex;"><span><span style="color:#75715e"></span>( 
+</span></span><span style="display:flex;"><span>            <span style="color:#66d9ef">SELECT</span>
+</span></span><span style="display:flex;"><span>              <span style="color:#f92672">*</span> 
+</span></span><span style="display:flex;"><span>            <span style="color:#66d9ef">FROM</span>
+</span></span><span style="display:flex;"><span>              <span style="color:#75715e">-- regular withdrawal subquery
+</span></span></span><span style="display:flex;"><span><span style="color:#75715e"></span>( 
+</span></span><span style="display:flex;"><span>              <span style="color:#66d9ef">SELECT</span>
+</span></span><span style="display:flex;"><span>                d_month.action_month, accounts.customer_id, <span style="color:#66d9ef">SUM</span>(transfer_outs.amount) <span style="color:#66d9ef">AS</span> amount 
+</span></span><span style="display:flex;"><span>              <span style="color:#66d9ef">FROM</span>
+</span></span><span style="display:flex;"><span>                d_time 
+</span></span><span style="display:flex;"><span>                <span style="color:#66d9ef">INNER</span> <span style="color:#66d9ef">JOIN</span>
+</span></span><span style="display:flex;"><span>                  transfer_outs 
+</span></span><span style="display:flex;"><span>                  <span style="color:#66d9ef">ON</span> transfer_outs.transaction_completed_at <span style="color:#f92672">=</span> d_time.time_id 
+</span></span><span style="display:flex;"><span>                <span style="color:#66d9ef">LEFT</span> <span style="color:#66d9ef">JOIN</span>
+</span></span><span style="display:flex;"><span>                  d_month <span style="color:#66d9ef">USING</span>(month_id) 
+</span></span><span style="display:flex;"><span>                <span style="color:#66d9ef">LEFT</span> <span style="color:#66d9ef">JOIN</span>
+</span></span><span style="display:flex;"><span>                  accounts <span style="color:#66d9ef">USING</span>(account_id) 
+</span></span><span style="display:flex;"><span>              <span style="color:#66d9ef">WHERE</span>
+</span></span><span style="display:flex;"><span>                transfer_outs.status <span style="color:#f92672">=</span> <span style="color:#e6db74">&#39;completed&#39;</span> 
+</span></span><span style="display:flex;"><span>              <span style="color:#66d9ef">GROUP</span> <span style="color:#66d9ef">BY</span>
+</span></span><span style="display:flex;"><span>                d_month.action_month, accounts.customer_id ) 
+</span></span><span style="display:flex;"><span>              <span style="color:#66d9ef">UNION</span> <span style="color:#66d9ef">ALL</span>
+</span></span><span style="display:flex;"><span>              <span style="color:#66d9ef">SELECT</span>
+</span></span><span style="display:flex;"><span>                <span style="color:#f92672">*</span> 
+</span></span><span style="display:flex;"><span>              <span style="color:#66d9ef">FROM</span>
+</span></span><span style="display:flex;"><span>                <span style="color:#75715e">-- pix withdrawal subquery
+</span></span></span><span style="display:flex;"><span><span style="color:#75715e"></span>( 
+</span></span><span style="display:flex;"><span>                <span style="color:#66d9ef">SELECT</span>
+</span></span><span style="display:flex;"><span>                  d_month.action_month, accounts.customer_id, <span style="color:#66d9ef">SUM</span>(pix_movements.pix_amount) <span style="color:#66d9ef">AS</span> amount 
+</span></span><span style="display:flex;"><span>                <span style="color:#66d9ef">FROM</span>
+</span></span><span style="display:flex;"><span>                  d_time 
+</span></span><span style="display:flex;"><span>                  <span style="color:#66d9ef">INNER</span> <span style="color:#66d9ef">JOIN</span>
+</span></span><span style="display:flex;"><span>                    pix_movements 
+</span></span><span style="display:flex;"><span>                    <span style="color:#66d9ef">ON</span> pix_movements.pix_completed_at <span style="color:#f92672">=</span> d_time.time_id 
+</span></span><span style="display:flex;"><span>                  <span style="color:#66d9ef">LEFT</span> <span style="color:#66d9ef">JOIN</span>
+</span></span><span style="display:flex;"><span>                    d_month <span style="color:#66d9ef">USING</span>(month_id) 
+</span></span><span style="display:flex;"><span>                  <span style="color:#66d9ef">LEFT</span> <span style="color:#66d9ef">JOIN</span>
+</span></span><span style="display:flex;"><span>                    accounts <span style="color:#66d9ef">USING</span>(account_id) 
+</span></span><span style="display:flex;"><span>                <span style="color:#66d9ef">WHERE</span>
+</span></span><span style="display:flex;"><span>                  pix_movements.status <span style="color:#f92672">=</span> <span style="color:#e6db74">&#39;completed&#39;</span> 
+</span></span><span style="display:flex;"><span>                  <span style="color:#66d9ef">AND</span> pix_movements.in_or_out <span style="color:#f92672">=</span> <span style="color:#e6db74">&#39;pix_out&#39;</span> 
+</span></span><span style="display:flex;"><span>                <span style="color:#66d9ef">GROUP</span> <span style="color:#66d9ef">BY</span>
+</span></span><span style="display:flex;"><span>                  d_month.action_month, accounts.customer_id ) ) 
+</span></span><span style="display:flex;"><span>                <span style="color:#66d9ef">GROUP</span> <span style="color:#66d9ef">BY</span>
+</span></span><span style="display:flex;"><span>                  action_month,
+</span></span><span style="display:flex;"><span>                  customer_id 
+</span></span><span style="display:flex;"><span>        )
+</span></span><span style="display:flex;"><span>        <span style="color:#66d9ef">USING</span> (action_month, customer_id) ) a;
+</span></span></code></pre></div>
+</details></p>
+
+<h3 id="task-2-key-performance-indicators">Task 2: Key Performance Indicators</h3>
+<figure>
+    <img loading="lazy" src="https://images.unsplash.com/photo-1526628953301-3e589a6a8b74"
+         alt="computer screen with 8 rectangles filled with key indicators"/> <figcaption>
+            <p>Photo by Stephen Dawson on Unsplash</p>
+        </figcaption>
+</figure>
+
+<blockquote>
+<p>Another collegue from Bankio is interested in analysing the success of the company product <a href="#pix">PIX</a> on a business and technical level. So they asked you to come up with some key indicators to measure this.</p>
+</blockquote>
+
+
+<p><details >
+  <summary markdown="span">Mean processing time of PIX transactions <em>(click to expand)</em></summary>
+  This can be obtained using the time a customer requests a PIX transaction and when it is completed, we calculate this for all the PIX transactions then we take the mean value. PIX is supposed to be instantaneous, so this metric should be as small as possible.
+</details></p>
+
+
+
+<p><details >
+  <summary markdown="span">The proportion of PIX failures <em>(click to expand)</em></summary>
+  This indicator is important because it’s inconvenient for the client to have their transaction fail. We can calculate this by dividing the sum of failed PIX transactions by the total PIX transactions. This measure should be minimized.
+</details></p>
+
+
+
+<p><details >
+  <summary markdown="span">The proportion of transactions using PIX <em>(click to expand)</em></summary>
+  <p>PIX success can be measured by the proportion of transaction movements using PIX over normal transactions. So just count how many completed transactions using PIX were made and divide it by the total amount of completed transactions. A bigger measurement reflects PIX success over regular transactions.</p>
+<p>Alternatively instead of just counting the transactions we can evaluate how much money each transaction type is moving.</p>
+
+</details></p>
+
+
+
+<p><details >
+  <summary markdown="span">The proportion of in/out of PIX <em>(click to expand)</em></summary>
+  <p>This measure is good to analyze if customers are using their PIX to receive more money or to send money. It would be better if more customers are receiving more money than they are sending. Because Bankio already had free transactions for any bank, before PIX came around, others still had to pay fees to send money to your Bankio account. For this reason, it is better to count how many transactions are coming in through PIX and divide it by all PIX transactions. The higher the better.</p>
+<p>In this case we could also sum the balance of deposit and withdrawals from the Bankio account using PIX and compare it with regular transactions.</p>
+
+</details></p>
+
+<h3 id="task-3-daily-investment-return">Task 3: Daily Investment Return</h3>
+<blockquote>
+<p>Bankio has a customer banking account that allows you to invest on a fixed rate income product. Consider that this product provides customers with a daily return of 0.01% according to their daily invested balance amount. Calculate how much each customer has on their bankio account during the year 2020.</p>
+</blockquote>
+<p>This return is calculated daily after all withdrawals and/or deposits made on a given day. And every day, even weekends, generate some return.</p>
+<p>The following example describes customer A who begins investing in this fixed income product on day 16 of the first month. The prior balance was zero since this consumer is making a first-time deposit into the investment. His initial deposit was 1,000, and at the end of the day, it produced a daily income rate of 0.01% of his balance. The same product is still being consumed by this client at different times throughout the month. Remember that this is just a dummy sample of the transaction log with daily calculations applied. Note that the income for that day should be set to zero in the event of negative Movements.</p>
+<table>
+<thead>
+<tr>
+<th>Day</th>
+<th>Month</th>
+<th>Account ID</th>
+<th>Deposit</th>
+<th>Withdrawal</th>
+<th>End of Day Income</th>
+<th>Account Daily Balance</th>
+</tr>
+</thead>
+<tbody>
+<tr>
+<td>16</td>
+<td>1</td>
+<td>A</td>
+<td>1000</td>
+<td>0</td>
+<td>0.1</td>
+<td>1000.10</td>
+</tr>
+<tr>
+<td>20</td>
+<td>1</td>
+<td>A</td>
+<td>500</td>
+<td>0</td>
+<td>0.15</td>
+<td>1500.55</td>
+</tr>
+<tr>
+<td>2</td>
+<td>2</td>
+<td>A</td>
+<td>0</td>
+<td>200</td>
+<td>0.13</td>
+<td>1302.48</td>
+</tr>
+<tr>
+<td>19</td>
+<td>2</td>
+<td>A</td>
+<td>1000</td>
+<td>200</td>
+<td>0.21</td>
+<td>2104.78</td>
+</tr>
+</tbody>
+</table>
+<p><em>Movements = Previous Day Balance + Deposit - Withdrawal</em></p>
+<p><em>End of Day Income = Movements * Income Rate</em></p>
+<p><em>Account Daily Balance = Movements + End of Day Income</em></p>
+<script type="application/javascript" src="https://gist.github.com/devmedeiros/2a52cf2c4431a1993a98bf7f36d0f412.js?file=bankio-task-3.ipynb"></script>
+
+<hr>
+<h2 id="glossary">Glossary</h2>
+<h4 id="account-monthly-balance">Account Monthly Balance</h4>
+<p>It is the amount of money a customer had in their account at the end of a given month.</p>
+<h4 id="account-info-branch-number-and-check-digit">Account info (branch, number and check-digit)</h4>
+<p>In Brazil, a bank account can be uniquely identifiable by three numbers. The <strong>branch</strong> code, which indicates which bank branch the accounts were opened in, comes first. The second is the <strong>account number</strong> that a branch uses to identify accounts. The <strong>check-digit</strong>, which is only used for error detection, is the last.</p>
+<h4 id="cpf">CPF</h4>
+<p>It is the Brazilian individual taxpayer registry identification.</p>
+<h4 id="pix">PIX</h4>
+<p>In Brazil, this is the most recent method of money transmission. It&rsquo;s unpaid. It is immediate, and all that is required to complete a transaction is the Pix-Key associated with the account.</p>
+<h4 id="non-pix-transfers">Non PIX transfers</h4>
+<p>These are the conventional methods for transferring money between bank accounts. This type of transaction requires the CPF, the branch code, the account number, and the check digit of the account that will receive the funds to be provided. Most banks charge a fee in these transactions, and the confirmation of the transaction typically takes several hours to days.</p>
+]]></content:encoded>
     </item>
     
   </channel>

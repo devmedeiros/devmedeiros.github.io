@@ -18,6 +18,33 @@
       
       <guid>https://devmedeiros.com/post/choose-the-best-graph/</guid>
       <description>Choosing the best graph or plot can be a hard task, but it doesn&amp;rsquo;t need to be.</description>
+      <content:encoded><![CDATA[<p>Learning how to make better visualizations come with study and practice, today I want to talk about sources you can use to guide you into making better graphs and other data visualizations in general.</p>
+<h2 id="from-data-to-viz">From Data to Viz</h2>
+<p><img loading="lazy" src="https://i.imgur.com/416qeWj.png" alt="infograph showing different possibilities for choosing a plot"  />
+</p>
+<p><a href="https://www.data-to-viz.com/">From Data to Viz</a> brings a lot of tools to help navigate the data visualization world. In the website <code>Explore</code> tab you are faced with an interactive infographic that helps you pick a plot, you can choose between: <code>numeric</code>, <code>categoric</code>, <code>numeric&amp;categoric</code>, <code>maps</code>, <code>network</code>, and <code>time series</code>. But it doesn&rsquo;t only show plots that would be good for your type of data, it also shows a description explaining the plot and common mistakes people make when using that specific plot.</p>
+<p>At the end of each branch from the infographic, there is also a <code>story</code> link, where you can read about an implementation of that type of plot using real-world data.</p>
+<p>And in the case, you are just starting and don&rsquo;t know many terms or are unsure if your data contains <code>too many</code> or <code>few</code> points when you rest your mouse over the options nodes you&rsquo;ll be able to see a description with an example table representing what that means.</p>
+<p>By heading to the <code>Caveats</code> tab you&rsquo;re able to see a collection of caveats, you can filter them by:</p>
+<ul>
+<li>
+<p><strong>Improvement:</strong> all caveats that will suggest some sort of improvement on plots.</p>
+</li>
+<li>
+<p><strong>Misleading:</strong> some plots may be misleading by omitting some information, may it be sample size or how proportionally different two categories are. By reading this you&rsquo;ll be able to spot bad practices that lead to confusion or manipulation.</p>
+</li>
+</ul>
+<p>This website also provides links to <strong>Python</strong> and <strong>R</strong> galleries where you can get code snippets to reproduce these plots.</p>
+<p>If you prefer to learn by looking at what not to do, you should check out <a href="https://viz.wtf/">WTF Visualizations</a>. It showcases bad visualizations that don&rsquo;t make sense or are somehow misleading.</p>
+<p>There you&rsquo;ll find several pie plots that don&rsquo;t add up to 100%, area graphs where the numbers don&rsquo;t match the area, and just straight-up manipulation like the example below.</p>
+<figure class="align-center ">
+    <img loading="lazy" src="https://64.media.tumblr.com/d8bcf748d564125312aeba4001b96df5/tumblr_qzg4n3nfJY1sgh0voo1_640.jpg#center"
+         alt="a donut graph showing &#39;yes&#39; as a majority while it represents 10%, and &#39;no&#39; as a minority while it represents 90%"/> <figcaption>
+            <p>piechart from <a href="https://viz.wtf/">WTF Visualizations</a></p>
+        </figcaption>
+</figure>
+
+]]></content:encoded>
     </item>
     
     <item>
@@ -27,6 +54,408 @@
       
       <guid>https://devmedeiros.com/post/alura-challenge-bi-2/</guid>
       <description>Alura hosted a four-week Challenge BI, where participants needed to make 3 dashboards</description>
+      <content:encoded><![CDATA[<p>The Alura Challenge BI 2 was a four-week event where we&rsquo;re challenged to make <em>Business Intelligence</em> dashboards according to the request of three made-up companies. During the event I made this three dashboard using Power BI, you can look at the source file of all dashboards at my <a href="https://github.com/devmedeiros/Alura-Challenge-BI-2">repo</a>.</p>
+<br />
+<style>
+	nav {
+		display: block;
+	}
+
+	.nav {
+		display: -ms-flexbox;
+		display: ruby;
+		-ms-flex-wrap: wrap;
+		flex-wrap: wrap;
+		padding-left: 0;
+		margin-bottom: 1em;
+		list-style: none;
+	}
+
+	.nav-tabs .nav-item {
+		margin-bottom: 0;
+	}
+
+	.nav-tabs .nav-link {
+		border: solid #e9ecef;
+		border-top-left-radius: 0.25rem;
+		border-top-right-radius: 0.25rem;
+	}
+
+	.nav-tabs .nav-link:focus,
+	.nav-tabs .nav-link:hover {
+		border-color: #e9ecef #e9ecef #dee2e6;
+	}
+
+	.nav-tabs .nav-link.disabled {
+		color: #6c757d;
+		background-color: transparent;
+		border-color: transparent;
+	}
+
+	.nav-tabs .nav-item.show .nav-link,
+	.nav-tabs .nav-link.active {
+		color: #495057;
+		background-color: #fff;
+		border-color: #dee2e6 #dee2e6 #fff;
+	}
+
+	.nav-fill .nav-item {
+		-ms-flex: 1 1 auto;
+		flex: 1 1 auto;
+		text-align: center;
+	}
+
+	.nav-tabs .dropdown-menu {
+		margin-top: -1px;
+		border-top-left-radius: 0;
+		border-top-right-radius: 0;
+	}
+
+	.nav-justified .nav-item {
+		-ms-flex-preferred-size: 0;
+		flex-basis: 0;
+		-ms-flex-positive: 1;
+		flex-grow: 1;
+		text-align: center;
+	}
+
+	.nav-link {
+		display: block;
+		padding: 0.5rem 1rem;
+	}
+
+	.nav-link:focus,
+	.nav-link:hover {
+		text-decoration: none;
+	}
+
+	.nav-link.disabled {
+		color: #6c757d;
+		pointer-events: none;
+		cursor: default;
+	}
+
+	.nav-tabs .nav-link {
+		border: 1px solid #e9ecef;
+		border-top-left-radius: 0.25rem;
+		border-top-right-radius: 0.25rem;
+	}
+
+	.nav-tabs .nav-link:focus,
+	.nav-tabs .nav-link:hover {
+		border-color: #e9ecef #e9ecef #dee2e6;
+	}
+
+	.nav-tabs .nav-link.disabled {
+		color: #6c757d;
+		background-color: transparent;
+		border-color: transparent;
+	}
+
+	.nav-tabs .nav-item.show .nav-link,
+	.nav-tabs .nav-link.active {
+		color: black;
+		background-color: #F5F5F5;
+		border-color: #dee2e6 #dee2e6 #fff;
+	}
+
+	.nav-pills .nav-link {
+		border-radius: 0.25rem;
+	}
+
+	.nav-pills .nav-link.active,
+	.nav-pills .show>.nav-link {
+		color: #fff;
+		background-color: #007bff;
+	}
+
+	.navbar-nav .nav-link {
+		padding-right: 0;
+		padding-left: 0;
+	}
+
+	.navbar-expand .navbar-nav .nav-link {
+		padding-right: 0.5rem;
+		padding-left: 0.5rem;
+	}
+
+	.navbar-light .navbar-nav .nav-link {
+		color: rgba(0, 0, 0, 0.5);
+	}
+
+	.navbar-light .navbar-nav .nav-link:focus,
+	.navbar-light .navbar-nav .nav-link:hover {
+		color: rgba(0, 0, 0, 0.7);
+	}
+
+	.navbar-light .navbar-nav .nav-link.disabled {
+		color: rgba(0, 0, 0, 0.3);
+	}
+
+	.navbar-light .navbar-nav .active>.nav-link,
+	.navbar-light .navbar-nav .nav-link.active,
+	.navbar-light .navbar-nav .nav-link.show,
+	.navbar-light .navbar-nav .show>.nav-link {
+		color: rgba(0, 0, 0, 0.9);
+	}
+
+	.navbar-dark .navbar-nav .nav-link {
+		color: rgba(255, 255, 255, 0.5);
+	}
+
+	.navbar-dark .navbar-nav .nav-link:focus,
+	.navbar-dark .navbar-nav .nav-link:hover {
+		color: rgba(255, 255, 255, 0.75);
+	}
+
+	.navbar-dark .navbar-nav .nav-link.disabled {
+		color: rgba(255, 255, 255, 0.25);
+	}
+
+	.navbar-dark .navbar-nav .active>.nav-link,
+	.navbar-dark .navbar-nav .nav-link.active,
+	.navbar-dark .navbar-nav .nav-link.show,
+	.navbar-dark .navbar-nav .show>.nav-link {
+		color: #fff;
+	}
+</style>
+
+<nav>
+	<div class="nav nav-tabs" id="nav-tab" role="tablist">
+
+		
+		
+		
+		
+
+		
+
+		<a class="nav-item nav-link  active "
+		   id="nav-fbedac" data-toggle="tab" href="#fbedac"
+		   role="tab" aria-controls="nav-home" aria-selected="true">Alura Films</a>
+
+		
+
+		<a class="nav-item nav-link "
+		   id="nav-dafceb" data-toggle="tab" href="#dafceb"
+		   role="tab" aria-controls="nav-home" aria-selected="true">Alura Food</a>
+
+		
+
+		<a class="nav-item nav-link "
+		   id="nav-dcbfae" data-toggle="tab" href="#dcbfae"
+		   role="tab" aria-controls="nav-home" aria-selected="true">Alura Skimó</a>
+
+		
+
+	</div>
+</nav>
+
+<div class="tab-content" id="nav-tab-content">
+
+	
+<style>
+	.tab-content>.tab-pane {
+		display: none;
+	}
+
+	.tab-content>.active {
+		display: block;
+	}
+
+	.fade {
+		transition: opacity 0.15s linear;
+	}
+	.fade:not(.show) {
+		opacity: 0;
+	  }
+	  .modal.fade .modal-dialog {
+		transition: -webkit-transform 0.3s ease-out;
+		transition: transform 0.3s ease-out;
+		transition: transform 0.3s ease-out, -webkit-transform 0.3s ease-out;
+		-webkit-transform: translate(0, -50px);
+		transform: translate(0, -50px);
+	  }
+	  .modal-backdrop.fade {
+		opacity: 0;
+	  }
+	  .carousel-fade .carousel-item {
+		opacity: 0;
+		transition-property: opacity;
+		-webkit-transform: none;
+		transform: none;
+	  }
+	  .carousel-fade .carousel-item-next.carousel-item-left,
+	  .carousel-fade .carousel-item-prev.carousel-item-right,
+	  .carousel-fade .carousel-item.active {
+		z-index: 1;
+		opacity: 1;
+	  }
+	  .carousel-fade .active.carousel-item-left,
+	  .carousel-fade .active.carousel-item-right {
+		z-index: 0;
+		opacity: 0;
+		transition: opacity 0s 0.6s;
+	  }
+</style>
+
+
+
+
+
+
+<div class="tab-pane fade show active " id="fbedac" role="tabpanel" aria-labelledby="nav-1">
+
+	
+
+<p>The objective of this dashboard is to help find the best selection for an upcoming movie.</p>
+
+<iframe title="Relatório Alura Films" width="100%" height="450" src="https://app.powerbi.com/view?r=eyJrIjoiZTllNjE2ZTQtNjdkMy00OGI4LTllNTAtM2RhNGE2YWU4YmZlIiwidCI6IjI2ZjA4NzIyLTFjOWUtNGVkZS1iN2VkLThhMmI3N2ZmM2Q5YyJ9&pageName=ReportSection11c983afd307f2fa2f9a" frameborder="0" allowFullScreen="true"></iframe>
+
+<p>With this in mind, I explored in the first tab a little summary about the movies in the database, with this you can get a general view of our data. The second tab is displayed the IMDB and Meta Score of the movies. I also created a measure to show how much both measurements agree. A score of 100 means <strong>doesn't agree at all</strong> and 0 means <strong>completely agree</strong>, the agreeable score was 9.48.</p>
+<p>Our third tab shows information about the movie stars, the top 10 actors with the highest movie gross revenue, and the top 10 actors with the biggest movie count.</p>
+<p>The fourth tab presents the distribution of gross revenue by how many different genres a movie has. It also shows how many movies have a given genre, for example, <strong>Drama</strong> is the most popular choice for movie genre, with 72% of movies in the dataset. At last, this tab also shows the mean gross revenue by genre.</p>
+<p>The fifth and last tab shows a bit of information about the Brazillian Parental Guide and shows the average Meta Score for movies by the parental guide certification. It also shows how much gross revenue, on average, each parental guide certification earned.</p>
+
+
+
+</div>
+<style>
+	.tab-content>.tab-pane {
+		display: none;
+	}
+
+	.tab-content>.active {
+		display: block;
+	}
+
+	.fade {
+		transition: opacity 0.15s linear;
+	}
+	.fade:not(.show) {
+		opacity: 0;
+	  }
+	  .modal.fade .modal-dialog {
+		transition: -webkit-transform 0.3s ease-out;
+		transition: transform 0.3s ease-out;
+		transition: transform 0.3s ease-out, -webkit-transform 0.3s ease-out;
+		-webkit-transform: translate(0, -50px);
+		transform: translate(0, -50px);
+	  }
+	  .modal-backdrop.fade {
+		opacity: 0;
+	  }
+	  .carousel-fade .carousel-item {
+		opacity: 0;
+		transition-property: opacity;
+		-webkit-transform: none;
+		transform: none;
+	  }
+	  .carousel-fade .carousel-item-next.carousel-item-left,
+	  .carousel-fade .carousel-item-prev.carousel-item-right,
+	  .carousel-fade .carousel-item.active {
+		z-index: 1;
+		opacity: 1;
+	  }
+	  .carousel-fade .active.carousel-item-left,
+	  .carousel-fade .active.carousel-item-right {
+		z-index: 0;
+		opacity: 0;
+		transition: opacity 0s 0.6s;
+	  }
+</style>
+
+
+
+
+
+
+<div class="tab-pane fade show " id="dafceb" role="tabpanel" aria-labelledby="nav-1">
+
+	
+
+<p><strong>Alura Food</strong> is interested in expanding its business by entering the Indian market. To do so, the company asked to calculate measures to help them make a better decision.</p>
+
+<iframe title="Relatório Alura Food" width="100%" height="450" src="https://app.powerbi.com/view?r=eyJrIjoiNGEzMTQzMGYtNzFhNC00YjcyLThiMDMtMGE2YTMzMDRhODFiIiwidCI6IjI2ZjA4NzIyLTFjOWUtNGVkZS1iN2VkLThhMmI3N2ZmM2Q5YyJ9&pageName=ReportSection" frameborder="0" allowFullScreen="true"></iframe>
+
+<p>First of all, I merged the datasets and cleaned the data through Power BI, translated a few texts from English to Portuguese through Google Sheets, and converted the meals price from their respective currency value to BRL (Brazillian Currency). Finally, I used Figma to make the background, including images and titles.</p>
+<p>In this project, I opted to used a single page to display all the requested information as I believe it makes it easier to analyze the data.</p>
+<p>Most restaurants in this Indian market don't offer online delivery, with just 19.21% having it. The average rating for the restaurants is 3.72 out of a maximum of 5, the rating is also presented as text, with a <em>Muito Bom</em> (Very Good) being a score over 4.</p>
+<p>The average price of a meal per person is around R$ 39.48 (around USD 7.65). And there are 9577 different restaurants in the dataset, of which 3968, specialize in North Indian cuisine. New Delhi is, by far, the most popular choice to open a restaurant with 5473, the second closest city is Gurgaon, with 1118 restaurants.</p>
+
+
+
+</div>
+<style>
+	.tab-content>.tab-pane {
+		display: none;
+	}
+
+	.tab-content>.active {
+		display: block;
+	}
+
+	.fade {
+		transition: opacity 0.15s linear;
+	}
+	.fade:not(.show) {
+		opacity: 0;
+	  }
+	  .modal.fade .modal-dialog {
+		transition: -webkit-transform 0.3s ease-out;
+		transition: transform 0.3s ease-out;
+		transition: transform 0.3s ease-out, -webkit-transform 0.3s ease-out;
+		-webkit-transform: translate(0, -50px);
+		transform: translate(0, -50px);
+	  }
+	  .modal-backdrop.fade {
+		opacity: 0;
+	  }
+	  .carousel-fade .carousel-item {
+		opacity: 0;
+		transition-property: opacity;
+		-webkit-transform: none;
+		transform: none;
+	  }
+	  .carousel-fade .carousel-item-next.carousel-item-left,
+	  .carousel-fade .carousel-item-prev.carousel-item-right,
+	  .carousel-fade .carousel-item.active {
+		z-index: 1;
+		opacity: 1;
+	  }
+	  .carousel-fade .active.carousel-item-left,
+	  .carousel-fade .active.carousel-item-right {
+		z-index: 0;
+		opacity: 0;
+		transition: opacity 0s 0.6s;
+	  }
+</style>
+
+
+
+
+
+
+<div class="tab-pane fade show " id="dcbfae" role="tabpanel" aria-labelledby="nav-1">
+
+	
+
+<p><strong>Alura Skimo</strong> is interested in analyzing their sales data, to help with this I made this dashboard.</p>
+
+<iframe title="Relatório Alura Skimo" width="100%" height="450" src="https://app.powerbi.com/view?r=eyJrIjoiNTllYjJmODItYzQxNC00ZmEzLTk5ZGMtZDgzNzY2NDM2ZGMxIiwidCI6IjI2ZjA4NzIyLTFjOWUtNGVkZS1iN2VkLThhMmI3N2ZmM2Q5YyJ9" frameborder="0" allowFullScreen="true"></iframe>
+
+<p>It’s composed of three pages. The first one presents a summary of all the main measures you’ll find in the dashboard, filtered for the most recent month. On this first page, you can also rest your mouse cursor over a measure and it’ll show a small plot with the historical series with a tendency line.</p>
+<p>Moving on to the next page, you can see all the information about the products sold by <strong>Alura Skimo</strong>. You can filter the data by ice cream flavor, type of package, category, and product cost. It displayed the basic information about the products, along with a rank of the best-selling products and a couple of plots showing the sales by flavor and sales by category.</p>
+<p>On the last page, you can find information about the salesperson from our company. It shows when they joined the company, how much is their cut, how much revenue they got and how many sales each one made, everything in the last year (2018).</p>
+<p>This dashboard is complex next to the other two because our dataset came from SQL files. First, I had to create the database and load each SQL file into it, then all I had to do was load it on Power BI. At last, I did all the data cleaning and processing on it.</p>
+
+
+
+</div>
+
+
+</div>
+]]></content:encoded>
     </item>
     
     <item>
@@ -36,6 +465,78 @@
       
       <guid>https://devmedeiros.com/post/2022-04-29-ux-power-bi-dashboards/</guid>
       <description>Defining UX/UI in the context of Bussiness Intelligence for Dashboards with examples</description>
+      <content:encoded><![CDATA[<h2 id="what-is-uxui">What is UX/UI?</h2>
+<p>UX is the acronym for User Experience, it is a recent concept about making design decisions while thinking about the user experience. The UX designer needs to be concerned about whether their product is easy to use and intuitive, making changes to it whenever necessary to suit the user&rsquo;s needs.</p>
+<p>UI stands for User Interface. It is everything involved in the interaction of the user and the product. The UI designer is responsible for developing interfaces, not only limited to the visual aspects but also ensuring that the interfaces are functional and usable and generally contribute to a good user experience.</p>
+<h2 id="how-to-improve-the-experience-of-bi-dashboards">How to Improve the Experience of BI Dashboards?</h2>
+<p>Many people see BI dashboards as web pages. This comes with some expectations. For example, most sites that have some navigation system use a top menu with buttons, a side menu (most common in Brazil being on the left, but in some countries, it is on the right), or a hamburger menu (the one we click on it and the options appear).</p>
+<figure>
+    <img loading="lazy" src="https://ik.imagekit.io/devmedeiros/site_layout_C0BWt0-Rh.png?ik-sdk-version=javascript-1.4.3&amp;updatedAt=1651180441785"
+         alt="Image with three website layouts, the first with a top navigation bar, the second with a left-side menu and the third with a sandwich menu"/> <figcaption>
+            <p>Jaqueline Medeiros - All rights reserved</p>
+        </figcaption>
+</figure>
+
+<p>With this, a majority of people who use the dashboards expect to find navigation buttons and data segmentation (filter) in these places, in addition to other information such as logo and title.</p>
+<h3 id="data-segmentation">Data Segmentation</h3>
+<p>Also commonly called a data filter, it is a fundamental part of several dashboards, its positioning needs to be defined carefully, because if it is in a place that the user does not expect, it can prevent your dashboard from being used efficiently, in addition to maintaining a visual standard for everyone its filters help people more easily recognize what is and isn&rsquo;t a filter.</p>
+<figure>
+    <img loading="lazy" src="https://ik.imagekit.io/devmedeiros/base_7_vbzsb9L.png?ik-sdk-version=javascript-1.4.3&amp;updatedAt=1651183332760"
+         alt="Image with six filters, distributed in two columns, each one with three. One filter is for a city, the other is for a restaurant and the last one is for reservations? The only difference between them is the design, on the left they are consistent and on the right, each one has a unique design."/> 
+</figure>
+
+<p>You can and should use and experiment with different themes in your projects. What matters, when making it easier for users, is consistency, pick a model for your filters with the desired colors and all the graphic specifications that are of interest to you and use it in all filters, as this will help people quickly find it and recognize that it&rsquo;s a filter.</p>
+<p><img loading="lazy" src="https://ik.imagekit.io/devmedeiros/borracha_Xwi_TYTHB.png?ik-sdk-version=javascript-1.4.3&amp;updatedAt=1651183773246#center" alt="Three filters with, city, restaurant and accept reservation? Where the city shows an eraser next to the title and the text Clear selections"  />
+</p>
+<p>It&rsquo;s common for people when they are reading something on the computer to position the mouse pointer where they are reading. For Power BI, this makes it easier for the user to find the clear data segmentation button because when hovering the mouse over the filter name, a rubber appears on the left side where the filter name is. If you use Power BI, you probably already knew that, but we can improve this by using something that the user already knows, which is the <strong>rubber</strong>, and create a button using it as an icon and make this button clear all filters at the same time. If you want to know how to make this button <a href="https://community.powerbi.com/t5/Desktop/Clear-All-Slicers-by-one-button-in-power-bi-desktop/m-p/494518">here</a>, in the Power BI forum, explains how.</p>
+<p>This feature needs may be unnoticed at first. Regularly dashboard users don&rsquo;t realize which filters they have used or they use so many that they just want to be able to clear the selection faster and more efficiently, so this button makes the process easier.</p>
+<h3 id="page-navigation">Page Navigation</h3>
+<p>Power BI&rsquo;s native page navigation is not intuitive for most people and you may want to direct the navigation in a specific flow that facilitates understanding and contributes to the intended storytelling. In this case, we have the option to hide all the report tabs, except for the opening/home page. But what&rsquo;s the best way to direct the user to the other pages? Suppose your report is simple, you have an overview tab and another tab with a breakdown, a simple button would solve your problem, but if your report is extensive it may be unfeasible to put a button for each tab on all pages.</p>
+<figure>
+    <img loading="lazy" src="https://ik.imagekit.io/devmedeiros/infografico_kQJe_yhQD.png?ik-sdk-version=javascript-1.4.3&amp;updatedAt=1651241421864"
+         alt="A circle with four rectangles around it, a line connects the rectangles to the circle" width="100%"/> <figcaption>
+            <p>Jaqueline Medeiros - All rights reserved</p>
+        </figcaption>
+</figure>
+
+<p>In this case, it might be interesting to consider having a home page that leads to all the other pages and placing a <code>home</code> or <code>back</code> button on them.</p>
+<h2 id="how-to-improve-dashboards-interface">How to Improve Dashboards Interface?</h2>
+<h3 id="prototyping-programs">Prototyping Programs</h3>
+<p>Using a specific program to prototype your dashboard allows for greater artistic freedom compared to what Business Intelligence applications typically provide. Figma is a great tool for this, you can create advanced backgrounds and prototypes with amazing quality to use in your BI dashboards.</p>
+<p>Here&rsquo;s an example of a dashboard I made a few months ago:</p>
+<figure>
+    <img loading="lazy" src="https://raw.githubusercontent.com/devmedeiros/Alura-Challenge-BI-2/main/Alura%20Food/alura%20food%20resume.png"
+         alt="In the picture you can read the text: Overview of Indian Restaurants Market Dev_Medeiros City Restaurant Accepts Reservations? 19.21 % Restaurants with Online Delivery Average Rating 3.72 R$ 39.48 Average Price per Person 9577 Total Restaurants 5 Most Popular Cities Restaurants 5 Most Popular Cuisine"/> <figcaption>
+            Panel with data
+        </figcaption>
+</figure>
+
+<p>The background of this panel was done completely in Figma, even some of the titles of the BI visuals.</p>
+<figure>
+    <img loading="lazy" src="https://raw.githubusercontent.com/devmedeiros/Alura-Challenge-BI-2/main/Alura%20Food/Alura%20Food.png"
+         alt=" In the image you can read the text: Overview of Indian Restaurants Market Dev_Medeiros City Restaurant Accepts Reservations? % of Restaurants with Online Delivery Average Rating Average Price per Person Total Restaurants 5 Cities with the most Restaurants 5 Most Popular Cuisine"/> <figcaption>
+            Background made in Figma
+        </figcaption>
+</figure>
+
+<p>You can check out more <a href="/post/alura-challenge-bi-2">Power BI Dashboards</a> I made for Alura Challenge BI.</p>
+<h3 id="figures-and-icons">Figures and Icons</h3>
+<figure class="align-center ">
+    <img loading="lazy" src="https://img.freepik.com/vetores-gratis/employees-dando-as-maos-e-ajudando-os-colegas-a-cliir-as-escadas_74855-5236.jpg?w%20=1380&amp;t=st=1651239796~exp=1651240396~hmac=1b2ab902322bbf8ce26e3bc83f602e69075fcc2e18f0afdc91a328c7942ba746#center"
+         alt="Vector created by pch.vector - br.freepik.com"/> <figcaption>
+            <p>Vector created by pch.vector - br.freepik.com</p>
+        </figcaption>
+</figure>
+
+<p>Figures and icons when used correctly help make the panel stand out, and make it more eye-catching and beautiful. There are several ways to get images, if you or your team can&rsquo;t create them yourself there is the option of using online platforms that provide vectorized images. On these platforms, there are free options, which require some type of attribution, and premium (paid) options, which often do not need to attribute the author and have a higher quality.</p>
+<figure class="align-center ">
+    <img loading="lazy" src="https://img.icons8.com/dusk/344/cash-register.png#center"
+         alt="Cash register icon"/> <figcaption>
+            <p>ICONS8 icon</p>
+        </figcaption>
+</figure>
+
+]]></content:encoded>
     </item>
     
   </channel>

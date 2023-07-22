@@ -18,6 +18,35 @@
       
       <guid>https://devmedeiros.com/post/unlocking-machine-learning/</guid>
       <description>Find out if the use of machine learning is essential in all business cases. Evaluate benefits and limitations.</description>
+      <content:encoded><![CDATA[<p>In the increasingly data-driven business world, machine learning has gained prominence as a powerful tool to drive business success. However, a crucial question arises: is machine learning really necessary in all cases? In this post, we&rsquo;ll delve into that discussion, exploring the applications, benefits, and limitations of machine learning. In addition, we will provide useful criteria to help you decide whether this approach is essential for your business.</p>
+<h2 id="what-is-machine-learning">What is Machine Learning?</h2>
+<p>Machine Learning (ML) is a term used to describe algorithms that can be modeled to predict or explain something. You can make <em>machine learning models</em> that can predict monthly sales, customer churn, recommendation systems, etc.</p>
+<p>To make these models you&rsquo;ll need a lot of data, but not only that. You&rsquo;ll need good data, unbiased and clean.</p>
+<p>These models can be written in many different programming languages, the most popular ones are <strong>Python</strong> and <strong>R</strong>, but you could also use <strong>Julia</strong>, <strong>Scala</strong>, <strong>GO</strong>, and many others.</p>
+<h2 id="machine-learning-cases">Machine Learning Cases</h2>
+<h3 id="recommendation-systems">Recommendation Systems</h3>
+<p>If you ever wonder how your favorite streaming service always has a new song or show recommended to you, this is thanks to recommendation systems. They have many different algorithms to guess what a user would like.</p>
+<p>One of these algorithms creates clusters of similar users and uses things the other users enjoy to recommend to you. A simpler approach would just recommend the most popular items.</p>
+<h3 id="customer-churn">Customer Churn</h3>
+<p>This kind of model is really popular amongst companies like internet providers and banks. These models look at customer behavior when interacting with the company to try to identify what causes a customer to <em>give up</em> working with them.</p>
+<p>Is useful to find problems in a company regarding customer experience and the quality of the services provided.</p>
+<h2 id="the-benefits-of-machine-learning">The benefits of Machine Learning</h2>
+<p>With Machine Learning companies can make informed decisions about their business. For example, a restaurant can predict how many meals are going to be ordered weekly and then buy enough ingredients to avoid wasting food; or a company can calculate how likely a certain customer is to churn and then offer discounts or better deals to try to keep the customer.</p>
+<p>These processes can be automated and - <em>if the model is well built</em> - it&rsquo;ll only get better with time, increasing the accuracy and overall efficiency.</p>
+<h2 id="limitations">Limitations</h2>
+<p>Even though Machine Learning is incredible and sometimes looks like it came out of a sci-fi movie, it&rsquo;s not a solution that fits all. Some business problems don&rsquo;t have enough quality data to build a model, and even when you do have it, the computing power and expertise needed make it an expensive tool.</p>
+<p>Sometimes you can achieve a close result to an ML model by just taking a moving average, it&rsquo;s not perfect, but when you take into consideration the investment and the return of both approaches, it may make more sense to choose the cheaper option first, before moving into more complex models.</p>
+<h2 id="how-to-decide-if-machine-learning-is-needed">How to decide if Machine Learning is Needed</h2>
+<p>Before deciding if an ML model is necessary check if you already accomplished the following things:</p>
+<ul>
+<li>you have a quality data pipeline</li>
+<li>your company is data-driven</li>
+<li>you have the budget to invest in a data science team or to hire a company to do it</li>
+<li>your problem can be solved with ML</li>
+<li>have you already tested/tried simpler options available</li>
+</ul>
+<p>These aren&rsquo;t rules written in stone, just something that I think is important to keep in mind before choosing to invest in Machine Learning. You don&rsquo;t want to spend time working on something just to give up because then you realized that ML doesn&rsquo;t fit your business needs or it doesn&rsquo;t deliver extraordinary results.</p>
+]]></content:encoded>
     </item>
     
   </channel>

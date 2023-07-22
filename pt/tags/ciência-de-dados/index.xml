@@ -18,6 +18,35 @@
       
       <guid>https://devmedeiros.com/pt/post/unlocking-machine-learning/</guid>
       <description>Descubra se o uso de aprendizado de máquina é essencial em todos os casos de negócios. Avalie os benefícios e as limitações.</description>
+      <content:encoded><![CDATA[<p>No mundo dos negócios cada vez mais orientado a dados, o aprendizado de máquina ganhou destaque como uma ferramenta poderosa para impulsionar o sucesso dos negócios. No entanto, surge uma questão crucial: o aprendizado de máquina é realmente necessário em todos os casos? Nesta postagem, vamos nos aprofundar nessa discussão, explorando as aplicações, benefícios e limitações do aprendizado de máquina. Além disso, forneceremos critérios úteis para ajudá-lo a decidir se essa abordagem é essencial para o seu negócio.</p>
+<h2 id="o-que-é-aprendizado-de-máquina">O que é Aprendizado de Máquina?</h2>
+<p>Aprendizado de máquina, do inglês <em>Machine Learning</em> (ML) é um termo usado para descrever algoritmos que podem ser modelados para prever ou explicar algo. Você pode criar <em>modelos de aprendizado de máquina</em> que podem prever vendas mensais, rotatividade de clientes (<em>churn</em>), sistemas de recomendação, entre outros.</p>
+<p>Para fazer esses modelos, você precisará de muitos dados, mas não apenas isso. Você vai precisar de bons dados, imparciais e limpos.</p>
+<p>Esses modelos podem ser escritos em várias linguagens de programação diferentes, as mais populares são <strong>Python</strong> e <strong>R</strong>, mas você também pode usar <strong>Julia</strong>, <strong>Scala</strong>, <strong>GO</strong>, e muitos outros.</p>
+<h2 id="usos-de-aprendizado-de-máquina">Usos de Aprendizado de Máquina</h2>
+<h3 id="sistemas-de-recomendação">Sistemas de Recomendação</h3>
+<p>Se você já se perguntou como seu serviço de streaming favorito semmpre tem uma nova música ou programa recomendado para você, isso se deve aos sistemas de recomendação. Eles têm muitos algoritmos diferentes para adivinhar o que um usuários gostaria.</p>
+<p>Um desses algoritmos cria clusters de usuários semelhantes e usa coisas que os outros usuários gostam e recomenda a você. Uma abordagem mais simples, recomendaria apenas os itens mais populares.</p>
+<h3 id="evasão-de-clientes">Evasão de Clientes</h3>
+<p>Esse tipo de modelo é muito popular entre empresas como provedores de internet e bancos. Esses modelos analisam o comportamento do cliente ao interagir como a empresa para tentar identificar o que faz com que um cliente <em>desista</em> de trabalhar com eles.</p>
+<p>É útil para encontrar problemas em uma empresa em relação à experiência do cliente e à qualidade dos serviços prestados.</p>
+<h2 id="os-benefícios-de-aprendizado-de-máquina">Os Benefícios de Aprendizado de Máquina</h2>
+<p>Com Aprendizado de máquina, as empresas podem tomar decisões embasadas sobre seus negócios. Por exemplo, um restaurante pode prever quantas refeições serão encomendadas semanalmente e então comprar ingredientes suficientes para evitar o desperdício de comida; ou uma empresa pode calcular a probabilidade de abandono (churn) de um determinado cliente e então oferecer descontos ou melhoria nos serviços para tentar manter o cliente.</p>
+<p>Esses processos podem ser automatizados e - <em>se o modelo for bem construído</em> - só melhorará com o tempo, aumentando a precisão e a eficiência em geral.</p>
+<h2 id="limitações">Limitações</h2>
+<p>Embora Aprendizado de Máquina seja incrível e às vezes pareça ter saído de um filme de ficção científica, não é uma solução que sirva para todos. Alguns problemas de negócios não possuem dados de qualidade suficientes para construir um modelo e, mesmo quando você os possui, o poder de computação e o conhecimento necessário tornam-no uma ferramenta cara.</p>
+<p>Às vezes você pode chegar a um resultado próximo a um modelo de ML apenas pegando uma média móvel, não é perfeito, mas quando você leva em consideração o investimento e o retorno de ambas as abordagens, pode fazer mais sentido escolher a opção mais barata primeiro, antes de seguir para modelos mais complexos.</p>
+<h2 id="como-se-decidir-se-aprendizado-de-máquina-é-necessário">Como se Decidir se Aprendizado de Máquina é Necessário?</h2>
+<p>Antes de decidir se um modelo de ML é necessário, verifique se você já realizou o seguinte:</p>
+<ul>
+<li>você possui um pipeline de dados de qualidade</li>
+<li>sua empresa é orientada por dados</li>
+<li>você tem orçamento para investir em uma equipe de ciência de dados ou contratar uma empresa para fazer isso</li>
+<li>seu problema pode ser resolvido com ML</li>
+<li>você já testou/experimentou outras opções mais simples</li>
+</ul>
+<p>Essas não são regras escritas em pedra, apenas algo que acho importante ter em mente antes de optar por investir em Aprendizado de Máquina. Você não quer perder tempo trabalhando em algo apenas para desistir porque percebeu que o ML não atende às necessidades do seu negócio ou não oferece resultados extraordinários.</p>
+]]></content:encoded>
     </item>
     
     <item>
@@ -27,6 +56,33 @@
       
       <guid>https://devmedeiros.com/pt/post/credit-score-classification-app/</guid>
       <description>Usando o Streamlit para fazer um aplicativo da web que classifica sua pontuação de crédito usando Python</description>
+      <content:encoded><![CDATA[<h2 id="visão-geral-do-projeto">Visão Geral do Projeto</h2>
+<p>Este projeto mostra um ciclo de vida de ciência de dados, onde eu limpo e preparo o banco de dados, <em>feature engineering</em>, aprendizado de máquina, <em>deploy</em> e visualização de dados.</p>
+<p><img loading="lazy" src="https://ik.imagekit.io/devmedeiros/data-science-cycle_QZwyHaXsP.png?ik-sdk-version=javascript-1.4.3&amp;updatedAt=1659975338736#center" alt="ciclo de ciência de dados deste projeto em um diagrama"  />
+</p>
+<p>O conjunto de dados vem do <a href="https://www.kaggle.com/datasets/parisrohan/credit-score-classification?select=train.csv">kaggle</a>, e possui muitas informações sobre o crédito e os dados bancários de uma pessoa, mas ele também tem muitos erros de digitação, dados ausentes e dados censurados. Este conjunto de dados precisava ser limpo e também precisava de <em>feature engineering</em>, eu precisava alterar algumas <em>features</em>, para que pudessem ser lidos pelo modelo. Assim, quando apresentada com dados categóricos, eu precisava identificar se era ordinal ou nominal, se fosse uma variável ordinal, seria mapeada para números sequenciais, caso contrário, eu faria uma <em>dummy</em>. Para as variáveis ​​_sim_ e <em>não</em> eu escolhi fazer apenas uma <em>dummy</em>, mas para os tipos de empréstimos fiz uma <em>dummy</em> para cada tipo de empréstimo e se alguém não tiver um empréstimo, simplesmente obtém 0 em todos as <em>features</em> de tipo de empréstimo. Eu falo sobre o processo de limpeza e <em>feature engeeniring</em> neste conjunto de dados <a href="/pt/post/data-cleaning-credit-score/">aqui</a>.</p>
+<p>Então eu precisava de um modelo de ML que pudesse prever o score de crédito de uma pessoa com base em algumas <em>features</em>. Para decidir quais <em>features</em> eu iria usar eu analisei quais variáveis são usadas em empresas reais, e eu também escolhi variáveis que eu achei que faziam sentido. Eu acabei escolhendo as seguintes variáveis:</p>
+<ul>
+<li>Idade</li>
+<li>Renda anual</li>
+<li>Quantidade de contas bancárias</li>
+<li>Quantidade de cartões de crédito</li>
+<li>Quantidade de pagamentos atrasados</li>
+<li>Proporção de uso do cartão de crédito</li>
+<li>Quantidade de pagamento de empréstimos</li>
+<li>Idade do histórico de crédito em meses</li>
+<li>Empréstimos</li>
+<li>Perdeu algum pagamento nos últimos 12 meses</li>
+<li>Pagou o valor mínimo em pelo menos um cartão de crédito</li>
+</ul>
+<p>Com as <em>features</em> prontas, eu comecei a trabalhar no modelo, por enquanto eu decidi usar um modelo simples de Floresta Aleatória (Random Forest), eu pretendo melhorar esse modelo, mas nesse primeiro momento eu foquei eu fazer o app do streamlit.</p>
+<p>Depois que terminei o modelo eu serializei ele e o <em>scaler</em> usando o pacote <code>pickle</code>. Para fazer o <em>deploy</em> do modelo e construir a visualização, usei o <a href="https://streamlit.io/">streamlit</a>.</p>
+<p><img loading="lazy" src="https://user-images.githubusercontent.com/33239902/183321842-be97fb04-f00b-4b62-8e6e-2b53d25335a0.gif" alt="um gif mostrando como funciona o aplicativo de score de crédito streamlit"  />
+</p>
+<p>Neste aplicativo, você pode preencher um formulário ou apenas selecionar um dos três perfis padrão fornecidos para ver como o modelo avalia a pontuação de crédito de cada pessoa. Ele também apresenta &ldquo;a certeza&rdquo; do modelo exibindo um gráfico de pizza com a probabilidade (em porcentagem) de cada grupo de score de crédito em que as respostas se encaixam. Ele também mostra o quanto cada recurso conta para sua pontuação de crédito, de acordo com esse modelo. Você pode ver o aplicativo ao vivo <a href="https://devmedeiros-credit-score-classification-appstreamlit-app-fcakrl.streamlitapp.com/">aqui</a>.</p>
+<hr>
+<p>Todo o código está disponível no meu <a href="https://github.com/devmedeiros/credit-score-classification-app">repositório</a> do GitHub. Além do código, lá você encontra a documentação, os dados originais e tratados (todas as etapas do tratamento), todos os requisitos para a construção deste projeto e como executá-lo localmente.</p>
+]]></content:encoded>
     </item>
     
     <item>
@@ -36,6 +92,61 @@
       
       <guid>https://devmedeiros.com/pt/post/2021-10-12-fakenews-sentiment/</guid>
       <description>Análise de Sentimento comparando notícias falsas e notícias reais</description>
+      <content:encoded><![CDATA[<p>Eu quero fazer uma análise de sentimentos usando o R como uma forma de aprender. Com isso em mente começamos carregando todos os pacotes que iremos utilizar.</p>
+<div class="highlight"><pre tabindex="0" style="color:#f8f8f2;background-color:#272822;-moz-tab-size:4;-o-tab-size:4;tab-size:4;"><code class="language-r" data-lang="r"><span style="display:flex;"><span><span style="color:#a6e22e">library</span>(readr)
+</span></span><span style="display:flex;"><span><span style="color:#a6e22e">library</span>(dplyr)
+</span></span><span style="display:flex;"><span><span style="color:#a6e22e">library</span>(tidytext)
+</span></span><span style="display:flex;"><span><span style="color:#a6e22e">library</span>(tokenizers)
+</span></span><span style="display:flex;"><span><span style="color:#a6e22e">library</span>(stopwords)
+</span></span><span style="display:flex;"><span><span style="color:#a6e22e">library</span>(ggplot2)
+</span></span></code></pre></div><p>Então precisamos carregar nosso banco de dados. Esses dados são do  Kaggle <a href="https://www.kaggle.com/clmentbisaillon/fake-and-real-news-dataset"><em>Fake and real news dataset</em></a>.</p>
+<div class="highlight"><pre tabindex="0" style="color:#f8f8f2;background-color:#272822;-moz-tab-size:4;-o-tab-size:4;tab-size:4;"><code class="language-r" data-lang="r"><span style="display:flex;"><span>Fake <span style="color:#f92672">&lt;-</span> <span style="color:#a6e22e">read_csv</span>(<span style="color:#e6db74">&#39;~/fakenews/Fake.csv&#39;</span>)
+</span></span><span style="display:flex;"><span>True <span style="color:#f92672">&lt;-</span> <span style="color:#a6e22e">read.csv</span>(<span style="color:#e6db74">&#39;~/fakenews/True.csv&#39;</span>)
+</span></span></code></pre></div><p>Eu quero unir ambos os dados, mas antes é preciso criar uma nova columa que irá informar de onde os dados vieram.</p>
+<div class="highlight"><pre tabindex="0" style="color:#f8f8f2;background-color:#272822;-moz-tab-size:4;-o-tab-size:4;tab-size:4;"><code class="language-r" data-lang="r"><span style="display:flex;"><span>Fake<span style="color:#f92672">$</span>news <span style="color:#f92672">&lt;-</span> <span style="color:#e6db74">&#39;fake&#39;</span>
+</span></span><span style="display:flex;"><span>True<span style="color:#f92672">$</span>news <span style="color:#f92672">&lt;-</span> <span style="color:#e6db74">&#39;real&#39;</span>
+</span></span><span style="display:flex;"><span>
+</span></span><span style="display:flex;"><span>data <span style="color:#f92672">&lt;-</span> <span style="color:#a6e22e">rbind</span>(Fake,True)
+</span></span></code></pre></div><p>Agora podemos iniciar a limpeza dos dados. Neste primeiro momento, fazemos os tokens nas variáveis <strong>title</strong> e <strong>text</strong>. Em seguida iremos remover as <em>stopwords</em> (palavras redundantes) de acordo com a fonte <em>snowball</em> do pacote <em>stopwords</em>.</p>
+<div class="highlight"><pre tabindex="0" style="color:#f8f8f2;background-color:#272822;-moz-tab-size:4;-o-tab-size:4;tab-size:4;"><code class="language-r" data-lang="r"><span style="display:flex;"><span>title <span style="color:#f92672">&lt;-</span> <span style="color:#a6e22e">tibble</span>(news <span style="color:#f92672">=</span> data<span style="color:#f92672">$</span>news, text <span style="color:#f92672">=</span> data<span style="color:#f92672">$</span>title)
+</span></span><span style="display:flex;"><span>
+</span></span><span style="display:flex;"><span>corpus <span style="color:#f92672">&lt;-</span> <span style="color:#a6e22e">tibble</span>(news <span style="color:#f92672">=</span> data<span style="color:#f92672">$</span>news, corpus <span style="color:#f92672">=</span> data<span style="color:#f92672">$</span>text)
+</span></span><span style="display:flex;"><span>
+</span></span><span style="display:flex;"><span>tidy_title <span style="color:#f92672">&lt;-</span> title <span style="color:#f92672">%&gt;%</span>
+</span></span><span style="display:flex;"><span>  <span style="color:#a6e22e">unnest_tokens</span>(word, text, token <span style="color:#f92672">=</span> <span style="color:#e6db74">&#39;words&#39;</span>) <span style="color:#f92672">%&gt;%</span>
+</span></span><span style="display:flex;"><span>  <span style="color:#a6e22e">filter</span>(<span style="color:#f92672">!</span>(word <span style="color:#f92672">%in%</span> <span style="color:#a6e22e">stopwords</span>(source <span style="color:#f92672">=</span> <span style="color:#e6db74">&#39;snowball&#39;</span>)))
+</span></span><span style="display:flex;"><span>
+</span></span><span style="display:flex;"><span>tidy_corpus <span style="color:#f92672">&lt;-</span> corpus <span style="color:#f92672">%&gt;%</span>
+</span></span><span style="display:flex;"><span>  <span style="color:#a6e22e">unnest_tokens</span>(word, corpus, token <span style="color:#f92672">=</span> <span style="color:#e6db74">&#39;words&#39;</span>) <span style="color:#f92672">%&gt;%</span>
+</span></span><span style="display:flex;"><span>  <span style="color:#a6e22e">filter</span>(<span style="color:#f92672">!</span>(word <span style="color:#f92672">%in%</span> <span style="color:#a6e22e">stopwords</span>(source <span style="color:#f92672">=</span> <span style="color:#e6db74">&#34;snowball&#34;</span>)))
+</span></span></code></pre></div><p>Com os dados limpos podemos selecionar as dez palavras mais frequentes dos títulos das noticias, separado por grupo real ou falso.</p>
+<div class="highlight"><pre tabindex="0" style="color:#f8f8f2;background-color:#272822;-moz-tab-size:4;-o-tab-size:4;tab-size:4;"><code class="language-r" data-lang="r"><span style="display:flex;"><span>p0 <span style="color:#f92672">&lt;-</span> tidy_title <span style="color:#f92672">%&gt;%</span>
+</span></span><span style="display:flex;"><span>  <span style="color:#a6e22e">group_by</span>(news, word) <span style="color:#f92672">%&gt;%</span>
+</span></span><span style="display:flex;"><span>  <span style="color:#a6e22e">summarise</span>(n <span style="color:#f92672">=</span> <span style="color:#a6e22e">n</span>()) <span style="color:#f92672">%&gt;%</span>
+</span></span><span style="display:flex;"><span>  <span style="color:#a6e22e">arrange</span>(<span style="color:#a6e22e">desc</span>(n)) <span style="color:#f92672">%&gt;%</span>
+</span></span><span style="display:flex;"><span>  <span style="color:#a6e22e">slice</span>(<span style="color:#ae81ff">1</span><span style="color:#f92672">:</span><span style="color:#ae81ff">10</span>)
+</span></span></code></pre></div><p>Títulos de notícias falsas mencionam muito mais <em>video</em> e <em>trump</em>, 8477 e 7874, respectivamente. Já no caso de títulos de notícias reais, <em>trump</em> também é uma das palavras mais mencionadas, aparecendo em primeiro com 4883 aparições, seguido por <em>u.s</em> com 4187 e <em>says</em> com 2981.</p>
+<p><img loading="lazy" src="https://ik.imagekit.io/devmedeiros/10_popular_titles_H0dG3ljPN.png?updatedAt=1634083210303" alt="10 most frequent words by fake news titles and real news"  title="Top 10 words by fake news and real news"  />
+</p>
+<p>Agora iremos preparar os dados para a análise de sentimento. Eu estou interessada em classificar os dados em sentimentos de alegria, raiva, medo ou surpresa, por exemplo. Então eu iriei utilizar o os dados de <code>nrc</code> <a href="http://saifmohammad.com/WebPages/NRC-Emotion-Lexicon.htm">Saif Mohammad and Peter Turney</a>.</p>
+<div class="highlight"><pre tabindex="0" style="color:#f8f8f2;background-color:#272822;-moz-tab-size:4;-o-tab-size:4;tab-size:4;"><code class="language-r" data-lang="r"><span style="display:flex;"><span>p1 <span style="color:#f92672">&lt;-</span> tidy_title <span style="color:#f92672">%&gt;%</span>
+</span></span><span style="display:flex;"><span>  <span style="color:#a6e22e">inner_join</span>(<span style="color:#a6e22e">get_sentiments</span>(<span style="color:#e6db74">&#39;nrc&#39;</span>)) <span style="color:#f92672">%&gt;%</span>
+</span></span><span style="display:flex;"><span>  <span style="color:#a6e22e">group_by</span>(sentiment, news) <span style="color:#f92672">%&gt;%</span>
+</span></span><span style="display:flex;"><span>  <span style="color:#a6e22e">summarise</span>(n <span style="color:#f92672">=</span> <span style="color:#a6e22e">n</span>()) <span style="color:#f92672">%&gt;%</span>
+</span></span><span style="display:flex;"><span>  <span style="color:#a6e22e">mutate</span>(prop <span style="color:#f92672">=</span> n<span style="color:#f92672">/</span><span style="color:#a6e22e">sum</span>(n))
+</span></span></code></pre></div><p><img loading="lazy" src="https://ik.imagekit.io/devmedeiros/title_sentiment_lkDe-y_p97.png?updatedAt=1634083978487" alt="sentiment from news titles"  title="Sentiment from news titles"  />
+</p>
+<p><strong>Disgust</strong> (nojo) aparenta ser o sentimento mais comum envolvendo títulos de notícias falsas, enquanto que <strong>trust</strong> (confiança) é o menor, mesmo que ainda seja maior que 50%. Em geral, títulos de notícias falsas aparentam ter mais &ldquo;sentimento&rdquo; do que títulos de notícias reais, neste banco de dados. Isso vale até para sentimentos positivos como <strong>joy</strong> (alegria) e <strong>surprise</strong> (surpresa).</p>
+<div class="highlight"><pre tabindex="0" style="color:#f8f8f2;background-color:#272822;-moz-tab-size:4;-o-tab-size:4;tab-size:4;"><code class="language-r" data-lang="r"><span style="display:flex;"><span>p2 <span style="color:#f92672">&lt;-</span> tidy_corpus <span style="color:#f92672">%&gt;%</span>
+</span></span><span style="display:flex;"><span><span style="color:#a6e22e">inner_join</span>(<span style="color:#a6e22e">get_sentiments</span>(<span style="color:#e6db74">&#39;nrc&#39;</span>)) <span style="color:#f92672">%&gt;%</span>
+</span></span><span style="display:flex;"><span><span style="color:#a6e22e">group_by</span>(sentiment, news) <span style="color:#f92672">%&gt;%</span>
+</span></span><span style="display:flex;"><span><span style="color:#a6e22e">summarise</span>(n <span style="color:#f92672">=</span> <span style="color:#a6e22e">n</span>()) <span style="color:#f92672">%&gt;%</span>
+</span></span><span style="display:flex;"><span><span style="color:#a6e22e">mutate</span>(prop <span style="color:#f92672">=</span> n<span style="color:#f92672">/</span><span style="color:#a6e22e">sum</span>(n))
+</span></span></code></pre></div><p>Para o corpo das notícias reais pode-se notas que os mesmos sentimentos são prevalentes, mas a proporção é menor comparado ao título. Um artigo de notícias falsas perde confiança (<strong>trust</strong>) quando o leitor lê o corpo do artigo. Ele também se torna menos negativo (<strong>negative</strong>) e apresenta menos medo (<strong>fear</strong>)</p>
+<p><img loading="lazy" src="https://ik.imagekit.io/devmedeiros/corpus_sentiment_302EKlTtO.png?updatedAt=1634083978312" alt="sentiment from news text"  title="Sentiment from news corpus text"  />
+</p>
+<p>Uma melhoria que poderia ser feito aqui é tentar construir nosso próprio dicionário de palavras redundantes (<em>stopwords</em>) e alterar a forma que a toneização foi feita. Pois houveram momentos em que <em>trump</em> e <em>trump&rsquo;s</em> não corresponderam a mesma coisa e se estes dados tivessem sido usados para treinar um modelo isso poderia se tornar um problema.</p>
+]]></content:encoded>
     </item>
     
   </channel>

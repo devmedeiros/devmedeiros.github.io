@@ -18,6 +18,17 @@
       
       <guid>https://devmedeiros.com/post/what-is-sql/</guid>
       <description>SQL stands for Structured Query Language. A query language is a specialized programming language that you can use to search and change the contents of a database.</description>
+      <content:encoded><![CDATA[<p>SQL stands for Structured Query Language. A query language is a specialized programming language that you can use to search and change the contents of a database.</p>
+<p>Like English, SQL has different dialects with special keywords. Most keywords on different dialects are the same, these are the standard SQL, but there are more dialects specific to some databases like:</p>
+<ul>
+<li>PostgreSQL</li>
+<li>SQL Server</li>
+<li>Oracle SQL</li>
+</ul>
+<p>When a keyword is specific to a dialect, usually, you can find an equivalent in another dialect. So you can focus on learning your preferred dialect and when you need to use another database you can easily look up how to do what you want in the other dialect, for instance, <code>oracle sql nvl on postgre</code>.</p>
+<h2 id="which-should-you-learn">Which should you learn?</h2>
+<p>The knowledge from learning any SQL dialect is transferable, so you can choose whichever you like. If you have contact with a database take advantage of that and learn it, but if you don&rsquo;t have any connection any choice will be good enough.</p>
+]]></content:encoded>
     </item>
     
   </channel>

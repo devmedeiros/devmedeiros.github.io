@@ -18,6 +18,33 @@
       
       <guid>https://devmedeiros.com/post/choose-the-best-graph/</guid>
       <description>Choosing the best graph or plot can be a hard task, but it doesn&amp;rsquo;t need to be.</description>
+      <content:encoded><![CDATA[<p>Learning how to make better visualizations come with study and practice, today I want to talk about sources you can use to guide you into making better graphs and other data visualizations in general.</p>
+<h2 id="from-data-to-viz">From Data to Viz</h2>
+<p><img loading="lazy" src="https://i.imgur.com/416qeWj.png" alt="infograph showing different possibilities for choosing a plot"  />
+</p>
+<p><a href="https://www.data-to-viz.com/">From Data to Viz</a> brings a lot of tools to help navigate the data visualization world. In the website <code>Explore</code> tab you are faced with an interactive infographic that helps you pick a plot, you can choose between: <code>numeric</code>, <code>categoric</code>, <code>numeric&amp;categoric</code>, <code>maps</code>, <code>network</code>, and <code>time series</code>. But it doesn&rsquo;t only show plots that would be good for your type of data, it also shows a description explaining the plot and common mistakes people make when using that specific plot.</p>
+<p>At the end of each branch from the infographic, there is also a <code>story</code> link, where you can read about an implementation of that type of plot using real-world data.</p>
+<p>And in the case, you are just starting and don&rsquo;t know many terms or are unsure if your data contains <code>too many</code> or <code>few</code> points when you rest your mouse over the options nodes you&rsquo;ll be able to see a description with an example table representing what that means.</p>
+<p>By heading to the <code>Caveats</code> tab you&rsquo;re able to see a collection of caveats, you can filter them by:</p>
+<ul>
+<li>
+<p><strong>Improvement:</strong> all caveats that will suggest some sort of improvement on plots.</p>
+</li>
+<li>
+<p><strong>Misleading:</strong> some plots may be misleading by omitting some information, may it be sample size or how proportionally different two categories are. By reading this you&rsquo;ll be able to spot bad practices that lead to confusion or manipulation.</p>
+</li>
+</ul>
+<p>This website also provides links to <strong>Python</strong> and <strong>R</strong> galleries where you can get code snippets to reproduce these plots.</p>
+<p>If you prefer to learn by looking at what not to do, you should check out <a href="https://viz.wtf/">WTF Visualizations</a>. It showcases bad visualizations that don&rsquo;t make sense or are somehow misleading.</p>
+<p>There you&rsquo;ll find several pie plots that don&rsquo;t add up to 100%, area graphs where the numbers don&rsquo;t match the area, and just straight-up manipulation like the example below.</p>
+<figure class="align-center ">
+    <img loading="lazy" src="https://64.media.tumblr.com/d8bcf748d564125312aeba4001b96df5/tumblr_qzg4n3nfJY1sgh0voo1_640.jpg#center"
+         alt="a donut graph showing &#39;yes&#39; as a majority while it represents 10%, and &#39;no&#39; as a minority while it represents 90%"/> <figcaption>
+            <p>piechart from <a href="https://viz.wtf/">WTF Visualizations</a></p>
+        </figcaption>
+</figure>
+
+]]></content:encoded>
     </item>
     
     <item>
@@ -27,6 +54,12 @@
       
       <guid>https://devmedeiros.com/post/2022-01-24-podcast-review-mlg/</guid>
       <description>A review about the podcast Machine Learning Guide</description>
+      <content:encoded><![CDATA[<p><img loading="lazy" src="https://ocdevel.com/static/media/MLG-Option-1.24e2cc63.jpg#center" alt="Machine Learning Guide Podcast Cover"  />
+</p>
+<p>The show is presented by Tyler Renelle from Depth, since 2021 it has been redone to update the content. The podcast offers a <a href="https://ocdevel.com/mlg/resources">resource</a> list where you can find all of the books, courses, and sites mentioned during the podcast. It&rsquo;s a great podcast for anyone who is learning about machine learning, it can be useful for a complete beginner, an enthusiast, or someone who is looking to further even more on this topic.</p>
+<p>The show starts by talking about what is <em>data science</em>, how it relates to <em>machine learning</em> and <em>artificial intelligence</em>. It also talks about the first attempts humans had made to create AI, with some examples coming from as early as the 13th century.</p>
+<p>I like that the show talks about concepts of machine learning in a different way than I&rsquo;m used to. When people are talking about machine learning, as a Statistician, I always feel that I understand what people are talking about, except I never knew the keywords they were using. What machine learning engineers might call <em>features</em> I was taught as <em>variable</em>, so I got confused when talking to friends about machine learning when they came from a different background as me (e.g. computer science). This is one of the reasons why I like the podcast so much because it talks about deep details about every machine learning concept so if it is talking about something that I already know I can now make that connection.</p>
+]]></content:encoded>
     </item>
     
   </channel>
