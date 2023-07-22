@@ -5,7 +5,6 @@ layout: "single" # is necessary
 # description: "Description for Search"
 summary: "Saiba mais sobre nossos termos e políticas, incluindo licenças de texto e código. Sua privacidade é uma prioridade para nós, e você pode navegar em nosso site com a tranquilidade de que não salvamos cookies em seu navegador."
 searchHidden: true
-author: ' '
 showReadingTime: false
 noComment: true
 disableShare: true

@@ -2,7 +2,6 @@
 title: "Projects" # in any language you want
 layout: "single" # is necessary
 summary: "Explore my personal projects on GitHub, including a credit score classification app, Nota Fiscal Goiana, and Alura's Business Intelligence challenge."
-author: ' '
 showtoc: true
 showReadingTime: false
 noComment: true
@@ -14,7 +13,7 @@ The following are a few projects that I have worked on in my free time. They are
 
 **Description:** This project presents a complete solution to ETL the data from Nota Fiscal Goiana. It also presents the curated data in a Power BI dashboard.
 
-**Stacks:** Python, Power BI, SQL, MySQL, and Github Actions
+**Stacks:** Python, Power BI, SQL, and Github Actions
 
 **Skills:** ETL, Data Visualization, and Scraping
 
