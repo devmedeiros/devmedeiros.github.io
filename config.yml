@@ -89,6 +89,7 @@ params:
   hideSummary: false
   showtoc: false
   tocopen: false
+  ShowFullTextinRSS: true
 
   assets:
     favicon: "<link / abs url>"
