@@ -60,20 +60,16 @@
                             {{- $img = $img.Resize "x30" }}
                         {{- end }}
                     {{- end }}
-                    <img src="{{ $img.Permalink }}" alt="devmedeiros logo" aria-label="logo"
+                    <img src="{{ $img.Permalink }}" alt="" aria-label="logo"
                         height="{{- site.Params.label.iconHeight | default "30" -}}">
                 {{- else }}
-                <img id="siteLogo" src="{{- site.Params.label.icon | absURL -}}" alt="devmedeiros logo" aria-label="logo"
+                <img src="{{- site.Params.label.icon | absURL -}}" alt="" aria-label="logo"
                     height="{{- site.Params.label.iconHeight | default "30" -}}">
-                    <script>
-                        if (document.body.className.includes("dark")) {
-                            document.getElementById("siteLogo").src = "/devmedeiros_logo_light.svg";
-                        }
-                    </script>
                 {{- end -}}
                 {{- else if hasPrefix site.Params.label.iconSVG "<svg" }}
                     {{ site.Params.label.iconSVG | safeHTML }}
                 {{- end -}}
+                <span class="font-roboto">dev</span><span class="font-cookie">medeiros</span>
             </a>
             {{- end }}
             <div class="logo-switches">
