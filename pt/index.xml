@@ -938,19 +938,19 @@ ouviu falar de diversas formas de usar essas ferramentas de inteligência artifi
 		
 
 		<a class="nav-item nav-link  active "
-		   id="nav-fcedba" data-toggle="tab" href="#fcedba"
+		   id="nav-afbedc" data-toggle="tab" href="#afbedc"
 		   role="tab" aria-controls="nav-home" aria-selected="true">Alura Films</a>
 
 		
 
 		<a class="nav-item nav-link "
-		   id="nav-aecbfd" data-toggle="tab" href="#aecbfd"
+		   id="nav-edfacb" data-toggle="tab" href="#edfacb"
 		   role="tab" aria-controls="nav-home" aria-selected="true">Alura Food</a>
 
 		
 
 		<a class="nav-item nav-link "
-		   id="nav-bdcfae" data-toggle="tab" href="#bdcfae"
+		   id="nav-aedcfb" data-toggle="tab" href="#aedcfb"
 		   role="tab" aria-controls="nav-home" aria-selected="true">Alura Skimó</a>
 
 		
@@ -1011,7 +1011,7 @@ ouviu falar de diversas formas de usar essas ferramentas de inteligência artifi
 
 
 
-<div class="tab-pane fade show active " id="fcedba" role="tabpanel" aria-labelledby="nav-1">
+<div class="tab-pane fade show active " id="afbedc" role="tabpanel" aria-labelledby="nav-1">
 
 	
 
@@ -1077,7 +1077,7 @@ ouviu falar de diversas formas de usar essas ferramentas de inteligência artifi
 
 
 
-<div class="tab-pane fade show " id="aecbfd" role="tabpanel" aria-labelledby="nav-1">
+<div class="tab-pane fade show " id="edfacb" role="tabpanel" aria-labelledby="nav-1">
 
 	
 
@@ -1143,7 +1143,7 @@ ouviu falar de diversas formas de usar essas ferramentas de inteligência artifi
 
 
 
-<div class="tab-pane fade show " id="bdcfae" role="tabpanel" aria-labelledby="nav-1">
+<div class="tab-pane fade show " id="aedcfb" role="tabpanel" aria-labelledby="nav-1">
 
 	
 
