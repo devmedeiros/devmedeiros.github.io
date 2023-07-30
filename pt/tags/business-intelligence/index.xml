@@ -12,13 +12,13 @@
     <generator>Hugo -- gohugo.io</generator>
     <lastBuildDate>Tue, 15 Nov 2022 08:01:00 -0300</lastBuildDate><atom:link href="https://devmedeiros.com/pt/tags/business-intelligence/index.xml" rel="self" type="application/rss+xml" />
     <item>
-      <title>Fazendo Gráficos Melhores</title>
+      <title>Melhorando suas Visualizações</title>
       <link>https://devmedeiros.com/pt/post/choose-the-best-graph/</link>
       <pubDate>Tue, 15 Nov 2022 08:01:00 -0300</pubDate>
       
       <guid>https://devmedeiros.com/pt/post/choose-the-best-graph/</guid>
       <description>Escolher o melhor gráfico pode ser uma tarefa difícil, mas não precisa ser.</description>
-      <content:encoded><![CDATA[<p>Aprendendo a fazer melhores visualizações vem com estudo e prática, hoje quero falar sobre fontes que você pode usar para orientá-lo a fazer gráficos melhores e outras visualizações de dados em geral.</p>
+      <content:encoded><![CDATA[<p>Aprendendo a produzir visualizações melhores vem com estudo e prática, hoje quero falar sobre fontes que você pode usar para orientá-lo a fazer gráficos melhores e outras visualizações de dados em geral.</p>
 <h2 id="from-data-to-viz">From Data to Viz</h2>
 <p><img loading="lazy" src="https://i.imgur.com/416qeWj.png" alt="infográfico mostrando diferentes possibilidades de escolha de um terreno"  />
 </p>
@@ -231,19 +231,19 @@
 		
 
 		<a class="nav-item nav-link  active "
-		   id="nav-fdaecb" data-toggle="tab" href="#fdaecb"
+		   id="nav-fcedba" data-toggle="tab" href="#fcedba"
 		   role="tab" aria-controls="nav-home" aria-selected="true">Alura Films</a>
 
 		
 
 		<a class="nav-item nav-link "
-		   id="nav-deacfb" data-toggle="tab" href="#deacfb"
+		   id="nav-aecbfd" data-toggle="tab" href="#aecbfd"
 		   role="tab" aria-controls="nav-home" aria-selected="true">Alura Food</a>
 
 		
 
 		<a class="nav-item nav-link "
-		   id="nav-ebdfca" data-toggle="tab" href="#ebdfca"
+		   id="nav-bdcfae" data-toggle="tab" href="#bdcfae"
 		   role="tab" aria-controls="nav-home" aria-selected="true">Alura Skimó</a>
 
 		
@@ -304,7 +304,7 @@
 
 
 
-<div class="tab-pane fade show active " id="fdaecb" role="tabpanel" aria-labelledby="nav-1">
+<div class="tab-pane fade show active " id="fcedba" role="tabpanel" aria-labelledby="nav-1">
 
 	
 
@@ -370,7 +370,7 @@
 
 
 
-<div class="tab-pane fade show " id="deacfb" role="tabpanel" aria-labelledby="nav-1">
+<div class="tab-pane fade show " id="aecbfd" role="tabpanel" aria-labelledby="nav-1">
 
 	
 
@@ -436,7 +436,7 @@
 
 
 
-<div class="tab-pane fade show " id="ebdfca" role="tabpanel" aria-labelledby="nav-1">
+<div class="tab-pane fade show " id="bdcfae" role="tabpanel" aria-labelledby="nav-1">
 
 	
 

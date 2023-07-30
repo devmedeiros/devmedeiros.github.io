@@ -101,7 +101,7 @@
     </item>
     
     <item>
-      <title>O que é SQL?</title>
+      <title>O Que é SQL?</title>
       <link>https://devmedeiros.com/pt/post/what-is-sql/</link>
       <pubDate>Tue, 07 Mar 2023 20:02:00 -0300</pubDate>
       
@@ -570,19 +570,19 @@
 		
 
 		<a class="nav-item nav-link  active "
-		   id="nav-fdaecb" data-toggle="tab" href="#fdaecb"
+		   id="nav-fcedba" data-toggle="tab" href="#fcedba"
 		   role="tab" aria-controls="nav-home" aria-selected="true">Alura Films</a>
 
 		
 
 		<a class="nav-item nav-link "
-		   id="nav-deacfb" data-toggle="tab" href="#deacfb"
+		   id="nav-aecbfd" data-toggle="tab" href="#aecbfd"
 		   role="tab" aria-controls="nav-home" aria-selected="true">Alura Food</a>
 
 		
 
 		<a class="nav-item nav-link "
-		   id="nav-ebdfca" data-toggle="tab" href="#ebdfca"
+		   id="nav-bdcfae" data-toggle="tab" href="#bdcfae"
 		   role="tab" aria-controls="nav-home" aria-selected="true">Alura Skimó</a>
 
 		
@@ -643,7 +643,7 @@
 
 
 
-<div class="tab-pane fade show active " id="fdaecb" role="tabpanel" aria-labelledby="nav-1">
+<div class="tab-pane fade show active " id="fcedba" role="tabpanel" aria-labelledby="nav-1">
 
 	
 
@@ -709,7 +709,7 @@
 
 
 
-<div class="tab-pane fade show " id="deacfb" role="tabpanel" aria-labelledby="nav-1">
+<div class="tab-pane fade show " id="aecbfd" role="tabpanel" aria-labelledby="nav-1">
 
 	
 
@@ -775,7 +775,7 @@
 
 
 
-<div class="tab-pane fade show " id="ebdfca" role="tabpanel" aria-labelledby="nav-1">
+<div class="tab-pane fade show " id="bdcfae" role="tabpanel" aria-labelledby="nav-1">
 
 	
 

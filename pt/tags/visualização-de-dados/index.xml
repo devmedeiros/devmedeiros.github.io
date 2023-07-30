@@ -12,7 +12,7 @@
     <generator>Hugo -- gohugo.io</generator>
     <lastBuildDate>Tue, 04 Apr 2023 22:30:00 -0300</lastBuildDate><atom:link href="https://devmedeiros.com/pt/tags/visualiza%C3%A7%C3%A3o-de-dados/index.xml" rel="self" type="application/rss+xml" />
     <item>
-      <title>Como usar nuvem de palavras?</title>
+      <title>Como Usar Nuvem de Palavras?</title>
       <link>https://devmedeiros.com/pt/post/how-to-use-word-clouds/</link>
       <pubDate>Tue, 04 Apr 2023 22:30:00 -0300</pubDate>
       
@@ -250,19 +250,19 @@
 		
 
 		<a class="nav-item nav-link  active "
-		   id="nav-fdaecb" data-toggle="tab" href="#fdaecb"
+		   id="nav-fcedba" data-toggle="tab" href="#fcedba"
 		   role="tab" aria-controls="nav-home" aria-selected="true">Alura Films</a>
 
 		
 
 		<a class="nav-item nav-link "
-		   id="nav-deacfb" data-toggle="tab" href="#deacfb"
+		   id="nav-aecbfd" data-toggle="tab" href="#aecbfd"
 		   role="tab" aria-controls="nav-home" aria-selected="true">Alura Food</a>
 
 		
 
 		<a class="nav-item nav-link "
-		   id="nav-ebdfca" data-toggle="tab" href="#ebdfca"
+		   id="nav-bdcfae" data-toggle="tab" href="#bdcfae"
 		   role="tab" aria-controls="nav-home" aria-selected="true">Alura Skimó</a>
 
 		
@@ -323,7 +323,7 @@
 
 
 
-<div class="tab-pane fade show active " id="fdaecb" role="tabpanel" aria-labelledby="nav-1">
+<div class="tab-pane fade show active " id="fcedba" role="tabpanel" aria-labelledby="nav-1">
 
 	
 
@@ -389,7 +389,7 @@
 
 
 
-<div class="tab-pane fade show " id="deacfb" role="tabpanel" aria-labelledby="nav-1">
+<div class="tab-pane fade show " id="aecbfd" role="tabpanel" aria-labelledby="nav-1">
 
 	
 
@@ -455,7 +455,7 @@
 
 
 
-<div class="tab-pane fade show " id="ebdfca" role="tabpanel" aria-labelledby="nav-1">
+<div class="tab-pane fade show " id="bdcfae" role="tabpanel" aria-labelledby="nav-1">
 
 	
 
