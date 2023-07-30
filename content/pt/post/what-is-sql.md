@@ -1,5 +1,5 @@
 ---
-title: O que é SQL?
+title: O Que é SQL?
 date: 2023-03-07 20:02:00 -0300
 categories: [Blog]
 tags: [SQL, tutorial, banco de dados, oracle, postgre, postgresql]

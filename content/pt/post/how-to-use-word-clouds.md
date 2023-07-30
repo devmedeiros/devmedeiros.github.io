@@ -1,5 +1,5 @@
 ---
-title: Como usar nuvem de palavras?
+title: Como Usar Nuvem de Palavras?
 date: 2023-04-04 22:30:00 -0300
 categories: [Blog]
 tags: [word cloud, nuvem de palavras, visualização de dados, stopwords, NPS, storytelling]

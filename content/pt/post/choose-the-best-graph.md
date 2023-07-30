@@ -1,6 +1,7 @@
 ---
-title: Fazendo Gráficos Melhores
+title: Melhorando suas Visualizações
 date: 2022-11-15 08:01:00 -0300
+lastmod: 2023-07-30 10:18:00 -0300
 categories: [Blog]
 tags: [data visualization, business intelligence, storytelling, review, ethic]
 summary: Escolher o melhor gráfico pode ser uma tarefa difícil, mas não precisa ser.
@@ -11,7 +12,7 @@ cover:
     hidden: true
 ---
 
-Aprendendo a fazer melhores visualizações vem com estudo e prática, hoje quero falar sobre fontes que você pode usar para orientá-lo a fazer gráficos melhores e outras visualizações de dados em geral.
+Aprendendo a produzir visualizações melhores vem com estudo e prática, hoje quero falar sobre fontes que você pode usar para orientá-lo a fazer gráficos melhores e outras visualizações de dados em geral.
 
 ## From Data to Viz
 

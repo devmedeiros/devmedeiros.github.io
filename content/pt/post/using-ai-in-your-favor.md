@@ -1,5 +1,5 @@
 ---
-title: Como usar IA ao seu favor?
+title: Como Usar IA ao Seu Favor?
 date: 2023-01-26 20:33:00 -0300
 categories: [Blog]
 tags: [IA, inteligência artificial, chatgpt, pln, nlp, pdi, opencv, AI]
