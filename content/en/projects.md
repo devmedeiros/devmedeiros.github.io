@@ -5,6 +5,7 @@ summary: "Explore my personal projects on GitHub, including a credit score class
 showtoc: true
 showReadingTime: false
 noComment: true
+noLike: true
 ---
 
 The following are a few projects that I have worked on in my free time. They are in no particular order.

@@ -5,6 +5,7 @@ summary: "Explore meus projetos pessoais no GitHub, incluindo um aplicativo de c
 showtoc: true
 showReadingTime: false
 noComment: true
+noLike: true
 ---
 
 A seguir são alguns projetos que eu fiz no meu tempo livre. Eles não estão em nenhuma ordem em particular.
