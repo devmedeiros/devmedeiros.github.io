@@ -16,8 +16,9 @@ Eu quero escrever posts que possam ser lidos por pessoas que não possuem um bac
 
 Você pode me encontrar em:
 
-- Linkedin: [medeiros-jaqueline](https://www.linkedin.com/in/medeiros-jaqueline/)
-- Github: [devmedeiros](https://github.com/devmedeiros)
+ {{< icon "linkedin" >}} [medeiros-jaqueline](https://www.linkedin.com/in/medeiros-jaqueline/)  
+ {{< icon "github" >}} [devmedeiros](https://github.com/devmedeiros)  
+ {{< icon "file-text" >}} [résumé](https://devmedeiros.com/resume/)
 
 ---
 ### Aviso Legal

@@ -113,7 +113,9 @@ params:
     - name: github
       url: "https://github.com/devmedeiros"
     - name: linkedin
-      url: "https://www.linkedin.com/in/medeiros-jaqueline/?locale=en_US"
+      url: "https://www.linkedin.com/in/medeiros-jaqueline/"
+    - name: cv
+      url: "https://devmedeiros.com/resume/"
 
   fuseOpts:
     isCaseSensitive: false
