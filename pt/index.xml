@@ -938,19 +938,19 @@ ouviu falar de diversas formas de usar essas ferramentas de inteligência artifi
 		
 
 		<a class="nav-item nav-link  active "
-		   id="nav-afbedc" data-toggle="tab" href="#afbedc"
+		   id="nav-adbcef" data-toggle="tab" href="#adbcef"
 		   role="tab" aria-controls="nav-home" aria-selected="true">Alura Films</a>
 
 		
 
 		<a class="nav-item nav-link "
-		   id="nav-edfacb" data-toggle="tab" href="#edfacb"
+		   id="nav-eadfbc" data-toggle="tab" href="#eadfbc"
 		   role="tab" aria-controls="nav-home" aria-selected="true">Alura Food</a>
 
 		
 
 		<a class="nav-item nav-link "
-		   id="nav-aedcfb" data-toggle="tab" href="#aedcfb"
+		   id="nav-bfecda" data-toggle="tab" href="#bfecda"
 		   role="tab" aria-controls="nav-home" aria-selected="true">Alura Skimó</a>
 
 		
@@ -1011,7 +1011,7 @@ ouviu falar de diversas formas de usar essas ferramentas de inteligência artifi
 
 
 
-<div class="tab-pane fade show active " id="afbedc" role="tabpanel" aria-labelledby="nav-1">
+<div class="tab-pane fade show active " id="adbcef" role="tabpanel" aria-labelledby="nav-1">
 
 	
 
@@ -1077,7 +1077,7 @@ ouviu falar de diversas formas de usar essas ferramentas de inteligência artifi
 
 
 
-<div class="tab-pane fade show " id="edfacb" role="tabpanel" aria-labelledby="nav-1">
+<div class="tab-pane fade show " id="eadfbc" role="tabpanel" aria-labelledby="nav-1">
 
 	
 
@@ -1143,7 +1143,7 @@ ouviu falar de diversas formas de usar essas ferramentas de inteligência artifi
 
 
 
-<div class="tab-pane fade show " id="aedcfb" role="tabpanel" aria-labelledby="nav-1">
+<div class="tab-pane fade show " id="bfecda" role="tabpanel" aria-labelledby="nav-1">
 
 	
 
@@ -1889,10 +1889,21 @@ ouviu falar de diversas formas de usar essas ferramentas de inteligência artifi
  Eu sempre gostei de aprender coisas novas e explorar novas possibilidades e este blog é um canal no qual eu crio e descubro coisas novas relacionadas a Ciência de Dados.</p>
 <p>Eu quero escrever posts que possam ser lidos por pessoas que não possuem um background técnico, mas também quero mostrar e falar sobre os aspectos de programação do que estou aprendendo, então você irá encontrar um pouco de tudo aqui.</p>
 <p>Você pode me encontrar em:</p>
-<ul>
-<li>Linkedin: <a href="https://www.linkedin.com/in/medeiros-jaqueline/">medeiros-jaqueline</a></li>
-<li>Github: <a href="https://github.com/devmedeiros">devmedeiros</a></li>
-</ul>
+<p><i data-feather="linkedin"></i>
+ 
+ <script>
+     feather.replace()
+ </script> <a href="https://www.linkedin.com/in/medeiros-jaqueline/">medeiros-jaqueline</a><br>
+<i data-feather="github"></i>
+ 
+ <script>
+     feather.replace()
+ </script> <a href="https://github.com/devmedeiros">devmedeiros</a><br>
+<i data-feather="file-text"></i>
+ 
+ <script>
+     feather.replace()
+ </script> <a href="https://devmedeiros.com/resume/">résumé</a></p>
 <hr>
 <h3 id="aviso-legal">Aviso Legal</h3>
 <p>Este é meu site pessoal. As opiniões expressadas aqui são minhas e não refletem as visões dos meus empregadores atuais ou passados. Caso queira aprender mais sobre os termos e políticas desse site, por favor visite <a href="https://devmedeiros.com/pt/terms/">essa página</a>.</p>
