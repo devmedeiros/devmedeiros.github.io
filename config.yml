@@ -63,12 +63,12 @@ languages:
     homeInfoParams:
       Title: "Jaqueline Medeiros"
       Content: >
-        Bem-vindo ao meu blog sobre ciência de dados! Aqui posto conceitos sobre o campo, falo sobre aplicações do mundo real e compartilho minha jornada de aprendizado enquanto aprofundo mais a cada dia.
+        Olá, sejam bem vindos ao meu blog! Vou mergulhar em vários tópicos relacionados à ciência de dados, estatística e tecnologia. Junte-se a mim enquanto continuo aprendendo e compartilhando meu novo conhecimento.
 
 params:
   env: production # to enable google analytics, opengraph, twitter-cards and schema.
   title: devmedeiros
-  description: "A blog about Data Science"
+  description: "Discover Data Science, Statistics, & Technology."
   keywords: [Blog, Portfolio, Data Science, Python, R, Data Analytics, Data Engineering]
   author: Jaqueline Medeiros
   images: ["cover.png"]
@@ -107,7 +107,7 @@ params:
   homeInfoParams:
       Title: "Jaqueline Medeiros"
       Content: >
-        Welcome to my data science blog! Where I post insights about the field, talk about real-world applications and share my learning journey as I dive further everyday.
+        Hey there, welcome to my blog! I'll dive into various topics surrounding data science, statistics, and technology. Join me as I continue to learn and share my newfound knowledge.
 
   socialIcons:
     - name: github
