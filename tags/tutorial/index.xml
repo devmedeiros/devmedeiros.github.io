@@ -10,7 +10,61 @@
       <link>https://devmedeiros.com/cover.png</link>
     </image>
     <generator>Hugo -- gohugo.io</generator>
-    <lastBuildDate>Wed, 31 May 2023 21:54:00 -0300</lastBuildDate><atom:link href="https://devmedeiros.com/tags/tutorial/index.xml" rel="self" type="application/rss+xml" />
+    <lastBuildDate>Sat, 05 Aug 2023 07:30:00 -0300</lastBuildDate><atom:link href="https://devmedeiros.com/tags/tutorial/index.xml" rel="self" type="application/rss+xml" />
+    <item>
+      <title>How to Add Like/Clap Buttons on your Static Website with Lyket</title>
+      <link>https://devmedeiros.com/post/like-button-static-website-lyket/</link>
+      <pubDate>Sat, 05 Aug 2023 07:30:00 -0300</pubDate>
+      
+      <guid>https://devmedeiros.com/post/like-button-static-website-lyket/</guid>
+      <description>Learn how to add a like/clap button to your static website using Lyket.</description>
+      <content:encoded><![CDATA[<p>This tutorial is focused on <strong>Hugo</strong>, but it can easily be adapted for other static website frameworks.</p>
+<p>I&rsquo;ve found many alternatives to add claps or likes to your website, but none was customizable as I wanted it to be, or it would require me to change my website hosting.</p>
+<p>I recently found out about Lyket and started using it. I&rsquo;ll guide you on how to set it up on your website.</p>
+<h2 id="setting-lyket-api">Setting Lyket API</h2>
+<p>The Lyket API provides a free tier, with no credit card needed to sign-up. To use it on a static site you&rsquo;ll need to add the following tag to your website header.</p>
+<div class="highlight"><pre tabindex="0" style="color:#f8f8f2;background-color:#272822;-moz-tab-size:4;-o-tab-size:4;tab-size:4;"><code class="language-html" data-lang="html"><span style="display:flex;"><span>&lt;<span style="color:#f92672">script</span> <span style="color:#a6e22e">src</span><span style="color:#f92672">=</span><span style="color:#e6db74">&#34;https://unpkg.com/@lyket/widget@latest/dist/lyket.js?apiKey=[YOUR-API-KEY]&#34;</span>&gt;&lt;/<span style="color:#f92672">script</span>&gt;
+</span></span></code></pre></div><p>You can get an API Key on their website when you sign-up &laquo; <a href="https://lyket.dev/">https://lyket.dev/</a> &raquo;. You can use your public API token without fearing other people using it, you just need to set the allowed websites to your domain.</p>
+<p>Then you need to add the button tag where you want it to show, in my case I wanted it to appear on every blog post, but not on the other pages. So I added it to my post footer on my hugo project it&rsquo;s located in <code>layouts/_default/single.html</code> file, on pasted the tag inside the <code>&lt;footer class=&quot;post-footer&quot;&gt;</code> tag.</p>
+<p>The html button template will look something like this:</p>
+<div class="highlight"><pre tabindex="0" style="color:#f8f8f2;background-color:#272822;-moz-tab-size:4;-o-tab-size:4;tab-size:4;"><code class="language-html" data-lang="html"><span style="display:flex;"><span>&lt;<span style="color:#f92672">div</span>
+</span></span><span style="display:flex;"><span>    <span style="color:#a6e22e">data-lyket-type</span><span style="color:#f92672">=</span><span style="color:#e6db74">&#34;clap&#34;</span>
+</span></span><span style="display:flex;"><span>    <span style="color:#a6e22e">data-lyket-namespace</span><span style="color:#f92672">=</span><span style="color:#e6db74">&#34;namespace&#34;</span>
+</span></span><span style="display:flex;"><span>    <span style="color:#a6e22e">data-lyket-id</span><span style="color:#f92672">=</span><span style="color:#e6db74">&#34;everybody-clap-now&#34;</span>
+</span></span><span style="display:flex;"><span>    <span style="color:#a6e22e">data-lyket-template</span><span style="color:#f92672">=</span><span style="color:#e6db74">&#34;medium&#34;</span>
+</span></span><span style="display:flex;"><span>    <span style="color:#a6e22e">data-lyket-color-text</span><span style="color:#f92672">=</span><span style="color:#e6db74">&#34;currentColor&#34;</span>
+</span></span><span style="display:flex;"><span>/&gt;
+</span></span></code></pre></div><p>You can change the <code>data-lyket-type</code> to clap, like, updown, and rate. On <code>data-lyket-namespace</code> you can choose whatever name you like, you can use it to separate and organize your pages if you use the same API token on multiple websites, or if you separate your website content into categories you could use &ldquo;blog&rdquo; and &ldquo;projects&rdquo;, for example.</p>
+<p>On <code>data-lyket-template</code> you can choose the template for your button, each button type has a different button template, this is optional, if you don&rsquo;t add it it&rsquo;ll turn to the default option, you can see the available options you can see it here: &laquo; <a href="https://lyket.dev/templates">https://lyket.dev/templates</a> &raquo;.</p>
+<p>The <code>data-lyket-color-text</code> allows you to personalize the text color of your button (the color of the numbers), you can set one color, but if you have a website that has a dark and light mode, you may prefer to use &lsquo;currentColor&rsquo;.</p>
+<p>The <code>data-lyket-id</code> set the counter name, if you want two pages to share the like count it&rsquo;ll need to have the same id. On my Hugo website, I used Hugo to get the page slug to use it as an id, you can use <code>{{ replace (path.Base .RelPermalink) &quot; /&quot; &quot;-&quot; }}</code> template as your id, so even if you translate your content all versions will keep their like count.</p>
+<div class="highlight"><pre tabindex="0" style="color:#f8f8f2;background-color:#272822;-moz-tab-size:4;-o-tab-size:4;tab-size:4;"><code class="language-html" data-lang="html"><span style="display:flex;"><span>&lt;<span style="color:#f92672">div</span>
+</span></span><span style="display:flex;"><span>    <span style="color:#a6e22e">data-lyket-type</span><span style="color:#f92672">=</span><span style="color:#e6db74">&#34;clap&#34;</span>
+</span></span><span style="display:flex;"><span>    <span style="color:#a6e22e">data-lyket-namespace</span><span style="color:#f92672">=</span><span style="color:#e6db74">&#34;namespace&#34;</span>
+</span></span><span style="display:flex;"><span>    <span style="color:#a6e22e">data-lyket-id</span><span style="color:#f92672">=</span><span style="color:#e6db74">&#34;{{ replace (path.Base .RelPermalink) &#34;</span> <span style="color:#960050;background-color:#1e0010">/&#34;</span> <span style="color:#960050;background-color:#1e0010">&#34;</span><span style="color:#a6e22e">-</span><span style="color:#960050;background-color:#1e0010">&#34;</span> <span style="color:#960050;background-color:#1e0010">}}&#34;</span>
+</span></span><span style="display:flex;"><span>    <span style="color:#a6e22e">data-lyket-template</span><span style="color:#f92672">=</span><span style="color:#e6db74">&#34;medium&#34;</span>
+</span></span><span style="display:flex;"><span>    <span style="color:#a6e22e">data-lyket-color-text</span><span style="color:#f92672">=</span><span style="color:#e6db74">&#34;currentColor&#34;</span>
+</span></span><span style="display:flex;"><span>/&gt;
+</span></span></code></pre></div><h2 id="bonus-tip">Bonus Tip</h2>
+<p>You can add a Hugo parameter to hide the like button on pages you don&rsquo;t want to show. Simply add to your page frontmatter a parameter, in this case <code>noLike</code>, and set it to true, so your page would look like this:</p>
+<div class="highlight"><pre tabindex="0" style="color:#f8f8f2;background-color:#272822;-moz-tab-size:4;-o-tab-size:4;tab-size:4;"><code class="language-yaml" data-lang="yaml"><span style="display:flex;"><span>---
+</span></span><span style="display:flex;"><span><span style="color:#f92672">title</span>: <span style="color:#e6db74">&#34;Your Awesome Page Title&#34;</span>
+</span></span><span style="display:flex;"><span><span style="color:#f92672">layout</span>: <span style="color:#e6db74">&#34;single&#34;</span>
+</span></span><span style="display:flex;"><span><span style="color:#f92672">noLike</span>: <span style="color:#66d9ef">true</span>
+</span></span><span style="display:flex;"><span>---
+</span></span></code></pre></div><p>Then on your single.html file, you add the if clause to hide the button, in the end, it&rsquo;ll look like this:</p>
+<div class="highlight"><pre tabindex="0" style="color:#f8f8f2;background-color:#272822;-moz-tab-size:4;-o-tab-size:4;tab-size:4;"><code class="language-html" data-lang="html"><span style="display:flex;"><span>{{- if not .Params.noLike }}
+</span></span><span style="display:flex;"><span>    &lt;<span style="color:#f92672">div</span>
+</span></span><span style="display:flex;"><span>        <span style="color:#a6e22e">data-lyket-type</span><span style="color:#f92672">=</span><span style="color:#e6db74">&#34;clap&#34;</span>
+</span></span><span style="display:flex;"><span>        <span style="color:#a6e22e">data-lyket-namespace</span><span style="color:#f92672">=</span><span style="color:#e6db74">&#34;namespace&#34;</span>
+</span></span><span style="display:flex;"><span>        <span style="color:#a6e22e">data-lyket-id</span><span style="color:#f92672">=</span><span style="color:#e6db74">&#34;{{ replace (path.Base .RelPermalink) &#34;</span> <span style="color:#960050;background-color:#1e0010">/&#34;</span> <span style="color:#960050;background-color:#1e0010">&#34;</span><span style="color:#a6e22e">-</span><span style="color:#960050;background-color:#1e0010">&#34;</span> <span style="color:#960050;background-color:#1e0010">}}&#34;</span>
+</span></span><span style="display:flex;"><span>        <span style="color:#a6e22e">data-lyket-template</span><span style="color:#f92672">=</span><span style="color:#e6db74">&#34;medium&#34;</span>
+</span></span><span style="display:flex;"><span>        <span style="color:#a6e22e">data-lyket-color-text</span><span style="color:#f92672">=</span><span style="color:#e6db74">&#34;currentColor&#34;</span>
+</span></span><span style="display:flex;"><span>    /&gt;
+</span></span><span style="display:flex;"><span>{{- end }}
+</span></span></code></pre></div>]]></content:encoded>
+    </item>
+    
     <item>
       <title>How to Use SQLite Database with Github Actions</title>
       <link>https://devmedeiros.com/post/sqlite-database-github-actions/</link>
