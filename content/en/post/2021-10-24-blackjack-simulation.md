@@ -5,7 +5,7 @@ categories: [Blog]
 tags: [R, simulation, shiny, ggplot]
 summary: A blackjack simulation using R and Shiny, you can run a single game with p players, d decks, n times
 cover:
-    image: "https://i.imgur.com/w62pRrL.jpg"
+    image: "https://ik.imagekit.io/devmedeiros/blackjack__J-I9kYyJ.webp"
     alt: "an ace and a jack on a green table with poker chips"
     caption: "Image of Michael Brasuela by Pixabay"
 ---

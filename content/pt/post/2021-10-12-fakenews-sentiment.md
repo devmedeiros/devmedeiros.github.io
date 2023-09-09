@@ -5,7 +5,7 @@ categories: [Blog]
 tags: [ciência de dados, R, análise de sentimentos, NLP, ggplot]
 summary: Análise de Sentimento comparando notícias falsas e notícias reais
 cover:
-    image: "https://i.imgur.com/04tgQAZ.jpg"
+    image: "https://ik.imagekit.io/devmedeiros/newspaper_9yA4QRDzj.webp"
     alt: "um jornal"
     caption: "Imagem de Krzysztof Pluta por Pixabay"
 ---

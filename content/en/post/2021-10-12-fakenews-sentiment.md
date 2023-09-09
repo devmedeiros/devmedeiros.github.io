@@ -5,7 +5,7 @@ categories: [Blog]
 tags: [data science, R, sentiment analysis, NLP, ggplot, storytelling]
 summary: Sentiment Analysis comparing Fake News and Real News using R
 cover:
-    image: "https://i.imgur.com/04tgQAZ.jpg"
+    image: "https://ik.imagekit.io/devmedeiros/newspaper_9yA4QRDzj.webp"
     alt: "a newspaper"
     caption: "Image of Krzysztof Pluta by Pixabay"
 ---

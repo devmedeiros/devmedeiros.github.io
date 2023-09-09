@@ -6,7 +6,7 @@ tags: [data cleaning, python, pandas, tutorial, kaggle, numpy, credit score, cla
 showtoc: true
 summary: How to come up with ways to clean a dataset using Python
 cover:
-    image: https://i.imgur.com/RqLcJYv.jpg
+    image: "https://ik.imagekit.io/devmedeiros/cleaning_6qcrJxQyu.webp"
     alt: "a man wearing gloves cleaning a table with a cloth"
     caption: "Profession photo created by freepik - freepik.com"
 ---

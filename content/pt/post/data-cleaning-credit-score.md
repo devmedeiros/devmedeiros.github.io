@@ -6,7 +6,7 @@ tags: [limpeza de dados, python, pandas, tutorial, kaggle, numpy, score, classif
 showtoc: true
 summary: Como surgir com formas de limpar um banco de dados usando Python
 cover:
-    image: https://i.imgur.com/RqLcJYv.jpg
+    image: "https://ik.imagekit.io/devmedeiros/cleaning_6qcrJxQyu.webp"
     alt: "um homem usando luvas limpando uma mesa com um pano"
     caption: "Profession photo criada por freepik - freepik.com"
 ---

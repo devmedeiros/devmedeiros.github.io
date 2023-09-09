@@ -7,7 +7,7 @@ tags: [analytics engineer, caso, kpi, análise de dados, data engineering, manip
 showtoc: true
 summary: Projeto explorando tarefas comuns que um Analytics Engineer faz diariamente.
 cover:
-  image: https://i.imgur.com/M8tPe5Q.jpg
+  image: "https://ik.imagekit.io/devmedeiros/dashboards_t9AXwPlpuC.webp"
   alt: "computer screen with 8 rectangles filled with key indicators"
   caption: "Imagem de Stephen Dawson na Unsplash"
   hidden: true

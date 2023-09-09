@@ -7,7 +7,7 @@ tags: [analytics engineer, case, KPI, data analysis, data engineering, data mani
 showtoc: true
 summary: Project exploring common tasks an Analytics Engineer needs to perform on a daily day.
 cover:
-  image: https://i.imgur.com/M8tPe5Q.jpg
+  image: "https://ik.imagekit.io/devmedeiros/dashboards_t9AXwPlpuC.webp"
   alt: "computer screen with 8 rectangles filled with key indicators"
   caption: "Photo by Stephen Dawson on Unsplash"
   hidden: true

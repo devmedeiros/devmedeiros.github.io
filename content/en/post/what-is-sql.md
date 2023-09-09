@@ -6,7 +6,7 @@ tags: [SQL, tutorial, database, oracle, postgre, postgresql]
 showtoc: false
 summary: SQL stands for Structured Query Language. A query language is a specialized programming language that you can use to search and change the contents of a database.
 cover:
-    image: "https://i.imgur.com/CHgqOEc.jpg"
+    image: "https://ik.imagekit.io/devmedeiros/japanese-house_oXB7uItOZ.webp"
     alt: "asian structure representing sql and its different dialects"
 ---
 

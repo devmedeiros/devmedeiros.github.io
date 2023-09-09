@@ -5,7 +5,7 @@ categories: [Blog]
 tags: [python, data visualization, data analysis, EDA]
 summary: Exploratory Data Analysis of Amazon's top 50 bestselling books 2009 - 2019
 cover:
-    image: https://i.imgur.com/DceyZAH.jpg
+    image: "https://ik.imagekit.io/devmedeiros/books_n0VtB39Hz.webp"
     alt: image of an multiple books, most closed and some open
     caption: Photo by [Abhi Sharma](https://www.flickr.com/photos/abee5/8314929977), [CC BY 2.0](https://creativecommons.org/licenses/by/2.0/)
 ---

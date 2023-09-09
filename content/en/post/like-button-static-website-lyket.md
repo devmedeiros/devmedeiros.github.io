@@ -6,7 +6,7 @@ tags: [tutorial, like button, clap button, static site, medium clap, twitter hea
 showtoc: true
 summary: Learn how to add a like/clap button to your static website using Lyket.
 cover:
-    image: "https://i.imgur.com/aKYMk3s.png"
+    image: "https://ik.imagekit.io/devmedeiros/like-static-blog_tR0o74mLu.webp"
     alt: "black and white laptop with three emojis, thumbs up, heart and clap"
 ---
 

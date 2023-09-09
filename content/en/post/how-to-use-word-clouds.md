@@ -6,7 +6,7 @@ tags: [word cloud, data visualization, stopwords, NPS, storytelling]
 showtoc: true
 summary: Word clouds are a popular data visualization tool for analyzing texts, but they need to be presented clearly for the message to be understood.
 cover:
-    image: "https://i.imgur.com/lMYALpv.png"
+    image: "https://ik.imagekit.io/devmedeiros/wordcloud_Z6fZP5SWJ.webp"
     alt: "wordcloud of this article"
 ---
 

@@ -6,7 +6,7 @@ tags: [storytelling, data science, data visualization, data analysis]
 showtoc: true
 summary: The storytelling of how much each deputy/senator spends in Brazil
 cover:
-    image: https://i.imgur.com/u57LTSR.jpg
+    image: "https://ik.imagekit.io/devmedeiros/planalto_5abWbxjMI.webp"
     alt: brazil nation congress
     caption: Image of Renato Laky by Pixabay
 ---

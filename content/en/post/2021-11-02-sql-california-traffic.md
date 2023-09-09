@@ -5,7 +5,7 @@ categories: [Blog]
 tags: [SQL, R, data analysis, statistic, database, traffic, collision, california, COVID]
 summary: Using SQL to analyze if COVID impacted California Traffic Collisions
 cover:
-    image: "https://i.imgur.com/H9WWmcM.jpg"
+    image: "https://ik.imagekit.io/devmedeiros/road_-8ycKi86F.webp"
     alt: "a 3 lane highway with cards comming and going"
     caption: "Image of Zdravko Shishmanov by Pixabay"
 ---

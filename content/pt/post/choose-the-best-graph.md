@@ -6,7 +6,7 @@ categories: [Blog]
 tags: [data visualization, business intelligence, storytelling, review, ethic]
 summary: Escolher o melhor gráfico pode ser uma tarefa difícil, mas não precisa ser.
 cover:
-    image: https://i.imgur.com/eggG31k.jpg
+    image: "https://ik.imagekit.io/devmedeiros/graph-choosing_T2RxECo-q.webp"
     alt: "um gráfico de rosca mostrando sim como a maioria enquanto ele representa 10%, e não como a minoria quando ele representa 90%"
     caption: "piechart de WTF Visualizations"
     hidden: true

@@ -6,7 +6,7 @@ tags: [feature selection, scikit-learn]
 showtoc: true
 summary: Defining feature selection and showing how you can select features in Machine Learning
 cover:
-    image: https://i.imgur.com/OxeQD2m.jpg
+    image: "https://ik.imagekit.io/devmedeiros/features_MQjhy73B_.webp"
     alt: "small correlation plot with weight, height and BMI"
     caption: Image of [Arek Socha](https://pixabay.com/pt/users/qimono-1962238/?utm_source=link-attribution&amp;utm_medium=referral&amp;utm_campaign=image&amp;utm_content=1872665) by [Pixabay](https://pixabay.com/pt//?utm_source=link-attribution&amp;utm_medium=referral&amp;utm_campaign=image&amp;utm_content=1872665)
 ---
