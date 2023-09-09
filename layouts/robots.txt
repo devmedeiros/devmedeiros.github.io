@@ -2,8 +2,8 @@ User-agent: *
 
 Disallow: /tags/
 Disallow: /search/
-Disallow: 404.html
-Disallow: terms.html
+Disallow: /404/
+Disallow: /terms/
 Disallow: /page/
 
 Sitemap: {{ "sitemap.xml" | absURL }}
