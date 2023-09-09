@@ -1,5 +1,5 @@
 ---
-title: "Desvendando o Aprendizado de Máquina: é Realmente Necessário para o Seu Negócio?"
+title: "Aprendizado de Máquina é Necessário para o Seu Negócio?"
 date: 2023-05-20 19:46:00 -0300
 categories: [Blog]
 tags: [machine learning, ML, business, data-driven, clean data, decision-making, eficiência, data pipeline, data science, AI, aprendizado de máquina, ciência de dados, pipeline de dados]

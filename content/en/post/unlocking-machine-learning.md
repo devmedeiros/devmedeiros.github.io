@@ -1,5 +1,5 @@
 ---
-title: "Unlocking Machine Learning: Is It Really Necessary for Your Business?"
+title: "Is Machine Learning Necessary for Your Business?"
 date: 2023-05-20 19:46:00 -0300
 categories: [Blog]
 tags: [machine learning, ML, business, data-driven, clean data, decision-making, efficiency, data pipeline, data science, AI]
