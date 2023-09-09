@@ -108,8 +108,15 @@
 <p>All models moving forward will have the same random state.</p>
 <h3 id="model-1---random-forest">Model 1 - Random Forest</h3>
 <p>I start by using a grid search with cross-validation to find the best parameters within a given pool of options using the <code>recall</code> as the strategy to evaluate the performance. The best model was:</p>
-<div class="highlight"><pre tabindex="0" style="color:#f8f8f2;background-color:#272822;-moz-tab-size:4;-o-tab-size:4;tab-size:4;"><code class="language-python" data-lang="python"><span style="display:flex;"><span>RandomForestClassifier(criterion<span style="color:#f92672">=</span><span style="color:#e6db74">&#39;entropy&#39;</span>, max_depth<span style="color:#f92672">=</span><span style="color:#ae81ff">5</span>, max_leaf_nodes<span style="color:#f92672">=</span><span style="color:#ae81ff">70</span>, random_state<span style="color:#f92672">=</span><span style="color:#ae81ff">22</span>)
-</span></span></code></pre></div><p>After fitting this model, the evaluating metrics were:</p>
+<div class="highlight"><div style="color:#f8f8f2;background-color:#272822;-moz-tab-size:4;-o-tab-size:4;tab-size:4;">
+<table style="border-spacing:0;padding:0;margin:0;border:0;"><tr><td style="vertical-align:top;padding:0;margin:0;border:0;">
+<pre tabindex="0" style="color:#f8f8f2;background-color:#272822;-moz-tab-size:4;-o-tab-size:4;tab-size:4;"><code><span style="white-space:pre;user-select:none;margin-right:0.4em;padding:0 0.4em 0 0.4em;color:#7f7f7f">1
+</span></code></pre></td>
+<td style="vertical-align:top;padding:0;margin:0;border:0;;width:100%">
+<pre tabindex="0" style="color:#f8f8f2;background-color:#272822;-moz-tab-size:4;-o-tab-size:4;tab-size:4;"><code class="language-python" data-lang="python"><span style="display:flex;"><span>RandomForestClassifier(criterion<span style="color:#f92672">=</span><span style="color:#e6db74">&#39;entropy&#39;</span>, max_depth<span style="color:#f92672">=</span><span style="color:#ae81ff">5</span>, max_leaf_nodes<span style="color:#f92672">=</span><span style="color:#ae81ff">70</span>, random_state<span style="color:#f92672">=</span><span style="color:#ae81ff">22</span>)
+</span></span></code></pre></td></tr></table>
+</div>
+</div><p>After fitting this model, the evaluating metrics were:</p>
 <ul>
 <li>Accuracy Score: 0.72534</li>
 <li>Precision Score: 0.48922</li>
@@ -118,8 +125,15 @@
 </ul>
 <h3 id="model-2---linear-svc">Model 2 - Linear SVC</h3>
 <p>For this model, I just used the default parameters and set the ceiling for the maximum of iterations to <code>900000</code>.</p>
-<div class="highlight"><pre tabindex="0" style="color:#f8f8f2;background-color:#272822;-moz-tab-size:4;-o-tab-size:4;tab-size:4;"><code class="language-python" data-lang="python"><span style="display:flex;"><span>LinearSVC(max_iter<span style="color:#f92672">=</span><span style="color:#ae81ff">900000</span>, random_state<span style="color:#f92672">=</span><span style="color:#ae81ff">22</span>)
-</span></span></code></pre></div><p>After fitting this model, the evaluating metrics were:</p>
+<div class="highlight"><div style="color:#f8f8f2;background-color:#272822;-moz-tab-size:4;-o-tab-size:4;tab-size:4;">
+<table style="border-spacing:0;padding:0;margin:0;border:0;"><tr><td style="vertical-align:top;padding:0;margin:0;border:0;">
+<pre tabindex="0" style="color:#f8f8f2;background-color:#272822;-moz-tab-size:4;-o-tab-size:4;tab-size:4;"><code><span style="white-space:pre;user-select:none;margin-right:0.4em;padding:0 0.4em 0 0.4em;color:#7f7f7f">1
+</span></code></pre></td>
+<td style="vertical-align:top;padding:0;margin:0;border:0;;width:100%">
+<pre tabindex="0" style="color:#f8f8f2;background-color:#272822;-moz-tab-size:4;-o-tab-size:4;tab-size:4;"><code class="language-python" data-lang="python"><span style="display:flex;"><span>LinearSVC(max_iter<span style="color:#f92672">=</span><span style="color:#ae81ff">900000</span>, random_state<span style="color:#f92672">=</span><span style="color:#ae81ff">22</span>)
+</span></span></code></pre></td></tr></table>
+</div>
+</div><p>After fitting this model, the evaluating metrics were:</p>
 <ul>
 <li>Accuracy Score: 0.71966</li>
 <li>Precision Score: 0.48217</li>
@@ -128,8 +142,15 @@
 </ul>
 <h3 id="model-3---multi-layer-perceptron">Model 3 - Multi-layer Perceptron</h3>
 <p>Here I fixed the solver to LBFGS, because according to the documentation it has a better performance in smaller datasets<sup id="fnref:3"><a href="#fn:3" class="footnote-ref" role="doc-noteref">3</a></sup>, and used grid search with cross-validation to find a hidden layer size that would be the best. The best model was:</p>
-<div class="highlight"><pre tabindex="0" style="color:#f8f8f2;background-color:#272822;-moz-tab-size:4;-o-tab-size:4;tab-size:4;"><code class="language-python" data-lang="python"><span style="display:flex;"><span>MLPClassifier(hidden_layer_sizes<span style="color:#f92672">=</span>(<span style="color:#ae81ff">1</span>,), max_iter<span style="color:#f92672">=</span><span style="color:#ae81ff">9999</span>, random_state<span style="color:#f92672">=</span><span style="color:#ae81ff">22</span>, solver<span style="color:#f92672">=</span><span style="color:#e6db74">&#39;lbfgs&#39;</span>)
-</span></span></code></pre></div><p>After fitting this model, the evaluating metrics were:</p>
+<div class="highlight"><div style="color:#f8f8f2;background-color:#272822;-moz-tab-size:4;-o-tab-size:4;tab-size:4;">
+<table style="border-spacing:0;padding:0;margin:0;border:0;"><tr><td style="vertical-align:top;padding:0;margin:0;border:0;">
+<pre tabindex="0" style="color:#f8f8f2;background-color:#272822;-moz-tab-size:4;-o-tab-size:4;tab-size:4;"><code><span style="white-space:pre;user-select:none;margin-right:0.4em;padding:0 0.4em 0 0.4em;color:#7f7f7f">1
+</span></code></pre></td>
+<td style="vertical-align:top;padding:0;margin:0;border:0;;width:100%">
+<pre tabindex="0" style="color:#f8f8f2;background-color:#272822;-moz-tab-size:4;-o-tab-size:4;tab-size:4;"><code class="language-python" data-lang="python"><span style="display:flex;"><span>MLPClassifier(hidden_layer_sizes<span style="color:#f92672">=</span>(<span style="color:#ae81ff">1</span>,), max_iter<span style="color:#f92672">=</span><span style="color:#ae81ff">9999</span>, random_state<span style="color:#f92672">=</span><span style="color:#ae81ff">22</span>, solver<span style="color:#f92672">=</span><span style="color:#e6db74">&#39;lbfgs&#39;</span>)
+</span></span></code></pre></td></tr></table>
+</div>
+</div><p>After fitting this model, the evaluating metrics were:</p>
 <ul>
 <li>Accuracy Score: 0.72818</li>
 <li>Precision Score: 0.49133</li>

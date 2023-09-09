@@ -452,19 +452,6 @@
     <loc>https://devmedeiros.com/tags/efficiency/</loc>
     <lastmod>2023-05-20T19:46:00-03:00</lastmod>
   </url><url>
-    <loc>https://devmedeiros.com/tags/ml/</loc>
-    <lastmod>2023-05-20T19:46:00-03:00</lastmod>
-    <xhtml:link
-                rel="alternate"
-                hreflang="pt"
-                href="https://devmedeiros.com/pt/tags/ml/"
-                />
-    <xhtml:link
-                rel="alternate"
-                hreflang="en"
-                href="https://devmedeiros.com/tags/ml/"
-                />
-  </url><url>
     <loc>https://devmedeiros.com/post/unlocking-machine-learning/</loc>
     <lastmod>2023-05-20T19:46:00-03:00</lastmod>
     <xhtml:link
@@ -476,6 +463,19 @@
                 rel="alternate"
                 hreflang="en"
                 href="https://devmedeiros.com/post/unlocking-machine-learning/"
+                />
+  </url><url>
+    <loc>https://devmedeiros.com/tags/ml/</loc>
+    <lastmod>2023-05-20T19:46:00-03:00</lastmod>
+    <xhtml:link
+                rel="alternate"
+                hreflang="pt"
+                href="https://devmedeiros.com/pt/tags/ml/"
+                />
+    <xhtml:link
+                rel="alternate"
+                hreflang="en"
+                href="https://devmedeiros.com/tags/ml/"
                 />
   </url><url>
     <loc>https://devmedeiros.com/tags/data-visualization/</loc>
