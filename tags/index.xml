@@ -10,7 +10,57 @@
       <link>https://devmedeiros.com/cover.png</link>
     </image>
     <generator>Hugo -- gohugo.io</generator>
-    <lastBuildDate>Sat, 05 Aug 2023 07:30:00 -0300</lastBuildDate><atom:link href="https://devmedeiros.com/tags/index.xml" rel="self" type="application/rss+xml" />
+    <lastBuildDate>Tue, 03 Oct 2023 20:51:00 -0300</lastBuildDate><atom:link href="https://devmedeiros.com/tags/index.xml" rel="self" type="application/rss+xml" />
+    <item>
+      <title>knowledge</title>
+      <link>https://devmedeiros.com/tags/knowledge/</link>
+      <pubDate>Tue, 03 Oct 2023 20:51:00 -0300</pubDate>
+      
+      <guid>https://devmedeiros.com/tags/knowledge/</guid>
+      <description></description>
+      <content:encoded><![CDATA[]]></content:encoded>
+    </item>
+    
+    <item>
+      <title>learning</title>
+      <link>https://devmedeiros.com/tags/learning/</link>
+      <pubDate>Tue, 03 Oct 2023 20:51:00 -0300</pubDate>
+      
+      <guid>https://devmedeiros.com/tags/learning/</guid>
+      <description></description>
+      <content:encoded><![CDATA[]]></content:encoded>
+    </item>
+    
+    <item>
+      <title>machine learning</title>
+      <link>https://devmedeiros.com/tags/machine-learning/</link>
+      <pubDate>Tue, 03 Oct 2023 20:51:00 -0300</pubDate>
+      
+      <guid>https://devmedeiros.com/tags/machine-learning/</guid>
+      <description></description>
+      <content:encoded><![CDATA[]]></content:encoded>
+    </item>
+    
+    <item>
+      <title>model</title>
+      <link>https://devmedeiros.com/tags/model/</link>
+      <pubDate>Tue, 03 Oct 2023 20:51:00 -0300</pubDate>
+      
+      <guid>https://devmedeiros.com/tags/model/</guid>
+      <description></description>
+      <content:encoded><![CDATA[]]></content:encoded>
+    </item>
+    
+    <item>
+      <title>review</title>
+      <link>https://devmedeiros.com/tags/review/</link>
+      <pubDate>Tue, 03 Oct 2023 20:51:00 -0300</pubDate>
+      
+      <guid>https://devmedeiros.com/tags/review/</guid>
+      <description></description>
+      <content:encoded><![CDATA[]]></content:encoded>
+    </item>
+    
     <item>
       <title>clap button</title>
       <link>https://devmedeiros.com/tags/clap-button/</link>
@@ -137,16 +187,6 @@
       <pubDate>Sun, 09 Jul 2023 16:32:00 -0300</pubDate>
       
       <guid>https://devmedeiros.com/tags/fraud-detection/</guid>
-      <description></description>
-      <content:encoded><![CDATA[]]></content:encoded>
-    </item>
-    
-    <item>
-      <title>machine learning</title>
-      <link>https://devmedeiros.com/tags/machine-learning/</link>
-      <pubDate>Sun, 09 Jul 2023 16:32:00 -0300</pubDate>
-      
-      <guid>https://devmedeiros.com/tags/machine-learning/</guid>
       <description></description>
       <content:encoded><![CDATA[]]></content:encoded>
     </item>
@@ -477,16 +517,6 @@
       <pubDate>Tue, 15 Nov 2022 08:01:00 -0300</pubDate>
       
       <guid>https://devmedeiros.com/tags/ethic/</guid>
-      <description></description>
-      <content:encoded><![CDATA[]]></content:encoded>
-    </item>
-    
-    <item>
-      <title>review</title>
-      <link>https://devmedeiros.com/tags/review/</link>
-      <pubDate>Tue, 15 Nov 2022 08:01:00 -0300</pubDate>
-      
-      <guid>https://devmedeiros.com/tags/review/</guid>
       <description></description>
       <content:encoded><![CDATA[]]></content:encoded>
     </item>

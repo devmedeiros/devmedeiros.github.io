@@ -1,0 +1,33 @@
+<?xml version="1.0" encoding="utf-8" standalone="yes"?>
+<rss version="2.0" xmlns:atom="http://www.w3.org/2005/Atom" xmlns:content="http://purl.org/rss/1.0/modules/content/">
+  <channel>
+    <title>learning on devmedeiros</title>
+    <link>https://devmedeiros.com/tags/learning/</link>
+    <description>Recent content in learning on devmedeiros</description>
+    <image>
+      <title>devmedeiros</title>
+      <url>https://devmedeiros.com/cover.png</url>
+      <link>https://devmedeiros.com/cover.png</link>
+    </image>
+    <generator>Hugo -- gohugo.io</generator>
+    <lastBuildDate>Tue, 03 Oct 2023 20:51:00 -0300</lastBuildDate><atom:link href="https://devmedeiros.com/tags/learning/index.xml" rel="self" type="application/rss+xml" />
+    <item>
+      <title>Keeping Up with the Latest in Machine Learning Models</title>
+      <link>https://devmedeiros.com/post/keeping-up-machine-learning/</link>
+      <pubDate>Tue, 03 Oct 2023 20:51:00 -0300</pubDate>
+      
+      <guid>https://devmedeiros.com/post/keeping-up-machine-learning/</guid>
+      <description>How to keep up with the latest disicoveries in Machine Learning Models and academic research.</description>
+      <content:encoded><![CDATA[<p>Every day new research regarding Machine Learning is being published, and it may seem impossible to keep up with all the new models and applications that people are using. So I want to talk about my two favorite ways to keep up with new research and know about what people are working on.</p>
+<h2 id="1---two-minute-papers">1 - Two Minute Papers</h2>
+<p>This YouTube <a href="https://www.youtube.com/@TwoMinutePapers">channel</a> is my favorite one to keep up with new research regarding Machine Learning. They are always releasing new videos talking about papers showing what researchers have just published, focusing mainly on the results, but always linking the original paper so you can read more about it.</p>
+<p>Two Minute Papers have been covering the OpenAI discoveries for quite some time now, I remember seeing videos about what ChatGPT could do, before it was open to the public, and it compared it with previous versions. So you can see the progress being made, even if you miss the older videos, they always make a comparison with previous versions when available.</p>
+<p>The videos are kept in an approachable language, so even beginners can understand the main points. Additionally, the channel also makes the videos entertaining, so it&rsquo;s easy to keep watching and stack on more knowledge.</p>
+<h2 id="2---papers-with-code">2 - Papers with Code</h2>
+<p><a href="paperswithcode.com">Papers with Code</a> is more than a website that just indexes papers. It makes it easier to find papers with code about Machine Learning, linking the papers, the source code, and even datasets.</p>
+<p>If you want to learn about the state-of-the-art of a specific topic in Machine Learning you can browse between tasks, for example, if you are looking for more information about Natural Language Processing, you can choose a specific task, like Named Entity Recognition, then you&rsquo;ll be able to see the current benchmarks, according to database, the best model, the model paper and source code. It also links the databases used to research the specific task you choose and it links libraries that you can use to apply the models.</p>
+]]></content:encoded>
+    </item>
+    
+  </channel>
+</rss>
