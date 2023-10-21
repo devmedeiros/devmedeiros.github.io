@@ -4,7 +4,7 @@ date: 2023-10-03 20:51:00 -0300
 categories: [Blog]
 tags: [machine learning, model, knowledge, learning, review]
 showtoc: false
-summary: How to keep up with the latest disicoveries in Machine Learning Models and academic research.
+summary: How to keep up with the latest discoveries in Machine Learning Models and academic research.
 cover:
     image: "https://ik.imagekit.io/devmedeiros/state-of-the-art_7IqFmxyCB.webp"
     alt: "multiple painting frames of multiple colors with use marks"
