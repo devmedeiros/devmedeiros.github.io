@@ -2,8 +2,24 @@
 <urlset xmlns="http://www.sitemaps.org/schemas/sitemap/0.9"
   xmlns:xhtml="http://www.w3.org/1999/xhtml">
   <url>
+    <loc>https://devmedeiros.com/pt/post/keeping-up-machine-learning/</loc>
+    <lastmod>2023-10-03T20:51:00-03:00</lastmod>
+    <xhtml:link
+                rel="alternate"
+                hreflang="en"
+                href="https://devmedeiros.com/post/keeping-up-machine-learning/"
+                />
+    <xhtml:link
+                rel="alternate"
+                hreflang="pt"
+                href="https://devmedeiros.com/pt/post/keeping-up-machine-learning/"
+                />
+  </url><url>
+    <loc>https://devmedeiros.com/pt/tags/aprendizado-de-m%C3%A1quina/</loc>
+    <lastmod>2023-10-03T20:51:00-03:00</lastmod>
+  </url><url>
     <loc>https://devmedeiros.com/pt/categories/blog/</loc>
-    <lastmod>2023-08-05T07:30:00-03:00</lastmod>
+    <lastmod>2023-10-03T20:51:00-03:00</lastmod>
     <xhtml:link
                 rel="alternate"
                 hreflang="en"
@@ -16,7 +32,7 @@
                 />
   </url><url>
     <loc>https://devmedeiros.com/pt/categories/</loc>
-    <lastmod>2023-08-05T07:30:00-03:00</lastmod>
+    <lastmod>2023-10-03T20:51:00-03:00</lastmod>
     <xhtml:link
                 rel="alternate"
                 hreflang="en"
@@ -26,6 +42,77 @@
                 rel="alternate"
                 hreflang="pt"
                 href="https://devmedeiros.com/pt/categories/"
+                />
+  </url><url>
+    <loc>https://devmedeiros.com/pt/tags/conhecimento/</loc>
+    <lastmod>2023-10-03T20:51:00-03:00</lastmod>
+  </url><url>
+    <loc>https://devmedeiros.com/pt/</loc>
+    <lastmod>2023-10-03T20:51:00-03:00</lastmod>
+    <xhtml:link
+                rel="alternate"
+                hreflang="en"
+                href="https://devmedeiros.com/"
+                />
+    <xhtml:link
+                rel="alternate"
+                hreflang="pt"
+                href="https://devmedeiros.com/pt/"
+                />
+  </url><url>
+    <loc>https://devmedeiros.com/pt/tags/machine-learning/</loc>
+    <lastmod>2023-10-03T20:51:00-03:00</lastmod>
+    <xhtml:link
+                rel="alternate"
+                hreflang="en"
+                href="https://devmedeiros.com/tags/machine-learning/"
+                />
+    <xhtml:link
+                rel="alternate"
+                hreflang="pt"
+                href="https://devmedeiros.com/pt/tags/machine-learning/"
+                />
+  </url><url>
+    <loc>https://devmedeiros.com/pt/tags/modelo/</loc>
+    <lastmod>2023-10-03T20:51:00-03:00</lastmod>
+  </url><url>
+    <loc>https://devmedeiros.com/pt/post/</loc>
+    <lastmod>2023-10-03T20:51:00-03:00</lastmod>
+    <xhtml:link
+                rel="alternate"
+                hreflang="en"
+                href="https://devmedeiros.com/post/"
+                />
+    <xhtml:link
+                rel="alternate"
+                hreflang="pt"
+                href="https://devmedeiros.com/pt/post/"
+                />
+  </url><url>
+    <loc>https://devmedeiros.com/pt/tags/review/</loc>
+    <lastmod>2023-10-03T20:51:00-03:00</lastmod>
+    <xhtml:link
+                rel="alternate"
+                hreflang="en"
+                href="https://devmedeiros.com/tags/review/"
+                />
+    <xhtml:link
+                rel="alternate"
+                hreflang="pt"
+                href="https://devmedeiros.com/pt/tags/review/"
+                />
+  </url><url>
+    <loc>https://devmedeiros.com/pt/tags/</loc>
+    <lastmod>2023-10-03T20:51:00-03:00</lastmod>
+    <xhtml:link
+                rel="alternate"
+                hreflang="en"
+                href="https://devmedeiros.com/tags/"
+                />
+    <xhtml:link
+                rel="alternate"
+                hreflang="pt"
+                href="https://devmedeiros.com/pt/tags/"
                 />
   </url><url>
     <loc>https://devmedeiros.com/pt/tags/clap-button/</loc>
@@ -52,19 +139,6 @@
                 rel="alternate"
                 hreflang="pt"
                 href="https://devmedeiros.com/pt/post/like-button-static-website-lyket/"
-                />
-  </url><url>
-    <loc>https://devmedeiros.com/pt/</loc>
-    <lastmod>2023-08-05T07:30:00-03:00</lastmod>
-    <xhtml:link
-                rel="alternate"
-                hreflang="en"
-                href="https://devmedeiros.com/"
-                />
-    <xhtml:link
-                rel="alternate"
-                hreflang="pt"
-                href="https://devmedeiros.com/pt/"
                 />
   </url><url>
     <loc>https://devmedeiros.com/pt/tags/hugo/</loc>
@@ -132,19 +206,6 @@
                 href="https://devmedeiros.com/pt/tags/medium-clap/"
                 />
   </url><url>
-    <loc>https://devmedeiros.com/pt/post/</loc>
-    <lastmod>2023-08-05T07:30:00-03:00</lastmod>
-    <xhtml:link
-                rel="alternate"
-                hreflang="en"
-                href="https://devmedeiros.com/post/"
-                />
-    <xhtml:link
-                rel="alternate"
-                hreflang="pt"
-                href="https://devmedeiros.com/pt/post/"
-                />
-  </url><url>
     <loc>https://devmedeiros.com/pt/tags/static-site/</loc>
     <lastmod>2023-08-05T07:30:00-03:00</lastmod>
     <xhtml:link
@@ -156,19 +217,6 @@
                 rel="alternate"
                 hreflang="pt"
                 href="https://devmedeiros.com/pt/tags/static-site/"
-                />
-  </url><url>
-    <loc>https://devmedeiros.com/pt/tags/</loc>
-    <lastmod>2023-08-05T07:30:00-03:00</lastmod>
-    <xhtml:link
-                rel="alternate"
-                hreflang="en"
-                href="https://devmedeiros.com/tags/"
-                />
-    <xhtml:link
-                rel="alternate"
-                hreflang="pt"
-                href="https://devmedeiros.com/pt/tags/"
                 />
   </url><url>
     <loc>https://devmedeiros.com/pt/tags/tutorial/</loc>
@@ -343,9 +391,6 @@
                 href="https://devmedeiros.com/pt/tags/ai/"
                 />
   </url><url>
-    <loc>https://devmedeiros.com/pt/tags/aprendizado-de-m%C3%A1quina/</loc>
-    <lastmod>2023-05-20T19:46:00-03:00</lastmod>
-  </url><url>
     <loc>https://devmedeiros.com/pt/post/unlocking-machine-learning/</loc>
     <lastmod>2023-05-20T19:46:00-03:00</lastmod>
     <xhtml:link
@@ -442,19 +487,6 @@
   </url><url>
     <loc>https://devmedeiros.com/pt/tags/efici%C3%AAncia/</loc>
     <lastmod>2023-05-20T19:46:00-03:00</lastmod>
-  </url><url>
-    <loc>https://devmedeiros.com/pt/tags/machine-learning/</loc>
-    <lastmod>2023-05-20T19:46:00-03:00</lastmod>
-    <xhtml:link
-                rel="alternate"
-                hreflang="en"
-                href="https://devmedeiros.com/tags/machine-learning/"
-                />
-    <xhtml:link
-                rel="alternate"
-                hreflang="pt"
-                href="https://devmedeiros.com/pt/tags/machine-learning/"
-                />
   </url><url>
     <loc>https://devmedeiros.com/pt/tags/ml/</loc>
     <lastmod>2023-05-20T19:46:00-03:00</lastmod>
@@ -709,19 +741,6 @@
                 rel="alternate"
                 hreflang="pt"
                 href="https://devmedeiros.com/pt/post/choose-the-best-graph/"
-                />
-  </url><url>
-    <loc>https://devmedeiros.com/pt/tags/review/</loc>
-    <lastmod>2023-07-30T10:18:00-03:00</lastmod>
-    <xhtml:link
-                rel="alternate"
-                hreflang="en"
-                href="https://devmedeiros.com/tags/review/"
-                />
-    <xhtml:link
-                rel="alternate"
-                hreflang="pt"
-                href="https://devmedeiros.com/pt/tags/review/"
                 />
   </url><url>
     <loc>https://devmedeiros.com/pt/tags/an%C3%A1lise-de-dados/</loc>

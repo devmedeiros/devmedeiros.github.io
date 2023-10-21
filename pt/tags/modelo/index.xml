@@ -1,0 +1,33 @@
+<?xml version="1.0" encoding="utf-8" standalone="yes"?>
+<rss version="2.0" xmlns:atom="http://www.w3.org/2005/Atom" xmlns:content="http://purl.org/rss/1.0/modules/content/">
+  <channel>
+    <title>modelo on devmedeiros</title>
+    <link>https://devmedeiros.com/pt/tags/modelo/</link>
+    <description>Recent content in modelo on devmedeiros</description>
+    <image>
+      <title>devmedeiros</title>
+      <url>https://devmedeiros.com/cover.png</url>
+      <link>https://devmedeiros.com/cover.png</link>
+    </image>
+    <generator>Hugo -- gohugo.io</generator>
+    <lastBuildDate>Tue, 03 Oct 2023 20:51:00 -0300</lastBuildDate><atom:link href="https://devmedeiros.com/pt/tags/modelo/index.xml" rel="self" type="application/rss+xml" />
+    <item>
+      <title>Acompanhando as Novidades em Modelos de Aprendizado de Máquina</title>
+      <link>https://devmedeiros.com/pt/post/keeping-up-machine-learning/</link>
+      <pubDate>Tue, 03 Oct 2023 20:51:00 -0300</pubDate>
+      
+      <guid>https://devmedeiros.com/pt/post/keeping-up-machine-learning/</guid>
+      <description>Como se manter atualizado com as últimas descobertas em modelos de aprendizado de máquina e pesquisas acadêmicas.</description>
+      <content:encoded><![CDATA[<p>Todos os dias novas pesquisas sobre Aprendizado de Máquina são publicadas e pode parecer impossível acompanhar todos os novos modelos e aplicações que as pessoas estão usando. Então, quero falar sobre minhas duas formas favoritas de acompanhar as novas pesquisas e saber sobre o que as pessoas estão trabalhando.</p>
+<h2 id="1---two-minute-papers">1 - Two Minute Papers</h2>
+<p>Este <a href="https://www.youtube.com/@TwoMinutePapers">canal</a> do YouTube é o meu favorito para acompanhar pesquisas acadêmicas sobre aprendizado de máquina. Eles estão sempre lançando novos vídeos falando sobre artigos mostrando o que os pesquisadores acabaram de publicar, focando principalmente nos resultados, mas sempre vinculando o artigo original para que você possa ler mais sobre ele.</p>
+<p>O <em>Two Minute Papers</em> já cobre as descobertas da OpenAI há algum tempo, lembro-me de ter visto vídeos sobre o que o ChatGPT poderia fazer, antes de ser disponibilizado para o público geral, e havia comparações com versões anteriores dele. Então você pode acompanhar o progresso sendo feito, mesmo que perca vídeos antigos, eles sempre fazem comparações com versões anteriores, quando disponíveis.</p>
+<p>Os vídeos são mantidos em uma linguagem acessível (em inglês), para que até mesmo iniciantes na área possam entender os pontos principais. Além disso, o canal também deixa os vídeos divertidos, por isso é fácil continuar assistindo e acumular mais conhecimento.</p>
+<h2 id="2---papers-with-code">2 - Papers with Code</h2>
+<p><a href="paperswithcode.com">Papers with Code</a> é mais do que um site que apenas indexa artigos. Ele torna mais fácil encontrar artigos com códigos sobre Aprendizado de Máquina, vinculando os artigos, o código-fonte e até mesmo conjuntos de dados.</p>
+<p>Se você quiser aprender sobre o estado da arte de um tópico específico em Aprendizado de Máquina você pode navegar entre tarefas, por exemplo, se estiver procurando mais informações sobre Processamento de Linguagem Natual, você pode escolher uma tarefa específica, como Reconhecimento de Entidade Mencionada (<em>Named Entity Recognition</em>), você poderá ver os <em>benchmarks</em> atuais, de acordo com o banco de dados, o melhor modelo, o artigo do modelo e o código-fonte. Ele também vincula os bancos de dados usados para pesquisar a tarefa específica escolhida e vincula bibliotecas que você pode usar para aplicar os modelos.</p>
+]]></content:encoded>
+    </item>
+    
+  </channel>
+</rss>

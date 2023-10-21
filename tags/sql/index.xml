@@ -773,7 +773,7 @@
 		
 
 		<a class="nav-item nav-link  active "
-		   id="nav-efcdba" data-toggle="tab" href="#efcdba"
+		   id="nav-dfaebc" data-toggle="tab" href="#dfaebc"
 		   role="tab" aria-controls="nav-home" aria-selected="true">Alura Films</a>
 
 		
@@ -785,7 +785,7 @@
 		
 
 		<a class="nav-item nav-link "
-		   id="nav-fbdeca" data-toggle="tab" href="#fbdeca"
+		   id="nav-efdabc" data-toggle="tab" href="#efdabc"
 		   role="tab" aria-controls="nav-home" aria-selected="true">Alura Skimó</a>
 
 		
@@ -846,7 +846,7 @@
 
 
 
-<div class="tab-pane fade show active " id="efcdba" role="tabpanel" aria-labelledby="nav-1">
+<div class="tab-pane fade show active " id="dfaebc" role="tabpanel" aria-labelledby="nav-1">
 
 	
 
@@ -978,7 +978,7 @@
 
 
 
-<div class="tab-pane fade show " id="fbdeca" role="tabpanel" aria-labelledby="nav-1">
+<div class="tab-pane fade show " id="efdabc" role="tabpanel" aria-labelledby="nav-1">
 
 	
 

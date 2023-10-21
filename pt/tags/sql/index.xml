@@ -775,19 +775,19 @@
 		
 
 		<a class="nav-item nav-link  active "
-		   id="nav-fcadeb" data-toggle="tab" href="#fcadeb"
+		   id="nav-efdabc" data-toggle="tab" href="#efdabc"
 		   role="tab" aria-controls="nav-home" aria-selected="true">Alura Films</a>
 
 		
 
 		<a class="nav-item nav-link "
-		   id="nav-afbdce" data-toggle="tab" href="#afbdce"
+		   id="nav-febcad" data-toggle="tab" href="#febcad"
 		   role="tab" aria-controls="nav-home" aria-selected="true">Alura Food</a>
 
 		
 
 		<a class="nav-item nav-link "
-		   id="nav-dcbfae" data-toggle="tab" href="#dcbfae"
+		   id="nav-badcfe" data-toggle="tab" href="#badcfe"
 		   role="tab" aria-controls="nav-home" aria-selected="true">Alura Skimó</a>
 
 		
@@ -848,7 +848,7 @@
 
 
 
-<div class="tab-pane fade show active " id="fcadeb" role="tabpanel" aria-labelledby="nav-1">
+<div class="tab-pane fade show active " id="efdabc" role="tabpanel" aria-labelledby="nav-1">
 
 	
 
@@ -914,7 +914,7 @@
 
 
 
-<div class="tab-pane fade show " id="afbdce" role="tabpanel" aria-labelledby="nav-1">
+<div class="tab-pane fade show " id="febcad" role="tabpanel" aria-labelledby="nav-1">
 
 	
 
@@ -980,7 +980,7 @@
 
 
 
-<div class="tab-pane fade show " id="dcbfae" role="tabpanel" aria-labelledby="nav-1">
+<div class="tab-pane fade show " id="badcfe" role="tabpanel" aria-labelledby="nav-1">
 
 	
 
