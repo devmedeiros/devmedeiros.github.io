@@ -10,7 +10,77 @@
       <link>https://devmedeiros.com/cover.png</link>
     </image>
     <generator>Hugo -- gohugo.io</generator>
-    <lastBuildDate>Tue, 03 Oct 2023 20:51:00 -0300</lastBuildDate><atom:link href="https://devmedeiros.com/tags/index.xml" rel="self" type="application/rss+xml" />
+    <lastBuildDate>Mon, 20 Nov 2023 18:45:00 -0300</lastBuildDate><atom:link href="https://devmedeiros.com/tags/index.xml" rel="self" type="application/rss+xml" />
+    <item>
+      <title>analytics engineer</title>
+      <link>https://devmedeiros.com/tags/analytics-engineer/</link>
+      <pubDate>Mon, 20 Nov 2023 18:45:00 -0300</pubDate>
+      
+      <guid>https://devmedeiros.com/tags/analytics-engineer/</guid>
+      <description></description>
+      <content:encoded><![CDATA[]]></content:encoded>
+    </item>
+    
+    <item>
+      <title>assertr</title>
+      <link>https://devmedeiros.com/tags/assertr/</link>
+      <pubDate>Mon, 20 Nov 2023 18:45:00 -0300</pubDate>
+      
+      <guid>https://devmedeiros.com/tags/assertr/</guid>
+      <description></description>
+      <content:encoded><![CDATA[]]></content:encoded>
+    </item>
+    
+    <item>
+      <title>data engineering</title>
+      <link>https://devmedeiros.com/tags/data-engineering/</link>
+      <pubDate>Mon, 20 Nov 2023 18:45:00 -0300</pubDate>
+      
+      <guid>https://devmedeiros.com/tags/data-engineering/</guid>
+      <description></description>
+      <content:encoded><![CDATA[]]></content:encoded>
+    </item>
+    
+    <item>
+      <title>data testing</title>
+      <link>https://devmedeiros.com/tags/data-testing/</link>
+      <pubDate>Mon, 20 Nov 2023 18:45:00 -0300</pubDate>
+      
+      <guid>https://devmedeiros.com/tags/data-testing/</guid>
+      <description></description>
+      <content:encoded><![CDATA[]]></content:encoded>
+    </item>
+    
+    <item>
+      <title>database</title>
+      <link>https://devmedeiros.com/tags/database/</link>
+      <pubDate>Mon, 20 Nov 2023 18:45:00 -0300</pubDate>
+      
+      <guid>https://devmedeiros.com/tags/database/</guid>
+      <description></description>
+      <content:encoded><![CDATA[]]></content:encoded>
+    </item>
+    
+    <item>
+      <title>great expectations</title>
+      <link>https://devmedeiros.com/tags/great-expectations/</link>
+      <pubDate>Mon, 20 Nov 2023 18:45:00 -0300</pubDate>
+      
+      <guid>https://devmedeiros.com/tags/great-expectations/</guid>
+      <description></description>
+      <content:encoded><![CDATA[]]></content:encoded>
+    </item>
+    
+    <item>
+      <title>SQL</title>
+      <link>https://devmedeiros.com/tags/sql/</link>
+      <pubDate>Mon, 20 Nov 2023 18:45:00 -0300</pubDate>
+      
+      <guid>https://devmedeiros.com/tags/sql/</guid>
+      <description></description>
+      <content:encoded><![CDATA[]]></content:encoded>
+    </item>
+    
     <item>
       <title>knowledge</title>
       <link>https://devmedeiros.com/tags/knowledge/</link>
@@ -202,16 +272,6 @@
     </item>
     
     <item>
-      <title>database</title>
-      <link>https://devmedeiros.com/tags/database/</link>
-      <pubDate>Wed, 31 May 2023 21:54:00 -0300</pubDate>
-      
-      <guid>https://devmedeiros.com/tags/database/</guid>
-      <description></description>
-      <content:encoded><![CDATA[]]></content:encoded>
-    </item>
-    
-    <item>
       <title>git</title>
       <link>https://devmedeiros.com/tags/git/</link>
       <pubDate>Wed, 31 May 2023 21:54:00 -0300</pubDate>
@@ -267,16 +327,6 @@
       <pubDate>Wed, 31 May 2023 21:54:00 -0300</pubDate>
       
       <guid>https://devmedeiros.com/tags/scrapping/</guid>
-      <description></description>
-      <content:encoded><![CDATA[]]></content:encoded>
-    </item>
-    
-    <item>
-      <title>SQL</title>
-      <link>https://devmedeiros.com/tags/sql/</link>
-      <pubDate>Wed, 31 May 2023 21:54:00 -0300</pubDate>
-      
-      <guid>https://devmedeiros.com/tags/sql/</guid>
       <description></description>
       <content:encoded><![CDATA[]]></content:encoded>
     </item>
@@ -552,31 +602,11 @@
     </item>
     
     <item>
-      <title>analytics engineer</title>
-      <link>https://devmedeiros.com/tags/analytics-engineer/</link>
-      <pubDate>Tue, 23 Aug 2022 22:57:00 -0300</pubDate>
-      
-      <guid>https://devmedeiros.com/tags/analytics-engineer/</guid>
-      <description></description>
-      <content:encoded><![CDATA[]]></content:encoded>
-    </item>
-    
-    <item>
       <title>case</title>
       <link>https://devmedeiros.com/tags/case/</link>
       <pubDate>Tue, 23 Aug 2022 22:57:00 -0300</pubDate>
       
       <guid>https://devmedeiros.com/tags/case/</guid>
-      <description></description>
-      <content:encoded><![CDATA[]]></content:encoded>
-    </item>
-    
-    <item>
-      <title>data engineering</title>
-      <link>https://devmedeiros.com/tags/data-engineering/</link>
-      <pubDate>Tue, 23 Aug 2022 22:57:00 -0300</pubDate>
-      
-      <guid>https://devmedeiros.com/tags/data-engineering/</guid>
       <description></description>
       <content:encoded><![CDATA[]]></content:encoded>
     </item>
