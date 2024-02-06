@@ -1,16 +1,16 @@
 <?xml version="1.0" encoding="utf-8" standalone="yes"?>
 <rss version="2.0" xmlns:atom="http://www.w3.org/2005/Atom" xmlns:content="http://purl.org/rss/1.0/modules/content/">
   <channel>
-    <title>scrapping on devmedeiros</title>
-    <link>https://devmedeiros.com/pt/tags/scrapping/</link>
-    <description>Recent content in scrapping on devmedeiros</description>
+    <title>scraping on devmedeiros</title>
+    <link>https://devmedeiros.com/pt/tags/scraping/</link>
+    <description>Recent content in scraping on devmedeiros</description>
     <image>
       <title>devmedeiros</title>
       <url>https://devmedeiros.com/cover.png</url>
       <link>https://devmedeiros.com/cover.png</link>
     </image>
     <generator>Hugo -- gohugo.io</generator>
-    <lastBuildDate>Wed, 31 May 2023 21:54:00 -0300</lastBuildDate><atom:link href="https://devmedeiros.com/pt/tags/scrapping/index.xml" rel="self" type="application/rss+xml" />
+    <lastBuildDate>Wed, 31 May 2023 21:54:00 -0300</lastBuildDate><atom:link href="https://devmedeiros.com/pt/tags/scraping/index.xml" rel="self" type="application/rss+xml" />
     <item>
       <title>Como Usar o Banco SQLite com o Github Actions</title>
       <link>https://devmedeiros.com/pt/post/sqlite-database-github-actions/</link>

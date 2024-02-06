@@ -10,7 +10,47 @@
       <link>https://devmedeiros.com/cover.png</link>
     </image>
     <generator>Hugo -- gohugo.io</generator>
-    <lastBuildDate>Mon, 20 Nov 2023 18:45:00 -0300</lastBuildDate><atom:link href="https://devmedeiros.com/tags/index.xml" rel="self" type="application/rss+xml" />
+    <lastBuildDate>Mon, 05 Feb 2024 22:32:00 -0300</lastBuildDate><atom:link href="https://devmedeiros.com/tags/index.xml" rel="self" type="application/rss+xml" />
+    <item>
+      <title>data science</title>
+      <link>https://devmedeiros.com/tags/data-science/</link>
+      <pubDate>Mon, 05 Feb 2024 22:32:00 -0300</pubDate>
+      
+      <guid>https://devmedeiros.com/tags/data-science/</guid>
+      <description></description>
+      <content:encoded><![CDATA[]]></content:encoded>
+    </item>
+    
+    <item>
+      <title>knowledge</title>
+      <link>https://devmedeiros.com/tags/knowledge/</link>
+      <pubDate>Mon, 05 Feb 2024 22:32:00 -0300</pubDate>
+      
+      <guid>https://devmedeiros.com/tags/knowledge/</guid>
+      <description></description>
+      <content:encoded><![CDATA[]]></content:encoded>
+    </item>
+    
+    <item>
+      <title>multivariate analysis</title>
+      <link>https://devmedeiros.com/tags/multivariate-analysis/</link>
+      <pubDate>Mon, 05 Feb 2024 22:32:00 -0300</pubDate>
+      
+      <guid>https://devmedeiros.com/tags/multivariate-analysis/</guid>
+      <description></description>
+      <content:encoded><![CDATA[]]></content:encoded>
+    </item>
+    
+    <item>
+      <title>statistics</title>
+      <link>https://devmedeiros.com/tags/statistics/</link>
+      <pubDate>Mon, 05 Feb 2024 22:32:00 -0300</pubDate>
+      
+      <guid>https://devmedeiros.com/tags/statistics/</guid>
+      <description></description>
+      <content:encoded><![CDATA[]]></content:encoded>
+    </item>
+    
     <item>
       <title>analytics engineer</title>
       <link>https://devmedeiros.com/tags/analytics-engineer/</link>
@@ -77,16 +117,6 @@
       <pubDate>Mon, 20 Nov 2023 18:45:00 -0300</pubDate>
       
       <guid>https://devmedeiros.com/tags/sql/</guid>
-      <description></description>
-      <content:encoded><![CDATA[]]></content:encoded>
-    </item>
-    
-    <item>
-      <title>knowledge</title>
-      <link>https://devmedeiros.com/tags/knowledge/</link>
-      <pubDate>Tue, 03 Oct 2023 20:51:00 -0300</pubDate>
-      
-      <guid>https://devmedeiros.com/tags/knowledge/</guid>
       <description></description>
       <content:encoded><![CDATA[]]></content:encoded>
     </item>
@@ -322,11 +352,11 @@
     </item>
     
     <item>
-      <title>scrapping</title>
-      <link>https://devmedeiros.com/tags/scrapping/</link>
+      <title>scraping</title>
+      <link>https://devmedeiros.com/tags/scraping/</link>
       <pubDate>Wed, 31 May 2023 21:54:00 -0300</pubDate>
       
-      <guid>https://devmedeiros.com/tags/scrapping/</guid>
+      <guid>https://devmedeiros.com/tags/scraping/</guid>
       <description></description>
       <content:encoded><![CDATA[]]></content:encoded>
     </item>
@@ -377,16 +407,6 @@
       <pubDate>Sat, 20 May 2023 19:46:00 -0300</pubDate>
       
       <guid>https://devmedeiros.com/tags/data-pipeline/</guid>
-      <description></description>
-      <content:encoded><![CDATA[]]></content:encoded>
-    </item>
-    
-    <item>
-      <title>data science</title>
-      <link>https://devmedeiros.com/tags/data-science/</link>
-      <pubDate>Sat, 20 May 2023 19:46:00 -0300</pubDate>
-      
-      <guid>https://devmedeiros.com/tags/data-science/</guid>
       <description></description>
       <content:encoded><![CDATA[]]></content:encoded>
     </item>
@@ -587,16 +607,6 @@
       <pubDate>Sat, 01 Oct 2022 16:14:00 -0300</pubDate>
       
       <guid>https://devmedeiros.com/tags/privacy/</guid>
-      <description></description>
-      <content:encoded><![CDATA[]]></content:encoded>
-    </item>
-    
-    <item>
-      <title>scraping</title>
-      <link>https://devmedeiros.com/tags/scraping/</link>
-      <pubDate>Sat, 01 Oct 2022 16:14:00 -0300</pubDate>
-      
-      <guid>https://devmedeiros.com/tags/scraping/</guid>
       <description></description>
       <content:encoded><![CDATA[]]></content:encoded>
     </item>

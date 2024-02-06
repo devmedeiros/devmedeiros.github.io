@@ -10,7 +10,26 @@
       <link>https://devmedeiros.com/cover.png</link>
     </image>
     <generator>Hugo -- gohugo.io</generator>
-    <lastBuildDate>Mon, 20 Nov 2023 18:45:00 -0300</lastBuildDate><atom:link href="https://devmedeiros.com/pt/post/index.xml" rel="self" type="application/rss+xml" />
+    <lastBuildDate>Mon, 05 Feb 2024 22:32:00 -0300</lastBuildDate><atom:link href="https://devmedeiros.com/pt/post/index.xml" rel="self" type="application/rss+xml" />
+    <item>
+      <title>Análise Multivariada para Ciência de Dados</title>
+      <link>https://devmedeiros.com/pt/post/multivariate-analysis/</link>
+      <pubDate>Mon, 05 Feb 2024 22:32:00 -0300</pubDate>
+      
+      <guid>https://devmedeiros.com/pt/post/multivariate-analysis/</guid>
+      <description>As duas técnicas mais importantes de análise multivariada para ciência de dados.</description>
+      <content:encoded><![CDATA[<h2 id="o-que-é-análise-multivariada">O que é Análise Multivariada?</h2>
+<p>A análise multivariada é um ramo de métodos estatísticos que permite analisar a distribuição de duas ou mais variáveis. Na estatística ela pode ser utilizada para diminuir a dimensionalidade dos dados, simplificando a variabilidade, ou para técnicas de inferência.</p>
+<h2 id="análise-de-componentes-principais">Análise de Componentes Principais</h2>
+<p>A Análise de Componentes Principais, também conhecida como PCA (<em>Principal Component Analysis</em>), constitui um método de análise multivariada cujo propósito é a redução da dimensionalidade dos dados. Essa redução se dá pela diminuição do número de colunas ou variáveis, mantendo, ao mesmo tempo, uma porcentagem significativa da variabilidade presente nos dados.</p>
+<p>A utilização dessa técnica torna-se interessante quando se lida com um grande número de variáveis de interesse que se deseja agrupar e correlacionar. Por exemplo, uma empresa de telecomunicações pode dispor de diversas informações sobre seus clientes, tais como idade, renda, profissão, tempo de vinculo à empresa, produtos/serviços adquiridos, entre outros. Muitas vezes, o analista deseja aproveitar todas essas informações, evitando, no entanto, o <em>overfitting</em>. Nesse contexto, a aplicação do PCA surge como uma ferramenta valiosa, permitindo a redução da dimensionalidade enquanto preserva a variabilidade intrínseca dessas variáveis.</p>
+<h2 id="análise-de-cluster">Análise de Cluster</h2>
+<p>A análise de cluster, também chamada de clusterização, é uma técnica que tem como objetivo agrupar os indivíduos ou variáveis com características semelhantes. Existe diversos algoritmos para agrupamento, mas o mais comum e mais utilizado é o K-médias (K-means).</p>
+<p>Os clusters podem ser utilizados para criar métricas e indíces que podem ser usados para avaliar um negócio ou até para construir modelos de previsões.</p>
+<p>Essas ferramentas são fundamentais para cientistas e analistas que buscam extrair <em>insights</em> valiosos, evitando o <em>overfitting</em>, e promovem uma compreensão mais profunda da estrutura dos dados multivariados.</p>
+]]></content:encoded>
+    </item>
+    
     <item>
       <title>Navegando Data Testing</title>
       <link>https://devmedeiros.com/pt/post/navigating-data-testing/</link>

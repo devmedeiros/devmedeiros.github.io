@@ -10,7 +10,57 @@
       <link>https://devmedeiros.com/cover.png</link>
     </image>
     <generator>Hugo -- gohugo.io</generator>
-    <lastBuildDate>Mon, 20 Nov 2023 18:45:00 -0300</lastBuildDate><atom:link href="https://devmedeiros.com/pt/tags/index.xml" rel="self" type="application/rss+xml" />
+    <lastBuildDate>Mon, 05 Feb 2024 22:32:00 -0300</lastBuildDate><atom:link href="https://devmedeiros.com/pt/tags/index.xml" rel="self" type="application/rss+xml" />
+    <item>
+      <title>análise multivariada</title>
+      <link>https://devmedeiros.com/pt/tags/an%C3%A1lise-multivariada/</link>
+      <pubDate>Mon, 05 Feb 2024 22:32:00 -0300</pubDate>
+      
+      <guid>https://devmedeiros.com/pt/tags/an%C3%A1lise-multivariada/</guid>
+      <description></description>
+      <content:encoded><![CDATA[]]></content:encoded>
+    </item>
+    
+    <item>
+      <title>ciência de dados</title>
+      <link>https://devmedeiros.com/pt/tags/ci%C3%AAncia-de-dados/</link>
+      <pubDate>Mon, 05 Feb 2024 22:32:00 -0300</pubDate>
+      
+      <guid>https://devmedeiros.com/pt/tags/ci%C3%AAncia-de-dados/</guid>
+      <description></description>
+      <content:encoded><![CDATA[]]></content:encoded>
+    </item>
+    
+    <item>
+      <title>conhecimento</title>
+      <link>https://devmedeiros.com/pt/tags/conhecimento/</link>
+      <pubDate>Mon, 05 Feb 2024 22:32:00 -0300</pubDate>
+      
+      <guid>https://devmedeiros.com/pt/tags/conhecimento/</guid>
+      <description></description>
+      <content:encoded><![CDATA[]]></content:encoded>
+    </item>
+    
+    <item>
+      <title>data science</title>
+      <link>https://devmedeiros.com/pt/tags/data-science/</link>
+      <pubDate>Mon, 05 Feb 2024 22:32:00 -0300</pubDate>
+      
+      <guid>https://devmedeiros.com/pt/tags/data-science/</guid>
+      <description></description>
+      <content:encoded><![CDATA[]]></content:encoded>
+    </item>
+    
+    <item>
+      <title>estatística</title>
+      <link>https://devmedeiros.com/pt/tags/estat%C3%ADstica/</link>
+      <pubDate>Mon, 05 Feb 2024 22:32:00 -0300</pubDate>
+      
+      <guid>https://devmedeiros.com/pt/tags/estat%C3%ADstica/</guid>
+      <description></description>
+      <content:encoded><![CDATA[]]></content:encoded>
+    </item>
+    
     <item>
       <title>analytics engineer</title>
       <link>https://devmedeiros.com/pt/tags/analytics-engineer/</link>
@@ -127,16 +177,6 @@
       <pubDate>Tue, 03 Oct 2023 20:51:00 -0300</pubDate>
       
       <guid>https://devmedeiros.com/pt/tags/aprendizado-de-m%C3%A1quina/</guid>
-      <description></description>
-      <content:encoded><![CDATA[]]></content:encoded>
-    </item>
-    
-    <item>
-      <title>conhecimento</title>
-      <link>https://devmedeiros.com/pt/tags/conhecimento/</link>
-      <pubDate>Tue, 03 Oct 2023 20:51:00 -0300</pubDate>
-      
-      <guid>https://devmedeiros.com/pt/tags/conhecimento/</guid>
       <description></description>
       <content:encoded><![CDATA[]]></content:encoded>
     </item>
@@ -312,11 +352,11 @@
     </item>
     
     <item>
-      <title>scrapping</title>
-      <link>https://devmedeiros.com/pt/tags/scrapping/</link>
+      <title>scraping</title>
+      <link>https://devmedeiros.com/pt/tags/scraping/</link>
       <pubDate>Wed, 31 May 2023 21:54:00 -0300</pubDate>
       
-      <guid>https://devmedeiros.com/pt/tags/scrapping/</guid>
+      <guid>https://devmedeiros.com/pt/tags/scraping/</guid>
       <description></description>
       <content:encoded><![CDATA[]]></content:encoded>
     </item>
@@ -352,16 +392,6 @@
     </item>
     
     <item>
-      <title>ciência de dados</title>
-      <link>https://devmedeiros.com/pt/tags/ci%C3%AAncia-de-dados/</link>
-      <pubDate>Sat, 20 May 2023 19:46:00 -0300</pubDate>
-      
-      <guid>https://devmedeiros.com/pt/tags/ci%C3%AAncia-de-dados/</guid>
-      <description></description>
-      <content:encoded><![CDATA[]]></content:encoded>
-    </item>
-    
-    <item>
       <title>clean data</title>
       <link>https://devmedeiros.com/pt/tags/clean-data/</link>
       <pubDate>Sat, 20 May 2023 19:46:00 -0300</pubDate>
@@ -377,16 +407,6 @@
       <pubDate>Sat, 20 May 2023 19:46:00 -0300</pubDate>
       
       <guid>https://devmedeiros.com/pt/tags/data-pipeline/</guid>
-      <description></description>
-      <content:encoded><![CDATA[]]></content:encoded>
-    </item>
-    
-    <item>
-      <title>data science</title>
-      <link>https://devmedeiros.com/pt/tags/data-science/</link>
-      <pubDate>Sat, 20 May 2023 19:46:00 -0300</pubDate>
-      
-      <guid>https://devmedeiros.com/pt/tags/data-science/</guid>
       <description></description>
       <content:encoded><![CDATA[]]></content:encoded>
     </item>
@@ -837,16 +857,6 @@
       <pubDate>Fri, 29 Apr 2022 11:14:00 -0300</pubDate>
       
       <guid>https://devmedeiros.com/pt/tags/ux/</guid>
-      <description></description>
-      <content:encoded><![CDATA[]]></content:encoded>
-    </item>
-    
-    <item>
-      <title>estatística</title>
-      <link>https://devmedeiros.com/pt/tags/estat%C3%ADstica/</link>
-      <pubDate>Tue, 12 Apr 2022 17:58:00 -0300</pubDate>
-      
-      <guid>https://devmedeiros.com/pt/tags/estat%C3%ADstica/</guid>
       <description></description>
       <content:encoded><![CDATA[]]></content:encoded>
     </item>

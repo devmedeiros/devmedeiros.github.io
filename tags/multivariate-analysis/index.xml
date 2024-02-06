@@ -1,0 +1,34 @@
+<?xml version="1.0" encoding="utf-8" standalone="yes"?>
+<rss version="2.0" xmlns:atom="http://www.w3.org/2005/Atom" xmlns:content="http://purl.org/rss/1.0/modules/content/">
+  <channel>
+    <title>multivariate analysis on devmedeiros</title>
+    <link>https://devmedeiros.com/tags/multivariate-analysis/</link>
+    <description>Recent content in multivariate analysis on devmedeiros</description>
+    <image>
+      <title>devmedeiros</title>
+      <url>https://devmedeiros.com/cover.png</url>
+      <link>https://devmedeiros.com/cover.png</link>
+    </image>
+    <generator>Hugo -- gohugo.io</generator>
+    <lastBuildDate>Mon, 05 Feb 2024 22:32:00 -0300</lastBuildDate><atom:link href="https://devmedeiros.com/tags/multivariate-analysis/index.xml" rel="self" type="application/rss+xml" />
+    <item>
+      <title>Multivariate Analysis for Data Science</title>
+      <link>https://devmedeiros.com/post/multivariate-analysis/</link>
+      <pubDate>Mon, 05 Feb 2024 22:32:00 -0300</pubDate>
+      
+      <guid>https://devmedeiros.com/post/multivariate-analysis/</guid>
+      <description>The two most important multivariate analysis techniques for data science.</description>
+      <content:encoded><![CDATA[<h2 id="what-is-multivariate-analysis">What is Multivariate Analysis?</h2>
+<p>Multivariate analysis is a branch of statistical methods that allows analyzing the distribution of two or more variables. In statistics it can be used to reduce the dimensionality of data, simplifying variability, or for inference techniques.</p>
+<h2 id="principal-component-analysis">Principal Component Analysis</h2>
+<p>Principal Component Analysis, also known as PCA, constitutes a multivariate analysis method whose purpose is to reduce the dimensionality of data. This reduction occurs by reducing the number of columns or variables while maintaining a significant percentage of the variability present in the data.</p>
+<p>The use of this technique becomes interesting when dealing with a large number of variables of interest that you want to group and correlate. For example, a telecommunications company may have various information about its customers, such as age, income, profession, length of service with the company, and products/services purchased, among others. Often, the analyst wants to take advantage of all this information, whilst avoiding <em>overfitting</em>. In this context, the application of PCA emerges as a valuable tool, allowing dimensionality reduction while preserving the intrinsic variability of these variables.</p>
+<h2 id="cluster-analysis">Cluster Analysis</h2>
+<p>Cluster analysis, also called clustering, is a technique that aims to group individuals or variables with similar characteristics. There are several algorithms for clustering, but the most common and most used is K-means.</p>
+<p>Clusters can be used to create metrics and indices that can be used to evaluate a business or even to build forecasting models.</p>
+<p>These tools are fundamental for scientists and analysts seeking to extract valuable <em>insights</em>, avoid <em>overfitting</em>, and promote a deeper understanding of the structure of multivariate data.</p>
+]]></content:encoded>
+    </item>
+    
+  </channel>
+</rss>
