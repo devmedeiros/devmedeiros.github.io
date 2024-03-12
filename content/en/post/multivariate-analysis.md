@@ -8,7 +8,7 @@ summary: The two most important multivariate analysis techniques for data scienc
 cover:
     image: "https://ik.imagekit.io/devmedeiros/multivariate_b0hhdC9vZ.webp"
     alt: "laptop preto e branco com três emojis, joinha, coração e palmas"
-    caption: "Photo by [https://unsplash.com/@gaellemarcel?utm_content=creditCopyText&utm_medium=referral&utm_source=unsplash](Gaelle Marcel) on [https://unsplash.com/photos/person-holding-balloons-vrkSVpOwchk?utm_content=creditCopyText&utm_medium=referral&utm_source=unsplash](Unsplash)"
+    caption: "Photo by Gaelle Marcel on Unsplash"
 ---
 
 ## What is Multivariate Analysis?
