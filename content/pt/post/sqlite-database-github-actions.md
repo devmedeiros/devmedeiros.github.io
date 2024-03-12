@@ -1,7 +1,7 @@
 ---
 title: "Como Usar o Banco SQLite com o Github Actions"
 date: 2023-05-31 21:54:00 -0300
-lastmod: 2023-06-25 15:43:00 -0300
+lastmod: 2024-03-11 22:29:00 -0300
 categories: [Blog]
 tags: [github, gitlab, github actions, ci/cd, sqlite, database, banco de dados, scraping, python, tutorial, SQL, git]
 showtoc: true
@@ -12,7 +12,7 @@ cover:
     caption: "Foto de kiwi thompson na Unsplash"
 ---
 
-Recentemente eu venho trabalhando com um projeto de raspagem de dados (web scrapping) que trabalha com uma pequena quantidade de dados, tão pequena que eu poderia usar tranquilamente os recursos gratuitos dos serviços de cloud disponíveis, mas eu não gosto de correr o risco de ser cobrada por um projeto pessoal. Para resolver isso eu estive procurando uma alternativa gratuita em que eu também possa compartilhar os dados e que rode com o Github Actions.
+Recentemente eu venho trabalhando com um projeto de raspagem de dados (web scraping) que trabalha com uma pequena quantidade de dados, tão pequena que eu poderia usar tranquilamente os recursos gratuitos dos serviços de cloud disponíveis, mas eu não gosto de correr o risco de ser cobrada por um projeto pessoal. Para resolver isso eu estive procurando uma alternativa gratuita em que eu também possa compartilhar os dados e que rode com o Github Actions.
 
 Caso queira checar o repositório que contém o código discutido neste post, siga este [link](https://github.com/devmedeiros/template-sqlite-actions).
 

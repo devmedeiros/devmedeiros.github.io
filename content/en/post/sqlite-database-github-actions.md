@@ -1,7 +1,7 @@
 ---
 title: "How to Use SQLite Database with Github Actions"
 date: 2023-05-31 21:54:00 -0300
-lastmod: 2023-06-25 15:43:00 -0300
+lastmod: 2024-03-11 22:29:00 -0300
 categories: [Blog]
 tags: [github, gitlab, github actions, ci/cd, sqlite, database, scraping, python, tutorial, SQL, git]
 showtoc: true
@@ -12,7 +12,7 @@ cover:
     caption: "Photo by kiwi thompson on Unsplash"
 ---
 
-Recently I’ve been working with a data scrapping project that works with a small amount of data, small enough that free resources/tier from the most popular cloud engines are enough to allocate my data, but I don’t like having the risk of being billed over this personal project. To solve this I’ve been looking for a free alternative that I can share and that runs automatically with Github Actions.
+Recently I’ve been working with a data scraping project that works with a small amount of data, small enough that free resources/tier from the most popular cloud engines are enough to allocate my data, but I don’t like having the risk of being billed over this personal project. To solve this I’ve been looking for a free alternative that I can share and that runs automatically with Github Actions.
 
 If you want to check out the repo that contains the code discussed in this post, follow this [link](https://github.com/devmedeiros/template-sqlite-actions).
 
@@ -100,7 +100,7 @@ Don't forget to enable workflow permissions, on your repo go to `Settings > Acti
 
 ## Conclusion
 
-This can be a good free alternative in case you want to be able to share the data you are scrapping or generating. But you still need to keep an eye on Github's limitations when using the free version. See the current usage limits on their [official website](https://docs.github.com/en/actions/learn-github-actions/usage-limits-billing-and-administration#usage-limits).
+This can be a good free alternative in case you want to be able to share the data you are scraping or generating. But you still need to keep an eye on Github's limitations when using the free version. See the current usage limits on their [official website](https://docs.github.com/en/actions/learn-github-actions/usage-limits-billing-and-administration#usage-limits).
 
 ---
 

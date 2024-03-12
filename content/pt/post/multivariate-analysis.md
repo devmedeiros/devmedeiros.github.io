@@ -8,7 +8,7 @@ summary: As duas técnicas mais importantes de análise multivariada para ciênc
 cover:
     image: "https://ik.imagekit.io/devmedeiros/multivariate_b0hhdC9vZ.webp"
     alt: "laptop preto e branco com três emojis, joinha, coração e palmas"
-    caption: "Imagem por [https://unsplash.com/@gaellemarcel?utm_content=creditCopyText&utm_medium=referral&utm_source=unsplash](Gaelle Marcel) na [https://unsplash.com/photos/person-holding-balloons-vrkSVpOwchk?utm_content=creditCopyText&utm_medium=referral&utm_source=unsplash](Unsplash)"
+    caption: "Imagem por Gaelle Marcel na Unsplash"
 ---
 
 ## O que é Análise Multivariada?
