@@ -17,7 +17,7 @@
       
       <guid>https://devmedeiros.com/pt/post/sqlite-database-github-actions/</guid>
       <description>Descubra uma alternativa de graça a computação em nuvem para data scraping com GitHub Actions!</description>
-      <content:encoded><![CDATA[<p>Recentemente eu venho trabalhando com um projeto de raspagem de dados (web scrapping) que trabalha com uma pequena quantidade de dados, tão pequena que eu poderia usar tranquilamente os recursos gratuitos dos serviços de cloud disponíveis, mas eu não gosto de correr o risco de ser cobrada por um projeto pessoal. Para resolver isso eu estive procurando uma alternativa gratuita em que eu também possa compartilhar os dados e que rode com o Github Actions.</p>
+      <content:encoded><![CDATA[<p>Recentemente eu venho trabalhando com um projeto de raspagem de dados (web scraping) que trabalha com uma pequena quantidade de dados, tão pequena que eu poderia usar tranquilamente os recursos gratuitos dos serviços de cloud disponíveis, mas eu não gosto de correr o risco de ser cobrada por um projeto pessoal. Para resolver isso eu estive procurando uma alternativa gratuita em que eu também possa compartilhar os dados e que rode com o Github Actions.</p>
 <p>Caso queira checar o repositório que contém o código discutido neste post, siga este <a href="https://github.com/devmedeiros/template-sqlite-actions">link</a>.</p>
 <blockquote>
 <p>Eu vou ilustrar como integrar o banco de dados SQLite com o Github Actions usando Python, mas caso você saiba como modificar um arquivo usando outra linguagem de programação esse post ainda é relevante para você.</p>

@@ -131,7 +131,7 @@
       
       <guid>https://devmedeiros.com/post/sqlite-database-github-actions/</guid>
       <description>Discover a free alternative to cloud engines for data scraping on GitHub Actions!</description>
-      <content:encoded><![CDATA[<p>Recently I’ve been working with a data scrapping project that works with a small amount of data, small enough that free resources/tier from the most popular cloud engines are enough to allocate my data, but I don’t like having the risk of being billed over this personal project. To solve this I’ve been looking for a free alternative that I can share and that runs automatically with Github Actions.</p>
+      <content:encoded><![CDATA[<p>Recently I’ve been working with a data scraping project that works with a small amount of data, small enough that free resources/tier from the most popular cloud engines are enough to allocate my data, but I don’t like having the risk of being billed over this personal project. To solve this I’ve been looking for a free alternative that I can share and that runs automatically with Github Actions.</p>
 <p>If you want to check out the repo that contains the code discussed in this post, follow this <a href="https://github.com/devmedeiros/template-sqlite-actions">link</a>.</p>
 <blockquote>
 <p>I&rsquo;ll illustrate how to integrate SQLite Databases with Github Actions using Python, but if you know how to modify a file using another programming language this post is still relevant to you.</p>
@@ -280,7 +280,7 @@
 <p><img loading="lazy" src="https://i.imgur.com/pOym60i.png#center" alt="workflow permissions from github official website"  />
 </p>
 <h2 id="conclusion">Conclusion</h2>
-<p>This can be a good free alternative in case you want to be able to share the data you are scrapping or generating. But you still need to keep an eye on Github&rsquo;s limitations when using the free version. See the current usage limits on their <a href="https://docs.github.com/en/actions/learn-github-actions/usage-limits-billing-and-administration#usage-limits">official website</a>.</p>
+<p>This can be a good free alternative in case you want to be able to share the data you are scraping or generating. But you still need to keep an eye on Github&rsquo;s limitations when using the free version. See the current usage limits on their <a href="https://docs.github.com/en/actions/learn-github-actions/usage-limits-billing-and-administration#usage-limits">official website</a>.</p>
 <hr>
 <p>If you would like to see a real-like application of this you can go to <a href="https://github.com/devmedeiros/nota-fiscal-goiana">this repo</a>. Where I&rsquo;ve implemented a monthly scrapper that saves the data to an SQLite database that is available to everyone.</p>
 ]]></content:encoded>

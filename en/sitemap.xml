@@ -3,7 +3,7 @@
   xmlns:xhtml="http://www.w3.org/1999/xhtml">
   <url>
     <loc>https://devmedeiros.com/categories/blog/</loc>
-    <lastmod>2024-02-05T22:32:00-03:00</lastmod>
+    <lastmod>2024-03-11T22:29:00-03:00</lastmod>
     <xhtml:link
                 rel="alternate"
                 hreflang="pt"
@@ -16,7 +16,7 @@
                 />
   </url><url>
     <loc>https://devmedeiros.com/categories/</loc>
-    <lastmod>2024-02-05T22:32:00-03:00</lastmod>
+    <lastmod>2024-03-11T22:29:00-03:00</lastmod>
     <xhtml:link
                 rel="alternate"
                 hreflang="pt"
@@ -42,7 +42,7 @@
                 />
   </url><url>
     <loc>https://devmedeiros.com/</loc>
-    <lastmod>2024-02-05T22:32:00-03:00</lastmod>
+    <lastmod>2024-03-11T22:29:00-03:00</lastmod>
     <xhtml:link
                 rel="alternate"
                 hreflang="pt"
@@ -74,7 +74,7 @@
                 />
   </url><url>
     <loc>https://devmedeiros.com/post/</loc>
-    <lastmod>2024-02-05T22:32:00-03:00</lastmod>
+    <lastmod>2024-03-11T22:29:00-03:00</lastmod>
     <xhtml:link
                 rel="alternate"
                 hreflang="pt"
@@ -90,7 +90,7 @@
     <lastmod>2024-02-05T22:32:00-03:00</lastmod>
   </url><url>
     <loc>https://devmedeiros.com/tags/</loc>
-    <lastmod>2024-02-05T22:32:00-03:00</lastmod>
+    <lastmod>2024-03-11T22:29:00-03:00</lastmod>
     <xhtml:link
                 rel="alternate"
                 hreflang="pt"
@@ -155,7 +155,7 @@
                 />
   </url><url>
     <loc>https://devmedeiros.com/tags/database/</loc>
-    <lastmod>2023-11-20T18:45:00-03:00</lastmod>
+    <lastmod>2024-03-11T22:29:00-03:00</lastmod>
     <xhtml:link
                 rel="alternate"
                 hreflang="pt"
@@ -194,7 +194,7 @@
                 />
   </url><url>
     <loc>https://devmedeiros.com/tags/sql/</loc>
-    <lastmod>2023-11-20T18:45:00-03:00</lastmod>
+    <lastmod>2024-03-11T22:29:00-03:00</lastmod>
     <xhtml:link
                 rel="alternate"
                 hreflang="pt"
@@ -356,7 +356,7 @@
                 />
   </url><url>
     <loc>https://devmedeiros.com/tags/tutorial/</loc>
-    <lastmod>2023-08-05T07:30:00-03:00</lastmod>
+    <lastmod>2024-03-11T22:29:00-03:00</lastmod>
     <xhtml:link
                 rel="alternate"
                 hreflang="pt"
@@ -400,7 +400,7 @@
     <lastmod>2023-07-09T16:32:00-03:00</lastmod>
   </url><url>
     <loc>https://devmedeiros.com/tags/git/</loc>
-    <lastmod>2023-06-25T15:43:00-03:00</lastmod>
+    <lastmod>2024-03-11T22:29:00-03:00</lastmod>
     <xhtml:link
                 rel="alternate"
                 hreflang="pt"
@@ -413,7 +413,7 @@
                 />
   </url><url>
     <loc>https://devmedeiros.com/tags/github/</loc>
-    <lastmod>2023-06-25T15:43:00-03:00</lastmod>
+    <lastmod>2024-03-11T22:29:00-03:00</lastmod>
     <xhtml:link
                 rel="alternate"
                 hreflang="pt"
@@ -426,7 +426,7 @@
                 />
   </url><url>
     <loc>https://devmedeiros.com/tags/github-actions/</loc>
-    <lastmod>2023-06-25T15:43:00-03:00</lastmod>
+    <lastmod>2024-03-11T22:29:00-03:00</lastmod>
     <xhtml:link
                 rel="alternate"
                 hreflang="pt"
@@ -439,7 +439,7 @@
                 />
   </url><url>
     <loc>https://devmedeiros.com/tags/gitlab/</loc>
-    <lastmod>2023-06-25T15:43:00-03:00</lastmod>
+    <lastmod>2024-03-11T22:29:00-03:00</lastmod>
     <xhtml:link
                 rel="alternate"
                 hreflang="pt"
@@ -452,7 +452,7 @@
                 />
   </url><url>
     <loc>https://devmedeiros.com/post/sqlite-database-github-actions/</loc>
-    <lastmod>2023-06-25T15:43:00-03:00</lastmod>
+    <lastmod>2024-03-11T22:29:00-03:00</lastmod>
     <xhtml:link
                 rel="alternate"
                 hreflang="pt"
@@ -465,7 +465,7 @@
                 />
   </url><url>
     <loc>https://devmedeiros.com/tags/python/</loc>
-    <lastmod>2023-06-25T15:43:00-03:00</lastmod>
+    <lastmod>2024-03-11T22:29:00-03:00</lastmod>
     <xhtml:link
                 rel="alternate"
                 hreflang="pt"
@@ -478,7 +478,7 @@
                 />
   </url><url>
     <loc>https://devmedeiros.com/tags/scraping/</loc>
-    <lastmod>2023-06-25T15:43:00-03:00</lastmod>
+    <lastmod>2024-03-11T22:29:00-03:00</lastmod>
     <xhtml:link
                 rel="alternate"
                 hreflang="pt"
@@ -491,7 +491,7 @@
                 />
   </url><url>
     <loc>https://devmedeiros.com/tags/sqlite/</loc>
-    <lastmod>2023-06-25T15:43:00-03:00</lastmod>
+    <lastmod>2024-03-11T22:29:00-03:00</lastmod>
     <xhtml:link
                 rel="alternate"
                 hreflang="pt"
