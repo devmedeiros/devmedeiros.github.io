@@ -6,7 +6,7 @@ tags: [statistic, p value]
 showtoc: true
 summary: P-value definition, how to use it, and interpreting the measurement
 cover:
-    image: "https://ik.imagekit.io/devmedeiros/guy-working_2J4TgmjhL.webp"
+    image: "https://ik.imagekit.io/devmedeiros/guy-working_2J4TgmjhL.webp?tr=w-700"
     alt: men writing on a notebook next to a laptop
     caption: Image of StockSnap by Pixabay
 ---

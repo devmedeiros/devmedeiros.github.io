@@ -5,7 +5,7 @@ categories: [Blog]
 tags: [data visualization, business intelligence, storytelling, review, ethic]
 summary: Choosing the best graph or plot can be a hard task, but it doesn't need to be.
 cover:
-    image: "https://ik.imagekit.io/devmedeiros/graph-choosing_T2RxECo-q.webp"
+    image: "https://ik.imagekit.io/devmedeiros/graph-choosing_T2RxECo-q.webp?tr=w-700"
     alt: "a donut graph showing 'yes' as a majority while it represents 10%, and 'no' as a minority while it represents 90%"
     caption: "piechart from WTF Visualizations"
     hidden: true

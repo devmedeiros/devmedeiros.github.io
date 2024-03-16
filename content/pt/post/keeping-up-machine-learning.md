@@ -6,7 +6,7 @@ tags: [machine learning, modelo, conhecimento, conhecimento, review, aprendizado
 showtoc: false
 summary: Como se manter atualizado com as últimas descobertas em modelos de aprendizado de máquina e pesquisas acadêmicas.
 cover:
-    image: "https://ik.imagekit.io/devmedeiros/state-of-the-art_7IqFmxyCB.webp"
+    image: "https://ik.imagekit.io/devmedeiros/state-of-the-art_7IqFmxyCB.webp?tr=w-700"
     alt: "várias molduras de quadros coloridos com marcas de uso"
     caption: "Imagem por [Jessica Ruscello](https://unsplash.com/@jruscello?utm_source=unsplash&utm_medium=referral&utm_content=creditCopyText) na [Unsplash](https://unsplash.com/photos/-GUyf8ZCTHM?utm_source=unsplash&utm_medium=referral&utm_content=creditCopyText)"
 ---

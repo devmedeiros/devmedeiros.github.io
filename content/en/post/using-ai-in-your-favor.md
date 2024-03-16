@@ -6,7 +6,7 @@ tags: [AI, artificial intelligence, chatgpt, NLP, opencv]
 showtoc: false
 summary: How to use AI tools, like ChatGPT, in your favor.
 cover:
-    image: "https://ik.imagekit.io/devmedeiros/woman-working_1ChD2cpkd.webp"
+    image: "https://ik.imagekit.io/devmedeiros/woman-working_1ChD2cpkd.webp?tr=w-700"
     alt: "close up of a woman tipying on a laptop"
     caption: "Photo by Kaitlyn Baker on Unsplash"
 ---

@@ -90,6 +90,9 @@ params:
   showtoc: false
   tocopen: false
   ShowFullTextinRSS: true
+  cover:
+      responsiveImages: true
+      linkFullImages: false
 
   assets:
     favicon: "<link / abs url>"

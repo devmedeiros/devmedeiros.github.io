@@ -7,7 +7,7 @@ showtoc: true
 summary: As duas técnicas mais importantes de análise multivariada para ciência de dados.
 cover:
     image: "https://ik.imagekit.io/devmedeiros/multivariate_b0hhdC9vZ.webp"
-    alt: "laptop preto e branco com três emojis, joinha, coração e palmas"
+    alt: "diversos balões coloridos sendo segurados por uma pessoa"
     caption: "Imagem por Gaelle Marcel na Unsplash"
 ---
 

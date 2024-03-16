@@ -6,7 +6,7 @@ tags: [machine learning, model, knowledge, learning, review]
 showtoc: false
 summary: How to keep up with the latest discoveries in Machine Learning Models and academic research.
 cover:
-    image: "https://ik.imagekit.io/devmedeiros/state-of-the-art_7IqFmxyCB.webp"
+    image: "https://ik.imagekit.io/devmedeiros/state-of-the-art_7IqFmxyCB.webp?tr=w-700"
     alt: "multiple painting frames of multiple colors with use marks"
     caption: "Photo by [Jessica Ruscello](https://unsplash.com/@jruscello?utm_source=unsplash&utm_medium=referral&utm_content=creditCopyText) on [Unsplash](https://unsplash.com/photos/-GUyf8ZCTHM?utm_source=unsplash&utm_medium=referral&utm_content=creditCopyText)"
 ---

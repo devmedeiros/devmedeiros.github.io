@@ -6,7 +6,7 @@ tags: [tutorial, like button, clap button, static site, medium clap, twitter hea
 showtoc: true
 summary: Aprenda como adicionar curtidas/aplausos em um site estático usando o Lyket.
 cover:
-    image: "https://ik.imagekit.io/devmedeiros/like-static-blog_tR0o74mLu.webp"
+    image: "https://ik.imagekit.io/devmedeiros/like-static-blog_tR0o74mLu.webp?tr=w-700"
     alt: "laptop preto e branco com três emojis, joinha, coração e palmas"
 ---
 

@@ -6,7 +6,7 @@ tags: [word cloud, nuvem de palavras, visualização de dados, stopwords, NPS, s
 showtoc: true
 summary: Nuvens de palavras são uma visualização popular para analisar textos, mas é preciso apresentá-las de forma clara para que a mensagem seja compreendida.
 cover:
-    image: "https://ik.imagekit.io/devmedeiros/wordcloud_Z6fZP5SWJ.webp"
+    image: "https://ik.imagekit.io/devmedeiros/wordcloud_Z6fZP5SWJ.webp?tr=w-700"
     alt: "nuvem de palavras deste artigo em inglês"
 ---
 

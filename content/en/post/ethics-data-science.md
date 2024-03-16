@@ -6,7 +6,7 @@ tags: [ethic, data science, privacy, scraping, bias]
 showtoc: true
 summary: Data Science is an exciting field, but it's also full of ethical dilemmas.
 cover:
-    image: "https://ik.imagekit.io/devmedeiros/guys-working_s6yPBxfaJ.webp"
+    image: "https://ik.imagekit.io/devmedeiros/guys-working_s6yPBxfaJ.webp?tr=w-700"
     alt: "table with multiple notebooks and two people writing on sheets calculating something"
 ---
 

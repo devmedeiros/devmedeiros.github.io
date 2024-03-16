@@ -6,7 +6,7 @@ tags: [IA, inteligência artificial, chatgpt, pln, nlp, pdi, opencv, AI]
 showtoc: false
 summary: Uma nova forma de usar ferramentas de inteligência artificial, como ChatGPT, ao seu favor.
 cover:
-    image: "https://ik.imagekit.io/devmedeiros/woman-working_1ChD2cpkd.webp"
+    image: "https://ik.imagekit.io/devmedeiros/woman-working_1ChD2cpkd.webp?tr=w-700"
     alt: "close up de uma mulher usando notebook"
     caption: "Imagem de Kaitlyn Baker na Unsplash"
 ---

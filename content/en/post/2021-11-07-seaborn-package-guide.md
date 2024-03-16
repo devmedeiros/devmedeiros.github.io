@@ -5,7 +5,7 @@ categories: [Blog]
 tags: [python, seaborn, data visualization, pandas]
 summary: A simple guide on how to make basic plots using the seaborn package from Python
 cover:
-    image: "https://ik.imagekit.io/devmedeiros/python_seaborn/title-axis-outside-legend__zUIAf_2427.jpg?updatedAt=1636308224813"
+    image: "https://ik.imagekit.io/devmedeiros/python_seaborn/title-axis-outside-legend__zUIAf_2427.jpg?tr=w-700"
     alt: "a dispersion plot using seaborn"
     hidden: true
 ---

@@ -6,7 +6,7 @@ tags: [machine learning, ML, business, data-driven, clean data, decision-making,
 showtoc: true
 summary: Descubra se o uso de aprendizado de máquina é essencial em todos os casos de negócios. Avalie os benefícios e as limitações.
 cover:
-    image: "https://ik.imagekit.io/devmedeiros/path-choosing_VtOb0WQTi.webp"
+    image: "https://ik.imagekit.io/devmedeiros/path-choosing_VtOb0WQTi.webp?tr=w-700"
     alt: "um homem parado em uma floresta olhando para dois caminhos"
     caption: "Foto de Caleb Jones na Unsplash"
 ---

@@ -5,7 +5,7 @@ categories: [Blog]
 tags: [R, data.table, data manipulation, data transformation]
 summary: One of the fastest packages for data manipulation on R
 cover:
-    image: "https://ik.imagekit.io/devmedeiros/code_gASTmaW7t.webp"
+    image: "https://ik.imagekit.io/devmedeiros/code_gASTmaW7t.webp?tr=w-700"
     alt: "window with data.table code"
 ---
 

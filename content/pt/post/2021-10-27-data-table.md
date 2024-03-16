@@ -5,7 +5,7 @@ categories: [Blog]
 tags: [R, data.table, manipulação de dados, transformação de dados]
 summary: Um dos pacotes de manipulação de dados mais rápidos do R
 cover:
-    image: "https://ik.imagekit.io/devmedeiros/code_gASTmaW7t.webp"
+    image: "https://ik.imagekit.io/devmedeiros/code_gASTmaW7t.webp?tr=w-700"
     alt: "janela com código data.table"
 ---
 

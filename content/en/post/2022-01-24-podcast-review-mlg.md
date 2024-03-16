@@ -5,7 +5,7 @@ categories: [Blog]
 tags: [podcast, review]
 summary: A review about the podcast Machine Learning Guide
 cover:
-    image: "https://ik.imagekit.io/devmedeiros/podcast_r3gIexux0.webp"
+    image: "https://ik.imagekit.io/devmedeiros/podcast_r3gIexux0.webp?tr=w-700"
     alt: "headphone next to a microphone and a laptop in the background"
     caption: "Photo of Will Francis on Unsplash"
     hidden: true

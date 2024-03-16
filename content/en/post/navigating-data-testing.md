@@ -6,7 +6,7 @@ tags: [data testing, database, great expectations, assertr, analytics engineer, 
 showtoc: true
 summary: What is Data Testing and why you should care about it?
 cover:
-    image: "https://ik.imagekit.io/devmedeiros/navigating-data-testing_Ka1fdcGdv.webp"
+    image: "https://ik.imagekit.io/devmedeiros/navigating-data-testing_Ka1fdcGdv.webp?tr=w-700"
     alt: "a sailboat sailing with a sunset in the background"
     caption: "Photo by [Bobby Stevenson](https://unsplash.com/pt-br/@bobbystevenson?utm_content=creditCopyText&utm_medium=referral&utm_source=unsplash) on [Unsplash](https://unsplash.com/pt-br/fotografias/veleiro-branco-no-mar-durante-o-por-do-sol-3AEJ6imbQTo?utm_content=creditCopyText&utm_medium=referral&utm_source=unsplash)"
   

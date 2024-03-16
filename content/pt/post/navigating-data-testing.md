@@ -6,7 +6,7 @@ tags: [teste de dados, data testing, database, banco de dados, great expectation
 showtoc: true
 summary: O que é Data Testing e porque você deveria se importar com isso?
 cover:
-    image: "https://ik.imagekit.io/devmedeiros/navigating-data-testing_Ka1fdcGdv.webp"
+    image: "https://ik.imagekit.io/devmedeiros/navigating-data-testing_Ka1fdcGdv.webp?tr=w-700"
     alt: "um barco a vela navegando com um por do sol ao fundo"
     caption: "Foto de [Bobby Stevenson](https://unsplash.com/pt-br/@bobbystevenson?utm_content=creditCopyText&utm_medium=referral&utm_source=unsplash) na [Unsplash](https://unsplash.com/pt-br/fotografias/veleiro-branco-no-mar-durante-o-por-do-sol-3AEJ6imbQTo?utm_content=creditCopyText&utm_medium=referral&utm_source=unsplash)"
   

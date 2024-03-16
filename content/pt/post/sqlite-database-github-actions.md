@@ -7,7 +7,7 @@ tags: [github, gitlab, github actions, ci/cd, sqlite, database, banco de dados, 
 showtoc: true
 summary: Descubra uma alternativa de graça a computação em nuvem para data scraping com GitHub Actions!
 cover:
-    image: "https://ik.imagekit.io/devmedeiros/integration_hnYRmMYaY.webp"
+    image: "https://ik.imagekit.io/devmedeiros/integration_hnYRmMYaY.webp?tr=w-700"
     alt: "um desenho no horizonte de uma rede de eletricidade simbolizando a conexão do sqlite e github actions"
     caption: "Foto de kiwi thompson na Unsplash"
 ---

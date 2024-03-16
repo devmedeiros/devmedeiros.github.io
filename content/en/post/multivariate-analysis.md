@@ -6,8 +6,8 @@ tags: [statistics, multivariate analysis, knowledge, data science]
 showtoc: true
 summary: The two most important multivariate analysis techniques for data science.
 cover:
-    image: "https://ik.imagekit.io/devmedeiros/multivariate_b0hhdC9vZ.webp"
-    alt: "laptop preto e branco com três emojis, joinha, coração e palmas"
+    image: "https://ik.imagekit.io/devmedeiros/multivariate_b0hhdC9vZ.webp?tr=w-700"
+    alt: "multiple colored balloons being holded down by a person"
     caption: "Photo by Gaelle Marcel on Unsplash"
 ---
 

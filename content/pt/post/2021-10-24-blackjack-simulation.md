@@ -5,7 +5,7 @@ categories: [Blog]
 tags: [R, simulação, shiny, ggplot]
 summary: Uma simulação de 21 usando R e Shiny, você pode rodar um jogo com p jogadores, d baralhos, n vezes
 cover:
-    image: "https://ik.imagekit.io/devmedeiros/blackjack__J-I9kYyJ.webp"
+    image: "https://ik.imagekit.io/devmedeiros/blackjack__J-I9kYyJ.webp?tr=w-700"
     alt: "um ás e um valete sobre uma mesa verde com peças de poquêr"
     caption: "Imagem de Michael Brasuela por Pixabay"
 ---

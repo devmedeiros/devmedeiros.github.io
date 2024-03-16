@@ -6,7 +6,7 @@ tags: [anomaly detection, fraud detection, outliers, class imbalance, data analy
 showtoc: false
 summary: How can your credit card issuer know if a purchase is made by you or a cloned version of your credit card?
 cover:
-    image: "https://ik.imagekit.io/devmedeiros/outlier_kHqTJ7_Iv.webp"
+    image: "https://ik.imagekit.io/devmedeiros/outlier_kHqTJ7_Iv.webp?tr=w-700"
     alt: "five diferent apples on a white table"
     caption: "Photo by Isabella Fischer on Unsplash"
 ---

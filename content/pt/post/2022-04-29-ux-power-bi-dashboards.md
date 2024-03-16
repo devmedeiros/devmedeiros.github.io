@@ -7,7 +7,7 @@ tags: [UX, experiência de usuário, dashboard, powerbi, visualização de dados
 showtoc: true
 summary: Definindo UX/UI no contexto de Bussiness Intelligence para Dashboards com exemplos
 cover:
-    image: "https://ik.imagekit.io/devmedeiros/site_layout_C0BWt0-Rh.png?ik-sdk-version=javascript-1.4.3&updatedAt=1651180441785"
+    image: "https://ik.imagekit.io/devmedeiros/site_layout_C0BWt0-Rh.png?tr=w-700"
     alt: "image with three website layouts"
     hidden: true
 ---
