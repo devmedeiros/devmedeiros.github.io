@@ -4,6 +4,8 @@ date: 2022-01-24 18:15:00 -0300
 categories: [Blog]
 tags: [podcast, review]
 summary: Uma resenha sobre o podcast Machine Learning Guide
+aliases:
+- 2022-01-24-podcast-review-mlg
 cover:
     image: "https://ik.imagekit.io/devmedeiros/podcast_r3gIexux0.webp?tr=w-700"
     alt: "headphone next to a microphone and a laptop in the background"
@@ -11,7 +13,7 @@ cover:
     hidden: true
 ---
 
-![Machine Learning Guide Podcast Capa](https://ocdevel.com/static/media/MLG-Option-1.24e2cc63.jpg#center)
+![Machine Learning Guide Podcast Capa](https://ik.imagekit.io/devmedeiros/mlg-capa_4H_gyNxIV.jpg#center)
 
 O show, apresentado por Tyler Renelle da Depth, oferece uma lista com [recursos](https://ocdevel.com/mlg/resources) na qual você pode encontrar todos os livros, cursos, e sites mencionados durante o podcast. É um ótimo podcast para quem está aprendendo sobre aprendizado de máquina, podendo ser útil para iniciantes, entusiastas, ou para alguém que está procurando se aprofundar ainda mais no tópico. Desde 2021 o show está sendo renovado para atualizar o conteúdo.
 

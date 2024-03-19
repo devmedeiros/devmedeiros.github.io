@@ -4,6 +4,8 @@ date: 2021-10-12 19:47:00 -0300
 categories: [Blog]
 tags: [data science, R, sentiment analysis, NLP, ggplot, storytelling]
 summary: Sentiment Analysis comparing Fake News and Real News using R
+aliases:
+- 2021-10-12-fakenews-sentiment
 cover:
     image: "https://ik.imagekit.io/devmedeiros/newspaper_9yA4QRDzj.webp?tr=w-700"
     alt: "a newspaper"

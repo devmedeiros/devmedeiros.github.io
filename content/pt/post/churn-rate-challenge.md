@@ -6,6 +6,8 @@ categories: [Blog]
 tags: [storytelling, python, análise de dados, aprendizado de máquina, rede neural]
 showtoc: true
 summary: Alura fez um desafio de quatro semanas "Data Science Challenge" utilizando um banco desbalanceado da taxa de evasão da empresa Alura Voz
+aliases:
+- 2022-05-30-churn-rate-challenge
 cover:
     image: "https://raw.githubusercontent.com/devmedeiros/Challenge-Data-Science/main/aluravoz.png"
     alt: "heart with an A inside and you can read 'Alura Voz telecommunication company'"

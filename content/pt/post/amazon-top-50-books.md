@@ -4,6 +4,8 @@ date: 2021-12-28 14:55:00 -0300
 categories: [Blog]
 tags: [python, visualização de dados, análise de dados, EDA]
 summary: Análise Exploratória de Dados dos 50 livros mais bem vendidos da Amazon de 2009 - 2019
+aliases:
+- 2021-12-28-amazon-top-50-books
 cover:
     image: "https://ik.imagekit.io/devmedeiros/books_n0VtB39Hz.webp?tr=w-700"
     alt: image of an multiple books, most closed and some open

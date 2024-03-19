@@ -6,6 +6,8 @@ categories: [Blog]
 tags: [storytelling, python, data analysis, machine learning, neural network, class imbalance]
 showtoc: true
 summary: Alura hosted a four-week Data Science Challenge using an imbalanced dataset of Churn Rate of a company Alura Voz
+aliases:
+- 2022-05-30-churn-rate-challenge
 cover:
     image: "https://raw.githubusercontent.com/devmedeiros/Challenge-Data-Science/main/aluravoz.png"
     alt: "heart with an A inside and you can read 'Alura Voz telecommunication company'"

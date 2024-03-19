@@ -5,6 +5,8 @@ categories: [Blog]
 tags: [storytelling, data science, data visualization, data analysis]
 showtoc: true
 summary: The storytelling of how much each deputy/senator spends in Brazil
+aliases:
+- 2022-04-17-storytelling-with-ceap
 cover:
     image: "https://ik.imagekit.io/devmedeiros/planalto_5abWbxjMI.webp?tr=w-700"
     alt: brazil nation congress

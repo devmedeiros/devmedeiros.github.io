@@ -4,6 +4,8 @@ date: 2021-10-27 09:41:00 -0300
 categories: [Blog]
 tags: [R, data.table, data manipulation, data transformation]
 summary: One of the fastest packages for data manipulation on R
+aliases:
+- 2021-10-27-data-table
 cover:
     image: "https://ik.imagekit.io/devmedeiros/code_gASTmaW7t.webp?tr=w-700"
     alt: "window with data.table code"

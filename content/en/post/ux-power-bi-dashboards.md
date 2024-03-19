@@ -6,6 +6,8 @@ categories: [Blog]
 tags: [UX, dashboard, powerbi, data visualization, business intelligence, storytelling, figma]
 showtoc: true
 summary: Defining UX/UI in the context of Bussiness Intelligence for Dashboards with examples
+aliases:
+- 2022-04-29-ux-power-bi-dashboards
 cover:
     image: "https://ik.imagekit.io/devmedeiros/site_layout_C0BWt0-Rh.png?tr=w-700"
     alt: "image with three website layouts"
