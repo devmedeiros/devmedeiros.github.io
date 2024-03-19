@@ -12,9 +12,9 @@ The following are a few projects that I have worked on in my free time. They are
 
 ## Nota Fiscal Goiana
 
-**Description:** This project presents a complete solution to ETL the data from Nota Fiscal Goiana. It also presents the curated data in a Power BI dashboard.
+**Description:** This project presents a complete solution to ETL the data from Nota Fiscal Goiana. It also presents the curated data in a Streamlit dashboard.
 
-**Stacks:** Python, Power BI, SQL, and Github Actions
+**Stacks:** Python, ~~Power BI~~, Streamlit, SQLite, and Github Actions
 
 **Skills:** ETL, Data Visualization, and Scraping
 
@@ -41,6 +41,18 @@ The following are a few projects that I have worked on in my free time. They are
 **Stacks:** Hugo, Papermod theme, and Github Actions
 
 {{< github-repo user="devmedeiros" repo="devmedeiros.github.io" >}}
+
+---
+
+## Raio X - Entendendo o Tempo de Julgamento dos Processos Judiciais
+
+**Description:** This project marked my team’s participation in the “Hackathon CNJ - Desafio Tempo e Produtividade”.
+
+**Stacks:** R, RShiny, PostgreSQL, SQLite, and Machine Learning
+
+**Skills:** ETL, Data Visualization, and Neural Network
+
+{{< github-repo user="team33inova" repo="app_team33" >}}
 
 ---
 

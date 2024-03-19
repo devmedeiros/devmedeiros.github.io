@@ -38,9 +38,21 @@ A seguir são alguns projetos que eu fiz no meu tempo livre. Eles não estão em
 
 **Descrição:** Um blog (onde você está agora!) no qual eu escrevo sobre o que estou aprendendo, basicamente um portfólio.
 
-**Habilidades:** Hugo, tema Papermod, e Github Actions
+**Stacks:** Hugo, tema Papermod, e Github Actions
 
 {{< github-repo user="devmedeiros" repo="devmedeiros.github.io" >}}
+
+---
+
+## Raio X - Entendendo o Tempo de Julgamento dos Processos Judiciais
+
+**Descrição:** Este projeto marcou a participação do meu time na “Hackathon CNJ - Desafio Tempo e Produtividade”.
+
+**Stacks:** R, RShiny, PostgreSQL, SQLite, e Aprendizado de Máquina
+
+**Habilidades:** ETL, Visualização de Dados, e Redes Neurais
+
+{{< github-repo user="team33inova" repo="app_team33" >}}
 
 ---
 
