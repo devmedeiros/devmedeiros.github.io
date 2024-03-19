@@ -2172,10 +2172,19 @@ Nossa terceira página apresenta informação sobre as estrelas dos filmes, os 1
 <hr>
 <h2 id="blog-pessoal">Blog pessoal</h2>
 <p><strong>Descrição:</strong> Um blog (onde você está agora!) no qual eu escrevo sobre o que estou aprendendo, basicamente um portfólio.</p>
-<p><strong>Habilidades:</strong> Hugo, tema Papermod, e Github Actions</p>
+<p><strong>Stacks:</strong> Hugo, tema Papermod, e Github Actions</p>
 
 
 <p><a href="https://github.com/devmedeiros/devmedeiros.github.io"><img src="https://gh-card.dev/repos/devmedeiros/devmedeiros.github.io.svg" alt="github repository devmedeiros.github.io miniature from the user devmedeiros" style="max-width: 100%;" /></a></p>
+
+<hr>
+<h2 id="raio-x---entendendo-o-tempo-de-julgamento-dos-processos-judiciais">Raio X - Entendendo o Tempo de Julgamento dos Processos Judiciais</h2>
+<p><strong>Descrição:</strong> Este projeto marcou a participação do meu time na “Hackathon CNJ - Desafio Tempo e Produtividade”.</p>
+<p><strong>Stacks:</strong> R, RShiny, PostgreSQL, SQLite, e Aprendizado de Máquina</p>
+<p><strong>Habilidades:</strong> ETL, Visualização de Dados, e Redes Neurais</p>
+
+
+<p><a href="https://github.com/team33inova/app_team33"><img src="https://gh-card.dev/repos/team33inova/app_team33.svg" alt="github repository app_team33 miniature from the user team33inova" style="max-width: 100%;" /></a></p>
 
 <hr>
 <h2 id="primeiro-data-science-challenge-da-alura">Primeiro Data Science Challenge da Alura</h2>

@@ -2479,8 +2479,8 @@
       <description>Explore my personal projects on GitHub, including a credit score classification app, Nota Fiscal Goiana, and Alura&amp;rsquo;s Business Intelligence challenge.</description>
       <content:encoded><![CDATA[<p>The following are a few projects that I have worked on in my free time. They are in no particular order.</p>
 <h2 id="nota-fiscal-goiana">Nota Fiscal Goiana</h2>
-<p><strong>Description:</strong> This project presents a complete solution to ETL the data from Nota Fiscal Goiana. It also presents the curated data in a Power BI dashboard.</p>
-<p><strong>Stacks:</strong> Python, Power BI, SQL, and Github Actions</p>
+<p><strong>Description:</strong> This project presents a complete solution to ETL the data from Nota Fiscal Goiana. It also presents the curated data in a Streamlit dashboard.</p>
+<p><strong>Stacks:</strong> Python, <del>Power BI</del>, Streamlit, SQLite, and Github Actions</p>
 <p><strong>Skills:</strong> ETL, Data Visualization, and Scraping</p>
 
 
@@ -2502,6 +2502,15 @@
 
 
 <p><a href="https://github.com/devmedeiros/devmedeiros.github.io"><img src="https://gh-card.dev/repos/devmedeiros/devmedeiros.github.io.svg" alt="github repository devmedeiros.github.io miniature from the user devmedeiros" style="max-width: 100%;" /></a></p>
+
+<hr>
+<h2 id="raio-x---entendendo-o-tempo-de-julgamento-dos-processos-judiciais">Raio X - Entendendo o Tempo de Julgamento dos Processos Judiciais</h2>
+<p><strong>Description:</strong> This project marked my team’s participation in the “Hackathon CNJ - Desafio Tempo e Produtividade”.</p>
+<p><strong>Stacks:</strong> R, RShiny, PostgreSQL, SQLite, and Machine Learning</p>
+<p><strong>Skills:</strong> ETL, Data Visualization, and Neural Network</p>
+
+
+<p><a href="https://github.com/team33inova/app_team33"><img src="https://gh-card.dev/repos/team33inova/app_team33.svg" alt="github repository app_team33 miniature from the user team33inova" style="max-width: 100%;" /></a></p>
 
 <hr>
 <h2 id="alura-1st-data-science-challenge">Alura 1st Data Science Challenge</h2>
