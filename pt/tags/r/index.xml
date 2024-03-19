@@ -13,10 +13,10 @@
     <lastBuildDate>Wed, 27 Oct 2021 09:41:00 -0300</lastBuildDate><atom:link href="https://devmedeiros.com/pt/tags/r/index.xml" rel="self" type="application/rss+xml" />
     <item>
       <title>Uma Visão Geral Sobre o Pacote data.table do R</title>
-      <link>https://devmedeiros.com/pt/post/2021-10-27-data-table/</link>
+      <link>https://devmedeiros.com/pt/post/data-table/</link>
       <pubDate>Wed, 27 Oct 2021 09:41:00 -0300</pubDate>
       
-      <guid>https://devmedeiros.com/pt/post/2021-10-27-data-table/</guid>
+      <guid>https://devmedeiros.com/pt/post/data-table/</guid>
       <description>Um dos pacotes de manipulação de dados mais rápidos do R</description>
       <content:encoded><![CDATA[<p>O pacote <code>data.table</code> é um dos pacotes de manipulação de dados mais rápido, atualmente ele é mais rápido até que o <code>pandas</code> e <code>dplyr</code> <sup id="fnref:1"><a href="#fn:1" class="footnote-ref" role="doc-noteref">1</a></sup>. A sintaxe de um <code>data.table</code> é <code>dt[i, j, by]</code>, em que:</p>
 <ul>
@@ -50,10 +50,10 @@
     
     <item>
       <title>Simulação de 21</title>
-      <link>https://devmedeiros.com/pt/post/2021-10-24-blackjack-simulation/</link>
+      <link>https://devmedeiros.com/pt/post/blackjack-simulation/</link>
       <pubDate>Sun, 24 Oct 2021 20:43:00 -0300</pubDate>
       
-      <guid>https://devmedeiros.com/pt/post/2021-10-24-blackjack-simulation/</guid>
+      <guid>https://devmedeiros.com/pt/post/blackjack-simulation/</guid>
       <description>Uma simulação de 21 usando R e Shiny, você pode rodar um jogo com p jogadores, d baralhos, n vezes</description>
       <content:encoded><![CDATA[<p>O meu objetivo com este projeto é de simular o ambiente de um jogo de 21, também conhecido como <em>blackjack</em>. Assim, eu decidi fazer diversas funções para emular o comportamento do <em>dealer</em>, de um jogador iniciante, um jogador cauteloso e um estrategista. Com esse conjunto de funções você pode rodar um jogo com <strong>p</strong> jogadores, <strong>d</strong> baralhos e quaisquer combinações de arquétipos de jogadores. Além disso, também pode rodar o jogo <strong>n</strong> vezes.</p>
 <p>Eu também fiz uma <a href="https://jaqueline-medeiros.shinyapps.io/appa/">aplicação shiny</a> para demonstrar como a simulação funciona. No aplicativo, você é limitado no número de jogadores, mas caso queira rodar o código com mais jogadores eu sugiro que olhe o <a href="https://github.com/devmedeiros/blackjack-simulation">respositório</a> do GitHub. Nele você encontra as regras consideradas para a simulação e o código completo.</p>
@@ -74,10 +74,10 @@
     
     <item>
       <title>Análise de Sentimentos de Notícias Falsas vs Notícias Reais</title>
-      <link>https://devmedeiros.com/pt/post/2021-10-12-fakenews-sentiment/</link>
+      <link>https://devmedeiros.com/pt/post/fakenews-sentiment/</link>
       <pubDate>Tue, 12 Oct 2021 19:47:00 -0300</pubDate>
       
-      <guid>https://devmedeiros.com/pt/post/2021-10-12-fakenews-sentiment/</guid>
+      <guid>https://devmedeiros.com/pt/post/fakenews-sentiment/</guid>
       <description>Análise de Sentimento comparando notícias falsas e notícias reais</description>
       <content:encoded><![CDATA[<p>Eu quero fazer uma análise de sentimentos usando o R como uma forma de aprender. Com isso em mente começamos carregando todos os pacotes que iremos utilizar.</p>
 <div class="highlight"><div style="color:#f8f8f2;background-color:#272822;-moz-tab-size:4;-o-tab-size:4;tab-size:4;">

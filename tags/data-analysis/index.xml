@@ -442,10 +442,10 @@
     
     <item>
       <title>Data Science Challenge - Churn Rate</title>
-      <link>https://devmedeiros.com/post/2022-05-30-churn-rate-challenge/</link>
+      <link>https://devmedeiros.com/post/churn-rate-challenge/</link>
       <pubDate>Mon, 30 May 2022 16:49:00 -0300</pubDate>
       
-      <guid>https://devmedeiros.com/post/2022-05-30-churn-rate-challenge/</guid>
+      <guid>https://devmedeiros.com/post/churn-rate-challenge/</guid>
       <description>Alura hosted a four-week Data Science Challenge using an imbalanced dataset of Churn Rate of a company Alura Voz</description>
       <content:encoded><![CDATA[<p>I was challenged to take the role of a new data scientist hired at Alura Voz. This made-up company is a telecommunication company and it needs to reduce the Churn Rate.</p>
 <p>The challenge is divided into four weeks. For the first week, the goal was to clean the dataset provided by an API. Next, we need to identify clients who are more likely to leave the company, using data exploration and analysis. Then, in the third week, we made machine learning models to predict the churn rate for Alura Voz. The last week is to show off what we made during the challenge and build our portfolio. In case you are interested in seeing the code for the challenge just head over to my GitHub <a href="https://github.com/devmedeiros/Challenge-Data-Science">repository</a>.</p>
@@ -578,10 +578,10 @@
     
     <item>
       <title>Storytelling with CEAP</title>
-      <link>https://devmedeiros.com/post/2022-04-17-storytelling-with-ceap/</link>
+      <link>https://devmedeiros.com/post/storytelling-with-ceap/</link>
       <pubDate>Sun, 17 Apr 2022 10:08:00 -0300</pubDate>
       
-      <guid>https://devmedeiros.com/post/2022-04-17-storytelling-with-ceap/</guid>
+      <guid>https://devmedeiros.com/post/storytelling-with-ceap/</guid>
       <description>The storytelling of how much each deputy/senator spends in Brazil</description>
       <content:encoded><![CDATA[<h2 id="the-dataset">The Dataset</h2>
 <p>CEAP stands for <em>Cota para o Exercício da Atividade Parlamentar</em>, in English, Exercise of Parliamentary Activity from Brazil. The quota is a monthly amount that can be used by the deputy/senator to defray typical expenses of the exercise of the parliamentary mandate.</p>
@@ -631,10 +631,10 @@
     
     <item>
       <title>EDA Amazon Top 50 Bestselling Books</title>
-      <link>https://devmedeiros.com/post/2021-12-28-amazon-top-50-books/</link>
+      <link>https://devmedeiros.com/post/amazon-top-50-books/</link>
       <pubDate>Tue, 28 Dec 2021 14:55:00 -0300</pubDate>
       
-      <guid>https://devmedeiros.com/post/2021-12-28-amazon-top-50-books/</guid>
+      <guid>https://devmedeiros.com/post/amazon-top-50-books/</guid>
       <description>Exploratory Data Analysis of Amazon&amp;rsquo;s top 50 bestselling books 2009 - 2019</description>
       <content:encoded><![CDATA[<p>Recently I finished an Alura course named <em>Python for Data Science</em> and I want to put what I learned into practice, to do so I&rsquo;ll make a descriptive analysis on this dataset <a href="https://www.kaggle.com/sootersaalu/amazon-top-50-bestselling-books-2009-2019"><strong>Amazon Top 50 Bestselling Books 2009 - 2019</strong></a>. It contains 550 books and the data has been categorized as fiction and non-fiction by Goodreads. All of the code can be found <a href="https://gist.github.com/devmedeiros/12813bebd78f7662966096e963ed0aa9">here</a>.</p>
 <p>I started checking the first five observations from the dataset.</p>
@@ -805,10 +805,10 @@
     
     <item>
       <title>Have COVID Impacted California Traffic Collisions?</title>
-      <link>https://devmedeiros.com/post/2021-11-02-sql-california-traffic/</link>
+      <link>https://devmedeiros.com/post/sql-california-traffic/</link>
       <pubDate>Tue, 02 Nov 2021 17:14:00 -0300</pubDate>
       
-      <guid>https://devmedeiros.com/post/2021-11-02-sql-california-traffic/</guid>
+      <guid>https://devmedeiros.com/post/sql-california-traffic/</guid>
       <description>Using SQL to analyze if COVID impacted California Traffic Collisions</description>
       <content:encoded><![CDATA[<h2 id="introduction">Introduction</h2>
 <p>COVID-19 has changed many things in our day-to-day life, from ordering more delivery, working from home, or even just getting a new pet. And now I want to see if it has impacted traffic crashes in California. The dataset that I’ll be using comes from Kaggle. It covers collisions from January 2001 up to December 2020 from California. <sup id="fnref:1"><a href="#fn:1" class="footnote-ref" role="doc-noteref">1</a></sup> The following are the tables present in the dataset:</p>

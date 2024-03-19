@@ -138,10 +138,10 @@
     
     <item>
       <title>Data Science Challenge - Churn Rate</title>
-      <link>https://devmedeiros.com/post/2022-05-30-churn-rate-challenge/</link>
+      <link>https://devmedeiros.com/post/churn-rate-challenge/</link>
       <pubDate>Mon, 30 May 2022 16:49:00 -0300</pubDate>
       
-      <guid>https://devmedeiros.com/post/2022-05-30-churn-rate-challenge/</guid>
+      <guid>https://devmedeiros.com/post/churn-rate-challenge/</guid>
       <description>Alura hosted a four-week Data Science Challenge using an imbalanced dataset of Churn Rate of a company Alura Voz</description>
       <content:encoded><![CDATA[<p>I was challenged to take the role of a new data scientist hired at Alura Voz. This made-up company is a telecommunication company and it needs to reduce the Churn Rate.</p>
 <p>The challenge is divided into four weeks. For the first week, the goal was to clean the dataset provided by an API. Next, we need to identify clients who are more likely to leave the company, using data exploration and analysis. Then, in the third week, we made machine learning models to predict the churn rate for Alura Voz. The last week is to show off what we made during the challenge and build our portfolio. In case you are interested in seeing the code for the challenge just head over to my GitHub <a href="https://github.com/devmedeiros/Challenge-Data-Science">repository</a>.</p>

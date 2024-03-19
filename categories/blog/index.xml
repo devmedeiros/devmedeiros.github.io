@@ -1340,10 +1340,10 @@
     
     <item>
       <title>Feature Selection</title>
-      <link>https://devmedeiros.com/post/2022-06-14-feature-selection/</link>
+      <link>https://devmedeiros.com/post/feature-selection/</link>
       <pubDate>Tue, 14 Jun 2022 19:23:00 -0300</pubDate>
       
-      <guid>https://devmedeiros.com/post/2022-06-14-feature-selection/</guid>
+      <guid>https://devmedeiros.com/post/feature-selection/</guid>
       <description>Defining feature selection and showing how you can select features in Machine Learning</description>
       <content:encoded><![CDATA[<h2 id="what-is-feature-selection">What is feature selection?</h2>
 <p>Feature selection is the process of finding pertinent features and eliminating unnecessary, redundant, or noisy data. It can be useful to help the training process be faster and it can also avoid overfitting. According to Munson and Caruana, the goal of feature selection is to identify the feature set that best balances the risks of having too few features with the risks of having too many features. It can also help improve the prediction accuracy and the interpretation of models.<sup id="fnref:1"><a href="#fn:1" class="footnote-ref" role="doc-noteref">1</a></sup> <sup id="fnref:2"><a href="#fn:2" class="footnote-ref" role="doc-noteref">2</a></sup></p>
@@ -1381,10 +1381,10 @@
     
     <item>
       <title>Data Science Challenge - Churn Rate</title>
-      <link>https://devmedeiros.com/post/2022-05-30-churn-rate-challenge/</link>
+      <link>https://devmedeiros.com/post/churn-rate-challenge/</link>
       <pubDate>Mon, 30 May 2022 16:49:00 -0300</pubDate>
       
-      <guid>https://devmedeiros.com/post/2022-05-30-churn-rate-challenge/</guid>
+      <guid>https://devmedeiros.com/post/churn-rate-challenge/</guid>
       <description>Alura hosted a four-week Data Science Challenge using an imbalanced dataset of Churn Rate of a company Alura Voz</description>
       <content:encoded><![CDATA[<p>I was challenged to take the role of a new data scientist hired at Alura Voz. This made-up company is a telecommunication company and it needs to reduce the Churn Rate.</p>
 <p>The challenge is divided into four weeks. For the first week, the goal was to clean the dataset provided by an API. Next, we need to identify clients who are more likely to leave the company, using data exploration and analysis. Then, in the third week, we made machine learning models to predict the churn rate for Alura Voz. The last week is to show off what we made during the challenge and build our portfolio. In case you are interested in seeing the code for the challenge just head over to my GitHub <a href="https://github.com/devmedeiros/Challenge-Data-Science">repository</a>.</p>
@@ -1517,10 +1517,10 @@
     
     <item>
       <title>UX/UI for Business Intelligence Dashboards</title>
-      <link>https://devmedeiros.com/post/2022-04-29-ux-power-bi-dashboards/</link>
+      <link>https://devmedeiros.com/post/ux-power-bi-dashboards/</link>
       <pubDate>Fri, 29 Apr 2022 11:14:00 -0300</pubDate>
       
-      <guid>https://devmedeiros.com/post/2022-04-29-ux-power-bi-dashboards/</guid>
+      <guid>https://devmedeiros.com/post/ux-power-bi-dashboards/</guid>
       <description>Defining UX/UI in the context of Bussiness Intelligence for Dashboards with examples</description>
       <content:encoded><![CDATA[<h2 id="what-is-uxui">What is UX/UI?</h2>
 <p>UX is the acronym for User Experience, it is a recent concept about making design decisions while thinking about the user experience. The UX designer needs to be concerned about whether their product is easy to use and intuitive, making changes to it whenever necessary to suit the user&rsquo;s needs.</p>
@@ -1598,10 +1598,10 @@
     
     <item>
       <title>Storytelling with CEAP</title>
-      <link>https://devmedeiros.com/post/2022-04-17-storytelling-with-ceap/</link>
+      <link>https://devmedeiros.com/post/storytelling-with-ceap/</link>
       <pubDate>Sun, 17 Apr 2022 10:08:00 -0300</pubDate>
       
-      <guid>https://devmedeiros.com/post/2022-04-17-storytelling-with-ceap/</guid>
+      <guid>https://devmedeiros.com/post/storytelling-with-ceap/</guid>
       <description>The storytelling of how much each deputy/senator spends in Brazil</description>
       <content:encoded><![CDATA[<h2 id="the-dataset">The Dataset</h2>
 <p>CEAP stands for <em>Cota para o Exercício da Atividade Parlamentar</em>, in English, Exercise of Parliamentary Activity from Brazil. The quota is a monthly amount that can be used by the deputy/senator to defray typical expenses of the exercise of the parliamentary mandate.</p>
@@ -1651,10 +1651,10 @@
     
     <item>
       <title>Comprehending the P Value</title>
-      <link>https://devmedeiros.com/post/2022-04-12-comprehending-the-p-value/</link>
+      <link>https://devmedeiros.com/post/comprehending-the-p-value/</link>
       <pubDate>Tue, 12 Apr 2022 17:58:00 -0300</pubDate>
       
-      <guid>https://devmedeiros.com/post/2022-04-12-comprehending-the-p-value/</guid>
+      <guid>https://devmedeiros.com/post/comprehending-the-p-value/</guid>
       <description>P-value definition, how to use it, and interpreting the measurement</description>
       <content:encoded><![CDATA[<h2 id="what-is-the-p-value">What is the p-value?</h2>
 <p>In statistics, we have hypothesis tests, which are made to decide whether to reject or <em>not</em> reject the null hypothesis. Some examples of hypothesis testing are Neyman-Pearson, Shapiro-Wilk, Student&rsquo;s T-test, and others.</p>
@@ -1672,12 +1672,12 @@
     
     <item>
       <title>Podcast Review - Machine Learning Guide</title>
-      <link>https://devmedeiros.com/post/2022-01-24-podcast-review-mlg/</link>
+      <link>https://devmedeiros.com/post/podcast-review-mlg/</link>
       <pubDate>Mon, 24 Jan 2022 18:15:00 -0300</pubDate>
       
-      <guid>https://devmedeiros.com/post/2022-01-24-podcast-review-mlg/</guid>
+      <guid>https://devmedeiros.com/post/podcast-review-mlg/</guid>
       <description>A review about the podcast Machine Learning Guide</description>
-      <content:encoded><![CDATA[<p><img loading="lazy" src="https://ocdevel.com/static/media/MLG-Option-1.24e2cc63.jpg#center" alt="Machine Learning Guide Podcast Cover"  />
+      <content:encoded><![CDATA[<p><img loading="lazy" src="https://ik.imagekit.io/devmedeiros/mlg-capa_4H_gyNxIV.jpg#center" alt="Machine Learning Guide Podcast Cover"  />
 </p>
 <p>The show is presented by Tyler Renelle from Depth, since 2021 it has been redone to update the content. The podcast offers a <a href="https://ocdevel.com/mlg/resources">resource</a> list where you can find all of the books, courses, and sites mentioned during the podcast. It&rsquo;s a great podcast for anyone who is learning about machine learning, it can be useful for a complete beginner, an enthusiast, or someone who is looking to further even more on this topic.</p>
 <p>The show starts by talking about what is <em>data science</em>, how it relates to <em>machine learning</em> and <em>artificial intelligence</em>. It also talks about the first attempts humans had made to create AI, with some examples coming from as early as the 13th century.</p>
@@ -1687,10 +1687,10 @@
     
     <item>
       <title>EDA Amazon Top 50 Bestselling Books</title>
-      <link>https://devmedeiros.com/post/2021-12-28-amazon-top-50-books/</link>
+      <link>https://devmedeiros.com/post/amazon-top-50-books/</link>
       <pubDate>Tue, 28 Dec 2021 14:55:00 -0300</pubDate>
       
-      <guid>https://devmedeiros.com/post/2021-12-28-amazon-top-50-books/</guid>
+      <guid>https://devmedeiros.com/post/amazon-top-50-books/</guid>
       <description>Exploratory Data Analysis of Amazon&amp;rsquo;s top 50 bestselling books 2009 - 2019</description>
       <content:encoded><![CDATA[<p>Recently I finished an Alura course named <em>Python for Data Science</em> and I want to put what I learned into practice, to do so I&rsquo;ll make a descriptive analysis on this dataset <a href="https://www.kaggle.com/sootersaalu/amazon-top-50-bestselling-books-2009-2019"><strong>Amazon Top 50 Bestselling Books 2009 - 2019</strong></a>. It contains 550 books and the data has been categorized as fiction and non-fiction by Goodreads. All of the code can be found <a href="https://gist.github.com/devmedeiros/12813bebd78f7662966096e963ed0aa9">here</a>.</p>
 <p>I started checking the first five observations from the dataset.</p>
@@ -1861,10 +1861,10 @@
     
     <item>
       <title>Python seaborn Package Guide</title>
-      <link>https://devmedeiros.com/post/2021-11-07-seaborn-package-guide/</link>
+      <link>https://devmedeiros.com/post/seaborn-package-guide/</link>
       <pubDate>Sun, 07 Nov 2021 15:14:00 -0300</pubDate>
       
-      <guid>https://devmedeiros.com/post/2021-11-07-seaborn-package-guide/</guid>
+      <guid>https://devmedeiros.com/post/seaborn-package-guide/</guid>
       <description>A simple guide on how to make basic plots using the seaborn package from Python</description>
       <content:encoded><![CDATA[<h2 id="introduction">Introduction</h2>
 <p>I&rsquo;m learning data visualization in Python and I see myself as a &lsquo;hands on&rsquo; learner, so I&rsquo;ll be reproducing some basic plots using <code>seaborn</code> package that you can use as a reference everytime you need to fresh up your memory.</p>
@@ -2077,10 +2077,10 @@
     
     <item>
       <title>Have COVID Impacted California Traffic Collisions?</title>
-      <link>https://devmedeiros.com/post/2021-11-02-sql-california-traffic/</link>
+      <link>https://devmedeiros.com/post/sql-california-traffic/</link>
       <pubDate>Tue, 02 Nov 2021 17:14:00 -0300</pubDate>
       
-      <guid>https://devmedeiros.com/post/2021-11-02-sql-california-traffic/</guid>
+      <guid>https://devmedeiros.com/post/sql-california-traffic/</guid>
       <description>Using SQL to analyze if COVID impacted California Traffic Collisions</description>
       <content:encoded><![CDATA[<h2 id="introduction">Introduction</h2>
 <p>COVID-19 has changed many things in our day-to-day life, from ordering more delivery, working from home, or even just getting a new pet. And now I want to see if it has impacted traffic crashes in California. The dataset that I’ll be using comes from Kaggle. It covers collisions from January 2001 up to December 2020 from California. <sup id="fnref:1"><a href="#fn:1" class="footnote-ref" role="doc-noteref">1</a></sup> The following are the tables present in the dataset:</p>
@@ -2195,10 +2195,10 @@
     
     <item>
       <title>An Overview on data.table R Package</title>
-      <link>https://devmedeiros.com/post/2021-10-27-data-table/</link>
+      <link>https://devmedeiros.com/post/data-table/</link>
       <pubDate>Wed, 27 Oct 2021 09:41:00 -0300</pubDate>
       
-      <guid>https://devmedeiros.com/post/2021-10-27-data-table/</guid>
+      <guid>https://devmedeiros.com/post/data-table/</guid>
       <description>One of the fastest packages for data manipulation on R</description>
       <content:encoded><![CDATA[<p>The <code>data.table</code> package is one of the fastest packages for data manipulation, currently, it is even faster than <code>pandas</code> and <code>dplyr</code> <sup id="fnref:1"><a href="#fn:1" class="footnote-ref" role="doc-noteref">1</a></sup>. <code>data.table</code> syntax is <code>dt[i, j, by]</code>, where:</p>
 <ul>
@@ -2232,10 +2232,10 @@
     
     <item>
       <title>Blackjack Simulation</title>
-      <link>https://devmedeiros.com/post/2021-10-24-blackjack-simulation/</link>
+      <link>https://devmedeiros.com/post/blackjack-simulation/</link>
       <pubDate>Sun, 24 Oct 2021 20:43:00 -0300</pubDate>
       
-      <guid>https://devmedeiros.com/post/2021-10-24-blackjack-simulation/</guid>
+      <guid>https://devmedeiros.com/post/blackjack-simulation/</guid>
       <description>A blackjack simulation using R and Shiny, you can run a single game with p players, d decks, n times</description>
       <content:encoded><![CDATA[<p>I got inspired to simulate a blackjack game, so I decided to make a series of functions to emulate the dealer&rsquo;s behavior, a newbie player, a cautious player, and a strategist. With this set of functions, you can run a single game with <strong>p</strong> players, <strong>d</strong> decks, any combination of players archetypes. And you can also run it <strong>n</strong> times.</p>
 <p>I also made a <a href="https://jaqueline-medeiros.shinyapps.io/appa/">shiny app</a> to display how the simulation works. In the app, you are limited by the number of players, but if you wish to run the code with more players you can check the GitHub <a href="https://github.com/devmedeiros/blackjack-simulation">repository</a>. There you can find the rules considered for the simulation and the complete code.</p>
@@ -2256,10 +2256,10 @@
     
     <item>
       <title>Sentiment Analysis of Fake News vs Real News</title>
-      <link>https://devmedeiros.com/post/2021-10-12-fakenews-sentiment/</link>
+      <link>https://devmedeiros.com/post/fakenews-sentiment/</link>
       <pubDate>Tue, 12 Oct 2021 19:47:00 -0300</pubDate>
       
-      <guid>https://devmedeiros.com/post/2021-10-12-fakenews-sentiment/</guid>
+      <guid>https://devmedeiros.com/post/fakenews-sentiment/</guid>
       <description>Sentiment Analysis comparing Fake News and Real News using R</description>
       <content:encoded><![CDATA[<p>I want to tackle sentiment analysis using R in a simple way, just to get me started. With this in mind we begin loading all the packages we&rsquo;ll be using.</p>
 <div class="highlight"><div style="color:#f8f8f2;background-color:#272822;-moz-tab-size:4;-o-tab-size:4;tab-size:4;">

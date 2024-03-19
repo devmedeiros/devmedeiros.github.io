@@ -409,10 +409,10 @@
     
     <item>
       <title>Data Science Challenge - Churn Rate</title>
-      <link>https://devmedeiros.com/pt/post/2022-05-30-churn-rate-challenge/</link>
+      <link>https://devmedeiros.com/pt/post/churn-rate-challenge/</link>
       <pubDate>Mon, 30 May 2022 16:49:00 -0300</pubDate>
       
-      <guid>https://devmedeiros.com/pt/post/2022-05-30-churn-rate-challenge/</guid>
+      <guid>https://devmedeiros.com/pt/post/churn-rate-challenge/</guid>
       <description>Alura fez um desafio de quatro semanas &amp;ldquo;Data Science Challenge&amp;rdquo; utilizando um banco desbalanceado da taxa de evasão da empresa Alura Voz</description>
       <content:encoded><![CDATA[<p>Eu fui desafiada a tomar o papel da nova cientista de dados na Alura Voz. Essa empresa fictícia é do ramo de telecomunicação e precisa reduzir sua taxa de evasão de clientes.</p>
 <p>Esse desafio é dividido em quatro semanas. Para a primeira semana o objetivo é tratar o banco de dados proveniente de uma API. Em seguida, precisamos identificar clientes que são mais propensos a deixar a empresa, usando exploração e análise de dados. E então, na terceira semana, nós usamos modelos de <em>machine learning</em> para prever a taxa de evasão da Alura Voz. A última semana é para expor o que fizemos durante o desafio e construir nosso portfolio. Caso esteja interessado em ver o código, ele está disponível no meu <a href="https://github.com/devmedeiros/Challenge-Data-Science">repositório</a> do GitHub.</p>
@@ -545,10 +545,10 @@
     
     <item>
       <title>EDA Top 50 Livros Bestsellers da Amazon</title>
-      <link>https://devmedeiros.com/pt/post/2021-12-28-amazon-top-50-books/</link>
+      <link>https://devmedeiros.com/pt/post/amazon-top-50-books/</link>
       <pubDate>Tue, 28 Dec 2021 14:55:00 -0300</pubDate>
       
-      <guid>https://devmedeiros.com/pt/post/2021-12-28-amazon-top-50-books/</guid>
+      <guid>https://devmedeiros.com/pt/post/amazon-top-50-books/</guid>
       <description>Análise Exploratória de Dados dos 50 livros mais bem vendidos da Amazon de 2009 - 2019</description>
       <content:encoded><![CDATA[<p>Recentemente eu terminei um curso na Alura chamado <em>Python para Data Science</em> e eu quero colocar o que eu aprendi em prática, para isso eu vou fazer uma análise descritiva nesse banco de dados <a href="https://www.kaggle.com/sootersaalu/amazon-top-50-bestselling-books-2009-2019"><strong>Amazon Top 50 Bestselling Books 2009 - 2019</strong></a>. Nele há 550 livros e eles foram categorizados como <strong>fiction</strong> (ficção) e <strong>non-fiction</strong> (não ficção) pelo Goodreads. Todo o código pode ser visto <a href="https://gist.github.com/devmedeiros/12813bebd78f7662966096e963ed0aa9">aqui</a>.</p>
 <p>Eu comecei olhando as cinco primeiras observações do banco de dados.</p>

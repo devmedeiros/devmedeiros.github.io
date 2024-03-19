@@ -1297,10 +1297,10 @@ Nossa terceira página apresenta informação sobre as estrelas dos filmes, os 1
     
     <item>
       <title>Data Science Challenge - Churn Rate</title>
-      <link>https://devmedeiros.com/pt/post/2022-05-30-churn-rate-challenge/</link>
+      <link>https://devmedeiros.com/pt/post/churn-rate-challenge/</link>
       <pubDate>Mon, 30 May 2022 16:49:00 -0300</pubDate>
       
-      <guid>https://devmedeiros.com/pt/post/2022-05-30-churn-rate-challenge/</guid>
+      <guid>https://devmedeiros.com/pt/post/churn-rate-challenge/</guid>
       <description>Alura fez um desafio de quatro semanas &amp;ldquo;Data Science Challenge&amp;rdquo; utilizando um banco desbalanceado da taxa de evasão da empresa Alura Voz</description>
       <content:encoded><![CDATA[<p>Eu fui desafiada a tomar o papel da nova cientista de dados na Alura Voz. Essa empresa fictícia é do ramo de telecomunicação e precisa reduzir sua taxa de evasão de clientes.</p>
 <p>Esse desafio é dividido em quatro semanas. Para a primeira semana o objetivo é tratar o banco de dados proveniente de uma API. Em seguida, precisamos identificar clientes que são mais propensos a deixar a empresa, usando exploração e análise de dados. E então, na terceira semana, nós usamos modelos de <em>machine learning</em> para prever a taxa de evasão da Alura Voz. A última semana é para expor o que fizemos durante o desafio e construir nosso portfolio. Caso esteja interessado em ver o código, ele está disponível no meu <a href="https://github.com/devmedeiros/Challenge-Data-Science">repositório</a> do GitHub.</p>
@@ -1433,10 +1433,10 @@ Nossa terceira página apresenta informação sobre as estrelas dos filmes, os 1
     
     <item>
       <title>UX/UI em Dashboards de Business Intelligence</title>
-      <link>https://devmedeiros.com/pt/post/2022-04-29-ux-power-bi-dashboards/</link>
+      <link>https://devmedeiros.com/pt/post/ux-power-bi-dashboards/</link>
       <pubDate>Fri, 29 Apr 2022 11:14:00 -0300</pubDate>
       
-      <guid>https://devmedeiros.com/pt/post/2022-04-29-ux-power-bi-dashboards/</guid>
+      <guid>https://devmedeiros.com/pt/post/ux-power-bi-dashboards/</guid>
       <description>Definindo UX/UI no contexto de Bussiness Intelligence para Dashboards com exemplos</description>
       <content:encoded><![CDATA[<h2 id="o-que-é-uxui">O que é UX/UI?</h2>
 <p>UX é a sigla em inglês para Experiência de Usuário, é um conceito recente que fala sobre tomar decisões de design pensando na experiência do usuário final. O designer de UX precisa se preocupar se seu produto é fácil de usar e intuitivo, fazendo mudanças nele sempre que necessário para se adequar as necessidades do usuário.</p>
@@ -1514,10 +1514,10 @@ Nossa terceira página apresenta informação sobre as estrelas dos filmes, os 1
     
     <item>
       <title>Compreendendo o P-Valor</title>
-      <link>https://devmedeiros.com/pt/post/2022-04-12-comprehending-the-p-value/</link>
+      <link>https://devmedeiros.com/pt/post/comprehending-the-p-value/</link>
       <pubDate>Tue, 12 Apr 2022 17:58:00 -0300</pubDate>
       
-      <guid>https://devmedeiros.com/pt/post/2022-04-12-comprehending-the-p-value/</guid>
+      <guid>https://devmedeiros.com/pt/post/comprehending-the-p-value/</guid>
       <description>A definição do p-valor, como usar ele, e como interpretar a medida</description>
       <content:encoded><![CDATA[<h2 id="o-que-é-o-p-valor">O que é o p-valor?</h2>
 <p>Em estatística temos os testes de hipóteses, que são feitos para tomar uma decisão, de rejeitar ou <em>não</em> rejeitar a hipótese nula. Alguns exemplos de teste de hipótese são: Neyman-Pearson, Shapiro-Wilk, T de Student, entre outros.</p>
@@ -1535,12 +1535,12 @@ Nossa terceira página apresenta informação sobre as estrelas dos filmes, os 1
     
     <item>
       <title>Review do Podcast - Machine Learning Guide</title>
-      <link>https://devmedeiros.com/pt/post/2022-01-24-podcast-review-mlg/</link>
+      <link>https://devmedeiros.com/pt/post/podcast-review-mlg/</link>
       <pubDate>Mon, 24 Jan 2022 18:15:00 -0300</pubDate>
       
-      <guid>https://devmedeiros.com/pt/post/2022-01-24-podcast-review-mlg/</guid>
+      <guid>https://devmedeiros.com/pt/post/podcast-review-mlg/</guid>
       <description>Uma resenha sobre o podcast Machine Learning Guide</description>
-      <content:encoded><![CDATA[<p><img loading="lazy" src="https://ocdevel.com/static/media/MLG-Option-1.24e2cc63.jpg#center" alt="Machine Learning Guide Podcast Capa"  />
+      <content:encoded><![CDATA[<p><img loading="lazy" src="https://ik.imagekit.io/devmedeiros/mlg-capa_4H_gyNxIV.jpg#center" alt="Machine Learning Guide Podcast Capa"  />
 </p>
 <p>O show, apresentado por Tyler Renelle da Depth, oferece uma lista com <a href="https://ocdevel.com/mlg/resources">recursos</a> na qual você pode encontrar todos os livros, cursos, e sites mencionados durante o podcast. É um ótimo podcast para quem está aprendendo sobre aprendizado de máquina, podendo ser útil para iniciantes, entusiastas, ou para alguém que está procurando se aprofundar ainda mais no tópico. Desde 2021 o show está sendo renovado para atualizar o conteúdo.</p>
 <p>O show começa falando sobre o que é <em>ciência de dados</em> e como ela se relaciona com <em>aprendizado de máquina</em> e <em>inteligência artificial</em>. Ele também fala sobre as primeiras tentativas em criar IA, com alguns exemplos vindos desde o século 13.</p>
@@ -1550,10 +1550,10 @@ Nossa terceira página apresenta informação sobre as estrelas dos filmes, os 1
     
     <item>
       <title>EDA Top 50 Livros Bestsellers da Amazon</title>
-      <link>https://devmedeiros.com/pt/post/2021-12-28-amazon-top-50-books/</link>
+      <link>https://devmedeiros.com/pt/post/amazon-top-50-books/</link>
       <pubDate>Tue, 28 Dec 2021 14:55:00 -0300</pubDate>
       
-      <guid>https://devmedeiros.com/pt/post/2021-12-28-amazon-top-50-books/</guid>
+      <guid>https://devmedeiros.com/pt/post/amazon-top-50-books/</guid>
       <description>Análise Exploratória de Dados dos 50 livros mais bem vendidos da Amazon de 2009 - 2019</description>
       <content:encoded><![CDATA[<p>Recentemente eu terminei um curso na Alura chamado <em>Python para Data Science</em> e eu quero colocar o que eu aprendi em prática, para isso eu vou fazer uma análise descritiva nesse banco de dados <a href="https://www.kaggle.com/sootersaalu/amazon-top-50-bestselling-books-2009-2019"><strong>Amazon Top 50 Bestselling Books 2009 - 2019</strong></a>. Nele há 550 livros e eles foram categorizados como <strong>fiction</strong> (ficção) e <strong>non-fiction</strong> (não ficção) pelo Goodreads. Todo o código pode ser visto <a href="https://gist.github.com/devmedeiros/12813bebd78f7662966096e963ed0aa9">aqui</a>.</p>
 <p>Eu comecei olhando as cinco primeiras observações do banco de dados.</p>
@@ -1723,10 +1723,10 @@ Nossa terceira página apresenta informação sobre as estrelas dos filmes, os 1
     
     <item>
       <title>Guia do Pacote de Python seaborn</title>
-      <link>https://devmedeiros.com/pt/post/2021-11-07-seaborn-package-guide/</link>
+      <link>https://devmedeiros.com/pt/post/seaborn-package-guide/</link>
       <pubDate>Sun, 07 Nov 2021 15:14:00 -0300</pubDate>
       
-      <guid>https://devmedeiros.com/pt/post/2021-11-07-seaborn-package-guide/</guid>
+      <guid>https://devmedeiros.com/pt/post/seaborn-package-guide/</guid>
       <description>Um guia simples de como fazer gráficos básicos usando o pacote seaborn do Python</description>
       <content:encoded><![CDATA[<h2 id="introdução">Introdução</h2>
 <p>Eu estou aprendendo visualização de dados no Python e eu me vejo como alguém que aprende fazendo, por isso eu vou fazer alguns gráficos simples usando o pacote <code>seaborn</code> que poderão ser utilizados como referência sempre que precisar refrescar a memória.</p>
@@ -1939,10 +1939,10 @@ Nossa terceira página apresenta informação sobre as estrelas dos filmes, os 1
     
     <item>
       <title>Uma Visão Geral Sobre o Pacote data.table do R</title>
-      <link>https://devmedeiros.com/pt/post/2021-10-27-data-table/</link>
+      <link>https://devmedeiros.com/pt/post/data-table/</link>
       <pubDate>Wed, 27 Oct 2021 09:41:00 -0300</pubDate>
       
-      <guid>https://devmedeiros.com/pt/post/2021-10-27-data-table/</guid>
+      <guid>https://devmedeiros.com/pt/post/data-table/</guid>
       <description>Um dos pacotes de manipulação de dados mais rápidos do R</description>
       <content:encoded><![CDATA[<p>O pacote <code>data.table</code> é um dos pacotes de manipulação de dados mais rápido, atualmente ele é mais rápido até que o <code>pandas</code> e <code>dplyr</code> <sup id="fnref:1"><a href="#fn:1" class="footnote-ref" role="doc-noteref">1</a></sup>. A sintaxe de um <code>data.table</code> é <code>dt[i, j, by]</code>, em que:</p>
 <ul>
@@ -1976,10 +1976,10 @@ Nossa terceira página apresenta informação sobre as estrelas dos filmes, os 1
     
     <item>
       <title>Simulação de 21</title>
-      <link>https://devmedeiros.com/pt/post/2021-10-24-blackjack-simulation/</link>
+      <link>https://devmedeiros.com/pt/post/blackjack-simulation/</link>
       <pubDate>Sun, 24 Oct 2021 20:43:00 -0300</pubDate>
       
-      <guid>https://devmedeiros.com/pt/post/2021-10-24-blackjack-simulation/</guid>
+      <guid>https://devmedeiros.com/pt/post/blackjack-simulation/</guid>
       <description>Uma simulação de 21 usando R e Shiny, você pode rodar um jogo com p jogadores, d baralhos, n vezes</description>
       <content:encoded><![CDATA[<p>O meu objetivo com este projeto é de simular o ambiente de um jogo de 21, também conhecido como <em>blackjack</em>. Assim, eu decidi fazer diversas funções para emular o comportamento do <em>dealer</em>, de um jogador iniciante, um jogador cauteloso e um estrategista. Com esse conjunto de funções você pode rodar um jogo com <strong>p</strong> jogadores, <strong>d</strong> baralhos e quaisquer combinações de arquétipos de jogadores. Além disso, também pode rodar o jogo <strong>n</strong> vezes.</p>
 <p>Eu também fiz uma <a href="https://jaqueline-medeiros.shinyapps.io/appa/">aplicação shiny</a> para demonstrar como a simulação funciona. No aplicativo, você é limitado no número de jogadores, mas caso queira rodar o código com mais jogadores eu sugiro que olhe o <a href="https://github.com/devmedeiros/blackjack-simulation">respositório</a> do GitHub. Nele você encontra as regras consideradas para a simulação e o código completo.</p>
@@ -2000,10 +2000,10 @@ Nossa terceira página apresenta informação sobre as estrelas dos filmes, os 1
     
     <item>
       <title>Análise de Sentimentos de Notícias Falsas vs Notícias Reais</title>
-      <link>https://devmedeiros.com/pt/post/2021-10-12-fakenews-sentiment/</link>
+      <link>https://devmedeiros.com/pt/post/fakenews-sentiment/</link>
       <pubDate>Tue, 12 Oct 2021 19:47:00 -0300</pubDate>
       
-      <guid>https://devmedeiros.com/pt/post/2021-10-12-fakenews-sentiment/</guid>
+      <guid>https://devmedeiros.com/pt/post/fakenews-sentiment/</guid>
       <description>Análise de Sentimento comparando notícias falsas e notícias reais</description>
       <content:encoded><![CDATA[<p>Eu quero fazer uma análise de sentimentos usando o R como uma forma de aprender. Com isso em mente começamos carregando todos os pacotes que iremos utilizar.</p>
 <div class="highlight"><div style="color:#f8f8f2;background-color:#272822;-moz-tab-size:4;-o-tab-size:4;tab-size:4;">

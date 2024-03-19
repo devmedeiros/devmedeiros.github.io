@@ -136,10 +136,10 @@
     
     <item>
       <title>UX/UI for Business Intelligence Dashboards</title>
-      <link>https://devmedeiros.com/post/2022-04-29-ux-power-bi-dashboards/</link>
+      <link>https://devmedeiros.com/post/ux-power-bi-dashboards/</link>
       <pubDate>Fri, 29 Apr 2022 11:14:00 -0300</pubDate>
       
-      <guid>https://devmedeiros.com/post/2022-04-29-ux-power-bi-dashboards/</guid>
+      <guid>https://devmedeiros.com/post/ux-power-bi-dashboards/</guid>
       <description>Defining UX/UI in the context of Bussiness Intelligence for Dashboards with examples</description>
       <content:encoded><![CDATA[<h2 id="what-is-uxui">What is UX/UI?</h2>
 <p>UX is the acronym for User Experience, it is a recent concept about making design decisions while thinking about the user experience. The UX designer needs to be concerned about whether their product is easy to use and intuitive, making changes to it whenever necessary to suit the user&rsquo;s needs.</p>
@@ -217,10 +217,10 @@
     
     <item>
       <title>Storytelling with CEAP</title>
-      <link>https://devmedeiros.com/post/2022-04-17-storytelling-with-ceap/</link>
+      <link>https://devmedeiros.com/post/storytelling-with-ceap/</link>
       <pubDate>Sun, 17 Apr 2022 10:08:00 -0300</pubDate>
       
-      <guid>https://devmedeiros.com/post/2022-04-17-storytelling-with-ceap/</guid>
+      <guid>https://devmedeiros.com/post/storytelling-with-ceap/</guid>
       <description>The storytelling of how much each deputy/senator spends in Brazil</description>
       <content:encoded><![CDATA[<h2 id="the-dataset">The Dataset</h2>
 <p>CEAP stands for <em>Cota para o Exercício da Atividade Parlamentar</em>, in English, Exercise of Parliamentary Activity from Brazil. The quota is a monthly amount that can be used by the deputy/senator to defray typical expenses of the exercise of the parliamentary mandate.</p>
@@ -270,10 +270,10 @@
     
     <item>
       <title>EDA Amazon Top 50 Bestselling Books</title>
-      <link>https://devmedeiros.com/post/2021-12-28-amazon-top-50-books/</link>
+      <link>https://devmedeiros.com/post/amazon-top-50-books/</link>
       <pubDate>Tue, 28 Dec 2021 14:55:00 -0300</pubDate>
       
-      <guid>https://devmedeiros.com/post/2021-12-28-amazon-top-50-books/</guid>
+      <guid>https://devmedeiros.com/post/amazon-top-50-books/</guid>
       <description>Exploratory Data Analysis of Amazon&amp;rsquo;s top 50 bestselling books 2009 - 2019</description>
       <content:encoded><![CDATA[<p>Recently I finished an Alura course named <em>Python for Data Science</em> and I want to put what I learned into practice, to do so I&rsquo;ll make a descriptive analysis on this dataset <a href="https://www.kaggle.com/sootersaalu/amazon-top-50-bestselling-books-2009-2019"><strong>Amazon Top 50 Bestselling Books 2009 - 2019</strong></a>. It contains 550 books and the data has been categorized as fiction and non-fiction by Goodreads. All of the code can be found <a href="https://gist.github.com/devmedeiros/12813bebd78f7662966096e963ed0aa9">here</a>.</p>
 <p>I started checking the first five observations from the dataset.</p>
@@ -444,10 +444,10 @@
     
     <item>
       <title>Python seaborn Package Guide</title>
-      <link>https://devmedeiros.com/post/2021-11-07-seaborn-package-guide/</link>
+      <link>https://devmedeiros.com/post/seaborn-package-guide/</link>
       <pubDate>Sun, 07 Nov 2021 15:14:00 -0300</pubDate>
       
-      <guid>https://devmedeiros.com/post/2021-11-07-seaborn-package-guide/</guid>
+      <guid>https://devmedeiros.com/post/seaborn-package-guide/</guid>
       <description>A simple guide on how to make basic plots using the seaborn package from Python</description>
       <content:encoded><![CDATA[<h2 id="introduction">Introduction</h2>
 <p>I&rsquo;m learning data visualization in Python and I see myself as a &lsquo;hands on&rsquo; learner, so I&rsquo;ll be reproducing some basic plots using <code>seaborn</code> package that you can use as a reference everytime you need to fresh up your memory.</p>

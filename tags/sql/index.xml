@@ -678,10 +678,10 @@
     
     <item>
       <title>Have COVID Impacted California Traffic Collisions?</title>
-      <link>https://devmedeiros.com/post/2021-11-02-sql-california-traffic/</link>
+      <link>https://devmedeiros.com/post/sql-california-traffic/</link>
       <pubDate>Tue, 02 Nov 2021 17:14:00 -0300</pubDate>
       
-      <guid>https://devmedeiros.com/post/2021-11-02-sql-california-traffic/</guid>
+      <guid>https://devmedeiros.com/post/sql-california-traffic/</guid>
       <description>Using SQL to analyze if COVID impacted California Traffic Collisions</description>
       <content:encoded><![CDATA[<h2 id="introduction">Introduction</h2>
 <p>COVID-19 has changed many things in our day-to-day life, from ordering more delivery, working from home, or even just getting a new pet. And now I want to see if it has impacted traffic crashes in California. The dataset that I’ll be using comes from Kaggle. It covers collisions from January 2001 up to December 2020 from California. <sup id="fnref:1"><a href="#fn:1" class="footnote-ref" role="doc-noteref">1</a></sup> The following are the tables present in the dataset:</p>

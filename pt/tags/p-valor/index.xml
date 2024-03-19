@@ -13,10 +13,10 @@
     <lastBuildDate>Tue, 12 Apr 2022 17:58:00 -0300</lastBuildDate><atom:link href="https://devmedeiros.com/pt/tags/p-valor/index.xml" rel="self" type="application/rss+xml" />
     <item>
       <title>Compreendendo o P-Valor</title>
-      <link>https://devmedeiros.com/pt/post/2022-04-12-comprehending-the-p-value/</link>
+      <link>https://devmedeiros.com/pt/post/comprehending-the-p-value/</link>
       <pubDate>Tue, 12 Apr 2022 17:58:00 -0300</pubDate>
       
-      <guid>https://devmedeiros.com/pt/post/2022-04-12-comprehending-the-p-value/</guid>
+      <guid>https://devmedeiros.com/pt/post/comprehending-the-p-value/</guid>
       <description>A definição do p-valor, como usar ele, e como interpretar a medida</description>
       <content:encoded><![CDATA[<h2 id="o-que-é-o-p-valor">O que é o p-valor?</h2>
 <p>Em estatística temos os testes de hipóteses, que são feitos para tomar uma decisão, de rejeitar ou <em>não</em> rejeitar a hipótese nula. Alguns exemplos de teste de hipótese são: Neyman-Pearson, Shapiro-Wilk, T de Student, entre outros.</p>

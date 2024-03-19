@@ -78,10 +78,10 @@ Nossa terceira página apresenta informação sobre as estrelas dos filmes, os 1
     
     <item>
       <title>UX/UI em Dashboards de Business Intelligence</title>
-      <link>https://devmedeiros.com/pt/post/2022-04-29-ux-power-bi-dashboards/</link>
+      <link>https://devmedeiros.com/pt/post/ux-power-bi-dashboards/</link>
       <pubDate>Fri, 29 Apr 2022 11:14:00 -0300</pubDate>
       
-      <guid>https://devmedeiros.com/pt/post/2022-04-29-ux-power-bi-dashboards/</guid>
+      <guid>https://devmedeiros.com/pt/post/ux-power-bi-dashboards/</guid>
       <description>Definindo UX/UI no contexto de Bussiness Intelligence para Dashboards com exemplos</description>
       <content:encoded><![CDATA[<h2 id="o-que-é-uxui">O que é UX/UI?</h2>
 <p>UX é a sigla em inglês para Experiência de Usuário, é um conceito recente que fala sobre tomar decisões de design pensando na experiência do usuário final. O designer de UX precisa se preocupar se seu produto é fácil de usar e intuitivo, fazendo mudanças nele sempre que necessário para se adequar as necessidades do usuário.</p>

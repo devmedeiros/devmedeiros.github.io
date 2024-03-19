@@ -332,10 +332,10 @@
     
     <item>
       <title>Guia do Pacote de Python seaborn</title>
-      <link>https://devmedeiros.com/pt/post/2021-11-07-seaborn-package-guide/</link>
+      <link>https://devmedeiros.com/pt/post/seaborn-package-guide/</link>
       <pubDate>Sun, 07 Nov 2021 15:14:00 -0300</pubDate>
       
-      <guid>https://devmedeiros.com/pt/post/2021-11-07-seaborn-package-guide/</guid>
+      <guid>https://devmedeiros.com/pt/post/seaborn-package-guide/</guid>
       <description>Um guia simples de como fazer gráficos básicos usando o pacote seaborn do Python</description>
       <content:encoded><![CDATA[<h2 id="introdução">Introdução</h2>
 <p>Eu estou aprendendo visualização de dados no Python e eu me vejo como alguém que aprende fazendo, por isso eu vou fazer alguns gráficos simples usando o pacote <code>seaborn</code> que poderão ser utilizados como referência sempre que precisar refrescar a memória.</p>
