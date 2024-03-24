@@ -10,13 +10,63 @@
       <link>https://devmedeiros.com/cover.png</link>
     </image>
     <generator>Hugo -- gohugo.io</generator>
-    <lastBuildDate>Mon, 05 Feb 2024 22:32:00 -0300</lastBuildDate><atom:link href="https://devmedeiros.com/tags/index.xml" rel="self" type="application/rss+xml" />
+    <lastBuildDate>Sun, 24 Mar 2024 11:31:00 -0300</lastBuildDate><atom:link href="https://devmedeiros.com/tags/index.xml" rel="self" type="application/rss+xml" />
+    <item>
+      <title>Data Engineering</title>
+      <link>https://devmedeiros.com/tags/data-engineering/</link>
+      <pubDate>Sun, 24 Mar 2024 11:31:00 -0300</pubDate>
+      
+      <guid>https://devmedeiros.com/tags/data-engineering/</guid>
+      <description></description>
+      <content:encoded><![CDATA[]]></content:encoded>
+    </item>
+    
     <item>
       <title>Data Science</title>
       <link>https://devmedeiros.com/tags/data-science/</link>
-      <pubDate>Mon, 05 Feb 2024 22:32:00 -0300</pubDate>
+      <pubDate>Sun, 24 Mar 2024 11:31:00 -0300</pubDate>
       
       <guid>https://devmedeiros.com/tags/data-science/</guid>
+      <description></description>
+      <content:encoded><![CDATA[]]></content:encoded>
+    </item>
+    
+    <item>
+      <title>Power BI</title>
+      <link>https://devmedeiros.com/tags/power-bi/</link>
+      <pubDate>Sun, 24 Mar 2024 11:31:00 -0300</pubDate>
+      
+      <guid>https://devmedeiros.com/tags/power-bi/</guid>
+      <description></description>
+      <content:encoded><![CDATA[]]></content:encoded>
+    </item>
+    
+    <item>
+      <title>Python</title>
+      <link>https://devmedeiros.com/tags/python/</link>
+      <pubDate>Sun, 24 Mar 2024 11:31:00 -0300</pubDate>
+      
+      <guid>https://devmedeiros.com/tags/python/</guid>
+      <description></description>
+      <content:encoded><![CDATA[]]></content:encoded>
+    </item>
+    
+    <item>
+      <title>Scraping</title>
+      <link>https://devmedeiros.com/tags/scraping/</link>
+      <pubDate>Sun, 24 Mar 2024 11:31:00 -0300</pubDate>
+      
+      <guid>https://devmedeiros.com/tags/scraping/</guid>
+      <description></description>
+      <content:encoded><![CDATA[]]></content:encoded>
+    </item>
+    
+    <item>
+      <title>Streamlit</title>
+      <link>https://devmedeiros.com/tags/streamlit/</link>
+      <pubDate>Sun, 24 Mar 2024 11:31:00 -0300</pubDate>
+      
+      <guid>https://devmedeiros.com/tags/streamlit/</guid>
       <description></description>
       <content:encoded><![CDATA[]]></content:encoded>
     </item>
@@ -27,16 +77,6 @@
       <pubDate>Mon, 05 Feb 2024 22:32:00 -0300</pubDate>
       
       <guid>https://devmedeiros.com/tags/statistic/</guid>
-      <description></description>
-      <content:encoded><![CDATA[]]></content:encoded>
-    </item>
-    
-    <item>
-      <title>Data Engineering</title>
-      <link>https://devmedeiros.com/tags/data-engineering/</link>
-      <pubDate>Mon, 20 Nov 2023 18:45:00 -0300</pubDate>
-      
-      <guid>https://devmedeiros.com/tags/data-engineering/</guid>
       <description></description>
       <content:encoded><![CDATA[]]></content:encoded>
     </item>
@@ -102,26 +142,6 @@
     </item>
     
     <item>
-      <title>Python</title>
-      <link>https://devmedeiros.com/tags/python/</link>
-      <pubDate>Wed, 31 May 2023 21:54:00 -0300</pubDate>
-      
-      <guid>https://devmedeiros.com/tags/python/</guid>
-      <description></description>
-      <content:encoded><![CDATA[]]></content:encoded>
-    </item>
-    
-    <item>
-      <title>Scraping</title>
-      <link>https://devmedeiros.com/tags/scraping/</link>
-      <pubDate>Wed, 31 May 2023 21:54:00 -0300</pubDate>
-      
-      <guid>https://devmedeiros.com/tags/scraping/</guid>
-      <description></description>
-      <content:encoded><![CDATA[]]></content:encoded>
-    </item>
-    
-    <item>
       <title>Data Visualization</title>
       <link>https://devmedeiros.com/tags/data-visualization/</link>
       <pubDate>Tue, 04 Apr 2023 22:30:00 -0300</pubDate>
@@ -152,31 +172,11 @@
     </item>
     
     <item>
-      <title>Streamlit</title>
-      <link>https://devmedeiros.com/tags/streamlit/</link>
-      <pubDate>Mon, 08 Aug 2022 17:17:00 -0300</pubDate>
-      
-      <guid>https://devmedeiros.com/tags/streamlit/</guid>
-      <description></description>
-      <content:encoded><![CDATA[]]></content:encoded>
-    </item>
-    
-    <item>
       <title>Data Cleaning</title>
       <link>https://devmedeiros.com/tags/data-cleaning/</link>
       <pubDate>Sun, 24 Jul 2022 13:06:00 -0300</pubDate>
       
       <guid>https://devmedeiros.com/tags/data-cleaning/</guid>
-      <description></description>
-      <content:encoded><![CDATA[]]></content:encoded>
-    </item>
-    
-    <item>
-      <title>Power BI</title>
-      <link>https://devmedeiros.com/tags/power-bi/</link>
-      <pubDate>Thu, 30 Jun 2022 19:23:00 -0300</pubDate>
-      
-      <guid>https://devmedeiros.com/tags/power-bi/</guid>
       <description></description>
       <content:encoded><![CDATA[]]></content:encoded>
     </item>

@@ -2,8 +2,11 @@
 <urlset xmlns="http://www.sitemaps.org/schemas/sitemap/0.9"
   xmlns:xhtml="http://www.w3.org/1999/xhtml">
   <url>
+    <loc>https://devmedeiros.com/post/bts-nota-fiscal-goiana/</loc>
+    <lastmod>2024-03-24T11:31:00-03:00</lastmod>
+  </url><url>
     <loc>https://devmedeiros.com/categories/blog/</loc>
-    <lastmod>2024-03-11T22:29:00-03:00</lastmod>
+    <lastmod>2024-03-24T11:31:00-03:00</lastmod>
     <xhtml:link
                 rel="alternate"
                 hreflang="pt"
@@ -16,7 +19,7 @@
                 />
   </url><url>
     <loc>https://devmedeiros.com/categories/</loc>
-    <lastmod>2024-03-11T22:29:00-03:00</lastmod>
+    <lastmod>2024-03-24T11:31:00-03:00</lastmod>
     <xhtml:link
                 rel="alternate"
                 hreflang="pt"
@@ -28,11 +31,14 @@
                 href="https://devmedeiros.com/categories/"
                 />
   </url><url>
+    <loc>https://devmedeiros.com/tags/data-engineering/</loc>
+    <lastmod>2024-03-24T11:31:00-03:00</lastmod>
+  </url><url>
     <loc>https://devmedeiros.com/tags/data-science/</loc>
-    <lastmod>2024-02-05T22:32:00-03:00</lastmod>
+    <lastmod>2024-03-24T11:31:00-03:00</lastmod>
   </url><url>
     <loc>https://devmedeiros.com/</loc>
-    <lastmod>2024-03-11T22:29:00-03:00</lastmod>
+    <lastmod>2024-03-24T11:31:00-03:00</lastmod>
     <xhtml:link
                 rel="alternate"
                 hreflang="pt"
@@ -42,6 +48,84 @@
                 rel="alternate"
                 hreflang="en"
                 href="https://devmedeiros.com/"
+                />
+  </url><url>
+    <loc>https://devmedeiros.com/post/</loc>
+    <lastmod>2024-03-24T11:31:00-03:00</lastmod>
+    <xhtml:link
+                rel="alternate"
+                hreflang="pt"
+                href="https://devmedeiros.com/pt/post/"
+                />
+    <xhtml:link
+                rel="alternate"
+                hreflang="en"
+                href="https://devmedeiros.com/post/"
+                />
+  </url><url>
+    <loc>https://devmedeiros.com/tags/power-bi/</loc>
+    <lastmod>2024-03-24T11:31:00-03:00</lastmod>
+    <xhtml:link
+                rel="alternate"
+                hreflang="pt"
+                href="https://devmedeiros.com/pt/tags/power-bi/"
+                />
+    <xhtml:link
+                rel="alternate"
+                hreflang="en"
+                href="https://devmedeiros.com/tags/power-bi/"
+                />
+  </url><url>
+    <loc>https://devmedeiros.com/tags/python/</loc>
+    <lastmod>2024-03-24T11:31:00-03:00</lastmod>
+    <xhtml:link
+                rel="alternate"
+                hreflang="pt"
+                href="https://devmedeiros.com/pt/tags/python/"
+                />
+    <xhtml:link
+                rel="alternate"
+                hreflang="en"
+                href="https://devmedeiros.com/tags/python/"
+                />
+  </url><url>
+    <loc>https://devmedeiros.com/tags/scraping/</loc>
+    <lastmod>2024-03-24T11:31:00-03:00</lastmod>
+    <xhtml:link
+                rel="alternate"
+                hreflang="pt"
+                href="https://devmedeiros.com/pt/tags/scraping/"
+                />
+    <xhtml:link
+                rel="alternate"
+                hreflang="en"
+                href="https://devmedeiros.com/tags/scraping/"
+                />
+  </url><url>
+    <loc>https://devmedeiros.com/tags/streamlit/</loc>
+    <lastmod>2024-03-24T11:31:00-03:00</lastmod>
+    <xhtml:link
+                rel="alternate"
+                hreflang="pt"
+                href="https://devmedeiros.com/pt/tags/streamlit/"
+                />
+    <xhtml:link
+                rel="alternate"
+                hreflang="en"
+                href="https://devmedeiros.com/tags/streamlit/"
+                />
+  </url><url>
+    <loc>https://devmedeiros.com/tags/</loc>
+    <lastmod>2024-03-24T11:31:00-03:00</lastmod>
+    <xhtml:link
+                rel="alternate"
+                hreflang="pt"
+                href="https://devmedeiros.com/pt/tags/"
+                />
+    <xhtml:link
+                rel="alternate"
+                hreflang="en"
+                href="https://devmedeiros.com/tags/"
                 />
   </url><url>
     <loc>https://devmedeiros.com/post/multivariate-analysis/</loc>
@@ -57,37 +141,8 @@
                 href="https://devmedeiros.com/post/multivariate-analysis/"
                 />
   </url><url>
-    <loc>https://devmedeiros.com/post/</loc>
-    <lastmod>2024-03-11T22:29:00-03:00</lastmod>
-    <xhtml:link
-                rel="alternate"
-                hreflang="pt"
-                href="https://devmedeiros.com/pt/post/"
-                />
-    <xhtml:link
-                rel="alternate"
-                hreflang="en"
-                href="https://devmedeiros.com/post/"
-                />
-  </url><url>
     <loc>https://devmedeiros.com/tags/statistic/</loc>
     <lastmod>2024-02-05T22:32:00-03:00</lastmod>
-  </url><url>
-    <loc>https://devmedeiros.com/tags/</loc>
-    <lastmod>2024-03-11T22:29:00-03:00</lastmod>
-    <xhtml:link
-                rel="alternate"
-                hreflang="pt"
-                href="https://devmedeiros.com/pt/tags/"
-                />
-    <xhtml:link
-                rel="alternate"
-                hreflang="en"
-                href="https://devmedeiros.com/tags/"
-                />
-  </url><url>
-    <loc>https://devmedeiros.com/tags/data-engineering/</loc>
-    <lastmod>2023-11-20T18:45:00-03:00</lastmod>
   </url><url>
     <loc>https://devmedeiros.com/post/navigating-data-testing/</loc>
     <lastmod>2023-11-20T18:45:00-03:00</lastmod>
@@ -200,32 +255,6 @@
                 rel="alternate"
                 hreflang="en"
                 href="https://devmedeiros.com/post/sqlite-database-github-actions/"
-                />
-  </url><url>
-    <loc>https://devmedeiros.com/tags/python/</loc>
-    <lastmod>2024-03-11T22:29:00-03:00</lastmod>
-    <xhtml:link
-                rel="alternate"
-                hreflang="pt"
-                href="https://devmedeiros.com/pt/tags/python/"
-                />
-    <xhtml:link
-                rel="alternate"
-                hreflang="en"
-                href="https://devmedeiros.com/tags/python/"
-                />
-  </url><url>
-    <loc>https://devmedeiros.com/tags/scraping/</loc>
-    <lastmod>2024-03-11T22:29:00-03:00</lastmod>
-    <xhtml:link
-                rel="alternate"
-                hreflang="pt"
-                href="https://devmedeiros.com/pt/tags/scraping/"
-                />
-    <xhtml:link
-                rel="alternate"
-                hreflang="en"
-                href="https://devmedeiros.com/tags/scraping/"
                 />
   </url><url>
     <loc>https://devmedeiros.com/post/unlocking-machine-learning/</loc>
@@ -354,19 +383,6 @@
                 href="https://devmedeiros.com/post/credit-score-classification-app/"
                 />
   </url><url>
-    <loc>https://devmedeiros.com/tags/streamlit/</loc>
-    <lastmod>2022-08-08T17:17:00-03:00</lastmod>
-    <xhtml:link
-                rel="alternate"
-                hreflang="pt"
-                href="https://devmedeiros.com/pt/tags/streamlit/"
-                />
-    <xhtml:link
-                rel="alternate"
-                hreflang="en"
-                href="https://devmedeiros.com/tags/streamlit/"
-                />
-  </url><url>
     <loc>https://devmedeiros.com/post/data-cleaning-credit-score/</loc>
     <lastmod>2022-07-24T13:06:00-03:00</lastmod>
     <xhtml:link
@@ -394,19 +410,6 @@
                 rel="alternate"
                 hreflang="en"
                 href="https://devmedeiros.com/post/alura-challenge-bi-2/"
-                />
-  </url><url>
-    <loc>https://devmedeiros.com/tags/power-bi/</loc>
-    <lastmod>2023-11-05T19:35:00-03:00</lastmod>
-    <xhtml:link
-                rel="alternate"
-                hreflang="pt"
-                href="https://devmedeiros.com/pt/tags/power-bi/"
-                />
-    <xhtml:link
-                rel="alternate"
-                hreflang="en"
-                href="https://devmedeiros.com/tags/power-bi/"
                 />
   </url><url>
     <loc>https://devmedeiros.com/post/feature-selection/</loc>

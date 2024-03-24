@@ -10,7 +10,56 @@
       <link>https://devmedeiros.com/cover.png</link>
     </image>
     <generator>Hugo -- gohugo.io</generator>
-    <lastBuildDate>Mon, 05 Feb 2024 22:32:00 -0300</lastBuildDate><atom:link href="https://devmedeiros.com/index.xml" rel="self" type="application/rss+xml" />
+    <lastBuildDate>Sun, 24 Mar 2024 11:31:00 -0300</lastBuildDate><atom:link href="https://devmedeiros.com/index.xml" rel="self" type="application/rss+xml" />
+    <item>
+      <title>[BTS] Nota Fiscal Goiana</title>
+      <link>https://devmedeiros.com/post/bts-nota-fiscal-goiana/</link>
+      <pubDate>Sun, 24 Mar 2024 11:31:00 -0300</pubDate>
+      
+      <guid>https://devmedeiros.com/post/bts-nota-fiscal-goiana/</guid>
+      <description>A behind-the-scenes decision on the decision-making process of the project Nota Fiscal Goiana.</description>
+      <content:encoded><![CDATA[<h2 id="introduction">Introduction</h2>
+<p>The Nota Fiscal Goiana is an economic program implemented by the state of Goiás, Brazil. This program is designed to boost the collection of the Tax on Circulation of Goods and Services (ICMS) by encouraging people to ask for receipts when they buy goods and services within the state. Additionally, the program includes monthly raffles that distribute cash prizes to participating citizens.</p>
+<p>As I regularly checked the Nota Fiscal Goiana portal and realized the website&rsquo;s simplicity, I decided to write a scraper to collect the raffle results. Initially, I aimed to simplify the process of checking if I had won, but as I delved deeper, I realized the potential to analyze the dataset more comprehensively.</p>
+<h2 id="early-design-and-idea-phase">Early Design and Idea Phase</h2>
+<p>The original idea was to scrape raffle results, store them in a database, and give people the option to access the data directly from the database or just view it through a good-looking Power BI dashboard.</p>
+<p>This led me to start writing the code for scraping the website and parsing the tables. However, since there were approximately 50 published results not available on the website, I had to resort to checking the Diário Oficial do Estado de Goiás, where the official government documents of Goiás are published in Brazil.</p>
+<h3 id="challenges-encountered">Challenges Encountered</h3>
+<ul>
+<li>
+<p>Not all results were completely published on the Diário Oficial, leading to some results being unavailable.</p>
+</li>
+<li>
+<p>The project doesn&rsquo;t have a budget, so automation can&rsquo;t require VM and online databases. Which Power BI requires both.</p>
+</li>
+</ul>
+<h3 id="solutions">Solutions</h3>
+<p>The results that I could find published on the Diário Oficial were saved in the database along with results available on the website.</p>
+<p>Initially, I was using free options of online databases, and the backup of the old data was on an SQLite available on the project repository. However, I realized that when running the scraper I could save the data on the SQLite and commit the changes, when I did the information persisted on the SQLite file and I could just read it.</p>
+<p>To help automate the dashboard I resorted to using Streamlit instead of Power BI. Because Streamlit allows me to read the SQLite file directly from the GitHub repository and every time someone opens the Streamlit dashboard it reads the current data, so I don&rsquo;t need to set up refreshes.</p>
+<h2 id="current-state-of-the-project">Current State of the Project</h2>
+<p>Currently, the project extracts monthly the raffle results from the Nota Fiscal Goiana and the state ICMS collection and saves the results in the SQLite file, using GitHub Actions. The Streamlit dashboard reads the SQLite file and displays the information on the Streamlit Community Cloud.</p>
+<h3 id="lessons-learned">Lessons Learned</h3>
+<p>While the Power BI dashboard was useful, I faced challenges with refreshing it easily. Initially using an SQLite database, I couldn&rsquo;t connect to the file on the repository, necessitating manual updates on my local machine. To overcome this, I explored alternatives like MySQL and PostgreSQL, enabling automated monthly scraping with GitHub Actions and updating the dashboard through the Power BI website.</p>
+<p>The SQLite database is really helpful and depending on the size and scope of your project, you should look at it as a possible option to store your data.</p>
+<h3 id="going-forward">Going forward</h3>
+<p>I intend to maintain the project, making future patches to the scraping script if the website changes. And improving the code as my knowledge matures.</p>
+<hr>
+<h2 id="explore-further">Explore Further</h2>
+<ul>
+<li>
+<p><strong>GitHub Repository:</strong> Access the project&rsquo;s source files and codes on our <a href="https://github.com/devmedeiros/nota-fiscal-goiana/tree/main">GitHub Repository</a>. Currently, everything is in Portuguese, but I plan to translate it in the future.</p>
+</li>
+<li>
+<p><strong>Streamlit Dashboard:</strong> Explore the live Streamlit dashboard <a href="https://nota-fiscal-goiana.streamlit.app/">here</a> to interact with the project&rsquo;s data visualization directly.</p>
+</li>
+<li>
+<p><strong>Academic Article:</strong> If you&rsquo;re interested in a detailed academic analysis of this project, check out our article <a href="http://periodicos.unifacef.com.br/resiget/article/view/2700/1876">here</a>. Please note that the article is in Portuguese.</p>
+</li>
+</ul>
+]]></content:encoded>
+    </item>
+    
     <item>
       <title>Multivariate Analysis for Data Science</title>
       <link>https://devmedeiros.com/post/multivariate-analysis/</link>
