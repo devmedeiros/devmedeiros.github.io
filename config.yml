@@ -88,7 +88,7 @@ params:
   hidemeta: false
   hideSummary: false
   showtoc: false
-  tocopen: false
+  tocopen: true
   ShowFullTextinRSS: true
   cover:
       responsiveImages: true
