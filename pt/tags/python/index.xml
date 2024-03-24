@@ -1,9 +1,9 @@
 <?xml version="1.0" encoding="utf-8" standalone="yes"?>
 <rss version="2.0" xmlns:atom="http://www.w3.org/2005/Atom" xmlns:content="http://purl.org/rss/1.0/modules/content/">
   <channel>
-    <title>python on devmedeiros</title>
+    <title>Python on devmedeiros</title>
     <link>https://devmedeiros.com/pt/tags/python/</link>
-    <description>Recent content in python on devmedeiros</description>
+    <description>Recent content in Python on devmedeiros</description>
     <image>
       <title>devmedeiros</title>
       <url>https://devmedeiros.com/cover.png</url>

@@ -1,9 +1,9 @@
 <?xml version="1.0" encoding="utf-8" standalone="yes"?>
 <rss version="2.0" xmlns:atom="http://www.w3.org/2005/Atom" xmlns:content="http://purl.org/rss/1.0/modules/content/">
   <channel>
-    <title>aprendizado de máquina on devmedeiros</title>
+    <title>Aprendizado de Máquina on devmedeiros</title>
     <link>https://devmedeiros.com/pt/tags/aprendizado-de-m%C3%A1quina/</link>
-    <description>Recent content in aprendizado de máquina on devmedeiros</description>
+    <description>Recent content in Aprendizado de Máquina on devmedeiros</description>
     <image>
       <title>devmedeiros</title>
       <url>https://devmedeiros.com/cover.png</url>
@@ -236,6 +236,21 @@
 </li>
 </ol>
 </div>
+]]></content:encoded>
+    </item>
+    
+    <item>
+      <title>Review do Podcast - Machine Learning Guide</title>
+      <link>https://devmedeiros.com/pt/post/podcast-review-mlg/</link>
+      <pubDate>Mon, 24 Jan 2022 18:15:00 -0300</pubDate>
+      
+      <guid>https://devmedeiros.com/pt/post/podcast-review-mlg/</guid>
+      <description>Uma resenha sobre o podcast Machine Learning Guide</description>
+      <content:encoded><![CDATA[<p><img loading="lazy" src="https://ik.imagekit.io/devmedeiros/mlg-capa_4H_gyNxIV.jpg#center" alt="Machine Learning Guide Podcast Capa"  />
+</p>
+<p>O show, apresentado por Tyler Renelle da Depth, oferece uma lista com <a href="https://ocdevel.com/mlg/resources">recursos</a> na qual você pode encontrar todos os livros, cursos, e sites mencionados durante o podcast. É um ótimo podcast para quem está aprendendo sobre aprendizado de máquina, podendo ser útil para iniciantes, entusiastas, ou para alguém que está procurando se aprofundar ainda mais no tópico. Desde 2021 o show está sendo renovado para atualizar o conteúdo.</p>
+<p>O show começa falando sobre o que é <em>ciência de dados</em> e como ela se relaciona com <em>aprendizado de máquina</em> e <em>inteligência artificial</em>. Ele também fala sobre as primeiras tentativas em criar IA, com alguns exemplos vindos desde o século 13.</p>
+<p>Eu gosto que o show fala sobre conceitos de aprendizado de máquina de uma forma diferente da qual eu estou acostumada. Quando pessoas falam sobre aprendizado de máquina, eu, como Estatística, sempre senti que entendia sobre o que as pessoas estavam falando, exceto que eu não conhecia algumas palavras chaves que elas usavam. Por exemplo, o que engenheiros de aprendizado de máquina chamam de <em>features</em> eu aprendi como <em>variável</em>, então eu ficava confusa quando conversava com amigos sobre aprendizado de máquina quando eles tinham um antecedente diferente do meu (ciência da computação, por exemplo). Esse é um dos motivos que faz eu gostar tanto do podcast, ele fala em ricos detalhes sobre cada conceito de aprendizado de máquina, então se ele fala sobre algo que eu conheço por outro nome eu consigo fazer a conexão.</p>
 ]]></content:encoded>
     </item>
     

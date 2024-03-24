@@ -1,9 +1,9 @@
 <?xml version="1.0" encoding="utf-8" standalone="yes"?>
 <rss version="2.0" xmlns:atom="http://www.w3.org/2005/Atom" xmlns:content="http://purl.org/rss/1.0/modules/content/">
   <channel>
-    <title>tutorial on devmedeiros</title>
+    <title>Tutorial on devmedeiros</title>
     <link>https://devmedeiros.com/tags/tutorial/</link>
-    <description>Recent content in tutorial on devmedeiros</description>
+    <description>Recent content in Tutorial on devmedeiros</description>
     <image>
       <title>devmedeiros</title>
       <url>https://devmedeiros.com/cover.png</url>
@@ -622,6 +622,84 @@
 <p>The feature <code>Credit_History_Age</code> has the values as strings &ldquo;22 Years and 5 Months&rdquo;, this pattern repeats itself, so we can take advantage of this and select the year multiplied by 12 and sum the month, resulting in a new feature with the credit history age in months. When we are done with this, there are still going to be null values, to fill them I choose to interpolate the values, this works great when the missing value is in February up until July because it interpolates with the customer&rsquo;s credit history age, but it becomes a bad guessed when the missing value is in January or August.</p>
 <p>The months&rsquo; names are going to be replaced by their number counterpart, so January is 1, February is 2, and so on. <code>credit_mix</code> and <code>credit_score</code> have 3 sequential categories, I choose to go with -1, 0, and 1, but you can use 1, 2, 3 and it&rsquo;ll produce the same result.</p>
 <p>Don&rsquo;t forget to check the GitHub <a href="https://github.com/devmedeiros/credit-score-classification-app/tree/main/">Repository</a> for the complete code mentioned here and the cleaned dataset.</p>
+]]></content:encoded>
+    </item>
+    
+    <item>
+      <title>Feature Selection</title>
+      <link>https://devmedeiros.com/post/feature-selection/</link>
+      <pubDate>Tue, 14 Jun 2022 19:23:00 -0300</pubDate>
+      
+      <guid>https://devmedeiros.com/post/feature-selection/</guid>
+      <description>Defining feature selection and showing how you can select features in Machine Learning</description>
+      <content:encoded><![CDATA[<h2 id="what-is-feature-selection">What is feature selection?</h2>
+<p>Feature selection is the process of finding pertinent features and eliminating unnecessary, redundant, or noisy data. It can be useful to help the training process be faster and it can also avoid overfitting. According to Munson and Caruana, the goal of feature selection is to identify the feature set that best balances the risks of having too few features with the risks of having too many features. It can also help improve the prediction accuracy and the interpretation of models.<sup id="fnref:1"><a href="#fn:1" class="footnote-ref" role="doc-noteref">1</a></sup> <sup id="fnref:2"><a href="#fn:2" class="footnote-ref" role="doc-noteref">2</a></sup></p>
+<p>I chose three methods for feature selection to show, but these are not all available methods, in the <code>scikit-learn</code> package that are 17 algorithms implemented at the time of writing. <sup id="fnref:3"><a href="#fn:3" class="footnote-ref" role="doc-noteref">3</a></sup></p>
+<h2 id="correlation-among-features">Correlation among features</h2>
+<p>Correlation among features can bring unnecessary noise to your model. Because a high correlation means that when one feature increases the other increases as well (or decreases if is negative). So if two features have a high correlation they aren’t bringing any new information to our model, in this case, is best to choose one of them to keep and drop the other.</p>
+<p>Look at the following correlation matrix, for example:</p>
+<p><img loading="lazy" src="https://ik.imagekit.io/devmedeiros/out_w4T4rFn5h.png?ik-sdk-version=javascript-1.4.3&amp;updatedAt=1655244061311#center" alt="small correlation plot with weight, height and BMI"  />
+</p>
+<p>We can see that height and weight are heavily correlated with BMI, we don’t need to keep these three features, we can drop height and weight and keep just the BMI, or depending on what you want with the model you just drop the BMI.</p>
+<h2 id="low-variance">Low Variance</h2>
+<p>Removing features with low variance is a simple method of feature selection. You can set a minimal variance a feature needs to determine if it continues in the model or not. The reasoning behind this is that a low variance means it has a small effect on the final model.</p>
+<p>Although there isn&rsquo;t concrete information on what is a &ldquo;low variance&rdquo;, the <code>scikit-learn</code> default option for this method is 0, but you can test other values for your dataset and see what works best for you.</p>
+<h2 id="recursive-feature-elimination">Recursive feature elimination</h2>
+<p>The purpose of recursive feature elimination (RFE) is to pick features by iteratively considering smaller and smaller sets of features given an external estimator that assigns weights to features. The importance of each feature is first determined through any particular attribute, and the estimator is then trained on the initial set of features. The least crucial features are then removed from the present list of features. On the pruned set, that process is continued recursively until the target number of features to select is eventually attained. <sup id="fnref:4"><a href="#fn:4" class="footnote-ref" role="doc-noteref">4</a></sup></p>
+<div class="footnotes" role="doc-endnotes">
+<hr>
+<ol>
+<li id="fn:1">
+<p><a href="https://link.springer.com/chapter/10.1007/978-3-642-04174-7_10">MUNSON, M. Arthur; CARUANA, Rich. On feature selection, bias-variance, and bagging. In: <strong>Joint European Conference on Machine Learning and Knowledge Discovery in Databases</strong>. Springer, Berlin, Heidelberg, 2009. p. 144-159.</a>&#160;<a href="#fnref:1" class="footnote-backref" role="doc-backlink">&#x21a9;&#xfe0e;</a></p>
+</li>
+<li id="fn:2">
+<p><a href="https://faculty.cc.gatech.edu/~hic/CS7616/Papers/Kumar-Minz-2014.pdf">KUMAR, Vipin; MINZ, Sonajharia. Feature selection: a literature review. <strong>SmartCR</strong>, v. 4, n. 3, p. 211-229, 2014.</a>&#160;<a href="#fnref:2" class="footnote-backref" role="doc-backlink">&#x21a9;&#xfe0e;</a></p>
+</li>
+<li id="fn:3">
+<p><a href="https://scikit-learn.org/stable/modules/classes.html#module-sklearn.feature_selection">API Reference — scikit-learn 1.1.1 documentation</a>&#160;<a href="#fnref:3" class="footnote-backref" role="doc-backlink">&#x21a9;&#xfe0e;</a></p>
+</li>
+<li id="fn:4">
+<p><a href="https://scikit-learn.org/stable/modules/feature_selection.html">1.13. Feature selection — scikit-learn 1.1.1 documentation</a>&#160;<a href="#fnref:4" class="footnote-backref" role="doc-backlink">&#x21a9;&#xfe0e;</a></p>
+</li>
+</ol>
+</div>
+]]></content:encoded>
+    </item>
+    
+    <item>
+      <title>An Overview on data.table R Package</title>
+      <link>https://devmedeiros.com/post/data-table/</link>
+      <pubDate>Wed, 27 Oct 2021 09:41:00 -0300</pubDate>
+      
+      <guid>https://devmedeiros.com/post/data-table/</guid>
+      <description>One of the fastest packages for data manipulation on R</description>
+      <content:encoded><![CDATA[<p>The <code>data.table</code> package is one of the fastest packages for data manipulation, currently, it is even faster than <code>pandas</code> and <code>dplyr</code> <sup id="fnref:1"><a href="#fn:1" class="footnote-ref" role="doc-noteref">1</a></sup>. <code>data.table</code> syntax is <code>dt[i, j, by]</code>, where:</p>
+<ul>
+<li>i is used to subset rows</li>
+<li>j is used to subset columns</li>
+<li>by is used to subset groups, like <strong>GROUP BY</strong> from SQL</li>
+</ul>
+<p>You can read it <em>out loud</em>  as<sup id="fnref:2"><a href="#fn:2" class="footnote-ref" role="doc-noteref">2</a></sup>:</p>
+<blockquote>
+<p>Take <code>dt</code>, subset/reorder rows using <code>i</code>, then calculate <code>j</code>, grouped by <code>by</code>.</p>
+</blockquote>
+<p>A <code>data.table</code> is also a <code>data.frame</code> and all of the basic data manipulations you can use in <code>data.frame</code>s applies to <code>data.table</code>. Like <code>ncol()</code>, <code>nrow()</code>, <code>names()</code>, <code>summary()</code>. But it has more possibilities, for instance in <code>data.table</code> there is a special variable <code>.N</code> which is an integer that contains the row number in the group. If you use <code>dt[.N]</code> you&rsquo;ll get the last row of your <code>data.table</code>.</p>
+<p>Another cool feature of <code>data.table</code> is that if you want filter/subset a column you don&rsquo;t need to use <code>df$x[df$x == 1]</code> you can simple use <code>dt[x == 1]</code> which make your code much more readable and clean.</p>
+<p>You also get to use special operators: <code>%like%</code>, <code>%in%</code> and <code>%between%</code>. These operators work like SQL operators, <strong>LIKE</strong>, <strong>IN</strong>, and <strong>BETWEEN</strong>, respectively.</p>
+<p>If you are familiar with SQL there is this one thing the package offers that will catch your eye. It&rsquo;s called <em>chaining</em>, which allows you to perform a sequence of operations in a <code>data.table</code>, you just need to use <code>dt[][]</code> and chain multiple operations &ldquo;[]&rdquo;.</p>
+<p>But that&rsquo;s not all with the operator <code>:=</code> you can alter data without making a new copy in the memory.</p>
+<p>If you want to start using the package I suggest you use the <a href="https://raw.githubusercontent.com/rstudio/cheatsheets/master/datatable.pdf">cheatsheet</a>. It&rsquo;s really useful if you already have a basic knowledge about <code>data.frame</code>s.</p>
+<div class="footnotes" role="doc-endnotes">
+<hr>
+<ol>
+<li id="fn:1">
+<p><a href="https://h2oai.github.io/db-benchmark/">https://h2oai.github.io/db-benchmark/</a>&#160;<a href="#fnref:1" class="footnote-backref" role="doc-backlink">&#x21a9;&#xfe0e;</a></p>
+</li>
+<li id="fn:2">
+<p><a href="https://cran.r-project.org/web/packages/data.table/vignettes/datatable-intro.html">https://cran.r-project.org/web/packages/data.table/vignettes/datatable-intro.html</a>&#160;<a href="#fnref:2" class="footnote-backref" role="doc-backlink">&#x21a9;&#xfe0e;</a></p>
+</li>
+</ol>
+</div>
 ]]></content:encoded>
     </item>
     

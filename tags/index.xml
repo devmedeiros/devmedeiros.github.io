@@ -12,7 +12,7 @@
     <generator>Hugo -- gohugo.io</generator>
     <lastBuildDate>Mon, 05 Feb 2024 22:32:00 -0300</lastBuildDate><atom:link href="https://devmedeiros.com/tags/index.xml" rel="self" type="application/rss+xml" />
     <item>
-      <title>data science</title>
+      <title>Data Science</title>
       <link>https://devmedeiros.com/tags/data-science/</link>
       <pubDate>Mon, 05 Feb 2024 22:32:00 -0300</pubDate>
       
@@ -22,91 +22,21 @@
     </item>
     
     <item>
-      <title>knowledge</title>
-      <link>https://devmedeiros.com/tags/knowledge/</link>
+      <title>Statistic</title>
+      <link>https://devmedeiros.com/tags/statistic/</link>
       <pubDate>Mon, 05 Feb 2024 22:32:00 -0300</pubDate>
       
-      <guid>https://devmedeiros.com/tags/knowledge/</guid>
+      <guid>https://devmedeiros.com/tags/statistic/</guid>
       <description></description>
       <content:encoded><![CDATA[]]></content:encoded>
     </item>
     
     <item>
-      <title>multivariate analysis</title>
-      <link>https://devmedeiros.com/tags/multivariate-analysis/</link>
-      <pubDate>Mon, 05 Feb 2024 22:32:00 -0300</pubDate>
-      
-      <guid>https://devmedeiros.com/tags/multivariate-analysis/</guid>
-      <description></description>
-      <content:encoded><![CDATA[]]></content:encoded>
-    </item>
-    
-    <item>
-      <title>statistics</title>
-      <link>https://devmedeiros.com/tags/statistics/</link>
-      <pubDate>Mon, 05 Feb 2024 22:32:00 -0300</pubDate>
-      
-      <guid>https://devmedeiros.com/tags/statistics/</guid>
-      <description></description>
-      <content:encoded><![CDATA[]]></content:encoded>
-    </item>
-    
-    <item>
-      <title>analytics engineer</title>
-      <link>https://devmedeiros.com/tags/analytics-engineer/</link>
-      <pubDate>Mon, 20 Nov 2023 18:45:00 -0300</pubDate>
-      
-      <guid>https://devmedeiros.com/tags/analytics-engineer/</guid>
-      <description></description>
-      <content:encoded><![CDATA[]]></content:encoded>
-    </item>
-    
-    <item>
-      <title>assertr</title>
-      <link>https://devmedeiros.com/tags/assertr/</link>
-      <pubDate>Mon, 20 Nov 2023 18:45:00 -0300</pubDate>
-      
-      <guid>https://devmedeiros.com/tags/assertr/</guid>
-      <description></description>
-      <content:encoded><![CDATA[]]></content:encoded>
-    </item>
-    
-    <item>
-      <title>data engineering</title>
+      <title>Data Engineering</title>
       <link>https://devmedeiros.com/tags/data-engineering/</link>
       <pubDate>Mon, 20 Nov 2023 18:45:00 -0300</pubDate>
       
       <guid>https://devmedeiros.com/tags/data-engineering/</guid>
-      <description></description>
-      <content:encoded><![CDATA[]]></content:encoded>
-    </item>
-    
-    <item>
-      <title>data testing</title>
-      <link>https://devmedeiros.com/tags/data-testing/</link>
-      <pubDate>Mon, 20 Nov 2023 18:45:00 -0300</pubDate>
-      
-      <guid>https://devmedeiros.com/tags/data-testing/</guid>
-      <description></description>
-      <content:encoded><![CDATA[]]></content:encoded>
-    </item>
-    
-    <item>
-      <title>database</title>
-      <link>https://devmedeiros.com/tags/database/</link>
-      <pubDate>Mon, 20 Nov 2023 18:45:00 -0300</pubDate>
-      
-      <guid>https://devmedeiros.com/tags/database/</guid>
-      <description></description>
-      <content:encoded><![CDATA[]]></content:encoded>
-    </item>
-    
-    <item>
-      <title>great expectations</title>
-      <link>https://devmedeiros.com/tags/great-expectations/</link>
-      <pubDate>Mon, 20 Nov 2023 18:45:00 -0300</pubDate>
-      
-      <guid>https://devmedeiros.com/tags/great-expectations/</guid>
       <description></description>
       <content:encoded><![CDATA[]]></content:encoded>
     </item>
@@ -122,17 +52,7 @@
     </item>
     
     <item>
-      <title>learning</title>
-      <link>https://devmedeiros.com/tags/learning/</link>
-      <pubDate>Tue, 03 Oct 2023 20:51:00 -0300</pubDate>
-      
-      <guid>https://devmedeiros.com/tags/learning/</guid>
-      <description></description>
-      <content:encoded><![CDATA[]]></content:encoded>
-    </item>
-    
-    <item>
-      <title>machine learning</title>
+      <title>Machine Learning</title>
       <link>https://devmedeiros.com/tags/machine-learning/</link>
       <pubDate>Tue, 03 Oct 2023 20:51:00 -0300</pubDate>
       
@@ -142,17 +62,7 @@
     </item>
     
     <item>
-      <title>model</title>
-      <link>https://devmedeiros.com/tags/model/</link>
-      <pubDate>Tue, 03 Oct 2023 20:51:00 -0300</pubDate>
-      
-      <guid>https://devmedeiros.com/tags/model/</guid>
-      <description></description>
-      <content:encoded><![CDATA[]]></content:encoded>
-    </item>
-    
-    <item>
-      <title>review</title>
+      <title>Review</title>
       <link>https://devmedeiros.com/tags/review/</link>
       <pubDate>Tue, 03 Oct 2023 20:51:00 -0300</pubDate>
       
@@ -162,17 +72,7 @@
     </item>
     
     <item>
-      <title>clap button</title>
-      <link>https://devmedeiros.com/tags/clap-button/</link>
-      <pubDate>Sat, 05 Aug 2023 07:30:00 -0300</pubDate>
-      
-      <guid>https://devmedeiros.com/tags/clap-button/</guid>
-      <description></description>
-      <content:encoded><![CDATA[]]></content:encoded>
-    </item>
-    
-    <item>
-      <title>hugo</title>
+      <title>Hugo</title>
       <link>https://devmedeiros.com/tags/hugo/</link>
       <pubDate>Sat, 05 Aug 2023 07:30:00 -0300</pubDate>
       
@@ -182,57 +82,7 @@
     </item>
     
     <item>
-      <title>jekyll</title>
-      <link>https://devmedeiros.com/tags/jekyll/</link>
-      <pubDate>Sat, 05 Aug 2023 07:30:00 -0300</pubDate>
-      
-      <guid>https://devmedeiros.com/tags/jekyll/</guid>
-      <description></description>
-      <content:encoded><![CDATA[]]></content:encoded>
-    </item>
-    
-    <item>
-      <title>like button</title>
-      <link>https://devmedeiros.com/tags/like-button/</link>
-      <pubDate>Sat, 05 Aug 2023 07:30:00 -0300</pubDate>
-      
-      <guid>https://devmedeiros.com/tags/like-button/</guid>
-      <description></description>
-      <content:encoded><![CDATA[]]></content:encoded>
-    </item>
-    
-    <item>
-      <title>lyket</title>
-      <link>https://devmedeiros.com/tags/lyket/</link>
-      <pubDate>Sat, 05 Aug 2023 07:30:00 -0300</pubDate>
-      
-      <guid>https://devmedeiros.com/tags/lyket/</guid>
-      <description></description>
-      <content:encoded><![CDATA[]]></content:encoded>
-    </item>
-    
-    <item>
-      <title>medium clap</title>
-      <link>https://devmedeiros.com/tags/medium-clap/</link>
-      <pubDate>Sat, 05 Aug 2023 07:30:00 -0300</pubDate>
-      
-      <guid>https://devmedeiros.com/tags/medium-clap/</guid>
-      <description></description>
-      <content:encoded><![CDATA[]]></content:encoded>
-    </item>
-    
-    <item>
-      <title>static site</title>
-      <link>https://devmedeiros.com/tags/static-site/</link>
-      <pubDate>Sat, 05 Aug 2023 07:30:00 -0300</pubDate>
-      
-      <guid>https://devmedeiros.com/tags/static-site/</guid>
-      <description></description>
-      <content:encoded><![CDATA[]]></content:encoded>
-    </item>
-    
-    <item>
-      <title>tutorial</title>
+      <title>Tutorial</title>
       <link>https://devmedeiros.com/tags/tutorial/</link>
       <pubDate>Sat, 05 Aug 2023 07:30:00 -0300</pubDate>
       
@@ -242,37 +92,7 @@
     </item>
     
     <item>
-      <title>twitter heart</title>
-      <link>https://devmedeiros.com/tags/twitter-heart/</link>
-      <pubDate>Sat, 05 Aug 2023 07:30:00 -0300</pubDate>
-      
-      <guid>https://devmedeiros.com/tags/twitter-heart/</guid>
-      <description></description>
-      <content:encoded><![CDATA[]]></content:encoded>
-    </item>
-    
-    <item>
-      <title>anomaly detection</title>
-      <link>https://devmedeiros.com/tags/anomaly-detection/</link>
-      <pubDate>Sun, 09 Jul 2023 16:32:00 -0300</pubDate>
-      
-      <guid>https://devmedeiros.com/tags/anomaly-detection/</guid>
-      <description></description>
-      <content:encoded><![CDATA[]]></content:encoded>
-    </item>
-    
-    <item>
-      <title>class imbalance</title>
-      <link>https://devmedeiros.com/tags/class-imbalance/</link>
-      <pubDate>Sun, 09 Jul 2023 16:32:00 -0300</pubDate>
-      
-      <guid>https://devmedeiros.com/tags/class-imbalance/</guid>
-      <description></description>
-      <content:encoded><![CDATA[]]></content:encoded>
-    </item>
-    
-    <item>
-      <title>data analysis</title>
+      <title>Data Analysis</title>
       <link>https://devmedeiros.com/tags/data-analysis/</link>
       <pubDate>Sun, 09 Jul 2023 16:32:00 -0300</pubDate>
       
@@ -282,67 +102,7 @@
     </item>
     
     <item>
-      <title>fraud detection</title>
-      <link>https://devmedeiros.com/tags/fraud-detection/</link>
-      <pubDate>Sun, 09 Jul 2023 16:32:00 -0300</pubDate>
-      
-      <guid>https://devmedeiros.com/tags/fraud-detection/</guid>
-      <description></description>
-      <content:encoded><![CDATA[]]></content:encoded>
-    </item>
-    
-    <item>
-      <title>outliers</title>
-      <link>https://devmedeiros.com/tags/outliers/</link>
-      <pubDate>Sun, 09 Jul 2023 16:32:00 -0300</pubDate>
-      
-      <guid>https://devmedeiros.com/tags/outliers/</guid>
-      <description></description>
-      <content:encoded><![CDATA[]]></content:encoded>
-    </item>
-    
-    <item>
-      <title>git</title>
-      <link>https://devmedeiros.com/tags/git/</link>
-      <pubDate>Wed, 31 May 2023 21:54:00 -0300</pubDate>
-      
-      <guid>https://devmedeiros.com/tags/git/</guid>
-      <description></description>
-      <content:encoded><![CDATA[]]></content:encoded>
-    </item>
-    
-    <item>
-      <title>github</title>
-      <link>https://devmedeiros.com/tags/github/</link>
-      <pubDate>Wed, 31 May 2023 21:54:00 -0300</pubDate>
-      
-      <guid>https://devmedeiros.com/tags/github/</guid>
-      <description></description>
-      <content:encoded><![CDATA[]]></content:encoded>
-    </item>
-    
-    <item>
-      <title>github actions</title>
-      <link>https://devmedeiros.com/tags/github-actions/</link>
-      <pubDate>Wed, 31 May 2023 21:54:00 -0300</pubDate>
-      
-      <guid>https://devmedeiros.com/tags/github-actions/</guid>
-      <description></description>
-      <content:encoded><![CDATA[]]></content:encoded>
-    </item>
-    
-    <item>
-      <title>gitlab</title>
-      <link>https://devmedeiros.com/tags/gitlab/</link>
-      <pubDate>Wed, 31 May 2023 21:54:00 -0300</pubDate>
-      
-      <guid>https://devmedeiros.com/tags/gitlab/</guid>
-      <description></description>
-      <content:encoded><![CDATA[]]></content:encoded>
-    </item>
-    
-    <item>
-      <title>python</title>
+      <title>Python</title>
       <link>https://devmedeiros.com/tags/python/</link>
       <pubDate>Wed, 31 May 2023 21:54:00 -0300</pubDate>
       
@@ -352,7 +112,7 @@
     </item>
     
     <item>
-      <title>scraping</title>
+      <title>Scraping</title>
       <link>https://devmedeiros.com/tags/scraping/</link>
       <pubDate>Wed, 31 May 2023 21:54:00 -0300</pubDate>
       
@@ -362,97 +122,7 @@
     </item>
     
     <item>
-      <title>sqlite</title>
-      <link>https://devmedeiros.com/tags/sqlite/</link>
-      <pubDate>Wed, 31 May 2023 21:54:00 -0300</pubDate>
-      
-      <guid>https://devmedeiros.com/tags/sqlite/</guid>
-      <description></description>
-      <content:encoded><![CDATA[]]></content:encoded>
-    </item>
-    
-    <item>
-      <title>AI</title>
-      <link>https://devmedeiros.com/tags/ai/</link>
-      <pubDate>Sat, 20 May 2023 19:46:00 -0300</pubDate>
-      
-      <guid>https://devmedeiros.com/tags/ai/</guid>
-      <description></description>
-      <content:encoded><![CDATA[]]></content:encoded>
-    </item>
-    
-    <item>
-      <title>business</title>
-      <link>https://devmedeiros.com/tags/business/</link>
-      <pubDate>Sat, 20 May 2023 19:46:00 -0300</pubDate>
-      
-      <guid>https://devmedeiros.com/tags/business/</guid>
-      <description></description>
-      <content:encoded><![CDATA[]]></content:encoded>
-    </item>
-    
-    <item>
-      <title>clean data</title>
-      <link>https://devmedeiros.com/tags/clean-data/</link>
-      <pubDate>Sat, 20 May 2023 19:46:00 -0300</pubDate>
-      
-      <guid>https://devmedeiros.com/tags/clean-data/</guid>
-      <description></description>
-      <content:encoded><![CDATA[]]></content:encoded>
-    </item>
-    
-    <item>
-      <title>data pipeline</title>
-      <link>https://devmedeiros.com/tags/data-pipeline/</link>
-      <pubDate>Sat, 20 May 2023 19:46:00 -0300</pubDate>
-      
-      <guid>https://devmedeiros.com/tags/data-pipeline/</guid>
-      <description></description>
-      <content:encoded><![CDATA[]]></content:encoded>
-    </item>
-    
-    <item>
-      <title>data-driven</title>
-      <link>https://devmedeiros.com/tags/data-driven/</link>
-      <pubDate>Sat, 20 May 2023 19:46:00 -0300</pubDate>
-      
-      <guid>https://devmedeiros.com/tags/data-driven/</guid>
-      <description></description>
-      <content:encoded><![CDATA[]]></content:encoded>
-    </item>
-    
-    <item>
-      <title>decision-making</title>
-      <link>https://devmedeiros.com/tags/decision-making/</link>
-      <pubDate>Sat, 20 May 2023 19:46:00 -0300</pubDate>
-      
-      <guid>https://devmedeiros.com/tags/decision-making/</guid>
-      <description></description>
-      <content:encoded><![CDATA[]]></content:encoded>
-    </item>
-    
-    <item>
-      <title>efficiency</title>
-      <link>https://devmedeiros.com/tags/efficiency/</link>
-      <pubDate>Sat, 20 May 2023 19:46:00 -0300</pubDate>
-      
-      <guid>https://devmedeiros.com/tags/efficiency/</guid>
-      <description></description>
-      <content:encoded><![CDATA[]]></content:encoded>
-    </item>
-    
-    <item>
-      <title>ML</title>
-      <link>https://devmedeiros.com/tags/ml/</link>
-      <pubDate>Sat, 20 May 2023 19:46:00 -0300</pubDate>
-      
-      <guid>https://devmedeiros.com/tags/ml/</guid>
-      <description></description>
-      <content:encoded><![CDATA[]]></content:encoded>
-    </item>
-    
-    <item>
-      <title>data visualization</title>
+      <title>Data Visualization</title>
       <link>https://devmedeiros.com/tags/data-visualization/</link>
       <pubDate>Tue, 04 Apr 2023 22:30:00 -0300</pubDate>
       
@@ -462,91 +132,11 @@
     </item>
     
     <item>
-      <title>NPS</title>
-      <link>https://devmedeiros.com/tags/nps/</link>
-      <pubDate>Tue, 04 Apr 2023 22:30:00 -0300</pubDate>
-      
-      <guid>https://devmedeiros.com/tags/nps/</guid>
-      <description></description>
-      <content:encoded><![CDATA[]]></content:encoded>
-    </item>
-    
-    <item>
-      <title>stopwords</title>
-      <link>https://devmedeiros.com/tags/stopwords/</link>
-      <pubDate>Tue, 04 Apr 2023 22:30:00 -0300</pubDate>
-      
-      <guid>https://devmedeiros.com/tags/stopwords/</guid>
-      <description></description>
-      <content:encoded><![CDATA[]]></content:encoded>
-    </item>
-    
-    <item>
-      <title>storytelling</title>
+      <title>Storytelling</title>
       <link>https://devmedeiros.com/tags/storytelling/</link>
       <pubDate>Tue, 04 Apr 2023 22:30:00 -0300</pubDate>
       
       <guid>https://devmedeiros.com/tags/storytelling/</guid>
-      <description></description>
-      <content:encoded><![CDATA[]]></content:encoded>
-    </item>
-    
-    <item>
-      <title>word cloud</title>
-      <link>https://devmedeiros.com/tags/word-cloud/</link>
-      <pubDate>Tue, 04 Apr 2023 22:30:00 -0300</pubDate>
-      
-      <guid>https://devmedeiros.com/tags/word-cloud/</guid>
-      <description></description>
-      <content:encoded><![CDATA[]]></content:encoded>
-    </item>
-    
-    <item>
-      <title>oracle</title>
-      <link>https://devmedeiros.com/tags/oracle/</link>
-      <pubDate>Tue, 07 Mar 2023 20:02:00 -0300</pubDate>
-      
-      <guid>https://devmedeiros.com/tags/oracle/</guid>
-      <description></description>
-      <content:encoded><![CDATA[]]></content:encoded>
-    </item>
-    
-    <item>
-      <title>postgre</title>
-      <link>https://devmedeiros.com/tags/postgre/</link>
-      <pubDate>Tue, 07 Mar 2023 20:02:00 -0300</pubDate>
-      
-      <guid>https://devmedeiros.com/tags/postgre/</guid>
-      <description></description>
-      <content:encoded><![CDATA[]]></content:encoded>
-    </item>
-    
-    <item>
-      <title>postgresql</title>
-      <link>https://devmedeiros.com/tags/postgresql/</link>
-      <pubDate>Tue, 07 Mar 2023 20:02:00 -0300</pubDate>
-      
-      <guid>https://devmedeiros.com/tags/postgresql/</guid>
-      <description></description>
-      <content:encoded><![CDATA[]]></content:encoded>
-    </item>
-    
-    <item>
-      <title>artificial intelligence</title>
-      <link>https://devmedeiros.com/tags/artificial-intelligence/</link>
-      <pubDate>Thu, 26 Jan 2023 20:33:00 -0300</pubDate>
-      
-      <guid>https://devmedeiros.com/tags/artificial-intelligence/</guid>
-      <description></description>
-      <content:encoded><![CDATA[]]></content:encoded>
-    </item>
-    
-    <item>
-      <title>chatgpt</title>
-      <link>https://devmedeiros.com/tags/chatgpt/</link>
-      <pubDate>Thu, 26 Jan 2023 20:33:00 -0300</pubDate>
-      
-      <guid>https://devmedeiros.com/tags/chatgpt/</guid>
       <description></description>
       <content:encoded><![CDATA[]]></content:encoded>
     </item>
@@ -562,127 +152,7 @@
     </item>
     
     <item>
-      <title>opencv</title>
-      <link>https://devmedeiros.com/tags/opencv/</link>
-      <pubDate>Thu, 26 Jan 2023 20:33:00 -0300</pubDate>
-      
-      <guid>https://devmedeiros.com/tags/opencv/</guid>
-      <description></description>
-      <content:encoded><![CDATA[]]></content:encoded>
-    </item>
-    
-    <item>
-      <title>business intelligence</title>
-      <link>https://devmedeiros.com/tags/business-intelligence/</link>
-      <pubDate>Tue, 15 Nov 2022 08:01:00 -0300</pubDate>
-      
-      <guid>https://devmedeiros.com/tags/business-intelligence/</guid>
-      <description></description>
-      <content:encoded><![CDATA[]]></content:encoded>
-    </item>
-    
-    <item>
-      <title>ethic</title>
-      <link>https://devmedeiros.com/tags/ethic/</link>
-      <pubDate>Tue, 15 Nov 2022 08:01:00 -0300</pubDate>
-      
-      <guid>https://devmedeiros.com/tags/ethic/</guid>
-      <description></description>
-      <content:encoded><![CDATA[]]></content:encoded>
-    </item>
-    
-    <item>
-      <title>bias</title>
-      <link>https://devmedeiros.com/tags/bias/</link>
-      <pubDate>Sat, 01 Oct 2022 16:14:00 -0300</pubDate>
-      
-      <guid>https://devmedeiros.com/tags/bias/</guid>
-      <description></description>
-      <content:encoded><![CDATA[]]></content:encoded>
-    </item>
-    
-    <item>
-      <title>privacy</title>
-      <link>https://devmedeiros.com/tags/privacy/</link>
-      <pubDate>Sat, 01 Oct 2022 16:14:00 -0300</pubDate>
-      
-      <guid>https://devmedeiros.com/tags/privacy/</guid>
-      <description></description>
-      <content:encoded><![CDATA[]]></content:encoded>
-    </item>
-    
-    <item>
-      <title>case</title>
-      <link>https://devmedeiros.com/tags/case/</link>
-      <pubDate>Tue, 23 Aug 2022 22:57:00 -0300</pubDate>
-      
-      <guid>https://devmedeiros.com/tags/case/</guid>
-      <description></description>
-      <content:encoded><![CDATA[]]></content:encoded>
-    </item>
-    
-    <item>
-      <title>data manipulation</title>
-      <link>https://devmedeiros.com/tags/data-manipulation/</link>
-      <pubDate>Tue, 23 Aug 2022 22:57:00 -0300</pubDate>
-      
-      <guid>https://devmedeiros.com/tags/data-manipulation/</guid>
-      <description></description>
-      <content:encoded><![CDATA[]]></content:encoded>
-    </item>
-    
-    <item>
-      <title>KPI</title>
-      <link>https://devmedeiros.com/tags/kpi/</link>
-      <pubDate>Tue, 23 Aug 2022 22:57:00 -0300</pubDate>
-      
-      <guid>https://devmedeiros.com/tags/kpi/</guid>
-      <description></description>
-      <content:encoded><![CDATA[]]></content:encoded>
-    </item>
-    
-    <item>
-      <title>app</title>
-      <link>https://devmedeiros.com/tags/app/</link>
-      <pubDate>Mon, 08 Aug 2022 17:17:00 -0300</pubDate>
-      
-      <guid>https://devmedeiros.com/tags/app/</guid>
-      <description></description>
-      <content:encoded><![CDATA[]]></content:encoded>
-    </item>
-    
-    <item>
-      <title>credit score</title>
-      <link>https://devmedeiros.com/tags/credit-score/</link>
-      <pubDate>Mon, 08 Aug 2022 17:17:00 -0300</pubDate>
-      
-      <guid>https://devmedeiros.com/tags/credit-score/</guid>
-      <description></description>
-      <content:encoded><![CDATA[]]></content:encoded>
-    </item>
-    
-    <item>
-      <title>pickle</title>
-      <link>https://devmedeiros.com/tags/pickle/</link>
-      <pubDate>Mon, 08 Aug 2022 17:17:00 -0300</pubDate>
-      
-      <guid>https://devmedeiros.com/tags/pickle/</guid>
-      <description></description>
-      <content:encoded><![CDATA[]]></content:encoded>
-    </item>
-    
-    <item>
-      <title>random forest</title>
-      <link>https://devmedeiros.com/tags/random-forest/</link>
-      <pubDate>Mon, 08 Aug 2022 17:17:00 -0300</pubDate>
-      
-      <guid>https://devmedeiros.com/tags/random-forest/</guid>
-      <description></description>
-      <content:encoded><![CDATA[]]></content:encoded>
-    </item>
-    
-    <item>
-      <title>streamlit</title>
+      <title>Streamlit</title>
       <link>https://devmedeiros.com/tags/streamlit/</link>
       <pubDate>Mon, 08 Aug 2022 17:17:00 -0300</pubDate>
       
@@ -692,17 +162,7 @@
     </item>
     
     <item>
-      <title>classification</title>
-      <link>https://devmedeiros.com/tags/classification/</link>
-      <pubDate>Sun, 24 Jul 2022 13:06:00 -0300</pubDate>
-      
-      <guid>https://devmedeiros.com/tags/classification/</guid>
-      <description></description>
-      <content:encoded><![CDATA[]]></content:encoded>
-    </item>
-    
-    <item>
-      <title>data cleaning</title>
+      <title>Data Cleaning</title>
       <link>https://devmedeiros.com/tags/data-cleaning/</link>
       <pubDate>Sun, 24 Jul 2022 13:06:00 -0300</pubDate>
       
@@ -712,181 +172,11 @@
     </item>
     
     <item>
-      <title>kaggle</title>
-      <link>https://devmedeiros.com/tags/kaggle/</link>
-      <pubDate>Sun, 24 Jul 2022 13:06:00 -0300</pubDate>
-      
-      <guid>https://devmedeiros.com/tags/kaggle/</guid>
-      <description></description>
-      <content:encoded><![CDATA[]]></content:encoded>
-    </item>
-    
-    <item>
-      <title>numpy</title>
-      <link>https://devmedeiros.com/tags/numpy/</link>
-      <pubDate>Sun, 24 Jul 2022 13:06:00 -0300</pubDate>
-      
-      <guid>https://devmedeiros.com/tags/numpy/</guid>
-      <description></description>
-      <content:encoded><![CDATA[]]></content:encoded>
-    </item>
-    
-    <item>
-      <title>pandas</title>
-      <link>https://devmedeiros.com/tags/pandas/</link>
-      <pubDate>Sun, 24 Jul 2022 13:06:00 -0300</pubDate>
-      
-      <guid>https://devmedeiros.com/tags/pandas/</guid>
-      <description></description>
-      <content:encoded><![CDATA[]]></content:encoded>
-    </item>
-    
-    <item>
-      <title>dashboard</title>
-      <link>https://devmedeiros.com/tags/dashboard/</link>
+      <title>Power BI</title>
+      <link>https://devmedeiros.com/tags/power-bi/</link>
       <pubDate>Thu, 30 Jun 2022 19:23:00 -0300</pubDate>
       
-      <guid>https://devmedeiros.com/tags/dashboard/</guid>
-      <description></description>
-      <content:encoded><![CDATA[]]></content:encoded>
-    </item>
-    
-    <item>
-      <title>powerbi</title>
-      <link>https://devmedeiros.com/tags/powerbi/</link>
-      <pubDate>Thu, 30 Jun 2022 19:23:00 -0300</pubDate>
-      
-      <guid>https://devmedeiros.com/tags/powerbi/</guid>
-      <description></description>
-      <content:encoded><![CDATA[]]></content:encoded>
-    </item>
-    
-    <item>
-      <title>feature selection</title>
-      <link>https://devmedeiros.com/tags/feature-selection/</link>
-      <pubDate>Tue, 14 Jun 2022 19:23:00 -0300</pubDate>
-      
-      <guid>https://devmedeiros.com/tags/feature-selection/</guid>
-      <description></description>
-      <content:encoded><![CDATA[]]></content:encoded>
-    </item>
-    
-    <item>
-      <title>scikit-learn</title>
-      <link>https://devmedeiros.com/tags/scikit-learn/</link>
-      <pubDate>Tue, 14 Jun 2022 19:23:00 -0300</pubDate>
-      
-      <guid>https://devmedeiros.com/tags/scikit-learn/</guid>
-      <description></description>
-      <content:encoded><![CDATA[]]></content:encoded>
-    </item>
-    
-    <item>
-      <title>neural network</title>
-      <link>https://devmedeiros.com/tags/neural-network/</link>
-      <pubDate>Mon, 30 May 2022 16:49:00 -0300</pubDate>
-      
-      <guid>https://devmedeiros.com/tags/neural-network/</guid>
-      <description></description>
-      <content:encoded><![CDATA[]]></content:encoded>
-    </item>
-    
-    <item>
-      <title>figma</title>
-      <link>https://devmedeiros.com/tags/figma/</link>
-      <pubDate>Fri, 29 Apr 2022 11:14:00 -0300</pubDate>
-      
-      <guid>https://devmedeiros.com/tags/figma/</guid>
-      <description></description>
-      <content:encoded><![CDATA[]]></content:encoded>
-    </item>
-    
-    <item>
-      <title>UX</title>
-      <link>https://devmedeiros.com/tags/ux/</link>
-      <pubDate>Fri, 29 Apr 2022 11:14:00 -0300</pubDate>
-      
-      <guid>https://devmedeiros.com/tags/ux/</guid>
-      <description></description>
-      <content:encoded><![CDATA[]]></content:encoded>
-    </item>
-    
-    <item>
-      <title>p value</title>
-      <link>https://devmedeiros.com/tags/p-value/</link>
-      <pubDate>Tue, 12 Apr 2022 17:58:00 -0300</pubDate>
-      
-      <guid>https://devmedeiros.com/tags/p-value/</guid>
-      <description></description>
-      <content:encoded><![CDATA[]]></content:encoded>
-    </item>
-    
-    <item>
-      <title>statistic</title>
-      <link>https://devmedeiros.com/tags/statistic/</link>
-      <pubDate>Tue, 12 Apr 2022 17:58:00 -0300</pubDate>
-      
-      <guid>https://devmedeiros.com/tags/statistic/</guid>
-      <description></description>
-      <content:encoded><![CDATA[]]></content:encoded>
-    </item>
-    
-    <item>
-      <title>podcast</title>
-      <link>https://devmedeiros.com/tags/podcast/</link>
-      <pubDate>Mon, 24 Jan 2022 18:15:00 -0300</pubDate>
-      
-      <guid>https://devmedeiros.com/tags/podcast/</guid>
-      <description></description>
-      <content:encoded><![CDATA[]]></content:encoded>
-    </item>
-    
-    <item>
-      <title>EDA</title>
-      <link>https://devmedeiros.com/tags/eda/</link>
-      <pubDate>Tue, 28 Dec 2021 14:55:00 -0300</pubDate>
-      
-      <guid>https://devmedeiros.com/tags/eda/</guid>
-      <description></description>
-      <content:encoded><![CDATA[]]></content:encoded>
-    </item>
-    
-    <item>
-      <title>seaborn</title>
-      <link>https://devmedeiros.com/tags/seaborn/</link>
-      <pubDate>Sun, 07 Nov 2021 15:14:00 -0300</pubDate>
-      
-      <guid>https://devmedeiros.com/tags/seaborn/</guid>
-      <description></description>
-      <content:encoded><![CDATA[]]></content:encoded>
-    </item>
-    
-    <item>
-      <title>california</title>
-      <link>https://devmedeiros.com/tags/california/</link>
-      <pubDate>Tue, 02 Nov 2021 17:14:00 -0300</pubDate>
-      
-      <guid>https://devmedeiros.com/tags/california/</guid>
-      <description></description>
-      <content:encoded><![CDATA[]]></content:encoded>
-    </item>
-    
-    <item>
-      <title>collision</title>
-      <link>https://devmedeiros.com/tags/collision/</link>
-      <pubDate>Tue, 02 Nov 2021 17:14:00 -0300</pubDate>
-      
-      <guid>https://devmedeiros.com/tags/collision/</guid>
-      <description></description>
-      <content:encoded><![CDATA[]]></content:encoded>
-    </item>
-    
-    <item>
-      <title>COVID</title>
-      <link>https://devmedeiros.com/tags/covid/</link>
-      <pubDate>Tue, 02 Nov 2021 17:14:00 -0300</pubDate>
-      
-      <guid>https://devmedeiros.com/tags/covid/</guid>
+      <guid>https://devmedeiros.com/tags/power-bi/</guid>
       <description></description>
       <content:encoded><![CDATA[]]></content:encoded>
     </item>
@@ -902,17 +192,7 @@
     </item>
     
     <item>
-      <title>traffic</title>
-      <link>https://devmedeiros.com/tags/traffic/</link>
-      <pubDate>Tue, 02 Nov 2021 17:14:00 -0300</pubDate>
-      
-      <guid>https://devmedeiros.com/tags/traffic/</guid>
-      <description></description>
-      <content:encoded><![CDATA[]]></content:encoded>
-    </item>
-    
-    <item>
-      <title>data transformation</title>
+      <title>Data Transformation</title>
       <link>https://devmedeiros.com/tags/data-transformation/</link>
       <pubDate>Wed, 27 Oct 2021 09:41:00 -0300</pubDate>
       
@@ -922,27 +202,7 @@
     </item>
     
     <item>
-      <title>data.table</title>
-      <link>https://devmedeiros.com/tags/data.table/</link>
-      <pubDate>Wed, 27 Oct 2021 09:41:00 -0300</pubDate>
-      
-      <guid>https://devmedeiros.com/tags/data.table/</guid>
-      <description></description>
-      <content:encoded><![CDATA[]]></content:encoded>
-    </item>
-    
-    <item>
-      <title>ggplot</title>
-      <link>https://devmedeiros.com/tags/ggplot/</link>
-      <pubDate>Sun, 24 Oct 2021 20:43:00 -0300</pubDate>
-      
-      <guid>https://devmedeiros.com/tags/ggplot/</guid>
-      <description></description>
-      <content:encoded><![CDATA[]]></content:encoded>
-    </item>
-    
-    <item>
-      <title>shiny</title>
+      <title>Shiny</title>
       <link>https://devmedeiros.com/tags/shiny/</link>
       <pubDate>Sun, 24 Oct 2021 20:43:00 -0300</pubDate>
       
@@ -952,27 +212,7 @@
     </item>
     
     <item>
-      <title>simulation</title>
-      <link>https://devmedeiros.com/tags/simulation/</link>
-      <pubDate>Sun, 24 Oct 2021 20:43:00 -0300</pubDate>
-      
-      <guid>https://devmedeiros.com/tags/simulation/</guid>
-      <description></description>
-      <content:encoded><![CDATA[]]></content:encoded>
-    </item>
-    
-    <item>
-      <title>sentiment analysis</title>
-      <link>https://devmedeiros.com/tags/sentiment-analysis/</link>
-      <pubDate>Tue, 12 Oct 2021 19:47:00 -0300</pubDate>
-      
-      <guid>https://devmedeiros.com/tags/sentiment-analysis/</guid>
-      <description></description>
-      <content:encoded><![CDATA[]]></content:encoded>
-    </item>
-    
-    <item>
-      <title>ci/cd</title>
+      <title>CI/CD</title>
       <link>https://devmedeiros.com/tags/ci/cd/</link>
       <pubDate>Mon, 01 Jan 0001 00:00:00 +0000</pubDate>
       
