@@ -2,7 +2,8 @@
 title: "Is Machine Learning Necessary for Your Business?"
 date: 2023-05-20 19:46:00 -0300
 categories: [Blog]
-tags: [machine learning, ML, business, data-driven, clean data, decision-making, efficiency, data pipeline, data science, AI]
+keywords: [machine learning, ML, business, data-driven, clean data, decision-making, efficiency, data pipeline, data science, AI]
+tags: [Machine Learning, Data Science]
 showtoc: true
 summary: Find out if the use of machine learning is essential in all business cases. Evaluate benefits and limitations.
 cover:

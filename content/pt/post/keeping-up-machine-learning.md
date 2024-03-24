@@ -2,7 +2,8 @@
 title: Acompanhando as Novidades em Modelos de Aprendizado de Máquina
 date: 2023-10-03 20:51:00 -0300
 categories: [Blog]
-tags: [machine learning, modelo, conhecimento, conhecimento, review, aprendizado de máquina]
+keywords: [machine learning, modelo, conhecimento, review, aprendizado de máquina]
+tags: [Review, Aprendizado de Máquina]
 showtoc: false
 summary: Como se manter atualizado com as últimas descobertas em modelos de aprendizado de máquina e pesquisas acadêmicas.
 cover:

@@ -2,7 +2,8 @@
 title: What is Anomaly Detection?
 date: 2023-07-09 16:32:00 -0300
 categories: [Blog]
-tags: [anomaly detection, fraud detection, outliers, class imbalance, data analysis, machine learning]
+keywords: [anomaly detection, fraud detection, outliers, class imbalance, data analysis, machine learning]
+tags: [Data Analysis, Machine Learning]
 showtoc: false
 summary: How can your credit card issuer know if a purchase is made by you or a cloned version of your credit card?
 cover:

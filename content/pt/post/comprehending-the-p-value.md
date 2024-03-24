@@ -2,7 +2,8 @@
 title: Compreendendo o P-Valor
 date: 2022-04-12 17:58:00 -0300
 categories: [Blog]
-tags: [estatística, p-valor]
+keywords: [estatística, p-valor]
+tags: [Estatística]
 showtoc: true
 summary: A definição do p-valor, como usar ele, e como interpretar a medida
 aliases:

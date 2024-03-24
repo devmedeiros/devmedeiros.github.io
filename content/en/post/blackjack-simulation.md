@@ -2,7 +2,8 @@
 title: Blackjack Simulation
 date: 2021-10-24 20:43:00 -0300
 categories: [Blog]
-tags: [R, simulation, shiny, ggplot]
+keywords: [R, simulation, shiny, ggplot]
+tags: [R, Shiny]
 summary: A blackjack simulation using R and Shiny, you can run a single game with p players, d decks, n times
 aliases:
 - 2021-10-24-blackjack-simulation

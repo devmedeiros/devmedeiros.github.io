@@ -2,7 +2,8 @@
 title: "Navegando Data Testing"
 date: 2023-11-20 18:45:00 -0300
 categories: [Blog]
-tags: [teste de dados, data testing, database, banco de dados, great expectations, assertr, engenheiro analítico, analytics engineer, engenheiro de dados, data engineering, SQL]
+keywords: [teste de dados, data testing, database, banco de dados, great expectations, assertr, engenheiro analítico, analytics engineer, engenheiro de dados, data engineering, SQL]
+tags: [Engenharia de Dados, SQL]
 showtoc: true
 summary: O que é Data Testing e porque você deveria se importar com isso?
 cover:

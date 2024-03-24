@@ -3,7 +3,8 @@ title: Alura Challenge BI 2
 date: 2022-06-30 19:23:00 -0300
 lastmod: 2023-11-05 19:35:00 -0300
 categories: [Blog]
-tags: [data visualization, dashboard, powerbi, SQL, business intelligence]
+keywords: [data visualization, dashboard, powerbi, SQL, business intelligence, bi, alura, power bi]
+tags: [Data Visualization, Power BI, SQL]
 summary: Alura hosted a four-week Challenge BI, where participants needed to make 3 dashboards
 showtoc: true
 cover:

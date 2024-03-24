@@ -2,7 +2,8 @@
 title: Credit Score Classification App
 date: 2022-08-08 17:17:00 -0300
 categories: [Projects]
-tags: [python, streamlit, pickle, machine learning, credit score, app, data visualization, data science, random forest]
+keywords: [python, streamlit, pickle, machine learning, credit score, app, data visualization, data science, random forest]
+tags: [Python, Streamlit, Machine Learning, Data Visualization, Data Science]
 showtoc: true
 summary: Using Streamlit to make a web app that classifies your credit score using Python
 cover:

@@ -2,7 +2,8 @@
 title: "Análise Multivariada para Ciência de Dados"
 date: 2024-02-05 22:32:00 -0300
 categories: [Blog]
-tags: [estatística, análise multivariada, conhecimento, ciência de dados, data science]
+keywords: [estatística, análise multivariada, conhecimento, ciência de dados, data science]
+tags: [Estatística, Ciência de Dados]
 showtoc: true
 summary: As duas técnicas mais importantes de análise multivariada para ciência de dados.
 cover:

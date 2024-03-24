@@ -2,7 +2,8 @@
 title: Limpando Base de Dados para Classificação de Score de Crédito
 date: 2022-07-24 13:06:00 -0300
 categories: [Blog]
-tags: [limpeza de dados, python, pandas, tutorial, kaggle, numpy, score, classificação]
+keywords: [limpeza de dados, python, pandas, tutorial, kaggle, numpy, score, classificação]
+tags: [Limpeza de Dados, Python, Tutorial]
 showtoc: true
 summary: Como surgir com formas de limpar um banco de dados usando Python
 cover:

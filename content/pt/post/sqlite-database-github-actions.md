@@ -3,7 +3,8 @@ title: "Como Usar o Banco SQLite com o Github Actions"
 date: 2023-05-31 21:54:00 -0300
 lastmod: 2024-03-11 22:29:00 -0300
 categories: [Blog]
-tags: [github, gitlab, github actions, ci/cd, sqlite, database, banco de dados, scraping, python, tutorial, SQL, git]
+keywords: [github, gitlab, github actions, ci/cd, sqlite, database, banco de dados, scraping, python, tutorial, SQL, git]
+tags: [CI/CD, Scraping, Python, Tutorial, SQL]
 showtoc: true
 summary: Descubra uma alternativa de graça a computação em nuvem para data scraping com GitHub Actions!
 cover:

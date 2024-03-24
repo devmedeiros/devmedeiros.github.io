@@ -2,7 +2,8 @@
 title: Review do Podcast - Machine Learning Guide
 date: 2022-01-24 18:15:00 -0300
 categories: [Blog]
-tags: [podcast, review]
+keywords: [podcast, review, aprendizado de máquina]
+tags: [Podcast, Review, Aprendizado de Máquina]
 summary: Uma resenha sobre o podcast Machine Learning Guide
 aliases:
 - 2022-01-24-podcast-review-mlg

@@ -2,7 +2,8 @@
 title: Feature Selection
 date: 2022-06-14 19:23:00 -0300
 categories: [Blog]
-tags: [feature selection, scikit-learn]
+keywords: [feature selection, scikit-learn]
+tags: [Tutorial]
 showtoc: true
 summary: Defining feature selection and showing how you can select features in Machine Learning
 aliases:

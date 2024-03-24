@@ -2,7 +2,8 @@
 title: "Navigating Data Testing"
 date: 2023-11-20 18:45:00 -0300
 categories: [Blog]
-tags: [data testing, database, great expectations, assertr, analytics engineer, data engineering, SQL]
+keywords: [data testing, database, great expectations, assertr, analytics engineer, data engineering, SQL]
+tags: [Data Engineering, SQL]
 showtoc: true
 summary: What is Data Testing and why you should care about it?
 cover:

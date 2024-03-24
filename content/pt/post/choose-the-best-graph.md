@@ -3,7 +3,8 @@ title: Melhorando suas Visualizações
 date: 2022-11-15 08:01:00 -0300
 lastmod: 2023-07-30 10:18:00 -0300
 categories: [Blog]
-tags: [data visualization, business intelligence, storytelling, review, ethic]
+keywords: [data visualization, business intelligence, storytelling, review, ethic, bi]
+tags: [Visualização de Dados, BI, Storytelling, Review]
 summary: Escolher o melhor gráfico pode ser uma tarefa difícil, mas não precisa ser.
 cover:
     image: "https://ik.imagekit.io/devmedeiros/graph-choosing_T2RxECo-q.webp?tr=w-700"

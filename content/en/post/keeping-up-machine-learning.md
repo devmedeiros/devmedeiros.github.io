@@ -2,7 +2,8 @@
 title: Keeping Up with the Latest in Machine Learning Models
 date: 2023-10-03 20:51:00 -0300
 categories: [Blog]
-tags: [machine learning, model, knowledge, learning, review]
+keywords: [machine learning, model, knowledge, learning, review]
+tags: [Machine Learning, Review]
 showtoc: false
 summary: How to keep up with the latest discoveries in Machine Learning Models and academic research.
 cover:

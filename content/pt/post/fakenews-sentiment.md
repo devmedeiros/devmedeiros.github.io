@@ -2,7 +2,8 @@
 title: Análise de Sentimentos de Notícias Falsas vs Notícias Reais
 date: 2021-10-12 19:47:00 -0300
 categories: [Blog]
-tags: [ciência de dados, R, análise de sentimentos, NLP, ggplot]
+keywords: [ciência de dados, R, análise de sentimentos, nlp, pnl, ggplot]
+tags: [Ciência de Dados, R, PNL]
 summary: Análise de Sentimento comparando notícias falsas e notícias reais
 aliases:
 - 2021-10-12-fakenews-sentiment

@@ -2,7 +2,8 @@
 title: "Como Adicionar Curtidas/Aplausos em um Site Estático com o Lyket"
 date: 2023-08-05 07:30:00 -0300
 categories: [Blog]
-tags: [tutorial, like button, clap button, static site, medium clap, twitter heart, lyket, hugo, jekyll]
+keywords: [tutorial, like button, clap button, static site, medium clap, twitter heart, lyket, hugo, jekyll]
+tags: [Tutorial, Hugo]
 showtoc: true
 summary: Aprenda como adicionar curtidas/aplausos em um site estático usando o Lyket.
 cover:

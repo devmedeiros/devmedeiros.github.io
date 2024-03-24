@@ -2,7 +2,8 @@
 title: Guia do Pacote de Python seaborn
 date: 2021-11-07 15:14:00 -0300
 categories: [Blog]
-tags: [python, seaborn, visualização de dados, pandas]
+keywords: [python, seaborn, visualização de dados, pandas]
+tags: [Python, Visualização de Dados]
 summary: Um guia simples de como fazer gráficos básicos usando o pacote seaborn do Python
 aliases:
 - 2021-11-07-seaborn-package-guide

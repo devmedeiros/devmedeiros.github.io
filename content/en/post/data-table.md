@@ -2,7 +2,8 @@
 title: An Overview on data.table R Package
 date: 2021-10-27 09:41:00 -0300
 categories: [Blog]
-tags: [R, data.table, data manipulation, data transformation]
+keywords: [R, data.table, data manipulation, data transformation, tutorial]
+tags: [R, Tutorial, Data Transformation]
 summary: One of the fastest packages for data manipulation on R
 aliases:
 - 2021-10-27-data-table

@@ -2,7 +2,8 @@
 title: "Multivariate Analysis for Data Science"
 date: 2024-02-05 22:32:00 -0300
 categories: [Blog]
-tags: [statistics, multivariate analysis, knowledge, data science]
+keywords: [statistics, multivariate analysis, data science]
+tags: [Statistic, Data Science]
 showtoc: true
 summary: The two most important multivariate analysis techniques for data science.
 cover:

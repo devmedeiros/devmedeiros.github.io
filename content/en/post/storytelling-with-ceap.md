@@ -2,7 +2,8 @@
 title: Storytelling with CEAP
 date: 2022-04-17 10:08:00 -0300
 categories: [Blog]
-tags: [storytelling, data science, data visualization, data analysis]
+keywords: [storytelling, data science, data visualization, data analysis]
+tags: [Storytelling, Data Science, Data Visualization, Data Analysis]
 showtoc: true
 summary: The storytelling of how much each deputy/senator spends in Brazil
 aliases:

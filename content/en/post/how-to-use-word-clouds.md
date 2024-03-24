@@ -2,7 +2,8 @@
 title: How to use Word clouds?
 date: 2023-04-04 22:30:00 -0300
 categories: [Blog]
-tags: [word cloud, data visualization, stopwords, NPS, storytelling]
+keywords: [word cloud, data visualization, stopwords, NPS, storytelling]
+tags: [Data Visualization, Storytelling]
 showtoc: true
 summary: Word clouds are a popular data visualization tool for analyzing texts, but they need to be presented clearly for the message to be understood.
 cover:

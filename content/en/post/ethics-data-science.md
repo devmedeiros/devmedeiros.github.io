@@ -2,7 +2,8 @@
 title: Ethics in Data Science
 date: 2022-10-01 16:14:00 -0300
 categories: [Blog]
-tags: [ethic, data science, privacy, scraping, bias]
+keywords: [ethic, data science, privacy, scraping, bias]
+tags: [Data Science, Scraping]
 showtoc: true
 summary: Data Science is an exciting field, but it's also full of ethical dilemmas.
 cover:

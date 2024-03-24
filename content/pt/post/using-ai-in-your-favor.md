@@ -2,7 +2,8 @@
 title: Como Usar IA ao Seu Favor?
 date: 2023-01-26 20:33:00 -0300
 categories: [Blog]
-tags: [IA, inteligência artificial, chatgpt, pln, nlp, pdi, opencv, AI]
+keywords: [IA, inteligência artificial, chatgpt, pnl, nlp, pdi, opencv, AI]
+tags: [Inteligência Artificial, PNL]
 showtoc: false
 summary: Uma nova forma de usar ferramentas de inteligência artificial, como ChatGPT, ao seu favor.
 cover:

@@ -2,7 +2,8 @@
 title: EDA Top 50 Livros Bestsellers da Amazon
 date: 2021-12-28 14:55:00 -0300
 categories: [Blog]
-tags: [python, visualização de dados, análise de dados, EDA]
+keywords: [python, visualização de dados, análise de dados, eda]
+tags: [Python, Visualização de Dados, Análise de Dados]
 summary: Análise Exploratória de Dados dos 50 livros mais bem vendidos da Amazon de 2009 - 2019
 aliases:
 - 2021-12-28-amazon-top-50-books

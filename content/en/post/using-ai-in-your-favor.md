@@ -2,7 +2,8 @@
 title: How to use AI in your favor?
 date: 2023-01-26 20:33:00 -0300
 categories: [Blog]
-tags: [AI, artificial intelligence, chatgpt, NLP, opencv]
+keywords: [AI, artificial intelligence, chatgpt, NLP, opencv]
+tags: [NLP]
 showtoc: false
 summary: How to use AI tools, like ChatGPT, in your favor.
 cover:

@@ -2,7 +2,8 @@
 title: O Que é SQL?
 date: 2023-03-07 20:02:00 -0300
 categories: [Blog]
-tags: [SQL, tutorial, banco de dados, oracle, postgre, postgresql]
+keywords: [SQL, tutorial, banco de dados, oracle, postgre, postgresql]
+tags: [SQL, Tutorial]
 showtoc: false
 summary: SQL é sigla para Linguagem de Query Estruturada. Uma linguagem de query é uma linguagem de programação especializada que permite pesquisar e alterar os conteúdos de um banco de dados.
 cover:

@@ -2,7 +2,8 @@
 title: EDA Amazon Top 50 Bestselling Books
 date: 2021-12-28 14:55:00 -0300
 categories: [Blog]
-tags: [python, data visualization, data analysis, EDA]
+keywords: [python, data visualization, data analysis, eda]
+tags: [Python, Data Visualization, Data Analysis]
 summary: Exploratory Data Analysis of Amazon's top 50 bestselling books 2009 - 2019
 aliases:
 - 2021-12-28-amazon-top-50-books

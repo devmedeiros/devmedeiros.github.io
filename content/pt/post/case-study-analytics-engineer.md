@@ -3,7 +3,8 @@ title: Estudo de Caso Analytics Engineer
 date: 2022-08-23 22:57:00 -0300
 lastmod: 2022-08-27 10:54:00 -0300
 categories: [Blog, Projects]
-tags: [analytics engineer, caso, kpi, análise de dados, data engineering, manipulação de dados, python, SQL, engenharia de dados]
+keywords: [analytics engineer, caso, kpi, análise de dados, data engineering, manipulação de dados, python, SQL, engenharia de dados]
+tags: [Análise de Dados, Python, SQL, Engenharia de Dados]
 showtoc: true
 summary: Projeto explorando tarefas comuns que um Analytics Engineer faz diariamente.
 cover:

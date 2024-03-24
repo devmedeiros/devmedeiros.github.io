@@ -2,7 +2,8 @@
 title: Comprehending the P Value
 date: 2022-04-12 17:58:00 -0300
 categories: [Blog]
-tags: [statistic, p value]
+keywords: [statistic, p value]
+tags: [Statistic]
 showtoc: true
 summary: P-value definition, how to use it, and interpreting the measurement
 aliases:

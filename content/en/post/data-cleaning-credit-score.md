@@ -2,7 +2,8 @@
 title: Cleaning Credit Score Classification Dataset
 date: 2022-07-24 13:06:00 -0300
 categories: [Blog]
-tags: [data cleaning, python, pandas, tutorial, kaggle, numpy, credit score, classification]
+keywords: [data cleaning, python, pandas, tutorial, kaggle, numpy, credit score, classification]
+tags: [Data Cleaning, Python, Tutorial]
 showtoc: true
 summary: How to come up with ways to clean a dataset using Python
 cover:

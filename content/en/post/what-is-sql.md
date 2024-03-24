@@ -2,7 +2,8 @@
 title: What is SQL?
 date: 2023-03-07 20:02:00 -0300
 categories: [Blog]
-tags: [SQL, tutorial, database, oracle, postgre, postgresql]
+keywords: [SQL, tutorial, database, oracle, postgre, postgresql]
+tags: [SQL, Tutorial]
 showtoc: false
 summary: SQL stands for Structured Query Language. A query language is a specialized programming language that you can use to search and change the contents of a database.
 cover:

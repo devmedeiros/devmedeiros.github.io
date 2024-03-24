@@ -3,7 +3,8 @@ title: Case Study Analytics Engineer
 date: 2022-08-23 22:57:00 -0300
 lastmod: 2022-08-27 10:54:00 -0300
 categories: [Blog, Projects]
-tags: [analytics engineer, case, KPI, data analysis, data engineering, data manipulation, python, SQL]
+keywords: [analytics engineer, case, kpi, data analysis, data engineering, data transformation, python, sql]
+tags: [Data Analysis, Data Engineering, Python, SQL]
 showtoc: true
 summary: Project exploring common tasks an Analytics Engineer needs to perform on a daily day.
 cover:

@@ -2,7 +2,8 @@
 title: Uma Visão Geral Sobre o Pacote data.table do R
 date: 2021-10-27 09:41:00 -0300
 categories: [Blog]
-tags: [R, data.table, manipulação de dados, transformação de dados]
+keywords: [R, data.table, manipulação de dados, transformação de dados]
+tags: [R, Transformação de Dados]
 summary: Um dos pacotes de manipulação de dados mais rápidos do R
 aliases:
 - 2021-10-27-data-table

@@ -3,7 +3,8 @@ title: Data Science Challenge - Churn Rate
 date: 2022-05-30 16:49:00 -0300
 lastmod: 2022-06-09 18:08:00 -0300
 categories: [Blog]
-tags: [storytelling, python, análise de dados, aprendizado de máquina, rede neural]
+keywords: [storytelling, python, análise de dados, aprendizado de máquina, rede neural]
+tags: [Storytelling, Python, Análise de Dados, Aprendizado de Máquina]
 showtoc: true
 summary: Alura fez um desafio de quatro semanas "Data Science Challenge" utilizando um banco desbalanceado da taxa de evasão da empresa Alura Voz
 aliases:

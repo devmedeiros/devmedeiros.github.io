@@ -2,7 +2,8 @@
 title: Como Usar Nuvem de Palavras?
 date: 2023-04-04 22:30:00 -0300
 categories: [Blog]
-tags: [word cloud, nuvem de palavras, visualização de dados, stopwords, NPS, storytelling]
+keywords: [word cloud, nuvem de palavras, visualização de dados, stopwords, NPS, storytelling]
+tags: [Visualização de Dados, Storytelling]
 showtoc: true
 summary: Nuvens de palavras são uma visualização popular para analisar textos, mas é preciso apresentá-las de forma clara para que a mensagem seja compreendida.
 cover:

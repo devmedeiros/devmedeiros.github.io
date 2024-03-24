@@ -2,7 +2,8 @@
 title: Making Better Graphs
 date: 2022-11-15 08:01:00 -0300
 categories: [Blog]
-tags: [data visualization, business intelligence, storytelling, review, ethic]
+keywords: [data visualization, business intelligence, storytelling, review, ethic, bi]
+tags: [Data Visualization, Storytelling, Review]
 summary: Choosing the best graph or plot can be a hard task, but it doesn't need to be.
 cover:
     image: "https://ik.imagekit.io/devmedeiros/graph-choosing_T2RxECo-q.webp?tr=w-700"
