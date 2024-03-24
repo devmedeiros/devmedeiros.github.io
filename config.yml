@@ -55,10 +55,14 @@ languages:
           name: projetos
           url: /projects/
           weight: 40
+        - identifier: tags
+          name: tags
+          url: /tags/
+          weight: 50
         - identifier: search
           name: pesquisar
           url: /search/
-          weight: 50
+          weight: 60
     contentDir: content/pt
     homeInfoParams:
       Title: "Jaqueline Medeiros"
@@ -95,11 +99,6 @@ params:
       linkFullImages: false
 
   assets:
-    favicon: "<link / abs url>"
-    favicon16x16: "<link / abs url>"
-    favicon32x32: "<link / abs url>"
-    apple_touch_icon: "<link / abs url>"
-    safari_pinned_tab: "<link / abs url>"
     disableHLJS: True
   
   schema:
@@ -147,10 +146,14 @@ menu:
       name: projects
       url: /projects/
       weight: 40
+    - identifier: tags
+      name: tags
+      url: /tags/
+      weight: 50
     - identifier: search
       name: search
       url: /search/
-      weight: 50
+      weight: 60
 
 markup:
   highlight:
