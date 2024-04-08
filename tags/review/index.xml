@@ -24,7 +24,7 @@
 <p>Two Minute Papers have been covering the OpenAI discoveries for quite some time now, I remember seeing videos about what ChatGPT could do, before it was open to the public, and it compared it with previous versions. So you can see the progress being made, even if you miss the older videos, they always make a comparison with previous versions when available.</p>
 <p>The videos are kept in an approachable language, so even beginners can understand the main points. Additionally, the channel also makes the videos entertaining, so it&rsquo;s easy to keep watching and stack on more knowledge.</p>
 <h2 id="2---papers-with-code">2 - Papers with Code</h2>
-<p><a href="paperswithcode.com">Papers with Code</a> is more than a website that just indexes papers. It makes it easier to find papers with code about Machine Learning, linking the papers, the source code, and even datasets.</p>
+<p><a href="https://paperswithcode.com/">Papers with Code</a> is more than a website that just indexes papers. It makes it easier to find papers with code about Machine Learning, linking the papers, the source code, and even datasets.</p>
 <p>If you want to learn about the state-of-the-art of a specific topic in Machine Learning you can browse between tasks, for example, if you are looking for more information about Natural Language Processing, you can choose a specific task, like Named Entity Recognition, then you&rsquo;ll be able to see the current benchmarks, according to database, the best model, the model paper and source code. It also links the databases used to research the specific task you choose and it links libraries that you can use to apply the models.</p>
 ]]></content:encoded>
     </item>
