@@ -24,6 +24,6 @@ Os vídeos são mantidos em uma linguagem acessível (em inglês), para que até
 
 ## 2 - Papers with Code
 
-[Papers with Code](paperswithcode.com) é mais do que um site que apenas indexa artigos. Ele torna mais fácil encontrar artigos com códigos sobre Aprendizado de Máquina, vinculando os artigos, o código-fonte e até mesmo conjuntos de dados.
+[Papers with Code](https://paperswithcode.com/) é mais do que um site que apenas indexa artigos. Ele torna mais fácil encontrar artigos com códigos sobre Aprendizado de Máquina, vinculando os artigos, o código-fonte e até mesmo conjuntos de dados.
 
 Se você quiser aprender sobre o estado da arte de um tópico específico em Aprendizado de Máquina você pode navegar entre tarefas, por exemplo, se estiver procurando mais informações sobre Processamento de Linguagem Natual, você pode escolher uma tarefa específica, como Reconhecimento de Entidade Mencionada (_Named Entity Recognition_), você poderá ver os _benchmarks_ atuais, de acordo com o banco de dados, o melhor modelo, o artigo do modelo e o código-fonte. Ele também vincula os bancos de dados usados para pesquisar a tarefa específica escolhida e vincula bibliotecas que você pode usar para aplicar os modelos.

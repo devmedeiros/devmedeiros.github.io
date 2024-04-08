@@ -24,6 +24,6 @@ The videos are kept in an approachable language, so even beginners can understan
 
 ## 2 - Papers with Code
 
-[Papers with Code](paperswithcode.com) is more than a website that just indexes papers. It makes it easier to find papers with code about Machine Learning, linking the papers, the source code, and even datasets.
+[Papers with Code](https://paperswithcode.com/) is more than a website that just indexes papers. It makes it easier to find papers with code about Machine Learning, linking the papers, the source code, and even datasets.
 
 If you want to learn about the state-of-the-art of a specific topic in Machine Learning you can browse between tasks, for example, if you are looking for more information about Natural Language Processing, you can choose a specific task, like Named Entity Recognition, then you'll be able to see the current benchmarks, according to database, the best model, the model paper and source code. It also links the databases used to research the specific task you choose and it links libraries that you can use to apply the models.
