@@ -10,7 +10,33 @@
       <link>https://devmedeiros.com/cover.png</link>
     </image>
     <generator>Hugo -- gohugo.io</generator>
-    <lastBuildDate>Mon, 05 Feb 2024 22:32:00 -0300</lastBuildDate><atom:link href="https://devmedeiros.com/pt/post/index.xml" rel="self" type="application/rss+xml" />
+    <lastBuildDate>Mon, 27 Jan 2025 19:30:00 -0300</lastBuildDate><atom:link href="https://devmedeiros.com/pt/post/index.xml" rel="self" type="application/rss+xml" />
+    <item>
+      <title>Acessibilidade na Linguagem Profissional</title>
+      <link>https://devmedeiros.com/pt/post/acessibilidade-linguagem-profissional/</link>
+      <pubDate>Mon, 27 Jan 2025 19:30:00 -0300</pubDate>
+      
+      <guid>https://devmedeiros.com/pt/post/acessibilidade-linguagem-profissional/</guid>
+      <description>Por que priorizar o uso do português na comunicação profissional?</description>
+      <content:encoded><![CDATA[<p>Com a globalização e a difusão da internet entre a população brasileira, torna-se cada vez mais comum o uso de palavras e frases estrangeiras no dia a dia.</p>
+<p>O que, por si só, não é um problema. Para quem está no meio dos jogos, acaba se tornando natural usar um linguajar próprio, mas isso pode se transformar em uma barreira para novos integrantes, principalmente no meio profissional.</p>
+<p>Diversas áreas profissionais estão inundadas de termos em inglês para coisas que já existem em português e que, muitas vezes, poderiam simplesmente ser traduzidas diretamente, mantendo o mesmo sentido. No entanto, parece existir uma resistência em usar os termos na língua portuguesa.</p>
+<p>Para quem já está inserido nesse meio, pode parecer algo irrelevante. Contudo, esse uso desenfreado de palavras estrangeiras para descrever conceitos que têm equivalentes em português cria um obstáculo na comunicação entre as pessoas. Recentemente, vi alguém usar o termo <em>briefing</em> e, em seguida, ter que explicar para o público o que era <em>briefing</em>, já que a maioria das pessoas não sabia inglês e não reconhecia o termo. A interação teria sido muito mais rápida e efetiva se a pessoa tivesse utilizado <em>resumo ou diretrizes</em>.</p>
+<p>A cada dia, mais palavras e termos em inglês surgem para substituir o vocabulário português. A reunião se tornou <em>call</em>, o orçamento virou <em>budget</em>, a ciência de dados agora é <em>data science</em> e até programar está virando <em>codar</em>. Isso pode ser parte da evolução natural do idioma, como aconteceu em diversos momentos da história, mas fico pensando se isso não impede que novas pessoas entrem no mundo profissional, especialmente na área de TI, onde praticamente todos os termos utilizados têm origem no inglês.</p>
+<p>De acordo com uma pesquisa do British Council (2013)<sup id="fnref:1"><a href="#fn:1" class="footnote-ref" role="doc-noteref">1</a></sup>, apenas 5,1% da população brasileira possui algum conhecimento da língua inglesa, dos quais apenas 16% dizem ter um nível avançado. Na área de TI, a demanda está concentrada no inglês instrumental, aquele que foca em permitir que a pessoa leia textos específicos da área.</p>
+<p>No fim do dia, a decisão de tornar ou não seu discurso mais acessível para o outro é pessoal. No entanto, acredito que, sempre que possibilitamos que mais pessoas consumam informações de forma fácil, estamos colaborando para um mundo onde mais indivíduos podem continuar aprendendo e contribuindo para o acúmulo de conhecimento humano, impulsionando o desenvolvimento da humanidade.</p>
+<div class="footnotes" role="doc-endnotes">
+<hr>
+<ol>
+<li id="fn:1">
+<p>British Council (2013). Demandas de Aprendizagem
+de Inglês no Brasil. <a href="https://www.britishcouncil.org.br/sites/default/files/demandas_de_aprendizagempesquisacompleta.pdf">https://www.britishcouncil.org.br/sites/default/files/demandas_de_aprendizagempesquisacompleta.pdf</a>&#160;<a href="#fnref:1" class="footnote-backref" role="doc-backlink">&#x21a9;&#xfe0e;</a></p>
+</li>
+</ol>
+</div>
+]]></content:encoded>
+    </item>
+    
     <item>
       <title>Análise Multivariada para Ciência de Dados</title>
       <link>https://devmedeiros.com/pt/post/multivariate-analysis/</link>
