@@ -7,7 +7,7 @@ tags: [Machine Learning, Data Science]
 showtoc: true
 summary: Find out if the use of machine learning is essential in all business cases. Evaluate benefits and limitations.
 cover:
-    image: "https://ik.imagekit.io/devmedeiros/path-choosing_VtOb0WQTi.webp?tr=w-700updatedAt=1636308224813"
+    image: "https://ik.imagekit.io/devmedeiros/path-choosing_VtOb0WQTi.webp?tr=w-700"
     alt: "a man standing on a forest looking at two paths"
     caption: "Photo by Caleb Jones on Unsplash"
 ---
